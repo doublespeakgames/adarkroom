@@ -1,0 +1,497 @@
+/* Fonts */
+body, .tooltip {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: normal;
+	letter-spacing: normal;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+}
+
+/* Framework stuff */
+
+div.clear {
+	clear: both;
+}
+
+div#wrapper {
+	margin: auto;
+	width: 700px;
+	padding: 20px 0 0 220px;
+	position: relative;
+}
+
+div#saveNotify {
+	position: absolute;
+	top: 20px;
+	right: 0px;
+	background: white;
+	opacity: 0;
+}
+
+div#content {
+	position: relative;
+	overflow: hidden;
+	height: 700px;
+}
+
+div#header {
+	padding-bottom: 20px;
+	height: 20px;
+}
+
+.deleteSave {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	cursor: pointer;
+}
+
+.deleteSave:hover, .share:hover {
+	text-decoration: underline;	
+}
+
+.share {
+	position: absolute;
+	right: 70px;
+	bottom: 10px;
+	cursor: pointer;
+}
+
+div.headerButton {
+	font-size: 18px;
+	cursor: pointer;
+	float: left;
+	border-left: 1px solid black;
+	margin-left: 10px;
+	padding-left: 10px;
+}
+
+div.headerButton:hover {
+	text-decoration: underline;
+}
+
+div.headerButton:first-child {
+	border-left: none;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+div.headerButton.selected, div.headerButton.selected:hover {
+	cursor: default;
+	text-decoration: underline;
+}
+
+div#outerSlider {
+	position: absolute;
+}
+
+div#outerSlider > div {
+	position: relative;
+	float: left;
+	width: 700px;
+	height: 700px;
+	overflow: hidden;
+}
+
+div#locationSlider {
+	position: absolute;
+}
+
+div.location {
+	position: relative;
+	float: left;
+	width: 700px;
+}
+
+div.row_key {
+	clear: both;
+	float: left;
+}
+
+div.row_val {
+	float: right;
+}
+
+/* Notifications */
+
+div#notifications {
+	position: absolute;
+	top: 20px;
+	left: 0px;
+	height: 700px;
+	width: 200px;
+	overflow: hidden;
+}
+
+div#notifications div.notification {
+	margin-bottom: 10px;
+}
+
+div#notifyGradient {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	background: -webkit-linear-gradient(
+		rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%
+	);
+	background: linear-gradient(
+		rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%
+	);
+	filter: alpha(
+		Opacity=0, FinishOpacity=100, Style=1, StartX=0, StartY=0, FinishX=0, FinishY=500
+	);
+}
+
+/* Button */
+
+div.button {
+	position: relative;
+	text-align: center;
+	border: 1px solid black;
+	width: 100px;
+	margin-bottom: 5px;
+	padding: 5px 10px;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+div.button:hover {
+	text-decoration: underline;
+}
+
+div.button.disabled, div.button.disabled:hover {
+	cursor: default;
+	border-color: grey;
+	color: grey;
+	text-decoration: none;
+}
+
+div.button div.cooldown {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -1;
+	height: 100%;
+	background-color: #DDDDDD;
+}
+
+/* Up/Down buttons. They're complicated! */
+
+.upBtn, .dnBtn {
+	position: absolute;
+	width: 14px;
+	height: 15px;
+	right: 0px;
+	cursor: pointer;
+}
+
+.upBtn.disabled, .dnBtn.disabled {
+	cursor: default;
+}
+
+.upBtn {
+	top: -2px;
+}
+
+.upBtn:after, .upBtn:before {
+	position: absolute;
+	border: medium solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	bottom: 4px;
+}
+
+.upBtn:after {
+	border-color: transparent transparent white;
+}
+
+.upBtn:before {
+	border-color: transparent transparent black;
+}
+
+.upBtn.disabled:before {
+	border-color: transparent transparent #999;
+}
+
+
+.dnBtn {
+	bottom: -3px;
+}
+
+.dnBtn:after, .dnBtn:before {
+	position: absolute;
+	border: medium solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	top: 4px;
+}
+
+.upBtn:after, .dnBtn:after {
+	border-width: 3px;
+	left: 50%;
+	margin-left: -3px;
+}
+
+.upBtn:before, .dnBtn:before {
+	border-width: 5px;
+	left: 50%;
+	margin-left: -5px;
+}
+
+.dnBtn:after {
+	border-color: white transparent transparent;
+}
+
+.dnBtn:before {
+	border-color: black transparent transparent;
+}
+
+.dnBtn.disabled:before {
+	border-color: #999 transparent transparent;
+}
+
+div.button div.tooltip {
+	width: 100px;
+}
+
+/* Tooltip */
+
+div.tooltip {
+	display: none;
+	padding: 2px 5px;
+	border: 1px solid black;
+	position: absolute;
+	box-shadow: -1px 3px 2px #666;
+	background: white;
+	z-index: 999;
+}
+
+.tooltip.bottom {
+	top: 30px;
+}
+
+.tooltip.right {
+	left: 2px;
+}
+
+.tooltip.left {
+	right: 0px;
+}
+
+.tooltip.top {
+	bottom: 20px;
+}
+
+*:hover > div.tooltip {
+	display: block;
+}
+
+div.tooltip:hover {
+	display: none !important;
+}
+
+.disabled:hover > div.tooltip, .button.free:hover > div.tooltip {
+	display: none;
+}
+
+#event .button.disabled:hover > div.tooltip {
+	display: block;
+}
+
+/* Events */
+
+.eventPanel {
+    background: none repeat scroll 0 0 white;
+    border: 2px solid transparent;
+    left: 250px;
+    padding: 20px;
+    position: absolute;
+    top: 90px;
+    width: 335px;
+    z-index: 20;
+}
+
+body.noMask .eventPanel {
+	background-color: black;
+}
+
+.eventPanel:before {
+    background-color:white;
+    opacity: 0.6;
+    content: " ";
+    height: 700px;
+    left: -252px;
+    position: absolute;
+    top: -75px;
+    width: 920px;
+    z-index: -2;
+}
+
+body.noMask .eventPanel:before {
+	opacity: 0;
+}
+
+.eventPanel:after {
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	width: 100%;
+	height: 100%;
+	content: " ";
+	border: 2px solid black;
+    box-shadow: 5px 5px 5px #666666;
+	z-index: -2;
+}
+
+body.noMask .eventPanel:after {
+	border-color: white;
+}
+
+.eventPanel .button {
+	float:left;
+	margin-right: 20px;
+}
+
+body.noMask .eventPanel .button {
+	border-color: white;
+	color: white;
+}
+
+.eventTitle {
+    display: inline-block;
+    font-weight: bold;
+    position: absolute;
+    top: -12px;
+}
+
+body.noMask .eventTitle {
+	color: white;
+}
+
+.eventTitle:after {
+    background-color: white;
+    bottom: 32%;
+    content: " ";
+    height: 5px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+body.noMask .eventTitle:after {
+	background-color: black;
+}
+
+#description {
+	position: relative;
+	min-height: 100px;
+}
+
+body.noMask #description {
+	color: white;
+}
+
+#description > div {
+	padding-bottom: 20px;
+}
+
+#buttons > .button {
+    margin: 0 5px 5px;
+}
+
+/* Combat! */
+#description div.fighter {
+	padding: 0px;
+	position: absolute;
+	bottom: 15px;
+}
+
+#wanderer {
+	left: 25%;
+}
+
+#enemy {
+	right: 25%;
+}
+
+.hp {
+	position: absolute;
+	top: -15px;
+	margin-left: -50%;
+}
+
+#description .bullet {
+	padding: 0px 20px 0px 20px;
+	bottom: 25px;
+	position: absolute;
+	height: 1px;
+	line-height: 1px;
+}
+
+.damageText {
+	position: absolute;
+	bottom: 15px;
+	left: 50%;
+	margin-left: -50%;
+}
+
+#lootButtons {
+	padding-bottom: 0px !important;
+	margin: 20px 0 0 5px;
+	position: relative;
+}
+
+#lootButtons:before {
+	content: "take:";
+	position: absolute;
+	top: -25px;
+	left: 0px;
+}
+
+#dropMenu {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid black;
+    position: absolute;
+    z-index: 100;
+    padding-top: 5px;
+    text-align: left;
+    box-shadow: -1px 3px 2px #666;
+    cursor: default;
+}
+
+#dropMenu:before {
+	content: "drop:";
+	border-bottom: 1px solid black;
+	display: block;
+	margin-bottom: 5px;
+	padding: 0px 0px 5px 5px;
+}
+
+#dropMenu > div {
+	padding: 0px 5px 5px 5px;
+	cursor: pointer;
+}
+
+#dropMenu > div:hover {
+	text-decoration: underline;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/CreativeWork">
+<head>
+	<!--  
+		A Dark Room (v1.2)
+		==================
+		
+		A minimalist text adventure by Michael Townsend.
+		Inspired by Candy Box (http://candies.aniwey.net/)
+		Please don't steal me.
+	-->
+	<title>A Dark Room</title>
+	<meta itemprop="description" name="description" property="og:description" content="A minimalist text adventure">
+	<meta itemprop="image" property="og:image" content="img/adr.png" />
+	<meta itemprop="name" property="og:title" content="A Dark Room" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="image_src" href="img/adr.png" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="lib/jquery.color-2.1.2.min.js"></script>
+	<script src="script/Button.js"></script>
+	<script src="script/engine.js"></script>
+	<script src="script/header.js"></script>
+	<script src="script/notifications.js"></script>
+	<script src="script/events.js"></script>
+	<script src="script/room.js"></script>
+	<script src="script/outside.js"></script>
+	<script src="script/world.js"></script>
+	<script src="script/path.js"></script>
+	<script src="script/ship.js"></script>
+	<script src="script/space.js"></script>
+	<!-- Event modules -->
+	<script src="script/events/global.js"></script>
+	<script src="script/events/room.js"></script>
+	<script src="script/events/outside.js"></script>
+	<script src="script/events/encounters.js"></script>
+	<script src="script/events/setpieces.js"></script>
+	
+	<script type='text/javascript'>
+		var oldIE = false;
+	</script>
+	<!-- [if lt IE 9]> 
+		<script type="text/javascript">oldIE = true;</script> 
+	<![endif]-->
+	
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/room.css" />
+	<link rel="stylesheet" type="text/css" href="css/outside.css" />
+	<link rel="stylesheet" type="text/css" href="css/path.css" />
+	<link rel="stylesheet" type="text/css" href="css/world.css" />
+	<link rel="stylesheet" type="text/css" href="css/ship.css" />
+	<link rel="stylesheet" type="text/css" href="css/space.css" />
+	
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		ga('create', 'UA-41314886-1', 'doublespeakgames.com');
+		ga('send', 'pageview');
+	</script>
+	
+</head>
+<body>
+	<div id="wrapper">
+		<div id="saveNotify">saved.</div>
+		<div id="content">
+			<div id="outerSlider">
+				<div id="main">
+					<div id="header"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

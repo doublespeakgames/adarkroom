@@ -1,0 +1,74 @@
+#worldOuter {
+	position: relative;
+	display: inline-block;
+}
+
+#map {
+	position: relative;
+	font-family: "Courier New", Courier, monospace;
+	border: 1px solid black;
+	overflow: hidden;
+	display: inline-block;
+	line-height: 10px;
+	letter-spacing: 1px;
+	color: #999;
+	cursor: default;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#map .landmark {
+	position: relative;
+	font-weight: bold;
+	color: black;
+	line-height: 0px; /* Hack to prevent the boldness from increasing the row's line-height. I hope it works in all browsers... */
+}
+
+#bagspace-world {
+	border: 1px solid black;
+	height: 62px;
+	margin-bottom: 5px;
+	margin-top: 13px;
+	overflow: hidden;
+}
+
+#bagspace-world > div {
+	padding: 6px 4px;
+}
+
+#backpackTitle {
+	position: absolute;
+	top: 0px;
+	left: 10px;
+	background-color: white;
+	z-index: 1;
+}
+
+#backpackSpace {
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	background-color: white;
+	z-index: 1;
+}
+
+#healthCounter {
+	position: absolute;
+	top: 0px;
+	left: 80px;
+	background-color: white;
+	z-index: 1;
+}
+
+div.supplyItem {
+	display: inline-block;
+	border: 1px solid #999;
+	float: left;
+	margin: 0px 5px 6px 0px;
+	padding: 0 5px;
+	cursor: default;
+}

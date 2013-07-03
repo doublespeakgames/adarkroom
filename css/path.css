@@ -1,0 +1,66 @@
+#outfitting {
+	position: relative;
+	border: 1px solid black;
+	width: 200px;
+	margin-bottom: 20px;
+	padding: 5px 10px;
+}
+
+div#outfitting:before {
+	position: absolute;
+	content: "supplies";
+	top: -13px;
+	background-color: white;
+}
+
+div.outfitRow {
+	position: relative;
+	cursor: default;
+	margin: 10px -30px 10px 0px;
+}
+
+div.outfitRow > .row_val {
+	padding-right: 30px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+div.outfitRow .tooltip {
+	width: 150px;
+}
+
+div#bagspace {
+	background-color: white;
+	position: absolute;
+	top:-13px;
+	right: 10px;
+}
+
+div#perks {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	border: 1px solid black;
+	cursor: default;
+	padding: 5px 10px;
+	width: 200px;
+}
+
+div#perks:before {
+	position: absolute;
+	content: "perks";
+	top: -13px;
+	background-color: white;
+}
+
+div.perkRow {
+	position: relative;
+}
+
+div.perkRow .row_key {
+	float: none;
+}
