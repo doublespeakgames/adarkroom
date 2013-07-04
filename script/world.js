@@ -315,6 +315,26 @@ var World = {
 			default:
 				break;
 		}
+	},
+	
+	click: function(event) {
+		var map = $('#map'),
+			// measure clicks relative to the centre of the current location
+			centreX = map.offset().left + map.width() * World.curPos[0] / (World.RADIUS * 2),
+			centreY = map.offset().top + map.height() * World.curPos[1] / (World.RADIUS * 2),
+			clickX = event.pageX - centreX,
+			clickY = event.pageY - centreY;
+		if (clickX > clickY && clickX < -clickY) {
+			World.moveNorth();
+		}
+		if (clickX < clickY && clickX > -clickY) {
+			World.moveSouth();
+		}
+		if (clickX < clickY && clickX < -clickY) {
+			World.moveWest();
+		}
+		if (clickX > clickY && clickX > -clickY) {
+			World.moveEast();
 		}
 	},
 	
@@ -663,6 +683,8 @@ var World = {
 		var map = $('#map');
 		if(map.length == 0) {
 			map = new $('<div>').attr('id', 'map').appendTo('#worldOuter');
+			// register click handler
+			map.click(World.click);
 		}
 		var mapString = "";
 		for(var j = 0; j <= World.RADIUS * 2; j++) {
