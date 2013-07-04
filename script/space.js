@@ -22,7 +22,7 @@ var Space = {
 	
 	hull: 0,
 	
-	name: "Space",
+	name: "Космос",
 	init: function(options) {
 		this.options = $.extend(
 			this.options,
@@ -70,17 +70,17 @@ var Space = {
 		if(Engine.activeModule == this) {
 			var t;
 			if(Space.altitude < 10) {
-				t = "Troposphere";
+				t = "Тропосфера";
 			} else if(Space.altitude < 20) {
-				t = "Stratosphere";
+				t = "Стратосфера";
 			} else if(Space.altitude < 30) {
-				t = "Mesosphere";
+				t = "Мезосфера";
 			} else if(Space.altitude < 45) {
-				t = "Thermosphere";
+				t = "Термосфера";
 			} else if(Space.altitude < 60){
-				t = "Exosphere";
+				t = "Екзосфера";
 			} else {
-				t = "Space";
+				t = "Космос";
 			}
 			document.title = t;
 		}

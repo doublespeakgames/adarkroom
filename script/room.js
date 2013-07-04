@@ -10,406 +10,406 @@ var Room = {
 	_NEED_WOOD_DELAY: 15 * 1000, // from when the stranger shows up, to when you need wood
 	
 	Craftables: {
-		'trap': {
+		'пастки': {
 			button: null,
 			maximum: 10,
-			availableMsg: 'builder says she can make traps to catch any creatures might still be alive out there',
-			buildMsg: 'more traps to catch more creatures',
-			maxMsg: "more traps won't help now",
+			availableMsg: 'Будівельниця каже що вміє робити пастки для ловлі тварин які ще можуть жити тут',
+			buildMsg: 'Більше пасток щоб добувати більше здобичі',
+			maxMsg: "Більше пасток не допоможуть",
 			type: 'building',
 			cost: function() {
-				var n = Outside.numBuilding('trap');
+				var n = Outside.numBuilding('пастки');
 				return {
-					'wood': 10 + (n*10)
+					'дерево': 10 + (n*10)
 				};
 			}
 		},
-		'cart': {
+		'возик': {
 			button: null,
 			maximum: 1,
-			availableMsg: 'builder says she can make a cart for carrying wood',
-			buildMsg: 'the rickety cart will carry more wood from the forest',
+			availableMsg: 'Будівельниця каже що може зробити візок щоб возити дерево',
+			buildMsg: 'Хлипкий возик возитиме дерево з лісу',
 			type: 'building',
 			cost: function() {
 				return {
-					'wood': 30
+					'дерево': 30
 				};
 			}
 		},
-		'hut': {
+		'хатка': {
 			button: null,
 			maximum: 20,
-			availableMsg: "builder says there are more wanderers. says they'll work, too.",
-			buildMsg: 'builder puts up a hut, out in the forest. says word will get around.',
-			maxMsg: 'no more room for huts.',
+			availableMsg: "Будівельниця каже що тут є ще блукачі. Каже вони теж працюватимуть",
+			buildMsg: 'Будівельниця поставила хатку у лісі. Каже що люди оцінять її роботу',
+			maxMsg: 'Немає місця для хат.',
 			type: 'building',
 			cost: function() {
-				var n = Outside.numBuilding('hut');
+				var n = Outside.numBuilding('хатка');
 				return {
-					'wood': 100 + (n*50)
+					'дерево': 100 + (n*50)
 				};
 			}
 		},
-		'lodge': {
+		'сторожка': {
 			button: null,
 			maximum: 1,
-			availableMsg: 'villagers could help hunt, given the means',
-			buildMsg: 'the hunting lodge stands in the forest, a ways out of town',
+			availableMsg: 'Селяни можуть допомогти полювати, якщо їм скажуть',
+			buildMsg: 'Мисливська сторожка постала у лісі, подалі від осель',
 			type: 'building',
 			cost: function() {
 				return {
-					wood: 200,
-					fur: 10,
-					meat: 5
+					'дерево': 200,
+					'шкури': 10,
+					'м’ясо': 5
 				}
 			}
 		},
-		'trading post': {
+		'базар': {
 			button: null,
 			maximum: 1,
-			availableMsg: "a trading post would make commerce easier",
-			buildMsg: "now the nomads have a place to set up shop, they might stick around a while",
+			availableMsg: 'Базар стимулюватиме торгівлю',
+			buildMsg: "Тепер продавці матимуть місце для торгівлі, вони можуть затриматися у нас",
 			type: 'building',
 			cost: function() {
 				return {
-					'wood': 400,
-					'fur': 100
+					'дерево': 400,
+					'шкури': 100
 				};
 			}
 		},
-		'tannery': {
+		'дубильня': {
 			button: null,
 			maximum: 1,
-			availableMsg: "builder says leather could be useful. says the villagers could make it.",
-			buildMsg: 'tannery goes up quick, on the edge of the village',
+			availableMsg: "Будівельниця каже що шкіра згодиться. Каже що селяни можуть її робити.",
+			buildMsg: 'Дубильня збудована швидко на околиці села',
 			type: 'building',
 			cost: function() {
 				return {
-					'wood': 500,
-					'fur': 50
+					'дерево': 500,
+					'шкури': 50
 				};
 			}
 		},
-		'smokehouse': {
+		'коптильня': {
 			button: null,
 			maximum: 1,
-			availableMsg: "should cure the meat, or it'll spoil. builder says she can fix something up.",
-			buildMsg: 'builder finishes the smokehouse. she looks hungry.',
+			availableMsg: "Ми повинні коптити м’ясо, інакше воно зіпсується. Будівельниця каже що щось придумає.",
+			buildMsg: 'Будівельниця завершила коптильню. Вона дивиться голодним поглядом.',
 			type: 'building',
 			cost: function() {
 				return {
-					'wood': 600,
-					'meat': 50
+					'дерево': 600,
+					'м’ясо': 50
 				};
 			}
 		},
-		'workshop': {
+		'майстерня': {
 			button: null,
 			maximum: 1,
-			availableMsg: "builder says she could make finer things, if she had the tools",
-			buildMsg: "workshop's finally ready. builder's excited to get to it",
+			availableMsg: "Будівельниця каже що може робити кращі речі, якщо матиме інструмент.",
+			buildMsg: "Майстерня нарешті готова, будівельниця радо зайшла до неї.",
 			type: 'building',
 			cost: function() {
 				return {
-					'wood': 800,
-					'leather': 100,
-					'scales': 10
+					'дерево': 800,
+					'шкіра': 100,
+					'луска': 10
 				};
 			}
 		},
-		'steelworks': {
+		'кузня': {
 			button: null,
 			maximum: 1,
-			availableMsg: "builder says the villagers could make steel, given the tools",
-			buildMsg: "a haze falls over the village as the steelworks fires up",
+			availableMsg: "Будівельниця каже що селяни можуть кувати сталь, якщо їх навчити.",
+			buildMsg: "Дим накрив село коли розвели вогонь у печі кузні.",
 			type: 'building',
 			cost: function() {
 				return {
-					'wood': 1500,
-					'iron': 100,
-					'coal': 100
+					'дерево': 1500,
+					'залізо': 100,
+					'вугілля': 100
 				};
 			}
 		},
-		'armoury': {
+		'арсенал': {
 			button: null,
 			maximum: 1,
-			availableMsg: "builder says it'd be useful to have a steady source of bullets",
-			buildMsg: "armoury's done, welcoming back the weapons of the past.",
+			availableMsg: "Будівельниця каже що було б добре мати постійне джерело набоїв.",
+			buildMsg: "Арсенал готовий, зброя минулого вертається знову.",
 			type: 'building',
 			cost: function() {
 				return {
-					'wood': 3000,
-					'steel': 100,
-					'sulphur': 50
+					'дерево': 3000,
+					'сталь': 100,
+					'сірка': 50
 				};
 			}
 		},
-		'torch': {
+		'смолоскип': {
 			button: null,
 			type: 'tool',
-			buildMsg: 'a torch to keep the dark away',
+			buildMsg: 'Смолоскип освітлюватиме дорогу.',
 			cost: function() {
 				return {
-					'wood': 1,
-					'cloth': 1
+					'дерево': 1,
+					'шмаття': 1
 				};
 			}
 		},
-		'waterskin': {
+		'міх': {
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
-			buildMsg: 'this waterskin\'ll hold a bit of water, at least',
+			buildMsg: 'Цей міх зберігає хоч трохи води.',
 			cost: function() {
 				return {
-					'leather': 50
+					'шкіра': 50
 				};
 			}
 		},
-		'cask': {
+		'бочка': {
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
-			buildMsg: 'the cask holds enough water for longer expeditions',
+			buildMsg: 'Бочка містить достатньо води для довших експедицій.',
 			cost: function() {
 				return {
-					'leather': 100,
-					'iron': 20
+					'шкіра': 100,
+					'залізо': 20
 				};
 			}
 		},
-		'water tank': {
+		'цистерна': {
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
-			buildMsg: 'never go thirsty again',
+			buildMsg: 'Спрага забута назавжди.',
 			cost: function() {
 				return {
-					'iron': 100,
-					'steel': 50
+					'залізо': 100,
+					'сталь': 50
 				};
 			}
 		},
-		'bone spear': {
+		'спис': {
 			button: null,
 			type: 'weapon',
-			buildMsg: "this spear's not elegant, but it's pretty good at stabbing",
+			buildMsg: 'Цей спис не є чарівним, але ним добре колоти.',
 			cost: function() {
 				return {
-					'wood': 100,
-					'teeth': 5
+					'дерево': 100,
+					'клики': 5
 				};
 			}
 		},
-		'rucksack': {
+		'рюкзак': {
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
-			buildMsg: 'carrying more means longer expeditions to the wilds',
+			buildMsg: 'Більше несеш — довше подорожуєш.',
 			cost: function() {
 				return {
-					'leather': 200
+					'шкіра': 200
 				};
 			}
 		},
-		'wagon': {
+		'підвода': {
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
-			buildMsg: 'the wagon can carry a lot of supplies',
+			buildMsg: 'На підводі можна вести дуже багато речей.',
 			cost: function() {
 				return {
-					'wood': 500,
-					'iron': 100
+					'дерево': 500,
+					'залізо': 100
 				};
 			}
 		},
-		'convoy': {
+		'колона': {
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
-			buildMsg: 'the convoy can haul mostly everything',
+			buildMsg: 'Колона може вивезти практично усе.',
 			cost: function() {
 				return {
-					'wood': 1000,
-					'iron': 200,
-					'steel': 100
+					'дерево': 1000,
+					'залізо': 200,
+					'сталь': 100
 				};
 			}
 		},
-		'l armour': {
+		'жупан': {
 			type: 'upgrade',
 			maximum: 1,
-			buildMsg: "leather's not strong. better than rags, though.",
+			buildMsg: 'Шкіра не міцна, але краща за лахміття.',
 			cost: function() {
 				return {
-					'leather': 200,
-					'scales': 20
+					'шкіра': 200,
+					'луска': 20
 				};
 			}
 		},
-		'i armour': {
+		'лати': {
 			type: 'upgrade',
 			maximum: 1,
-			buildMsg: "iron's stronger than leather",
+			buildMsg: "Залізо міцніше за шкіру.",
 			cost: function() {
 				return {
-					'leather': 200,
-					'iron': 100
+					'шкіра': 200,
+					'залізо': 100
 				}
 			}
 		},
-		's armour': {
+		'кольчуга': {
 			type: 'upgrade',
 			maximum: 1,
-			buildMsg: "steel's stronger than iron",
+			buildMsg: "Сталь міцніша за шкіру.",
 			cost: function() {
 				return {
-					'leather': 200,
-					'steel': 100
+					'шкіра': 200,
+					'сталь': 100
 				}
 			}
 		},
-		'iron sword': {
+		'меч': {
 			button: null,
 			type: 'weapon',
-			buildMsg: "sword is sharp. good protection out in the wilds.",
+			buildMsg: "Загострений меч — найкращий супутник у дорозі.",
 			cost: function() {
 				return {
-					'wood': 200,
-					'leather': 50,
-					'iron': 20
+					'дерево': 200,
+					'шкіра': 50,
+					'залізо': 20
 				};
 			}
 		},
-		'steel sword': {
+		'шабля': {
 			button: null,
 			type: 'weapon',
-			buildMsg: "the steel is strong, and the blade true.",
+			buildMsg: "Міцна сталь і вправна ковка.",
 			cost: function() {
 				return {
-					'wood': 500,
-					'leather': 100,
-					'steel': 20
+					'дерево': 500,
+					'шкіра': 100,
+					'сталь': 20
 				};
 			}
 		},
-		'rifle': {
+		'рушниця': {
 			type: 'weapon',
-			buildMsg: "black powder and bullets, like the old days.",
+			buildMsg: "Чорний порох і набої, як у старі добрі часи.",
 			cost: function() {
 				return {
-					'wood': 200,
-					'steel': 50,
-					'sulphur': 50
+					'дерево': 200,
+					'сталь': 50,
+					'сірка': 50
 				}
 			}
 		}
 	},
 	
 	TradeGoods: {
-		'scales': {
+		'луска': {
 			type: 'good',
 			cost: function() {
-				return { fur: 150 };
+				return { 'шкури': 150 };
 			}
 		},
-		'teeth': {
+		'клики': {
 			type: 'good',
 			cost: function() {
-				return { fur: 300 };
+				return { 'шкури': 300 };
 			}
 		},
-		'iron': {
-			type: 'good',
-			cost: function() {
-				return {
-					'fur': 150,
-					'scales': 50
-				}
-			}
-		},
-		'coal': {
+		'залізо': {
 			type: 'good',
 			cost: function() {
 				return {
-					'fur': 200,
-					'teeth': 50
+					'шкури': 150,
+					'луска': 50
 				}
 			}
 		},
-		'steel': {
+		'вугілля': {
 			type: 'good',
 			cost: function() {
 				return {
-					'fur': 300,
-					'scales': 50,
-					'teeth': 50
+					'шкури': 200,
+					'клики': 50
 				}
 			}
 		},
-		'bullets': {
+		'сталь': {
 			type: 'good',
 			cost: function() {
 				return {
-					'scales': 10
+					'шкури': 300,
+					'луска': 50,
+					'клики': 50
 				}
 			}
 		},
-		'energy cell': {
+		'набої': {
 			type: 'good',
 			cost: function() {
 				return {
-					'scales': 10,
-					'teeth': 10
+					'луска': 10
 				}
 			}
 		},
-		'bolas': {
+		'батарейки': {
+			type: 'good',
+			cost: function() {
+				return {
+					'луска': 10,
+					'клики': 10
+				}
+			}
+		},
+		'болас': {
 			type: 'weapon',
 			cost: function() {
 				return {
-					'teeth': 10
+					'клики': 10
 				}
 			}
 		},
-		'grenade': {
+		'гранати': {
 			type: 'weapon',
 			cost: function() {
 				return {
-					'scales': 100,
-					'teeth': 50
+					'луска': 100,
+					'клики': 50
 				}
 			}
 		},
-		'bayonet': {
+		'штик': {
 			type: 'weapon',
 			cost: function() {
 				return {
-					'scales': 500,
-					'teeth': 250
+					'луска': 500,
+					'клики': 250
 				}
 			}
 		},
-		'alien alloy': {
+		'космічний сплав': {
 			type: 'good',
 			cost: function() {
 				return {
-					'fur': 1500,
-					'scales': 750,
-					'teeth': 300
+					'шкури': 1500,
+					'луска': 750,
+					'клики': 300
 				}
 			}
 		},
-		'compass': {
+		'компас': {
 			type: 'upgrade',
 			maximum: 1,
 			cost: function() {
 				return { 
-					fur: 400, 
-					scales: 20, 
-					teeth: 10 
+					'шкури': 400, 
+					'луска': 20, 
+					'клики': 10 
 				};
 			}
 		}
@@ -439,7 +439,7 @@ var Room = {
 		}
 		
 		// Create the room tab
-		this.tab = Header.addLocation("A Dark Room", "room", Room);
+		this.tab = Header.addLocation("Темна кімната", "room", Room);
 		
 		// Create the Room panel
 		this.panel = $('<div>')
@@ -452,21 +452,21 @@ var Room = {
 		// Create the light button
 		var lbtn = new Button.Button({
 			id: 'lightButton',
-			text: 'light fire',
+			text: 'розпалити',
 			click: Room.lightFire,
 			cooldown: Room._STOKE_COOLDOWN,
 			width: '80px',
-			cost: {'wood': 5}
+			cost: {'дерево': 5}
 		}).appendTo('div#roomPanel');
 		
 		// Create the stoke button
 		var btn = new Button.Button({
 			id: 'stokeButton',
-			text: "stoke fire",
+			text: "підкинути",
 			click: Room.stokeFire,
 			cooldown: Room._STOKE_COOLDOWN,
 			width: '80px',
-			cost: {'wood': 1}
+			cost: {'дерево': 1}
 		}).appendTo('div#roomPanel');
 		
 		// Create the stores container
@@ -491,13 +491,13 @@ var Room = {
 		if(State.room.builder >= 0 && State.room.builder < 3) {
 			Room._builderTimer = setTimeout(Room.updateBuilderState, Room._BUILDER_STATE_DELAY);
 		}
-		if(State.room.builder == 1 && Engine.getStore('wood') < 0) {
+		if(State.room.builder == 1 && Engine.getStore('дерево') < 0) {
 			setTimeout(Room.unlockForest, Room._NEED_WOOD_DELAY);
 		}
 		setTimeout(Engine.collectIncome, 1000);
 		
-		Notifications.notify(Room, "the room is " + State.room.temperature.text);
-		Notifications.notify(Room, "the fire is " + State.room.fire.text);
+		Notifications.notify(Room, "У кімнаті " + State.room.temperature.text);
+		Notifications.notify(Room, "Вогонь " + State.room.fire.text);
 	},
 	
 	options: {}, // Nothing for now
@@ -505,18 +505,18 @@ var Room = {
 	onArrival: function() {
 		Room.setTitle();
 		if(Room.changed) {
-			Notifications.notify(Room, "the fire is " + State.room.fire.text);
-			Notifications.notify(Room, "the room is " + State.room.temperature.text);
+			Notifications.notify(Room, "Вогонь " + State.room.fire.text);
+			Notifications.notify(Room, "У кімнаті " + State.room.temperature.text);
 			Room.changed = false;
 		}
 		if(State.room.builder == 3) {
 			State.room.builder++;
 			Engine.setIncome('builder', {
 				delay: 10,
-				stores: {'wood' : 2 }
+				stores: {'дерево' : 2 }
 			});
 			Room.updateIncomeView();
-			Notifications.notify(Room, "the stranger is standing by the fire. she says she can help. says she builds things.")
+			Notifications.notify(Room, "Незнайомка підійшла до вогню. Каже що може допомогти. Каже вона вміє будувати.")
 		}
 	},
 	
@@ -529,11 +529,11 @@ var Room = {
 			}
 			return null;
 		},
-		Freezing: { value: 0, text: 'freezing' },
-		Cold: { value: 1, text: 'cold' },
-		Mild: { value: 2, text: 'mild' },
-		Warm: { value: 3, text: 'warm' },
-		Hot: { value: 4, text: 'hot' }
+		Freezing: { value: 0, text: 'морозно' },
+		Cold: { value: 1, text: 'холодно' },
+		Mild: { value: 2, text: 'прохолодно' },
+		Warm: { value: 3, text: 'тепло' },
+		Hot: { value: 4, text: 'гаряче' }
 	},
 	
 	FireEnum: {
@@ -545,15 +545,15 @@ var Room = {
 			}
 			return null;
 		},
-		Dead: { value: 0, text: 'dead' },
-		Smoldering: { value: 1, text: 'smoldering' },
-		Flickering: { value: 2, text: 'flickering' },
-		Burning: { value: 3, text: 'burning' },
-		Roaring: { value: 4, text: 'roaring' }
+		Dead: { value: 0, text: 'згас' },
+		Smoldering: { value: 1, text: 'димить' },
+		Flickering: { value: 2, text: 'поблискує' },
+		Burning: { value: 3, text: 'палає' },
+		Roaring: { value: 4, text: 'гуде' }
 	},
 	
 	setTitle: function() {
-		var title = State.room.fire.value < 2 ? "A Dark Room" : "A Firelit Room";
+		var title = State.room.fire.value < 2 ? "Темна кімната" : "Освітлена кімната";
 		if(Engine.activeModule == this) {
 			document.title = title;
 		}
@@ -577,7 +577,7 @@ var Room = {
 			}
 		}
 		
-		if(!Engine.storeAvailable('wood')) {
+		if(!Engine.storeAvailable('дерево')) {
 			light.addClass('free');
 			stoke.addClass('free');
 		} else {
@@ -589,27 +589,27 @@ var Room = {
 	_fireTimer: null,
 	_tempTimer: null,
 	lightFire: function() {
-		var wood = Engine.getStore('wood');
-		if(Engine.storeAvailable('wood') && wood < 5) {
-			Notifications.notify(Room, "not enough wood to get the fire going");
+		var wood = Engine.getStore('дерево');
+		if(Engine.storeAvailable('дерево') && wood < 5) {
+			Notifications.notify(Room, "Не вистачає дерева для підтримки вогню.");
 			Button.clearCooldown($('#lightButton.button'));
 			return;
 		} else if(wood > 4) {
-			Engine.setStore('wood', wood - 5);
+			Engine.setStore('дерево', wood - 5);
 		}
 		State.room.fire = Room.FireEnum.Burning;
 		Room.onFireChange();
 	},
 	
 	stokeFire: function() {
-		var wood = Engine.getStore('wood');
-		if(Engine.storeAvailable('wood') && wood == 0) {
-			Notifications.notify(Room, "the wood has run out");
+		var wood = Engine.getStore('дерево');
+		if(Engine.storeAvailable('дерево') && wood == 0) {
+			Notifications.notify(Room, "Дерево скінчилося.");
 			Button.clearCooldown($('#stokeButton.button'));
 			return;
 		}
 		if(wood > 0) {
-			Engine.setStore('wood', wood - 1);
+			Engine.setStore('дерево', wood - 1);
 		}
 		if(State.room.fire.value < 4) {
 			State.room.fire = Room.FireEnum.fromInt(State.room.fire.value + 1);
@@ -621,10 +621,10 @@ var Room = {
 		if(Engine.activeModule != Room) {
 			Room.changed = true;
 		}
-		Notifications.notify(Room, "the fire is " + State.room.fire.text, true);
+		Notifications.notify(Room, "Вогонь " + State.room.fire.text, true);
 		if(State.room.fire.value > 1 && State.room.builder < 0) {
 			State.room.builder = 0;
-			Notifications.notify(Room, "the light from the fire spills from the windows, out into the dark");
+			Notifications.notify(Room, "Світло від вогню пробивається крізь вікна, освітлюючи темряву навколо.");
 			setTimeout(Room.updateBuilderState, Room._BUILDER_STATE_DELAY);
 		}	
 		window.clearTimeout(Room._fireTimer);
@@ -635,9 +635,9 @@ var Room = {
 	
 	coolFire: function() {
 		if(State.room.fire.value <= Room.FireEnum.Flickering.value &&
-		   State.room.builder > 3 && Engine.getStore('wood') > 0) {
-			Notifications.notify(Room, "builder stokes the fire", true);
-			Engine.setStore('wood', Engine.getStore('wood') - 1);
+		   State.room.builder > 3 && Engine.getStore('дерево') > 0) {
+			Notifications.notify(Room, "Будівельниця підкинула у вогонь.", true);
+			Engine.setStore('дерево', Engine.getStore('дерево') - 1);
 			State.room.fire = Room.FireEnum.fromInt(State.room.fire.value + 1);
 		}
 		if(State.room.fire.value > 0) {
@@ -651,11 +651,11 @@ var Room = {
 		var old = State.room.temperature.value;
 		if(State.room.temperature.value > 0 && State.room.temperature.value > State.room.fire.value) {
 			State.room.temperature = Room.TempEnum.fromInt(State.room.temperature.value - 1);
-			Notifications.notify(Room, "the room is " + State.room.temperature.text, true);
+			Notifications.notify(Room, "У кімнаті " + State.room.temperature.text, true);
 		}
 		if(State.room.temperature.value < 4 && State.room.temperature.value < State.room.fire.value) {
 			State.room.temperature = Room.TempEnum.fromInt(State.room.temperature.value + 1);
-			Notifications.notify(Room, "the room is " + State.room.temperature.text, true);
+			Notifications.notify(Room, "У кімнаті " + State.room.temperature.text, true);
 		}
 		if(State.room.temperature.value != old) {
 			Room.changed = true;
@@ -664,18 +664,18 @@ var Room = {
 	},
 	
 	unlockForest: function() {
-		Engine.setStore('wood', 4);
+		Engine.setStore('дерево', 4);
 		Room.updateButton();
 		Outside.init();
 		Room.updateStoresView();
-		Notifications.notify(Room, "the wind howls outside");
-		Notifications.notify(Room, "the wood is running out");
+		Notifications.notify(Room, "Вітер свище за стінами");
+		Notifications.notify(Room, "Деревина закінчується");
 		Engine.event('progress', 'outside');
 	},
 	
 	updateBuilderState: function() {
 		if(State.room.builder == 0) {
-			Notifications.notify(Room, "a ragged stranger stumbles through the door and collapses in the corner");
+			Notifications.notify(Room, "Незнайомка у лахмітті перепнулася через поріг і завалилася у кутку.");
 			State.room.builder = 1;
 			setTimeout(Room.unlockForest, Room._NEED_WOOD_DELAY);
 		} 
@@ -683,10 +683,10 @@ var Room = {
 			var msg;
 			switch(State.room.builder) {
 			case 1:
-				msg = "the stranger shivers, and mumbles quietly. her words are unintelligible.";
+				msg = "Незнайомка щось збуджено бурмоче. Слова нерозбірливі.";
 				break;
 			case 2:
-				msg = "the stranger in the corner stops shivering. her breathing calms.";
+				msg = "Незнайомка припинила бурмотати. Її дихання заспокоїлося.";
 				break;
 			}
 			Notifications.notify(Room, msg);
@@ -738,7 +738,7 @@ var Room = {
 				break;
 			}
 			
-			var id = "row_" + k.replace(' ', '-');
+			var id = "row_" + k.replace(/ /g, '-');
 			var row = $('div#' + id, location);
 			var num = State.stores[k];
 			
@@ -762,7 +762,7 @@ var Room = {
 				var curPrev = null;
 				location.children().each(function(i) {
 					var child = $(this);
-					var cName = child.attr('id').substring(4).replace('-', ' ');
+					var cName = child.attr('id').substring(4).replace(/-/g, ' ');
 					if(cName < k && (curPrev == null || cName > curPrev)) {
 						curPrev = cName;
 					}
@@ -770,7 +770,7 @@ var Room = {
 				if(curPrev == null) {
 					row.prependTo(location);
 				} else {
-					row.insertAfter(location.find('#row_' + curPrev.replace(' ', '-')));
+					row.insertAfter(location.find('#row_' + curPrev.replace(/ /g, '-')));
 				}
 				newRow = true;
 			} else if(num> 0){
@@ -802,7 +802,7 @@ var Room = {
 			el = $(el);
 			$('div.tooltip', el).remove();
 			var tt = $('<div>').addClass('tooltip bottom right');
-			var storeName = el.attr('id').substring(4).replace('-', ' ');
+			var storeName = el.attr('id').substring(4).replace(/-/g, ' ');
 			for(var incomeSource in State.income) {
 				var income = State.income[incomeSource];
 				for(var store in income.stores) {
@@ -835,7 +835,7 @@ var Room = {
 		for(var k in cost) {
 			var have = Engine.getStore(k)
 			if(have < cost[k]) {
-				Notifications.notify(Room, "not enough " + k);
+				Notifications.notify(Room, "Не достатньо " + k);
 				return false;
 			} else {
 				storeMod[k] = have - cost[k];
@@ -849,7 +849,7 @@ var Room = {
 		
 		Room.updateBuildButtons();
 		
-		if(thing == 'compass') {
+		if(thing == 'компас') {
 			Engine.openPath();
 		}
 	},
@@ -857,7 +857,7 @@ var Room = {
 	build: function(buildBtn) {
 		var thing = $(buildBtn).attr('buildThing');
 		if(State.room.temperature.value <= Room.TempEnum.Cold.value) {
-			Notifications.notify(Room, "builder just shivers");
+			Notifications.notify(Room, "Будівельниця лише затремтіла");
 			return false;
 		}
 		var craftable = Room.Craftables[thing];
@@ -885,7 +885,7 @@ var Room = {
 		for(var k in cost) {
 			var have = Engine.getStore(k)
 			if(have < cost[k]) {
-				Notifications.notify(Room, "not enough " + k);
+				Notifications.notify(Room, "Закінчилося " + k);
 				return false;
 			} else {
 				storeMod[k] = have - cost[k];
@@ -923,11 +923,11 @@ var Room = {
 		}
 		if(State.room.builder < 4) return false;
 		var craftable = Room.Craftables[thing];
-		if(Room.needsWorkshop(craftable.type) && Outside.numBuilding('workshop') == 0) return false;
+		if(Room.needsWorkshop(craftable.type) && Outside.numBuilding('майстерня') == 0) return false;
 		var cost = craftable.cost();
 		
 		// Show buttons if we have at least 1/2 the wood, and all other components have been seen.
-		if(Engine.getStore('wood') < cost['wood'] * 0.5) {
+		if(Engine.getStore('дерево') < cost['дерево'] * 0.5) {
 			return false;
 		}
 		for(var c in cost) {
@@ -946,8 +946,8 @@ var Room = {
 				typeof State.room.buttons != 'undefined' && 
 				State.room.buttons[thing]) {
 			return true;
-		} else if(Outside.numBuilding('trading post') > 0) {
-			if(thing == 'compass' || Engine.storeAvailable(thing)) {
+		} else if(Outside.numBuilding('базар') > 0) {
+			if(thing == 'компас' || Engine.storeAvailable(thing)) {
 				// Allow the purchase of stuff once you've seen it
 				return true;
 			}
@@ -965,14 +965,14 @@ var Room = {
 		
 		var craftSection = $('#craftBtns');
 		var cNeedsAppend = false;
-		if(craftSection.length == 0 && Outside.numBuilding('workshop') > 0) {
+		if(craftSection.length == 0 && Outside.numBuilding('майстерня') > 0) {
 			craftSection = $('<div>').attr('id', 'craftBtns').css('opacity', 0);
 			cNeedsAppend = true;
 		}
 		
 		var buySection = $('#buyBtns');
 		var bNeedsAppend = false;
-		if(buySection.length == 0 && Outside.numBuilding('trading post') > 0) {
+		if(buySection.length == 0 && Outside.numBuilding('базар') > 0) {
 			buySection = $('<div>').attr('id', 'buyBtns').css('opacity', 0);
 			bNeedsAppend = true;
 		}

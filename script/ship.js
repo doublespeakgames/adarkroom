@@ -23,7 +23,7 @@ var Ship = {
 		}
 		
 		// Create the Ship tab
-		this.tab = Header.addLocation("An Old Starship", "ship", Ship);
+		this.tab = Header.addLocation("Старий зореліт", "ship", Ship);
 		
 		// Create the Ship panel
 		this.panel = $('<div>').attr('id', "shipPanel")
@@ -34,38 +34,38 @@ var Ship = {
 		
 		// Draw the hull label
 		var hullRow = $('<div>').attr('id', 'hullRow').appendTo('div#shipPanel');
-		$('<div>').addClass('row_key').text('hull:').appendTo(hullRow);
+		$('<div>').addClass('row_key').text('корпус:').appendTo(hullRow);
 		$('<div>').addClass('row_val').text(State.ship.hull).appendTo(hullRow);
 		$('<div>').addClass('clear').appendTo(hullRow);
 		
 		// Draw the thrusters label
 		var engineRow = $('<div>').attr('id', 'engineRow').appendTo('div#shipPanel');
-		$('<div>').addClass('row_key').text('engine:').appendTo(engineRow);
+		$('<div>').addClass('row_key').text('двигун:').appendTo(engineRow);
 		$('<div>').addClass('row_val').text(State.ship.thrusters).appendTo(engineRow);
 		$('<div>').addClass('clear').appendTo(engineRow);
 		
 		// Draw the reinforce button
 		new Button.Button({
 			id: 'reinforceButton',
-			text: 'reinforce hull',
+			text: 'посилити корпус',
 			click: Ship.reinforceHull,
 			width: '100px',
-			cost: {'alien alloy': Ship.ALLOY_PER_HULL}
+			cost: {'космічний сплав': Ship.ALLOY_PER_HULL}
 		}).appendTo('div#shipPanel');
 		
 		// Draw the engine button
 		new Button.Button({
 			id: 'engineButton',
-			text: 'upgrade engine',
+			text: 'посилити двигун',
 			click: Ship.upgradeEngine,
 			width: '100px',
-			cost: {'alien alloy': Ship.ALLOY_PER_THRUSTER}
+			cost: {'космічний сплав': Ship.ALLOY_PER_THRUSTER}
 		}).appendTo('div#shipPanel');
 		
 		// Draw the lift off button
 		var b = new Button.Button({
 			id: 'liftoffButton',
-			text: 'lift off',
+			text: 'взліт',
 			click: Ship.checkLiftOff,
 			width: '100px',
 			cooldown: Ship.LIFTOFF_COOLDOWN
@@ -84,7 +84,7 @@ var Ship = {
 	onArrival: function() {
 		Ship.setTitle();
 		if(!State.seenShip) {
-			Notifications.notify(Ship, 'somewhere above the debris cloud, the wanderer fleet hovers. been on this rock too long.');
+			Notifications.notify(Ship, 'Під шарми бруду, флот зорелітів стоїть. Він на цій планеті вже занадто довго.');
 			State.seenShip = true;
 			Engine.saveGame();
 		}
@@ -97,11 +97,11 @@ var Ship = {
 	},
 	
 	reinforceHull: function() {
-		if(Engine.getStore('alien alloy') < Ship.ALLOY_PER_HULL) {
-			Notifications.notify(Ship, "not enough alien alloy");
+		if(Engine.getStore('космічний сплав') < Ship.ALLOY_PER_HULL) {
+			Notifications.notify(Ship, "Не достатньо космічного сплаву.");
 			return false;
 		}
-		Engine.addStore('alien alloy', -Ship.ALLOY_PER_HULL);
+		Engine.addStore('космічний сплав', -Ship.ALLOY_PER_HULL);
 		State.ship.hull++;
 		if(State.ship.hull > 0) {
 			Button.setDisabled($('#liftoffButton', Ship.panel), false);
@@ -110,11 +110,11 @@ var Ship = {
 	},
 	
 	upgradeEngine: function() {
-		if(Engine.getStore('alien alloy') < Ship.ALLOY_PER_THRUSTER) {
-			Notifications.notify(Ship, "not enough alien alloy");
+		if(Engine.getStore('космічний сплав') < Ship.ALLOY_PER_THRUSTER) {
+			Notifications.notify(Ship, "Не достатньо космічного сплаву.");
 			return false;
 		}
-		Engine.addStore('alien alloy', -Ship.ALLOY_PER_THRUSTER);
+		Engine.addStore('космічний сплав', -Ship.ALLOY_PER_THRUSTER);
 		State.ship.thrusters++;
 		$('#engineRow .row_val', Ship.panel).text(State.ship.thrusters);
 	},
@@ -126,15 +126,15 @@ var Ship = {
 	checkLiftOff: function() {
 		if(!State.ship.seenWarning) {
 			Events.startEvent({
-				title: 'Ready to Leave?',
+				title: 'Готовий вирушати?',
 				scenes: {
 					'start': {
 						text: [
-							"time to get out of this place. won't be coming back."
+							"Час залишити це місце. Ми не повернемося сюди."
 						],
 						buttons: {
 							'fly': {
-								text: 'lift off',
+								text: 'взліт',
 								onChoose: function() {
 									State.ship.seenWarning = true;
 									Ship.liftOff();
@@ -142,7 +142,7 @@ var Ship = {
 								nextScene: 'end'
 							},
 							'wait': {
-								text: 'linger',
+								text: 'зачекати',
 								onChoose: function() {
 									Button.clearCooldown($('#liftoffButton'));
 								},

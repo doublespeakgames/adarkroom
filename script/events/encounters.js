@@ -18,17 +18,17 @@ Events.Encounters = [
  				attackDelay: 1,
  				health: 5,
  				loot: {
- 					'fur': {
+ 					'шкури': {
  						min: 1,
  						max: 3,
  						chance: 1
  					},
- 					'meat': {
+ 					'м’ясо': {
  						min: 1,
  						max: 3,
  						chance: 1
  					},
- 					'teeth': {
+ 					'клики': {
  						min: 1,
  						max: 3,
  						chance: 0.8
@@ -53,17 +53,17 @@ Events.Encounters = [
   				attackDelay: 2,
   				health: 6,
   				loot: {
-  					'cloth': {
+  					'шмаття': {
   						min: 1,
   						max: 3,
   						chance: 0.8
   					},
-  					'teeth': {
+  					'клики': {
   						min: 1,
   						max: 2,
   						chance: 0.8
   					},
-  					'leather': {
+  					'шкіра': {
   						min: 1,
   						max: 2,
   						chance: 0.5
@@ -88,17 +88,17 @@ Events.Encounters = [
   				attackDelay: 2,
   				health: 4,
   				loot: {
-  					'scales': {
+  					'луска': {
   						min: 1,
   						max: 3,
   						chance: 0.8
   					},
-  					'teeth': {
+  					'клики': {
   						min: 1,
   						max: 2,
   						chance: 0.5
   					},
-  					'meat': {
+  					'м’ясо': {
   						min: 1,
   						max: 3,
   						chance: 0.8
@@ -124,17 +124,17 @@ Events.Encounters = [
  				attackDelay: 1,
  				health: 25,
  				loot: {
- 					'fur': {
+ 					'шкури': {
  						min: 5,
  						max: 10,
  						chance: 1
  					},
- 					'meat': {
+ 					'м’ясо': {
  						min: 5,
  						max: 10,
  						chance: 1
  					},
- 					'teeth': {
+ 					'клики': {
  						min: 5,
  						max: 10,
  						chance: 0.8
@@ -159,17 +159,17 @@ Events.Encounters = [
   				attackDelay: 2,
   				health: 30,
   				loot: {
-  					'cloth': {
+  					'шмаття': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-  					'leather': {
+  					'шкіра': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-					'iron': {
+					'залізо': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -194,17 +194,17 @@ Events.Encounters = [
   				attackDelay: 2,
   				health: 20,
   				loot: {
-  					'scales': {
+  					'луска': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-  					'teeth': {
+  					'клики': {
   						min: 5,
   						max: 10,
   						chance: 0.5
   					},
-  					'meat': {
+  					'м’ясо': {
   						min: 5,
   						max: 10,
   						chance: 0.8
@@ -230,17 +230,17 @@ Events.Encounters = [
  				attackDelay: 1,
  				health: 45,
  				loot: {
- 					'fur': {
+ 					'шкури': {
  						min: 5,
  						max: 10,
  						chance: 1
  					},
- 					'meat': {
+ 					'м’ясо': {
  						min: 5,
  						max: 10,
  						chance: 1
  					},
- 					'teeth': {
+ 					'клики': {
  						min: 5,
  						max: 10,
  						chance: 0.8
@@ -266,17 +266,17 @@ Events.Encounters = [
   				attackDelay: 2,
   				health: 50,
   				loot: {
-  					'cloth': {
+  					'шмаття': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-					'bullets': {
+					'набої': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'rifle': {
+					'рушниця': {
 						min: 1,
 						max: 1,
 						chance: 0.2
@@ -302,17 +302,17 @@ Events.Encounters = [
   				health: 30,
 				ranged: true,
   				loot: {
-  					'cloth': {
+  					'шмаття': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-					'bullets': {
+					'набої': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'rifle': {
+					'рушниця': {
 						min: 1,
 						max: 1,
 						chance: 0.2

@@ -4,14 +4,14 @@ var Path = {
 	
 	// Everything not in this list weighs 1
 	Weight: {
-		'bone spear': 2,
-		'iron sword': 3,
-		'steel sword': 5,
-		'rifle': 5,
-		'bullets': 0.1,
-		'energy cell': 0.2,
-		'laser rifle': 5,
-		'bolas': 0.5
+		'спис': 2,
+		'меч': 3,
+		'шабля': 5,
+		'рушниця': 5,
+		'набої': 0.1,
+		'батарейки': 0.2,
+		'лазерна гвинтівка': 5,
+		'болас': 0.5
 	},
 		
 	name: 'Path',
@@ -26,7 +26,7 @@ var Path = {
 		World.init();
 		
 		// Create the path tab
-		this.tab = Header.addLocation("A Dusty Path", "path", Path);
+		this.tab = Header.addLocation("Пустир", "path", Path);
 		
 		// Create the Path panel
 		this.panel = $('<div>').attr('id', "pathPanel")
@@ -40,7 +40,7 @@ var Path = {
 		// Add the embark button
 		new Button.Button({
 			id: 'embarkButton',
-			text: "embark",
+			text: "у подорож",
 			click: Path.embark,
 			width: '80px',
 			cooldown: World.DEATH_COOLDOWN
@@ -59,11 +59,11 @@ var Path = {
 	},
 	
 	getCapacity: function() {
-		if(Engine.getStore('convoy') > 0) {
+		if(Engine.getStore('колона') > 0) {
 			return Path.DEFAULT_BAG_SPACE + 60;
-		} else if(Engine.getStore('wagon') > 0) {
+		} else if(Engine.getStore('підвода') > 0) {
 			return Path.DEFAULT_BAG_SPACE + 30;
-		} else if(Engine.getStore('rucksack') > 0) {
+		} else if(Engine.getStore('рюкзак') > 0) {
 			return Path.DEFAULT_BAG_SPACE + 10;
 		}
 		return Path.DEFAULT_BAG_SPACE;
@@ -93,7 +93,7 @@ var Path = {
 				perks = $('<div>').attr('id', 'perks');
 			}
 			for(var k in State.perks) {
-				var id = 'perk_' + k.replace(' ', '-');
+				var id = 'perk_' + k.replace(/ /g, '-');
 				var r = $('#' + id);
 				if(State.perks[k] && r.length == 0) {
 					r = $('<div>').attr('id', id).addClass('perkRow').appendTo(perks);
@@ -116,17 +116,17 @@ var Path = {
 		}
 		
 		// Add the armour row
-		var armour = "none";
-		if(Engine.getStore('s armour') > 0)
-			armour = "steel";
-		else if(Engine.getStore('i armour') > 0)
-			armour = "iron";
-		else if(Engine.getStore('l armour') > 0)
-			armour = "leather";
+		var armour = "нічого";
+		if(Engine.getStore('кольчуга') > 0)
+			armour = "сталь";
+		else if(Engine.getStore('лати') > 0)
+			armour = "залізо";
+		else if(Engine.getStore('жупан') > 0)
+			armour = "шкіра";
 		var aRow = $('#armourRow');
 		if(aRow.length == 0) {
 			aRow = $('<div>').attr('id', 'armourRow').addClass('outfitRow').prependTo(outfit);
-			$('<div>').addClass('row_key').text('armour').appendTo(aRow);
+			$('<div>').addClass('row_key').text('броня').appendTo(aRow);
 			$('<div>').addClass('row_val').text(armour).appendTo(aRow);
 			$('<div>').addClass('clear').appendTo(aRow);
 		} else {
@@ -137,7 +137,7 @@ var Path = {
 		var wRow = $('#waterRow');
 		if(wRow.length == 0) {
 			wRow = $('<div>').attr('id', 'waterRow').addClass('outfitRow').insertAfter(aRow);
-			$('<div>').addClass('row_key').text('water').appendTo(wRow);
+			$('<div>').addClass('row_key').text('вода').appendTo(wRow);
 			$('<div>').addClass('row_val').text(World.getMaxWater()).appendTo(wRow);
 			$('<div>').addClass('clear').appendTo(wRow);
 		} else {
@@ -149,14 +149,14 @@ var Path = {
 		var total = 0;
 		// Add the non-craftables to the craftables
 		var carryable = $.extend({
-			'cured meat': { type: 'tool' },
-			'bullets': { type: 'tool' },
-			'grenade': {type: 'weapon' },
-			'bolas': {type: 'weapon' },
-			'laser rifle': {type: 'weapon' },
-			'energy cell': {type: 'tool' },
-			'bayonet': {type: 'weapon' },
-			'charm': {type: 'tool'}
+			'копченина': { type: 'tool' },
+			'набої': { type: 'tool' },
+			'гранати': {type: 'weapon' },
+			'болас': {type: 'weapon' },
+			'лазерна гвинтівка': {type: 'weapon' },
+			'батарейки': {type: 'tool' },
+			'штик': {type: 'weapon' },
+			'буси': {type: 'tool'}
 		}, Room.Craftables);
 		
 		for(var k in carryable) {
@@ -165,7 +165,7 @@ var Path = {
 			var num = Path.outfit[k];
 			num = typeof num == 'number' ? num : 0;
 			var numAvailable = Engine.getStore(k);
-			var row = $('div#outfit_row_' + k.replace(' ', '-'), outfit);
+			var row = $('div#outfit_row_' + k.replace(/ /g, '-'), outfit);
 			if((store.type == 'tool' || store.type == 'weapon') && have > 0) {
 				total += num * Path.getWeight(k);
 				if(row.length == 0) {
@@ -175,7 +175,7 @@ var Path = {
 					outfit.children().each(function(i) {
 						var child = $(this);
 						if(child.attr('id').indexOf('outfit_row_') == 0) {
-							var cName = child.attr('id').substring(11).replace('-', ' ');
+							var cName = child.attr('id').substring(11).replace(/-/g, ' ');
 							if(cName < k && (curPrev == null || cName > curPrev)) {
 								curPrev = cName;
 							}
@@ -186,7 +186,7 @@ var Path = {
 					} 
 					else 
 					{
-						row.insertAfter(outfit.find('#outfit_row_' + curPrev.replace(' ', '-')));
+						row.insertAfter(outfit.find('#outfit_row_' + curPrev.replace(/ /g, '-')));
 					}
 				} else {
 					$('div#' + row.attr('id') + ' > div.row_val > span', outfit).text(num);
@@ -208,9 +208,9 @@ var Path = {
 		}
 		
 		// Update bagspace
-		$('#bagspace').text('free ' + Math.floor(Path.getCapacity() - total) + '/' + Path.getCapacity());
+		$('#bagspace').text('вільно ' + Math.floor(Path.getCapacity() - total) + '/' + Path.getCapacity());
 		
-		if(Path.outfit['cured meat'] > 0) {
+		if(Path.outfit['копченина'] > 0) {
 			Button.setDisabled($('#embarkButton'), false);
 		} else {
 			Button.setDisabled($('#embarkButton'), true);
@@ -218,7 +218,7 @@ var Path = {
 	},
 	
 	createOutfittingRow: function(name, num) {
-		var row = $('<div>').attr('id', 'outfit_row_' + name.replace(' ', '-')).addClass('outfitRow');
+		var row = $('<div>').attr('id', 'outfit_row_' + name.replace(/ /g, '-')).addClass('outfitRow');
 		$('<div>').addClass('row_key').text(name).appendTo(row);
 		var val = $('<div>').addClass('row_val').appendTo(row);
 		
@@ -229,16 +229,16 @@ var Path = {
 		
 		var numAvailable = Engine.getStore(name);
 		var tt = $('<div>').addClass('tooltip bottom right').appendTo(row);
-		$('<div>').addClass('row_key').text('weight').appendTo(tt);
+		$('<div>').addClass('row_key').text('вага').appendTo(tt);
 		$('<div>').addClass('row_val').text(Path.getWeight(name)).appendTo(tt);
-		$('<div>').addClass('row_key').text('available').appendTo(tt);
+		$('<div>').addClass('row_key').text('доступно').appendTo(tt);
 		$('<div>').addClass('row_val').addClass('numAvailable').text(numAvailable).appendTo(tt);
 		
 		return row;
 	},
 	
 	increaseSupply: function() {
-		var supply = $(this).closest('.outfitRow').children('.row_key').text().replace('-', ' ');
+		var supply = $(this).closest('.outfitRow').children('.row_key').text().replace(/-/g, ' ');
 		Engine.log('increasing ' + supply);
 		var cur = Path.outfit[supply];
 		cur = typeof cur == 'number' ? cur : 0;
@@ -249,7 +249,7 @@ var Path = {
 	},
 	
 	decreaseSupply: function() {
-		var supply = $(this).closest('.outfitRow').children('.row_key').text().replace('-', ' ');
+		var supply = $(this).closest('.outfitRow').children('.row_key').text().replace(/-/g, ' ');
 		Engine.log('decreasing ' + supply);
 		var cur = Path.outfit[supply];
 		cur = typeof cur == 'number' ? cur : 0;

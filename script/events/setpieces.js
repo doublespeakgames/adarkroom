@@ -3,15 +3,15 @@
  **/
 Events.Setpieces = {
 	"outpost": { /* Friendly Outpost */
-		title: 'An Outpost',
+		title: 'Стоянка',
 		scenes: {
 			'start': {
 				text: [
-					'a safe place in the wilds.'
+					'Безпечне місце для відпочинку.'
 				],
-				notification: 'a safe place in the wilds.',
+				notification: 'Безпечне місце для відпочинку.',
 				loot: {
-					'cured meat': {
+					'копченина': {
 						min: 5,
 						max: 10,
 						chance: 1
@@ -22,7 +22,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave',
+						text: 'полишити',
 						nextScene: 'end'
 					}
 				}
@@ -30,7 +30,7 @@ Events.Setpieces = {
 		}
 	},
 	"swamp": { /* Swamp */
-		title: 'A Murky Swamp',
+		title: 'Бридке болото',
 		scenes: {
 			'start': {
 				text: [
@@ -40,28 +40,28 @@ Events.Setpieces = {
 				notification: 'a swamp festers in the stagnant air.',
 				buttons: {
 					'enter': {
-						text: 'enter',
+						text: 'увійти',
 						nextScene: {1: 'cabin'}
 					},
 					'leave': {
-						text: 'leave',
+						text: 'полишити',
 						nextScene: 'end'
 					}
 				}
 			},
 			'cabin': {
 				text: [
-					'deep in the swamp is a moss-covered cabin.',
-					'an old wanderer sits inside, in a seeming trance.'
+					'Глибоко у болоті стоїть вкрита мохом кабіна.',
+					'Старий космонавт сидить усередині.'
 				],
 				buttons: {
 					'talk': {
-						cost: {'charm': 1},
-						text: 'talk',
+						cost: {'буси': 1},
+						text: 'побалакати',
 						nextScene: {1: 'talk'}
 					},
 					'leave': {
-						text: 'leave',
+						text: 'полишити',
 						nextScene: 'end'
 					}
 				}
@@ -74,12 +74,12 @@ Events.Setpieces = {
 					'his time here, now, is his penance.'
 				],
 				onLoad: function() {
-					Engine.addPerk('gastronome');
+					Engine.addPerk('кухар');
 					World.markVisited(World.curPos[0], World.curPos[1]);
 				},
 				buttons: {
 					'leave': {
-						text: 'leave',
+						text: 'полишити',
 						nextScene: 'end'
 					}
 				}
@@ -97,12 +97,12 @@ Events.Setpieces = {
 				notification: 'the earth here is split, as if bearing an ancient wound',
 				buttons: {
 					'enter': {	
-						text: 'go inside',
-						cost: { torch: 1 },
+						text: 'зайти',
+						cost: { 'смолоскип': 1 },
 						nextScene: {0.3: 'a1', 0.6: 'a2', 1: 'a3'}
 					},
 					'leave': {
-						text: 'leave',
+						text: 'полишити',
 						nextScene: 'end'
 					}
 				}
@@ -118,12 +118,12 @@ Events.Setpieces = {
 				health: 5,
 				notification: 'a startled beast defends its home',
 				loot: {
-					'fur': {
+					'шкури': {
 						min: 1,
 						max: 10,
 						chance: 1
 					},
-					'teeth': {
+					'клики': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -131,11 +131,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'b1', 1: 'b2'}
 					},
 					'leave': {
-						text: 'leave cave',
+						text: 'вибратися',
 						nextScene: 'end'
 					}
 				}
@@ -151,7 +151,7 @@ Events.Setpieces = {
 						nextScene: {0.5: 'b2', 1: 'b3'}
 					},
 					'leave': {
-						text: 'leave cave',
+						text: 'вибратися',
 						nextScene: 'end'
 					}
 				}
@@ -162,17 +162,17 @@ Events.Setpieces = {
 			       'bedrolls, torn and blackened, lay beneath a thin layer of dust.'
 				],
 				loot: {
-					'cured meat': {
+					'копченина': {
 						min: 1,
 						max: 5,
 						chance: 1
 					},
-					'torch': {
+					'смолоскип': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'leather': {
+					'шкіра': {
 						min: 1,
 						max: 5,
 						chance: 0.3
@@ -180,11 +180,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'b3', 1: 'b4'}
 					},
 					'leave': {
-						text: 'leave cave',
+						text: 'вибратися',
 						nextScene: 'end'
 					}
 				}
@@ -196,17 +196,17 @@ Events.Setpieces = {
 			       "can't tell what left it here."
 				],
 				loot: {
-					'iron sword': {
+					'меч': {
 						min: 1,
 						max: 1,
 						chance: 1
 					},
-					'cured meat': {
+					'копченина': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'torch': {
+					'смолоскип': {
 						min: 1,
 						max: 3,
 						chance: 0.5
@@ -214,29 +214,29 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: { 1: 'c1' }
 					},
 					'leave': {
-						text: 'leave cave',
+						text: 'вибратися',
 						nextScene: 'end'
 					}
 				}
 			},
 			'b2': {
 				text: [
-			       'the torch sputters and dies in the damp air',
+			       'the смолоскип sputters and dies in the damp air',
 			       'the darkness is absolute'
 			    ],
-				notification: 'the torch goes out',
+				notification: 'the смолоскип goes out',
 				buttons: {
 					'continue': {	
-						text: 'continue',
-						cost: {'torch': 1},
+						text: 'продовжити',
+						cost: {'смолоскип': 1},
 						nextScene: { 1: 'c1' }
 					},
 					'leave': {
-						text: 'leave cave',
+						text: 'вибратися',
 						nextScene: 'end'
 					}
 				}
@@ -251,12 +251,12 @@ Events.Setpieces = {
 				health: 5,
 				notification: 'a startled beast defends its home',
 				loot: {
-					'fur': {
+					'шкури': {
 						min: 1,
 						max: 3,
 						chance: 1
 					},
-					'teeth': {
+					'клики': {
 						min: 1,
 						max: 2,
 						chance: 0.8
@@ -264,11 +264,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {1: 'c2'}
 					},
 					'leave': {
-						text: 'leave cave',
+						text: 'вибратися',
 						nextScene: 'end'
 					}
 				}
@@ -283,12 +283,12 @@ Events.Setpieces = {
 				health: 6,
 				notification: 'a cave lizard attacks',
 				loot: {
-					'scales': {
+					'луска': {
 						min: 1,
 						max: 3,
 						chance: 1
 					},
-					'teeth': {
+					'клики': {
 						min: 1,
 						max: 2,
 						chance: 0.8
@@ -296,11 +296,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {1: 'c2'}
 					},
 					'leave': {
-						text: 'leave cave',
+						text: 'вибратися',
 						nextScene: 'end'
 					}
 				}
@@ -315,12 +315,12 @@ Events.Setpieces = {
 				health: 10,
 				notification: 'a large beast charges out of the dark',
 				loot: {
-					'fur': {
+					'шкури': {
 						min: 1,
 						max: 3,
 						chance: 1
 					},
-					'teeth': {
+					'клики': {
 						min: 1,
 						max: 3,
 						chance: 1
@@ -328,11 +328,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'end1', 1: 'end2'}
 					},
 					'leave': {
-						text: 'leave cave',
+						text: 'вибратися',
 						nextScene: 'end'
 					}
 				}
@@ -347,12 +347,12 @@ Events.Setpieces = {
 				health: 10,
 				notification: 'a giant lizard shambles forward',
 				loot: {
-					'scales': {
+					'луска': {
 						min: 1,
 						max: 3,
 						chance: 1
 					},
-					'teeth': {
+					'клики': {
 						min: 1,
 						max: 3,
 						chance: 1
@@ -360,11 +360,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.7: 'end2', 1: 'end3'}
 					},
 					'leave': {
-						text: 'leave cave',
+						text: 'вибратися',
 						nextScene: 'end'
 					}
 				}
@@ -377,27 +377,27 @@ Events.Setpieces = {
 					World.clearDungeon();
 				},
 				loot: {
-					'meat': {
+					'м’ясо': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'fur': {
+					'шкури': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'scales': {
+					'луска': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'teeth': {
+					'клики': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'cloth': {
+					'шмаття': {
 						min: 5,
 						max: 10,
 						chance: 0.5
@@ -405,7 +405,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave cave',
+						text: 'вибратися',
 						nextScene: 'end'
 					}
 				}
@@ -415,32 +415,32 @@ Events.Setpieces = {
 			       'a small supply cache is hidden at the back of the cave.'
 		        ],
 		        loot: {
-					'cloth': {
+					'шмаття': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'leather': {
+					'шкіра': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'iron': {
+					'залізо': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'cured meat': {
+					'копченина': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'steel': {
+					'сталь': {
 						min: 5,
 						max: 10,
 						chance: 0.5
 					},
-					'bolas': {
+					'болас': {
 						min: 1,
 						max: 3,
 						chance: 0.3
@@ -451,7 +451,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave cave',
+						text: 'вибратися',
 						nextScene: 'end'
 					}
 				}
@@ -461,12 +461,12 @@ Events.Setpieces = {
 			       'an old case is wedged behind a rock, covered in a thick layer of dust.'
 		        ],
 		        loot: {
-		        	'steel sword': {
+		        	'шабля': {
 		        		min: 1,
 		        		max: 1,
 		        		chance: 1
 		        	},
-		        	'bolas': {
+		        	'болас': {
 		        		min: 1,
 		        		max: 3,
 		        		chance: 0.5
@@ -477,7 +477,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave cave',
+						text: 'вибратися',
 						nextScene: 'end'
 					}
 				}
@@ -494,12 +494,12 @@ Events.Setpieces = {
 				],
 				notification: "the town lies abandoned, its citizens long dead",
 				buttons: {
-					'enter': {	
-						text: 'explore',
+					'enter': {
+						text: 'розвідати',
 						nextScene: {0.5: 'a1', 1: 'a2'}
 					},
 					'leave': {
-						text: 'leave',
+						text: 'полишити',
 						nextScene: 'end'
 					}
 				}
@@ -512,12 +512,12 @@ Events.Setpieces = {
 				],
 				buttons: {
 					'enter': {
-						text: 'enter',
+						text: 'увійти',
 						nextScene: {0.5: 'b1', 1: 'b2'},
-						cost: {torch: 1}
+						cost: {'смолоскип': 1}
 					},
 					'leave': {
-						text: 'leave town',
+						text: 'піти з містечка',
 						nextScene: 'end'
 					}
 				}
@@ -531,17 +531,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 30,
   				loot: {
-  					'cloth': {
+  					'шмаття': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-  					'leather': {
+  					'шкіра': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-					'cured meat': {
+					'копченина': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -550,11 +550,11 @@ Events.Setpieces = {
   				notification: 'ambushed on the street.',
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'b3', 1: 'b4'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: 'піти з містечка',
 						nextScene: 'end'
 					}
 				}
@@ -564,17 +564,17 @@ Events.Setpieces = {
 			       'a small cache of supplies is tucked inside a rusting locker.'
 			    ],
 			    loot: {
-			    	'cured meat': {
+			    	'копченина': {
 			    		min: 1,
 			    		max: 5,
 			    		chance: 1
 			    	},
-			    	'torch': {
+			    	'смолоскип': {
 			    		min: 1,
 			    		max: 3,
 			    		chance: 0.8
 			    	},
-			    	'bullets': {
+			    	'набої': {
 			    		min: 1,
 			    		max: 5,
 			    		chance: 0.3
@@ -582,11 +582,11 @@ Events.Setpieces = {
 		    	},
 		    	buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'c1', 1: 'c2'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: 'піти з містечка',
 						nextScene: 'end'
 					}
 				}
@@ -600,17 +600,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 30,
   				loot: {
-  					'cloth': {
+  					'шмаття': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-  					'leather': {
+  					'шкіра': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-					'cured meat': {
+					'копченина': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -619,11 +619,11 @@ Events.Setpieces = {
   				notification: 'a scavenger waits just inside the door.',
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'c2', 1: 'c3'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: 'піти з містечка',
 						nextScene: 'end'
 					}
 				}
@@ -637,12 +637,12 @@ Events.Setpieces = {
   				attackDelay: 1,
   				health: 25,
   				loot: {
-  					'teeth': {
+  					'клики': {
   						min: 1,
   						max: 5,
   						chance: 1
   					},
-  					'fur': {
+  					'шкури': {
   						min: 5,
   						max: 10,
   						chance: 1
@@ -651,11 +651,11 @@ Events.Setpieces = {
   				notification: 'a beast stands alone in an overgrown park.',
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'c4', 1: 'c5'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: 'піти з містечка',
 						nextScene: 'end'
 					}
 				}
@@ -666,17 +666,17 @@ Events.Setpieces = {
 			       "it's been picked over by scavengers, but there's still some things worth taking."
 				],
 				loot: {
-					'cured meat': {
+					'копченина': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'torch': {
+					'смолоскип': {
 						min: 1,
 						max: 3,
 						chance: 0.5
 					},
-					'bullets': {
+					'набої': {
 						min: 1,
 						max: 5,
 						chance: 0.3
@@ -684,11 +684,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'c5', 1: 'c6' }
 					},
 					'leave': {
-						text: 'leave town',
+						text: 'піти з містечка',
 						nextScene: 'end'
 					}
 				}
@@ -702,17 +702,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 30,
   				loot: {
-  					'cloth': {
+  					'шмаття': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-  					'leather': {
+  					'шкіра': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-					'cured meat': {
+					'копченина': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -721,11 +721,11 @@ Events.Setpieces = {
   				notification: 'a thug moves out of the shadows.',
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {1: 'd1'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: 'піти з містечка',
 						nextScene: 'end'
 					}
 				}
@@ -739,12 +739,12 @@ Events.Setpieces = {
   				attackDelay: 1,
   				health: 25,
   				loot: {
-  					'teeth': {
+  					'клики': {
   						min: 1,
   						max: 5,
   						chance: 1
   					},
-  					'fur': {
+  					'шкури': {
   						min: 5,
   						max: 10,
   						chance: 1
@@ -753,11 +753,11 @@ Events.Setpieces = {
   				notification: 'a beast charges out of a ransacked classroom.',
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {1: 'd1'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: 'піти з містечка',
 						nextScene: 'end'
 					}
 				}
@@ -765,16 +765,16 @@ Events.Setpieces = {
 			'c3': {
 				text: [
 			       'through the large gymnasium doors, footsteps can be heard.',
-			       'the torchlight casts a flickering glow down the hallway.',
+			       'the смолоскипlight casts a flickering glow down the hallway.',
 			       'the footsteps stop.'
 		        ],
 		        buttons: {
 			        'continue': {
-						text: 'enter',
+						text: 'увійти',
 						nextScene: {1: 'd1'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: 'піти з містечка',
 						nextScene: 'end'
 					}
 		        }
@@ -788,12 +788,12 @@ Events.Setpieces = {
   				attackDelay: 1,
   				health: 25,
   				loot: {
-  					'teeth': {
+  					'клики': {
   						min: 1,
   						max: 5,
   						chance: 1
   					},
-  					'fur': {
+  					'шкури': {
   						min: 5,
   						max: 10,
   						chance: 1
@@ -802,11 +802,11 @@ Events.Setpieces = {
   				notification: 'another beast, draw by the noise, leaps out of a copse of trees.',
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {1: 'd2'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: 'піти з містечка',
 						nextScene: 'end'
 					}
 				}
@@ -818,11 +818,11 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {1: 'd2'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: 'піти з містечка',
 						nextScene: 'end'
 					}
 				}
@@ -833,7 +833,7 @@ Events.Setpieces = {
 			       "can't read the words."
 		        ],
 		        loot: {
-		        	'cured meat': {
+		        	'копченина': {
 		        		min: 1,
 		        		max: 5,
 		        		chance: 1
@@ -841,11 +841,11 @@ Events.Setpieces = {
 		        },
 		        buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {1: 'd2'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: 'піти з містечка',
 						nextScene: 'end'
 					}
 				}
@@ -859,17 +859,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 30,
   				loot: {
-  					'cured meat': {
+  					'копченина': {
   						min: 1,
   						max: 5,
   						chance: 1
   					},
-  					'leather': {
+  					'шкіра': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-					'steel sword': {
+					'шабля': {
 						min: 1,
 						max: 1,
 						chance: 0.5
@@ -878,11 +878,11 @@ Events.Setpieces = {
   				notification: 'a panicked scavenger bursts through the door, screaming.',
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'end1', 1: 'end2'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: 'піти з містечка',
 						nextScene: 'end'
 					}
 				}
@@ -896,17 +896,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 30,
   				loot: {
-  					'cured meat': {
+  					'копченина': {
   						min: 1,
   						max: 5,
   						chance: 1
   					},
-  					'leather': {
+  					'шкіра': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-					'steel sword': {
+					'шабля': {
 						min: 1,
 						max: 1,
 						chance: 0.5
@@ -915,11 +915,11 @@ Events.Setpieces = {
   				notification: "a man stands over a dead wanderer. notices he's not alone.",
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'end3', 1: 'end4'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: 'піти з містечка',
 						nextScene: 'end'
 					}
 				}
@@ -933,22 +933,22 @@ Events.Setpieces = {
 					World.clearDungeon();
 				},
 				loot: {
-					'steel sword': {
+					'шабля': {
 						min: 1,
 						max: 1,
 						chance: 1
 					},
-					'steel': {
+					'сталь': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'cured meat': {
+					'копченина': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'bolas': {
+					'болас': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -956,7 +956,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave town',
+						text: 'піти з містечка',
 						nextScene: 'end'
 					}
 				}
@@ -970,17 +970,17 @@ Events.Setpieces = {
 					World.clearDungeon();
 				},
 				loot: {
-					'coal': {
+					'вугілля': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'cured meat': {
+					'копченина': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'leather': {
+					'шкіра': {
 						min: 5,
 						max: 10,
 						chance: 1
@@ -988,7 +988,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave town',
+						text: 'піти з містечка',
 						nextScene: 'end'
 					}
 				}
@@ -1002,12 +1002,12 @@ Events.Setpieces = {
 					World.clearDungeon();
 				},
 				loot: {
-					'rifle': {
+					'рушниця': {
 						min: 1,
 						max: 1,
 						chance: 1
 					},
-					'bullets': {
+					'набої': {
 						min: 1,
 						max: 5,
 						chance: 1
@@ -1015,7 +1015,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave town',
+						text: 'піти з містечка',
 						nextScene: 'end'
 					}
 				}
@@ -1030,22 +1030,22 @@ Events.Setpieces = {
 					World.clearDungeon();
 				},
 				loot: {
-					'cured meat': {
+					'копченина': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'iron': {
+					'залізо': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'torch': {
+					'смолоскип': {
 						min: 1,
 						max: 5,
 						chance: 1
 					},
-					'bolas': {
+					'болас': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -1053,7 +1053,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave town',
+						text: 'піти з містечка',
 						nextScene: 'end'
 					}
 				}
@@ -1072,11 +1072,11 @@ Events.Setpieces = {
 				notification: "the towers of a decaying city dominate the skyline",
 				buttons: {
 					'enter': {	
-						text: 'explore',
+						text: 'розвідати',
 						nextScene: {0.4: 'a1', 0.8: 'a2', 1: 'a3'}
 					},
 					'leave': {
-						text: 'leave',
+						text: 'полишити',
 						nextScene: 'end'
 					}
 				}
@@ -1087,12 +1087,12 @@ Events.Setpieces = {
 				    'the air is filled with dust, driven relentlessly by the hard winds.'
 		        ],
 		        buttons: {
-					'continue': {	
-						text: 'continue',
+					'continue': {
+						text: 'продовжити',
 						nextScene: {0.5: 'b1', 1: 'b2'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 				}
@@ -1103,12 +1103,12 @@ Events.Setpieces = {
 				    'lights flash through the alleys between buildings.'
 		        ],
 		        buttons: {
-					'continue': {	
-						text: 'continue',
+					'continue': {
+						text: 'продовжити',
 						nextScene: {0.5: 'b3', 1: 'b4'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 				}
@@ -1120,11 +1120,11 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 					'continue': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'b5', 1: 'b6'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 				}
@@ -1137,11 +1137,11 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 		        	'enter': {	
-						text: 'enter',
+						text: 'увійти',
 						nextScene: {0.5: 'c1', 1: 'c2'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 		        }
@@ -1156,17 +1156,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 20,
   				loot: {
-  					'scales': {
+  					'луска': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-  					'teeth': {
+  					'клики': {
   						min: 5,
   						max: 10,
   						chance: 0.5
   					},
-  					'meat': {
+  					'м’ясо': {
   						min: 5,
   						max: 10,
   						chance: 0.8
@@ -1174,11 +1174,11 @@ Events.Setpieces = {
   				},
 		        buttons: {
 		        	'descend': {	
-						text: 'descend',
+						text: 'спуститися',
 						nextScene: {0.5: 'c2', 1: 'c3'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 		        }
@@ -1194,17 +1194,17 @@ Events.Setpieces = {
   				health: 30,
 				ranged: true,
   				loot: {
-  					'cured meat': {
+  					'копченина': {
   						min: 1,
   						max: 5,
   						chance: 0.8
   					},
-					'bullets': {
+					'набої': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'rifle': {
+					'рушниця': {
 						min: 1,
 						max: 1,
 						chance: 0.2
@@ -1212,11 +1212,11 @@ Events.Setpieces = {
   				},
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'c4', 1: 'c5'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 		        }
@@ -1232,17 +1232,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 50,
   				loot: {
-  					'cured meat': {
+  					'копченина': {
   						min: 1,
   						max: 5,
   						chance: 0.8
   					},
-					'bullets': {
+					'набої': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'rifle': {
+					'рушниця': {
 						min: 1,
 						max: 1,
 						chance: 0.2
@@ -1250,11 +1250,11 @@ Events.Setpieces = {
   				},
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'c5', 1: 'c6'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 		        }
@@ -1269,17 +1269,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 10,
   				loot: {
-  					'cured meat': {
+  					'копченина': {
   						min: 1,
   						max: 5,
   						chance: 0.8
   					},
-					'cloth': {
+					'шмаття': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'leather': {
+					'шкіра': {
 						min: 1,
 						max: 1,
 						chance: 0.2
@@ -1287,11 +1287,11 @@ Events.Setpieces = {
   				},
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'c7', 1: 'c8'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 		        }
@@ -1303,11 +1303,11 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'c8', 1: 'c9'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 		        }
@@ -1322,17 +1322,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 30,
   				loot: {
-  					'steel sword': {
+  					'шабля': {
   						min: 1,
   						max: 1,
   						chance: 0.5
   					},
-  					'cured meat': {
+  					'копченина': {
   						min: 1,
   						max: 3,
   						chance: 0.5
   					},
-  					'cloth': {
+  					'шмаття': {
   						min: 1,
   						max: 5,
   						chance: 0.8
@@ -1340,11 +1340,11 @@ Events.Setpieces = {
   				},
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'd1', 1: 'd2'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 		        }
@@ -1360,17 +1360,17 @@ Events.Setpieces = {
   				attackDelay: 1,
   				health: 30,
   				loot: {
-  					'meat': {
+  					'м’ясо': {
   						min: 1,
   						max: 5,
   						chance: 0.8
   					},
-  					'fur': {
+  					'шкури': {
   						min: 1,
   						max: 5,
   						chance: 0.8
   					},
-  					'teeth': {
+  					'клики': {
   						min: 1,
   						max: 5,
   						chance: 0.5
@@ -1378,11 +1378,11 @@ Events.Setpieces = {
   				},
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {1: 'd2'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 		        }
@@ -1396,12 +1396,12 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 		        	'enter': {	
-						text: 'investigate',
-						cost: { 'torch': 1 },
+						text: 'дослідити',
+						cost: { 'смолоскип': 1 },
 						nextScene: {0.5: 'd2', 1: 'd3'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 		        }
@@ -1415,11 +1415,11 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 		        	'enter': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'd4', 1: 'd5'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 		        }
@@ -1432,11 +1432,11 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 		        	'enter': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {1: 'd5'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 		        }
@@ -1449,11 +1449,11 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 		        	'enter': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'd5', 1: 'd6'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 		        }
@@ -1466,11 +1466,11 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 		        	'enter': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'd7', 1: 'd8'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 		        }
@@ -1482,22 +1482,22 @@ Events.Setpieces = {
 					'the owner stands by, stoic.'
 				],
 				loot: {
-					'steel sword': {
+					'шабля': {
 						min: 1,
 						max: 1,
 						chance: 0.8
 					},
-					'rifle': {
+					'рушниця': {
 						min: 1,
 						max: 1,
 						chance: 0.5
 					},
-					'bullets': {
+					'набої': {
 						min: 1,
 						max: 8,
 						chance: 0.25
 					},
-					'alien alloy': {
+					'космічний сплав': {
 						min: 1,
 						max: 1,
 						chance: 0.01
@@ -1505,11 +1505,11 @@ Events.Setpieces = {
 				},
 		        buttons: {
 		        	'enter': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {1: 'd8'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 		        }
@@ -1521,7 +1521,7 @@ Events.Setpieces = {
 			       'the people back away, avoiding eye contact.'
 		        ],
 		        loot: {
-		        	'cured meat': {
+		        	'копченина': {
 		        		min: 5,
 		        		max: 10,
 		        		chance: 1
@@ -1529,11 +1529,11 @@ Events.Setpieces = {
 		        },
 		        buttons: {
 		        	'enter': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'd8', 1: 'd9'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 		        }
@@ -1549,7 +1549,7 @@ Events.Setpieces = {
   				attackDelay: 1,
   				health: 45,
   				loot: {
-  					'meat': {
+  					'м’ясо': {
   						min: 5,
   						max: 10,
   						chance: 0.8
@@ -1557,11 +1557,11 @@ Events.Setpieces = {
   				},
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'end1', 1: 'end2'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 		        }
@@ -1573,22 +1573,22 @@ Events.Setpieces = {
 			       "maybe some useful stuff in the rubble."
 		        ],
 		        loot: {
-		        	'bullets': {
+		        	'набої': {
 		        		min: 1,
 		        		max: 5,
 		        		chance: 0.5
 		        	},
-		        	'steel': {
+		        	'сталь': {
 		        		min: 1,
 		        		max: 10,
 		        		chance: 0.8
 		        	},
-		        	'alien alloy': {
+		        	'космічний сплав': {
 		        		min: 1,
 		        		max: 1,
 		        		chance: 0.01
 		        	},
-		        	'cloth': {
+		        	'шмаття': {
 		        		min: 1,
 		        		max: 10,
 		        		chance: 1
@@ -1596,11 +1596,11 @@ Events.Setpieces = {
 		        },
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {1: 'end2'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 		        }
@@ -1617,12 +1617,12 @@ Events.Setpieces = {
   				attackDelay: 0.25,
   				health: 60,
   				loot: {
-  					'fur': {
+  					'шкури': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-					'teeth': {
+					'клики': {
 						min: 5,
 						max: 10,
 						chance: 0.5
@@ -1630,11 +1630,11 @@ Events.Setpieces = {
   				},
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'end2', 1: 'end3'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 		        }
@@ -1650,12 +1650,12 @@ Events.Setpieces = {
 				attackDelay: 2,
 				health: 45,
 				loot: {
-					'bayonet': {
+					'штик': {
 						min: 1,
 						max: 1,
 						chance: 0.5
 					},
-					'cured meat': {
+					'копченина': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -1663,11 +1663,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'end4', 1: 'end5'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 				}
@@ -1684,17 +1684,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 50,
   				loot: {
-  					'cured meat': {
+  					'копченина': {
   						min: 1,
   						max: 5,
   						chance: 0.8
   					},
-					'bullets': {
+					'набої': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'rifle': {
+					'рушниця': {
 						min: 1,
 						max: 1,
 						chance: 0.2
@@ -1702,11 +1702,11 @@ Events.Setpieces = {
   				},
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {1: 'end5'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 		        }
@@ -1723,17 +1723,17 @@ Events.Setpieces = {
 				attackDelay: 2,
 				health: 55,
 				loot: {
-					'rifle': {
+					'рушниця': {
 						min: 1,
 						max: 1,
 						chance: 0.5
 					},
-					'bullets': {
+					'набої': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'cured meat': {
+					'копченина': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -1741,11 +1741,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'end5', 1: 'end6'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 				}
@@ -1762,12 +1762,12 @@ Events.Setpieces = {
 				attackDelay: 0.5,
 				health: 40,
 				loot: {
-					'cloth': {
+					'шмаття': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'teeth': {
+					'клики': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -1775,11 +1775,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'end7', 1: 'end8'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 				}
@@ -1795,12 +1795,12 @@ Events.Setpieces = {
 				attackDelay: 1,
 				health: 45,
 				loot: {
-					'cloth': {
+					'шмаття': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'teeth': {
+					'клики': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -1808,11 +1808,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {1: 'end8'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 				}
@@ -1828,12 +1828,12 @@ Events.Setpieces = {
 				attackDelay: 2,
 				health: 20,
 				loot: {
-					'cloth': {
+					'шмаття': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'teeth': {
+					'клики': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -1841,11 +1841,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: {0.5: 'end8', 1: 'end9'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 				}
@@ -1861,17 +1861,17 @@ Events.Setpieces = {
 					State.cityCleared = true;
 				},
 				loot: {
-					bullets: {
+					'набої': {
 						min: 5,
 						max: 10,
 						chance: 0.8
 					},
-					bolas: {
+					'болас': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'alien alloy': {
+					'космічний сплав': {
 						min: 1,
 						max: 1,
 						chance: 0.5
@@ -1879,7 +1879,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 				}
@@ -1895,12 +1895,12 @@ Events.Setpieces = {
 					State.cityCleared = true;
 				},
 				loot: {
-					torch: {
+					'смолоскип': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'cured meat': {
+					'копченина': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -1908,7 +1908,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 				}
@@ -1925,27 +1925,27 @@ Events.Setpieces = {
 					State.cityCleared = true;
 				},
 				loot: {
-					rifle: {
+					'рушниця': {
 						min: 1,
 						max: 1,
 						chance: 0.8
 					},
-					bullets: {
+					'набої': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'laser rifle': {
+					'лазерна гвинтівка': {
 						min: 1,
 						max: 1,
 						chance: 0.3
 					},
-					'energy cell': {
+					'батарейки': {
 						min: 1,
 						max: 5,
 						chance: 0.3
 					},
-					'alien alloy': {
+					'космічний сплав': {
 						min: 1,
 						max: 1,
 						chance: 0.3
@@ -1953,7 +1953,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 				}
@@ -1971,17 +1971,17 @@ Events.Setpieces = {
 					State.cityCleared = true;
 				},
 				loot: {
-					rifle: {
+					'рушниця': {
 						min: 1,
 						max: 1,
 						chance: 1
 					},
-					bullets: {
+					'набої': {
 						min: 1,
 						max: 10,
 						chance: 1
 					},
-					grenade: {
+					'граната': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -1989,7 +1989,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 				}
@@ -2006,17 +2006,17 @@ Events.Setpieces = {
 					State.cityCleared = true;
 				},
 				loot: {
-					rifle: {
+					'рушниця': {
 						min: 1,
 						max: 1,
 						chance: 1
 					},
-					bullets: {
+					'набої': {
 						min: 1,
 						max: 10,
 						chance: 1
 					},
-					'cured meat': {
+					'копченина': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -2024,7 +2024,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 				}
@@ -2041,17 +2041,17 @@ Events.Setpieces = {
 					State.cityCleared = true;
 				},
 				loot: {
-					'laser rifle': {
+					'лазерна гвинтівка': {
 						min: 1,
 						max: 1,
 						chance: 0.5
 					},
-					'energy cell': {
+					'батарейки': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'cured meat': {
+					'копченина': {
 						min: 1,
 						max: 10,
 						chance: 1
@@ -2059,7 +2059,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 				}
@@ -2076,17 +2076,17 @@ Events.Setpieces = {
 					State.cityCleared = true;
 				},
 				loot: {
-					'steel sword': {
+					'шабля': {
 						min: 1,
 						max: 1,
 						chance: 0.8
 					},
-					'energy cell': {
+					'батарейки': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'cured meat': {
+					'копченина': {
 						min: 1,
 						max: 10,
 						chance: 1
@@ -2094,7 +2094,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 				}
@@ -2111,17 +2111,17 @@ Events.Setpieces = {
 					State.cityCleared = true;
 				},
 				loot: {
-					'steel sword': {
+					'шабля': {
 						min: 1,
 						max: 1,
 						chance: 0.8
 					},
-					'bolas': {
+					'болас': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'cured meat': {
+					'копченина': {
 						min: 1,
 						max: 10,
 						chance: 1
@@ -2129,7 +2129,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 				}
@@ -2146,22 +2146,22 @@ Events.Setpieces = {
 					State.cityCleared = true;
 				},
 				loot: {
-					'rifle': {
+					'рушниця': {
 						min: 1,
 						max: 1,
 						chance: 0.8
 					},
-					'bullets': {
+					'набої': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'bolas': {
+					'болас': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'alien alloy': {
+					'космічний сплав': {
 						min: 1,
 						max: 1,
 						chance: 0.2
@@ -2169,7 +2169,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: 'піти з міста',
 						nextScene: 'end'
 					}
 				}
@@ -2187,11 +2187,11 @@ Events.Setpieces = {
 				notification: 'the remains of an old house stand as a monument to simpler times',
 				buttons: {
 					'enter': {
-						text: 'go inside',
+						text: 'зайти',
 						nextScene: { 0.5: 'supplies', 1: 'occupied' }
 					},
 					'leave': {
-						text: 'leave',
+						text: 'полишити',
 						nextScene: 'end'
 					}
 				},
@@ -2204,20 +2204,20 @@ Events.Setpieces = {
 				onLoad: function() {
 					World.markVisited(World.curPos[0], World.curPos[1]);
 					World.setWater(World.getMaxWater());
-					Notifications.notify(null, 'water replenished');
+					Notifications.notify(null, 'Набрали води.');
 				},
 				loot: {
- 					'cured meat': {
+ 					'копченина': {
  						min: 1,
  						max: 10,
  						chance: 0.8
  					},
-					'leather': {
+					'шкіра': {
 						min: 1,
 						max: 10,
 						chance: 0.2
 					},
-					'cloth': {
+					'шмаття': {
 						min: 1,
 						max: 10,
 						chance: 0.5
@@ -2225,7 +2225,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave',
+						text: 'полишити',
 						nextScene: 'end'
 					}
 				}
@@ -2243,17 +2243,17 @@ Events.Setpieces = {
 					World.markVisited(World.curPos[0], World.curPos[1]);
 				},
 				loot: {
- 					'cured meat': {
+ 					'копченина': {
  						min: 1,
  						max: 10,
  						chance: 0.8
  					},
-					'leather': {
+					'шкіра': {
 						min: 1,
 						max: 10,
 						chance: 0.2
 					},
-					'cloth': {
+					'шмаття': {
 						min: 1,
 						max: 10,
 						chance: 0.5
@@ -2261,7 +2261,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave',
+						text: 'полишити',
 						nextScene: 'end'
 					}
 				}
@@ -2280,32 +2280,32 @@ Events.Setpieces = {
 					World.markVisited(World.curPos[0], World.curPos[1]);
 				},
 		        loot: {
-		        	'rifle': {
+		        	'рушниця': {
 		        		min: 1,
 		        		max: 3,
 		        		chance: 0.5
 		        	},
-		        	'bullets': {
+		        	'набої': {
 		        		min: 5,
 		        		max: 20,
 		        		chance: 0.8
 		        	},
-		        	'laser rifle': {
+		        	'лазерна гвинтівка': {
 		        		min: 1,
 		        		max: 3,
 		        		chance: 0.3
 		        	},
-		        	'energy cell': {
+		        	'батарейки': {
 		        		min: 5,
 		        		max: 10,
 		        		chance: 0.5
 		        	},
-		        	'grenade': {
+		        	'гранати': {
 		        		min: 1,
 		        		max: 5,
 		        		chance: 0.5
 		        	},
-		        	'alien alloy': {
+		        	'космічний сплав': {
 		        		min: 1,
 		        		max: 1,
 		        		chance: 0.3
@@ -2313,7 +2313,7 @@ Events.Setpieces = {
 		        },
 		        buttons: {
 		        	'leave': {
-		        		text: 'leave',
+		        		text: 'полишити',
 		        		nextScene: 'end'
 		        	}
 		        }
@@ -2333,7 +2333,7 @@ Events.Setpieces = {
 					World.markVisited(World.curPos[0], World.curPos[1]);
 				},
 		        loot: {
-		        	'alien alloy': {
+		        	'космічний сплав': {
 		        		min: 1,
 		        		max: 3,
 		        		chance: 1
@@ -2341,7 +2341,7 @@ Events.Setpieces = {
 		        },
 		        buttons: {
 		        	'leave': {
-		        		text: 'leave',
+		        		text: 'полишити',
 		        		nextScene: 'end'
 		        	}
 		        }
@@ -2372,7 +2372,7 @@ Events.Setpieces = {
 		}
 	},
 	"sulphurmine": { /* Clearing the Sulphur Mine */
-		title: 'The Sulphur Mine',
+		title: 'Родовище сірки',
 		scenes: {
 			'start': {
 				text: [
@@ -2381,12 +2381,12 @@ Events.Setpieces = {
 				],
 				notification: 'a military perimeter is set up around the mine.',
 				buttons: {
-					'attack': {	
-						text: 'attack',
+					'attack': {
+						text: 'атакувати',
 						nextScene: {1: 'a1'}
 					},
 					'leave': {
-						text: 'leave',
+						text: 'полишити',
 						nextScene: 'end'
 					}
 				}
@@ -2401,17 +2401,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 50,
   				loot: {
-  					'cured meat': {
+  					'копченина': {
   						min: 1,
   						max: 5,
   						chance: 0.8
   					},
-					'bullets': {
+					'набої': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'rifle': {
+					'рушниця': {
 						min: 1,
 						max: 1,
 						chance: 0.2
@@ -2420,11 +2420,11 @@ Events.Setpieces = {
   				notification: 'a soldier, alerted, opens fire.',
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: { 1: 'a2' }
 					},
 					'run': {
-						text: 'run',
+						text: 'втекти',
 						nextScene: 'end'
 					}
 				}
@@ -2439,17 +2439,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 50,
   				loot: {
-  					'cured meat': {
+  					'копченина': {
   						min: 1,
   						max: 5,
   						chance: 0.8
   					},
-					'bullets': {
+					'набої': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'rifle': {
+					'рушниця': {
 						min: 1,
 						max: 1,
 						chance: 0.2
@@ -2458,11 +2458,11 @@ Events.Setpieces = {
   				notification: 'a second soldier joins the fight.',
  				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: { 1: 'a3' }
 					},
 					'run': {
-						text: 'run',
+						text: 'втекти',
 						nextScene: 'end'
 					}
 				}
@@ -2476,12 +2476,12 @@ Events.Setpieces = {
 				attackDelay: 2,
 				health: 65,
 				loot: {
-					'bayonet': {
+					'штик': {
 						min: 1,
 						max: 1,
 						chance: 0.5
 					},
-					'cured meat': {
+					'копченина': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -2490,7 +2490,7 @@ Events.Setpieces = {
 				notification: 'a grizzled soldier attacks, waving a bayonet.',
  				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: { 1: 'cleared' }
 					}
 				}
@@ -2508,7 +2508,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave',
+						text: 'полишити',
 						nextScene: 'end'
 					}
 				}
@@ -2525,12 +2525,12 @@ Events.Setpieces = {
 				],
 				notification: 'this old mine is not abandoned',
 				buttons: {
-					'attack': {	
-						text: 'attack',
+					'attack': {
+						text: 'атакувати',
 						nextScene: {1: 'a1'}
 					},
 					'leave': {
-						text: 'leave',
+						text: 'полишити',
 						nextScene: 'end'
 					}
 				}
@@ -2544,12 +2544,12 @@ Events.Setpieces = {
 				attackDelay: 2,
 				health: 10,
 				loot: {
-					'cured meat': {
+					'копченина': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'cloth': {
+					'шмаття': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -2558,11 +2558,11 @@ Events.Setpieces = {
 				notification: 'a man joins the fight',
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: { 1: 'a2' }
 					},
 					'run': {
-						text: 'run',
+						text: 'втекти',
 						nextScene: 'end'
 					}
 				}
@@ -2576,12 +2576,12 @@ Events.Setpieces = {
  				attackDelay: 2,
  				health: 10,
  				loot: {
-					'cured meat': {
+					'копченина': {
 						min: 1,
  						max: 5,
 						chance: 0.8
 					},
-					'cloth': {
+					'шмаття': {
 						min: 1,
  						max: 5,
 						chance: 0.8
@@ -2590,11 +2590,11 @@ Events.Setpieces = {
  				notification: 'a man joins the fight',
  				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: { 1: 'a3' }
 					},
 					'run': {
-						text: 'run',
+						text: 'втекти',
 						nextScene: 'end'
 					}
 				}
@@ -2608,17 +2608,17 @@ Events.Setpieces = {
  				attackDelay: 2,
  				health: 20,
  				loot: {
-					'cured meat': {
+					'копченина': {
 						min: 5,
  						max: 10,
 						chance: 1
 					},
-					'cloth': {
+					'шмаття': {
 						min: 5,
  						max: 10,
 						chance: 0.8
 					},
-					'iron': {
+					'залізо': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -2627,7 +2627,7 @@ Events.Setpieces = {
  				notification: 'only the chief remains.',
  				buttons: {
 					'continue': {
-						text: 'continue',
+						text: 'продовжити',
 						nextScene: { 1: 'cleared' }
 					}
 				}
@@ -2645,7 +2645,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave',
+						text: 'полишити',
 						nextScene: 'end'
 					}
 				}
@@ -2664,12 +2664,12 @@ Events.Setpieces = {
 				notification: 'the path leads to an abandoned mine',
 				buttons: {
 					'enter': {
-						text: 'go inside',
+						text: 'зайти',
 						nextScene: { 1: 'enter' },
-						cost: { 'torch': 1 }
+						cost: { 'смолоскип': 1 }
 					},
 					'leave': {
-						text: 'leave',
+						text: 'полишити',
 						nextScene: 'end'
 					}
 				}
@@ -2683,26 +2683,26 @@ Events.Setpieces = {
  				attackDelay: 2,
  				health: 10,
  				loot: {
- 					'teeth': {
+ 					'клики': {
  						min: 5,
  						max: 10,
  						chance: 1
  					},
-					'scales': {
+					'луска': {
 						min: 5,
  						max: 10,
 						chance: 0.8
 					},
-					'cloth': {
+					'шмаття': {
 						min: 5,
  						max: 10,
 						chance: 0.5
 					}
  				},
- 				notification: 'a large creature lunges, muscles rippling in the torchlight',
+ 				notification: 'a large creature lunges, muscles rippling in the смолоскип light',
  				buttons: {
 					'leave': {
-						text: 'leave',
+						text: 'полишити',
 						nextScene: { 1: 'cleared' }
 					}
 				}
@@ -2720,7 +2720,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave',
+						text: 'полишити',
 						nextScene: 'end'
 					}
 				}

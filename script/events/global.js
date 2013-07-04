@@ -3,59 +3,59 @@
  **/
 Events.Global = [
 	{ /* The Thief */
-		title: 'The Thief',
+		title: 'Злодій',
 		isAvailable: function() {
 			return (Engine.activeModule == Room || Engine.activeModule == Outside) && State.thieves == 1;
 		},
 		scenes: {
 			'start': {
 				text: [
-					'the villagers haul a filthy man out of the store room.',
-					"say his folk have been skimming the supplies.",
-					'say he should be strung up as an example.'
+					'Селяни зловили грязного злодія біля комори.',
+					"Кажуть що він крав припаси.",
+					'Кажуть що його потрібно повісити для прикладу.'
 				],
-				notification: 'a thief is caught',
+				notification: 'Злодій впіймався.',
 				buttons: {
 					'kill': {
-						text: 'hang him',
+						text: 'повісити',
 						nextScene: {1: 'hang'}
 					},
 					'spare': {
-						text: 'spare him',
+						text: 'пошкодувати',
 						nextScene: {1: 'spare'}
 					}
 				}
 			},
 			'hang': {
 				text: [
-			       'the villagers hang the thief high in front of the store room.',
-			       'the point is made. in the next few days, the missing supplies are returned.'
+			       'Селяни повісили злодія навпроти комори.',
+			       'Злодії злякалися. Через декілька днів припаси були повернуті.'
 		        ],
 		        onLoad: function() {
 		        	State.thieves = 2;
-		        	Engine.removeIncome('thieves');
+		        	Engine.removeIncome('злодії');
 		        	Engine.addStores(State.stolen);
 		        },
 		        buttons: {
 					'leave': {
-						text: 'leave',
+						text: 'полишити',
 						nextScene: 'end'
 					}
 				}
 			},
 			'spare': {
 				text: [
-			       "the man says he's grateful. says he won't come around any more.",
-			       "shares what he knows about sneaking before he goes."
+			       "Мужчина каже що він дуже вдячний. Каже що не буде більше так робити.",
+			       "Розказав все що знав про вкрадливість."
 		        ],
 		        onLoad: function() {
 		        	State.thieves = 2;
-		        	Engine.removeIncome('thieves');
-		        	Engine.addPerk('stealthy');
+		        	Engine.removeIncome('злодії');
+		        	Engine.addPerk('вкрадливість');
 		        },
 		        buttons: {
 		        	'leave': {
-		        		text: 'leave',
+		        		text: 'полишити',
 		        		nextScene: 'end'
 		        	}
 		        }

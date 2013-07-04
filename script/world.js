@@ -36,62 +36,62 @@ var World = {
 	
 	Weapons: {
 		'fists': {
-			verb: 'punch',
+			verb: 'копати',
 			type: 'unarmed',
 			damage: 1,
 			cooldown: 2
 		},
-		'bone spear': {
-			verb: 'stab',
+		'спис': {
+			verb: 'колоти',
 			type: 'melee',
 			damage: 2,
 			cooldown: 2
 		},
-		'iron sword': {
-			verb: 'swing',
+		'меч': {
+			verb: 'рубати',
 			type: 'melee',
 			damage: 4,
 			cooldown: 2
 		},
-		'steel sword': {
-			verb: 'slash',
+		'шабля': {
+			verb: 'сікти',
 			type: 'melee',
 			damage: 6,
 			cooldown: 2
 		},
-		'bayonet': {
-			verb: 'thrust',
+		'штик': {
+			verb: 'встромити',
 			type: 'melee',
 			damage: 8,
 			cooldown: 2
 		},
-		'rifle': {
-			verb: 'shoot',
+		'рушниця': {
+			verb: 'стріляти',
 			type: 'ranged',
 			damage: 5,
 			cooldown: 1,
-			cost: { 'bullets': 1 }
+			cost: { 'набої': 1 }
 		},
-		'laser rifle': {
-			verb: 'blast',
+		'лазерна гвинтівка': {
+			verb: 'смалити',
 			type: 'ranged',
 			damage: 8,
 			cooldown: 1,
-			cost: { 'energy cell': 1 }
+			cost: { 'батарейки': 1 }
 		},
-		'grenade': {
-			verb: 'lob',
+		'гранати': {
+			verb: 'кинути',
 			type: 'ranged',
 			damage: 15,
 			cooldown: 5,
-			cost: { 'grenade': 1 }
+			cost: { 'гранати': 1 }
 		},
-		'bolas': {
-			verb: 'tangle',
+		'болас': {
+			verb: 'накинути',
 			type: 'ranged',
 			damage: 'stun',
 			cooldown: 15,
-			cost: { 'bolas': 1 }
+			cost: { 'болас': 1 }
 		}
 	},
 	
@@ -109,18 +109,18 @@ var World = {
 		World.TILE_PROBS[World.TILE.BARRENS] = 0.5;
 		
 		// Setpiece definitions
-		World.LANDMARKS[World.TILE.OUTPOST] = { num: 0, minRadius: 0, maxRadius: 0, scene: 'outpost', label: 'An&nbsp;Outpost' };
-		World.LANDMARKS[World.TILE.IRON_MINE] = { num: 1, minRadius: 5, maxRadius: 5, scene: 'ironmine', label: 'Iron&nbsp;Mine' };
-		World.LANDMARKS[World.TILE.COAL_MINE] = { num: 1, minRadius: 10, maxRadius: 10, scene: 'coalmine', label: 'Coal&nbsp;Mine' };
-		World.LANDMARKS[World.TILE.SULPHUR_MINE] = { num: 1, minRadius: 20, maxRadius: 20, scene: 'sulphurmine', label: 'Sulphur&nbsp;Mine' };
-		World.LANDMARKS[World.TILE.HOUSE] = { num: 10, minRadius: 0, maxRadius: World.RADIUS * 1.5, scene: 'house', label: 'An&nbsp;Old&nbsp;House' };
-		World.LANDMARKS[World.TILE.CAVE] = { num: 5, minRadius: 3, maxRadius: 10, scene: 'cave', label: 'A&nbsp;Damp&nbsp;Cave' };
-		World.LANDMARKS[World.TILE.TOWN] = { num: 10, minRadius: 10, maxRadius: 20, scene: 'town', label: 'An&nbsp;Abandoned&nbsp;Town' };
-		World.LANDMARKS[World.TILE.CITY] = { num: 20, minRadius: 20, maxRadius: World.RADIUS * 1.5, scene: 'city', label: 'A&nbsp;Ruined&nbsp;City' };
-		World.LANDMARKS[World.TILE.SHIP] = {num: 1, minRadius: 28, maxRadius: 28, scene: 'ship', label: 'A&nbsp;Crashed&nbsp;Starship'};
-		World.LANDMARKS[World.TILE.BOREHOLE] = {num: 10, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'borehole', label: 'A&nbsp;Borehole'};
-		World.LANDMARKS[World.TILE.BATTLEFIELD] = {num: 5, minRadius: 18, maxRadius: World.RADIUS * 1.5, scene: 'battlefield', label: 'A&nbsp;Battlefield'};
-		World.LANDMARKS[World.TILE.SWAMP] = {num: 1, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'swamp', label: 'A&nbsp;Murky&nbsp;Swamp'};
+		World.LANDMARKS[World.TILE.OUTPOST] = { num: 0, minRadius: 0, maxRadius: 0, scene: 'outpost', label: 'Аванпост' };
+		World.LANDMARKS[World.TILE.IRON_MINE] = { num: 1, minRadius: 5, maxRadius: 5, scene: 'ironmine', label: 'Залізнорудна&nbsp;шахта' };
+		World.LANDMARKS[World.TILE.COAL_MINE] = { num: 1, minRadius: 10, maxRadius: 10, scene: 'coalmine', label: 'Копальня&nbsp;вугілля' };
+		World.LANDMARKS[World.TILE.SULPHUR_MINE] = { num: 1, minRadius: 20, maxRadius: 20, scene: 'sulphurmine', label: 'Родовище&nbsp;сірки' };
+		World.LANDMARKS[World.TILE.HOUSE] = { num: 10, minRadius: 0, maxRadius: World.RADIUS * 1.5, scene: 'house', label: 'Старий&nbsp;будинок' };
+		World.LANDMARKS[World.TILE.CAVE] = { num: 5, minRadius: 3, maxRadius: 10, scene: 'cave', label: 'Волога&nbsp;печера' };
+		World.LANDMARKS[World.TILE.TOWN] = { num: 10, minRadius: 10, maxRadius: 20, scene: 'town', label: 'Покинуте&nbsp;містечко' };
+		World.LANDMARKS[World.TILE.CITY] = { num: 20, minRadius: 20, maxRadius: World.RADIUS * 1.5, scene: 'city', label: 'Зруйноване&nbsp;місто' };
+		World.LANDMARKS[World.TILE.SHIP] = {num: 1, minRadius: 28, maxRadius: 28, scene: 'ship', label: 'Підбитий&nbsp;зореліт'};
+		World.LANDMARKS[World.TILE.BOREHOLE] = {num: 10, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'borehole', label: 'Воронка'};
+		World.LANDMARKS[World.TILE.BATTLEFIELD] = {num: 5, minRadius: 18, maxRadius: World.RADIUS * 1.5, scene: 'battlefield', label: 'Поле&nbsp;битви'};
+		World.LANDMARKS[World.TILE.SWAMP] = {num: 1, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'swamp', label: 'Темне&nbsp;болото'};
 		
 		if(typeof State.world == 'undefined') {
 			State.world = {
@@ -190,21 +190,21 @@ var World = {
 			water = World.createItemDiv('water', World.water);
 			water.prependTo(supplies);
 		} else if(World.water > 0) {
-			$('div#supply_water', supplies).text('water:' + World.water);
+			$('div#supply_water', supplies).text('вода:' + World.water);
 		} else {
 			water.remove();
 		}
 		
 		var total = 0;
 		for(var k in Path.outfit) {
-			var item = $('div#supply_' + k.replace(' ', '-'), supplies);
+			var item = $('div#supply_' + k.replace(/ /g, '-'), supplies);
 			var num = Path.outfit[k];
 			total += num * Path.getWeight(k);
 			if(num > 0 && item.length == 0) {
 				item = World.createItemDiv(k, num);
-				if(k == 'cured meat' && World.water > 0) {
+				if(k == 'копченина' && World.water > 0) {
 					item.insertAfter(water);
-				} else if(k == 'cured meat') {
+				} else if(k == 'копченина') {
 					item.prependTo(supplies);
 				} else {
 					item.appendTo(supplies);
@@ -218,13 +218,13 @@ var World = {
 		
 		// Update label
 		var t = 'pockets';
-		if(Engine.getStore('rucksack') > 0) {
-			t = 'rucksack';
+		if(Engine.getStore('рюкзак') > 0) {
+			t = 'рюкзак';
 		}
 		$('#backpackTitle').text(t);
 		
 		// Update bagspace
-		$('#backpackSpace').text('free ' + Math.floor(Path.getCapacity() - total) + '/' + Path.getCapacity());
+		$('#backpackSpace').text('вільно ' + Math.floor(Path.getCapacity() - total) + '/' + Path.getCapacity());
 	},
 	
 	setWater: function(w) {
@@ -241,12 +241,12 @@ var World = {
 			if(World.health > World.getMaxHealth()) {
 				World.health = World.getMaxHealth();
 			}
-			$('#healthCounter').text('hp: ' + World.health + '/' + World.getMaxHealth());
+			$('#healthCounter').text('життя: ' + World.health + '/' + World.getMaxHealth());
 		}
 	},
 	
 	createItemDiv: function(name, num) {
-		var div = $('<div>').attr('id', 'supply_' + name.replace(' ', '-'))
+		var div = $('<div>').attr('id', 'supply_' + name.replace(/ /g, '-'))
 			.addClass('supplyItem')
 			.text(name + ':' + num);
 		
@@ -288,9 +288,9 @@ var World = {
 			World.doSpace();
 			if(World.checkDanger()) {
 				if(World.danger) {
-					Notifications.notify(World, 'dangerous to be this far from the village without proper protection')
+					Notifications.notify(World, 'небезпечно бути так далеко від поселення без захисту')
 				} else {
-					Notifications.notify(World, 'safer here');
+					Notifications.notify(World, 'тут безпечніше');
 				}
 			}
 		}
@@ -299,11 +299,11 @@ var World = {
 	checkDanger: function() {
 		World.danger = typeof World.danger == 'undefined' ? false: World.danger;
 		if(!World.danger) {
-			if(!Engine.getStore('i armour') > 0 && World.getDistance() >= 8) {
+			if(!Engine.getStore('лати') > 0 && World.getDistance() >= 8) {
 				World.danger = true;
 				return true;
 			} 
-			if(!Engine.getStore('s armour') > 0 && World.getDistance() >= 18) {
+			if(!Engine.getStore('кольчуга') > 0 && World.getDistance() >= 18) {
 				World.danger = true;
 				return true;
 			}
@@ -312,7 +312,7 @@ var World = {
 				World.danger = false;
 				return true;
 			}
-			if(World.getDistance < 18 && Engine.getStore('i armour') > 0) {
+			if(World.getDistance < 18 && Engine.getStore('лати') > 0) {
 				World.danger = false;
 				return true;
 			}
@@ -325,10 +325,10 @@ var World = {
 		World.waterMove++;
 		// Food
 		var movesPerFood = World.MOVES_PER_FOOD;
-		movesPerFood *= Engine.hasPerk('slow metabolism') ? 2 : 1;
+		movesPerFood *= Engine.hasPerk('витривалість') ? 2 : 1;
 		if(World.foodMove >= movesPerFood) {
 			World.foodMove = 0;
-			var num = Path.outfit['cured meat'];
+			var num = Path.outfit['копченина'];
 			num--;
 			if(num == 0) {
 				Notifications.notify(World, 'the meat has run out');
@@ -341,8 +341,8 @@ var World = {
 				} else {
 					State.starved = State.starved ? State.starved : 0;
 					State.starved++;
-					if(State.starved >= 10 && !Engine.hasPerk('slow metabolism')) {
-						Engine.addPerk('slow metabolism');
+					if(State.starved >= 10 && !Engine.hasPerk('витривалість')) {
+						Engine.addPerk('витривалість');
 					}
 					World.die();
 					return false;
@@ -351,11 +351,11 @@ var World = {
 				World.starvation = false;
 				World.setHp(World.health + World.meatHeal());
 			}
-			Path.outfit['cured meat'] = num;
+			Path.outfit['копченина'] = num;
 		}
 		// Water
 		var movesPerWater = World.MOVES_PER_WATER;
-		movesPerWater *= Engine.hasPerk('desert rat') ? 2 : 1;
+		movesPerWater *= Engine.hasPerk('пустельник') ? 2 : 1;
 		if(World.waterMove >= movesPerWater) {
 			World.waterMove = 0;
 			var water = World.water;
@@ -370,8 +370,8 @@ var World = {
 				} else {
 					State.dehydrated = State.dehydrated ? State.dehydrated : 0;
 					State.dehydrated++;
-					if(State.dehydrated >= 10 && !Engine.hasPerk('desert rat')) {
-						Engine.addPerk('desert rat');
+					if(State.dehydrated >= 10 && !Engine.hasPerk('пустельник')) {
+						Engine.addPerk('пустельник');
 					}
 					World.die();
 					return false;
@@ -386,7 +386,7 @@ var World = {
 	},
 	
 	meatHeal: function() {
-		return World.MEAT_HEAL * (Engine.hasPerk('gastronome') ? 2 : 1);
+		return World.MEAT_HEAL * (Engine.hasPerk('кухар') ? 2 : 1);
 	},
 	
 	checkFight: function() {
@@ -394,7 +394,7 @@ var World = {
 		World.fightMove++;
 		if(World.fightMove > World.FIGHT_DELAY) {
 			var chance = World.FIGHT_CHANCE;
-			chance *= Engine.hasPerk('stealthy') ? 0.5 : 1;
+			chance *= Engine.hasPerk('вкрадливість') ? 0.5 : 1;
 			if(Math.random() < chance) {
 				World.fightMove = 0;
 				Events.triggerFight();
@@ -432,30 +432,30 @@ var World = {
 			case World.TILE.FOREST:
 				switch(newTile) {
 					case World.TILE.FIELD:
-						msg = "the trees yield to dry grass. the yellowed brush rustles in the wind.";
+						msg = "Ліс переходить у поле. Пожовтілі китиці похитуються на вітрі.";
 						break;
 					case World.TILE.BARRENS:
-						msg = "the trees are gone. parched earth and blowing dust are poor replacements.";
+						msg = "Ліс зник, його замінили опалена земля і дрібний пил.";
 						break;
 				}
 				break;
 			case World.TILE.FIELD:
 				switch(newTile) {
 					case World.TILE.FOREST:
-						msg = "trees loom on the horizon. grasses gradually yield to a forest floor of dry branches and fallen leaves.";
+						msg = "Дерева маячать на горизонті. Трава поступово переходить у лісову підстилку з сухих віток і опалого листя.";
 						break;
 					case World.TILE.BARRENS:
-						msg = "the grasses thin. soon, only dust remains.";
+						msg = "Невисока трава. Незабаром залишається лише пилюка.";
 						break;
 				}
 				break;
 			case World.TILE.BARRENS:
 				switch(newTile) {
 					case World.TILE.FIELD:
-						msg = "the barrens break at a sea of dying grass, swaying in the arid breeze.";
+						msg = "Пляма голої землі проглядається через траву, колихаючись у хвилях теплого повітря.";
 						break;
 					case World.TILE.FOREST:
-						msg = "a wall of gnarled trees rises from the dust. their branches twist into a skeletal canopy overhead.";
+						msg = "Стіна лісу піднімається від землі. Їхні гілки перекриваються у купол над головою.";
 						break;
 				}
 				break;
@@ -476,7 +476,7 @@ var World = {
 	
 	lightMap: function(x, y, mask) {
 		var r = World.LIGHT_RADIUS;
-		r *= Engine.hasPerk('scout') ? 2 : 1;
+		r *= Engine.hasPerk('розвідник') ? 2 : 1;
 		World.uncoverMap(x, y, r, mask);
 		return mask;
 	},
@@ -536,14 +536,14 @@ var World = {
 				var pos = World.placeLandmark(landmark.minRadius, landmark.maxRadius, k, map);
 				if(k == World.TILE.SHIP) {
 					var dx = pos[0] - World.RADIUS, dy = pos[1] - World.RADIUS;
-					var horz = dx < 0 ? 'west' : 'east';
-					var vert = dy < 0 ? 'north' : 'south';
+					var horz = dx < 0 ? 'захід' : 'схід';
+					var vert = dy < 0 ? 'північ' : 'південь'; var vert2 = dy < 0 ? 'північний ' : 'південний ';
 					if(Math.abs(dx) / 2 > Math.abs(dy)) {
 						World.dir = horz;
 					} else if(Math.abs(dy) / 2 > Math.abs(dx)){
 						World.dir = vert;
 					} else {
-						World.dir = vert + horz;
+						World.dir = vert2 + horz;
 					}
 				}
 			}
@@ -657,12 +657,12 @@ var World = {
 					ttClass += " bottom";
 				}
 				if(World.curPos[0] == i && World.curPos[1] == j) {
-					mapString += '<span class="landmark">@<div class="tooltip ' + ttClass + '">Wanderer</div></span>';
+					mapString += '<span class="landmark">@<div class="tooltip ' + ttClass + '">Скиталець</div></span>';
 				} else if(World.state.mask[i][j]) {
 					var c = World.state.map[i][j];
 					switch(c) {
 						case World.TILE.VILLAGE:
-							mapString += '<span class="landmark">' + c + '<div class="tooltip' + ttClass + '">The&nbsp;Village</div></span>';
+							mapString += '<span class="landmark">' + c + '<div class="tooltip' + ttClass + '">Село</div></span>';
 							break;
 						default:
 							if(typeof World.LANDMARKS[c] != 'undefined' && (c != World.TILE.OUTPOST || !World.outpostUsed(i, j))) {
@@ -691,7 +691,7 @@ var World = {
 			Engine.event('game event', 'death');
 			Engine.keyLock = true;
 			// Dead! Discard any world changes and go home
-			Notifications.notify(World, 'the world fades');
+			Notifications.notify(World, 'В очах потемніло.');
 			World.state = null;
 			Path.outfit = {};
 			$('#outerSlider').animate({opacity: '0'}, 600, 'linear', function() {
@@ -713,17 +713,17 @@ var World = {
 	goHome: function() {
 		// Home safe! Commit the changes.
 		State.world = World.state;
-		if(World.state.sulphurmine && Outside.numBuilding('sulphur mine') == 0) {
-			Outside.addBuilding('sulphur mine', 1);
-			Engine.event('progress', 'sulphur mine');
+		if(World.state.sulphurmine && Outside.numBuilding('родовище') == 0) {
+			Outside.addBuilding('родовище', 1);
+			Engine.event('progress', 'родовище');
 		}
-		if(World.state.ironmine && Outside.numBuilding('iron mine') == 0) {
-			Outside.addBuilding('iron mine', 1);
-			Engine.event('progress', 'iron mine');
+		if(World.state.ironmine && Outside.numBuilding('рудник') == 0) {
+			Outside.addBuilding('рудник', 1);
+			Engine.event('progress', 'рудник');
 		}
-		if(World.state.coalmine && Outside.numBuilding('coal mine') == 0) {
-			Outside.addBuilding('coal mine', 1);
-			Engine.event('progress', 'coal mine');
+		if(World.state.coalmine && Outside.numBuilding('вуглекопальня') == 0) {
+			Outside.addBuilding('вуглекопальня', 1);
+			Engine.event('progress', 'вуглекопальня');
 		}
 		if(World.state.ship && !State.ship) {
 			Ship.init();
@@ -733,7 +733,7 @@ var World = {
 		
 		// Clear the embark cooldown
 		var btn = Button.clearCooldown($('#embarkButton'));
-		if(Path.outfit['cured meat'] > 0) {
+		if(Path.outfit['копченина'] > 0) {
 			Button.setDisabled(btn, false);
 		}
 		
@@ -750,34 +750,34 @@ var World = {
 	},
 	
 	leaveItAtHome: function(thing) {
-		 return thing != 'cured meat' && thing != 'bullets' && thing != 'energy cell'  && thing != 'charm'
+		 return thing != 'копченина' && thing != 'набої' && thing != 'батарейки'  && thing != 'буси'
 			 && typeof World.Weapons[thing] == 'undefined' && typeof Room.Craftables[thing] == 'undefined';
 	},
 	
 	getMaxHealth: function() {
-		if(Engine.getStore('s armour') > 0) {
+		if(Engine.getStore('кольчуга') > 0) {
 			return World.BASE_HEALTH + 35;
-		} else if(Engine.getStore('i armour') > 0) {
+		} else if(Engine.getStore('лати') > 0) {
 			return World.BASE_HEALTH + 15;
-		} else if(Engine.getStore('l armour') > 0) {
+		} else if(Engine.getStore('жупан') > 0) {
 			return World.BASE_HEALTH + 5;
 		}
 		return World.BASE_HEALTH;
 	},
 	
 	getHitChance: function() {
-		if(Engine.hasPerk('precise')) {
+		if(Engine.hasPerk('точність')) {
 			return World.BASE_HIT_CHANCE + 0.1;
 		}
 		return World.BASE_HIT_CHANCE;
 	},
 	
 	getMaxWater: function() {
-		if(Engine.getStore('water tank') > 0) {
+		if(Engine.getStore('цистерна') > 0) {
 			return World.BASE_WATER + 50;
-		} else if(Engine.getStore('cask') > 0) {
+		} else if(Engine.getStore('бочка') > 0) {
 			return World.BASE_WATER + 20;
-		} else if(Engine.getStore('waterskin') > 0) {
+		} else if(Engine.getStore('міх') > 0) {
 			return World.BASE_WATER + 10;
 		}
 		return World.BASE_WATER;
@@ -791,7 +791,7 @@ var World = {
 	},
 	
 	useOutpost: function() {
-		Notifications.notify(null, 'water replenished');
+		Notifications.notify(null, 'Набрали води.');
 		World.setWater(World.getMaxWater());
 		// Save progress at outposts
 		State.world = World.state;
@@ -820,6 +820,6 @@ var World = {
 	},
 	
 	setTitle: function() {
-		document.title = 'A Barren World';
+		document.title = 'Пустир';
 	}
 };

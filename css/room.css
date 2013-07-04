@@ -5,7 +5,7 @@ div#buildBtns {
 }
 
 div#buildBtns:before {
-	content: "build:";
+	content: "збудувати:";
 	position: relative;
 	top: -5px;
 }
@@ -17,7 +17,7 @@ div#craftBtns {
 }
 
 div#craftBtns:before {
-	content: "craft:";
+	content: "змайструвати:";
 	position: relative;
 	top: -5px;
 }
@@ -29,7 +29,7 @@ div#buyBtns {
 }
 
 div#buyBtns:before {
-	content: "buy:";
+	content: "купити:";
 	position: relative;
 	top: -5px;
 }
@@ -55,9 +55,9 @@ div.storeRow {
 div#stores:before {
 	position: absolute;
 	background: white;
-	content: "stores";
+	content: "запаси";
 	left: 8px;
-	top: -13px;	
+	top: -13px;
 }
 
 div#weapons {
@@ -73,7 +73,7 @@ div#weapons {
 div#weapons:before {
 	position: absolute;
 	background: white;
-	content: "weapons";
+	content: "зброя";
 	left: 8px;
-	top: -13px;	
+	top: -13px;
 }

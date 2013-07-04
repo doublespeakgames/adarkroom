@@ -9,76 +9,76 @@ var Outside = {
 	_POP_DELAY: [0.5, 3],
 	
 	_INCOME: {
-		'gatherer': {
+		'збирачі': {
 			delay: 10,
 			stores: {
-				'wood': 1
+				'дерево': 1
 			}
 		},
-		'hunter': {
+		'мисливці': {
 			delay: 10,
 			stores: {
-				'fur': 0.5,
-				'meat': 0.5
+				'шкури': 0.5,
+				'м’ясо': 0.5
 			}
 		},
-		'trapper': {
+		'ловці': {
 			delay: 10,
 			stores: {
-				'meat': -1,
-				'bait': 1
+				'м’ясо': -1,
+				'приманка': 1
 			}
 		},
-		'tanner': {
+		'кожем’яки': {
 			delay: 10,
 			stores: {
-				'fur': -5,
-				'leather': 1
+				'шкури': -5,
+				'шкіра': 1
 			}
 		},
-		'charcutier': {
+		'коптярі': {
 			delay: 10,
 			stores: {
-				'meat': -5,
-				'wood': -5,
-				'cured meat': 1
+				'м’ясо': -5,
+				'дерево': -5,
+				'копченина': 1
 			}
 		},
-		'iron miner': {
+		'шахтарі': {
 			delay: 10,
 			stores: {
-				'cured meat': -1,
-				'iron': 1
+				'копченина': -1,
+				'залізо': 1
 			}
 		},
-		'coal miner': {
+		'вуглекопи': {
 			delay: 10,
 			stores: {
-				'cured meat': -1,
-				'coal': 1
+				'копченина': -1,
+				'вугілля': 1
 			}
 		},
-		'sulphur miner': {
+		'хіміки': {
 			delay: 10,
 			stores: {
-				'cured meat': -1,
-				'sulphur': 1
+				'копченина': -1,
+				'сірка': 1
 			}
 		},
-		'steelworker': {
+		'ковалі': {
 			delay: 10,
 			stores: {
-				'iron': -1,
-				'coal': -1,
-				'steel': 1
+				'залізо': -1,
+				'вугілля': -1,
+				'сталь': 1
 			}
 		},
-		'armourer': {
+		'набивачі': {
 			delay: 10,
 			stores: {
-				'steel': -1,
-				'sulphur': -1,
-				'bullets': 1
+				'сталь': -1,
+				'сірка': -1,
+				'набої': 1
 			}
 		}
 	},
@@ -86,33 +86,33 @@ var Outside = {
 	TrapDrops: [
 		{
 			rollUnder: 0.5,
-			name: 'fur',
-			message: 'scraps of fur'
+			name: 'шкури',
+			message: 'уривки шкур'
 		},
 		{
 			rollUnder: 0.75,
-			name: 'meat',
-			message: 'bits of meat'
+			name: 'м’ясо',
+			message: 'шматки м’яса'
 		},
 		{
 			rollUnder: 0.85,
-			name: 'scales',
-			message: 'strange scales'
+			name: 'луска',
+			message: 'дивна луска'
 		},
 		{
 			rollUnder: 0.93,
-			name: 'teeth',
-			message: 'scattered teeth'
+			name: 'клики',
+			message: 'розсипані зуби'
 		},
 		{
 			rollUnder: 0.995,
-			name: 'cloth',
-			message: 'tattered cloth'
+			name: 'шмаття',
+			message: 'обірвані шмаття'
 		},
 		{
 			rollUnder: 1.0,
-			name: 'charm',
-			message: 'a crudely made charm'
+			name: 'буси',
+			message: 'примітивні буси'
 		}
 	],
 	
@@ -128,7 +128,7 @@ var Outside = {
 		}
 		
 		// Create the outside tab
-		this.tab = Header.addLocation("A Silent Forest", "outside", Outside);
+		this.tab = Header.addLocation("Тихий ліс", "outside", Outside);
 		
 		// Create the Outside panel
 		this.panel = $('<div>').attr('id', "outsidePanel")
@@ -151,7 +151,7 @@ var Outside = {
 		// Create the gather button
 		new Button.Button({
 			id: 'gatherButton',
-			text: "gather wood",
+			text: "дерево",
 			click: Outside.gatherWood,
 			cooldown: Outside._GATHER_DELAY,
 			width: '80px'
@@ -186,7 +186,7 @@ var Outside = {
 	},
 	
 	getMaxPopulation: function() {
-		return Outside.numBuilding('hut') * 4;
+		return Outside.numBuilding('хатка') * 4;
 	},
 	
 	getPopulation: function() {
@@ -202,15 +202,15 @@ var Outside = {
 			var num = Math.floor(Math.random()*(space/2) + space/2);
 			if(num == 0) num = 1;
 			if(num == 1) {
-				Notifications.notify(null, 'a stranger arrives in the night');
+				Notifications.notify(null, 'Незнайомець прибув уночі.');
 			} else if(num < 5) {
-				Notifications.notify(null, 'a weathered family takes up in one of the huts.');
+				Notifications.notify(null, 'Обвітрена сім’я зайняла хатинку.');
 			} else if(num < 10) {
-				Notifications.notify(null, 'a small group arrives, all dust and bones.');
+				Notifications.notify(null, 'Маленький гурт прибув, сама шкіра та кістки.');
 			} else if(num < 30) {
-				Notifications.notify(null, 'a convoy lurches in, equal parts worry and hope.');
+				Notifications.notify(null, 'Конвой прибув, в надії та тривогах.');
 			} else {
-				Notifications.notify(null, "the town's booming. word does get around.");
+				Notifications.notify(null, "Наплив людей у місті, слава поширюється навколо.");
 			}
 			Engine.log('population increased by ' + num);
 			State.outside.population += num;
@@ -261,18 +261,18 @@ var Outside = {
 		}
 		
 		var numGatherers = State.outside.population;
-		var gatherer = $('div#workers_row_gatherer', workers);
+		var gatherer = $('div#workers_row_збирачі', workers);
 		
 		for(var k in State.outside.workers) {
-			var row = $('div#workers_row_' + k.replace(' ', '-'), workers);
+			var row = $('div#workers_row_' + k.replace(/ /g, '-'), workers);
 			if(row.length == 0) {
 				row = Outside.makeWorkerRow(k, State.outside.workers[k]);
 				
 				var curPrev = null;
 				workers.children().each(function(i) {
 					var child = $(this);
-					var cName = child.attr('id').substring(12).replace('-', ' ');
-					if(cName != 'gatherer') {
+					var cName = child.attr('id').substring(12).replace(/-/g, ' ');
+					if(cName != 'збирачі') {
 						if(cName < k && (curPrev == null || cName > curPrev)) {
 							curPrev = cName;
 						}
@@ -287,7 +287,7 @@ var Outside = {
 				} 
 				else 
 				{
-					row.insertAfter(workers.find('#workers_row_' + curPrev.replace(' ', '-')));
+					row.insertAfter(workers.find('#workers_row_' + curPrev.replace(/ /g, '-')));
 				}
 				
 			} else {
@@ -302,10 +302,10 @@ var Outside = {
 		}
 		
 		if(gatherer.length == 0) {
-			gatherer = Outside.makeWorkerRow('gatherer', numGatherers);
+			gatherer = Outside.makeWorkerRow('збирачі', numGatherers);
 			gatherer.prependTo(workers);
 		} else {
-			$('div#workers_row_gatherer > div.row_val > span', workers).text(numGatherers);
+			$('div#workers_row_збирачі > div.row_val > span', workers).text(numGatherers);
 		}
 		
 		if(numGatherers == 0) {
@@ -330,14 +330,14 @@ var Outside = {
 	
 	makeWorkerRow: function(name, num) {
 		var row = $('<div>')
-			.attr('id', 'workers_row_' + name.replace(' ','-'))
+			.attr('id', 'workers_row_' + name.replace(/ /g,'-'))
 			.addClass('workerRow');
 		$('<div>').addClass('row_key').text(name).appendTo(row);
 		var val = $('<div>').addClass('row_val').appendTo(row);
 		
 		$('<span>').text(num).appendTo(val);
 		
-		if(name != 'gatherer') {
+		if(name != 'збирачі') {
 			$('<div>').addClass('upBtn').appendTo(val).click(Outside.increaseWorker);
 			$('<div>').addClass('dnBtn').appendTo(val).click(Outside.decreaseWorker);
 		}
@@ -377,7 +377,7 @@ var Outside = {
 	},
 	
 	updateVillageRow: function(name, num, village) {
-		var id = 'building_row_' + name.replace(' ', '-');
+		var id = 'building_row_' + name.replace(/ /g, '-');
 		var row = $('div#' + id, village);
 			if(row.length == 0 && num > 0) {
 				var row = $('<div>').attr('id', id).addClass('storeRow');
@@ -388,7 +388,7 @@ var Outside = {
 				village.children().each(function(i) {
 					var child = $(this);
 					if(child.attr('id') != 'population') {
-						var cName = child.attr('id').substring(13).replace('-', ' ');
+						var cName = child.attr('id').substring(13).replace(/-/g, ' ');
 						if(cName < name && (curPrev == null || cName > curPrev)) {
 							curPrev = cName;
 						}
@@ -397,7 +397,7 @@ var Outside = {
 				if(curPrev == null) {
 					row.prependTo(village);
 				} else {
-					row.insertAfter('#building_row_' + curPrev.replace(' ', '-'));
+					row.insertAfter('#building_row_' + curPrev.replace(/ /g, '-'));
 				}
 			} else if(num > 0) {
 				$('div#' + row.attr('id') + ' > div.row_val', village).text(num);
@@ -417,13 +417,13 @@ var Outside = {
 		}
 		
 		for(var k in State.outside.buildings) {
-			if(k == 'trap') {
+			if(k == 'пастки') {
 				var numTraps = State.outside.buildings[k];
-				var numBait = Engine.getStore('bait');
+				var numBait = Engine.getStore('приманка');
 				var traps = numTraps - numBait;
 				traps = traps < 0 ? 0 : traps;
 				Outside.updateVillageRow(k, traps, village);
-				Outside.updateVillageRow('baited trap', numBait > numTraps ? numTraps : numBait, village);
+				Outside.updateVillageRow('пастки з приманкою', numBait > numTraps ? numTraps : numBait, village);
 			} else {
 				if(Outside.checkWorker(k)) {
 					Outside.updateWorkersView();
@@ -432,10 +432,10 @@ var Outside = {
 			}
 		}
 		
-		population.text('pop ' + State.outside.population + '/' + this.getMaxPopulation());
+		population.text('нас ' + State.outside.population + '/' + this.getMaxPopulation());
 		
 		var hasPeeps;
-		if(Outside.numBuilding('hut') == 0) {
+		if(Outside.numBuilding('хатка') == 0) {
 			hasPeeps = false;
 			village.addClass('noHuts');
 		} else {
@@ -457,14 +457,14 @@ var Outside = {
 	
 	checkWorker: function(name) {
 		var jobMap = {
-			'lodge': ['hunter', 'trapper'],
-			'tannery': ['tanner'],
-			'smokehouse': ['charcutier'],
-			'iron mine': ['iron miner'],
-			'coal mine': ['coal miner'],
-			'sulphur mine': ['sulphur miner'],
-			'steelworks': ['steelworker'],
-			'armoury' : ['armourer']
+			'сторожка': ['мисливці', 'ловці'],
+			'дубильня': ['кожем’яки'],
+			'коптильня': ['коптярі'],
+			'рудник': ['шахтарі'],
+			'вуглекопальня': ['вуглекопи'],
+			'родовище': ['хіміки'],
+			'кузня': ['ковалі'],
+			'арсенал' : ['набивачі']
 		}
 		
 		var jobs = jobMap[name];
@@ -486,11 +486,11 @@ var Outside = {
 	updateVillageIncome: function() {		
 		for(var worker in Outside._INCOME) {
 			var income = Outside._INCOME[worker];
-			var num = worker == 'gatherer' ? Outside.getNumGatherers() : State.outside.workers[worker];
+			var num = worker == 'збирачі' ? Outside.getNumGatherers() : State.outside.workers[worker];
 			if(typeof num == 'number') {
 				var stores = {};
 				if(num < 0) num = 0;
-				var tooltip = $('.tooltip', 'div#workers_row_' + worker.replace(' ', '-'));
+				var tooltip = $('.tooltip', 'div#workers_row_' + worker.replace(/ /g, '-'));
 				tooltip.empty();
 				var needsUpdate = false;
 				var curIncome = Engine.getIncome(worker);
@@ -515,11 +515,11 @@ var Outside = {
 	
 	updateTrapButton: function() {
 		var btn = $('div#trapsButton');
-		if(Outside.numBuilding('trap') > 0) {
+		if(Outside.numBuilding('пастки') > 0) {
 			if(btn.length == 0) {
 				new Button.Button({
 					id: 'trapsButton',
-					text: "check traps",
+					text: "пастки",
 					click: Outside.checkTraps,
 					cooldown: Outside._TRAPS_DELAY,
 					width: '80px'
@@ -535,20 +535,20 @@ var Outside = {
 	},
 	
 	setTitle: function() {
-		var numHuts = this.numBuilding('hut');
+		var numHuts = this.numBuilding('хатка');
 		var title;
 		if(numHuts == 0) {
-			title = "A Silent Forest";
+			title = "Тихий ліс";
 		} else if(numHuts == 1) {
-			title = "A Lonely Hut";
+			title = "Самотня хатина";
 		} else if(numHuts <= 4) {
-			title = "A Tiny Village";
+			title = "Маленький хутір";
 		} else if(numHuts <= 8) {
-			title = "A Modest Village";
+			title = "Невелике село";
 		} else if(numHuts <= 14) {
-			title = "A Large Village";
+			title = "Велике село";
 		} else {
-			title = "A Raucous Village";
+			title = "Гігантське село";
 		}
 		
 		if(Engine.activeModule == this) {
@@ -560,22 +560,22 @@ var Outside = {
 	onArrival: function() {
 		Outside.setTitle();
 		if(!State.seenForest) {
-			Notifications.notify(Outside, "the sky is grey and the wind blows relentlessly");
+			Notifications.notify(Outside, "Небо посірівше і вітер свище невпинно");
 			State.seenForest = true;
 		}
 		Outside.updateTrapButton();
 	},
 	
 	gatherWood: function() {
-		Notifications.notify(Outside, "dry brush and dead branches litter the forest floor")
-		Engine.setStore('wood', Engine.getStore('wood') + (Outside.numBuilding('cart') > 0 ? 50 : 10));
+		Notifications.notify(Outside, "Сухі гілки падають на лісову підстилку")
+		Engine.setStore('дерево', Engine.getStore('дерево') + (Outside.numBuilding('возик') > 0 ? 50 : 10));
 	},
 	
 	checkTraps: function() {
 		var drops = {};
 		var msg = [];
-		var numTraps = Outside.numBuilding('trap');
-		var numBait = Engine.getStore('bait');
+		var numTraps = Outside.numBuilding('пастки');
+		var numBait = Engine.getStore('приманка');
 		var numDrops = numTraps + (numBait < numTraps ? numBait : numTraps);
 		for(var i = 0; i < numDrops; i++) {
 			var roll = Math.random();
@@ -592,18 +592,18 @@ var Outside = {
 				}
 			}
 		}
-		var s = 'the traps contain ';
+		var s = 'У пастках були ';
 		for(var i = 0, len = msg.length; i < len; i++) {
 			if(len > 1 && i > 0 && i < len - 1) {
 				s += ", ";
 			} else if(len > 1 && i == len - 1) {
-				s += " and ";
+				s += " і ";
 			}
 			s += msg[i];
 		}
 		
 		var baitUsed = numBait < numTraps ? numBait : numTraps;
-		drops['bait'] = -baitUsed;
+		drops['приманка'] = -baitUsed;
 		
 		Notifications.notify(Outside, s);
 		Engine.addStores(drops);

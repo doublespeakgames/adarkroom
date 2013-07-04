@@ -8,7 +8,7 @@
 
 div#outfitting:before {
 	position: absolute;
-	content: "supplies";
+	content: "припаси";
 	top: -13px;
 	background-color: white;
 }
@@ -52,7 +52,7 @@ div#perks {
 
 div#perks:before {
 	position: absolute;
-	content: "perks";
+	content: "вміння";
 	top: -13px;
 	background-color: white;
 }

@@ -105,13 +105,13 @@ var Events = {
 		
 		var eat = new Button.Button({
 			id: 'eat',
-			text: 'eat meat',
+			text: 'з’їсти м’ясо',
 			cooldown: Events._EAT_COOLDOWN,
 			click: Events.eatMeat,
-			cost: { 'cured meat': 1 }
+			cost: { 'копченина': 1 }
 		}).appendTo(btns);
 		
-		if(Path.outfit['cured meat'] == 0) {
+		if(Path.outfit['копченина'] == 0) {
 			Button.setDisabled(eat, true);
 		}
 		
@@ -123,12 +123,12 @@ var Events = {
 		var weapon = World.Weapons[weaponName];
 		var cd = weapon.cooldown;
 		if(weapon.type == 'unarmed') {
-			if(Engine.hasPerk('unarmed master')) {
+			if(Engine.hasPerk('каратист')) {
 				cd /= 2;
 			}
 		}
 		var btn = new Button.Button({
-			id: 'attack_' + weaponName.replace(' ', '-'),
+			id: 'attack_' + weaponName.replace(/ /g, '-'),
 			text: weapon.verb,
 			cooldown: cd,
 			click: Events.useWeapon,
@@ -161,10 +161,10 @@ var Events = {
 	},
 	
 	eatMeat: function() {
-		if(Events.activeEvent() && Path.outfit['cured meat'] > 0) {
-			Path.outfit['cured meat']--;
+		if(Events.activeEvent() && Path.outfit['копченина'] > 0) {
+			Path.outfit['копченина']--;
 			World.updateSupplies();
-			if(Path.outfit['cured meat'] == 0) {
+			if(Path.outfit['копченина'] == 0) {
 				Button.setDisabled($('#eat'), true);
 			}
 			var w = $('#wanderer');
@@ -180,17 +180,17 @@ var Events = {
 	
 	useWeapon: function(btn) {
 		if(Events.activeEvent()) {
-			var weaponName = btn.attr('id').substring(7).replace('-', ' ');
+			var weaponName = btn.attr('id').substring(7).replace(/-/g, ' ');
 			var weapon = World.Weapons[weaponName];
 			if(weapon.type == 'unarmed') {
 				if(!State.punches) State.punches = 0;
 				State.punches++;
-				if(State.punches == 50 && !Engine.hasPerk('boxer')) {
-					Engine.addPerk('boxer');
-				} else if(State.punches == 150 && !Engine.hasPerk('martial artist')) {
-					Engine.addPerk('martial artist');
-				} else if(State.punches == 300 && !Engine.hasPerk('unarmed master')) {
-					Engine.addPerk('unarmed master');
+				if(State.punches == 50 && !Engine.hasPerk('боксер')) {
+					Engine.addPerk('боксер');
+				} else if(State.punches == 150 && !Engine.hasPerk('бойовий митець')) {
+					Engine.addPerk('бойовий митець');
+				} else if(State.punches == 300 && !Engine.hasPerk('каратист')) {
+					Engine.addPerk('каратист');
 				}
 				
 			}
@@ -234,16 +234,16 @@ var Events = {
 			if(Math.random() <= World.getHitChance()) {
 				dmg = weapon.damage;
 				if(typeof dmg == 'number') {
-					if(weapon.type == 'unarmed' && Engine.hasPerk('boxer')) {
+					if(weapon.type == 'unarmed' && Engine.hasPerk('боксер')) {
 						dmg *= 2
 					}
-					if(weapon.type == 'unarmed' && Engine.hasPerk('martial artist')) {
+					if(weapon.type == 'unarmed' && Engine.hasPerk('бойовий митець')) {
 						dmg *= 3;
 					}
-					if(weapon.type == 'unarmed' && Engine.hasPerk('unarmed master')) {
+					if(weapon.type == 'unarmed' && Engine.hasPerk('каратист')) {
 						dmg *= 2;
 					}
-					if(weapon.type == 'melee' && Engine.hasPerk('barbarian')) {
+					if(weapon.type == 'melee' && Engine.hasPerk('варвар')) {
 						dmg = Math.floor(dmg * 1.5);
 					}
 				}
@@ -357,7 +357,7 @@ var Events = {
 		
 		if(!$('#enemy').data('stunned')) {
 			var toHit = scene.hit;
-			toHit *= Engine.hasPerk('evasive') ? 0.8 : 1;
+			toHit *= Engine.hasPerk('ухиляння') ? 0.8 : 1;
 			var dmg = -1;
 			if(Math.random() <= toHit) {
 				dmg = scene.damage;
@@ -408,7 +408,7 @@ var Events = {
 									Events.endEvent(); 
 								}
 							},
-							text: 'leave'
+							text: 'полишити'
 						}).appendTo(btns);
 					}
 				} catch(e) {
@@ -426,7 +426,7 @@ var Events = {
 			if(Math.random() < loot.chance) {
 				var num = Math.floor(Math.random() * (loot.max - loot.min)) + loot.min;
 				new Button.Button({
-					id: 'loot_' + k.replace(' ', '-'),
+					id: 'loot_' + k.replace(/ /g, '-'),
 					text: k + ' [' + num + ']',
 					click: Events.getLoot
 				}).data('numLeft', num).appendTo(lootButtons);
@@ -446,14 +446,14 @@ var Events = {
 		var lootButtons = $('#lootButtons');
 		Engine.log('dropping ' + num + ' ' + thing);
 		
-		var lootBtn = $('#loot_' + thing.replace(' ', '-'), lootButtons);
+		var lootBtn = $('#loot_' + thing.replace(/ /g, '-'), lootButtons);
 		if(lootBtn.length > 0) {
 			var curNum = lootBtn.data('numLeft');
 			curNum += num;
 			lootBtn.text(thing + ' [' + curNum + ']').data('numLeft', curNum);
 		} else {
 			new Button.Button({
-				id: 'loot_' + thing.replace(' ', '-'),
+				id: 'loot_' + thing.replace(/ /g, '-'),
 				text: thing + ' [' + num + ']',
 				click: Events.getLoot
 			}).data('numLeft', num).insertBefore($('.clear', lootButtons));
@@ -465,7 +465,7 @@ var Events = {
 	},
 	
 	getLoot: function(btn) {
-		var name = btn.attr('id').substring(5).replace('-', ' ');
+		var name = btn.attr('id').substring(5).replace(/-/g, ' ');
 		if(btn.data('numLeft') > 0) {
 			var weight = Path.getWeight(name);
 			var freeSpace = Path.getFreeSpace();
@@ -503,7 +503,7 @@ var Events = {
 							numToDrop = Path.outfit[k];
 						}
 						if(numToDrop > 0) {
-							var dropRow = $('<div>').attr('id', 'drop_' + k.replace(' ', '-'))
+							var dropRow = $('<div>').attr('id', 'drop_' + k.replace(/ /g, '-'))
 								.text(k + ' x' + numToDrop)
 								.data('thing', k)
 								.data('num', numToDrop)

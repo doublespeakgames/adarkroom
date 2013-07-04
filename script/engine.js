@@ -11,49 +11,49 @@ var Engine = {
 	SAVE_DISPLAY: 30 * 1000,
 		
 	Perks: {
-		'boxer': {
+		'боксер': {
 			desc: 'punches do more damage',
 			notify: 'learned to throw punches with purpose'
 		},
-		'martial artist': {
+		'бойовий митець': {
 			desc: 'punches do even more damage.',
 			notify: 'learned to fight quite effectively without weapons'
 		},
-		'unarmed master': {
+		'каратист': {
 			desc: 'punch twice as fast, and with even more force',
 			notify: 'learned to strike faster without weapons'
 		},
-		'barbarian': {
+		'варвар': {
 			desc: 'melee weapons deal more damage',
 			notify: 'learned to swing weapons with force'
 		},
-		'slow metabolism': {
-			desc: 'go twice as far without eating',
-			notify: 'learned how to ignore the hunger'
+		'витривалість': {
+			desc: 'удвічі економніший у їжі',
+			notify: 'Навчився забувати про голод.'
 		},
-		'desert rat': {
-			desc: 'go twice as far without drinking',
-			notify: 'learned to love the dry air'
+		'пустельник': {
+			desc: 'удвічі економніший у питті',
+			notify: 'Навчився збирати свою сечу.'
 		},
-		'evasive': {
+		'ухиляння': {
 			desc: 'dodge attacks more effectively',
 			notify: "learned to be where they're not"
 		},
-		'precise': {
+		'точність': {
 			desc: 'land blows more often',
 			notify: 'learned to predict their movement'
 		},
-		'scout': {
-			desc: 'see farther',
-			notify: 'learned to look ahead'
+		'розвідник': {
+			desc: 'бачиш далі',
+			notify: 'Навчився спостерігати за горизонтом.'
 		},
-		'stealthy': {
+		'вкрадливість': {
 			desc: 'better avoid conflict in the wild',
 			notify: 'learned how not to be seen'
 		},
-		'gastronome': {
-			desc: 'restore more health when eating',
-			notify: 'learned to make the most of food'
+		'кухар': {
+			desc: 'відновлюєш більше здоров’я коли їси',
+			notify: 'Ми є те, що ми їмо.'
 		}
 	},
 	
@@ -91,13 +91,13 @@ var Engine = {
 		
 		$('<span>')
 			.addClass('deleteSave')
-			.text('restart.')
+			.text('Restart.')
 			.click(Engine.confirmDelete)
 			.appendTo('body');
 		
 		$('<div>')
 			.addClass('share')
-			.text('share.')
+			.text('Share.')
 			.click(Engine.share)
 			.appendTo('body');
 		
@@ -109,10 +109,10 @@ var Engine = {
 		Events.init();
 		Room.init();
 		
-		if(Engine.storeAvailable('wood')) {
+		if(Engine.storeAvailable('дерево')) {
 			Outside.init();
 		}
-		if(Engine.getStore('compass') > 0) {
+		if(Engine.getStore('компас') > 0) {
 			Path.init();
 		}
 		if(State.ship) {
@@ -200,15 +200,15 @@ var Engine = {
 			title: 'Restart?',
 			scenes: {
 				start: {
-					text: ['restart the game?'],
+					text: ['Перезапустити гру?'],
 					buttons: {
 						'yes': {
-							text: 'yes',
+							text: 'так',
 							nextScene: 'end',
 							onChoose: Engine.deleteSave
 						},
 						'no': {
-							text: 'no',
+							text: 'ні',
 							nextScene: 'end'
 						}
 					}
@@ -229,7 +229,7 @@ var Engine = {
 			title: 'Share',
 			scenes: {
 				start: {
-					text: ['bring your friends.'],
+					text: ['Привести друзів.'],
 					buttons: {
 						'facebook': {
 							text: 'facebook',
@@ -260,7 +260,7 @@ var Engine = {
 							nextScene: 'end'
 						},
 						'close': {
-							text: 'close',
+							text: 'закрити',
 							nextScene: 'end'
 						}
 					}
@@ -446,7 +446,7 @@ var Engine = {
 				
 				if(income.timeLeft <= 0) {
 					Engine.log('collection income from ' + source);
-					if(source == 'thieves') {
+					if(source == 'злодії') {
 						Engine.addStolen(income.stores);
 					}
 					changed = Engine.addStores(income.stores) || changed;
@@ -470,7 +470,7 @@ var Engine = {
 	openPath: function() {
 		Path.init();
 		Engine.event('progress', 'path');
-		Notifications.notify(Room, 'the compass points ' + World.dir);
+		Notifications.notify(Room, 'Компас вказує на ' + World.dir);
 	},
 	
 	addStolen: function(stores) {
@@ -483,12 +483,12 @@ var Engine = {
 	
 	startThieves: function() {
 		State.thieves = 1;
-		Engine.setIncome('thieves', {
+		Engine.setIncome('злодії', {
 			delay: 10,
 			stores: {
-				'wood': -10,
-				'fur': -5,
-				'meat': -5
+				'дерево': -10,
+				'шкури': -5,
+				'м’ясо': -5
 			}
 		});
 		Room.updateIncomeView();
@@ -523,7 +523,7 @@ var Engine = {
 	},
 	
 	getIncomeMsg: function(num, delay) {
-		return (num > 0 ? "+" : "") + num + " per " + delay + "s";
+		return (num > 0 ? "+" : "") + num + " на " + delay + "с";
 	},
 	
 	keyDown: function(e) {

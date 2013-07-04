@@ -5,93 +5,93 @@ Events.Room = [
 	{ /* The Nomad  --  Merchant */
 		title: 'The Nomad',
 		isAvailable: function() {
-			return Engine.activeModule == Room && Engine.getStore('fur') > 0;
+			return Engine.activeModule == Room && Engine.getStore('шкури') > 0;
 		},
 		scenes: {
 			'start': {
 				text: [
-					'a nomad shuffles into view, laden with makeshift bags bound with rough twine.',
-					"won't say from where he came, but it's clear that he's not staying."
+					'Бомж приволікся, тягнучи за собою возик з клунками обмотаними старою мотузкою.',
+					'Не каже звідки він прийшов, але зрозуміло що тут він не надовго.'
 				],
-				notification: 'a nomad arrives, looking to trade',
+				notification: 'Бомж прибув, хоче торгувати.',
 				buttons: {
 					'buyScales': {
-						text: 'buy scales',
-						cost: { 'fur': 100 },
-						reward: { 'scales': 1 }
+						text: 'купити луску',
+						cost: { 'шкури': 100 },
+						reward: { 'луска': 1 }
 					},
 					'buyTeeth': {
-						text: 'buy teeth',
-						cost: { 'fur': 200 },
-						reward: { 'teeth': 1 }
+						text: 'купити клики',
+						cost: { 'шкури': 200 },
+						reward: { 'клики': 1 }
 					},
 					'buyBait': {
-						text: 'buy bait',
-						cost: { 'fur': 5 },
-						reward: { 'bait': 1 },
-						notification: 'traps are more effective with bait.'
+						text: 'купити приманку',
+						cost: { 'шкури': 5 },
+						reward: { 'приманка': 1 },
+						notification: 'Пастки ефективніші з приманкою.'
 					},
 					'buyCompass': {
 						available: function() {
-							return Engine.getStore('compass') < 1;
+							return Engine.getStore('компас') < 1;
 						},
-						text: 'buy compass',
-						cost: { fur: 300, scales: 15, teeth: 5 },
-						reward: { 'compass': 1 },
-						notification: 'the old compass is dented and dusty, but it looks to work.',
+						text: 'купити компас',
+						cost: { 'шкури': 300, 'луска': 15, 'клики': 5 },
+						reward: { 'компас': 1 },
+						notification: 'Старий компас пом’ятий і запорошений, але все ще працює.',
 						onChoose: Engine.openPath
 					}, 
 					'goodbye': {
-						text: 'say goodbye',
+						text: 'попрощатися',
 						nextScene: 'end'
 					}
 				}
 			}
 		}
 	}, { /* Noises Outside  --  gain wood/fur */
-		title: 'Noises',
+		title: 'Шурхіт',
 		isAvailable: function() {
-			return Engine.activeModule == Room && Engine.storeAvailable('wood');
+			return Engine.activeModule == Room && Engine.storeAvailable('дерево');
 		},
 		scenes: {
 			'start': {
 				text: [
-					'through the walls, shuffling noises can be heard.',
-					"can't tell what they're up to."
+					'Чути дивний шурхіт і шаркання за стіною.',
+					"Важко зрозуміти що там відбувається."
 				],
-				notification: 'strange noises can be heard through the walls',
+				notification: 'Дивні звуки чути за стінами',
 				buttons: {
 					'investigate': {
-						text: 'investigate',
+						text: 'розібратися',
 						nextScene: { 0.3: 'stuff', 1: 'nothing' }
 					},
 					'ignore': {
-						text: 'ignore them',
+						text: 'не зважати',
 						nextScene: 'end'
 					}
 				}
 			},
 			'nothing': {
 				text: [
-					'vague shapes move, just out of sight.',
-					'the sounds stop.'
+					'Неясні тіні рухаються, їх ледве видно.',
+					'Звуки стихли.'
 				],
 				buttons: {
 					'backinside': {
-						text: 'go back inside',
+						text: 'повернутися',
 						nextScene: 'end'
 					}
 				}
 			},
 			'stuff': {
-				reward: { wood: 100, fur: 10 },
+				reward: { 'дерево': 100, 'шкури': 10 },
 				text: [
-					'a bundle of stick lies just beyond the threshold, wrapped in course furs.',
-					'the night is silent.'
+					'В’язанка дров лежить просто біля порогу, загорнута у шкури.',
+					'Спокійна ніч.'
 				],
 				buttons: {
 					'backinside': {
-						text: 'go back inside',
+						text: 'повернутися',
 						nextScene: 'end'
 					}
 				}
@@ -99,84 +99,84 @@ Events.Room = [
 		}
 	},
 	{ /* Noises Inside  --  trade wood for better good */
-		title: 'Noises',
+		title: 'Шурхіт',
 		isAvailable: function() {
-			return Engine.activeModule == Room && Engine.storeAvailable('wood');
+			return Engine.activeModule == Room && Engine.storeAvailable('дерево');
 		},
 		scenes: {
 			start: {
 				text: [
-			       'scratching noises can be heard from the store room.',
-			       'something\'s in there.'
+			       'Шкрябання чути у коморі.',
+			       'Щось там є.'
 				],
-				notification: 'something\'s in the store room',
+				notification: 'Щось у коморі',
 				buttons: {
 					'investigate': {
-						text: 'investigate',
+						text: 'дослідити',
 						nextScene: { 0.5: 'scales', 0.8: 'teeth', 1: 'cloth' }
 					},
 					'ignore': {
-						text: 'ignore them',
+						text: 'не зважати',
 						nextScene: 'end'
 					}
 				}
 			},
 			scales: {
 				text: [
-			       'some wood is missing.',
-			       'the ground is littered with small scales'
+			       'Частина деревини зникла.',
+			       'Ґрунт всипано лускою.'
 			    ],
 			    onLoad: function() {
-			    	var numWood = Engine.getStore('wood');
+			    	var numWood = Engine.getStore('дерево');
 			    	numWood = Math.floor(numWood * 0.1);
 			    	if(numWood == 0) numWood = 1;
 			    	var numScales = Math.floor(numWood / 5);
 			    	if(numScales == 0) numScales = 1;
-			    	Engine.addStores({wood: -numWood, scales: numScales});
+			    	Engine.addStores({'дерево': -numWood, 'луска': numScales});
 			    },
 			    buttons: {
 			    	'leave': {
-			    		text: 'leave',
+			    		text: 'гаразд',
 			    		nextScene: 'end'
 			    	}
 			    }
 			},
 			teeth: {
 				text: [
-			       'some wood is missing.',
-			       'the ground is littered with small teeth'
+			       'Частина деревини зникла.',
+			       'На землі валяються клики.'
 			    ],
 			    onLoad: function() {
-			    	var numWood = Engine.getStore('wood');
+			    	var numWood = Engine.getStore('дерево');
 			    	numWood = Math.floor(numWood * 0.1);
 			    	if(numWood == 0) numWood = 1;
 			    	var numTeeth = Math.floor(numWood / 5);
 			    	if(numTeeth == 0) numTeeth = 1;
-			    	Engine.addStores({wood: -numWood, teeth: numTeeth});
+			    	Engine.addStores({'дерево': -numWood, 'клики': numTeeth});
 			    },
 			    buttons: {
 			    	'leave': {
-			    		text: 'leave',
+			    		text: 'гаразд',
 			    		nextScene: 'end'
 			    	}
 			    }
 			},
 			cloth: {
 				text: [
-			       'some wood is missing.',
-			       'the ground is littered with scraps of cloth'
+			       'Частина деревини зникла.',
+			       'На землі валяється чиєсь шмаття.'
 			    ],
 			    onLoad: function() {
-			    	var numWood = Engine.getStore('wood');
+			    	var numWood = Engine.getStore('дерево');
 			    	numWood = Math.floor(numWood * 0.1);
 			    	if(numWood == 0) numWood = 1;
 			    	var numCloth = Math.floor(numWood / 5);
 			    	if(numCloth == 0) numCloth = 1;
-			    	Engine.addStores({wood: -numWood, cloth: numCloth});
+			    	Engine.addStores({'дерево': -numWood, 'шмаття': numCloth});
 			    },
 			    buttons: {
 			    	'leave': {
-			    		text: 'leave',
+			    		text: 'гаразд',
 			    		nextScene: 'end'
 			    	}
 			    }
@@ -184,69 +184,69 @@ Events.Room = [
 		}
 	},
 	{ /* The Beggar  --  trade fur for better good */
-		title: 'The Beggar',
+		title: 'Попрошайка',
 		isAvailable: function() {
-			return Engine.activeModule == Room && Engine.storeAvailable('fur');
+			return Engine.activeModule == Room && Engine.storeAvailable('шкури');
 		},
 		scenes: {
 			start: {
 				text: [
-			       'a beggar arrives.',
-			       'asks for any spare furs to keep him warm at night.'
+			       'Попрошайка прийшов.',
+			       'Просить дати йому зайві шкури, щоб йому було тепло вночі.'
 				],
 				notification: 'a beggar arrives',
 				buttons: {
 					'50furs': {
-						text: 'give 50',
-						cost: {fur: 50},
+						text: 'дати 50',
+						cost: { 'шкури': 50 },
 						nextScene: { 0.5: 'scales', 0.8: 'teeth', 1: 'cloth' }
 					},
 					'100furs': {
-						text: 'give 100',
-						cost: {fur: 100},
-						nextScene: { 0.5: 'teeth', 0.8: 'scales', 1: 'cloth' }
+						text: 'дати 100',
+						cost: { 'шкури': 100 },
+						nextScene: { 0.5: 'scales', 0.8: 'teeth', 1: 'cloth' }
 					},
 					'deny': {
-						text: 'turn him away',
+						text: 'відмовити',
 						nextScene: 'end'
 					}
 				}
 			},
 			scales: {
-				reward: { scales: 20 },
+				reward: { 'луска': 20 },
 				text: [
-			       'the beggar thanks you.',
-			       'leaves a pile of small scales behind.'
+			       'Попрошайка дякує вам.',
+			       'Залишає невелику купку луски за собою.'
 			    ],
 			    buttons: {
 			    	'leave': {
-			    		text: 'say goodbye',
+			    		text: 'попрощатися',
 			    		nextScene: 'end'
 			    	}
 			    }
 			},
 			teeth: {
-				reward: { teeth: 20 },
+				reward: { 'клики': 20 },
 				text: [
-			       'the beggar thanks you.',
-			       'leaves a pile of small teeth behind.'
+			       'Попрошайка дякує вам.',
+			       'Залишає невелику купку кликів за собою.'
 			    ],
 			    buttons: {
 			    	'leave': {
-			    		text: 'say goodbye',
+			    		text: 'попрощатися',
 			    		nextScene: 'end'
 			    	}
 			    }
 			},
 			cloth: {
-				reward: { cloth: 20 },
+				reward: { 'шмаття': 20 },
 				text: [
-			       'the beggar thanks you.',
-			       'leaves some scraps of cloth behind.'
+			       'Попрошайка дякує вам.',
+			       'Залишає деякі непотрібні лахміття.'
 			    ],
 			    buttons: {
 			    	'leave': {
-			    		text: 'say goodbye',
+			    		text: 'попрощатися',
 			    		nextScene: 'end'
 			    	}
 			    }
@@ -255,68 +255,68 @@ Events.Room = [
 	},
 	
 	{ /* Mysterious Wanderer  --  wood gambling */
-		title: 'The Mysterious Wanderer',
+		title: 'Чудернацький скиталець',
 		isAvailable: function() {
-			return Engine.activeModule == Room && Engine.storeAvailable('wood');
+			return Engine.activeModule == Room && Engine.storeAvailable('дерево');
 		},
 		scenes: {
 			start: {
 				text: [
-			       'a wanderer arrives with an empty cart. says if he leaves with wood, he\'ll be back with more.',
-			       "builder's not sure he's to be trusted."
+			       'Якийсь скиталець прийшов з порожнім возиком. Каже що якщо дати йому деревини, то він потім привезе ще більше.',
+			       "Будівельниця не впевнена чи йому можна вірити."
 				],
-				notification: 'a mysterious wanderer arrives',
+				notification: 'Чудернацький скиталець прибув.',
 				buttons: {
 					'100wood': {
-						text: 'give 100',
-						cost: {wood: 100},
+						text: 'дати 100',
+						cost: { 'дерево': 100 },
 						nextScene: { 1: '100wood'}
 					},
 					'500wood': {
-						text: 'give 500',
-						cost: {wood: 500},
+						text: 'дати 500',
+						cost: { 'дерево': 500 },
 						nextScene: { 1: '500wood' }
 					},
 					'deny': {
-						text: 'turn him away',
+						text: 'відмовити',
 						nextScene: 'end'
 					}
 				}
 			},
 			'100wood': {
 				text: [
-			       'the wanderer leaves, cart loaded with wood',
+			       'Скиталець навантажив возик деревиною і пішов.',
 			    ],
 			    onLoad: function() {
 			    	if(Math.random() < 0.5) {
 			    		setTimeout(function() {
-			    			Engine.addStore('wood', 300);
-			    			Notifications.notify(Room, 'the mysterious wanderer returns, cart piled high with wood.');
+			    			Engine.addStore('дерево', 300);
+			    			Notifications.notify(Room, 'Чудернацький скиталець повернувся, возик завантажений доверху деревиною.');
 			    		}, 60 * 1000);
 			    	}
 			    },
 			    buttons: {
 			    	'leave': {
-			    		text: 'say goodbye',
+			    		text: 'попрощатися',
 			    		nextScene: 'end'
 			    	}
 			    }
 			},
 			'500wood': {
 				text: [
-				       'the wanderer leaves, cart loaded with wood',
+				       'Скиталець навантажив возик деревиною і пішов.',
 			    ],
 			    onLoad: function() {
 			    	if(Math.random() < 0.3) {
 			    		setTimeout(function() {
-			    			Engine.addStore('wood', 1500);
-			    			Notifications.notify(Room, 'the mysterious wanderer returns, cart piled high with wood.');
+			    			Engine.addStore('дерево', 1500);
+			    			Notifications.notify(Room, 'Чудернацький скиталець повернувся, возик завантажений доверху деревиною.');
 			    		}, 60 * 1000);
 			    	}
 			    },
 			    buttons: {
 			    	'leave': {
-			    		text: 'say goodbye',
+			    		text: 'попрощатися',
 			    		nextScene: 'end'
 			    	}
 			    }
@@ -325,68 +325,68 @@ Events.Room = [
 	},
 	
 	{ /* Mysterious Wanderer  --  fur gambling */
-		title: 'The Mysterious Wanderer',
+		title: 'Чудернацький скиталець',
 		isAvailable: function() {
-			return Engine.activeModule == Room && Engine.storeAvailable('fur');
+			return Engine.activeModule == Room && Engine.storeAvailable('шкури');
 		},
 		scenes: {
 			start: {
 				text: [
-			       'a wanderer arrives with an empty cart. says if she leaves with furs, she\'ll be back with more.',
-			       "builder's not sure she's to be trusted."
+			       'Якийсь скиталець прийшов з порожнім возиком. Каже що якщо дати йому шкур, то він потім привезе ще більше.',
+			       'Будівельниця не впевнена чи йому можна вірити.'
 				],
-				notification: 'a mysterious wanderer arrives',
+				notification: 'Чудернацький скиталець прибув.',
 				buttons: {
 					'100fur': {
-						text: 'give 100',
-						cost: {fur: 100},
+						text: 'дати 100',
+						cost: { 'шкури': 100 },
 						nextScene: { 1: '100fur'}
 					},
 					'500fur': {
-						text: 'give 500',
-						cost: {fur: 500},
+						text: 'дати 500',
+						cost: { 'шкури': 500 },
 						nextScene: { 1: '500fur' }
 					},
 					'deny': {
-						text: 'turn her away',
+						text: 'відмовити',
 						nextScene: 'end'
 					}
 				}
 			},
 			'100fur': {
 				text: [
-			       'the wanderer leaves, cart loaded with furs',
+			       'Скиталець пішов, навантавживши возик шкурами.',
 			    ],
 			    onLoad: function() {
 			    	if(Math.random() < 0.5) {
 			    		setTimeout(function() {
-			    			Engine.addStore('fur', 300);
-			    			Notifications.notify(Room, 'the mysterious wanderer returns, cart piled high with furs.');
+			    			Engine.addStore('шкури', 300);
+			    			Notifications.notify(Room, 'Чудернацький скиталець повернувся, возик набитий шкурами.');
 			    		}, 60 * 1000);
 			    	}
 			    },
 			    buttons: {
 			    	'leave': {
-			    		text: 'say goodbye',
+			    		text: 'попрощатися',
 			    		nextScene: 'end'
 			    	}
 			    }
 			},
 			'500fur': {
 				text: [
-				       'the wanderer leaves, cart loaded with furs',
+					'Скиталець пішов, навантавживши возик шкурами.',
 			    ],
 			    onLoad: function() {
 			    	if(Math.random() < 0.3) {
 			    		setTimeout(function() {
-			    			Engine.addStore('fur', 1500);
-			    			Notifications.notify(Room, 'the mysterious wanderer returns, cart piled high with furs.');
+			    			Engine.addStore('шкури', 1500);
+			    			Notifications.notify(Room, 'Чудернацький скиталець повернувся, возик набитий шкурами.');
 			    		}, 60 * 1000);
 			    	}
 			    },
 			    buttons: {
 			    	'leave': {
-			    		text: 'say goodbye',
+			    		text: 'попрощатися',
 			    		nextScene: 'end'
 			    	}
 			    }
@@ -394,37 +394,37 @@ Events.Room = [
 		}
 	},
 	
-	{ /* The Scout  --  Map Merchant */
-		title: 'The Scout',
+	{ /* The розвідник  --  Map Merchant */
+		title: 'Дослідник',
 		isAvailable: function() {
 			return Engine.activeModule == Room && typeof State.world == 'object';
 		},
 		scenes: {
 			'start': {
 				text: [
-					"the scout says she's been all over.",
-					"willing to talk about it, for a price."
+					"Дослідник каже що він був усюди.",
+					"Може розказати трохи за винагороду.."
 				],
-				notification: 'a scout stops for the night',
+				notification: 'Розвідник зупинився на ніч.',
 				buttons: {
 					'buyMap': {
-						text: 'buy map',
-						cost: { 'fur': 200, 'scales': 10 },
-						notification: 'the map uncovers a bit of the world',
+						text: 'купити мапу',
+						cost: { 'шкури': 200, 'луска': 10 },
+						notification: 'Мапа показує частину світу.',
 						onChoose: World.applyMap
 					},
 					'learn': {
-						text: 'learn scouting',
-						cost: { 'fur': 1000, 'scales': 50, 'teeth': 20 },
+						text: 'вивчити виживання',
+						cost: { 'шкури': 1000, 'луска': 50, 'клики': 20 },
 						available: function() {
-							return !Engine.hasPerk('scout');
+							return !Engine.hasPerk('розвідник');
 						},
 						onChoose: function() {
-							Engine.addPerk('scout');
+							Engine.addPerk('розвідник');
 						}
 					},
 					'leave': {
-			    		text: 'say goodbye',
+			    		text: 'попрощатися',
 			    		nextScene: 'end'
 			    	}
 				}
@@ -433,70 +433,70 @@ Events.Room = [
 	},
 	
 	{ /* The Wandering Master */
-		title: 'The Master',
+		title: 'Майстер',
 		isAvailable: function() {
 			return Engine.activeModule == Room && typeof State.world == 'object';
 		},
 		scenes: {
 			'start': {
 				text: [
-					'an old wanderer arrives.',
-					'he smiles warmly and asks for lodgings for the night.'
+					'Старий скиталець прибув.',
+					'Він щиро посміхається і питає про кімнату на ніч.'
 				],
-				notification: 'an old wanderer arrives',
+				notification: 'Старий скиталець прибув.',
 				buttons: {
 					'agree': {
-						text: 'agree',
+						text: 'прийняти',
 						cost: {
-							'cured meat': 100,
-							'fur': 100,
-							'torch': 1
+							'копченина': 100,
+							'шкури': 100,
+							'смолоскип': 1
 						},
 						nextScene: {1: 'agree'}
 					},
 					'deny': {
-						text: 'turn him away',
+						text: 'відмовити',
 						nextScene: 'end'
 					}
 				}
 			},
 			'agree': {
 				text: [
-			       'in exchange, the wanderer offers his wisdom.'
+			       'В знак подяки, скиталець поділився своєю мудрістю.'
 		        ],
 		        buttons: {
 		        	'evasion': {
-		        		text: 'evasion',
+		        		text: 'гнучкість',
 		        		available: function() {
-		        			return !Engine.hasPerk('evasive');
+		        			return !Engine.hasPerk('ухиляння');
 		        		},
 		        		onChoose: function() {
-		        			Engine.addPerk('evasive');
+		        			Engine.addPerk('ухиляння');
 		        		},
 		        		nextScene: 'end'
 		        	},
 		        	'precision': {
-		        		text: 'precision',
+		        		text: 'зібраність',
 		        		available: function() {
-		        			return !Engine.hasPerk('precise');
+		        			return !Engine.hasPerk('точність');
 		        		},
 		        		onChoose: function() {
-		        			Engine.addPerk('precise');
+		        			Engine.addPerk('точність');
 		        		},
 		        		nextScene: 'end'
 		        	},
 		        	'force': {
-		        		text: 'force',
+		        		text: 'потужність',
 		        		available: function() {
-		        			return !Engine.hasPerk('barbarian');
+		        			return !Engine.hasPerk('варвар');
 		        		},
 		        		onChoose: function() {
-		        			Engine.addPerk('barbarian');
+		        			Engine.addPerk('варвар');
 		        		},
 		        		nextScene: 'end'
 		        	},
 		        	'nothing': {
-		        		text: 'nothing',
+		        		text: 'нічого',
 		        		nextScene: 'end'
 		        	}
 		        }

@@ -3,59 +3,59 @@
  **/
 Events.Outside = [
     { /* Ruined traps */
-    	title: 'A Ruined Trap',
+    	title: 'Зруйнована пастка',
 		isAvailable: function() {
-			return Engine.activeModule == Outside && Outside.numBuilding('trap') > 0;
+			return Engine.activeModule == Outside && Outside.numBuilding('пастки') > 0;
 		},
 		scenes: {
 			'start': {
 				text: [
-					'some of the traps have been torn apart.',
-					'large prints lead away, into the forest.'
+					'Деякі з пасток були зруйновані вщент.',
+					'Великі сліди ведуть у глибокий ліс.'
 				],
 				onLoad: function() {
-					var numWrecked = Math.floor(Math.random() * Outside.numBuilding('trap')) + 1;
-					Outside.addBuilding('trap', -numWrecked);
+					var numWrecked = Math.floor(Math.random() * Outside.numBuilding('пастки')) + 1;
+					Outside.addBuilding('пастки', -numWrecked);
 					Outside.updateVillage();
 					Outside.updateTrapButton();
 				},
-				notification: 'some traps have been destroyed',
+				notification: 'Деякі пастки зруйновані',
 				buttons: {
 					'track': {
-						text: 'track them',
+						text: 'простежити',
 						nextScene: {0.5: 'nothing', 1: 'catch'}
 					},
 					'ignore': {
-						text: 'ignore them',
+						text: 'не зважати',
 						nextScene: 'end'
 					}
 				}
 			},
 			'nothing': {
 				text: [
-					'the tracks disappear after just a few minutes.',
-					'the forest is silent.'
+					'Сліди зникають через декілька хвилин.',
+					'У лісі спокійно і тихо.'
 				],
 				buttons: {
 					'end': {
-						text: 'go home',
+						text: 'повернутися',
 						nextScene: 'end'
 					}
 				}
 			},
 			'catch': {
 				text: [
-			       'not far from the village lies a large beast, its fur matted with blood.',
-			       'it puts up little resistance before the knife.'
+			       'Не так далеко від села, лежить велика тварюка. Її шерсть вкрита кров’ю.',
+			       'Вона майже не чинила опору коли її зарізали.'
 		        ],
 				reward: {
-					fur: 100,
-					meat: 100,
-					teeth: 10
+					'шкури': 100,
+					'м’ясо': 100,
+					'клики': 10
 				},
 				buttons: {
 					'end': {
-						text: 'go home',
+						text: 'повернутися',
 						nextScene: 'end'
 					}
 				}
@@ -64,29 +64,29 @@ Events.Outside = [
     },
     
     { /* Beast attack */
-    	title: 'A Beast Attack',
+    	title: 'Напад тварюк',
 		isAvailable: function() {
 			return Engine.activeModule == Outside && Outside.getPopulation() > 0;
 		},
 		scenes: {
 			'start': {
 				text: [
-			       'a pack of snarling beasts pours out of the trees.',
-			       'the fight is short and bloody, but the beasts are repelled.',
-			       'the villagers retreat to mourn the dead.'
+			       'Зграя тварюк з ричанням принеслася від лісу.',
+			       'Бидва була короткою і кривавою, але тварюк відігнали.',
+			       'Селяни відступили оплакувати померлих.'
 		        ],
 		        onLoad: function() {
 					var numKilled = Math.floor(Math.random() * 10) + 1;
 					Outside.killVillagers(numKilled);
 				},
 		        reward: {
-		        	fur: 100,
-		        	meat: 100,
-		        	teeth: 10
+		        	'шкури': 100,
+		        	'м’ясо': 100,
+		        	'клики': 10
 		        },
 		        buttons: {
 					'end': {
-						text: 'go home',
+						text: 'повернутися',
 						nextScene: 'end'
 					}
 				}
@@ -95,28 +95,28 @@ Events.Outside = [
     },
     
     { /* Soldier attack */
-    	title: 'A Military Raid',
+    	title: 'Напад військових',
 		isAvailable: function() {
 			return Engine.activeModule == Outside && Outside.getPopulation() > 0 && State.cityCleared;
 		},
 		scenes: {
 			'start': {
 				text: [
-			       'a gunshot rings through the trees.',
-			       'well armed men charge out of the forest, firing into the crowd.',
-			       'after a skirmish they are driven away, but not without losses.'
+			       'Постріл почувся зза дерев.',
+			       'Добре озброєні солдати біжать від лісу, стріляючи у натовп.',
+			       'Після перестрілки, вони були відбиті, але не без втрат.'
 		        ],
 		        onLoad: function() {
 					var numKilled = Math.floor(Math.random() * 40) + 1;
 					Outside.killVillagers(numKilled);
 				},
 		        reward: {
-		        	bullets: 10,
-		        	'cured meat': 50
+		        	'набої': 10,
+		        	'копченина': 50
 		        },
 		        buttons: {
 					'end': {
-						text: 'go home',
+						text: 'повернутися',
 						nextScene: 'end'
 					}
 				}
@@ -124,4 +124,3 @@ Events.Outside = [
 		}
     }
 ];
-	

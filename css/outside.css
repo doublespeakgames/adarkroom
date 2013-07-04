@@ -22,13 +22,13 @@ div#population {
 div#village:before {
 	position: absolute;
 	background: white;
-	content: "village";
+	content: "cело";
 	left: 8px;
 	top: -13px;
 }
 
 div#village.noHuts:before {
-	content: "forest";
+	content: "ліс";
 }
 
 div#workers {
