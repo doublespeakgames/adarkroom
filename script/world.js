@@ -33,6 +33,10 @@ var World = {
 	BASE_HIT_CHANCE: 0.8,
 	MEAT_HEAL: 10,
 	FIGHT_DELAY: 3, // At least three moves between fights
+	NORTH: [ 0, -1],
+	SOUTH: [ 0,  1],
+	WEST:  [-1,  0],
+	EAST:  [ 1,  0],
 	
 	Weapons: {
 		'fists': {
@@ -253,46 +257,84 @@ var World = {
 		return div;
 	},
 	
-	keyDown: function(event) {
-		var moved = true;
+	moveNorth: function() {
+		Engine.log('North');
+		if(World.curPos[1] > 0) World.move(World.NORTH);
+	},
+	
+	moveSouth: function() {
+		Engine.log('South');
+		if(World.curPos[1] < World.RADIUS * 2) World.move(World.SOUTH);
+	},
+	
+	moveWest: function() {
+		Engine.log('West');
+		if(World.curPos[0] > 0) World.move(World.WEST);
+	},
+	
+	moveEast: function() {
+		Engine.log('East');
+		if(World.curPos[0] < World.RADIUS * 2) World.move(World.EAST);
+	},
+	
+	move: function(direction) {
 		var oldTile = World.state.map[World.curPos[0]][World.curPos[1]];
+		World.curPos[0] += direction[0];
+		World.curPos[1] += direction[1];
+		World.narrateMove(oldTile, World.state.map[World.curPos[0]][World.curPos[1]]);
+		World.lightMap(World.curPos[0], World.curPos[1], World.state.mask);
+		World.drawMap();
+		World.doSpace();
+		if(World.checkDanger()) {
+			if(World.danger) {
+				Notifications.notify(World, 'dangerous to be this far from the village without proper protection')
+			} else {
+				Notifications.notify(World, 'safer here');
+			}
+		}
+	},
+	
+	keyDown: function(event) {
 		switch(event.which) {
 			case 38: // Up
 			case 87:
-				Engine.log('up');
-				if(World.curPos[1] > 0) World.curPos[1]--;
+				World.moveNorth();
 				break;
 			case 40: // Down
 			case 83:
-				Engine.log('down');
-				if(World.curPos[1] < World.RADIUS * 2) World.curPos[1]++;
+				World.moveSouth();
 				break;
 			case 37: // Left
 			case 65:
-				Engine.log('left');
-				if(World.curPos[0] > 0) World.curPos[0]--;
+				World.moveWest();
 				break;
 			case 39: // Right
 			case 68:
-				Engine.log('right');
-				if(World.curPos[0] < World.RADIUS * 2) World.curPos[0]++;
+				World.moveEast();
 				break;
 			default:
-				moved = false;
 				break;
 		}
-		if(moved) {
-			World.narrateMove(oldTile, World.state.map[World.curPos[0]][World.curPos[1]]);
-			World.lightMap(World.curPos[0], World.curPos[1], World.state.mask);
-			World.drawMap();
-			World.doSpace();
-			if(World.checkDanger()) {
-				if(World.danger) {
-					Notifications.notify(World, 'dangerous to be this far from the village without proper protection')
-				} else {
-					Notifications.notify(World, 'safer here');
-				}
-			}
+	},
+	
+	click: function(event) {
+		var map = $('#map'),
+			// measure clicks relative to the centre of the current location
+			centreX = map.offset().left + map.width() * World.curPos[0] / (World.RADIUS * 2),
+			centreY = map.offset().top + map.height() * World.curPos[1] / (World.RADIUS * 2),
+			clickX = event.pageX - centreX,
+			clickY = event.pageY - centreY;
+		if (clickX > clickY && clickX < -clickY) {
+			World.moveNorth();
+		}
+		if (clickX < clickY && clickX > -clickY) {
+			World.moveSouth();
+		}
+		if (clickX < clickY && clickX < -clickY) {
+			World.moveWest();
+		}
+		if (clickX > clickY && clickX > -clickY) {
+			World.moveEast();
 		}
 	},
 	
@@ -641,6 +683,8 @@ var World = {
 		var map = $('#map');
 		if(map.length == 0) {
 			map = new $('<div>').attr('id', 'map').appendTo('#worldOuter');
+			// register click handler
+			map.click(World.click);
 		}
 		var mapString = "";
 		for(var j = 0; j <= World.RADIUS * 2; j++) {
