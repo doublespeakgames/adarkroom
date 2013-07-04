@@ -171,20 +171,24 @@ var Events = {
 	},
 	
 	eatMeat: function() {
-		if(Events.activeEvent() && Path.outfit['cured meat'] > 0) {
+		if(Path.outfit['cured meat'] > 0) {
 			Path.outfit['cured meat']--;
 			World.updateSupplies();
 			if(Path.outfit['cured meat'] == 0) {
 				Button.setDisabled($('#eat'), true);
 			}
-			var w = $('#wanderer');
-			var hp = w.data('hp');
+			
+			var hp = World.health;
 			hp += World.meatHeal();
 			hp = hp > World.getMaxHealth() ? World.getMaxHealth() : hp;
-			w.data('hp', hp);
 			World.setHp(hp);
-			Events.updateFighterDiv(w);
-			Events.drawFloatText('+' + World.meatHeal(), '#wanderer .hp');
+			
+			if(Events.activeEvent()) {
+				var w = $('#wanderer');
+				w.data('hp', hp);
+				Events.updateFighterDiv(w);
+				Events.drawFloatText('+' + World.meatHeal(), '#wanderer .hp');
+			}
 		}
 	},
 	
