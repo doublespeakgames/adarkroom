@@ -103,20 +103,30 @@ var Events = {
 			Events.createAttackButton('fists').prependTo(btns);
 		}
 		
-		var eat = new Button.Button({
-			id: 'eat',
-			text: 'eat meat',
-			cooldown: Events._EAT_COOLDOWN,
-			click: Events.eatMeat,
-			cost: { 'cured meat': 1 }
-		}).appendTo(btns);
-		
-		if(Path.outfit['cured meat'] == 0) {
-			Button.setDisabled(eat, true);
-		}
+		Events.createEatMeatButton().appendTo(btns);
 		
 		// Set up the enemy attack timer
 		Events._enemyAttackTimer = setTimeout(Events.enemyAttack, scene.attackDelay * 1000);
+	},
+	
+	createEatMeatButton: function(cooldown) {
+		if (cooldown == null) {
+			cooldown = Events._EAT_COOLDOWN;
+		}
+		
+		var btn = new Button.Button({
+			id: 'eat',
+			text: 'eat meat',
+			cooldown: cooldown,
+			click: Events.eatMeat,
+			cost: { 'cured meat': 1 }
+		});
+		
+		if(Path.outfit['cured meat'] == 0) {
+			Button.setDisabled(btn, true);
+		}
+		
+		return btn;
 	},
 	
 	createAttackButton: function(weaponName) {
@@ -410,6 +420,8 @@ var Events = {
 							},
 							text: 'leave'
 						}).appendTo(btns);
+						
+						Events.createEatMeatButton(0).appendTo(btns);
 					}
 				} catch(e) {
 					// It is possible to die and win if the timing is perfect. Just let it fail.
