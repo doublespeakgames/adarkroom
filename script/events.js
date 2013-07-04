@@ -76,9 +76,9 @@ var Events = {
 	},
 
 	combatKeys: function(e) {
-		var weaponCode = e.keyCode
-			, btns = $('#buttons', Events.eventPanel())
-			, targetBtn = '#attack_';
+		var weaponCode = e.keyCode,
+			btns = $('#buttons', Events.eventPanel()),
+			targetBtn = '#attack_';
 		for (item in Events.keysConfig) {
 			if (Events.keysConfig[item] == weaponCode) {
 				if (item == '#eat') targetBtn = item;
