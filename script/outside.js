@@ -296,8 +296,10 @@ var Outside = {
 			numGatherers -= State.outside.workers[k];
 			if(State.outside.workers[k] == 0) {
 				$('.dnBtn', row).addClass('disabled');
+				$('.zeroBtn', row).addClass('disabled');
 			} else {
 				$('.dnBtn', row).removeClass('disabled');
+				$('.zeroBtn', row).removeClass('disabled');
 			}
 		}
 		
@@ -310,8 +312,10 @@ var Outside = {
 		
 		if(numGatherers == 0) {
 			$('.upBtn', '#workers').addClass('disabled');
+			$('.maxBtn', '#workers').addClass('disabled');
 		} else {
 			$('.upBtn', '#workers').removeClass('disabled');
+			$('.maxBtn', '#workers').removeClass('disabled');
 		}
 		
 		
@@ -338,8 +342,10 @@ var Outside = {
 		$('<span>').text(num).appendTo(val);
 		
 		if(name != 'gatherer') {
+		  $('<div>').addClass('maxBtn').appendTo(val).click(Outside.maxWorker);
 			$('<div>').addClass('upBtn').appendTo(val).click(Outside.increaseWorker);
 			$('<div>').addClass('dnBtn').appendTo(val).click(Outside.decreaseWorker);
+			$('<div>').addClass('zeroBtn').appendTo(val).click(Outside.zeroWorker);
 		}
 		
 		$('<div>').addClass('clear').appendTo(row);
@@ -371,6 +377,26 @@ var Outside = {
 		if(State.outside.workers[worker] > 0) {
 			Engine.log('decreasing ' + worker);
 			State.outside.workers[worker]--;
+			Outside.updateVillageIncome();
+			Outside.updateWorkersView();
+		}
+	},
+	
+	maxWorker: function(btn) {
+		var worker = $(this).closest('.workerRow').children('.row_key').text();
+		if(Outside.getNumGatherers() > 0) {
+			Engine.log('maxing ' + worker);
+			State.outside.workers[worker] += Outside.getNumGatherers();
+			Outside.updateVillageIncome();
+			Outside.updateWorkersView();
+		}
+	},
+	
+	zeroWorker: function(btn) {
+		var worker = $(this).closest('.workerRow').children('.row_key').text();
+		if(State.outside.workers[worker] > 0) {
+			Engine.log('zeroing ' + worker);
+			State.outside.workers[worker] = 0;
 			Outside.updateVillageIncome();
 			Outside.updateWorkersView();
 		}

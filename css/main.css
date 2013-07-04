@@ -194,15 +194,22 @@ div.button div.cooldown {
 
 /* Up/Down buttons. They're complicated! */
 
-.upBtn, .dnBtn {
+.upBtn, .dnBtn, .maxBtn, .zeroBtn {
 	position: absolute;
 	width: 14px;
 	height: 15px;
-	right: 0px;
 	cursor: pointer;
 }
 
-.upBtn.disabled, .dnBtn.disabled {
+.upBtn, .dnBtn {
+    right: 0px;
+}
+
+.maxBtn, .zeroBtn {
+    right: -11px;
+}
+
+.upBtn.disabled, .dnBtn.disabled, .maxBtn.disabled, .zeroBtn.disabled {
 	cursor: default;
 }
 
@@ -210,7 +217,11 @@ div.button div.cooldown {
 	top: -2px;
 }
 
-.upBtn:after, .upBtn:before {
+.maxBtn {
+    top: -2px;
+}
+
+.upBtn:after, .upBtn:before, .maxBtn:after, .maxBtn:before {
 	position: absolute;
 	border: medium solid transparent;
 	content: " ";
@@ -219,15 +230,15 @@ div.button div.cooldown {
 	bottom: 4px;
 }
 
-.upBtn:after {
+.upBtn:after, .maxBtn:after {
 	border-color: transparent transparent white;
 }
 
-.upBtn:before {
+.upBtn:before, .maxBtn:before {
 	border-color: transparent transparent black;
 }
 
-.upBtn.disabled:before {
+.upBtn.disabled:before, .maxBtn.disabled:before {
 	border-color: transparent transparent #999;
 }
 
@@ -236,7 +247,11 @@ div.button div.cooldown {
 	bottom: -3px;
 }
 
-.dnBtn:after, .dnBtn:before {
+.zeroBtn {
+    bottom: -3px;
+}
+
+.dnBtn:after, .dnBtn:before, .zeroBtn:after, .zeroBtn:before {
 	position: absolute;
 	border: medium solid transparent;
 	content: " ";
@@ -251,21 +266,27 @@ div.button div.cooldown {
 	margin-left: -3px;
 }
 
-.upBtn:before, .dnBtn:before {
+.upBtn:before, .dnBtn:before, .maxBtn:before, .zeroBtn:before {
 	border-width: 5px;
 	left: 50%;
 	margin-left: -5px;
 }
 
-.dnBtn:after {
+.maxBtn:after, .zeroBtn:after {
+	border-width: 2px;
+	left: 50%;
+	margin-left: -2px;
+}
+
+.dnBtn:after, .zeroBtn:after {
 	border-color: white transparent transparent;
 }
 
-.dnBtn:before {
+.dnBtn:before, .zeroBtn:before {
 	border-color: black transparent transparent;
 }
 
-.dnBtn.disabled:before {
+.dnBtn.disabled:before, .zeroBtn.disabled:before {
 	border-color: #999 transparent transparent;
 }
 

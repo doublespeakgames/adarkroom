@@ -194,13 +194,17 @@ var Path = {
 				}
 				if(num == 0) {
 					$('.dnBtn', row).addClass('disabled');
+					$('.zeroBtn', row).addClass('disabled');
 				} else {
 					$('.dnBtn', row).removeClass('disabled');
+					$('.zeroBtn', row).removeClass('disabled');
 				}
 				if(num >= numAvailable || space < Path.getWeight(k)) {
 					$('.upBtn', row).addClass('disabled');
+					$('.maxBtn', row).addClass('disabled');
 				} else if(space >= Path.getWeight(k)) {
 					$('.upBtn', row).removeClass('disabled');
+					$('.maxBtn', row).removeClass('disabled');
 				}
 			} else if(have == 0 && row.length > 0) {
 				row.remove();
@@ -225,6 +229,8 @@ var Path = {
 		$('<span>').text(num).appendTo(val);
 		$('<div>').addClass('upBtn').appendTo(val).click(Path.increaseSupply);
 		$('<div>').addClass('dnBtn').appendTo(val).click(Path.decreaseSupply);
+		$('<div>').addClass('maxBtn').appendTo(val).click(Path.maxSupply);
+		$('<div>').addClass('zeroBtn').appendTo(val).click(Path.zeroSupply);
 		$('<div>').addClass('clear').appendTo(row);
 		
 		var numAvailable = Engine.getStore(name);
@@ -255,6 +261,30 @@ var Path = {
 		cur = typeof cur == 'number' ? cur : 0;
 		if(cur > 0) {
 			Path.outfit[supply] = cur - 1;
+			Path.updateOutfitting();
+		}
+	},
+	
+	maxSupply: function() {
+		var supply = $(this).closest('.outfitRow').children('.row_key').text().replace('-', ' ');
+		Engine.log('maxing ' + supply);
+		var cur = Path.outfit[supply];
+		cur = typeof cur == 'number' ? cur : 0;
+		if(Path.getFreeSpace() >= Path.getWeight(supply) && cur < Engine.getStore(supply)) {
+		  var maxExtraByWeight = Math.floor(Path.getFreeSpace() / Path.getWeight(supply));
+		  var maxExtraByStore = Engine.getStore(supply) - cur;
+			Path.outfit[supply] = cur + Math.min(maxExtraByWeight, maxExtraByStore);
+			Path.updateOutfitting();
+		}
+	},
+	
+	zeroSupply: function() {
+		var supply = $(this).closest('.outfitRow').children('.row_key').text().replace('-', ' ');
+		Engine.log('zeroing ' + supply);
+		var cur = Path.outfit[supply];
+		cur = typeof cur == 'number' ? cur : 0;
+		if(cur > 0) {
+			Path.outfit[supply] = 0;
 			Path.updateOutfitting();
 		}
 	},
