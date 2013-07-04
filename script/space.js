@@ -39,7 +39,7 @@ var Space = {
 		
 		// Create the hull display
 		var h = $('<div>').attr('id', 'hullRemaining').appendTo(this.panel);
-		$('<div>').addClass('row_key').text('hull: ').appendTo(h);
+		$('<div>').addClass('row_key').text('корпус: ').appendTo(h);
 		$('<div>').addClass('row_val').appendTo(h);
 	},
 	

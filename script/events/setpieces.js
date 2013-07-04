@@ -30,7 +30,7 @@ Events.Setpieces = {
 		}
 	},
 	"swamp": { /* Swamp */
-		title: 'Бридке болото',
+		title: 'Темне болото',
 		scenes: {
 			'start': {
 				text: [
@@ -87,7 +87,7 @@ Events.Setpieces = {
 		}
 	},
 	"cave": { /* Cave */
-		title: 'A Damp Cave',
+		title: 'Волога печера',
 		scenes: {
 			'start': {
 				text: [
@@ -96,7 +96,7 @@ Events.Setpieces = {
 				],
 				notification: 'the earth here is split, as if bearing an ancient wound',
 				buttons: {
-					'enter': {	
+					'enter': {
 						text: 'зайти',
 						cost: { 'смолоскип': 1 },
 						nextScene: {0.3: 'a1', 0.6: 'a2', 1: 'a3'}
@@ -147,7 +147,7 @@ Events.Setpieces = {
 				],
 				buttons: {
 					'continue': {	
-						text: 'squeeze',
+						text: 'протиснутися',
 						nextScene: {0.5: 'b2', 1: 'b3'}
 					},
 					'leave': {
@@ -158,8 +158,8 @@ Events.Setpieces = {
 			},
 			'a3': {
 				text: [
-			       'the remains of an old camp sits just inside the cave.',
-			       'bedrolls, torn and blackened, lay beneath a thin layer of dust.'
+				   'the remains of an old camp sits just inside the cave.',
+				   'bedrolls, torn and blackened, lay beneath a thin layer of dust.'
 				],
 				loot: {
 					'копченина': {
@@ -191,9 +191,9 @@ Events.Setpieces = {
 			},
 			'b1': {
 				text: [
-			       'the body of a wanderer lies in a small cavern.',
-			       "rot's been to work on it, and some of the pieces are missing.",
-			       "can't tell what left it here."
+				   'the body of a wanderer lies in a small cavern.',
+				   "rot's been to work on it, and some of the pieces are missing.",
+				   "can't tell what left it here."
 				],
 				loot: {
 					'меч': {
@@ -225,9 +225,9 @@ Events.Setpieces = {
 			},
 			'b2': {
 				text: [
-			       'the смолоскип sputters and dies in the damp air',
-			       'the darkness is absolute'
-			    ],
+				   'the смолоскип sputters and dies in the damp air',
+				   'the darkness is absolute'
+				],
 				notification: 'the смолоскип goes out',
 				buttons: {
 					'continue': {	
@@ -371,7 +371,7 @@ Events.Setpieces = {
 			},
 			'end1': {
 				text: [
-			       'the nest of a large animal lies at the back of the cave.'
+				   'the nest of a large animal lies at the back of the cave.'
 				],
 				onLoad: function() {
 					World.clearDungeon();
@@ -412,9 +412,9 @@ Events.Setpieces = {
 			},
 			'end2': {
 				text: [
-			       'a small supply cache is hidden at the back of the cave.'
-		        ],
-		        loot: {
+				   'a small supply cache is hidden at the back of the cave.'
+				],
+				loot: {
 					'шмаття': {
 						min: 5,
 						max: 10,
@@ -458,20 +458,20 @@ Events.Setpieces = {
 			},
 			'end3': {
 				text: [
-			       'an old case is wedged behind a rock, covered in a thick layer of dust.'
-		        ],
-		        loot: {
-		        	'шабля': {
-		        		min: 1,
-		        		max: 1,
-		        		chance: 1
-		        	},
-		        	'болас': {
-		        		min: 1,
-		        		max: 3,
-		        		chance: 0.5
-		        	}
-		        },
+				   'an old case is wedged behind a rock, covered in a thick layer of dust.'
+				],
+				loot: {
+					'шабля': {
+						min: 1,
+						max: 1,
+						chance: 1
+					},
+					'болас': {
+						min: 1,
+						max: 3,
+						chance: 0.5
+					}
+				},
 				onLoad: function() {
 					World.clearDungeon();
 				},
@@ -485,7 +485,7 @@ Events.Setpieces = {
 		}
 	},
 	"town": { /* Town */
-		title: 'A Deserted Town',
+		title: 'Пустельне містечко',
 		scenes: {
 			'start': {
 				text: [
@@ -527,27 +527,27 @@ Events.Setpieces = {
 				enemy: 'thug',
 				char: 'T',
 				damage: 4,
-  				hit: 0.8,
-  				attackDelay: 2,
-  				health: 30,
-  				loot: {
-  					'шмаття': {
-  						min: 5,
-  						max: 10,
-  						chance: 0.8
-  					},
-  					'шкіра': {
-  						min: 5,
-  						max: 10,
-  						chance: 0.8
-  					},
+				hit: 0.8,
+				attackDelay: 2,
+				health: 30,
+				loot: {
+					'шмаття': {
+						min: 5,
+						max: 10,
+						chance: 0.8
+					},
+					'шкіра': {
+						min: 5,
+						max: 10,
+						chance: 0.8
+					},
 					'копченина': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					}
-  				},
-  				notification: 'ambushed on the street.',
+				},
+				notification: 'ambushed on the street.',
 				buttons: {
 					'continue': {
 						text: 'продовжити',
@@ -561,26 +561,26 @@ Events.Setpieces = {
 			},
 			'b1': {
 				text: [
-			       'a small cache of supplies is tucked inside a rusting locker.'
-			    ],
-			    loot: {
-			    	'копченина': {
-			    		min: 1,
-			    		max: 5,
-			    		chance: 1
-			    	},
-			    	'смолоскип': {
-			    		min: 1,
-			    		max: 3,
-			    		chance: 0.8
-			    	},
-			    	'набої': {
-			    		min: 1,
-			    		max: 5,
-			    		chance: 0.3
-			    	}
-		    	},
-		    	buttons: {
+				   'a small cache of supplies is tucked inside a rusting locker.'
+				],
+				loot: {
+					'копченина': {
+						min: 1,
+						max: 5,
+						chance: 1
+					},
+					'смолоскип': {
+						min: 1,
+						max: 3,
+						chance: 0.8
+					},
+					'набої': {
+						min: 1,
+						max: 5,
+						chance: 0.3
+					}
+				},
+				buttons: {
 					'continue': {
 						text: 'продовжити',
 						nextScene: {0.5: 'c1', 1: 'c2'}
@@ -596,27 +596,27 @@ Events.Setpieces = {
 				enemy: 'scavenger',
 				char: 'S',
 				damage: 4,
-  				hit: 0.8,
-  				attackDelay: 2,
-  				health: 30,
-  				loot: {
-  					'шмаття': {
-  						min: 5,
-  						max: 10,
-  						chance: 0.8
-  					},
-  					'шкіра': {
-  						min: 5,
-  						max: 10,
-  						chance: 0.8
-  					},
+				hit: 0.8,
+				attackDelay: 2,
+				health: 30,
+				loot: {
+					'шмаття': {
+						min: 5,
+						max: 10,
+						chance: 0.8
+					},
+					'шкіра': {
+						min: 5,
+						max: 10,
+						chance: 0.8
+					},
 					'копченина': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					}
-  				},
-  				notification: 'a scavenger waits just inside the door.',
+				},
+				notification: 'a scavenger waits just inside the door.',
 				buttons: {
 					'continue': {
 						text: 'продовжити',
@@ -633,22 +633,22 @@ Events.Setpieces = {
 				enemy: 'beast',
 				char: 'B',
 				damage: 3,
-  				hit: 0.8,
-  				attackDelay: 1,
-  				health: 25,
-  				loot: {
-  					'клики': {
-  						min: 1,
-  						max: 5,
-  						chance: 1
-  					},
-  					'шкури': {
-  						min: 5,
-  						max: 10,
-  						chance: 1
-  					}
-  				},
-  				notification: 'a beast stands alone in an overgrown park.',
+				hit: 0.8,
+				attackDelay: 1,
+				health: 25,
+				loot: {
+					'клики': {
+						min: 1,
+						max: 5,
+						chance: 1
+					},
+					'шкури': {
+						min: 5,
+						max: 10,
+						chance: 1
+					}
+				},
+				notification: 'a beast stands alone in an overgrown park.',
 				buttons: {
 					'continue': {
 						text: 'продовжити',
@@ -662,8 +662,8 @@ Events.Setpieces = {
 			},
 			'b4': {
 				text: [
-			       'an overturned caravan is spread across the pockmarked street.',
-			       "it's been picked over by scavengers, but there's still some things worth taking."
+				   'an overturned caravan is spread across the pockmarked street.',
+				   "it's been picked over by scavengers, but there's still some things worth taking."
 				],
 				loot: {
 					'копченина': {
@@ -698,27 +698,27 @@ Events.Setpieces = {
 				enemy: 'thug',
 				char: 'T',
 				damage: 4,
-  				hit: 0.8,
-  				attackDelay: 2,
-  				health: 30,
-  				loot: {
-  					'шмаття': {
-  						min: 5,
-  						max: 10,
-  						chance: 0.8
-  					},
-  					'шкіра': {
-  						min: 5,
-  						max: 10,
-  						chance: 0.8
-  					},
+				hit: 0.8,
+				attackDelay: 2,
+				health: 30,
+				loot: {
+					'шмаття': {
+						min: 5,
+						max: 10,
+						chance: 0.8
+					},
+					'шкіра': {
+						min: 5,
+						max: 10,
+						chance: 0.8
+					},
 					'копченина': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					}
-  				},
-  				notification: 'a thug moves out of the shadows.',
+				},
+				notification: 'a thug moves out of the shadows.',
 				buttons: {
 					'continue': {
 						text: 'продовжити',
@@ -735,22 +735,22 @@ Events.Setpieces = {
 				enemy: 'beast',
 				char: 'B',
 				damage: 3,
-  				hit: 0.8,
-  				attackDelay: 1,
-  				health: 25,
-  				loot: {
-  					'клики': {
-  						min: 1,
-  						max: 5,
-  						chance: 1
-  					},
-  					'шкури': {
-  						min: 5,
-  						max: 10,
-  						chance: 1
-  					}
-  				},
-  				notification: 'a beast charges out of a ransacked classroom.',
+				hit: 0.8,
+				attackDelay: 1,
+				health: 25,
+				loot: {
+					'клики': {
+						min: 1,
+						max: 5,
+						chance: 1
+					},
+					'шкури': {
+						min: 5,
+						max: 10,
+						chance: 1
+					}
+				},
+				notification: 'a beast charges out of a ransacked classroom.',
 				buttons: {
 					'continue': {
 						text: 'продовжити',
@@ -764,12 +764,12 @@ Events.Setpieces = {
 			},
 			'c3': {
 				text: [
-			       'through the large gymnasium doors, footsteps can be heard.',
-			       'the смолоскипlight casts a flickering glow down the hallway.',
-			       'the footsteps stop.'
-		        ],
-		        buttons: {
-			        'continue': {
+				   'through the large gymnasium doors, footsteps can be heard.',
+				   'the смолоскипlight casts a flickering glow down the hallway.',
+				   'the footsteps stop.'
+				],
+				buttons: {
+					'continue': {
 						text: 'увійти',
 						nextScene: {1: 'd1'}
 					},
@@ -777,29 +777,29 @@ Events.Setpieces = {
 						text: 'піти з містечка',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			'c4': {
 				combat: true,
 				enemy: 'beast',
 				char: 'B',
 				damage: 4,
-  				hit: 0.8,
-  				attackDelay: 1,
-  				health: 25,
-  				loot: {
-  					'клики': {
-  						min: 1,
-  						max: 5,
-  						chance: 1
-  					},
-  					'шкури': {
-  						min: 5,
-  						max: 10,
-  						chance: 1
-  					}
-  				},
-  				notification: 'another beast, draw by the noise, leaps out of a copse of trees.',
+				hit: 0.8,
+				attackDelay: 1,
+				health: 25,
+				loot: {
+					'клики': {
+						min: 1,
+						max: 5,
+						chance: 1
+					},
+					'шкури': {
+						min: 5,
+						max: 10,
+						chance: 1
+					}
+				},
+				notification: 'another beast, draw by the noise, leaps out of a copse of trees.',
 				buttons: {
 					'continue': {
 						text: 'продовжити',
@@ -813,10 +813,10 @@ Events.Setpieces = {
 			},
 			'c5': {
 				text: [
-			       "something's causing a commotion a ways down the road.",
-			       "a fight, maybe."
-		        ],
-		        buttons: {
+				   "something's causing a commotion a ways down the road.",
+				   "a fight, maybe."
+				],
+				buttons: {
 					'continue': {
 						text: 'продовжити',
 						nextScene: {1: 'd2'}
@@ -829,17 +829,17 @@ Events.Setpieces = {
 			},
 			'c6': {
 				text: [
-			       'a small basket of food is hidden under a park bench, with a note attached.',
-			       "can't read the words."
-		        ],
-		        loot: {
-		        	'копченина': {
-		        		min: 1,
-		        		max: 5,
-		        		chance: 1
-		        	}
-		        },
-		        buttons: {
+				   'a small basket of food is hidden under a park bench, with a note attached.',
+				   "can't read the words."
+				],
+				loot: {
+					'копченина': {
+						min: 1,
+						max: 5,
+						chance: 1
+					}
+				},
+				buttons: {
 					'continue': {
 						text: 'продовжити',
 						nextScene: {1: 'd2'}
@@ -855,27 +855,27 @@ Events.Setpieces = {
 				enemy: 'scavenger',
 				char: 'S',
 				damage: 5,
-  				hit: 0.8,
-  				attackDelay: 2,
-  				health: 30,
-  				loot: {
-  					'копченина': {
-  						min: 1,
-  						max: 5,
-  						chance: 1
-  					},
-  					'шкіра': {
-  						min: 5,
-  						max: 10,
-  						chance: 0.8
-  					},
+				hit: 0.8,
+				attackDelay: 2,
+				health: 30,
+				loot: {
+					'копченина': {
+						min: 1,
+						max: 5,
+						chance: 1
+					},
+					'шкіра': {
+						min: 5,
+						max: 10,
+						chance: 0.8
+					},
 					'шабля': {
 						min: 1,
 						max: 1,
 						chance: 0.5
 					}
-  				},
-  				notification: 'a panicked scavenger bursts through the door, screaming.',
+				},
+				notification: 'a panicked scavenger bursts through the door, screaming.',
 				buttons: {
 					'continue': {
 						text: 'продовжити',
@@ -892,27 +892,27 @@ Events.Setpieces = {
 				enemy: 'vigilante',
 				char: 'V',
 				damage: 6,
-  				hit: 0.8,
-  				attackDelay: 2,
-  				health: 30,
-  				loot: {
-  					'копченина': {
-  						min: 1,
-  						max: 5,
-  						chance: 1
-  					},
-  					'шкіра': {
-  						min: 5,
-  						max: 10,
-  						chance: 0.8
-  					},
+				hit: 0.8,
+				attackDelay: 2,
+				health: 30,
+				loot: {
+					'копченина': {
+						min: 1,
+						max: 5,
+						chance: 1
+					},
+					'шкіра': {
+						min: 5,
+						max: 10,
+						chance: 0.8
+					},
 					'шабля': {
 						min: 1,
 						max: 1,
 						chance: 0.5
 					}
-  				},
-  				notification: "a man stands over a dead wanderer. notices he's not alone.",
+				},
+				notification: "a man stands over a dead wanderer. notices he's not alone.",
 				buttons: {
 					'continue': {
 						text: 'продовжити',
@@ -926,10 +926,10 @@ Events.Setpieces = {
 			},
 			'end1': {
 				text: [
-			       'scavenger had a small camp in the school.',
-			       'collected scraps spread across the floor like they fell from heaven.'
-		        ],
-		        onLoad: function() {
+				   'scavenger had a small camp in the school.',
+				   'collected scraps spread across the floor like they fell from heaven.'
+				],
+				onLoad: function() {
 					World.clearDungeon();
 				},
 				loot: {
@@ -963,10 +963,10 @@ Events.Setpieces = {
 			},
 			'end2': {
 				text: [
-			       "scavenger'd been looking for supplies in here, it seems.",
-			       "a shame to let what he'd found go to waste."
-		        ],
-		        onLoad: function() {
+				   "scavenger'd been looking for supplies in here, it seems.",
+				   "a shame to let what he'd found go to waste."
+				],
+				onLoad: function() {
 					World.clearDungeon();
 				},
 				loot: {
@@ -995,10 +995,10 @@ Events.Setpieces = {
 			},
 			'end3': {
 				text: [
-			       "beneath the wanderer's rags, clutched in one of its many hands, a glint of steel.",
-			       "worth killing for, it seems."
-		        ],
-		        onLoad: function() {
+				   "beneath the wanderer's rags, clutched in one of its many hands, a glint of steel.",
+				   "worth killing for, it seems."
+				],
+				onLoad: function() {
 					World.clearDungeon();
 				},
 				loot: {
@@ -1022,11 +1022,11 @@ Events.Setpieces = {
 			},
 			'end4': {
 				text: [
-			       "eye for an eye seems fair.",
-			       "always worked before, at least.",
-			       "picking the bones finds some useful trinkets."
-		        ],
-		        onLoad: function() {
+				   "eye for an eye seems fair.",
+				   "always worked before, at least.",
+				   "picking the bones finds some useful trinkets."
+				],
+				onLoad: function() {
 					World.clearDungeon();
 				},
 				loot: {
@@ -1061,7 +1061,7 @@ Events.Setpieces = {
 		}
 	},
 	"city": { /* City */
-		title: 'A Ruined City',
+		title: 'Зруйноване місто',
 		scenes: {
 			'start': {
 				text: [
@@ -1071,7 +1071,7 @@ Events.Setpieces = {
 				],
 				notification: "the towers of a decaying city dominate the skyline",
 				buttons: {
-					'enter': {	
+					'enter': {
 						text: 'розвідати',
 						nextScene: {0.4: 'a1', 0.8: 'a2', 1: 'a3'}
 					},
@@ -1083,10 +1083,10 @@ Events.Setpieces = {
 			},
 			'a1': {
 				text:[
-				    'the streets are empty.',
-				    'the air is filled with dust, driven relentlessly by the hard winds.'
-		        ],
-		        buttons: {
+					'the streets are empty.',
+					'the air is filled with dust, driven relentlessly by the hard winds.'
+				],
+				buttons: {
 					'continue': {
 						text: 'продовжити',
 						nextScene: {0.5: 'b1', 1: 'b2'}
@@ -1099,10 +1099,10 @@ Events.Setpieces = {
 			},
 			'a2': {
 				text:[
-				    'orange traffic cones are set across the street, faded and cracked.',
-				    'lights flash through the alleys between buildings.'
-		        ],
-		        buttons: {
+					'orange traffic cones are set across the street, faded and cracked.',
+					'lights flash through the alleys between buildings.'
+				],
+				buttons: {
 					'continue': {
 						text: 'продовжити',
 						nextScene: {0.5: 'b3', 1: 'b4'}
@@ -1115,10 +1115,10 @@ Events.Setpieces = {
 			},
 			'a3': {
 				text: [
-			       'a large shanty town sprawls across the streets.',
-			       'faces, darkened by soot and blood, stare out from crooked huts.',
-		        ],
-		        buttons: {
+				   'a large shanty town sprawls across the streets.',
+				   'faces, darkened by soot and blood, stare out from crooked huts.',
+				],
+				buttons: {
 					'continue': {	
 						text: 'продовжити',
 						nextScene: {0.5: 'b5', 1: 'b6'}
@@ -1131,12 +1131,12 @@ Events.Setpieces = {
 			},
 			'b1': {
 				text: [
-			       'the old tower seems mostly intact.',
-			       'the shell of a burned out car blocks the entrance.',
-			       'most of the windows at ground level are busted anyway.'
-		        ],
-		        buttons: {
-		        	'enter': {	
+				   'the old tower seems mostly intact.',
+				   'the shell of a burned out car blocks the entrance.',
+				   'most of the windows at ground level are busted anyway.'
+				],
+				buttons: {
+					'enter': {	
 						text: 'увійти',
 						nextScene: {0.5: 'c1', 1: 'c2'}
 					},
@@ -1144,7 +1144,7 @@ Events.Setpieces = {
 						text: 'піти з міста',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			'b2': {
 				combat: true,
@@ -1152,28 +1152,28 @@ Events.Setpieces = {
 				enemy: 'lizard',
 				char: 'L',
 				damage: 5,
-  				hit: 0.8,
-  				attackDelay: 2,
-  				health: 20,
-  				loot: {
-  					'луска': {
-  						min: 5,
-  						max: 10,
-  						chance: 0.8
-  					},
-  					'клики': {
-  						min: 5,
-  						max: 10,
-  						chance: 0.5
-  					},
-  					'м’ясо': {
-  						min: 5,
-  						max: 10,
-  						chance: 0.8
-  					}
-  				},
-		        buttons: {
-		        	'descend': {	
+				hit: 0.8,
+				attackDelay: 2,
+				health: 20,
+				loot: {
+					'луска': {
+						min: 5,
+						max: 10,
+						chance: 0.8
+					},
+					'клики': {
+						min: 5,
+						max: 10,
+						chance: 0.5
+					},
+					'м’ясо': {
+						min: 5,
+						max: 10,
+						chance: 0.8
+					}
+				},
+				buttons: {
+					'descend': {	
 						text: 'спуститися',
 						nextScene: {0.5: 'c2', 1: 'c3'}
 					},
@@ -1181,24 +1181,24 @@ Events.Setpieces = {
 						text: 'піти з міста',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			'b3': {
 				notification: 'the shot echoes in the empty street.',
 				combat: true,
-  				enemy: 'sniper',
-  				char: 'S',
-  				damage: 15,
-  				hit: 0.8,
-  				attackDelay: 4,
-  				health: 30,
+				enemy: 'sniper',
+				char: 'S',
+				damage: 15,
+				hit: 0.8,
+				attackDelay: 4,
+				health: 30,
 				ranged: true,
-  				loot: {
-  					'копченина': {
-  						min: 1,
-  						max: 5,
-  						chance: 0.8
-  					},
+				loot: {
+					'копченина': {
+						min: 1,
+						max: 5,
+						chance: 0.8
+					},
 					'набої': {
 						min: 1,
 						max: 5,
@@ -1209,9 +1209,9 @@ Events.Setpieces = {
 						max: 1,
 						chance: 0.2
 					}
-  				},
-		        buttons: {
-		        	'continue': {	
+				},
+				buttons: {
+					'continue': {	
 						text: 'продовжити',
 						nextScene: {0.5: 'c4', 1: 'c5'}
 					},
@@ -1219,24 +1219,24 @@ Events.Setpieces = {
 						text: 'піти з міста',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			'b4': {
 				notification: 'the soldier steps out from between the buildings, rifle raised.',
 				combat: true,
-  				enemy: 'soldier',
+				enemy: 'soldier',
 				ranged: true,
-  				char: 'D',
-  				damage: 8,
-  				hit: 0.8,
-  				attackDelay: 2,
-  				health: 50,
-  				loot: {
-  					'копченина': {
-  						min: 1,
-  						max: 5,
-  						chance: 0.8
-  					},
+				char: 'D',
+				damage: 8,
+				hit: 0.8,
+				attackDelay: 2,
+				health: 50,
+				loot: {
+					'копченина': {
+						min: 1,
+						max: 5,
+						chance: 0.8
+					},
 					'набої': {
 						min: 1,
 						max: 5,
@@ -1247,9 +1247,9 @@ Events.Setpieces = {
 						max: 1,
 						chance: 0.2
 					}
-  				},
-		        buttons: {
-		        	'continue': {	
+				},
+				buttons: {
+					'continue': {	
 						text: 'продовжити',
 						nextScene: {0.5: 'c5', 1: 'c6'}
 					},
@@ -1257,23 +1257,23 @@ Events.Setpieces = {
 						text: 'піти з міста',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			'b5': {
 				notification: 'a frail man stands defiantly, blocking the path.',
 				combat: true,
-  				enemy: 'frail man',
-  				char: 'M',
-  				damage: 1,
-  				hit: 0.8,
-  				attackDelay: 2,
-  				health: 10,
-  				loot: {
-  					'копченина': {
-  						min: 1,
-  						max: 5,
-  						chance: 0.8
-  					},
+				enemy: 'frail man',
+				char: 'M',
+				damage: 1,
+				hit: 0.8,
+				attackDelay: 2,
+				health: 10,
+				loot: {
+					'копченина': {
+						min: 1,
+						max: 5,
+						chance: 0.8
+					},
 					'шмаття': {
 						min: 1,
 						max: 5,
@@ -1284,9 +1284,9 @@ Events.Setpieces = {
 						max: 1,
 						chance: 0.2
 					}
-  				},
-		        buttons: {
-		        	'continue': {	
+				},
+				buttons: {
+					'continue': {
 						text: 'продовжити',
 						nextScene: {0.5: 'c7', 1: 'c8'}
 					},
@@ -1294,15 +1294,15 @@ Events.Setpieces = {
 						text: 'піти з міста',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			'b6': {
 				text: [
-			       'nothing but downcast eyes.',
-			       'the people here were broken a long time ago.'
-		        ],
-		        buttons: {
-		        	'continue': {	
+				   'nothing but downcast eyes.',
+				   'the people here were broken a long time ago.'
+				],
+				buttons: {
+					'continue': {
 						text: 'продовжити',
 						nextScene: {0.5: 'c8', 1: 'c9'}
 					},
@@ -1310,36 +1310,36 @@ Events.Setpieces = {
 						text: 'піти з міста',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			'c1': {
 				notification: 'a thug is waiting on the other side of the wall.',
 				combat: true,
 				enemy: 'thug',
-  				char: 'T',
-  				damage: 3,
-  				hit: 0.8,
-  				attackDelay: 2,
-  				health: 30,
-  				loot: {
-  					'шабля': {
-  						min: 1,
-  						max: 1,
-  						chance: 0.5
-  					},
-  					'копченина': {
-  						min: 1,
-  						max: 3,
-  						chance: 0.5
-  					},
-  					'шмаття': {
-  						min: 1,
-  						max: 5,
-  						chance: 0.8
-  					}
-  				},
-		        buttons: {
-		        	'continue': {	
+				char: 'T',
+				damage: 3,
+				hit: 0.8,
+				attackDelay: 2,
+				health: 30,
+				loot: {
+					'шабля': {
+						min: 1,
+						max: 1,
+						chance: 0.5
+					},
+					'копченина': {
+						min: 1,
+						max: 3,
+						chance: 0.5
+					},
+					'шмаття': {
+						min: 1,
+						max: 5,
+						chance: 0.8
+					}
+				},
+				buttons: {
+					'continue': {	
 						text: 'продовжити',
 						nextScene: {0.5: 'd1', 1: 'd2'}
 					},
@@ -1347,37 +1347,37 @@ Events.Setpieces = {
 						text: 'піти з міста',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			
 			'c2': {
 				notification: 'a snarling beast jumps out from behind a car.',
 				combat: true,
 				enemy: 'beast',
-  				char: 'B',
-  				damage: 2,
-  				hit: 0.8,
-  				attackDelay: 1,
-  				health: 30,
-  				loot: {
-  					'м’ясо': {
-  						min: 1,
-  						max: 5,
-  						chance: 0.8
-  					},
-  					'шкури': {
-  						min: 1,
-  						max: 5,
-  						chance: 0.8
-  					},
-  					'клики': {
-  						min: 1,
-  						max: 5,
-  						chance: 0.5
-  					}
-  				},
-		        buttons: {
-		        	'continue': {	
+				char: 'B',
+				damage: 2,
+				hit: 0.8,
+				attackDelay: 1,
+				health: 30,
+				loot: {
+					'м’ясо': {
+						min: 1,
+						max: 5,
+						chance: 0.8
+					},
+					'шкури': {
+						min: 1,
+						max: 5,
+						chance: 0.8
+					},
+					'клики': {
+						min: 1,
+						max: 5,
+						chance: 0.5
+					}
+				},
+				buttons: {
+					'continue': {
 						text: 'продовжити',
 						nextScene: {1: 'd2'}
 					},
@@ -1385,17 +1385,17 @@ Events.Setpieces = {
 						text: 'піти з міста',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			
 			'c3': {
 				text: [
-			       'street above the subway platform is blown away.',
-			       'lets some light down into the dusty haze.',
-			       'a sound comes from the tunnel, just ahead.'
-		        ],
-		        buttons: {
-		        	'enter': {	
+				   'street above the subway platform is blown away.',
+				   'lets some light down into the dusty haze.',
+				   'a sound comes from the tunnel, just ahead.'
+				],
+				buttons: {
+					'enter': {
 						text: 'дослідити',
 						cost: { 'смолоскип': 1 },
 						nextScene: {0.5: 'd2', 1: 'd3'}
@@ -1404,17 +1404,17 @@ Events.Setpieces = {
 						text: 'піти з міста',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			
 			'c4': {
 				text: [
-			       'looks like a camp of sorts up ahead.',
-			       'rusted chainlink is pulled across an alleyway.',
-			       'fires burn in the courtyard beyond.'
-		        ],
-		        buttons: {
-		        	'enter': {	
+				   'looks like a camp of sorts up ahead.',
+				   'rusted chainlink is pulled across an alleyway.',
+				   'fires burn in the courtyard beyond.'
+				],
+				buttons: {
+					'enter': {
 						text: 'продовжити',
 						nextScene: {0.5: 'd4', 1: 'd5'}
 					},
@@ -1422,16 +1422,16 @@ Events.Setpieces = {
 						text: 'піти з міста',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			
 			'c5': {
 				text: [
-			       'more voices can be heard ahead.',
-			       'they must be here for a reason.'
-		        ],
-		        buttons: {
-		        	'enter': {	
+				   'more voices can be heard ahead.',
+				   'they must be here for a reason.'
+				],
+				buttons: {
+					'enter': {
 						text: 'продовжити',
 						nextScene: {1: 'd5'}
 					},
@@ -1439,16 +1439,16 @@ Events.Setpieces = {
 						text: 'піти з міста',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			
 			'c6': {
 				text: [
-			       'the sound of gunfire carries on the wind.',
-			       'the street ahead glows with firelight.'
-		        ],
-		        buttons: {
-		        	'enter': {	
+				   'the sound of gunfire carries on the wind.',
+				   'the street ahead glows with firelight.'
+				],
+				buttons: {
+					'enter': {
 						text: 'продовжити',
 						nextScene: {0.5: 'd5', 1: 'd6'}
 					},
@@ -1456,16 +1456,16 @@ Events.Setpieces = {
 						text: 'піти з міста',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			
 			'c7': {
 				text: [
-			       'more squatters are crowding around now.',
-			       'someone throws a stone.'
-		        ],
-		        buttons: {
-		        	'enter': {	
+				   'more squatters are crowding around now.',
+				   'someone throws a stone.'
+				],
+				buttons: {
+					'enter': {
 						text: 'продовжити',
 						nextScene: {0.5: 'd7', 1: 'd8'}
 					},
@@ -1473,7 +1473,7 @@ Events.Setpieces = {
 						text: 'піти з міста',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			
 			'c8': {
@@ -1503,8 +1503,8 @@ Events.Setpieces = {
 						chance: 0.01
 					}
 				},
-		        buttons: {
-		        	'enter': {	
+				buttons: {
+					'enter': {
 						text: 'продовжити',
 						nextScene: {1: 'd8'}
 					},
@@ -1512,23 +1512,23 @@ Events.Setpieces = {
 						text: 'піти з міста',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			
 			'c9': {
 				text: [
-			       'strips of meat hang drying by the side of the street.',
-			       'the people back away, avoiding eye contact.'
-		        ],
-		        loot: {
-		        	'копченина': {
-		        		min: 5,
-		        		max: 10,
-		        		chance: 1
-		        	}
-		        },
-		        buttons: {
-		        	'enter': {	
+				   'strips of meat hang drying by the side of the street.',
+				   'the people back away, avoiding eye contact.'
+				],
+				loot: {
+					'копченина': {
+						min: 5,
+						max: 10,
+						chance: 1
+					}
+				},
+				buttons: {
+					'enter': {
 						text: 'продовжити',
 						nextScene: {0.5: 'd8', 1: 'd9'}
 					},
@@ -1536,27 +1536,27 @@ Events.Setpieces = {
 						text: 'піти з міста',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			
 			'd1': {
 				notification: 'a large bird nests at the top of the stairs.',
 				combat: true,
 				enemy: 'bird',
-  				char: 'B',
-  				damage: 5,
-  				hit: 0.7,
-  				attackDelay: 1,
-  				health: 45,
-  				loot: {
-  					'м’ясо': {
-  						min: 5,
-  						max: 10,
-  						chance: 0.8
-  					}
-  				},
-		        buttons: {
-		        	'continue': {	
+				char: 'B',
+				damage: 5,
+				hit: 0.7,
+				attackDelay: 1,
+				health: 45,
+				loot: {
+					'м’ясо': {
+						min: 5,
+						max: 10,
+						chance: 0.8
+					}
+				},
+				buttons: {
+					'continue': {
 						text: 'продовжити',
 						nextScene: {0.5: 'end1', 1: 'end2'}
 					},
@@ -1564,38 +1564,38 @@ Events.Setpieces = {
 						text: 'піти з міста',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			
 			'd2': {
 				text: [
-			       "the debris is denser here.",
-			       "maybe some useful stuff in the rubble."
-		        ],
-		        loot: {
-		        	'набої': {
-		        		min: 1,
-		        		max: 5,
-		        		chance: 0.5
-		        	},
-		        	'сталь': {
-		        		min: 1,
-		        		max: 10,
-		        		chance: 0.8
-		        	},
-		        	'космічний сплав': {
-		        		min: 1,
-		        		max: 1,
-		        		chance: 0.01
-		        	},
-		        	'шмаття': {
-		        		min: 1,
-		        		max: 10,
-		        		chance: 1
-		        	}
-		        },
-		        buttons: {
-		        	'continue': {	
+				   "the debris is denser here.",
+				   "maybe some useful stuff in the rubble."
+				],
+				loot: {
+					'набої': {
+						min: 1,
+						max: 5,
+						chance: 0.5
+					},
+					'сталь': {
+						min: 1,
+						max: 10,
+						chance: 0.8
+					},
+					'космічний сплав': {
+						min: 1,
+						max: 1,
+						chance: 0.01
+					},
+					'шмаття': {
+						min: 1,
+						max: 10,
+						chance: 1
+					}
+				},
+				buttons: {
+					'continue': {	
 						text: 'продовжити',
 						nextScene: {1: 'end2'}
 					},
@@ -1603,7 +1603,7 @@ Events.Setpieces = {
 						text: 'піти з міста',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			
 			'd3': {
@@ -1611,25 +1611,25 @@ Events.Setpieces = {
 				combat: true,
 				enemy: 'rats',
 				plural: true,
-  				char: 'RRR',
-  				damage: 1,
-  				hit: 0.8,
-  				attackDelay: 0.25,
-  				health: 60,
-  				loot: {
-  					'шкури': {
-  						min: 5,
-  						max: 10,
-  						chance: 0.8
-  					},
+				char: 'RRR',
+				damage: 1,
+				hit: 0.8,
+				attackDelay: 0.25,
+				health: 60,
+				loot: {
+					'шкури': {
+						min: 5,
+						max: 10,
+						chance: 0.8
+					},
 					'клики': {
 						min: 5,
 						max: 10,
 						chance: 0.5
 					}
-  				},
-		        buttons: {
-		        	'continue': {	
+				},
+				buttons: {
+					'continue': {	
 						text: 'продовжити',
 						nextScene: {0.5: 'end2', 1: 'end3'}
 					},
@@ -1637,7 +1637,7 @@ Events.Setpieces = {
 						text: 'піти з міста',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			
 			'd4': {
@@ -1676,19 +1676,19 @@ Events.Setpieces = {
 			'd5': {
 				notification: 'a second soldier opens fire.',
 				combat: true,
-  				enemy: 'soldier',
+				enemy: 'soldier',
 				ranged: true,
-  				char: 'D',
-  				damage: 8,
-  				hit: 0.8,
-  				attackDelay: 2,
-  				health: 50,
-  				loot: {
-  					'копченина': {
-  						min: 1,
-  						max: 5,
-  						chance: 0.8
-  					},
+				char: 'D',
+				damage: 8,
+				hit: 0.8,
+				attackDelay: 2,
+				health: 50,
+				loot: {
+					'копченина': {
+						min: 1,
+						max: 5,
+						chance: 0.8
+					},
 					'набої': {
 						min: 1,
 						max: 5,
@@ -1699,9 +1699,9 @@ Events.Setpieces = {
 						max: 1,
 						chance: 0.2
 					}
-  				},
-		        buttons: {
-		        	'continue': {	
+				},
+				buttons: {
+				'continue': {	
 						text: 'продовжити',
 						nextScene: {1: 'end5'}
 					},
@@ -1709,7 +1709,7 @@ Events.Setpieces = {
 						text: 'піти з міста',
 						nextScene: 'end'
 					}
-		        }
+				}
 			},
 			
 			'd6': {
@@ -2177,7 +2177,7 @@ Events.Setpieces = {
 		}	
 	},
 	"house": { /* Abandoned House */
-		title: 'An Old House',
+		title: 'Покинутий будинок',
 		scenes: {
 			'start': {
 				text: [
@@ -2207,11 +2207,11 @@ Events.Setpieces = {
 					Notifications.notify(null, 'Набрали води.');
 				},
 				loot: {
- 					'копченина': {
- 						min: 1,
- 						max: 10,
- 						chance: 0.8
- 					},
+					'копченина': {
+						min: 1,
+						max: 10,
+						chance: 0.8
+					},
 					'шкіра': {
 						min: 1,
 						max: 10,
@@ -2243,11 +2243,11 @@ Events.Setpieces = {
 					World.markVisited(World.curPos[0], World.curPos[1]);
 				},
 				loot: {
- 					'копченина': {
- 						min: 1,
- 						max: 10,
- 						chance: 0.8
- 					},
+					'копченина': {
+						min: 1,
+						max: 10,
+						chance: 0.8
+					},
 					'шкіра': {
 						min: 1,
 						max: 10,
@@ -2269,87 +2269,87 @@ Events.Setpieces = {
 		}
 	},
 	"battlefield": { /* Discovering an old battlefield */
-		title: 'A Forgotten Battlefield',
+		title: 'Забуте поле бою',
 		scenes: {
 			'start': {
 				text: [
-			       'a battle was fought here, long ago.',
-			       'battered technology from both sides lays dormant on the blasted landscape.'
-		        ],
-		        onLoad: function() {
+				   'a battle was fought here, long ago.',
+				   'battered technology from both sides lays dormant on the blasted landscape.'
+				],
+				onLoad: function() {
 					World.markVisited(World.curPos[0], World.curPos[1]);
 				},
-		        loot: {
-		        	'рушниця': {
-		        		min: 1,
-		        		max: 3,
-		        		chance: 0.5
-		        	},
-		        	'набої': {
-		        		min: 5,
-		        		max: 20,
-		        		chance: 0.8
-		        	},
-		        	'лазерна гвинтівка': {
-		        		min: 1,
-		        		max: 3,
-		        		chance: 0.3
-		        	},
-		        	'батарейки': {
-		        		min: 5,
-		        		max: 10,
-		        		chance: 0.5
-		        	},
-		        	'гранати': {
-		        		min: 1,
-		        		max: 5,
-		        		chance: 0.5
-		        	},
-		        	'космічний сплав': {
-		        		min: 1,
-		        		max: 1,
-		        		chance: 0.3
-		        	}
-		        },
-		        buttons: {
-		        	'leave': {
-		        		text: 'полишити',
-		        		nextScene: 'end'
-		        	}
-		        }
+				loot: {
+					'рушниця': {
+						min: 1,
+						max: 3,
+						chance: 0.5
+					},
+					'набої': {
+						min: 5,
+						max: 20,
+						chance: 0.8
+					},
+					'лазерна гвинтівка': {
+						min: 1,
+						max: 3,
+						chance: 0.3
+					},
+					'батарейки': {
+						min: 5,
+						max: 10,
+						chance: 0.5
+					},
+					'гранати': {
+						min: 1,
+						max: 5,
+						chance: 0.5
+					},
+					'космічний сплав': {
+						min: 1,
+						max: 1,
+						chance: 0.3
+					}
+				},
+				buttons: {
+					'leave': {
+						text: 'полишити',
+						nextScene: 'end'
+					}
+				}
 			}
 		}
 	},
 	"borehole": { /* Admiring a huge borehole */
-		title: 'A Huge Borehole',
+		title: 'Величезна воронка',
 		scenes: {
 			'start': {
 				text: [
-			       'a huge hole is cut deep into the earth, evidence of the past harvest.',
-			       'they took what they came for, and left.',
-			       'castoff from the mammoth drills can still be found by the edges of the precipice.'
-		        ],
-		        onLoad: function() {
+				   'a huge hole is cut deep into the earth, evidence of the past harvest.',
+				   'they took what they came for, and left.',
+				   'castoff from the mammoth drills can still be found by the edges of the precipice.'
+				],
+				onLoad: function() {
 					World.markVisited(World.curPos[0], World.curPos[1]);
 				},
-		        loot: {
-		        	'космічний сплав': {
-		        		min: 1,
-		        		max: 3,
-		        		chance: 1
-		        	}
-		        },
-		        buttons: {
-		        	'leave': {
-		        		text: 'полишити',
-		        		nextScene: 'end'
-		        	}
-		        }
+				loot: {
+					'космічний сплав': {
+						min: 1,
+						max: 3,
+						chance: 1
+					}
+				},
+				buttons: {
+					'leave': {
+						text: 'полишити',
+						nextScene: 'end'
+					}
+				}
 			}
 		}
 	},
 	"ship": { /* Finding a way off this rock */
-		title: 'A Crashed Ship',
+		title: 'Підбитий зореліт',
 		scenes: {
 			'start': {
 				onLoad: function() {
@@ -2358,16 +2358,16 @@ Events.Setpieces = {
 					World.state.ship = true;
 				},
 				text: [
-			       'the familiar curves of a wanderer vessel rise up out of the dust and ash. ',
+				   'the familiar curves of a wanderer vessel rise up out of the dust and ash. ',
 				   "lucky that the natives can't work the mechanisms.",
-			       'with a little effort, it might fly again.'
-		        ],
-		        buttons: {
-		        	'leavel': {
-		        		text: 'salvage',
-		        		nextScene: 'end'
-		        	}
-		        }
+				   'with a little effort, it might fly again.'
+				],
+				buttons: {
+					'leavel': {
+						text: 'врятувати',
+						nextScene: 'end'
+					}
+				}
 			}
 		}
 	},
@@ -2393,19 +2393,19 @@ Events.Setpieces = {
 			},
 			'a1': {
 				combat: true,
-  				enemy: 'soldier',
+				enemy: 'soldier',
 				ranged: true,
-  				char: 'D',
-  				damage: 8,
-  				hit: 0.8,
-  				attackDelay: 2,
-  				health: 50,
-  				loot: {
-  					'копченина': {
-  						min: 1,
-  						max: 5,
-  						chance: 0.8
-  					},
+				char: 'D',
+				damage: 8,
+				hit: 0.8,
+				attackDelay: 2,
+				health: 50,
+				loot: {
+					'копченина': {
+						min: 1,
+						max: 5,
+						chance: 0.8
+					},
 					'набої': {
 						min: 1,
 						max: 5,
@@ -2416,8 +2416,8 @@ Events.Setpieces = {
 						max: 1,
 						chance: 0.2
 					}
-  				},
-  				notification: 'a soldier, alerted, opens fire.',
+				},
+				notification: 'a soldier, alerted, opens fire.',
 				buttons: {
 					'continue': {
 						text: 'продовжити',
@@ -2431,19 +2431,19 @@ Events.Setpieces = {
 			},
 			'a2': {
 				combat: true,
-  				enemy: 'soldier',
+				enemy: 'soldier',
 				ranged: true,
-  				char: 'D',
-  				damage: 8,
-  				hit: 0.8,
-  				attackDelay: 2,
-  				health: 50,
-  				loot: {
-  					'копченина': {
-  						min: 1,
-  						max: 5,
-  						chance: 0.8
-  					},
+				char: 'D',
+				damage: 8,
+				hit: 0.8,
+				attackDelay: 2,
+				health: 50,
+				loot: {
+					'копченина': {
+						min: 1,
+						max: 5,
+						chance: 0.8
+					},
 					'набої': {
 						min: 1,
 						max: 5,
@@ -2454,9 +2454,9 @@ Events.Setpieces = {
 						max: 1,
 						chance: 0.2
 					}
-  				},
-  				notification: 'a second soldier joins the fight.',
- 				buttons: {
+				},
+				notification: 'a second soldier joins the fight.',
+				buttons: {
 					'continue': {
 						text: 'продовжити',
 						nextScene: { 1: 'a3' }
@@ -2488,7 +2488,7 @@ Events.Setpieces = {
 					}
 				},
 				notification: 'a grizzled soldier attacks, waving a bayonet.',
- 				buttons: {
+				buttons: {
 					'continue': {
 						text: 'продовжити',
 						nextScene: { 1: 'cleared' }
@@ -2516,7 +2516,7 @@ Events.Setpieces = {
 		}
 	},
 	"coalmine": { /* Clearing the Coal Mine */
-		title: 'The Coal Mine',
+		title: 'Вугільна копальня',
 		scenes: {
 			'start': {
 				text: [
@@ -2569,26 +2569,26 @@ Events.Setpieces = {
 			},
 			'a2': {
 				combat: true,
- 				enemy: 'man',
- 				char: 'M',
- 				damage: 3,
- 				hit: 0.8,
- 				attackDelay: 2,
- 				health: 10,
- 				loot: {
+				enemy: 'man',
+				char: 'M',
+				damage: 3,
+				hit: 0.8,
+				attackDelay: 2,
+				health: 10,
+				loot: {
 					'копченина': {
 						min: 1,
- 						max: 5,
+						max: 5,
 						chance: 0.8
 					},
 					'шмаття': {
 						min: 1,
- 						max: 5,
+						max: 5,
 						chance: 0.8
 					}
- 				},
- 				notification: 'a man joins the fight',
- 				buttons: {
+				},
+				notification: 'a man joins the fight',
+				buttons: {
 					'continue': {
 						text: 'продовжити',
 						nextScene: { 1: 'a3' }
@@ -2601,21 +2601,21 @@ Events.Setpieces = {
 			},
 			'a3': {
 				combat: true,
- 				enemy: 'chief',
- 				char: 'C',
- 				damage: 5,
- 				hit: 0.8,
- 				attackDelay: 2,
- 				health: 20,
- 				loot: {
+				enemy: 'chief',
+				char: 'C',
+				damage: 5,
+				hit: 0.8,
+				attackDelay: 2,
+				health: 20,
+				loot: {
 					'копченина': {
 						min: 5,
- 						max: 10,
+						max: 10,
 						chance: 1
 					},
 					'шмаття': {
 						min: 5,
- 						max: 10,
+						max: 10,
 						chance: 0.8
 					},
 					'залізо': {
@@ -2623,9 +2623,9 @@ Events.Setpieces = {
 						max: 5,
 						chance: 0.8
 					}
- 				},
- 				notification: 'only the chief remains.',
- 				buttons: {
+				},
+				notification: 'only the chief remains.',
+				buttons: {
 					'continue': {
 						text: 'продовжити',
 						nextScene: { 1: 'cleared' }
@@ -2653,8 +2653,8 @@ Events.Setpieces = {
 		}
 	},
 	"ironmine": { /* Clearing the Iron Mine */
-		title: 'The Iron Mine',
- 		scenes: {
+		title: 'Залізнорудна шахта',
+		scenes: {
 			'start': {
 				text: [
 					'an old iron mine sits here, tools abandoned and left to rust.',
@@ -2674,39 +2674,39 @@ Events.Setpieces = {
 					}
 				}
 			},
- 			'enter': {
- 				combat: true,
- 				enemy: 'beastly matriarch',
- 				char: 'M',
- 				damage: 4,
- 				hit: 0.8,
- 				attackDelay: 2,
- 				health: 10,
- 				loot: {
- 					'клики': {
- 						min: 5,
- 						max: 10,
- 						chance: 1
- 					},
+			'enter': {
+				combat: true,
+				enemy: 'beastly matriarch',
+				char: 'M',
+				damage: 4,
+				hit: 0.8,
+				attackDelay: 2,
+				health: 10,
+				loot: {
+					'клики': {
+						min: 5,
+						max: 10,
+						chance: 1
+					},
 					'луска': {
 						min: 5,
- 						max: 10,
+						max: 10,
 						chance: 0.8
 					},
 					'шмаття': {
 						min: 5,
- 						max: 10,
+						max: 10,
 						chance: 0.5
 					}
- 				},
- 				notification: 'a large creature lunges, muscles rippling in the смолоскип light',
- 				buttons: {
+				},
+				notification: 'a large creature lunges, muscles rippling in the смолоскип light',
+				buttons: {
 					'leave': {
 						text: 'полишити',
 						nextScene: { 1: 'cleared' }
 					}
 				}
- 			},
+			},
 			'cleared': {
 				text: [
 					'the beast is dead.',
@@ -2725,6 +2725,6 @@ Events.Setpieces = {
 					}
 				}
 			}
- 		}
+		}
 	}
 };

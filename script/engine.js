@@ -2,30 +2,30 @@ var Engine = {
 		
 	/* TODO *** MICHAEL IS A LAZY BASTARD AND DOES NOT WANT TO REFACTOR ***
 	 * Here is what he should be doing:
-	 * 	- All updating values (store numbers, incomes, etc...) should be objects that can register listeners to
-	 * 	  value-change events. These events should be fired whenever a value (or group of values, I suppose) is updated.
-	 * 	  That would be so elegant and awesome.
+	 *	- All updating values (store numbers, incomes, etc...) should be objects that can register listeners to
+	 *	  value-change events. These events should be fired whenever a value (or group of values, I suppose) is updated.
+	 *	  That would be so elegant and awesome.
 	 */
-	SITE_URL: encodeURIComponent("http://adarkroom.doublespeakgames.com"),
+	SITE_URL: encodeURIComponent("http://vlisivka.github.io/adarkroom/"),
 	MAX_STORE: 99999999999999,
 	SAVE_DISPLAY: 30 * 1000,
 		
 	Perks: {
 		'боксер': {
-			desc: 'punches do more damage',
-			notify: 'learned to throw punches with purpose'
+			desc: 'удари дошкульніші',
+			notify: 'Навчився бити у вразливі місця.'
 		},
 		'бойовий митець': {
-			desc: 'punches do even more damage.',
-			notify: 'learned to fight quite effectively without weapons'
+			desc: 'удари ще дошкульніші.',
+			notify: 'Навчився битися дуже вміло і без будь якої зброї.'
 		},
 		'каратист': {
-			desc: 'punch twice as fast, and with even more force',
-			notify: 'learned to strike faster without weapons'
+			desc: 'удари вдвічі швидші і з більшою силою',
+			notify: 'Навчився нападати швидше без зброї.'
 		},
 		'варвар': {
-			desc: 'melee weapons deal more damage',
-			notify: 'learned to swing weapons with force'
+			desc: 'холодна зброя смертоносніша',
+			notify: 'Навчився махати мечем із силою.'
 		},
 		'витривалість': {
 			desc: 'удвічі економніший у їжі',
@@ -36,20 +36,20 @@ var Engine = {
 			notify: 'Навчився збирати свою сечу.'
 		},
 		'ухиляння': {
-			desc: 'dodge attacks more effectively',
-			notify: "learned to be where they're not"
+			desc: 'ухиляєшся від атак',
+			notify: "Навчився бути там де їх нема."
 		},
 		'точність': {
-			desc: 'land blows more often',
-			notify: 'learned to predict their movement'
+			desc: 'удари частіше влучають у ціль',
+			notify: 'Навчився передбачати чужі рухи.'
 		},
 		'розвідник': {
 			desc: 'бачиш далі',
 			notify: 'Навчився спостерігати за горизонтом.'
 		},
 		'вкрадливість': {
-			desc: 'better avoid conflict in the wild',
-			notify: 'learned how not to be seen'
+			desc: 'краще ховаєшся від очей ворогів',
+			notify: 'Навчився як маскуватися.'
 		},
 		'кухар': {
 			desc: 'відновлюєш більше здоров’я коли їси',
@@ -197,7 +197,7 @@ var Engine = {
 	
 	confirmDelete: function() {
 		Events.startEvent({
-			title: 'Restart?',
+			title: 'Перезапуск?',
 			scenes: {
 				start: {
 					text: ['Перезапустити гру?'],
@@ -226,7 +226,7 @@ var Engine = {
 	
 	share: function() {
 		Events.startEvent({
-			title: 'Share',
+			title: 'Розказати',
 			scenes: {
 				start: {
 					text: ['Привести друзів.'],
@@ -272,8 +272,8 @@ var Engine = {
 	// Gets a guid
 	getGuid: function() {
 		return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-		    var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
-		    return v.toString(16);
+			var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+			return v.toString(16);
 		});
 	},
 	

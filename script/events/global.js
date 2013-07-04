@@ -28,15 +28,15 @@ Events.Global = [
 			},
 			'hang': {
 				text: [
-			       'Селяни повісили злодія навпроти комори.',
-			       'Злодії злякалися. Через декілька днів припаси були повернуті.'
-		        ],
-		        onLoad: function() {
-		        	State.thieves = 2;
-		        	Engine.removeIncome('злодії');
-		        	Engine.addStores(State.stolen);
-		        },
-		        buttons: {
+				   'Селяни повісили злодія навпроти комори.',
+				   'Злодії злякалися. Через декілька днів припаси були повернуті.'
+				],
+				onLoad: function() {
+					State.thieves = 2;
+					Engine.removeIncome('злодії');
+					Engine.addStores(State.stolen);
+				},
+				buttons: {
 					'leave': {
 						text: 'полишити',
 						nextScene: 'end'
@@ -45,20 +45,20 @@ Events.Global = [
 			},
 			'spare': {
 				text: [
-			       "Мужчина каже що він дуже вдячний. Каже що не буде більше так робити.",
-			       "Розказав все що знав про вкрадливість."
-		        ],
-		        onLoad: function() {
-		        	State.thieves = 2;
-		        	Engine.removeIncome('злодії');
-		        	Engine.addPerk('вкрадливість');
-		        },
-		        buttons: {
-		        	'leave': {
-		        		text: 'полишити',
-		        		nextScene: 'end'
-		        	}
-		        }
+				   "Мужчина каже що він дуже вдячний. Каже що не буде більше так робити.",
+				   "Розказав все що знав про вкрадливість."
+				],
+				onLoad: function() {
+					State.thieves = 2;
+					Engine.removeIncome('злодії');
+					Engine.addPerk('вкрадливість');
+				},
+				buttons: {
+					'leave': {
+						text: 'полишити',
+						nextScene: 'end'
+					}
+				}
 			}
 		}
 	}

@@ -2,8 +2,8 @@
  * Events that can occur when the Outside module is active
  **/
 Events.Outside = [
-    { /* Ruined traps */
-    	title: 'Зруйнована пастка',
+	{ /* Ruined traps */
+		title: 'Зруйнована пастка',
 		isAvailable: function() {
 			return Engine.activeModule == Outside && Outside.numBuilding('пастки') > 0;
 		},
@@ -45,9 +45,9 @@ Events.Outside = [
 			},
 			'catch': {
 				text: [
-			       'Не так далеко від села, лежить велика тварюка. Її шерсть вкрита кров’ю.',
-			       'Вона майже не чинила опору коли її зарізали.'
-		        ],
+				   'Не так далеко від села, лежить велика тварюка. Її шерсть вкрита кров’ю.',
+				   'Вона майже не чинила опору коли її зарізали.'
+				],
 				reward: {
 					'шкури': 100,
 					'м’ясо': 100,
@@ -61,30 +61,30 @@ Events.Outside = [
 				}
 			}
 		}
-    },
-    
-    { /* Beast attack */
-    	title: 'Напад тварюк',
+	},
+	
+	{ /* Beast attack */
+		title: 'Напад тварюк',
 		isAvailable: function() {
 			return Engine.activeModule == Outside && Outside.getPopulation() > 0;
 		},
 		scenes: {
 			'start': {
 				text: [
-			       'Зграя тварюк з ричанням принеслася від лісу.',
-			       'Бидва була короткою і кривавою, але тварюк відігнали.',
-			       'Селяни відступили оплакувати померлих.'
-		        ],
-		        onLoad: function() {
+				   'Зграя тварюк з ричанням принеслася від лісу.',
+				   'Бидва була короткою і кривавою, але тварюк відігнали.',
+				   'Селяни відступили оплакувати померлих.'
+				],
+				onLoad: function() {
 					var numKilled = Math.floor(Math.random() * 10) + 1;
 					Outside.killVillagers(numKilled);
 				},
-		        reward: {
-		        	'шкури': 100,
-		        	'м’ясо': 100,
-		        	'клики': 10
-		        },
-		        buttons: {
+				reward: {
+					'шкури': 100,
+					'м’ясо': 100,
+					'клики': 10
+				},
+				buttons: {
 					'end': {
 						text: 'повернутися',
 						nextScene: 'end'
@@ -92,29 +92,29 @@ Events.Outside = [
 				}
 			}
 		}
-    },
-    
-    { /* Soldier attack */
-    	title: 'Напад військових',
+	},
+	
+	{ /* Soldier attack */
+		title: 'Напад військових',
 		isAvailable: function() {
 			return Engine.activeModule == Outside && Outside.getPopulation() > 0 && State.cityCleared;
 		},
 		scenes: {
 			'start': {
 				text: [
-			       'Постріл почувся зза дерев.',
-			       'Добре озброєні солдати біжать від лісу, стріляючи у натовп.',
-			       'Після перестрілки, вони були відбиті, але не без втрат.'
-		        ],
-		        onLoad: function() {
+				   'Постріл почувся зза дерев.',
+				   'Добре озброєні солдати біжать від лісу, стріляючи у натовп.',
+				   'Після перестрілки, вони були відбиті, але не без втрат.'
+				],
+				onLoad: function() {
 					var numKilled = Math.floor(Math.random() * 40) + 1;
 					Outside.killVillagers(numKilled);
 				},
-		        reward: {
-		        	'набої': 10,
-		        	'копченина': 50
-		        },
-		        buttons: {
+				reward: {
+					'набої': 10,
+					'копченина': 50
+				},
+				buttons: {
 					'end': {
 						text: 'повернутися',
 						nextScene: 'end'
@@ -122,5 +122,5 @@ Events.Outside = [
 				}
 			}
 		}
-    }
+	}
 ];

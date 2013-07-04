@@ -161,7 +161,7 @@ var Outside = {
 	numBuilding: function(bName) {
 		return State.outside && 
 			State.outside.buildings && 
-			State.outside.buildings[bName]  ? State.outside.buildings[bName] : 0;
+			State.outside.buildings[bName]	? State.outside.buildings[bName] : 0;
 	},
 	
 	addBuilding: function(bName, num) {
@@ -247,8 +247,8 @@ var Outside = {
 	
 	schedulePopIncrease: function() {
 		var nextIncrease = Math.floor(Math.random()*(Outside._POP_DELAY[1] - Outside._POP_DELAY[0])) + Outside._POP_DELAY[0];
-    	Engine.log('next population increase scheduled in ' + nextIncrease + ' minutes');
-    	Outside._popTimeout = setTimeout(Outside.increasePopulation, nextIncrease * 60 * 1000);
+		Engine.log('next population increase scheduled in ' + nextIncrease + ' minutes');
+		Outside._popTimeout = setTimeout(Outside.increasePopulation, nextIncrease * 60 * 1000);
 	},
 	
 	updateWorkersView: function() {
@@ -560,14 +560,14 @@ var Outside = {
 	onArrival: function() {
 		Outside.setTitle();
 		if(!State.seenForest) {
-			Notifications.notify(Outside, "Небо посірівше і вітер свище невпинно");
+			Notifications.notify(Outside, "Небо посірівше і вітер свище невпинно.");
 			State.seenForest = true;
 		}
 		Outside.updateTrapButton();
 	},
 	
 	gatherWood: function() {
-		Notifications.notify(Outside, "Сухі гілки падають на лісову підстилку")
+		Notifications.notify(Outside, "Сухі гілки падають на лісову підстилку.")
 		Engine.setStore('дерево', Engine.getStore('дерево') + (Outside.numBuilding('возик') > 0 ? 50 : 10));
 	},
 	
