@@ -8,6 +8,19 @@ var Events = {
 	_FIGHT_SPEED: 100,
 	_EAT_COOLDOWN: 5,
 	STUN_DURATION: 4000,
+
+	keysConfig: {
+		'fists': 192,
+		'bone-spear': 49,
+		'iron-sword': 50,
+		'steel-sword': 81,
+		'bayonet': 87,
+		'rifle': 65,
+		'laser-rifle': 83,
+		'grenade': 90,
+		'bolas': 88,
+		'#eat': 69
+	},
 	
 	init: function(options) {
 		this.options = $.extend(
@@ -61,6 +74,19 @@ var Events = {
 			Events.startStory(scene);
 		}
 	},
+
+	combatKeys: function(e) {
+		var weaponCode = e.keyCode
+			, btns = $('#buttons', Events.eventPanel())
+			, targetBtn = '#attack_';
+		for (item in Events.keysConfig) {
+			if (Events.keysConfig[item] == weaponCode) {
+				if (item == '#eat') targetBtn = item;
+					else targetBtn += item;
+			};
+		}
+		$(targetBtn).click();
+	},
 	
 	startCombat: function(scene) {
 		Engine.event('game event', 'combat');
@@ -69,6 +95,9 @@ var Events = {
 		
 		$('<div>').text(scene.notification).appendTo(desc);
 		
+		//Handle keys for punches/meat in combat
+		$('body').keydown(Events.combatKeys);
+
 		// Draw the wanderer
 		Events.createFighterDiv('@', World.health, World.getMaxHealth()).attr('id', 'wanderer').appendTo(desc);
 		
@@ -744,6 +773,8 @@ var Events = {
 			Events.eventStack.shift();
         	Engine.log(Events.eventStack.length + ' events remaining');
     		Engine.keyLock = false;
+    		//to handle keys only in combats
+    		$('body').off('keydown').keydown(Engine.keyDown);
     		// Force refocus on the body. I hate you, IE.
     		$('body').focus();
     	});
