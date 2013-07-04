@@ -10,9 +10,9 @@ var Events = {
 	STUN_DURATION: 4000,
 
 	keysConfig: {
-		'fists': 192,
-		'bone-spear': 49,
-		'iron-sword': 50,
+		'fists': 49,
+		'bone-spear': 50,
+		'iron-sword': 51,
 		'steel-sword': 81,
 		'bayonet': 87,
 		'rifle': 65,
@@ -81,8 +81,11 @@ var Events = {
 			targetBtn = '#attack_';
 		for (item in Events.keysConfig) {
 			if (Events.keysConfig[item] == weaponCode) {
-				if (item == '#eat') targetBtn = item;
-					else targetBtn += item;
+				if (item == '#eat') {
+					targetBtn = item;
+				} else {
+					targetBtn += item;
+				}
 			};
 		}
 		$(targetBtn).click();
