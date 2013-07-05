@@ -114,7 +114,7 @@ var Engine = {
 			element.trigger(keyPressEvent);
 			element.trigger(keyUpEvent);
 		}
-		swipeElement = $('#wrapper');
+		swipeElement = $('#outerSlider');
 		swipeElement.on('swipeleft', function(e) {
 			doKeyPress(swipeElement, 37);
 		});
