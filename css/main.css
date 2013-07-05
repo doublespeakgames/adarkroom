@@ -194,7 +194,7 @@ div.button div.cooldown {
 
 /* Up/Down buttons. They're complicated! */
 
-.upBtn, .dnBtn, .maxBtn, .zeroBtn {
+.upBtn, .dnBtn, .upManyBtn, .dnManyBtn {
 	position: absolute;
 	width: 14px;
 	height: 15px;
@@ -205,11 +205,11 @@ div.button div.cooldown {
     right: 0px;
 }
 
-.maxBtn, .zeroBtn {
+.upManyBtn, .dnManyBtn {
     right: -11px;
 }
 
-.upBtn.disabled, .dnBtn.disabled, .maxBtn.disabled, .zeroBtn.disabled {
+.upBtn.disabled, .dnBtn.disabled, .upManyBtn.disabled, .dnManyBtn.disabled {
 	cursor: default;
 }
 
@@ -217,11 +217,11 @@ div.button div.cooldown {
 	top: -2px;
 }
 
-.maxBtn {
+.upManyBtn {
     top: -2px;
 }
 
-.upBtn:after, .upBtn:before, .maxBtn:after, .maxBtn:before {
+.upBtn:after, .upBtn:before, .upManyBtn:after, .upManyBtn:before {
 	position: absolute;
 	border: medium solid transparent;
 	content: " ";
@@ -230,15 +230,15 @@ div.button div.cooldown {
 	bottom: 4px;
 }
 
-.upBtn:after, .maxBtn:after {
+.upBtn:after, .upManyBtn:after {
 	border-color: transparent transparent white;
 }
 
-.upBtn:before, .maxBtn:before {
+.upBtn:before, .upManyBtn:before {
 	border-color: transparent transparent black;
 }
 
-.upBtn.disabled:before, .maxBtn.disabled:before {
+.upBtn.disabled:before, .upManyBtn.disabled:before {
 	border-color: transparent transparent #999;
 }
 
@@ -247,11 +247,11 @@ div.button div.cooldown {
 	bottom: -3px;
 }
 
-.zeroBtn {
+.dnManyBtn {
     bottom: -3px;
 }
 
-.dnBtn:after, .dnBtn:before, .zeroBtn:after, .zeroBtn:before {
+.dnBtn:after, .dnBtn:before, .dnManyBtn:after, .dnManyBtn:before {
 	position: absolute;
 	border: medium solid transparent;
 	content: " ";
@@ -266,27 +266,27 @@ div.button div.cooldown {
 	margin-left: -3px;
 }
 
-.upBtn:before, .dnBtn:before, .maxBtn:before, .zeroBtn:before {
+.upBtn:before, .dnBtn:before, .upManyBtn:before, .dnManyBtn:before {
 	border-width: 5px;
 	left: 50%;
 	margin-left: -5px;
 }
 
-.maxBtn:after, .zeroBtn:after {
+.upManyBtn:after, .dnManyBtn:after {
 	border-width: 2px;
 	left: 50%;
 	margin-left: -2px;
 }
 
-.dnBtn:after, .zeroBtn:after {
+.dnBtn:after, .dnManyBtn:after {
 	border-color: white transparent transparent;
 }
 
-.dnBtn:before, .zeroBtn:before {
+.dnBtn:before, .dnManyBtn:before {
 	border-color: black transparent transparent;
 }
 
-.dnBtn.disabled:before, .zeroBtn.disabled:before {
+.dnBtn.disabled:before, .dnManyBtn.disabled:before {
 	border-color: #999 transparent transparent;
 }
 
