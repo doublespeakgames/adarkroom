@@ -316,7 +316,23 @@ var World = {
 				break;
 		}
 	},
-	
+
+	swipeLeft: function(e) {
+		World.moveWest();
+	},
+
+	swipeRight: function(e) {
+		World.moveEast();
+	},
+
+	swipeUp: function(e) {
+		World.moveNorth();
+	},
+
+	swipeDown: function(e) {
+		World.moveSouth();
+	},
+
 	click: function(event) {
 		var map = $('#map'),
 			// measure clicks relative to the centre of the current location
