@@ -106,27 +106,11 @@ var Engine = {
 		$('body').off('keyup').keyup(Engine.keyUp);
 
 		// Register swipe handlers
-		var doKeyPress = function(element, keyCode) {
-			var keyDownEvent = jQuery.Event('keydown', { which: keyCode } );
-			var keyPressEvent = jQuery.Event('keypress', { which: keyCode } );
-			var keyUpEvent = jQuery.Event('keyup', { which: keyCode } );
-			element.trigger(keyDownEvent);
-			element.trigger(keyPressEvent);
-			element.trigger(keyUpEvent);
-		}
 		swipeElement = $('#outerSlider');
-		swipeElement.on('swipeleft', function(e) {
-			doKeyPress(swipeElement, 37);
-		});
-		swipeElement.on('swiperight', function(e) {
-			doKeyPress(swipeElement, 39);
-		});
-		swipeElement.on('swipeup', function(e) {
-			doKeyPress(swipeElement, 38);
-		});
-		swipeElement.on('swipedown', function(e) {
-			doKeyPress(swipeElement, 40);
-		});
+		swipeElement.on('swipeleft', Engine.swipeLeft);
+		swipeElement.on('swiperight', Engine.swipeRight);
+		swipeElement.on('swipeup', Engine.swipeUp);
+		swipeElement.on('swipedown', Engine.swipeDown);
 
 		Notifications.init();
 		Events.init();
@@ -565,7 +549,32 @@ var Engine = {
 			Engine.activeModule.keyUp(e);
 		}
 		return false;
+	},
+
+	swipeLeft: function(e) {
+		if(Engine.activeModule.swipeLeft) {
+			Engine.activeModule.swipeLeft(e);
+		}
+	},
+
+	swipeRight: function(e) {
+		if(Engine.activeModule.swipeRight) {
+			Engine.activeModule.swipeRight(e);
+		}
+	},
+
+	swipeUp: function(e) {
+		if(Engine.activeModule.swipeUp) {
+			Engine.activeModule.swipeUp(e);
+		}
+	},
+
+	swipeDown: function(e) {
+		if(Engine.activeModule.swipeDown) {
+			Engine.activeModule.swipeDown(e);
+		}
 	}
+
 };
 
 $(function() {
