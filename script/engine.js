@@ -104,7 +104,30 @@ var Engine = {
 		// Register keypress handlers
 		$('body').off('keydown').keydown(Engine.keyDown);
 		$('body').off('keyup').keyup(Engine.keyUp);
-		
+
+		// Register swipe handlers
+		var doKeyPress = function(element, keyCode) {
+			var keyDownEvent = jQuery.Event('keydown', { which: keyCode } );
+			var keyPressEvent = jQuery.Event('keypress', { which: keyCode } );
+			var keyUpEvent = jQuery.Event('keyup', { which: keyCode } );
+			element.trigger(keyDownEvent);
+			element.trigger(keyPressEvent);
+			element.trigger(keyUpEvent);
+		}
+		swipeElement = $('#wrapper');
+		swipeElement.on('swipeleft', function(e) {
+			doKeyPress(swipeElement, 37);
+		});
+		swipeElement.on('swiperight', function(e) {
+			doKeyPress(swipeElement, 39);
+		});
+		swipeElement.on('swipeup', function(e) {
+			doKeyPress(swipeElement, 38);
+		});
+		swipeElement.on('swipedown', function(e) {
+			doKeyPress(swipeElement, 40);
+		});
+
 		Notifications.init();
 		Events.init();
 		Room.init();
@@ -525,7 +548,7 @@ var Engine = {
 	getIncomeMsg: function(num, delay) {
 		return (num > 0 ? "+" : "") + num + " per " + delay + "s";
 	},
-	
+
 	keyDown: function(e) {
 		if(!Engine.keyPressed && !Engine.keyLock) {
 			Engine.pressed = true;
@@ -535,7 +558,7 @@ var Engine = {
 		}
 		return false;
 	},
-	
+
 	keyUp: function(e) {
 		Engine.pressed = false;
 		if(Engine.activeModule.keyUp) {
