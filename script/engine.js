@@ -104,7 +104,14 @@ var Engine = {
 		// Register keypress handlers
 		$('body').off('keydown').keydown(Engine.keyDown);
 		$('body').off('keyup').keyup(Engine.keyUp);
-		
+
+		// Register swipe handlers
+		swipeElement = $('#outerSlider');
+		swipeElement.on('swipeleft', Engine.swipeLeft);
+		swipeElement.on('swiperight', Engine.swipeRight);
+		swipeElement.on('swipeup', Engine.swipeUp);
+		swipeElement.on('swipedown', Engine.swipeDown);
+
 		Notifications.init();
 		Events.init();
 		Room.init();
@@ -525,7 +532,7 @@ var Engine = {
 	getIncomeMsg: function(num, delay) {
 		return (num > 0 ? "+" : "") + num + " per " + delay + "s";
 	},
-	
+
 	keyDown: function(e) {
 		if(!Engine.keyPressed && !Engine.keyLock) {
 			Engine.pressed = true;
@@ -535,14 +542,39 @@ var Engine = {
 		}
 		return false;
 	},
-	
+
 	keyUp: function(e) {
 		Engine.pressed = false;
 		if(Engine.activeModule.keyUp) {
 			Engine.activeModule.keyUp(e);
 		}
 		return false;
+	},
+
+	swipeLeft: function(e) {
+		if(Engine.activeModule.swipeLeft) {
+			Engine.activeModule.swipeLeft(e);
+		}
+	},
+
+	swipeRight: function(e) {
+		if(Engine.activeModule.swipeRight) {
+			Engine.activeModule.swipeRight(e);
+		}
+	},
+
+	swipeUp: function(e) {
+		if(Engine.activeModule.swipeUp) {
+			Engine.activeModule.swipeUp(e);
+		}
+	},
+
+	swipeDown: function(e) {
+		if(Engine.activeModule.swipeDown) {
+			Engine.activeModule.swipeDown(e);
+		}
 	}
+
 };
 
 $(function() {
