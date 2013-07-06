@@ -86,7 +86,7 @@ Events.Room = [
 			'stuff': {
 				reward: { wood: 100, fur: 10 },
 				text: [
-					'a bundle of stick lies just beyond the threshold, wrapped in course furs.',
+					'a bundle of stick lies just beyond the threshold, wrapped in coarse furs.',
 					'the night is silent.'
 				],
 				buttons: {
