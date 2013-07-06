@@ -29,7 +29,7 @@ var Events = {
 	
 	options: {}, // Nothing for now
     
-    activeEvent: null,
+	activeEvent: null,
 	activeScene: null,
 	eventPanel: null,
     
@@ -103,7 +103,7 @@ var Events = {
 			Events.createAttackButton('fists').prependTo(btns);
 		}
 		
-		Events.createEatMeatButton().appendTo(btns);
+		Events.createEatMeatButton().prependTo(btns);
 		
 		// Set up the enemy attack timer
 		Events._enemyAttackTimer = setTimeout(Events.enemyAttack, scene.attackDelay * 1000);
