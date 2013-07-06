@@ -106,6 +106,10 @@ var Path = {
 				perks.appendTo(Path.panel);
 			}
 		}
+
+		if(Engine.activeModule === Path) {
+			$('#storesContainer').css({top: perks.height() + 26 + 'px'});
+		}
 	},
 	
 	updateOutfitting: function() {
@@ -289,10 +293,12 @@ var Path = {
 		}
 	},
 	
-	onArrival: function() {
+	onArrival: function(transition_diff) {
 		Path.setTitle();
 		Path.updateOutfitting();
 		Path.updatePerks();
+
+		Engine.moveStoresView($('#perks'), transition_diff);
 	},
 	
 	setTitle: function() {

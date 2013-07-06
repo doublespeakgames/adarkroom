@@ -757,6 +757,7 @@ var World = {
 			$('#outerSlider').animate({opacity: '0'}, 600, 'linear', function() {
 				$('#outerSlider').css('left', '0px');
 				$('#locationSlider').css('left', '0px');
+				$('#storesContainer').css({'top': '0px', 'right': '0px'});
 				Engine.activeModule = Room;
 				$('div.headerButton').removeClass('selected');
 				Room.tab.addClass('selected');
