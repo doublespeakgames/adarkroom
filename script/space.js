@@ -247,7 +247,7 @@ var Space = {
 			}
 		}, 1000);
 		
-		setTimeout(function() {
+		Space._panelTimeout = setTimeout(function() {
 			$('#spacePanel, .deleteSave, .share').animate({color: 'white'}, 500, 'linear');
 		}, Space.FTB_SPEED / 2);
 		
@@ -308,6 +308,7 @@ var Space = {
 		Space.done = true;
 		clearInterval(Space._timer);
 		clearInterval(Space._shipTimer);
+		clearTimeout(Space._panelTimeout);
 		
 		// Craaaaash!
 		$('body').removeClass('noMask').stop().animate({
