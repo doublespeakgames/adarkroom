@@ -2377,7 +2377,7 @@ Events.Setpieces = {
 			'start': {
 				text: [
 					"the military is already set up at the mine's entrance.",
-					'soldiers patrol the permitter, rifles slung over their shoulders.'
+					'soldiers patrol the perimeter, rifles slung over their shoulders.'
 				],
 				notification: 'a military perimeter is set up around the mine.',
 				buttons: {
