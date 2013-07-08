@@ -210,6 +210,11 @@ Events.Setpieces = {
 						min: 1,
 						max: 3,
 						chance: 0.5
+					},
+					'medicine': {
+					  min: 1,
+					  max: 2,
+					  chance: 0.1
 					}
 				},
 				buttons: {
@@ -444,6 +449,11 @@ Events.Setpieces = {
 						min: 1,
 						max: 3,
 						chance: 0.3
+					},
+					'medicine': {
+					  min: 1,
+					  max: 4,
+					  chance: 0.15
 					}
 				},
 				onLoad: function() {
@@ -470,7 +480,12 @@ Events.Setpieces = {
 		        		min: 1,
 		        		max: 3,
 		        		chance: 0.5
-		        	}
+		        	},
+    					'medicine': {
+    					  min: 1,
+    					  max: 3,
+    					  chance: 0.3
+    					}
 		        },
 				onLoad: function() {
 					World.clearDungeon();
@@ -496,7 +511,7 @@ Events.Setpieces = {
 				buttons: {
 					'enter': {	
 						text: 'explore',
-						nextScene: {0.5: 'a1', 1: 'a2'}
+						nextScene: {0.3: 'a1', 0.7: 'a3', 1: 'a2'}
 					},
 					'leave': {
 						text: 'leave',
@@ -522,6 +537,7 @@ Events.Setpieces = {
 					}
 				}
 			},
+			
 			'a2': {
 				combat: true,
 				enemy: 'thug',
@@ -559,6 +575,23 @@ Events.Setpieces = {
 					}
 				}
 			},
+			'a3': {
+				text: [
+					"a squat building up ahead.",
+					'a green cross barely visible behind grimy windows.'
+				],
+				buttons: {
+					'enter': {
+						text: 'enter',
+						nextScene: {0.5: 'b5', 1: 'c7'},
+						cost: {torch: 1}
+					},
+					'leave': {
+						text: 'leave town',
+						nextScene: 'end'
+					}
+				}
+			},
 			'b1': {
 				text: [
 			       'a small cache of supplies is tucked inside a rusting locker.'
@@ -578,7 +611,12 @@ Events.Setpieces = {
 			    		min: 1,
 			    		max: 5,
 			    		chance: 0.3
-			    	}
+			    	},
+  					'medicine': {
+  					  min: 1,
+  					  max: 3,
+  					  chance: 0.05
+  					}
 		    	},
 		    	buttons: {
 					'continue': {
@@ -610,11 +648,11 @@ Events.Setpieces = {
   						max: 10,
   						chance: 0.8
   					},
-					'cured meat': {
-						min: 1,
-						max: 5,
-						chance: 0.5
-					}
+  					'cured meat': {
+  						min: 1,
+  						max: 5,
+  						chance: 0.5
+  					}
   				},
   				notification: 'a scavenger waits just inside the door.',
 				buttons: {
@@ -680,12 +718,54 @@ Events.Setpieces = {
 						min: 1,
 						max: 5,
 						chance: 0.3
+					},
+					'medicine': {
+					  min: 1,
+					  max: 3,
+					  chance: 0.1
 					}
 				},
 				buttons: {
 					'continue': {	
 						text: 'continue',
 						nextScene: {0.5: 'c5', 1: 'c6' }
+					},
+					'leave': {
+						text: 'leave town',
+						nextScene: 'end'
+					}
+				}
+			},
+			'b2': {
+				combat: true,
+				enemy: 'madman',
+				char: 'M',
+				damage: 6,
+  				hit: 0.3,
+  				attackDelay: 1,
+  				health: 10,
+  				loot: {
+  					'cloth': {
+  						min: 2,
+  						max: 4,
+  						chance: 0.3
+  					},
+  					'cured meat': {
+  						min: 1,
+  						max: 5,
+  						chance: 0.9
+  					},
+  					'medicine': {
+  						min: 1,
+  						max: 2,
+  						chance: 0.4
+  					}
+  				},
+  				notification: 'a madman attacks, screeching.',
+				buttons: {
+					'continue': {
+						text: 'continue',
+						nextScene: {0.3: 'c7', 1: 'c8'}
 					},
 					'leave': {
 						text: 'leave town',
@@ -850,6 +930,37 @@ Events.Setpieces = {
 					}
 				}
 			},
+			'c7': {
+				text: [
+			       'you search the clinic and find some medicine abandoned in the drawers.'
+		        ],
+        loot: {
+        	'medicine': {
+        		min: 2,
+        		max: 5,
+        		chance: 1
+        	}
+        },
+        buttons: {
+					'leave': {
+						text: 'leave town',
+						nextScene: 'end'
+					}
+		    }
+			},
+			'c8': {
+				text: [
+			       'the clinic has been ransacked.',
+			       'only dust and stains remain.'
+		        ],
+        loot: {},
+        buttons: {
+					'leave': {
+						text: 'leave town',
+						nextScene: 'end'
+					}
+		    }
+			},
 			'd1': {
 				combat: true,
 				enemy: 'scavenger',
@@ -906,11 +1017,11 @@ Events.Setpieces = {
   						max: 10,
   						chance: 0.8
   					},
-					'steel sword': {
-						min: 1,
-						max: 1,
-						chance: 0.5
-					}
+  					'steel sword': {
+  						min: 1,
+  						max: 1,
+  						chance: 0.5
+  					}
   				},
   				notification: "a man stands over a dead wanderer. notices he's not alone.",
 				buttons: {
@@ -952,6 +1063,11 @@ Events.Setpieces = {
 						min: 1,
 						max: 5,
 						chance: 0.5
+					},
+					'medicine': {
+					  min: 1,
+					  max: 2,
+					  chance: 0.3
 					}
 				},
 				buttons: {
@@ -1049,6 +1165,11 @@ Events.Setpieces = {
 						min: 1,
 						max: 5,
 						chance: 0.5
+					},
+					'medicine': {
+					  min: 1,
+					  max: 2,
+					  chance: 0.1
 					}
 				},
 				buttons: {
@@ -1128,6 +1249,22 @@ Events.Setpieces = {
 						nextScene: 'end'
 					}
 				}
+			},
+			'a4': {
+				text: [
+			       'the shell of an abandoned hospital looms ahead.'
+		        ],
+        buttons: {
+          'enter' {
+            text: 'enter',
+            cost: { 'torch': 1 },
+            nextScene: {0.5: 'b7', 1: 'b8'}
+          }
+					'leave': {
+						text: 'leave city',
+						nextScene: 'end'
+					}
+        }
 			},
 			'b1': {
 				text: [
@@ -1274,16 +1411,21 @@ Events.Setpieces = {
   						max: 5,
   						chance: 0.8
   					},
-					'cloth': {
-						min: 1,
-						max: 5,
-						chance: 0.5
-					},
-					'leather': {
-						min: 1,
-						max: 1,
-						chance: 0.2
-					}
+  					'cloth': {
+  						min: 1,
+  						max: 5,
+  						chance: 0.5
+  					},
+  					'leather': {
+  						min: 1,
+  						max: 1,
+  						chance: 0.2
+  					},
+  					'medicine': {
+  					  min: 1,
+  					  max: 3,
+  					  chance: 0.05
+  					}
   				},
 		        buttons: {
 		        	'continue': {	
@@ -1311,6 +1453,59 @@ Events.Setpieces = {
 						nextScene: 'end'
 					}
 		        }
+			},
+			'b7': {
+				text: [
+			       'empty corridors.',
+			       'the place has been swept clean by scavengers.'
+		        ],
+		    buttons: {
+		      'continue': {	
+						text: 'continue',
+						nextScene: {0.3: 'c12', 0.7: 'c10', 1: 'c11'}
+					},
+					'leave': {
+						text: 'leave city',
+						nextScene: 'end'
+					}
+		    }
+			},
+			'b8': {
+				notification: 'an old man bursts through a door, wielding a scalpel.',
+				combat: true,
+				enemy: 'old man',
+  				char: 'M',
+  				damage: 3,
+  				hit: 0.5,
+  				attackDelay: 2,
+  				health: 10,
+  				loot: {
+  					'cured meat': {
+  						min: 1,
+  						max: 3,
+  						chance: 0.5
+  					},
+  					'cloth': {
+  						min: 1,
+  						max: 5,
+  						chance: 0.8
+  					},
+  					'medicine': {
+  					  min: 1,
+  					  max: 2,
+  					  chance: 0.5
+  					}
+  				},
+        buttons: {
+        	'continue': {	
+    				text: 'continue',
+    				nextScene: {0.3: 'c13', 0.7: 'c11', 1: 'end15'}
+    			},
+    			'leave': {
+    				text: 'leave city',
+    				nextScene: 'end'
+    			}
+		    }
 			},
 			'c1': {
 				notification: 'a thug is waiting on the other side of the wall.',
@@ -1501,6 +1696,11 @@ Events.Setpieces = {
 						min: 1,
 						max: 1,
 						chance: 0.01
+					},
+					'medicine': {
+					  min: 1,
+					  max: 4,
+					  chance: 0.5
 					}
 				},
 		        buttons: {
@@ -1539,6 +1739,123 @@ Events.Setpieces = {
 		        }
 			},
 			
+			'c10': {
+				text: [
+			       'someone has locked and barricaded the door to this operating theatre.'
+		        ],
+		    buttons: {
+		      'enter': {	
+						text: 'continue',
+						nextScene: {0.2: 'end12', 0.6: 'd10', 1: 'd11'}
+					},
+					'leave': {
+						text: 'leave city',
+						nextScene: 'end'
+					}
+		    }
+			},
+			
+			'c11': {
+				notification: 'a tribe of elderly squatters is camped out in this ward.',
+				combat: true,
+				enemy: 'squatters',
+				plural: true,
+				char: 'SSS',
+				damage: 2,
+				hit: 0.7,
+				attackDelay: 0.5,
+				health: 40,
+  			loot: {
+					'cured meat': {
+						min: 1,
+						max: 3,
+						chance: 0.5
+					},
+					'cloth': {
+						min: 3,
+						max: 8,
+						chance: 0.8
+					},
+					'medicine': {
+					  min: 1,
+					  max: 3,
+					  chance: 0.3
+					}
+				},
+        buttons: {
+    			'continue': {
+    				text: 'continue',
+    				nextScene: 'end10'
+    			},
+    			'leave': {
+						text: 'leave city',
+						nextScene: 'end'
+					}
+		    }
+			},
+			
+			'c12': {
+				notification: 'a pack of lizards rounds the corner.',
+				combat: true,
+				enemy: 'lizards',
+				plural: true,
+				char: 'LLL',
+				damage: 4,
+				hit: 0.7,
+				attackDelay: 0.7,
+				health: 30,
+  			loot: {
+					'meat': {
+						min: 3,
+						max: 8,
+						chance: 1
+					},
+					'teeth': {
+						min: 2,
+						max: 4,
+						chance: 1
+					},
+					'scales': {
+					  min: 3,
+					  max: 5,
+					  chance: 1
+					}
+				},
+        buttons: {
+    			'continue': {
+    				text: 'continue',
+    				nextScene: 'end10'
+    			},
+    			'leave': {
+						text: 'leave city',
+						nextScene: 'end'
+					}
+		    }
+			},
+			
+			'c13': {
+				text: [
+					'strips of meat are hung up to dry in this ward.'
+				],
+				loot: {
+					'cured meat': {
+					  min: 3,
+					  max: 10,
+					  chance: 1
+					}
+				},
+        buttons: {
+    			'continue': {
+    				text: 'continue',
+    				nextScene: { 0.5: 'end10', 1: 'end11' }
+    			},
+    			'leave': {
+						text: 'leave city',
+						nextScene: 'end'
+					}
+		    }
+			},
+						
 			'd1': {
 				notification: 'a large bird nests at the top of the stairs.',
 				combat: true,
@@ -1850,6 +2167,70 @@ Events.Setpieces = {
 					}
 				}
 			},
+			
+			'd10': {
+				notification: 'as you prise open the door, a deformed figure awakes and attacks.',
+				combat: true,
+				enemy: 'deformed',
+				char: 'D',
+				damage: 8,
+				hit: 0.6,
+				attackDelay: 2,
+				health: 40,
+				loot: {
+					'cloth': {
+						min: 1,
+						max: 5,
+						chance: 0.8
+					},
+					'teeth': {
+						min: 2,
+						max: 2,
+						chance: 1
+					},
+					'steel': {
+					  min: 1,
+					  max: 3,
+					  chance: 0.6
+					},
+					'scales': {
+					  min: 2,
+					  max: 3,
+					  chance: 0.1
+					}
+				},
+				buttons: {
+					'continue': {
+						text: 'continue',
+						nextScene: 'end14'
+					}
+				}
+			},
+			
+			'd11': {
+				notification: 'as soon as the door is open a little bit, hundreds of tentacles erupt.',
+				combat: true,
+				enemy: 'tentacles',
+				plural: true,
+				char: 'TTT',
+				damage: 2,
+				hit: 0.6,
+				attackDelay: 0.5,
+				health: 60,
+				loot: {
+					'meat': {
+						min: 10,
+						max: 20,
+						chance: 1
+					}
+				},
+				buttons: {
+					'continue': {
+						text: 'continue',
+						nextScene: 'end13'
+					}
+				}
+			},
 		
 			'end1': {
 				text: [
@@ -2020,6 +2401,11 @@ Events.Setpieces = {
 						min: 1,
 						max: 5,
 						chance: 0.8
+					},
+					'medicine': {
+					  min: 1,
+					  max: 4,
+					  chance: 0.1
 					}
 				},
 				buttons: {
@@ -2173,7 +2559,262 @@ Events.Setpieces = {
 						nextScene: 'end'
 					}
 				}
-			}
+			},
+			
+			'end10': {
+				text: [
+				   'the stench of rot and death fills the operating theatres.',
+				   "a few items are scattered on the ground.",
+				   'there is nothing else here.'
+				],
+				onLoad: function() {
+					World.clearDungeon();
+					State.cityCleared = true;
+				},
+				loot: {
+					'energy cell': {
+						min: 1,
+						max: 1,
+						chance: 0.3
+					},
+					'medicine': {
+						min: 1,
+						max: 5,
+						chance: 0.3
+					},
+					'teeth': {
+						min: 3,
+						max: 8,
+						chance: 1
+					},
+					'scales': {
+						min: 4,
+						max: 7,
+						chance: 0.9
+					}
+				},
+				buttons: {
+					'leave': {
+						text: 'leave city',
+						nextScene: 'end'
+					}
+				}
+			},
+			
+			'end11': {
+				text: [
+				   'at the end of a hallway you find a pristine medicine cabinet.',
+				   "the rest of the hospital is empty."
+				],
+				onLoad: function() {
+					World.clearDungeon();
+					State.cityCleared = true;
+				},
+				loot: {
+					'energy cell': {
+						min: 1,
+						max: 1,
+						chance: 0.2
+					},
+					'medicine': {
+						min: 3,
+						max: 10,
+						chance: 1
+					},
+					'teeth': {
+						min: 1,
+						max: 2,
+						chance: 0.2
+					}
+				},
+				buttons: {
+					'leave': {
+						text: 'leave city',
+						nextScene: 'end'
+					}
+				}
+			},
+			
+			'end12': {
+				text: [
+				   'someone had been stockpiling loot here.'
+				],
+				onLoad: function() {
+					World.clearDungeon();
+					State.cityCleared = true;
+				},
+				loot: {
+					'energy cell': {
+						min: 1,
+						max: 3,
+						chance: 0.2
+					},
+					'medicine': {
+						min: 3,
+						max: 10,
+						chance: 0.5
+					},
+					'bullets': {
+						min: 2,
+						max: 8,
+						chance: 1
+					},
+					'torch': {
+					  min: 1,
+					  max: 3,
+					  chance: 0.5
+					},
+					'grenade': {
+					  min: 1,
+					  max: 1,
+					  chance: 0.5
+					},
+					'alien alloy': {
+					  min: 1,
+					  max: 2,
+					  chance: 0.8
+					}
+				},
+				buttons: {
+					'leave': {
+						text: 'leave city',
+						nextScene: 'end'
+					}
+				}
+			},
+			
+			'end13': {
+				text: [
+				   'the tentacular horror is defeated.',
+				   'you wade into the operating theatre.',
+				   'the remains of its victims are everywhere.'
+				],
+				onLoad: function() {
+					World.clearDungeon();
+					State.cityCleared = true;
+				},
+				loot: {
+					'steel sword': {
+						min: 1,
+						max: 3,
+						chance: 0.5
+					},
+					'rifle': {
+						min: 1,
+						max: 2,
+						chance: 0.3
+					},
+					'teeth': {
+						min: 2,
+						max: 8,
+						chance: 1
+					},
+					'cloth': {
+					  min: 3,
+					  max: 6,
+					  chance: 0.5
+					},
+					'alien alloy': {
+					  min: 1,
+					  max: 1,
+					  chance: 0.1
+					}
+				},
+				buttons: {
+					'leave': {
+						text: 'leave city',
+						nextScene: 'end'
+					}
+				}
+			},
+			
+			'end14': {
+				text: [
+				   'the warped man lies dead.',
+				   'you examine the operating theatre.',
+				   'a lot of curious equipment.'
+				],
+				onLoad: function() {
+					World.clearDungeon();
+					State.cityCleared = true;
+				},
+				loot: {
+					'energy cell': {
+						min: 2,
+						max: 5,
+						chance: 0.8
+					},
+					'medicine': {
+						min: 3,
+						max: 12,
+						chance: 1
+					},
+					'cloth': {
+					  min: 1,
+					  max: 3,
+					  chance: 0.5
+					},
+					'steel': {
+					  min: 2,
+					  max: 3,
+					  chance: 0.3
+					},
+					'alien alloy': {
+					  min: 1,
+					  max: 1,
+					  chance: 0.3
+					}
+				},
+				buttons: {
+					'leave': {
+						text: 'leave city',
+						nextScene: 'end'
+					}
+				}
+			},
+			
+			'end15': {
+				text: [
+					'the old man had a small cache of interesting items.'
+				],
+				onLoad: function() {
+					World.clearDungeon();
+					State.cityCleared = true;
+				},
+				loot: {
+					'alien alloy': {
+						min: 1,
+						max: 1,
+						chance: 0.8
+					},
+					'medicine': {
+					  min: 1,
+					  max: 4,
+					  chance: 1
+					},
+					'cured meat': {
+					  min: 3,
+					  max: 7,
+					  chance: 1
+					},
+					'bolas': {
+					  min: 1,
+					  max: 3,
+					  chance: 0.5
+					},
+					'fur': {
+					  min: 1,
+					  max: 5,
+					  chance: 0.8
+					}
+				},
+				buttons: {
+    			'leave': {
+    				text: 'leave city',
+    				nextScene: 'end'
+    			}
+		    }
+			},
 		}	
 	},
 	"house": { /* Abandoned House */
@@ -2188,7 +2829,7 @@ Events.Setpieces = {
 				buttons: {
 					'enter': {
 						text: 'go inside',
-						nextScene: { 0.5: 'supplies', 1: 'occupied' }
+						nextScene: { 0.25: 'medicine', 0.5: 'supplies', 1: 'occupied' }
 					},
 					'leave': {
 						text: 'leave',
@@ -2221,6 +2862,28 @@ Events.Setpieces = {
 						min: 1,
 						max: 10,
 						chance: 0.5
+					}
+				},
+				buttons: {
+					'leave': {
+						text: 'leave',
+						nextScene: 'end'
+					}
+				}
+			},
+			'supplies': {
+				text: [
+				  'the house has been ransacked.'
+					'but there is a cache of medicine under the floorboards.',
+				],
+				onLoad: function() {
+					World.markVisited(World.curPos[0], World.curPos[1]);
+				},
+				loot: {
+					'medicine': {
+						min: 2,
+						max: 5,
+						chance: 1
 					}
 				},
 				buttons: {

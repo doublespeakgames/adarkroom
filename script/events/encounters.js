@@ -169,11 +169,16 @@ Events.Encounters = [
   						max: 10,
   						chance: 0.8
   					},
-					'iron': {
-						min: 1,
-						max: 5,
-						chance: 0.5
-					}
+  					'iron': {
+  						min: 1,
+  						max: 5,
+  						chance: 0.5
+  					},
+  					'medicine': {
+  					  min: 1,
+  					  max: 2,
+  					  chance: 0.1
+  					}
   				},
   				notification: 'a scavenger draws close, hoping for an easy score'
   			}
@@ -271,16 +276,21 @@ Events.Encounters = [
   						max: 10,
   						chance: 0.8
   					},
-					'bullets': {
-						min: 1,
-						max: 5,
-						chance: 0.5
-					},
-					'rifle': {
-						min: 1,
-						max: 1,
-						chance: 0.2
-					}
+  					'bullets': {
+  						min: 1,
+  						max: 5,
+  						chance: 0.5
+  					},
+  					'rifle': {
+  						min: 1,
+  						max: 1,
+  						chance: 0.2
+  					},
+  					'medicine': {
+  					  min: 1,
+  					  max: 2,
+  					  chance: 0.1
+  					}
   				},
   				notification: 'a soldier opens fire from across the desert'
   			}
@@ -307,16 +317,21 @@ Events.Encounters = [
   						max: 10,
   						chance: 0.8
   					},
-					'bullets': {
-						min: 1,
-						max: 5,
-						chance: 0.5
-					},
-					'rifle': {
-						min: 1,
-						max: 1,
-						chance: 0.2
-					}
+  					'bullets': {
+  						min: 1,
+  						max: 5,
+  						chance: 0.5
+  					},
+  					'rifle': {
+  						min: 1,
+  						max: 1,
+  						chance: 0.2
+  					},
+  					'medicine': {
+  					  min: 1,
+  					  max: 2,
+  					  chance: 0.1
+  					}
   				},
   				notification: 'a shot rings out, from somewhere in the long grass'
   			}

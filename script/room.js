@@ -349,6 +349,14 @@ var Room = {
 				}
 			}
 		},
+		'medicine': {
+			type: 'good',
+			cost: function() {
+				return {
+					'scales': 50, 'teeth': 30
+				}
+			}
+		},
 		'bullets': {
 			type: 'good',
 			cost: function() {

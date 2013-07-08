@@ -31,7 +31,8 @@ var World = {
 	FIGHT_CHANCE: 0.20,
 	BASE_HEALTH: 10,
 	BASE_HIT_CHANCE: 0.8,
-	MEAT_HEAL: 10,
+	MEAT_HEAL: 8,
+	MEDS_HEAL: 20,
 	FIGHT_DELAY: 3, // At least three moves between fights
 	NORTH: [ 0, -1],
 	SOUTH: [ 0,  1],
@@ -445,6 +446,10 @@ var World = {
 	
 	meatHeal: function() {
 		return World.MEAT_HEAL * (Engine.hasPerk('gastronome') ? 2 : 1);
+	},
+	
+	medsHeal: function() {
+		return World.MEDS_HEAL;
 	},
 	
 	checkFight: function() {
