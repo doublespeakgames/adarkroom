@@ -194,17 +194,17 @@ var Path = {
 				}
 				if(num == 0) {
 					$('.dnBtn', row).addClass('disabled');
-					$('.zeroBtn', row).addClass('disabled');
+					$('.dnManyBtn', row).addClass('disabled');
 				} else {
 					$('.dnBtn', row).removeClass('disabled');
-					$('.zeroBtn', row).removeClass('disabled');
+					$('.dnManyBtn', row).removeClass('disabled');
 				}
 				if(num >= numAvailable || space < Path.getWeight(k)) {
 					$('.upBtn', row).addClass('disabled');
-					$('.maxBtn', row).addClass('disabled');
+					$('.upManyBtn', row).addClass('disabled');
 				} else if(space >= Path.getWeight(k)) {
 					$('.upBtn', row).removeClass('disabled');
-					$('.maxBtn', row).removeClass('disabled');
+					$('.upManyBtn', row).removeClass('disabled');
 				}
 			} else if(have == 0 && row.length > 0) {
 				row.remove();
@@ -227,10 +227,10 @@ var Path = {
 		var val = $('<div>').addClass('row_val').appendTo(row);
 		
 		$('<span>').text(num).appendTo(val);
-		$('<div>').addClass('upBtn').appendTo(val).click(Path.increaseSupply);
-		$('<div>').addClass('dnBtn').appendTo(val).click(Path.decreaseSupply);
-		$('<div>').addClass('maxBtn').appendTo(val).click(Path.maxSupply);
-		$('<div>').addClass('zeroBtn').appendTo(val).click(Path.zeroSupply);
+		$('<div>').addClass('upBtn').appendTo(val).click([1], Path.increaseSupply);
+		$('<div>').addClass('dnBtn').appendTo(val).click([1], Path.decreaseSupply);
+		$('<div>').addClass('upManyBtn').appendTo(val).click([10], Path.increaseSupply);
+		$('<div>').addClass('dnManyBtn').appendTo(val).click([10], Path.decreaseSupply);
 		$('<div>').addClass('clear').appendTo(row);
 		
 		var numAvailable = Engine.getStore(name);
@@ -243,48 +243,27 @@ var Path = {
 		return row;
 	},
 	
-	increaseSupply: function() {
+  increaseSupply: function(btn) {
 		var supply = $(this).closest('.outfitRow').children('.row_key').text().replace('-', ' ');
-		Engine.log('increasing ' + supply);
-		var cur = Path.outfit[supply];
-		cur = typeof cur == 'number' ? cur : 0;
-		if(Path.getFreeSpace() >= Path.getWeight(supply) && cur < Engine.getStore(supply)) {
-			Path.outfit[supply] = cur + 1;
-			Path.updateOutfitting();
-		}
-	},
-	
-	decreaseSupply: function() {
-		var supply = $(this).closest('.outfitRow').children('.row_key').text().replace('-', ' ');
-		Engine.log('decreasing ' + supply);
-		var cur = Path.outfit[supply];
-		cur = typeof cur == 'number' ? cur : 0;
-		if(cur > 0) {
-			Path.outfit[supply] = cur - 1;
-			Path.updateOutfitting();
-		}
-	},
-	
-	maxSupply: function() {
-		var supply = $(this).closest('.outfitRow').children('.row_key').text().replace('-', ' ');
-		Engine.log('maxing ' + supply);
+		Engine.log('increasing ' + supply + ' by up to ' + btn.data);
 		var cur = Path.outfit[supply];
 		cur = typeof cur == 'number' ? cur : 0;
 		if(Path.getFreeSpace() >= Path.getWeight(supply) && cur < Engine.getStore(supply)) {
 		  var maxExtraByWeight = Math.floor(Path.getFreeSpace() / Path.getWeight(supply));
-		  var maxExtraByStore = Engine.getStore(supply) - cur;
-			Path.outfit[supply] = cur + Math.min(maxExtraByWeight, maxExtraByStore);
+		  var maxExtraByStore  = Engine.getStore(supply) - cur;
+		  var maxExtraByBtn    = btn.data;
+			Path.outfit[supply] = cur + Math.min(maxExtraByBtn, Math.min(maxExtraByWeight, maxExtraByStore));
 			Path.updateOutfitting();
 		}
 	},
 	
-	zeroSupply: function() {
+	decreaseSupply: function(btn) {
 		var supply = $(this).closest('.outfitRow').children('.row_key').text().replace('-', ' ');
-		Engine.log('zeroing ' + supply);
+		Engine.log('decreasing ' + supply + ' by up to ' + btn.data);
 		var cur = Path.outfit[supply];
 		cur = typeof cur == 'number' ? cur : 0;
 		if(cur > 0) {
-			Path.outfit[supply] = 0;
+			Path.outfit[supply] = Math.max(0, cur - btn.data);
 			Path.updateOutfitting();
 		}
 	},
