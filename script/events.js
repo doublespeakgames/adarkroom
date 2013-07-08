@@ -104,7 +104,9 @@ var Events = {
 			Events.createAttackButton('fists').prependTo(btns);
 		}
 		
-		Events.createUseMedsButton().prependTo(btns);
+		if((Path.outfit['medicine'] || 0) != 0) {
+		  Events.createUseMedsButton().prependTo(btns);
+	  }
 		Events.createEatMeatButton().prependTo(btns);
 		
 		// Set up the enemy attack timer
@@ -144,7 +146,7 @@ var Events = {
 			cost: { 'medicine': 1 }
 		});
 		
-		if(Path.outfit['medicine'] == 0) {
+		if((Path.outfit['medicine'] || 0) == 0) {
 			Button.setDisabled(btn, true);
 		}
 		
@@ -470,7 +472,9 @@ var Events = {
 						}).appendTo(btns);
 						
 						Events.createEatMeatButton(0).appendTo(btns);
-						Events.createUseMedsButton(0).appendTo(btns);
+						if((Path.outfit['medicine'] || 0) != 0) {
+						  Events.createUseMedsButton(0).appendTo(btns);
+					  }
 					}
 				} catch(e) {
 					// It is possible to die and win if the timing is perfect. Just let it fail.

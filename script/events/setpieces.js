@@ -736,7 +736,7 @@ Events.Setpieces = {
 					}
 				}
 			},
-			'b2': {
+			'b5': {
 				combat: true,
 				enemy: 'madman',
 				char: 'M',
@@ -1255,11 +1255,11 @@ Events.Setpieces = {
 			       'the shell of an abandoned hospital looms ahead.'
 		        ],
         buttons: {
-          'enter' {
+          'enter': {
             text: 'enter',
             cost: { 'torch': 1 },
             nextScene: {0.5: 'b7', 1: 'b8'}
-          }
+          },
 					'leave': {
 						text: 'leave city',
 						nextScene: 'end'
@@ -2871,10 +2871,10 @@ Events.Setpieces = {
 					}
 				}
 			},
-			'supplies': {
+			'medicine': {
 				text: [
-				  'the house has been ransacked.'
-					'but there is a cache of medicine under the floorboards.',
+				  'the house has been ransacked.',
+					'but there is a cache of medicine under the floorboards.'
 				],
 				onLoad: function() {
 					World.markVisited(World.curPos[0], World.curPos[1]);
