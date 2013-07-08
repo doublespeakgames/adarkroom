@@ -296,10 +296,10 @@ var Outside = {
 			numGatherers -= State.outside.workers[k];
 			if(State.outside.workers[k] == 0) {
 				$('.dnBtn', row).addClass('disabled');
-				$('.zeroBtn', row).addClass('disabled');
+				$('.dnManyBtn', row).addClass('disabled');
 			} else {
 				$('.dnBtn', row).removeClass('disabled');
-				$('.zeroBtn', row).removeClass('disabled');
+				$('.dnManyBtn', row).removeClass('disabled');
 			}
 		}
 		
@@ -312,10 +312,10 @@ var Outside = {
 		
 		if(numGatherers == 0) {
 			$('.upBtn', '#workers').addClass('disabled');
-			$('.maxBtn', '#workers').addClass('disabled');
+			$('.upManyBtn', '#workers').addClass('disabled');
 		} else {
 			$('.upBtn', '#workers').removeClass('disabled');
-			$('.maxBtn', '#workers').removeClass('disabled');
+			$('.upManyBtn', '#workers').removeClass('disabled');
 		}
 		
 		
@@ -342,10 +342,10 @@ var Outside = {
 		$('<span>').text(num).appendTo(val);
 		
 		if(name != 'gatherer') {
-		  $('<div>').addClass('maxBtn').appendTo(val).click(Outside.maxWorker);
-			$('<div>').addClass('upBtn').appendTo(val).click(Outside.increaseWorker);
-			$('<div>').addClass('dnBtn').appendTo(val).click(Outside.decreaseWorker);
-			$('<div>').addClass('zeroBtn').appendTo(val).click(Outside.zeroWorker);
+		  $('<div>').addClass('upManyBtn').appendTo(val).click([10], Outside.increaseWorker);
+			$('<div>').addClass('upBtn').appendTo(val).click([1], Outside.increaseWorker);
+			$('<div>').addClass('dnBtn').appendTo(val).click([1], Outside.decreaseWorker);
+			$('<div>').addClass('dnManyBtn').appendTo(val).click([10], Outside.decreaseWorker);
 		}
 		
 		$('<div>').addClass('clear').appendTo(row);
@@ -365,8 +365,9 @@ var Outside = {
 	increaseWorker: function(btn) {
 		var worker = $(this).closest('.workerRow').children('.row_key').text();
 		if(Outside.getNumGatherers() > 0) {
-			Engine.log('increasing ' + worker);
-			State.outside.workers[worker]++;
+		  var increaseAmt = Math.min(Outside.getNumGatherers(), btn.data);
+			Engine.log('increasing ' + worker + ' by ' + increaseAmt);
+			State.outside.workers[worker] += increaseAmt;
 			Outside.updateVillageIncome();
 			Outside.updateWorkersView();
 		}
@@ -375,28 +376,9 @@ var Outside = {
 	decreaseWorker: function(btn) {
 		var worker = $(this).closest('.workerRow').children('.row_key').text();
 		if(State.outside.workers[worker] > 0) {
-			Engine.log('decreasing ' + worker);
-			State.outside.workers[worker]--;
-			Outside.updateVillageIncome();
-			Outside.updateWorkersView();
-		}
-	},
-	
-	maxWorker: function(btn) {
-		var worker = $(this).closest('.workerRow').children('.row_key').text();
-		if(Outside.getNumGatherers() > 0) {
-			Engine.log('maxing ' + worker);
-			State.outside.workers[worker] += Outside.getNumGatherers();
-			Outside.updateVillageIncome();
-			Outside.updateWorkersView();
-		}
-	},
-	
-	zeroWorker: function(btn) {
-		var worker = $(this).closest('.workerRow').children('.row_key').text();
-		if(State.outside.workers[worker] > 0) {
-			Engine.log('zeroing ' + worker);
-			State.outside.workers[worker] = 0;
+		  var decreaseAmt = Math.min(State.outside.workers[worker] || 0, btn.data);
+			Engine.log('decreasing ' + worker + ' by ' + decreaseAmt);
+			State.outside.workers[worker] -= decreaseAmt;
 			Outside.updateVillageIncome();
 			Outside.updateWorkersView();
 		}
