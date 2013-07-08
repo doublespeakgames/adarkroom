@@ -304,6 +304,15 @@ var Engine = {
 			}
 
 			module.onArrival(diff);
+			
+			if(Engine.activeModule == Room) {
+				$('div#weapons').animate({opacity: 0}, 300);
+			}
+
+			if(module == Room) {
+				$('div#weapons').animate({opacity: 1}, 300);
+			}
+
 			Engine.activeModule = module;
 			
 			Notifications.printQueue(module);
