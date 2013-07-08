@@ -289,15 +289,35 @@ var Engine = {
 	travelTo: function(module) {
 		if(Engine.activeModule != module) {
 			var currentIndex = Engine.activeModule ? $('.location').index(Engine.activeModule.panel) : 1;
-			Engine.activeModule = module;
 			$('div.headerButton').removeClass('selected');
 			module.tab.addClass('selected');
-			
+
 			var slider = $('#locationSlider');
+			var stores = $('#storesContainer');
 			var panelIndex = $('.location').index(module.panel);
 			var diff = Math.abs(panelIndex - currentIndex);
 			slider.animate({left: -(panelIndex * 700) + 'px'}, 300 * diff);
-			module.onArrival();
+
+			if(Engine.storeAvailable('wood')) {
+			// FIXME Why does this work if there's an animation queue...?
+				stores.animate({right: -(panelIndex * 700) + 'px'}, 300 * diff);
+			}
+
+			module.onArrival(diff);
+
+			if(Engine.activeModule == Room || Engine.activeModule == Path) {
+				// Don't fade out the weapons if we're switching to a module
+				// where we're going to keep showing them anyway.
+				if (module != Room && module != Path) {
+					$('div#weapons').animate({opacity: 0}, 300);
+				}
+			}
+
+			if(module == Room || module == Path) {
+				$('div#weapons').animate({opacity: 1}, 300);
+			}
+
+			Engine.activeModule = module;
 			
 			Notifications.printQueue(module);
 		}
@@ -499,6 +519,29 @@ var Engine = {
 			}
 		});
 		Room.updateIncomeView();
+	},
+
+	// Move the stores panel beneath top_container (or to top: 0px if top_container
+	// either hasn't been filled in or is null) using transition_diff to sync with
+	// the animation in Engine.travelTo().
+	moveStoresView: function(top_container, transition_diff) {
+		var stores = $('#storesContainer');
+
+		// If we don't have a storesContainer yet, leave.
+		if(typeof(stores) === 'undefined') return;
+
+		if(typeof(transition_diff) === 'undefined') transition_diff = 1;
+
+		if(top_container === null) {
+			stores.animate({top: '0px'}, {queue: false, duration: 300 * transition_diff});
+		}
+		else if(!top_container.length) {
+			stores.animate({top: '0px'}, {queue: false, duration: 300 * transition_diff});
+		}
+		else {
+			stores.animate({top: top_container.height() + 26 + 'px'},
+						   {queue: false, duration: 300 * transition_diff});
+		}
 	},
 	
 	num: function(name, craftable) {

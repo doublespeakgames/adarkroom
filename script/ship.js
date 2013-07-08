@@ -81,13 +81,15 @@ var Ship = {
 	
 	options: {}, // Nothing for now
 	
-	onArrival: function() {
+	onArrival: function(transition_diff) {
 		Ship.setTitle();
 		if(!State.seenShip) {
 			Notifications.notify(Ship, 'somewhere above the debris cloud, the wanderer fleet hovers. been on this rock too long.');
 			State.seenShip = true;
 			Engine.saveGame();
 		}
+
+		Engine.moveStoresView(null, transition_diff);
 	},
 	
 	setTitle: function() {
