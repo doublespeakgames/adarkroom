@@ -304,12 +304,16 @@ var Engine = {
 			}
 
 			module.onArrival(diff);
-			
-			if(Engine.activeModule == Room) {
-				$('div#weapons').animate({opacity: 0}, 300);
+
+			if(Engine.activeModule == Room || Engine.activeModule == Path) {
+				// Don't fade out the weapons if we're switching to a module
+				// where we're going to keep showing them anyway.
+				if (module != Room && module != Path) {
+					$('div#weapons').animate({opacity: 0}, 300);
+				}
 			}
 
-			if(module == Room) {
+			if(module == Room || module == Path) {
 				$('div#weapons').animate({opacity: 1}, 300);
 			}
 
