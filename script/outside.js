@@ -461,6 +461,10 @@ var Outside = {
 		}
 		
 		this.setTitle();
+
+		if(Engine.activeModule === Outside && village.children().length > 1) {
+			$('#storesContainer').css({top: village.height() + 26 + 'px'});
+		}
 	},
 	
 	checkWorker: function(name) {
@@ -565,13 +569,16 @@ var Outside = {
 		$('#location_outside').text(title);
 	},
 	
-	onArrival: function() {
+	onArrival: function(transition_diff) {
 		Outside.setTitle();
 		if(!State.seenForest) {
 			Notifications.notify(Outside, "the sky is grey and the wind blows relentlessly");
 			State.seenForest = true;
 		}
 		Outside.updateTrapButton();
+		Outside.updateVillage();
+
+		Engine.moveStoresView($('#village'), transition_diff);
 	},
 	
 	gatherWood: function() {

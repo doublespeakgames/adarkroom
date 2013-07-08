@@ -502,7 +502,7 @@ var Room = {
 	
 	options: {}, // Nothing for now
 	
-	onArrival: function() {
+	onArrival: function(transition_diff) {
 		Room.setTitle();
 		if(Room.changed) {
 			Notifications.notify(Room, "the fire is " + State.room.fire.text);
@@ -518,6 +518,8 @@ var Room = {
 			Room.updateIncomeView();
 			Notifications.notify(Room, "the stranger is standing by the fire. she says she can help. says she builds things.")
 		}
+
+		Engine.moveStoresView(null, transition_diff);
 	},
 	
 	TempEnum: {
@@ -792,6 +794,10 @@ var Room = {
 		
 		if(newRow) {
 			Room.updateIncomeView();
+		}
+
+		if($("div#outsidePanel").length) {
+			Outside.updateVillage();
 		}
 	},
 	
