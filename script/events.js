@@ -7,6 +7,7 @@ var Events = {
 	_PANEL_FADE: 200,
 	_FIGHT_SPEED: 100,
 	_EAT_COOLDOWN: 5,
+	_MEDS_COOLDOWN: 7,
 	STUN_DURATION: 4000,
 	
 	init: function(options) {
@@ -103,7 +104,10 @@ var Events = {
 			Events.createAttackButton('fists').prependTo(btns);
 		}
 		
-		Events.createEatMeatButton().prependTo(btns);
+		Events.createEatMeatButton().appendTo(btns);
+		if((Path.outfit['medicine'] || 0) != 0) {
+		  Events.createUseMedsButton().appendTo(btns);
+	  }
 		
 		// Set up the enemy attack timer
 		Events._enemyAttackTimer = setTimeout(Events.enemyAttack, scene.attackDelay * 1000);
@@ -123,6 +127,26 @@ var Events = {
 		});
 		
 		if(Path.outfit['cured meat'] == 0) {
+			Button.setDisabled(btn, true);
+		}
+		
+		return btn;
+	},
+	
+	createUseMedsButton: function(cooldown) {
+		if (cooldown == null) {
+			cooldown = Events._MEDS_COOLDOWN;
+		}
+		
+		var btn = new Button.Button({
+			id: 'meds',
+			text: 'use meds',
+			cooldown: cooldown,
+			click: Events.useMeds,
+			cost: { 'medicine': 1 }
+		});
+		
+		if((Path.outfit['medicine'] || 0) == 0) {
 			Button.setDisabled(btn, true);
 		}
 		
@@ -188,6 +212,28 @@ var Events = {
 				w.data('hp', hp);
 				Events.updateFighterDiv(w);
 				Events.drawFloatText('+' + World.meatHeal(), '#wanderer .hp');
+			}
+		}
+	},
+	
+	useMeds: function() {
+		if(Path.outfit['medicine'] > 0) {
+			Path.outfit['medicine']--;
+			World.updateSupplies();
+			if(Path.outfit['medicine'] == 0) {
+				Button.setDisabled($('#meds'), true);
+			}
+			
+			var hp = World.health;
+			hp += World.medsHeal();
+			hp = hp > World.getMaxHealth() ? World.getMaxHealth() : hp;
+			World.setHp(hp);
+			
+			if(Events.activeEvent()) {
+				var w = $('#wanderer');
+				w.data('hp', hp);
+				Events.updateFighterDiv(w);
+				Events.drawFloatText('+' + World.medsHeal(), '#wanderer .hp');
 			}
 		}
 	},
@@ -426,6 +472,9 @@ var Events = {
 						}).appendTo(btns);
 						
 						Events.createEatMeatButton(0).appendTo(btns);
+						if((Path.outfit['medicine'] || 0) != 0) {
+						  Events.createUseMedsButton(0).appendTo(btns);
+					  }
 					}
 				} catch(e) {
 					// It is possible to die and win if the timing is perfect. Just let it fail.

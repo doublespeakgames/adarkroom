@@ -438,6 +438,7 @@ body.noMask #description {
 
 #buttons > .button {
     margin: 0 5px 5px;
+    margin-right: 15px;
 }
 
 /* Combat! */
