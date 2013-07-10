@@ -370,9 +370,10 @@ var Space = {
 					$('#locationSlider, #worldPanel, #spacePanel, #notifications').remove();
 					$('#header').empty();
 					setTimeout(function() {
-						$('body').removeClass('noMask').stop().animate({
+						$('body').stop();
+						$('#starsContainer').animate({
 							opacity: 0,
-							'background-color': '#FFF'
+							'background-color': '#000'
 						}, {
 							duration: 2000, 
 							progress: function() {
@@ -382,18 +383,12 @@ var Space = {
 								$('#notifyGradient').attr('style', 'background-color:'+cur+';background:-webkit-' + s + ';background:' + s);
 							},
 							complete: function() {
-								$('#starsContainer, .deleteSave, .share').remove();
+								$('#starsContainer').remove();
 								if(typeof Storage != 'undefined' && localStorage) {
 									localStorage.clear();
 								}
 								delete window.State;
 								Engine.options = {};
-								setTimeout(function() {
-									Engine.init();
-									$('body').animate({
-										opacity: 1
-									}, 500, 'linear');
-								}, 2000);
 							}
 						});
 					}, 2000);
