@@ -1,6 +1,7 @@
 var World = {
 	
 	RADIUS: 30,
+	VILLAGE_POS: [30, 30],
 	TILE: {
 		VILLAGE: 'A',
 		IRON_MINE: 'I',
@@ -155,27 +156,68 @@ var World = {
 	},
 	
 	drawRoad: function() {
-		var xDist = World.curPos[0] - World.RADIUS;
-		var yDist = World.curPos[1] - World.RADIUS;
+		var findClosestRoad = function(startPos) {
+			// We'll search in a spiral to find the closest road tile
+			// We spiral out along manhattan distance contour
+			// lines to ensure we draw the shortest road possible.
+			// No attempt is made to reduce the search space for
+			// tiles outside the map.
+			var searchX, searchY, dtmp,
+				x = 0,
+				y = 0,
+				dx = 1,
+				dy = -1;
+			for (var i = 0; i < Math.pow(World.getDistance(startPos, World.VILLAGE_POS) + 2, 2); i++) {
+				searchX = startPos[0] + x;
+				searchY = startPos[1] + y;
+				if (0 < searchX && searchX < World.RADIUS * 2 && 0 < searchY && searchY < World.RADIUS * 2) {
+					// check for road
+					var tile = World.state.map[searchX][searchY];
+					if (
+					 	tile === World.TILE.ROAD ||
+						(tile === World.TILE.OUTPOST && !(x === 0 && y === 0))  || // outposts are connected to roads
+						tile === World.TILE.VILLAGE // all roads lead home
+					 ) {
+						return [searchX, searchY];
+					}
+				}
+				if (x === 0 || y === 0) {
+					// Turn the corner
+					dtmp = dx;
+					dx = -dy;
+					dy =  dtmp;
+				}
+				if (x === 0 && y <= 0) {
+					x++;
+				} else {
+					x += dx;
+					y += dy;
+				}
+			}
+			return World.VILLAGE_POS;
+		};
+		var closestRoad = findClosestRoad(World.curPos);
+		var xDist = World.curPos[0] - closestRoad[0];
+		var yDist = World.curPos[1] - closestRoad[1];
 		var xDir = Math.abs(xDist)/xDist;
 		var yDir = Math.abs(yDist)/yDist;
 		var xIntersect, yIntersect;
 		if(Math.abs(xDist) > Math.abs(yDist)) {
-			xIntersect = World.RADIUS;
-			yIntersect = World.RADIUS + yDist;
+			xIntersect = closestRoad[0];
+			yIntersect = closestRoad[1] + yDist;
 		} else {
-			xIntersect = World.RADIUS + xDist;
-			yIntersect = World.RADIUS;
+			xIntersect = closestRoad[0] + xDist;
+			yIntersect = closestRoad[1];
 		}
 		
 		for(var x = 0; x < Math.abs(xDist); x++) {
-			if(World.isTerrain(World.state.map[World.RADIUS + (xDir*x)][yIntersect])) {
-				World.state.map[World.RADIUS + (xDir*x)][yIntersect] = World.TILE.ROAD;
+			if(World.isTerrain(World.state.map[closestRoad[0] + (xDir*x)][yIntersect])) {
+				World.state.map[closestRoad[0] + (xDir*x)][yIntersect] = World.TILE.ROAD;
 			}
 		}
 		for(var y = 0; y < Math.abs(yDist); y++) {
-			if(World.isTerrain(World.state.map[xIntersect][World.RADIUS + (yDir*y)])) {
-				World.state.map[xIntersect][World.RADIUS + (yDir*y)] = World.TILE.ROAD;
+			if(World.isTerrain(World.state.map[xIntersect][closestRoad[1] + (yDir*y)])) {
+				World.state.map[xIntersect][closestRoad[1] + (yDir*y)] = World.TILE.ROAD;
 			}
 		}
 		World.drawMap();
@@ -476,8 +518,10 @@ var World = {
 		}
 	},
 	
-	getDistance: function() {
-		return Math.abs(World.curPos[0] - World.RADIUS) + Math.abs(World.curPos[1] - World.RADIUS);
+	getDistance: function(from, to) {
+		from = from || World.curPos;
+		to = to || World.VILLAGE_POS;
+		return Math.abs(from[0] - to[0]) + Math.abs(from[1] - to[1]);
 	},
 	
 	getTerrain: function() {
@@ -871,7 +915,7 @@ var World = {
 		World.starvation = false;
 		World.thirst = false;
 		World.usedOutposts = {};
-		World.curPos = [World.RADIUS, World.RADIUS];
+		World.curPos = World.copyPos(World.VILLAGE_POS);
 		World.drawMap();
 		World.setTitle();
 		World.dead = false;
@@ -882,5 +926,9 @@ var World = {
 	
 	setTitle: function() {
 		document.title = 'A Barren World';
+	},
+	
+	copyPos: function(pos) {
+		return [pos[0], pos[1]];
 	}
 };
