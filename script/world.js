@@ -419,8 +419,10 @@ var World = {
 		}
 	},
 	
-	getDistance: function() {
-		return Math.abs(World.curPos[0] - World.RADIUS) + Math.abs(World.curPos[1] - World.RADIUS);
+	getDistance: function(from, to) {
+		from = from || World.curPos;
+		to = to || World.VILLAGE_POS;
+		return Math.abs(from[0] - to[0]) + Math.abs(from[1] - to[1]);
 	},
 	
 	getTerrain: function() {
