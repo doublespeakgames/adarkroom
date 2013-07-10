@@ -1,6 +1,7 @@
 var World = {
 	
 	RADIUS: 30,
+	VILLAGE_POS: [30, 30],
 	TILE: {
 		VILLAGE: 'A',
 		IRON_MINE: 'I',
@@ -810,7 +811,7 @@ var World = {
 		World.starvation = false;
 		World.thirst = false;
 		World.usedOutposts = {};
-		World.curPos = [World.RADIUS, World.RADIUS];
+		World.curPos = World.copyPos(World.VILLAGE_POS);
 		World.drawMap();
 		World.setTitle();
 		World.dead = false;
