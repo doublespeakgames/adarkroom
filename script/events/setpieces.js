@@ -583,7 +583,7 @@ Events.Setpieces = {
 				buttons: {
 					'enter': {
 						text: 'enter',
-						nextScene: {0.5: 'b5', 1: 'c7'},
+						nextScene: {0.5: 'b5', 1: 'end5'},
 						cost: {torch: 1}
 					},
 					'leave': {
@@ -765,7 +765,7 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: 'continue',
-						nextScene: {0.3: 'c7', 1: 'c8'}
+						nextScene: {0.3: 'end5', 1: 'end6'}
 					},
 					'leave': {
 						text: 'leave town',
@@ -929,37 +929,6 @@ Events.Setpieces = {
 						nextScene: 'end'
 					}
 				}
-			},
-			'c7': {
-				text: [
-			       'you search the clinic and find some medicine abandoned in the drawers.'
-		        ],
-        loot: {
-        	'medicine': {
-        		min: 2,
-        		max: 5,
-        		chance: 1
-        	}
-        },
-        buttons: {
-					'leave': {
-						text: 'leave town',
-						nextScene: 'end'
-					}
-		    }
-			},
-			'c8': {
-				text: [
-			       'the clinic has been ransacked.',
-			       'only dust and stains remain.'
-		        ],
-        loot: {},
-        buttons: {
-					'leave': {
-						text: 'leave town',
-						nextScene: 'end'
-					}
-		    }
 			},
 			'd1': {
 				combat: true,
@@ -1178,6 +1147,42 @@ Events.Setpieces = {
 						nextScene: 'end'
 					}
 				}
+			},
+			'end5': {
+				text: [
+			       'you search the clinic and find some medicine abandoned in the drawers.'
+		        ],
+		    onLoad: function() {
+					World.clearDungeon();
+				},
+        loot: {
+        	'medicine': {
+        		min: 2,
+        		max: 5,
+        		chance: 1
+        	}
+        },
+        buttons: {
+					'leave': {
+						text: 'leave town',
+						nextScene: 'end'
+					}
+		    }
+			},
+			'end6': {
+				text: [
+			       'the clinic has been ransacked.',
+			       'only dust and stains remain.'
+		        ],
+		    onLoad: function() {
+					World.clearDungeon();
+				},
+        buttons: {
+					'leave': {
+						text: 'leave town',
+						nextScene: 'end'
+					}
+		    }
 			}
 		}
 	},
@@ -2202,7 +2207,7 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: 'continue',
-						nextScene: 'end14'
+						nextScene: {1: 'end14'}
 					}
 				}
 			},
@@ -2227,7 +2232,7 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: 'continue',
-						nextScene: 'end13'
+						nextScene: {1: 'end13'}
 					}
 				}
 			},

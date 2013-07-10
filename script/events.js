@@ -104,10 +104,10 @@ var Events = {
 			Events.createAttackButton('fists').prependTo(btns);
 		}
 		
+		Events.createEatMeatButton().appendTo(btns);
 		if((Path.outfit['medicine'] || 0) != 0) {
-		  Events.createUseMedsButton().prependTo(btns);
+		  Events.createUseMedsButton().appendTo(btns);
 	  }
-		Events.createEatMeatButton().prependTo(btns);
 		
 		// Set up the enemy attack timer
 		Events._enemyAttackTimer = setTimeout(Events.enemyAttack, scene.attackDelay * 1000);

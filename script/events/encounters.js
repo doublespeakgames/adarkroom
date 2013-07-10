@@ -109,6 +109,46 @@ Events.Encounters = [
 		}
   	},
 	/* Tier 2*/
+	{ /* Shivering Man */
+     	title: 'A Shivering Man',
+  		isAvailable: function() {
+  			return World.getDistance() > 10 && World.getDistance() <= 20 && World.getTerrain() == World.TILE.BARRENS;
+  		},
+  		scenes: {
+  			'start': {
+  				combat: true,
+  				enemy: 'shivering man',
+  				char: 'S',
+  				damage: 5,
+  				hit: 0.5,
+  				attackDelay: 1,
+  				health: 20,
+  				loot: {
+  					'cloth': {
+  						min: 1,
+  						max: 1,
+  						chance: 0.2
+  					},
+  					'teeth': {
+  						min: 1,
+  						max: 2,
+  						chance: 0.8
+  					},
+  					'leather': {
+  						min: 1,
+  						max: 1,
+  						chance: 0.2
+  					},
+  					'medicine': {
+  					  min: 1,
+  					  max: 3,
+  					  chance: 0.7
+  					}
+  				},
+  				notification: 'a shivering man approaches and attacks with surprising strength'
+  			}
+		}
+  },
 	{ /* Man-eater */
 		title: 'A Man-Eater',
  		isAvailable: function() {

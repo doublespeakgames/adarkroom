@@ -815,7 +815,7 @@ var World = {
 	},
 	
 	leaveItAtHome: function(thing) {
-		 return thing != 'cured meat' && thing != 'bullets' && thing != 'energy cell'  && thing != 'charm'
+		 return thing != 'cured meat' && thing != 'bullets' && thing != 'energy cell'  && thing != 'charm' && thing != 'medicine'
 			 && typeof World.Weapons[thing] == 'undefined' && typeof Room.Craftables[thing] == 'undefined';
 	},
 	
