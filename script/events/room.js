@@ -215,7 +215,7 @@ Events.Room = [
 			scales: {
 				reward: { scales: 20 },
 				text: [
-			       'the beggar thanks you.',
+			       'the beggar expresses his thanks.',
 			       'leaves a pile of small scales behind.'
 			    ],
 			    buttons: {
@@ -228,7 +228,7 @@ Events.Room = [
 			teeth: {
 				reward: { teeth: 20 },
 				text: [
-			       'the beggar thanks you.',
+			       'the beggar expresses his thanks.',
 			       'leaves a pile of small teeth behind.'
 			    ],
 			    buttons: {
@@ -241,7 +241,7 @@ Events.Room = [
 			cloth: {
 				reward: { cloth: 20 },
 				text: [
-			       'the beggar thanks you.',
+			       'the beggar expresses his thanks.',
 			       'leaves some scraps of cloth behind.'
 			    ],
 			    buttons: {
@@ -513,7 +513,7 @@ Events.Room = [
   			'start': {
   				text: [
   					"a man hobbles up, coughing.",
-  					"he begs you for medicine."
+  					"he begs for medicine."
   				],
   				notification: 'a sick man hobbles up',
   				buttons: {
@@ -531,7 +531,8 @@ Events.Room = [
   			},
   			'alloy': {
   				text: [
-  					"the man thanks you and gives you a reward.",
+  					"the man is thankful.",
+  					'he leaves a reward.',
   					'some weird metal he picked up on his travels.'
   				],
   				onLoad: function() {
@@ -546,7 +547,8 @@ Events.Room = [
   			},
   			'cells': {
   				text: [
-  					"the man thanks you and gives you a reward.",
+  					"the man is thankful.",
+  					'he leaves a reward.',
   					'some weird glowing boxes he picked up on his travels.'
   				],
   				onLoad: function() {
@@ -561,7 +563,8 @@ Events.Room = [
   			},
   			'scales': {
   				text: [
-  					"the man thanks you and gives you a reward.",
+  					"the man is thankful.",
+  					'he leaves a reward.',
   					'all he has are some scales.'
   				],
   				onLoad: function() {
@@ -576,7 +579,7 @@ Events.Room = [
   			},
   			'nothing': {
   				text: [
-  					"the man thanks you and hobbles off."
+  					"the man expresses his thanks and hobbles off."
   				],
   				buttons: {
   					'bye': {

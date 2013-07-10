@@ -1150,7 +1150,7 @@ Events.Setpieces = {
 			},
 			'end5': {
 				text: [
-			       'you search the clinic and find some medicine abandoned in the drawers.'
+			       'some medicine abandoned in the drawers.'
 		        ],
 		    onLoad: function() {
 					World.clearDungeon();
@@ -2174,7 +2174,7 @@ Events.Setpieces = {
 			},
 			
 			'd10': {
-				notification: 'as you prise open the door, a deformed figure awakes and attacks.',
+				notification: 'behind the door, a deformed figure awakes and attacks.',
 				combat: true,
 				enemy: 'deformed',
 				char: 'D',
@@ -2608,7 +2608,7 @@ Events.Setpieces = {
 			
 			'end11': {
 				text: [
-				   'at the end of a hallway you find a pristine medicine cabinet.',
+				   'a pristine medicine cabinet at the end of a hallway.',
 				   "the rest of the hospital is empty."
 				],
 				onLoad: function() {
@@ -2691,8 +2691,7 @@ Events.Setpieces = {
 			'end13': {
 				text: [
 				   'the tentacular horror is defeated.',
-				   'you wade into the operating theatre.',
-				   'the remains of its victims are everywhere.'
+				   'inside, the remains of its victims are everywhere.'
 				],
 				onLoad: function() {
 					World.clearDungeon();
@@ -2736,8 +2735,7 @@ Events.Setpieces = {
 			'end14': {
 				text: [
 				   'the warped man lies dead.',
-				   'you examine the operating theatre.',
-				   'a lot of curious equipment.'
+				   'the operating theatre has a lot of curious equipment.'
 				],
 				onLoad: function() {
 					World.clearDungeon();
