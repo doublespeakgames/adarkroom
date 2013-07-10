@@ -215,7 +215,7 @@ Events.Room = [
 			scales: {
 				reward: { scales: 20 },
 				text: [
-			       'the beggar thanks you.',
+			       'the beggar expresses his thanks.',
 			       'leaves a pile of small scales behind.'
 			    ],
 			    buttons: {
@@ -228,7 +228,7 @@ Events.Room = [
 			teeth: {
 				reward: { teeth: 20 },
 				text: [
-			       'the beggar thanks you.',
+			       'the beggar expresses his thanks.',
 			       'leaves a pile of small teeth behind.'
 			    ],
 			    buttons: {
@@ -241,7 +241,7 @@ Events.Room = [
 			cloth: {
 				reward: { cloth: 20 },
 				text: [
-			       'the beggar thanks you.',
+			       'the beggar expresses his thanks.',
 			       'leaves some scraps of cloth behind.'
 			    ],
 			    buttons: {
@@ -502,5 +502,92 @@ Events.Room = [
 		        }
 			}
 		}
+	},
+		
+	{ /* The Sick Man */
+  		title: 'The Sick Man',
+  		isAvailable: function() {
+  			return Engine.activeModule == Room && typeof State.world == 'object';
+  		},
+  		scenes: {
+  			'start': {
+  				text: [
+  					"a man hobbles up, coughing.",
+  					"he begs for medicine."
+  				],
+  				notification: 'a sick man hobbles up',
+  				buttons: {
+  					'help': {
+  						text: 'give 1 medicine',
+  						cost: { 'medicine': 1 },
+  						notification: 'the man swallows the medicine eagerly',
+  						nextScene: { 0.1: 'alloy', 0.3: 'cells', 0.5: 'scales', 1.0: 'nothing' }
+  					},
+  					'ignore': {
+  						text: 'tell him to leave',
+  						nextScene: 'end'
+  					}
+  				}
+  			},
+  			'alloy': {
+  				text: [
+  					"the man is thankful.",
+  					'he leaves a reward.',
+  					'some weird metal he picked up on his travels.'
+  				],
+  				onLoad: function() {
+			    	Engine.addStore('alien alloy', 1);
+			    },
+  				buttons: {
+  					'bye': {
+  						text: 'say goodbye',
+  						nextScene: 'end'
+  					}
+  				}
+  			},
+  			'cells': {
+  				text: [
+  					"the man is thankful.",
+  					'he leaves a reward.',
+  					'some weird glowing boxes he picked up on his travels.'
+  				],
+  				onLoad: function() {
+			    	Engine.addStore('energy cell', 3);
+			    },
+  				buttons: {
+  					'bye': {
+  						text: 'say goodbye',
+  						nextScene: 'end'
+  					}
+  				}
+  			},
+  			'scales': {
+  				text: [
+  					"the man is thankful.",
+  					'he leaves a reward.',
+  					'all he has are some scales.'
+  				],
+  				onLoad: function() {
+			    	Engine.addStore('scales', 5);
+			    },
+  				buttons: {
+  					'bye': {
+  						text: 'say goodbye',
+  						nextScene: 'end'
+  					}
+  				}
+  			},
+  			'nothing': {
+  				text: [
+  					"the man expresses his thanks and hobbles off."
+  				],
+  				buttons: {
+  					'bye': {
+  						text: 'say goodbye',
+  						nextScene: 'end'
+  					}
+  				}
+  		  }
+  	}
 	}
-]
+];
