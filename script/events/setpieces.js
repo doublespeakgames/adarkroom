@@ -1199,7 +1199,7 @@ Events.Setpieces = {
 				buttons: {
 					'enter': {	
 						text: 'explore',
-						nextScene: {0.4: 'a1', 0.8: 'a2', 1: 'a3'}
+						nextScene: {0.2: 'a1', 0.5: 'a2', 0.8: 'a3', 1: 'a4'}
 					},
 					'leave': {
 						text: 'leave',
