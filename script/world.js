@@ -821,5 +821,9 @@ var World = {
 	
 	setTitle: function() {
 		document.title = 'A Barren World';
+	},
+	
+	copyPos: function(pos) {
+		return [pos[0], pos[1]];
 	}
 };
