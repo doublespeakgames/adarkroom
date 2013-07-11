@@ -252,8 +252,12 @@ var Outside = {
 	},
 	
 	updateWorkersView: function() {
-		if(State.outside.population == 0) return;
 		var workers = $('div#workers');
+
+		// If our population is 0 and we don't already have a workers view,
+		// there's nothing to do here.
+		if(!workers.length && State.outside.population == 0) return;
+
 		var needsAppend = false;
 		if(workers.length == 0) {
 			needsAppend = true;
