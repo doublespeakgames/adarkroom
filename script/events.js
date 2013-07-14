@@ -526,7 +526,6 @@ var Events = {
 		Path.outfit[thing] -= num;
 		Events.getLoot(btn.closest('.button'));
 		World.updateSupplies();
-		$('#dropMenu').remove();
 	},
 	
 	getLoot: function(btn) {
@@ -548,6 +547,7 @@ var Events = {
 						}
 					});
 				} else {
+					// #dropMenu gets removed by this.
 					btn.text(name + ' [' + num + ']');
 				}
 				var curNum = Path.outfit[name];
@@ -555,7 +555,14 @@ var Events = {
 				curNum++;
 				Path.outfit[name] = curNum;
 				World.updateSupplies();
-			} else {
+
+				// Update weight and free space variables so we can decide
+				// whether or not to bring up/update the drop menu.
+				weight = Path.getWeight(name);
+				freeSpace = Path.getFreeSpace();
+			}
+
+			if(weight > freeSpace && btn.data('numLeft') > 0) {
 				// Draw the drop menu
 				Engine.log('drop menu');
 				$('#dropMenu').remove();
