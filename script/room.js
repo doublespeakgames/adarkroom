@@ -423,6 +423,12 @@ var Room = {
 		}
 	},
 	
+	MiscItems: {
+	  'laser rifle': {
+	    type: 'weapon'
+	  }
+	},
+	
 	name: "Room",
 	init: function(options) {
 		this.options = $.extend(
@@ -733,6 +739,8 @@ var Room = {
 				type = Room.Craftables[k].type;
 			} else if(Room.TradeGoods[k]) {
 				type = Room.TradeGoods[k].type;
+			} else if (Room.MiscItems[k]) {
+			  type = Room.MiscItems[k].type;
 			}
 			
 			var location;
