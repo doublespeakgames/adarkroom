@@ -34,6 +34,26 @@ var Button = {
 			if(costTooltip.children().length > 0) {
 				costTooltip.appendTo(el);
 			}
+
+			// The tooltip shares its hover state with its parent (the button),
+			// which means it will still show if the cursor is hovering over
+			// the tooltip. Since the tooltip and the button have no real
+			// overlap, we hide the cost tooltip if the cursor moves into it.
+			// Note that this overrides the CSS behaviour built in to the
+			// tooltip class, so we have to be responsible for showing/hiding
+			// now.
+			costTooltip.mouseover(function() {
+				$(this).hide();
+			});
+			el.mouseenter(function() {
+				btn = $(this);
+				if(!btn.hasClass('disabled')) {
+					btn.children('div.tooltip*').show();
+				}
+			});
+			el.mouseleave(function() {
+				$(this).children('div.tooltip*').hide();
+			});
 		}
 		
 		if(options.width) {
@@ -49,6 +69,13 @@ var Button = {
 				btn.removeClass('disabled');
 			} else if(disabled) {
 				btn.addClass('disabled');
+
+				// We don't want the tooltip to stay around if the button
+				// gets disabled...
+				tooltip = btn.children('div.tooltip*');
+				if(tooltip.length > 0) {
+					tooltip.hide();
+				}
 			}
 			btn.data('disabled', disabled);
 		}

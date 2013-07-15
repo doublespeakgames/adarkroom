@@ -319,7 +319,7 @@ div.tooltip {
 }
 
 .tooltip.top {
-	bottom: 20px;
+	bottom: 30px;
 }
 
 *:hover > div.tooltip {
