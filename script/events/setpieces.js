@@ -1790,7 +1790,7 @@ Events.Setpieces = {
         buttons: {
     			'continue': {
     				text: 'continue',
-    				nextScene: 'end10'
+    				nextScene: { 1: 'end10' }
     			},
     			'leave': {
 						text: 'leave city',
@@ -1829,7 +1829,7 @@ Events.Setpieces = {
         buttons: {
     			'continue': {
     				text: 'continue',
-    				nextScene: 'end10'
+    				nextScene: { 1: 'end10' }
     			},
     			'leave': {
 						text: 'leave city',
