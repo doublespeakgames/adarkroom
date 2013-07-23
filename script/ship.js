@@ -15,11 +15,12 @@ var Ship = {
 			options
 		);
 		
-		if(!State.ship) {
-			State.ship = {
+		if(!$SM.get('features.location.spaceShip')) {
+			$SM.set('features.location.spaceShip', true);
+			$SM.setM('game.spaceShip', {
 				hull: Ship.BASE_HULL,
 				thrusters: Ship.BASE_THRUSTERS
-			}
+			});
 		}
 		
 		// Create the Ship tab
@@ -35,13 +36,13 @@ var Ship = {
 		// Draw the hull label
 		var hullRow = $('<div>').attr('id', 'hullRow').appendTo('div#shipPanel');
 		$('<div>').addClass('row_key').text('hull:').appendTo(hullRow);
-		$('<div>').addClass('row_val').text(State.ship.hull).appendTo(hullRow);
+		$('<div>').addClass('row_val').text($SM.get('game.spaceShip.hull')).appendTo(hullRow);
 		$('<div>').addClass('clear').appendTo(hullRow);
 		
 		// Draw the thrusters label
 		var engineRow = $('<div>').attr('id', 'engineRow').appendTo('div#shipPanel');
 		$('<div>').addClass('row_key').text('engine:').appendTo(engineRow);
-		$('<div>').addClass('row_val').text(State.ship.thrusters).appendTo(engineRow);
+		$('<div>').addClass('row_val').text($SM.get('game.spaceShip.thrusters')).appendTo(engineRow);
 		$('<div>').addClass('clear').appendTo(engineRow);
 		
 		// Draw the reinforce button
@@ -71,7 +72,7 @@ var Ship = {
 			cooldown: Ship.LIFTOFF_COOLDOWN
 		}).appendTo('div#shipPanel');
 		
-		if(State.ship.hull <= 0) {
+		if($SM.get('game.spaceShip.hull') <= 0) {
 			Button.setDisabled(b, true);
 		}
 		
@@ -83,9 +84,9 @@ var Ship = {
 	
 	onArrival: function(transition_diff) {
 		Ship.setTitle();
-		if(!State.seenShip) {
+		if(!$SM.get('game.spaceShip.seenShip')) {
 			Notifications.notify(Ship, 'somewhere above the debris cloud, the wanderer fleet hovers. been on this rock too long.');
-			State.seenShip = true;
+			$SM.set('game.spaceShip.seenShip', true);
 			Engine.saveGame();
 		}
 
@@ -104,11 +105,11 @@ var Ship = {
 			return false;
 		}
 		Engine.addStore('alien alloy', -Ship.ALLOY_PER_HULL);
-		State.ship.hull++;
-		if(State.ship.hull > 0) {
+		$SM.add('game.spaceShip.hull', 1);
+		if($SM.get('game.spaceShip.hull') > 0) {
 			Button.setDisabled($('#liftoffButton', Ship.panel), false);
 		}
-		$('#hullRow .row_val', Ship.panel).text(State.ship.hull);
+		$('#hullRow .row_val', Ship.panel).text($SM.get('game.spaceShip.hull'));
 	},
 	
 	upgradeEngine: function() {
@@ -117,16 +118,16 @@ var Ship = {
 			return false;
 		}
 		Engine.addStore('alien alloy', -Ship.ALLOY_PER_THRUSTER);
-		State.ship.thrusters++;
-		$('#engineRow .row_val', Ship.panel).text(State.ship.thrusters);
+		$SM.add('game.spaceShip.thrusters', 1)
+		$('#engineRow .row_val', Ship.panel).text($SM.get('game.spaceShip.thrusters'));
 	},
 	
 	getMaxHull: function() {
-		return State.ship.hull;
+		return $SM.get('game.spaceShip.hull');
 	},
 	
 	checkLiftOff: function() {
-		if(!State.ship.seenWarning) {
+		if(!$SM.get('game.spaceShip.seenWarning')) {
 			Events.startEvent({
 				title: 'Ready to Leave?',
 				scenes: {
@@ -138,7 +139,7 @@ var Ship = {
 							'fly': {
 								text: 'lift off',
 								onChoose: function() {
-									State.ship.seenWarning = true;
+									$SM.set('game.spaceShip.seenWarning', true);
 									Ship.liftOff();
 								},
 								nextScene: 'end'

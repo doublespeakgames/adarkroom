@@ -85,17 +85,17 @@ var Path = {
 	},
 	
 	updatePerks: function() {
-		if(State.perks) {
+		if($SM.get('character.perks')) {
 			var perks = $('#perks');
 			var needsAppend = false;
 			if(perks.length == 0) {
 				needsAppend = true;
 				perks = $('<div>').attr('id', 'perks');
 			}
-			for(var k in State.perks) {
+			for(var k in $SM.get('character.perks')) {
 				var id = 'perk_' + k.replace(' ', '-');
 				var r = $('#' + id);
-				if(State.perks[k] && r.length == 0) {
+				if($SM.get('character.perks[\''+k+'\']') && r.length == 0) {
 					r = $('<div>').attr('id', id).addClass('perkRow').appendTo(perks);
 					$('<div>').addClass('row_key').text(k).appendTo(r);
 					$('<div>').addClass('tooltip bottom right').text(Engine.Perks[k].desc).appendTo(r);
@@ -166,7 +166,7 @@ var Path = {
 		
 		for(var k in carryable) {
 			var store = carryable[k];
-			var have = State.stores[k];
+			var have = $SM.get('stores[\''+k+'\']');
 			var num = Path.outfit[k];
 			num = typeof num == 'number' ? num : 0;
 			var numAvailable = Engine.getStore(k);

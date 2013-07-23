@@ -211,7 +211,7 @@ Events.Outside = [
     { /* Soldier attack */
     	title: 'A Military Raid',
 		isAvailable: function() {
-			return Engine.activeModule == Outside && Outside.getPopulation() > 0 && State.cityCleared;
+			return Engine.activeModule == Outside && Outside.getPopulation() > 0 && $SM.get('game.cityCleared');;
 		},
 		scenes: {
 			'start': {

@@ -437,19 +437,20 @@ var Room = {
 		);
 		
 		if(Engine._debug) {
-			this._ROOM_WARM_DELAY = 1;
-			this._BUILDER_STATE_DELAY = 1;
+			this._ROOM_WARM_DELAY = 5000;
+			this._BUILDER_STATE_DELAY = 5000;
 			this._STOKE_COOLDOWN = 0;
-			this._NEED_WOOD_DELAY = 1;
+			this._NEED_WOOD_DELAY = 5000;
 		}
 		
-		if(typeof State.room == 'undefined') {
-			State.room = {
+		if(typeof $SM.get('features.location.room') == 'undefined') {
+			$SM.set('features.location.room', true);
+			$SM.set('game.room', {
 				temperature: this.TempEnum.Cold,
 				fire: this.FireEnum.Dead,
 				buttons: {},
 				builder: -1
-			};
+			});
 		}
 		
 		// Create the room tab
@@ -502,16 +503,16 @@ var Room = {
 		 * 3 - Sleeping
 		 * 4 - Helping
 		 */
-		if(State.room.builder >= 0 && State.room.builder < 3) {
+		if($SM.get('game.room.builder') >= 0 && $SM.get('game.room.builder') < 3) {
 			Room._builderTimer = setTimeout(Room.updateBuilderState, Room._BUILDER_STATE_DELAY);
 		}
-		if(State.room.builder == 1 && Engine.getStore('wood') < 0) {
+		if($SM.get('game.room.builder') == 1 && Engine.getStore('wood') < 0) {
 			setTimeout(Room.unlockForest, Room._NEED_WOOD_DELAY);
 		}
 		setTimeout(Engine.collectIncome, 1000);
 		
-		Notifications.notify(Room, "the room is " + State.room.temperature.text);
-		Notifications.notify(Room, "the fire is " + State.room.fire.text);
+		Notifications.notify(Room, "the room is " + $SM.get('game.room.temperature.text'));
+		Notifications.notify(Room, "the fire is " + $SM.get('game.room.fire.text'));
 	},
 	
 	options: {}, // Nothing for now
@@ -519,12 +520,12 @@ var Room = {
 	onArrival: function(transition_diff) {
 		Room.setTitle();
 		if(Room.changed) {
-			Notifications.notify(Room, "the fire is " + State.room.fire.text);
-			Notifications.notify(Room, "the room is " + State.room.temperature.text);
+			Notifications.notify(Room, "the fire is " + $SM.get('game.room.fire.text'));
+			Notifications.notify(Room, "the room is " + $SM.get('game.room.temperature.text'));
 			Room.changed = false;
 		}
-		if(State.room.builder == 3) {
-			State.room.builder++;
+		if($SM.get('game.room.builder') == 3) {
+			$SM.add('game.room.builder', 1);
 			Engine.setIncome('builder', {
 				delay: 10,
 				stores: {'wood' : 2 }
@@ -569,7 +570,7 @@ var Room = {
 	},
 	
 	setTitle: function() {
-		var title = State.room.fire.value < 2 ? "A Dark Room" : "A Firelit Room";
+		var title = $SM.get('game.room.fire.value') < 2 ? "A Dark Room" : "A Firelit Room";
 		if(Engine.activeModule == this) {
 			document.title = title;
 		}
@@ -579,7 +580,7 @@ var Room = {
 	updateButton: function() {
 		var light = $('#lightButton.button');
 		var stoke = $('#stokeButton.button');
-		if(State.room.fire.value == Room.FireEnum.Dead.value && stoke.css('display') != 'none') {
+		if($SM.get('game.room.fire.value') == Room.FireEnum.Dead.value && stoke.css('display') != 'none') {
 			stoke.hide();
 			light.show();
 			if(stoke.hasClass('disabled')) {
@@ -613,7 +614,7 @@ var Room = {
 		} else if(wood > 4) {
 			Engine.setStore('wood', wood - 5);
 		}
-		State.room.fire = Room.FireEnum.Burning;
+		$SM.set('game.room.fire', Room.FireEnum.Burning);
 		Room.onFireChange();
 	},
 	
@@ -627,8 +628,8 @@ var Room = {
 		if(wood > 0) {
 			Engine.setStore('wood', wood - 1);
 		}
-		if(State.room.fire.value < 4) {
-			State.room.fire = Room.FireEnum.fromInt(State.room.fire.value + 1);
+		if($SM.get('game.room.fire.value') < 4) {
+			$SM.set('game.room.fire', Room.FireEnum.fromInt($SM.get('game.room.fire.value') + 1));
 		}
 		Room.onFireChange();
 	},
@@ -637,9 +638,9 @@ var Room = {
 		if(Engine.activeModule != Room) {
 			Room.changed = true;
 		}
-		Notifications.notify(Room, "the fire is " + State.room.fire.text, true);
-		if(State.room.fire.value > 1 && State.room.builder < 0) {
-			State.room.builder = 0;
+		Notifications.notify(Room, "the fire is " + $SM.get('game.room.fire.text'), true);
+		if($SM.get('game.room.fire.value') > 1 && $SM.get('game.room.builder') < 0) {
+			$SM.set('game.room.builder', 0);
 			Notifications.notify(Room, "the light from the fire spills from the windows, out into the dark");
 			setTimeout(Room.updateBuilderState, Room._BUILDER_STATE_DELAY);
 		}	
@@ -650,30 +651,30 @@ var Room = {
 	},
 	
 	coolFire: function() {
-		if(State.room.fire.value <= Room.FireEnum.Flickering.value &&
-		   State.room.builder > 3 && Engine.getStore('wood') > 0) {
+		if($SM.get('game.room.fire.value') <= Room.FireEnum.Flickering.value &&
+			$SM.get('game.room.builder') > 3 && Engine.getStore('wood') > 0) {
 			Notifications.notify(Room, "builder stokes the fire", true);
 			Engine.setStore('wood', Engine.getStore('wood') - 1);
-			State.room.fire = Room.FireEnum.fromInt(State.room.fire.value + 1);
+			$SM.set('game.room.fire', Room.FireEnum.fromInt($SM.get('game.room.fire.value') + 1));
 		}
-		if(State.room.fire.value > 0) {
-			State.room.fire = Room.FireEnum.fromInt(State.room.fire.value - 1);
+		if($SM.get('game.room.fire.value') > 0) {
+			$SM.set('game.room.fire', Room.FireEnum.fromInt($SM.get('game.room.fire.value') - 1));
 			Room._fireTimer = setTimeout(Room.coolFire, Room._FIRE_COOL_DELAY);
 			Room.onFireChange();
 		}
 	},
 	
 	adjustTemp: function() {
-		var old = State.room.temperature.value;
-		if(State.room.temperature.value > 0 && State.room.temperature.value > State.room.fire.value) {
-			State.room.temperature = Room.TempEnum.fromInt(State.room.temperature.value - 1);
-			Notifications.notify(Room, "the room is " + State.room.temperature.text, true);
+		var old = $SM.get('game.room.temperature.value');
+		if($SM.get('game.room.temperature.value') > 0 && $SM.get('game.room.temperature.value') > $SM.get('game.room.fire.value')) {
+			$SM.set('game.room.temperature', Room.TempEnum.fromInt($SM.get('game.room.temperature.value') - 1));
+			Notifications.notify(Room, "the room is " + $SM.get('game.room.temperature.text'), true);
 		}
-		if(State.room.temperature.value < 4 && State.room.temperature.value < State.room.fire.value) {
-			State.room.temperature = Room.TempEnum.fromInt(State.room.temperature.value + 1);
-			Notifications.notify(Room, "the room is " + State.room.temperature.text, true);
+		if($SM.get('game.room.temperature.value') < 4 && $SM.get('game.room.temperature.value') < $SM.get('game.room.fire.value')) {
+			$SM.set('game.room.temperature', Room.TempEnum.fromInt($SM.get('game.room.temperature.value') + 1));
+			Notifications.notify(Room, "the room is " + $SM.get('game.room.temperature.text'), true);
 		}
-		if(State.room.temperature.value != old) {
+		if($SM.get('game.room.temperature.value') != old) {
 			Room.changed = true;
 		}
 		Room._tempTimer = setTimeout(Room.adjustTemp, Room._ROOM_WARM_DELAY);
@@ -690,14 +691,14 @@ var Room = {
 	},
 	
 	updateBuilderState: function() {
-		if(State.room.builder == 0) {
+		if($SM.get('game.room.builder') == 0) {
 			Notifications.notify(Room, "a ragged stranger stumbles through the door and collapses in the corner");
-			State.room.builder = 1;
+			$SM.set('game.room.builder', 1);
 			setTimeout(Room.unlockForest, Room._NEED_WOOD_DELAY);
 		} 
-		else if(State.room.builder < 3 && State.room.temperature.value >= Room.TempEnum.Warm.value) {
+		else if($SM.get('game.room.builder') < 3 && $SM.get('game.room.temperature.value') >= Room.TempEnum.Warm.value) {
 			var msg;
-			switch(State.room.builder) {
+			switch($SM.get('game.room.builder')) {
 			case 1:
 				msg = "the stranger shivers, and mumbles quietly. her words are unintelligible.";
 				break;
@@ -706,11 +707,11 @@ var Room = {
 				break;
 			}
 			Notifications.notify(Room, msg);
-			if(State.room.builder < 3) {
-				State.room.builder++;
+			if($SM.get('game.room.builder') < 3) {
+				$SM.add('game.room.builder', 1);
 			}
 		}
-		if(State.room.builder < 3) {
+		if($SM.get('game.room.builder') < 3) {
 			setTimeout(Room.updateBuilderState, Room._BUILDER_STATE_DELAY);
 		}
 		Engine.saveGame();
@@ -732,7 +733,7 @@ var Room = {
 			}).css('opacity', 0);
 			wNeedsAppend = true;
 		}
-		for(var k in State.stores) {
+		for(var k in $SM.get('stores')) {
 			
 			var type = null;
 			if(Room.Craftables[k]) {
@@ -758,17 +759,18 @@ var Room = {
 			
 			var id = "row_" + k.replace(' ', '-');
 			var row = $('div#' + id, location);
-			var num = State.stores[k];
+			var num = $SM.get('stores[\''+k+'\']');
 			
 			if(typeof num != 'number' || isNaN(num)) {
 				// No idea how counts get corrupted, but I have reason to believe that they occassionally do.
 				// Build a little fence around it!
-				num = State.stores[k] = 0;
+				num = 0;
+				$SM.set('stores[\''+k+'\']', 0);
 			}
 			
 			
 			// thieves?
-			if(typeof State.thieves == 'undefined' && num > 5000 && State.world) {
+			if(typeof $SM.get('game.thieves') == 'undefined' && num > 5000 && $SM.get('features.location.world')) {
 				Engine.startThieves();
 			}
 			
@@ -819,14 +821,14 @@ var Room = {
 	
 	updateIncomeView: function() {
 		var stores = $('div#stores');
-		if(stores.length == 0 || typeof State.income == 'undefined') return;
+		if(stores.length == 0 || typeof $SM.get('income') == 'undefined') return;
 		$('div.storeRow', stores).each(function(index, el) {
 			el = $(el);
 			$('div.tooltip', el).remove();
 			var tt = $('<div>').addClass('tooltip bottom right');
 			var storeName = el.attr('id').substring(4).replace('-', ' ');
-			for(var incomeSource in State.income) {
-				var income = State.income[incomeSource];
+			for(var incomeSource in $SM.get('income')) {
+				var income = $SM.get('income[\''+incomeSource+'\']');
 				for(var store in income.stores) {
 					if(store == storeName && income.stores[store] != 0) {
 						$('<div>').addClass('row_key').text(incomeSource).appendTo(tt);
@@ -878,7 +880,7 @@ var Room = {
 	
 	build: function(buildBtn) {
 		var thing = $(buildBtn).attr('buildThing');
-		if(State.room.temperature.value <= Room.TempEnum.Cold.value) {
+		if($SM.get('game.room.temperature.value') <= Room.TempEnum.Cold.value) {
 			Notifications.notify(Room, "builder just shivers");
 			return false;
 		}
@@ -938,12 +940,12 @@ var Room = {
 	},
 	
 	craftUnlocked: function(thing) {
-		if(typeof State.room != 'undefined' && 
-				typeof State.room.buttons != 'undefined' && 
-				State.room.buttons[thing]) {
+		if(typeof $SM.get('features.location.room') != 'undefined' && 
+				typeof $SM.get('game.room.buttons') != 'undefined' && 
+				$SM.get('game.room.buttons[\''+thing+'\']')) {
 			return true;
 		}
-		if(State.room.builder < 4) return false;
+		if($SM.get('game.room.builder') < 4) return false;
 		var craftable = Room.Craftables[thing];
 		if(Room.needsWorkshop(craftable.type) && Outside.numBuilding('workshop') == 0) return false;
 		var cost = craftable.cost();
@@ -958,15 +960,15 @@ var Room = {
 			}
 		}
 		
-		State.room.buttons[thing] = true;
+		$SM.set('game.room.buttons[\''+thing+'\']', true);
 		Notifications.notify(Room, craftable.availableMsg);
 		return true;
 	},
 	
 	buyUnlocked: function(thing) {
-		if(typeof State.room != 'undefined' && 
-				typeof State.room.buttons != 'undefined' && 
-				State.room.buttons[thing]) {
+		if(typeof $SM.get('features.location.room') != 'undefined' && 
+				typeof $SM.get('game.room.buttons') != 'undefined' && 
+				$SM.get('game.room.buttons[\''+thing+'\']')) {
 			return true;
 		} else if(Outside.numBuilding('trading post') > 0) {
 			if(thing == 'compass' || Engine.storeAvailable(thing)) {

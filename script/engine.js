@@ -59,8 +59,8 @@ var Engine = {
 	
 	options: {
 		state: null,
-		debug: false,
-		log: false
+		debug: true,
+		log: true
 	},
 		
 	init: function(options) {
@@ -112,6 +112,7 @@ var Engine = {
 		swipeElement.on('swipeup', Engine.swipeUp);
 		swipeElement.on('swipedown', Engine.swipeDown);
 
+		$SM.init();
 		Notifications.init();
 		Events.init();
 		Room.init();
@@ -122,7 +123,7 @@ var Engine = {
 		if(Engine.getStore('compass') > 0) {
 			Path.init();
 		}
-		if(State.ship) {
+		if($SM.get('features.location.spaceShip')) {
 			Ship.init();
 		}
 		
@@ -165,8 +166,6 @@ var Engine = {
 		} catch(e) {
 			State = {
 				version: 1.2,
-				stores: {},
-				perks: {}
 			};
 			Engine.event('progress', 'new game');
 		}
@@ -324,10 +323,10 @@ var Engine = {
 	},
 	
 	addPerk: function(name) {
-		if(!State.perks) {
-			State.perks = {};
+		if(!$SM.get('character.perks')) {
+			$SM.set('character.perks', {});
 		}
-		State.perks[name] = true;
+		$SM.set('character.perks[\''+name+'\']', true);
 		Notifications.notify(null, Engine.Perks[name].notify);
 		if(Engine.activeModule == Path) {
 			Path.updatePerks();
@@ -335,47 +334,37 @@ var Engine = {
 	},
 	
 	hasPerk: function(name) {
-		return typeof State.perks == 'object' && State.perks[name] == true;
+		return typeof $SM.get('character.perks') == 'object' && $SM.get('character.perks[\''+name+'\']') == true;
 	},
 	
 	setStore: function(name, number) {
-		if(typeof State.stores == 'undefined') {
-			State.stores = {};
-		}
-		if(number > Engine.MAX_STORE) number = Engine.MAX_STORE;
-		State.stores[name] = number;
+		$SM.set('stores[\''+name+'\']', number);
 		Room.updateStoresView();
 		Room.updateBuildButtons();
-		if(State.outside) {
+		if($SM.get('features.location.outside')) {
 			Outside.updateVillage();
 		}
 		Engine.saveGame();
 	},
 	
 	setStores: function(list) {
-		if(typeof State.stores == 'undefined') {
-			State.stores = {};
-		}
 		for(k in list) {
-			State.stores[k] = list[k] > Engine.MAX_STORE ? Engine.MAX_STORE : list[k];
+			$SM.set('stores[\''+k+'\']', list[k]);
 		}
 		Room.updateStoresView();
 		Room.updateBuildButtons();
-		if(State.outside) {
+		if($SM.get('features.location.outside')) {
 			Outside.updateVillage();
 		}
 		Engine.saveGame();
 	},
 	
 	addStore: function(name, number) {
-		if(typeof State.stores == 'undefined') {
-			State.stores = {};
-		}
-		var num = State.stores[name];
+		var num = $SM.get('stores[\''+name+'\']');
 		if(typeof num != 'number' || isNaN(num) || num < 0) num = 0;
 		num += number;
 		if(num > Engine.MAX_STORE) num = Engine.MAX_STORE;
-		State.stores[name] = num;
+		$SM.set('stores[\''+name+'\']', num);
 		Room.updateStoresView();
 		Room.updateBuildButtons();
 		Outside.updateVillage();
@@ -386,14 +375,10 @@ var Engine = {
 	},
 	
 	addStores: function(list, ignoreCosts) {
-		if(typeof State.stores == 'undefined') {
-			State.stores = {};
-		}
-		
 		// Make sure any income costs can be paid
 		if(!ignoreCosts) {
 			for(k in list) {
-				var num = State.stores[k];
+				var num = $SM.get('stores[\''+k+'\']');
 				if(typeof num != 'number' || isNaN(num) || num < 0) num = 0;
 				if(num + list[k] < 0) {
 					return false;
@@ -403,12 +388,12 @@ var Engine = {
 		
 		// Actually do the update
 		for(k in list) {
-			var num = State.stores[k];
+			var num = $SM.get('stores[\''+k+'\']');
 			if(typeof num != 'number') num = 0;
 			num += list[k];
 			num = num < 0 ? 0 : num;
 			num = num > Engine.MAX_STORE ? Engine.MAX_STORE : num;
-			State.stores[k] = num;
+			$SM.set('stores[\''+k+'\']', num);
 		}
 		Room.updateStoresView();
 		Room.updateBuildButtons();
@@ -421,32 +406,26 @@ var Engine = {
 	},
 	
 	storeAvailable: function(name) {
-		return typeof State.stores[name] == 'number';
+		return typeof $SM.get('stores[\''+name+'\']') == 'number';
 	},
 	
 	getStore: function(name) {
-		if(typeof State.stores == 'undefined' || typeof State.stores[name] == 'undefined' ) {
+		if(typeof $SM.get('stores[\''+name+'\']') == 'undefined') {
 			return 0;
 		}
-		return State.stores[name];
+		return $SM.get('stores[\''+name+'\']');
 	},
 	
 	setIncome: function(source, options) {
-		if(typeof State.income == 'undefined') {
-			State.income = {};
-		}
-		var existing = State.income[source];
+		var existing = $SM.get('income[\''+source+'\']');
 		if(typeof existing != 'undefined') {
 			options.timeLeft = existing.timeLeft;
 		}
-		State.income[source] = options;
+		$SM.set('income[\''+source+'\']', options);
 	},
 	
 	getIncome: function(source) {
-		if(typeof State.income == 'undefined') {
-			State.income = {};
-		}
-		var existing = State.income[source];
+		var existing = $SM.get('income[\''+source+'\']');
 		if(typeof existing != 'undefined') {
 			return existing;
 		}
@@ -454,17 +433,15 @@ var Engine = {
 	},
 	
 	removeIncome: function(source) {
-		if(State.income) {
-			delete State.income[source];
-		}
+		$SM.remove('income[\''+source+'\']');
 		Room.updateIncomeView();
 	},
 	
 	collectIncome: function() {
-		if(typeof State.income != 'undefined' && Engine.activeModule != Space) {
+		if(typeof $SM.get('income') != 'undefined' && Engine.activeModule != Space) {
 			var changed = false;
-			for(var source in State.income) {
-				var income = State.income[source];
+			for(var source in $SM.get('income')) {
+				var income = $SM.get('income[\''+source+'\']');
 				if(typeof income.timeLeft != 'number')
 				{
 					income.timeLeft = 0;
@@ -501,15 +478,15 @@ var Engine = {
 	},
 	
 	addStolen: function(stores) {
-		if(!State.stolen) State.stolen = {};
+		if(!$SM.get('game.stolen')) $SM.set('game.stolen', {});
 		for(var k in stores) {
-			if(!State.stolen[k]) State.stolen[k] = 0;
-			State.stolen[k] -= stores[k];
+			if(!$SM.get('game.stolen[\''+k+'\']')) $SM.set('game.stolen[\''+k+'\']', 0);
+			$SM.add('game.stolen[\''+k+'\']', stores[k] * -1);
 		}
 	},
 	
 	startThieves: function() {
-		State.thieves = 1;
+		$SM.set('game.thieves', 1);
 		Engine.setIncome('thieves', {
 			delay: 10,
 			stores: {

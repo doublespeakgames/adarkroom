@@ -87,7 +87,7 @@ var Space = {
 	},
 	
 	getSpeed: function() {
-		return Space.SHIP_SPEED + State.ship.thrusters;
+		return Space.SHIP_SPEED + $SM.get('game.spaceShip.thrusters');
 	},
 	
 	updateHull: function() {

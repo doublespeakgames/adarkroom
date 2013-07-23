@@ -397,7 +397,7 @@ Events.Room = [
 	{ /* The Scout  --  Map Merchant */
 		title: 'The Scout',
 		isAvailable: function() {
-			return Engine.activeModule == Room && typeof State.world == 'object';
+			return Engine.activeModule == Room && $SM.get('features.location.world');
 		},
 		scenes: {
 			'start': {
@@ -435,7 +435,7 @@ Events.Room = [
 	{ /* The Wandering Master */
 		title: 'The Master',
 		isAvailable: function() {
-			return Engine.activeModule == Room && typeof State.world == 'object';
+			return Engine.activeModule == Room && $SM.get('features.location.world');
 		},
 		scenes: {
 			'start': {
@@ -507,7 +507,7 @@ Events.Room = [
 	{ /* The Sick Man */
   		title: 'The Sick Man',
   		isAvailable: function() {
-  			return Engine.activeModule == Room && typeof State.world == 'object';
+  			return Engine.activeModule == Room && $SM.get('features.location.world');
   		},
   		scenes: {
   			'start': {

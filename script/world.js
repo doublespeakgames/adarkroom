@@ -128,11 +128,12 @@ var World = {
 		World.LANDMARKS[World.TILE.BATTLEFIELD] = {num: 5, minRadius: 18, maxRadius: World.RADIUS * 1.5, scene: 'battlefield', label: 'A&nbsp;Battlefield'};
 		World.LANDMARKS[World.TILE.SWAMP] = {num: 1, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'swamp', label: 'A&nbsp;Murky&nbsp;Swamp'};
 		
-		if(typeof State.world == 'undefined') {
-			State.world = {
+		if(typeof $SM.get('features.location.world') == 'undefined') {
+			$SM.set('features.location.world', true);
+			$SM.setM('game.world', {
 				map: World.generateMap(),
 				mask: World.newMask()
-			};
+			});
 		}
 		
 		// Create the World panel
@@ -440,9 +441,9 @@ var World = {
 					Notifications.notify(World, 'starvation sets in')
 					World.starvation = true;
 				} else {
-					State.starved = State.starved ? State.starved : 0;
-					State.starved++;
-					if(State.starved >= 10 && !Engine.hasPerk('slow metabolism')) {
+					$SM.set('character.starved', $SM.get('character.starved', true));
+					$SM.add('character.starved', 1);
+					if($SM.get('character.starved') >= 10 && !Engine.hasPerk('slow metabolism')) {
 						Engine.addPerk('slow metabolism');
 					}
 					World.die();
@@ -469,9 +470,9 @@ var World = {
 					Notifications.notify(World, 'the thirst becomes unbearable');
 					World.thirst = true;
 				} else {
-					State.dehydrated = State.dehydrated ? State.dehydrated : 0;
-					State.dehydrated++;
-					if(State.dehydrated >= 10 && !Engine.hasPerk('desert rat')) {
+					$SM.set('character.dehydrated', $SM.get('character.dehydrated', true));
+					$SM.add('character.dehydrated', 1);
+					if($SM.get('character.dehydrated') >= 10 && !Engine.hasPerk('desert rat')) {
 						Engine.addPerk('desert rat');
 					}
 					World.die();
@@ -604,7 +605,7 @@ var World = {
 	applyMap: function() {
 		var x = Math.floor(Math.random() * (World.RADIUS * 2) + 1);
 		var y = Math.floor(Math.random() * (World.RADIUS * 2) + 1);
-		World.uncoverMap(x, y, 5, State.world.mask);
+		World.uncoverMap(x, y, 5, $SM.get('game.world.mask'));
 	},
 	
 	generateMap: function() {
@@ -822,7 +823,7 @@ var World = {
 	
 	goHome: function() {
 		// Home safe! Commit the changes.
-		State.world = World.state;
+		$SM.setM('game.world', World.state);
 		if(World.state.sulphurmine && Outside.numBuilding('sulphur mine') == 0) {
 			Outside.addBuilding('sulphur mine', 1);
 			Engine.event('progress', 'sulphur mine');
@@ -835,7 +836,7 @@ var World = {
 			Outside.addBuilding('coal mine', 1);
 			Engine.event('progress', 'coal mine');
 		}
-		if(World.state.ship && !State.ship) {
+		if(World.state.ship && !$SM.get('features.location.spaceShip')) {
 			Ship.init();
 			Engine.event('progress', 'ship');
 		}
@@ -904,7 +905,7 @@ var World = {
 		Notifications.notify(null, 'water replenished');
 		World.setWater(World.getMaxWater());
 		// Save progress at outposts
-		State.world = World.state;
+		$SM.setM('game.world', World.state);
 		// Mark this outpost as used
 		World.usedOutposts[World.curPos[0] + ',' + World.curPos[1]] = true;
 	},
@@ -912,7 +913,7 @@ var World = {
 	onArrival: function() {
 		Engine.keyLock = false;
 		// Explore in a temporary world-state. We'll commit the changes if you return home safe.
-		World.state = $.extend(true, {}, State.world);
+		World.state = $.extend(true, {}, $SM.get('game.world'));
 		World.setWater(World.getMaxWater());
 		World.setHp(World.getMaxHealth());
 		World.foodMove = 0;

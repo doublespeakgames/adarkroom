@@ -2244,7 +2244,7 @@ Events.Setpieces = {
 				],
 				onLoad: function() {
 					World.clearDungeon();
-					State.cityCleared = true;
+					$SM.set('game.cityCleared', true);
 				},
 				loot: {
 					bullets: {
@@ -2278,7 +2278,7 @@ Events.Setpieces = {
 				],
 				onLoad: function() {
 					World.clearDungeon();
-					State.cityCleared = true;
+					$SM.set('game.cityCleared', true);
 				},
 				loot: {
 					torch: {
@@ -2308,7 +2308,7 @@ Events.Setpieces = {
 				],
 				onLoad: function() {
 					World.clearDungeon();
-					State.cityCleared = true;
+					$SM.set('game.cityCleared', true);
 				},
 				loot: {
 					rifle: {
@@ -2354,7 +2354,7 @@ Events.Setpieces = {
 				],
 				onLoad: function() {
 					World.clearDungeon();
-					State.cityCleared = true;
+					$SM.set('game.cityCleared', true);
 				},
 				loot: {
 					rifle: {
@@ -2389,7 +2389,7 @@ Events.Setpieces = {
 				],
 				onLoad: function() {
 					World.clearDungeon();
-					State.cityCleared = true;
+					$SM.set('game.cityCleared', true);
 				},
 				loot: {
 					rifle: {
@@ -2429,7 +2429,7 @@ Events.Setpieces = {
 				],
 				onLoad: function() {
 					World.clearDungeon();
-					State.cityCleared = true;
+					$SM.set('game.cityCleared', true);
 				},
 				loot: {
 					'laser rifle': {
@@ -2464,7 +2464,7 @@ Events.Setpieces = {
 				],
 				onLoad: function() {
 					World.clearDungeon();
-					State.cityCleared = true;
+					$SM.set('game.cityCleared', true);
 				},
 				loot: {
 					'steel sword': {
@@ -2499,7 +2499,7 @@ Events.Setpieces = {
 				],
 				onLoad: function() {
 					World.clearDungeon();
-					State.cityCleared = true;
+					$SM.set('game.cityCleared', true);
 				},
 				loot: {
 					'steel sword': {
@@ -2534,7 +2534,7 @@ Events.Setpieces = {
 				],
 				onLoad: function() {
 					World.clearDungeon();
-					State.cityCleared = true;
+					$SM.set('game.cityCleared', true);
 				},
 				loot: {
 					'rifle': {
@@ -2574,7 +2574,7 @@ Events.Setpieces = {
 				],
 				onLoad: function() {
 					World.clearDungeon();
-					State.cityCleared = true;
+					$SM.set('game.cityCleared', true);
 				},
 				loot: {
 					'energy cell': {
@@ -2613,7 +2613,7 @@ Events.Setpieces = {
 				],
 				onLoad: function() {
 					World.clearDungeon();
-					State.cityCleared = true;
+					$SM.set('game.cityCleared', true);
 				},
 				loot: {
 					'energy cell': {
@@ -2646,7 +2646,7 @@ Events.Setpieces = {
 				],
 				onLoad: function() {
 					World.clearDungeon();
-					State.cityCleared = true;
+					$SM.set('game.cityCleared', true);
 				},
 				loot: {
 					'energy cell': {
@@ -2695,7 +2695,7 @@ Events.Setpieces = {
 				],
 				onLoad: function() {
 					World.clearDungeon();
-					State.cityCleared = true;
+					$SM.set('game.cityCleared', true);
 				},
 				loot: {
 					'steel sword': {
@@ -2739,7 +2739,7 @@ Events.Setpieces = {
 				],
 				onLoad: function() {
 					World.clearDungeon();
-					State.cityCleared = true;
+					$SM.set('game.cityCleared', true);
 				},
 				loot: {
 					'energy cell': {
@@ -2782,7 +2782,7 @@ Events.Setpieces = {
 				],
 				onLoad: function() {
 					World.clearDungeon();
-					State.cityCleared = true;
+					$SM.set('game.cityCleared', true);
 				},
 				loot: {
 					'alien alloy': {

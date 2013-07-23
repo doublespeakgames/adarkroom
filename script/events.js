@@ -243,13 +243,13 @@ var Events = {
 			var weaponName = btn.attr('id').substring(7).replace('-', ' ');
 			var weapon = World.Weapons[weaponName];
 			if(weapon.type == 'unarmed') {
-				if(!State.punches) State.punches = 0;
-				State.punches++;
-				if(State.punches == 50 && !Engine.hasPerk('boxer')) {
+				if(!$SM.get('character.punches')) $SM.set('character.punches', 0);
+				$SM.add('character.punches', 1);
+				if($SM.get('character.punches') == 50 && !Engine.hasPerk('boxer')) {
 					Engine.addPerk('boxer');
-				} else if(State.punches == 150 && !Engine.hasPerk('martial artist')) {
+				} else if($SM.get('character.punches') == 150 && !Engine.hasPerk('martial artist')) {
 					Engine.addPerk('martial artist');
-				} else if(State.punches == 300 && !Engine.hasPerk('unarmed master')) {
+				} else if($SM.get('character.punches') == 300 && !Engine.hasPerk('unarmed master')) {
 					Engine.addPerk('unarmed master');
 				}
 				
