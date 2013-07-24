@@ -432,7 +432,7 @@ var Outside = {
 		for(var k in $SM.get('game.outside.buildings')) {
 			if(k == 'trap') {
 				var numTraps = $SM.get('game.outside.buildings[\''+k+'\']');
-				var numBait = Engine.getStore('bait');
+				var numBait = $SM.get('stores.bait', true);
 				var traps = numTraps - numBait;
 				traps = traps < 0 ? 0 : traps;
 				Outside.updateVillageRow(k, traps, village);
@@ -510,7 +510,7 @@ var Outside = {
 				var tooltip = $('.tooltip', 'div#workers_row_' + worker.replace(' ', '-'));
 				tooltip.empty();
 				var needsUpdate = false;
-				var curIncome = Engine.getIncome(worker);
+				var curIncome = $SM.getIncome(worker);
 				for(var store in income.stores) {
 					stores[store] = income.stores[store] * num;
 					if(curIncome[store] != stores[store]) needsUpdate = true;
@@ -520,7 +520,7 @@ var Outside = {
 					row.appendTo(tooltip);
 				}
 				if(needsUpdate) {
-					Engine.setIncome(worker, {
+					$SM.setIncome(worker, {
 						delay: income.delay,
 						stores: stores
 					});
@@ -588,14 +588,15 @@ var Outside = {
 	
 	gatherWood: function() {
 		Notifications.notify(Outside, "dry brush and dead branches litter the forest floor")
-		Engine.setStore('wood', Engine.getStore('wood') + (Outside.numBuilding('cart') > 0 ? 50 : 10));
+		var gatherAmt = Outside.numBuilding('cart') > 0 ? 50 : 10;
+		$SM.add('stores.wood', gatherAmt);
 	},
 	
 	checkTraps: function() {
 		var drops = {};
 		var msg = [];
 		var numTraps = Outside.numBuilding('trap');
-		var numBait = Engine.getStore('bait');
+		var numBait = $SM.get('stores.bait', true);
 		var numDrops = numTraps + (numBait < numTraps ? numBait : numTraps);
 		for(var i = 0; i < numDrops; i++) {
 			var roll = Math.random();
@@ -626,6 +627,16 @@ var Outside = {
 		drops['bait'] = -baitUsed;
 		
 		Notifications.notify(Outside, s);
-		Engine.addStores(drops);
-	}
-}
+		$SM.addM('stores', drops);
+	},
+	
+	handleStateUpdates: function(e){
+		//updates to run on stores changes
+		if(e.stateName.indexOf('stores') == 0){
+			Outside.updateVillage();
+		}
+	},
+};
+
+//listener for StateManager update events
+$(Outside).on('stateUpdate', Outside.handleStateUpdates);

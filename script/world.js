@@ -266,7 +266,7 @@ var World = {
 		
 		// Update label
 		var t = 'pockets';
-		if(Engine.getStore('rucksack') > 0) {
+		if($SM.get('stores.rucksack', true) > 0) {
 			t = 'rucksack';
 		}
 		$('#backpackTitle').text(t);
@@ -401,11 +401,11 @@ var World = {
 	checkDanger: function() {
 		World.danger = typeof World.danger == 'undefined' ? false: World.danger;
 		if(!World.danger) {
-			if(!Engine.getStore('i armour') > 0 && World.getDistance() >= 8) {
+			if(!$SM.get('stores[\'i armour\']', true) > 0 && World.getDistance() >= 8) {
 				World.danger = true;
 				return true;
 			} 
-			if(!Engine.getStore('s armour') > 0 && World.getDistance() >= 18) {
+			if(!$SM.get('stores[\'s armour\']', true) > 0 && World.getDistance() >= 18) {
 				World.danger = true;
 				return true;
 			}
@@ -414,7 +414,7 @@ var World = {
 				World.danger = false;
 				return true;
 			}
-			if(World.getDistance < 18 && Engine.getStore('i armour') > 0) {
+			if(World.getDistance < 18 && $SM.get('stores[\'i armour\']', true) > 0) {
 				World.danger = false;
 				return true;
 			}
@@ -427,7 +427,7 @@ var World = {
 		World.waterMove++;
 		// Food
 		var movesPerFood = World.MOVES_PER_FOOD;
-		movesPerFood *= Engine.hasPerk('slow metabolism') ? 2 : 1;
+		movesPerFood *= $SM.hasPerk('slow metabolism') ? 2 : 1;
 		if(World.foodMove >= movesPerFood) {
 			World.foodMove = 0;
 			var num = Path.outfit['cured meat'];
@@ -443,8 +443,8 @@ var World = {
 				} else {
 					$SM.set('character.starved', $SM.get('character.starved', true));
 					$SM.add('character.starved', 1);
-					if($SM.get('character.starved') >= 10 && !Engine.hasPerk('slow metabolism')) {
-						Engine.addPerk('slow metabolism');
+					if($SM.get('character.starved') >= 10 && !$SM.hasPerk('slow metabolism')) {
+						$SM.addPerk('slow metabolism');
 					}
 					World.die();
 					return false;
@@ -457,7 +457,7 @@ var World = {
 		}
 		// Water
 		var movesPerWater = World.MOVES_PER_WATER;
-		movesPerWater *= Engine.hasPerk('desert rat') ? 2 : 1;
+		movesPerWater *= $SM.hasPerk('desert rat') ? 2 : 1;
 		if(World.waterMove >= movesPerWater) {
 			World.waterMove = 0;
 			var water = World.water;
@@ -472,8 +472,8 @@ var World = {
 				} else {
 					$SM.set('character.dehydrated', $SM.get('character.dehydrated', true));
 					$SM.add('character.dehydrated', 1);
-					if($SM.get('character.dehydrated') >= 10 && !Engine.hasPerk('desert rat')) {
-						Engine.addPerk('desert rat');
+					if($SM.get('character.dehydrated') >= 10 && !$SM.hasPerk('desert rat')) {
+						$SM.addPerk('desert rat');
 					}
 					World.die();
 					return false;
@@ -488,7 +488,7 @@ var World = {
 	},
 	
 	meatHeal: function() {
-		return World.MEAT_HEAL * (Engine.hasPerk('gastronome') ? 2 : 1);
+		return World.MEAT_HEAL * ($SM.hasPerk('gastronome') ? 2 : 1);
 	},
 	
 	medsHeal: function() {
@@ -500,7 +500,7 @@ var World = {
 		World.fightMove++;
 		if(World.fightMove > World.FIGHT_DELAY) {
 			var chance = World.FIGHT_CHANCE;
-			chance *= Engine.hasPerk('stealthy') ? 0.5 : 1;
+			chance *= $SM.hasPerk('stealthy') ? 0.5 : 1;
 			if(Math.random() < chance) {
 				World.fightMove = 0;
 				Events.triggerFight();
@@ -584,7 +584,7 @@ var World = {
 	
 	lightMap: function(x, y, mask) {
 		var r = World.LIGHT_RADIUS;
-		r *= Engine.hasPerk('scout') ? 2 : 1;
+		r *= $SM.hasPerk('scout') ? 2 : 1;
 		World.uncoverMap(x, y, r, mask);
 		return mask;
 	},
@@ -849,7 +849,7 @@ var World = {
 		}
 		
 		for(var k in Path.outfit) {
-			Engine.addStore(k, Path.outfit[k]);
+			$SM.add('stores[\''+k+'\']', Path.outfit[k]);
 			if(World.leaveItAtHome(k)) {
 				Path.outfit[k] = 0;
 			}
@@ -866,29 +866,29 @@ var World = {
 	},
 	
 	getMaxHealth: function() {
-		if(Engine.getStore('s armour') > 0) {
+		if($SM.get('stores[\'s armour\']', true) > 0) {
 			return World.BASE_HEALTH + 35;
-		} else if(Engine.getStore('i armour') > 0) {
+		} else if($SM.get('stores[\'i armour\']', true) > 0) {
 			return World.BASE_HEALTH + 15;
-		} else if(Engine.getStore('l armour') > 0) {
+		} else if($SM.get('stores[\'l armour']', true) > 0) {
 			return World.BASE_HEALTH + 5;
 		}
 		return World.BASE_HEALTH;
 	},
 	
 	getHitChance: function() {
-		if(Engine.hasPerk('precise')) {
+		if($SM.hasPerk('precise')) {
 			return World.BASE_HIT_CHANCE + 0.1;
 		}
 		return World.BASE_HIT_CHANCE;
 	},
 	
 	getMaxWater: function() {
-		if(Engine.getStore('water tank') > 0) {
+		if($SM.get('stores[\'water tank\']', true) > 0) {
 			return World.BASE_WATER + 50;
-		} else if(Engine.getStore('cask') > 0) {
+		} else if($SM.get('stores.cask', true) > 0) {
 			return World.BASE_WATER + 20;
-		} else if(Engine.getStore('waterskin') > 0) {
+		} else if($SM.get('stores.waterskin', true) > 0) {
 			return World.BASE_WATER + 10;
 		}
 		return World.BASE_WATER;
@@ -936,5 +936,12 @@ var World = {
 	
 	copyPos: function(pos) {
 		return [pos[0], pos[1]];
-	}
+	},
+	
+	handleStateUpdates: function(e){
+		
+	},
 };
+
+//listener for StateManager update events
+$(World).on('stateUpdate', World.handleStateUpdates);

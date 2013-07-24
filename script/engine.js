@@ -7,6 +7,7 @@ var Engine = {
 	 * 	  That would be so elegant and awesome.
 	 */
 	SITE_URL: encodeURIComponent("http://adarkroom.doublespeakgames.com"),
+	VERSION: 1.2;
 	MAX_STORE: 99999999999999,
 	SAVE_DISPLAY: 30 * 1000,
 		
@@ -117,10 +118,10 @@ var Engine = {
 		Events.init();
 		Room.init();
 		
-		if(Engine.storeAvailable('wood')) {
+		if($SM.get('stores.wood')) {
 			Outside.init();
 		}
-		if(Engine.getStore('compass') > 0) {
+		if($SM.get('stores.compass', true) > 0) {
 			Path.init();
 		}
 		if($SM.get('features.location.spaceShip')) {
@@ -160,38 +161,12 @@ var Engine = {
 			var savedState = JSON.parse(localStorage.gameState);
 			if(savedState) {
 				State = savedState;
-				Engine.upgradeState();
+				$SM.updateOldState();
 				Engine.log("loaded save!");
 			}
 		} catch(e) {
-			State = {
-				version: 1.2,
-			};
+			$SM.set('verson', Engine.VERSION);
 			Engine.event('progress', 'new game');
-		}
-	},
-	
-	upgradeState: function() {
-		/* Use this function to make old 
-		 * save games compatible with newer versions */ 
-		if(typeof State.version != 'number') {
-			Engine.log('upgraded save to v1.0');
-			State.version = 1.0;
-		}
-		if(State.version == 1.0) {
-			// v1.1 introduced the Lodge, so get rid of lodgeless hunters
-			delete State.outside.workers.hunter;
-			delete State.income.hunter;
-			Engine.log('upgraded save to v1.1');
-			State.version = 1.1;
-		}
-		if(State.version == 1.1) {
-			//v1.2 added the Swamp to the map, so add it to already generated maps
-			if(State.world) {
-				World.placeLandmark(15, World.RADIUS * 1.5, World.TILE.SWAMP, State.world.map);
-			}
-			Engine.log('upgraded save to v1.2');
-			State.version = 1.2;
 		}
 	},
 	
@@ -297,7 +272,7 @@ var Engine = {
 			var diff = Math.abs(panelIndex - currentIndex);
 			slider.animate({left: -(panelIndex * 700) + 'px'}, 300 * diff);
 
-			if(Engine.storeAvailable('wood')) {
+			if($SM.get('stores.wood')) {
 			// FIXME Why does this work if there's an animation queue...?
 				stores.animate({right: -(panelIndex * 700) + 'px'}, 300 * diff);
 			}
@@ -321,182 +296,6 @@ var Engine = {
 			Notifications.printQueue(module);
 		}
 	},
-	
-	addPerk: function(name) {
-		if(!$SM.get('character.perks')) {
-			$SM.set('character.perks', {});
-		}
-		$SM.set('character.perks[\''+name+'\']', true);
-		Notifications.notify(null, Engine.Perks[name].notify);
-		if(Engine.activeModule == Path) {
-			Path.updatePerks();
-		}
-	},
-	
-	hasPerk: function(name) {
-		return typeof $SM.get('character.perks') == 'object' && $SM.get('character.perks[\''+name+'\']') == true;
-	},
-	
-	setStore: function(name, number) {
-		$SM.set('stores[\''+name+'\']', number);
-		Room.updateStoresView();
-		Room.updateBuildButtons();
-		if($SM.get('features.location.outside')) {
-			Outside.updateVillage();
-		}
-		Engine.saveGame();
-	},
-	
-	setStores: function(list) {
-		for(k in list) {
-			$SM.set('stores[\''+k+'\']', list[k]);
-		}
-		Room.updateStoresView();
-		Room.updateBuildButtons();
-		if($SM.get('features.location.outside')) {
-			Outside.updateVillage();
-		}
-		Engine.saveGame();
-	},
-	
-	addStore: function(name, number) {
-		var num = $SM.get('stores[\''+name+'\']');
-		if(typeof num != 'number' || isNaN(num) || num < 0) num = 0;
-		num += number;
-		if(num > Engine.MAX_STORE) num = Engine.MAX_STORE;
-		$SM.set('stores[\''+name+'\']', num);
-		Room.updateStoresView();
-		Room.updateBuildButtons();
-		Outside.updateVillage();
-		if(Engine.activeModule == Path) {
-			Path.updateOutfitting();
-		}
-		Engine.saveGame();
-	},
-	
-	addStores: function(list, ignoreCosts) {
-		// Make sure any income costs can be paid
-		if(!ignoreCosts) {
-			for(k in list) {
-				var num = $SM.get('stores[\''+k+'\']');
-				if(typeof num != 'number' || isNaN(num) || num < 0) num = 0;
-				if(num + list[k] < 0) {
-					return false;
-				}
-			}
-		}
-		
-		// Actually do the update
-		for(k in list) {
-			var num = $SM.get('stores[\''+k+'\']');
-			if(typeof num != 'number') num = 0;
-			num += list[k];
-			num = num < 0 ? 0 : num;
-			num = num > Engine.MAX_STORE ? Engine.MAX_STORE : num;
-			$SM.set('stores[\''+k+'\']', num);
-		}
-		Room.updateStoresView();
-		Room.updateBuildButtons();
-		Outside.updateVillage();
-		if(Engine.activeModule == Path) {
-			Path.updateOutfitting();
-		}
-		Engine.saveGame();
-		return true;
-	},
-	
-	storeAvailable: function(name) {
-		return typeof $SM.get('stores[\''+name+'\']') == 'number';
-	},
-	
-	getStore: function(name) {
-		if(typeof $SM.get('stores[\''+name+'\']') == 'undefined') {
-			return 0;
-		}
-		return $SM.get('stores[\''+name+'\']');
-	},
-	
-	setIncome: function(source, options) {
-		var existing = $SM.get('income[\''+source+'\']');
-		if(typeof existing != 'undefined') {
-			options.timeLeft = existing.timeLeft;
-		}
-		$SM.set('income[\''+source+'\']', options);
-	},
-	
-	getIncome: function(source) {
-		var existing = $SM.get('income[\''+source+'\']');
-		if(typeof existing != 'undefined') {
-			return existing;
-		}
-		return {};
-	},
-	
-	removeIncome: function(source) {
-		$SM.remove('income[\''+source+'\']');
-		Room.updateIncomeView();
-	},
-	
-	collectIncome: function() {
-		if(typeof $SM.get('income') != 'undefined' && Engine.activeModule != Space) {
-			var changed = false;
-			for(var source in $SM.get('income')) {
-				var income = $SM.get('income[\''+source+'\']');
-				if(typeof income.timeLeft != 'number')
-				{
-					income.timeLeft = 0;
-				}
-				income.timeLeft--;
-				
-				if(income.timeLeft <= 0) {
-					Engine.log('collection income from ' + source);
-					if(source == 'thieves') {
-						Engine.addStolen(income.stores);
-					}
-					changed = Engine.addStores(income.stores) || changed;
-					if(typeof income.delay == 'number') {
-						income.timeLeft = income.delay;
-					}
-				}
-			}
-			if(changed) {
-				Room.updateStoresView();
-				Room.updateBuildButtons();
-				Engine.saveGame();
-				if(Events.activeEvent() != null) {
-					Events.updateButtons();
-				}
-			}
-		}
-		Engine._incomeTimeout = setTimeout(Engine.collectIncome, 1000);
-	},
-	
-	openPath: function() {
-		Path.init();
-		Engine.event('progress', 'path');
-		Notifications.notify(Room, 'the compass points ' + World.dir);
-	},
-	
-	addStolen: function(stores) {
-		if(!$SM.get('game.stolen')) $SM.set('game.stolen', {});
-		for(var k in stores) {
-			if(!$SM.get('game.stolen[\''+k+'\']')) $SM.set('game.stolen[\''+k+'\']', 0);
-			$SM.add('game.stolen[\''+k+'\']', stores[k] * -1);
-		}
-	},
-	
-	startThieves: function() {
-		$SM.set('game.thieves', 1);
-		Engine.setIncome('thieves', {
-			delay: 10,
-			stores: {
-				'wood': -10,
-				'fur': -5,
-				'meat': -5
-			}
-		});
-		Room.updateIncomeView();
-	},
 
 	// Move the stores panel beneath top_container (or to top: 0px if top_container
 	// either hasn't been filled in or is null) using transition_diff to sync with
@@ -518,18 +317,6 @@ var Engine = {
 		else {
 			stores.animate({top: top_container.height() + 26 + 'px'},
 						   {queue: false, duration: 300 * transition_diff});
-		}
-	},
-	
-	num: function(name, craftable) {
-		switch(craftable.type) {
-		case 'good':
-		case 'tool':
-		case 'weapon':
-		case 'upgrade':
-			return Engine.getStore(name);
-		case 'building':
-			return Outside.numBuilding(name);
 		}
 	},
 	
@@ -593,8 +380,15 @@ var Engine = {
 		if(Engine.activeModule.swipeDown) {
 			Engine.activeModule.swipeDown(e);
 		}
-	}
+	},
+	
+	handleStateUpdates: function(e){
+		
+	},
 };
+
+//listener for StateManager update events
+$(Engine).on('stateUpdate', Engine.handleStateUpdates);
 
 $(function() {
 	Engine.init();

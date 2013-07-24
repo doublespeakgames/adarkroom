@@ -100,11 +100,11 @@ var Ship = {
 	},
 	
 	reinforceHull: function() {
-		if(Engine.getStore('alien alloy') < Ship.ALLOY_PER_HULL) {
+		if($SM.get('stores[\'alien alloy\']', true) < Ship.ALLOY_PER_HULL) {
 			Notifications.notify(Ship, "not enough alien alloy");
 			return false;
 		}
-		Engine.addStore('alien alloy', -Ship.ALLOY_PER_HULL);
+		$SM.add('stores[\'alien alloy\']', -Ship.ALLOY_PER_HULL);
 		$SM.add('game.spaceShip.hull', 1);
 		if($SM.get('game.spaceShip.hull') > 0) {
 			Button.setDisabled($('#liftoffButton', Ship.panel), false);
@@ -113,11 +113,11 @@ var Ship = {
 	},
 	
 	upgradeEngine: function() {
-		if(Engine.getStore('alien alloy') < Ship.ALLOY_PER_THRUSTER) {
+		if($SM.get('stores[\'alien alloy\']', true) < Ship.ALLOY_PER_THRUSTER) {
 			Notifications.notify(Ship, "not enough alien alloy");
 			return false;
 		}
-		Engine.addStore('alien alloy', -Ship.ALLOY_PER_THRUSTER);
+		$SM.add('stores[\'alien alloy\']', -Ship.ALLOY_PER_THRUSTER);
 		$SM.add('game.spaceShip.thrusters', 1)
 		$('#engineRow .row_val', Ship.panel).text($SM.get('game.spaceShip.thrusters'));
 	},
@@ -164,5 +164,12 @@ var Ship = {
 		$('#outerSlider').animate({top: '700px'}, 300);
 		Space.onArrival();
 		Engine.activeModule = Space;
-	}
+	},
+	
+	handleStateUpdates: function(e){
+		
+	},
 };
+
+//listener for StateManager update events
+$(Ship).on('stateUpdate', Ship.handleStateUpdates);

@@ -445,5 +445,12 @@ var Space = {
 				Engine.log('right off');
 				break;
 		}
-	}
+	},
+	
+	handleStateUpdates: function(e){
+		
+	},
 };
+
+//listener for StateManager update events
+$(Space).on('stateUpdate', Space.handleStateUpdates);

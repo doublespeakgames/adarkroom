@@ -74,7 +74,7 @@ Events.Setpieces = {
 					'his time here, now, is his penance.'
 				],
 				onLoad: function() {
-					Engine.addPerk('gastronome');
+					$SM.addPerk('gastronome');
 					World.markVisited(World.curPos[0], World.curPos[1]);
 				},
 				buttons: {

@@ -506,10 +506,10 @@ var Room = {
 		if($SM.get('game.room.builder') >= 0 && $SM.get('game.room.builder') < 3) {
 			Room._builderTimer = setTimeout(Room.updateBuilderState, Room._BUILDER_STATE_DELAY);
 		}
-		if($SM.get('game.room.builder') == 1 && Engine.getStore('wood') < 0) {
+		if($SM.get('game.room.builder') == 1 && $SM.get('stores.wood', true) < 0) {
 			setTimeout(Room.unlockForest, Room._NEED_WOOD_DELAY);
 		}
-		setTimeout(Engine.collectIncome, 1000);
+		setTimeout($SM.collectIncome, 1000);
 		
 		Notifications.notify(Room, "the room is " + $SM.get('game.room.temperature.text'));
 		Notifications.notify(Room, "the fire is " + $SM.get('game.room.fire.text'));
@@ -526,7 +526,7 @@ var Room = {
 		}
 		if($SM.get('game.room.builder') == 3) {
 			$SM.add('game.room.builder', 1);
-			Engine.setIncome('builder', {
+			$SM.setIncome('builder', {
 				delay: 10,
 				stores: {'wood' : 2 }
 			});
@@ -594,7 +594,7 @@ var Room = {
 			}
 		}
 		
-		if(!Engine.storeAvailable('wood')) {
+		if(!$SM.get('stores.wood')) {
 			light.addClass('free');
 			stoke.addClass('free');
 		} else {
@@ -606,27 +606,27 @@ var Room = {
 	_fireTimer: null,
 	_tempTimer: null,
 	lightFire: function() {
-		var wood = Engine.getStore('wood');
-		if(Engine.storeAvailable('wood') && wood < 5) {
+		var wood = $SM.get('stores.wood', true);
+		if(wood < 5) {
 			Notifications.notify(Room, "not enough wood to get the fire going");
 			Button.clearCooldown($('#lightButton.button'));
 			return;
 		} else if(wood > 4) {
-			Engine.setStore('wood', wood - 5);
+			$SM.set('stores.wood', wood - 5);
 		}
 		$SM.set('game.room.fire', Room.FireEnum.Burning);
 		Room.onFireChange();
 	},
 	
 	stokeFire: function() {
-		var wood = Engine.getStore('wood');
-		if(Engine.storeAvailable('wood') && wood == 0) {
+		var wood = $SM.get('stores.wood', true);
+		if(wood === 0) {
 			Notifications.notify(Room, "the wood has run out");
 			Button.clearCooldown($('#stokeButton.button'));
 			return;
 		}
 		if(wood > 0) {
-			Engine.setStore('wood', wood - 1);
+			$SM.set('stores.wood', wood - 1);
 		}
 		if($SM.get('game.room.fire.value') < 4) {
 			$SM.set('game.room.fire', Room.FireEnum.fromInt($SM.get('game.room.fire.value') + 1));
@@ -651,10 +651,11 @@ var Room = {
 	},
 	
 	coolFire: function() {
+		var wood = $SM.get('stores.wood');
 		if($SM.get('game.room.fire.value') <= Room.FireEnum.Flickering.value &&
-			$SM.get('game.room.builder') > 3 && Engine.getStore('wood') > 0) {
+			$SM.get('game.room.builder') > 3 && wood > 0) {
 			Notifications.notify(Room, "builder stokes the fire", true);
-			Engine.setStore('wood', Engine.getStore('wood') - 1);
+			$SM.set('stores.wood', wood - 1);
 			$SM.set('game.room.fire', Room.FireEnum.fromInt($SM.get('game.room.fire.value') + 1));
 		}
 		if($SM.get('game.room.fire.value') > 0) {
@@ -681,7 +682,7 @@ var Room = {
 	},
 	
 	unlockForest: function() {
-		Engine.setStore('wood', 4);
+		$SM.set('stores.wood', 4);
 		Room.updateButton();
 		Outside.init();
 		Room.updateStoresView();
@@ -848,7 +849,7 @@ var Room = {
 	buy: function(buyBtn) {
 		var thing = $(buyBtn).attr('buildThing');
 		var good = Room.TradeGoods[thing];
-		var numThings = Engine.getStore(thing);
+		var numThings = $SM.get('stores[\''+thing+'\']', true);
 		if(numThings < 0) numThings = 0;
 		if(good.maximum <= numThings) {
 			return;
@@ -857,7 +858,7 @@ var Room = {
 		var storeMod = {};
 		var cost = good.cost();
 		for(var k in cost) {
-			var have = Engine.getStore(k)
+			var have = $SM.get('stores[\''+k+'\']', true);
 			if(have < cost[k]) {
 				Notifications.notify(Room, "not enough " + k);
 				return false;
@@ -865,16 +866,16 @@ var Room = {
 				storeMod[k] = have - cost[k];
 			}
 		}
-		Engine.setStores(storeMod);
+		$SM.setM('stores', storeMod);
 		
 		Notifications.notify(Room, good.buildMsg);
 		
-		Engine.addStore(thing, 1);
+		$SM.add('stores[\''+thing+'\']', 1);
 		
 		Room.updateBuildButtons();
 		
 		if(thing == 'compass') {
-			Engine.openPath();
+			Path.openPath();
 		}
 	},
 	
@@ -892,7 +893,7 @@ var Room = {
 		case 'weapon':
 		case 'tool':
 		case 'upgrade':
-			numThings = Engine.getStore(thing);
+			numThings = $SM.get('stores[\''+thing+'\']', true);
 			break;
 		case 'building':
 			numThings = Outside.numBuilding(thing);
@@ -907,7 +908,7 @@ var Room = {
 		var storeMod = {};
 		var cost = craftable.cost();
 		for(var k in cost) {
-			var have = Engine.getStore(k)
+			var have = $SM.get('stores[\''+k+'\']', true);
 			if(have < cost[k]) {
 				Notifications.notify(Room, "not enough " + k);
 				return false;
@@ -915,7 +916,7 @@ var Room = {
 				storeMod[k] = have - cost[k];
 			}
 		}
-		Engine.setStores(storeMod);
+		$SM.setM('stores', storeMod);
 		
 		Notifications.notify(Room, craftable.buildMsg);
 		
@@ -924,7 +925,7 @@ var Room = {
 		case 'weapon':
 		case 'upgrade':
 		case 'tool':
-			Engine.addStore(thing, 1);
+			$SM.add('stores[\''+thing+'\']', 1);
 			break;
 		case 'building':
 			Outside.addBuilding(thing, 1);
@@ -951,11 +952,11 @@ var Room = {
 		var cost = craftable.cost();
 		
 		// Show buttons if we have at least 1/2 the wood, and all other components have been seen.
-		if(Engine.getStore('wood') < cost['wood'] * 0.5) {
+		if($SM.get('stores.wood', true) < cost['wood'] * 0.5) {
 			return false;
 		}
 		for(var c in cost) {
-			if(!Engine.storeAvailable(c)) {
+			if(!$SM.get('stores[\''+c'\']')) {
 				return false;
 			}
 		}
@@ -971,7 +972,7 @@ var Room = {
 				$SM.get('game.room.buttons[\''+thing+'\']')) {
 			return true;
 		} else if(Outside.numBuilding('trading post') > 0) {
-			if(thing == 'compass' || Engine.storeAvailable(thing)) {
+			if(thing == 'compass' || $SM.get('stores[\''+thing+'\']')) {
 				// Allow the purchase of stuff once you've seen it
 				return true;
 			}
@@ -1003,7 +1004,7 @@ var Room = {
 		
 		for(var k in Room.Craftables) {
 			craftable = Room.Craftables[k];
-			var max = Engine.num(k, craftable) + 1 > craftable.maximum;
+			var max = $SM.num(k, craftable) + 1 > craftable.maximum;
 			if(craftable.button == null) {
 				if(Room.craftUnlocked(k)) {
 					var loc = Room.needsWorkshop(craftable.type) ? craftSection : buildSection;
@@ -1038,7 +1039,7 @@ var Room = {
 		
 		for(var k in Room.TradeGoods) {
 			good = Room.TradeGoods[k];
-			var max = Engine.num(k, good) + 1 > good.maximum;
+			var max = $SM.num(k, good) + 1 > good.maximum;
 			if(good.button == null) {
 				if(Room.buyUnlocked(k)) {
 					good.button = new Button.Button({
@@ -1078,5 +1079,18 @@ var Room = {
 		if(bNeedsAppend && buildSection.children().length > 0) {
 			buySection.appendTo('div#roomPanel').animate({opacity: 1}, 300, 'linear');
 		}
-	}
+	},
+	
+	handleStateUpdates: function(e){
+		//updates to run on stores changes
+		if(e.stateName.indexOf('stores') == 0){
+			Room.updateStoresView();
+			Room.updateBuildButtons();
+		} else if(e.stateName.indexOf('income') == 0){
+			Room.updateIncomeView();
+		};
+	},
 };
+
+//listener for StateManager update events
+$(Room).on('stateUpdate', Room.handleStateUpdates);

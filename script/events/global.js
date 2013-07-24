@@ -33,8 +33,8 @@ Events.Global = [
 		        ],
 		        onLoad: function() {
 		        	$SM.set('game.thieves', 2);
-		        	Engine.removeIncome('thieves');
-		        	Engine.addStores($SM.get('game.stolen'));
+		        	$SM.remove('income.thieves');
+		        	$SM.addM('stores', $SM.get('game.stolen'));
 		        },
 		        buttons: {
 					'leave': {
@@ -50,8 +50,8 @@ Events.Global = [
 		        ],
 		        onLoad: function() {
 		        	$SM.set('game.thieves', 2);
-		        	Engine.removeIncome('thieves');
-		        	Engine.addPerk('stealthy');
+		        	$SM.remove('income.thieves');
+		        	$SM.addPerk('stealthy');
 		        },
 		        buttons: {
 		        	'leave': {

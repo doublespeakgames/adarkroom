@@ -55,6 +55,9 @@ var StateManager = {
 		var lastOB = stateName.lastIndexOf('[');
 		//make sure last bracket isn't just end of the line
 		var lastCB = stateName.substr(0, stateName.length -1).lastIndexOf(']');
+		//account for state[foo][bar] double bracket and state[foo].bar
+		if(lastCB == lastOB - 1) lastOB = -1;
+		if(lastCB == lastDot -1) lastDot = -1;
 		//find last child or return if no more children
 		var cutoff = Math.max(lastDot, lastOB, lastCB);
 		if(cutoff <= 0) return;
@@ -65,7 +68,7 @@ var StateManager = {
 		try {
 			eval('('+parentPath+') = {}');
 		} catch (e) {
-			//need to go up another level and make parent of whichParent
+			//need to go up another level and make parent of parent
 			$SM.createParent(stateName.substr(0,cutoff));
 			//then it will definitely work if not, something is fubar
 			eval('('+parentPath+') = {}');
@@ -121,11 +124,17 @@ var StateManager = {
 	//shortcut for altering number values, return 1 if state wasn't a number
 	add: function(stateName, value, noEvent) {
 		var err = 0;
-		//0 if undefined, null (but not {}) should allow adding to new objects, helps avoid existence checks and NaN for stores
-		//could also add in a true = 1 thing, to have something go from existing (true) to be a count, but that might be unwanted behavior
+		//0 if undefined, null (but not {}) should allow adding to new objects
+		//could also add in a true = 1 thing, to have something go from existing (true)
+		//to be a count, but that might be unwanted behavior (add with loose eval probably will happen anyways)
 		var old = $SM.get(stateName, true);
 		
-		if(typeof old != 'number' || typeof value != 'number'){
+		//check for NaN (old == old) and non number values
+		if(old == old){
+			Engine.log('WARNING: '+stateName+' was corrupted (NaN). Resetting to 0.');
+			old = 0;
+			$SM.set(stateName, old + value, noEvent);//setState handles event and save
+		} else if(typeof old != 'number' || typeof value != 'number'){
 			Engine.log('WARNING: Can not do math with state:'+stateName+' or value:'+value+' because at least one is not a number.');
 			err = 1
 		} else {
@@ -170,7 +179,7 @@ var StateManager = {
 		else return whichState;
 	},
 	
-	remove: function(stateName) {
+	remove: function(stateName, noEvent) {
 		var whichState = $SM.buildPath(whichState);
 		try{
 			delete eval(whichState);
@@ -178,8 +187,10 @@ var StateManager = {
 			//it didn't exist in the first place
 			Engine.log('WARNING: Tried to remove non-existant state \''+stateName+'\'.');
 		}
-		Engine.saveGame();
-		$SM.fireUpdate(stateName);
+		if(!noEvent){
+			Engine.saveGame();
+			$SM.fireUpdate(stateName);
+		};
 	},
 	
 	//creates full reference from input
@@ -198,6 +209,122 @@ var StateManager = {
 				'stateName': stateName, 
 		});
 		if(save) Engine.saveGame();
+	},
+	
+	//Use this function to make old save games compatible with new version
+	updateOldState: function(){
+		var version = $SM.get('version');
+		if(typeof version != 'number') version = 1.0;
+		if(version == 1.0) {
+			// v1.1 introduced the Lodge, so get rid of lodgeless hunters
+			$SM.remove('outside.workers.hunter', true);
+			$SM.remove('income.hunter', true);
+			Engine.log('upgraded save to v1.1');
+			version = 1.1;
+		};
+		if(version == 1.1) {
+			//v1.2 added the Swamp to the map, so add it to already generated maps
+			if($SM.get('world')) {
+				World.placeLandmark(15, World.RADIUS * 1.5, World.TILE.SWAMP, $SM.get('world.map'));
+			}
+			Engine.log('upgraded save to v1.2');
+			version = 1.2;
+		};
+		if(version == 1.2) {
+			//StateManager added, so move data to new locations
+		};
+	},
+	
+	/******************************************************************
+	 * Start of specific state functions
+	 ******************************************************************/
+	//PERKS
+	addPerk: function(name) {
+		$SM.set('character.perks[\''+name+'\']', true);
+		Notifications.notify(null, Engine.Perks[name].notify);
+	},
+	
+	hasPerk: function(name) {
+		return $SM.get('character.perks[\''+name+'\']') == true;
+	},
+	
+	//INCOME
+	setIncome: function(source, options) {
+		var existing = $SM.get('income[\''+source+'\']');
+		if(typeof existing != 'undefined') {
+			options.timeLeft = existing.timeLeft;
+		}
+		$SM.set('income[\''+source+'\']', options);
+	},
+	
+	getIncome: function(source) {
+		var existing = $SM.get('income[\''+source+'\']');
+		if(typeof existing != 'undefined') {
+			return existing;
+		}
+		return {};
+	},
+	
+	collectIncome: function() {
+		if(typeof $SM.get('income') != 'undefined' && Engine.activeModule != Space) {
+			for(var source in $SM.get('income')) {
+				var income = $SM.get('income[\''+source+'\']');
+				if(typeof income.timeLeft != 'number')
+				{
+					income.timeLeft = 0;
+				}
+				income.timeLeft--;
+				
+				if(income.timeLeft <= 0) {
+					Engine.log('collection income from ' + source);
+					if(source == 'thieves')	$SM.addStolen(income.stores);
+					$SM.addM('stores', income.stores);
+					if(typeof income.delay == 'number') {
+						income.timeLeft = income.delay;
+					}
+				}
+			}
+		}
+		Engine._incomeTimeout = setTimeout($SM.collectIncome, 1000);
+	},
+	
+	//Thieves
+	addStolen: function(stores) {
+		for(var k in stores) {
+			var old = $SM.get('stores[\''+k+'\']', true);
+			var short = old - stores[k];
+			//if they would steal more than actually owned
+			if(short < 0){
+				$SM.add('game.stolen[\''+k+'\']', (stores[k] * -1) + short);
+			} else {
+				$SM.add('game.stolen[\''+k+'\']', stores[k] * -1);
+			}
+		};
+	},
+	
+	startThieves: function() {
+		$SM.set('game.thieves', 1);
+		$SM.setIncome('thieves', {
+			delay: 10,
+			stores: {
+				'wood': -10,
+				'fur': -5,
+				'meat': -5
+			}
+		});
+	},
+	
+	//Misc
+	num: function(name, craftable) {
+		switch(craftable.type) {
+		case 'good':
+		case 'tool':
+		case 'weapon':
+		case 'upgrade':
+			return $SM.get('stores[\''+name+'\']', true);
+		case 'building':
+			return Outside.numBuilding(name);
+		}
 	},
 	
 	handleStateUpdates: function(e){

@@ -51,6 +51,12 @@ var Path = {
 		Engine.updateSlider();
 	},
 	
+	openPath: function() {
+		Path.init();
+		Engine.event('progress', 'path');
+		Notifications.notify(Room, 'the compass points ' + World.dir);
+	},
+	
 	getWeight: function(thing) {
 		var w = Path.Weight[thing];
 		if(typeof w != 'number') w = 1;
@@ -59,11 +65,11 @@ var Path = {
 	},
 	
 	getCapacity: function() {
-		if(Engine.getStore('convoy') > 0) {
+		if($SM.get('stores.convoy', true) > 0) {
 			return Path.DEFAULT_BAG_SPACE + 60;
-		} else if(Engine.getStore('wagon') > 0) {
+		} else if($SM.get('stores.wagon', true) > 0) {
 			return Path.DEFAULT_BAG_SPACE + 30;
-		} else if(Engine.getStore('rucksack') > 0) {
+		} else if($SM.get('stores.rucksack', true) > 0) {
 			return Path.DEFAULT_BAG_SPACE + 10;
 		}
 		return Path.DEFAULT_BAG_SPACE;
@@ -121,11 +127,11 @@ var Path = {
 		
 		// Add the armour row
 		var armour = "none";
-		if(Engine.getStore('s armour') > 0)
+		if($SM.get('stores[\'s armour\']', true) > 0)
 			armour = "steel";
-		else if(Engine.getStore('i armour') > 0)
+		else if($SM.get('stores[\'i armour\']', true) > 0)
 			armour = "iron";
-		else if(Engine.getStore('l armour') > 0)
+		else if($SM.get('stores[\'l armour']', true) > 0)
 			armour = "leather";
 		var aRow = $('#armourRow');
 		if(aRow.length == 0) {
@@ -169,7 +175,7 @@ var Path = {
 			var have = $SM.get('stores[\''+k+'\']');
 			var num = Path.outfit[k];
 			num = typeof num == 'number' ? num : 0;
-			var numAvailable = Engine.getStore(k);
+			var numAvailable = $SM.get('stores[\''+k+'\']', true);
 			var row = $('div#outfit_row_' + k.replace(' ', '-'), outfit);
 			if((store.type == 'tool' || store.type == 'weapon') && have > 0) {
 				total += num * Path.getWeight(k);
@@ -238,7 +244,7 @@ var Path = {
 		$('<div>').addClass('dnManyBtn').appendTo(val).click([10], Path.decreaseSupply);
 		$('<div>').addClass('clear').appendTo(row);
 		
-		var numAvailable = Engine.getStore(name);
+		var numAvailable = $SM.get('stores[\''+name+'\']', true);
 		var tt = $('<div>').addClass('tooltip bottom right').appendTo(row);
 		$('<div>').addClass('row_key').text('weight').appendTo(tt);
 		$('<div>').addClass('row_val').text(Path.getWeight(name)).appendTo(tt);
@@ -253,9 +259,9 @@ var Path = {
 		Engine.log('increasing ' + supply + ' by up to ' + btn.data);
 		var cur = Path.outfit[supply];
 		cur = typeof cur == 'number' ? cur : 0;
-		if(Path.getFreeSpace() >= Path.getWeight(supply) && cur < Engine.getStore(supply)) {
+		if(Path.getFreeSpace() >= Path.getWeight(supply) && cur < $SM.get('stores[\''+supply+'\']', true)) {
 		  var maxExtraByWeight = Math.floor(Path.getFreeSpace() / Path.getWeight(supply));
-		  var maxExtraByStore  = Engine.getStore(supply) - cur;
+		  var maxExtraByStore  = $SM.get('stores[\''+supply+'\']', true) - cur;
 		  var maxExtraByBtn    = btn.data;
 			Path.outfit[supply] = cur + Math.min(maxExtraByBtn, Math.min(maxExtraByWeight, maxExtraByStore));
 			Path.updateOutfitting();
@@ -287,10 +293,19 @@ var Path = {
 	
 	embark: function() {
 		for(var k in Path.outfit) {
-			Engine.addStore(k, -Path.outfit[k]);
+			$SM.add('stores[\''+k+'\']', -Path.outfit[k]);
 		}
 		World.onArrival();
 		$('#outerSlider').animate({left: '-700px'}, 300);
 		Engine.activeModule = World;
-	}
-}
+	},
+	
+	handleStateUpdates: function(e){
+		if(e.stateName.indexOf('character.perks') == 0 && Engine.activeModule == Path){
+			Path.updatePerks();
+		};
+	},
+};
+
+//listener for StateManager update events
+$(Path).on('stateUpdate', Path.handleStateUpdates);
