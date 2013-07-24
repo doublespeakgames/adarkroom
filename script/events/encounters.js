@@ -12,7 +12,7 @@ Events.Encounters = [
  			'start': {
  				combat: true,
  				enemy: 'snarling beast',
- 				char: 'B',
+ 				chara: 'B',
  				damage: 1,
  				hit: 0.8,
  				attackDelay: 1,
@@ -47,7 +47,7 @@ Events.Encounters = [
   			'start': {
   				combat: true,
   				enemy: 'gaunt man',
-  				char: 'G',
+  				chara: 'G',
   				damage: 2,
   				hit: 0.8,
   				attackDelay: 2,
@@ -82,7 +82,7 @@ Events.Encounters = [
   			'start': {
   				combat: true,
   				enemy: 'strange bird',
-  				char: 'B',
+  				chara: 'B',
   				damage: 3,
   				hit: 0.8,
   				attackDelay: 2,
@@ -118,7 +118,7 @@ Events.Encounters = [
   			'start': {
   				combat: true,
   				enemy: 'shivering man',
-  				char: 'S',
+  				chara: 'S',
   				damage: 5,
   				hit: 0.5,
   				attackDelay: 1,
@@ -158,7 +158,7 @@ Events.Encounters = [
  			'start': {
  				combat: true,
  				enemy: 'man-eater',
- 				char: 'E',
+ 				chara: 'E',
  				damage: 3,
  				hit: 0.8,
  				attackDelay: 1,
@@ -193,7 +193,7 @@ Events.Encounters = [
   			'start': {
   				combat: true,
   				enemy: 'scavenger',
-  				char: 'S',
+  				chara: 'S',
   				damage: 4,
   				hit: 0.8,
   				attackDelay: 2,
@@ -233,7 +233,7 @@ Events.Encounters = [
   			'start': {
   				combat: true,
   				enemy: 'lizard',
-  				char: 'L',
+  				chara: 'L',
   				damage: 5,
   				hit: 0.8,
   				attackDelay: 2,
@@ -269,7 +269,7 @@ Events.Encounters = [
  			'start': {
  				combat: true,
  				enemy: 'feral terror',
- 				char: 'F',
+ 				chara: 'F',
  				damage: 6,
  				hit: 0.8,
  				attackDelay: 1,
@@ -305,7 +305,7 @@ Events.Encounters = [
   				combat: true,
   				enemy: 'soldier',
 				ranged: true,
-  				char: 'D',
+  				chara: 'D',
   				damage: 8,
   				hit: 0.8,
   				attackDelay: 2,
@@ -345,7 +345,7 @@ Events.Encounters = [
   			'start': {
   				combat: true,
   				enemy: 'sniper',
-  				char: 'S',
+  				chara: 'S',
   				damage: 15,
   				hit: 0.8,
   				attackDelay: 4,
@@ -376,5 +376,5 @@ Events.Encounters = [
   				notification: 'a shot rings out, from somewhere in the long grass'
   			}
 		}
-  	},
+  	}
 ];
