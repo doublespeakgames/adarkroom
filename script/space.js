@@ -216,7 +216,7 @@ var Space = {
 		
 		Space.ship.css({
 			left: x + 'px',
-			top: y + 'px',
+			top: y + 'px'
 		});
 		
 		Space.lastMove = Date.now();

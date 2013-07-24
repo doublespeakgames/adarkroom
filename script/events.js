@@ -74,7 +74,7 @@ var Events = {
 		Events.createFighterDiv('@', World.health, World.getMaxHealth()).attr('id', 'wanderer').appendTo(desc);
 		
 		// Draw the enemy
-		Events.createFighterDiv(scene.char, scene.health, scene.health).attr('id', 'enemy').appendTo(desc);
+		Events.createFighterDiv(scene.chara, scene.health, scene.health).attr('id', 'enemy').appendTo(desc);
 		
 		// Draw the action buttons
 		var btns = $('#buttons', Events.eventPanel());
@@ -592,8 +592,8 @@ var Events = {
 		} 
 	},
 	
-	createFighterDiv: function(char, hp, maxhp) {
-		var fighter = $('<div>').addClass('fighter').text(char).data('hp', hp).data('maxHp', maxhp);
+	createFighterDiv: function(chara, hp, maxhp) {
+		var fighter = $('<div>').addClass('fighter').text(chara).data('hp', hp).data('maxHp', maxhp);
 		$('<div>').addClass('hp').text(hp+'/'+maxhp).appendTo(fighter);
 		return fighter;
 	},

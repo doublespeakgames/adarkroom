@@ -111,7 +111,7 @@ Events.Setpieces = {
 			'a1': {
 				combat: true,
 				enemy: 'beast',
-				char: 'B',
+				chara: 'B',
 				damage: 1,
 				hit: 0.8,
 				attackDelay: 1,
@@ -249,7 +249,7 @@ Events.Setpieces = {
 			'b3': {
 				combat: true,
 				enemy: 'beast',
-				char: 'B',
+				chara: 'B',
 				damage: 1,
 				hit: 0.8,
 				attackDelay: 1,
@@ -281,7 +281,7 @@ Events.Setpieces = {
 			'b4': {
 				combat: true,
 				enemy: 'cave lizard',
-				char: 'L',
+				chara: 'L',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 2,
@@ -313,7 +313,7 @@ Events.Setpieces = {
 			'c1': {
 				combat: true,
 				enemy: 'beast',
-				char: 'B',
+				chara: 'B',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 2,
@@ -345,7 +345,7 @@ Events.Setpieces = {
 			'c2': {
 				combat: true,
 				enemy: 'lizard',
-				char: 'L',
+				chara: 'L',
 				damage: 4,
 				hit: 0.8,
 				attackDelay: 2,
@@ -541,7 +541,7 @@ Events.Setpieces = {
 			'a2': {
 				combat: true,
 				enemy: 'thug',
-				char: 'T',
+				chara: 'T',
 				damage: 4,
   				hit: 0.8,
   				attackDelay: 2,
@@ -632,7 +632,7 @@ Events.Setpieces = {
 			'b2': {
 				combat: true,
 				enemy: 'scavenger',
-				char: 'S',
+				chara: 'S',
 				damage: 4,
   				hit: 0.8,
   				attackDelay: 2,
@@ -669,7 +669,7 @@ Events.Setpieces = {
 			'b3': {
 				combat: true,
 				enemy: 'beast',
-				char: 'B',
+				chara: 'B',
 				damage: 3,
   				hit: 0.8,
   				attackDelay: 1,
@@ -739,7 +739,7 @@ Events.Setpieces = {
 			'b5': {
 				combat: true,
 				enemy: 'madman',
-				char: 'M',
+				chara: 'M',
 				damage: 6,
   				hit: 0.3,
   				attackDelay: 1,
@@ -776,7 +776,7 @@ Events.Setpieces = {
 			'c1': {
 				combat: true,
 				enemy: 'thug',
-				char: 'T',
+				chara: 'T',
 				damage: 4,
   				hit: 0.8,
   				attackDelay: 2,
@@ -813,7 +813,7 @@ Events.Setpieces = {
 			'c2': {
 				combat: true,
 				enemy: 'beast',
-				char: 'B',
+				chara: 'B',
 				damage: 3,
   				hit: 0.8,
   				attackDelay: 1,
@@ -862,7 +862,7 @@ Events.Setpieces = {
 			'c4': {
 				combat: true,
 				enemy: 'beast',
-				char: 'B',
+				chara: 'B',
 				damage: 4,
   				hit: 0.8,
   				attackDelay: 1,
@@ -933,7 +933,7 @@ Events.Setpieces = {
 			'd1': {
 				combat: true,
 				enemy: 'scavenger',
-				char: 'S',
+				chara: 'S',
 				damage: 5,
   				hit: 0.8,
   				attackDelay: 2,
@@ -970,7 +970,7 @@ Events.Setpieces = {
 			'd2': {
 				combat: true,
 				enemy: 'vigilante',
-				char: 'V',
+				chara: 'V',
 				damage: 6,
   				hit: 0.8,
   				attackDelay: 2,
@@ -1242,7 +1242,7 @@ Events.Setpieces = {
 			'a3': {
 				text: [
 			       'a large shanty town sprawls across the streets.',
-			       'faces, darkened by soot and blood, stare out from crooked huts.',
+			       'faces, darkened by soot and blood, stare out from crooked huts.'
 		        ],
 		        buttons: {
 					'continue': {	
@@ -1292,7 +1292,7 @@ Events.Setpieces = {
 				combat: true,
 				notification: 'a huge lizard scrambles up out of the darkness of an old metro station.',
 				enemy: 'lizard',
-				char: 'L',
+				chara: 'L',
 				damage: 5,
   				hit: 0.8,
   				attackDelay: 2,
@@ -1329,7 +1329,7 @@ Events.Setpieces = {
 				notification: 'the shot echoes in the empty street.',
 				combat: true,
   				enemy: 'sniper',
-  				char: 'S',
+  				chara: 'S',
   				damage: 15,
   				hit: 0.8,
   				attackDelay: 4,
@@ -1368,7 +1368,7 @@ Events.Setpieces = {
 				combat: true,
   				enemy: 'soldier',
 				ranged: true,
-  				char: 'D',
+  				chara: 'D',
   				damage: 8,
   				hit: 0.8,
   				attackDelay: 2,
@@ -1405,7 +1405,7 @@ Events.Setpieces = {
 				notification: 'a frail man stands defiantly, blocking the path.',
 				combat: true,
   				enemy: 'frail man',
-  				char: 'M',
+  				chara: 'M',
   				damage: 1,
   				hit: 0.8,
   				attackDelay: 2,
@@ -1479,7 +1479,7 @@ Events.Setpieces = {
 				notification: 'an old man bursts through a door, wielding a scalpel.',
 				combat: true,
 				enemy: 'old man',
-  				char: 'M',
+  				chara: 'M',
   				damage: 3,
   				hit: 0.5,
   				attackDelay: 2,
@@ -1516,7 +1516,7 @@ Events.Setpieces = {
 				notification: 'a thug is waiting on the other side of the wall.',
 				combat: true,
 				enemy: 'thug',
-  				char: 'T',
+  				chara: 'T',
   				damage: 3,
   				hit: 0.8,
   				attackDelay: 2,
@@ -1554,7 +1554,7 @@ Events.Setpieces = {
 				notification: 'a snarling beast jumps out from behind a car.',
 				combat: true,
 				enemy: 'beast',
-  				char: 'B',
+  				chara: 'B',
   				damage: 2,
   				hit: 0.8,
   				attackDelay: 1,
@@ -1765,7 +1765,7 @@ Events.Setpieces = {
 				combat: true,
 				enemy: 'squatters',
 				plural: true,
-				char: 'SSS',
+				chara: 'SSS',
 				damage: 2,
 				hit: 0.7,
 				attackDelay: 0.5,
@@ -1804,7 +1804,7 @@ Events.Setpieces = {
 				combat: true,
 				enemy: 'lizards',
 				plural: true,
-				char: 'LLL',
+				chara: 'LLL',
 				damage: 4,
 				hit: 0.7,
 				attackDelay: 0.7,
@@ -1865,7 +1865,7 @@ Events.Setpieces = {
 				notification: 'a large bird nests at the top of the stairs.',
 				combat: true,
 				enemy: 'bird',
-  				char: 'B',
+  				chara: 'B',
   				damage: 5,
   				hit: 0.7,
   				attackDelay: 1,
@@ -1933,7 +1933,7 @@ Events.Setpieces = {
 				combat: true,
 				enemy: 'rats',
 				plural: true,
-  				char: 'RRR',
+  				chara: 'RRR',
   				damage: 1,
   				hit: 0.8,
   				attackDelay: 0.25,
@@ -1966,7 +1966,7 @@ Events.Setpieces = {
 				notification: 'a large man attacks, waving a bayonet.',
 				combat: true,
 				enemy: 'veteran',
-				char: 'V',
+				chara: 'V',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 2,
@@ -2000,7 +2000,7 @@ Events.Setpieces = {
 				combat: true,
   				enemy: 'soldier',
 				ranged: true,
-  				char: 'D',
+  				chara: 'D',
   				damage: 8,
   				hit: 0.8,
   				attackDelay: 2,
@@ -2038,7 +2038,7 @@ Events.Setpieces = {
 				notification: 'a masked soldier rounds the corner, gun drawn',
 				combat: true,
 				enemy: 'commando',
-				char: 'C',
+				chara: 'C',
 				ranged: true,
 				damage: 3,
 				hit: 0.9,
@@ -2078,7 +2078,7 @@ Events.Setpieces = {
 				combat: true,
 				enemy: 'squatters',
 				plural: true,
-				char: 'SSS',
+				chara: 'SSS',
 				damage: 2,
 				hit: 0.7,
 				attackDelay: 0.5,
@@ -2111,7 +2111,7 @@ Events.Setpieces = {
 				notification: 'a youth lashes out with a tree branch.',
 				combat: true,
 				enemy: 'youth',
-				char: 'Y',
+				chara: 'Y',
 				damage: 2,
 				hit: 0.7,
 				attackDelay: 1,
@@ -2144,7 +2144,7 @@ Events.Setpieces = {
 				notification: 'a squatter stands firmly in the doorway of a small hut.',
 				combat: true,
 				enemy: 'squatter',
-				char: 'S',
+				chara: 'S',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 2,
@@ -2177,7 +2177,7 @@ Events.Setpieces = {
 				notification: 'behind the door, a deformed figure awakes and attacks.',
 				combat: true,
 				enemy: 'deformed',
-				char: 'D',
+				chara: 'D',
 				damage: 8,
 				hit: 0.6,
 				attackDelay: 2,
@@ -2217,7 +2217,7 @@ Events.Setpieces = {
 				combat: true,
 				enemy: 'tentacles',
 				plural: true,
-				char: 'TTT',
+				chara: 'TTT',
 				damage: 2,
 				hit: 0.6,
 				attackDelay: 0.5,
@@ -2817,7 +2817,7 @@ Events.Setpieces = {
     				nextScene: 'end'
     			}
 		    }
-			},
+			}
 		}	
 	},
 	"house": { /* Abandoned House */
@@ -2838,7 +2838,7 @@ Events.Setpieces = {
 						text: 'leave',
 						nextScene: 'end'
 					}
-				},
+				}
 			},
 			'supplies': {
 				text: [
@@ -2899,7 +2899,7 @@ Events.Setpieces = {
 			'occupied': {
 				combat: true,
 				enemy: 'squatter',
-				char: 'S',
+				chara: 'S',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 2,
@@ -3061,7 +3061,7 @@ Events.Setpieces = {
 				combat: true,
   				enemy: 'soldier',
 				ranged: true,
-  				char: 'D',
+  				chara: 'D',
   				damage: 8,
   				hit: 0.8,
   				attackDelay: 2,
@@ -3099,7 +3099,7 @@ Events.Setpieces = {
 				combat: true,
   				enemy: 'soldier',
 				ranged: true,
-  				char: 'D',
+  				chara: 'D',
   				damage: 8,
   				hit: 0.8,
   				attackDelay: 2,
@@ -3136,7 +3136,7 @@ Events.Setpieces = {
 			'a3': {
 				combat: true,
 				enemy: 'veteran',
-				char: 'V',
+				chara: 'V',
 				damage: 10,
 				hit: 0.8,
 				attackDelay: 2,
@@ -3204,7 +3204,7 @@ Events.Setpieces = {
 			'a1': {
 				combat: true,
 				enemy: 'man',
-				char: 'M',
+				chara: 'M',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 2,
@@ -3236,7 +3236,7 @@ Events.Setpieces = {
 			'a2': {
 				combat: true,
  				enemy: 'man',
- 				char: 'M',
+ 				chara: 'M',
  				damage: 3,
  				hit: 0.8,
  				attackDelay: 2,
@@ -3268,7 +3268,7 @@ Events.Setpieces = {
 			'a3': {
 				combat: true,
  				enemy: 'chief',
- 				char: 'C',
+ 				chara: 'C',
  				damage: 5,
  				hit: 0.8,
  				attackDelay: 2,
@@ -3343,7 +3343,7 @@ Events.Setpieces = {
  			'enter': {
  				combat: true,
  				enemy: 'beastly matriarch',
- 				char: 'M',
+ 				chara: 'M',
  				damage: 4,
  				hit: 0.8,
  				attackDelay: 2,
