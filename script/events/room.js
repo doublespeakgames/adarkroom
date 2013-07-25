@@ -285,7 +285,7 @@ Events.Room = [
 			},
 			'100wood': {
 				text: [
-			       'the wanderer leaves, cart loaded with wood',
+			       'the wanderer leaves, cart loaded with wood'
 			    ],
 			    onLoad: function() {
 			    	if(Math.random() < 0.5) {
@@ -304,7 +304,7 @@ Events.Room = [
 			},
 			'500wood': {
 				text: [
-				       'the wanderer leaves, cart loaded with wood',
+				       'the wanderer leaves, cart loaded with wood'
 			    ],
 			    onLoad: function() {
 			    	if(Math.random() < 0.3) {
@@ -355,7 +355,7 @@ Events.Room = [
 			},
 			'100fur': {
 				text: [
-			       'the wanderer leaves, cart loaded with furs',
+			       'the wanderer leaves, cart loaded with furs'
 			    ],
 			    onLoad: function() {
 			    	if(Math.random() < 0.5) {
@@ -374,7 +374,7 @@ Events.Room = [
 			},
 			'500fur': {
 				text: [
-				       'the wanderer leaves, cart loaded with furs',
+				       'the wanderer leaves, cart loaded with furs'
 			    ],
 			    onLoad: function() {
 			    	if(Math.random() < 0.3) {
