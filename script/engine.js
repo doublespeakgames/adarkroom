@@ -172,7 +172,7 @@ var Engine = {
 			}
 		} catch(e) {
 			State = {};
-			$SM.set('verson', Engine.VERSION);
+			$SM.set('version', Engine.VERSION);
 			Engine.event('progress', 'new game');
 		}
 	},

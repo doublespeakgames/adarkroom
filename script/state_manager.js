@@ -34,7 +34,7 @@ var StateManager = {
 				'income',
 				'timers',
 				'game', //mostly location related: fire temp, workers, population, world map, etc
-				'playStats', //anything play related: play time, loads, etc
+				'playStats' //anything play related: play time, loads, etc
 				];
 		
 		for(var which in cats) {
@@ -45,37 +45,18 @@ var StateManager = {
 		$.Dispatch('stateUpdate').subscribe($SM.handleStateUpdates);
 	},
 	
-	//create the parent of a given state, recursive as needed
-	createParent: function(stateName) {
-		var err = 0;
-		
-		//parse path to find last child
-		var lastDot = stateName.lastIndexOf('.'); //if ends with a dot, there is a coding bug, not like ending in a bracket, so don't account for it
-		if(lastDot == stateName.length) {
-			Engine.log('ERROR: '+stateName+' is invalid. Cannot end in a dot.');
-			return;
+	//create all parents and then set state
+	createState: function(stateName, value) {
+		var words = stateName.split(/[.\[\]']+/);
+		var obj = State;
+		var w = null;
+		for(var i=0, len=words.length-1;i<len;i++){
+			w = words[i];
+			if(obj[w] === undefined ) obj[w] = {};
+			obj = obj[w];
 		}
-		var lastOB = stateName.lastIndexOf('[');
-		//make sure last bracket isn't just end of the line
-		var lastCB = stateName.substr(0, stateName.length -1).lastIndexOf(']');
-		//account for state[foo][bar] double bracket and state[foo].bar
-		if(lastCB == lastOB - 1) lastOB = -1;
-		if(lastCB == lastDot -1) lastDot = -1;
-		//find last child or return if no more children
-		var cutoff = Math.max(lastDot, lastOB, lastCB);
-		if(cutoff <= 0) return;
-		
-		var parentPath = $SM.buildPath(stateName.substr(0,cutoff));
-			
-		//try creating the parent
-		try {
-			eval('('+parentPath+') = {}');
-		} catch (e) {
-			//need to go up another level and make parent of parent
-			$SM.createParent(stateName.substr(0,cutoff));
-			//then it will definitely work if not, something is fubar
-			eval('('+parentPath+') = {}');
-		}
+		obj[words[i]] = value;
+		return obj;
 	},
 	
 	//set single state
@@ -90,9 +71,7 @@ var StateManager = {
 			eval('('+fullPath+') = value');
 		} catch (e) {
 			//parent doesn't exist, so make parent
-			$SM.createParent(stateName);
-			//now it will definitely work. if not, something is broken
-			eval('('+fullPath+') = value');
+			$SM.createState(stateName, value);
 		}
 		
 		//stores values can not be negative
@@ -136,7 +115,7 @@ var StateManager = {
 		if(old != old){
 			Engine.log('WARNING: '+stateName+' was corrupted (NaN). Resetting to 0.');
 			old = 0;
-			$SM.set(stateName, old + value, noEvent);//setState handles event and save
+			$SM.set(stateName, old + value, noEvent);
 		} else if(typeof old != 'number' || typeof value != 'number'){
 			Engine.log('WARNING: Can not do math with state:'+stateName+' or value:'+value+' because at least one is not a number.');
 			err = 1
@@ -207,10 +186,6 @@ var StateManager = {
 		var category = $SM.getCategory(stateName);
 		if(stateName == undefined) stateName = category = 'all'; //best if this doesn't happen as it will trigger more stuff
 		$.Dispatch('stateUpdate').publish({'category': category, 'stateName':stateName})
-		//$.event.trigger({
-		//		type: "stateUpdate",
-		//		'stateName': stateName 
-		//});
 		if(save) Engine.saveGame();
 	},
 	

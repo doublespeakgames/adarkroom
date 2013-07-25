@@ -163,9 +163,7 @@ var Outside = {
 	},
 	
 	numBuilding: function(bName) {
-		return $SM.get('features.location.outside') && 
-			$SM.get('game.outside.buildings') && 
-			$SM.get('game.outside.buildings[\''+bName+'\']', true);
+		return $SM.get('game.outside.buildings[\''+bName+'\']', true);
 	},
 	
 	addBuilding: function(bName, num) {
