@@ -487,6 +487,9 @@ var Room = {
 		// Create the stores container
 		$('<div>').attr('id', 'storesContainer').appendTo('div#roomPanel');
 		
+		//subscribe to stateUpdates
+		$.Dispatch('stateUpdate').subscribe(Room.handleStateUpdates);
+		
 		Room.updateButton();
 		Room.updateStoresView();
 		Room.updateIncomeView();
@@ -606,7 +609,7 @@ var Room = {
 	_fireTimer: null,
 	_tempTimer: null,
 	lightFire: function() {
-		var wood = $SM.get('stores.wood', true);
+		var wood = $SM.get('stores.wood');
 		if(wood < 5) {
 			Notifications.notify(Room, "not enough wood to get the fire going");
 			Button.clearCooldown($('#lightButton.button'));
@@ -619,7 +622,7 @@ var Room = {
 	},
 	
 	stokeFire: function() {
-		var wood = $SM.get('stores.wood', true);
+		var wood = $SM.get('stores.wood');
 		if(wood === 0) {
 			Notifications.notify(Room, "the wood has run out");
 			Button.clearCooldown($('#stokeButton.button'));
@@ -956,7 +959,7 @@ var Room = {
 			return false;
 		}
 		for(var c in cost) {
-			if(!$SM.get('stores[\''+c'\']')) {
+			if(!$SM.get('stores[\''+c+'\']')) {
 				return false;
 			}
 		}
@@ -1082,15 +1085,11 @@ var Room = {
 	},
 	
 	handleStateUpdates: function(e){
-		//updates to run on stores changes
-		if(e.stateName.indexOf('stores') == 0){
+		if(e.category == 'stores'){
 			Room.updateStoresView();
 			Room.updateBuildButtons();
-		} else if(e.stateName.indexOf('income') == 0){
+		} else if(e.category == 'income'){
 			Room.updateIncomeView();
 		};
-	},
+	}
 };
-
-//listener for StateManager update events
-$(Room).on('stateUpdate', Room.handleStateUpdates);

@@ -16,7 +16,7 @@ var Ship = {
 		);
 		
 		if(!$SM.get('features.location.spaceShip')) {
-			$SM.set('features.location.spaceShip', true);
+			$SM.set('features.location.spaceShip');
 			$SM.setM('game.spaceShip', {
 				hull: Ship.BASE_HULL,
 				thrusters: Ship.BASE_THRUSTERS
@@ -78,6 +78,9 @@ var Ship = {
 		
 		// Init Space
 		Space.init();
+		
+		//subscribe to stateUpdates
+		$.Dispatch('stateUpdate').subscribe(Ship.handleStateUpdates);
 	},
 	
 	options: {}, // Nothing for now
@@ -168,8 +171,5 @@ var Ship = {
 	
 	handleStateUpdates: function(e){
 		
-	},
+	}
 };
-
-//listener for StateManager update events
-$(Ship).on('stateUpdate', Ship.handleStateUpdates);

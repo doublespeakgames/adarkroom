@@ -49,6 +49,9 @@ var Path = {
 		Path.outfit = {};
 		
 		Engine.updateSlider();
+		
+		//subscribe to stateUpdates
+		$.Dispatch('stateUpdate').subscribe(Path.handleStateUpdates);
 	},
 	
 	openPath: function() {
@@ -131,7 +134,7 @@ var Path = {
 			armour = "steel";
 		else if($SM.get('stores[\'i armour\']', true) > 0)
 			armour = "iron";
-		else if($SM.get('stores[\'l armour']', true) > 0)
+		else if($SM.get('stores[\'l armour\']', true) > 0)
 			armour = "leather";
 		var aRow = $('#armourRow');
 		if(aRow.length == 0) {
@@ -301,11 +304,8 @@ var Path = {
 	},
 	
 	handleStateUpdates: function(e){
-		if(e.stateName.indexOf('character.perks') == 0 && Engine.activeModule == Path){
+		if(e.category == 'character' && e.stateName.indexOf('character.perks') == 0 && Engine.activeModule == Path){
 			Path.updatePerks();
 		};
-	},
+	}
 };
-
-//listener for StateManager update events
-$(Path).on('stateUpdate', Path.handleStateUpdates);

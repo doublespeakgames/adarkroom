@@ -129,7 +129,7 @@ var World = {
 		World.LANDMARKS[World.TILE.SWAMP] = {num: 1, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'swamp', label: 'A&nbsp;Murky&nbsp;Swamp'};
 		
 		if(typeof $SM.get('features.location.world') == 'undefined') {
-			$SM.set('features.location.world', true);
+			$SM.set('features.location.world');
 			$SM.setM('game.world', {
 				map: World.generateMap(),
 				mask: World.newMask()
@@ -149,6 +149,9 @@ var World = {
 		$('<div>').attr('id', 'healthCounter').appendTo(outer);
 		
 		Engine.updateOuterSlider();
+		
+		//subscribe to stateUpdates
+		$.Dispatch('stateUpdate').subscribe(World.handleStateUpdates);
 	},
 	
 	clearDungeon: function() {
@@ -870,7 +873,7 @@ var World = {
 			return World.BASE_HEALTH + 35;
 		} else if($SM.get('stores[\'i armour\']', true) > 0) {
 			return World.BASE_HEALTH + 15;
-		} else if($SM.get('stores[\'l armour']', true) > 0) {
+		} else if($SM.get('stores[\'l armour\']', true) > 0) {
 			return World.BASE_HEALTH + 5;
 		}
 		return World.BASE_HEALTH;
@@ -940,8 +943,5 @@ var World = {
 	
 	handleStateUpdates: function(e){
 		
-	},
+	}
 };
-
-//listener for StateManager update events
-$(World).on('stateUpdate', World.handleStateUpdates);

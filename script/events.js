@@ -26,6 +26,9 @@ var Events = {
 		Events.eventStack = [];
 		
 		Events.scheduleNextEvent();
+		
+		//subscribe to stateUpdates
+		$.Dispatch('stateUpdate').subscribe(Events.handleStateUpdates);
 	},
 	
 	options: {}, // Nothing for now
@@ -806,12 +809,8 @@ var Events = {
     },
     
     handleStateUpdates: function(e){
-    	//updates to run on stores changes if an event is active
-		if(e.stateName.indexOf('stores') == 0 && Events.activeEvent() != null){
+		if(e.category == 'stores' && Events.activeEvent() != null){
 			Events.updateButtons();
 		}
-	},
+	}
 };
-
-//listener for StateManager update events
-$(Events).on('stateUpdate', Events.handleStateUpdates);

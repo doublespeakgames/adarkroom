@@ -41,6 +41,9 @@ var Space = {
 		var h = $('<div>').attr('id', 'hullRemaining').appendTo(this.panel);
 		$('<div>').addClass('row_key').text('hull: ').appendTo(h);
 		$('<div>').addClass('row_val').appendTo(h);
+		
+		//subscribe to stateUpdates
+		$.Dispatch('stateUpdate').subscribe(Space.handleStateUpdates);
 	},
 	
 	options: {}, // Nothing for now
@@ -449,8 +452,5 @@ var Space = {
 	
 	handleStateUpdates: function(e){
 		
-	},
+	}
 };
-
-//listener for StateManager update events
-$(Space).on('stateUpdate', Space.handleStateUpdates);

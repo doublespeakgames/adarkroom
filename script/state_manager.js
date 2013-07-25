@@ -40,6 +40,9 @@ var StateManager = {
 		for(var which in cats) {
 			if(!$SM.get(cats[which])) $SM.set(cats[which], {}); 
 		};
+		
+		//subscribe to stateUpdates
+		$.Dispatch('stateUpdate').subscribe($SM.handleStateUpdates);
 	},
 	
 	//create the parent of a given state, recursive as needed
@@ -129,8 +132,8 @@ var StateManager = {
 		//to be a count, but that might be unwanted behavior (add with loose eval probably will happen anyways)
 		var old = $SM.get(stateName, true);
 		
-		//check for NaN (old == old) and non number values
-		if(old == old){
+		//check for NaN (old != old) and non number values
+		if(old != old){
 			Engine.log('WARNING: '+stateName+' was corrupted (NaN). Resetting to 0.');
 			old = 0;
 			$SM.set(stateName, old + value, noEvent);//setState handles event and save
@@ -200,15 +203,31 @@ var StateManager = {
 		return 'State' + dot + input;
 	},
 	
-	
-	
 	fireUpdate: function(stateName, save){
-		if(stateName == undefined) stateName = 'all'; //best if this doesn't happen as it will trigger more stuff
-		$.event.trigger({
-				'type': 'stateUpdate',
-				'stateName': stateName, 
-		});
+		var category = $SM.getCategory(stateName);
+		if(stateName == undefined) stateName = category = 'all'; //best if this doesn't happen as it will trigger more stuff
+		$.Dispatch('stateUpdate').publish({'category': category, 'stateName':stateName})
+		//$.event.trigger({
+		//		type: "stateUpdate",
+		//		'stateName': stateName 
+		//});
 		if(save) Engine.saveGame();
+	},
+	
+	getCategory: function(stateName){
+		var firstOB = stateName.indexOf('[');
+		var firstDot = stateName.indexOf('.');
+		var cutoff = null;
+		if(firstOB == -1 || firstDot == -1){
+			cutoff = firstOB > firstDot ? firstOB : firstDot;
+		} else {
+			cutoff = firstOB < firstDot ? firstOB : firstDot;
+		}
+		if (cutoff == -1){
+			return stateName;
+		} else {
+			return stateName.substr(0,cutoff);
+		}
 	},
 	
 	//Use this function to make old save games compatible with new version
@@ -329,11 +348,8 @@ var StateManager = {
 	
 	handleStateUpdates: function(e){
 		
-	},
+	}	
 };
 
 //alias
 var $SM = StateManager;
-
-//listener for StateManager update events
-$(StateManager).on('stateUpdate', $SM.handleStateUpdates);

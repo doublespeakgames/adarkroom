@@ -7,9 +7,12 @@ var Engine = {
 	 * 	  That would be so elegant and awesome.
 	 */
 	SITE_URL: encodeURIComponent("http://adarkroom.doublespeakgames.com"),
-	VERSION: 1.2;
+	VERSION: 1.2,
 	MAX_STORE: 99999999999999,
 	SAVE_DISPLAY: 30 * 1000,
+	
+	//object event types
+	topics: {},
 		
 	Perks: {
 		'boxer': {
@@ -112,6 +115,9 @@ var Engine = {
 		swipeElement.on('swiperight', Engine.swipeRight);
 		swipeElement.on('swipeup', Engine.swipeUp);
 		swipeElement.on('swipedown', Engine.swipeDown);
+		
+		//subscribe to stateUpdates
+		$.Dispatch('stateUpdate').subscribe(Engine.handleStateUpdates);
 
 		$SM.init();
 		Notifications.init();
@@ -165,6 +171,7 @@ var Engine = {
 				Engine.log("loaded save!");
 			}
 		} catch(e) {
+			State = {};
 			$SM.set('verson', Engine.VERSION);
 			Engine.event('progress', 'new game');
 		}
@@ -384,11 +391,27 @@ var Engine = {
 	
 	handleStateUpdates: function(e){
 		
-	},
+	}
 };
 
-//listener for StateManager update events
-$(Engine).on('stateUpdate', Engine.handleStateUpdates);
+//create jQuery Callbacks() to handle object events 
+$.Dispatch = function( id ) {
+	var callbacks,
+		method,
+		topic = id && Engine.topics[ id ];
+	if ( !topic ) {
+		callbacks = jQuery.Callbacks();
+		topic = {
+				publish: callbacks.fire,
+				subscribe: callbacks.add,
+				unsubscribe: callbacks.remove
+		};
+		if ( id ) {
+			Engine.topics[ id ] = topic;
+		}
+	}
+	return topic;
+};
 
 $(function() {
 	Engine.init();

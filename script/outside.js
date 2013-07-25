@@ -135,8 +135,11 @@ var Outside = {
 			.addClass('location')
 			.appendTo('div#locationSlider');
 		
+		//subscribe to stateUpdates
+		$.Dispatch('stateUpdate').subscribe(Outside.handleStateUpdates);
+		
 		if(typeof $SM.get('features.location.outside') == 'undefined') {
-			$SM.set('features.location.outside', true);
+			$SM.set('features.location.outside');
 			$SM.setM('game.outside', {
 				buildings: {},
 				population: 0,
@@ -631,12 +634,8 @@ var Outside = {
 	},
 	
 	handleStateUpdates: function(e){
-		//updates to run on stores changes
-		if(e.stateName.indexOf('stores') == 0){
+		if(e.category == 'stores'){
 			Outside.updateVillage();
 		}
-	},
+	}
 };
-
-//listener for StateManager update events
-$(Outside).on('stateUpdate', Outside.handleStateUpdates);
