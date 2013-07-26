@@ -139,7 +139,7 @@ var Outside = {
 		$.Dispatch('stateUpdate').subscribe(Outside.handleStateUpdates);
 		
 		if(typeof $SM.get('features.location.outside') == 'undefined') {
-			$SM.set('features.location.outside');
+			$SM.set('features.location.outside', true);
 			$SM.setM('game.outside', {
 				buildings: {},
 				population: 0,
