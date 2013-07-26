@@ -450,11 +450,6 @@ var Room = {
 		if(typeof $SM.get('features.location.room') == 'undefined') {
 			$SM.set('features.location.room', true);
 			$SM.set('game.builder.level', -1);
-			$SM.set('game.room', {
-				temperature: this.TempEnum.Cold,
-				fire: this.FireEnum.Dead,
-				buttons: {},
-			});
 		}
 		
 		Room.temperature = this.TempEnum.Cold;
@@ -522,8 +517,8 @@ var Room = {
 		}
 		setTimeout($SM.collectIncome, 1000);
 		
-		Notifications.notify(Room, "the room is " + $SM.get('game.room.temperature.text'));
-		Notifications.notify(Room, "the fire is " + $SM.get('game.room.fire.text'));
+		Notifications.notify(Room, "the room is " + Room.temperature.text);
+		Notifications.notify(Room, "the fire is " + Room.fire.text);
 	},
 	
 	options: {}, // Nothing for now
@@ -531,8 +526,8 @@ var Room = {
 	onArrival: function(transition_diff) {
 		Room.setTitle();
 		if(Room.changed) {
-			Notifications.notify(Room, "the fire is " + $SM.get('game.room.fire.text'));
-			Notifications.notify(Room, "the room is " + $SM.get('game.room.temperature.text'));
+			Notifications.notify(Room, "the fire is " + Room.fire.text);
+			Notifications.notify(Room, "the room is " + Room.temperature.text);
 			Room.changed = false;
 		}
 		if($SM.get('game.builder.level') == 3) {
@@ -581,7 +576,7 @@ var Room = {
 	},
 	
 	setTitle: function() {
-		var title = $SM.get('game.room.fire.value') < 2 ? "A Dark Room" : "A Firelit Room";
+		var title = Room.fire.value < 2 ? "A Dark Room" : "A Firelit Room";
 		if(Engine.activeModule == this) {
 			document.title = title;
 		}
@@ -591,7 +586,7 @@ var Room = {
 	updateButton: function() {
 		var light = $('#lightButton.button');
 		var stoke = $('#stokeButton.button');
-		if($SM.get('game.room.fire.value') == Room.FireEnum.Dead.value && stoke.css('display') != 'none') {
+		if(Room.fire.value == Room.FireEnum.Dead.value && stoke.css('display') != 'none') {
 			stoke.hide();
 			light.show();
 			if(stoke.hasClass('disabled')) {
@@ -625,7 +620,7 @@ var Room = {
 		} else if(wood > 4) {
 			$SM.set('stores.wood', wood - 5);
 		}
-		$SM.set('game.room.fire', Room.FireEnum.Burning);
+		Room.fire = Room.FireEnum.Burning;
 		Room.onFireChange();
 	},
 	
@@ -639,8 +634,8 @@ var Room = {
 		if(wood > 0) {
 			$SM.set('stores.wood', wood - 1);
 		}
-		if($SM.get('game.room.fire.value') < 4) {
-			$SM.set('game.room.fire', Room.FireEnum.fromInt($SM.get('game.room.fire.value') + 1));
+		if(Room.fire.value < 4) {
+			Room.fire = Room.FireEnum.fromInt(Room.fire.value + 1);
 		}
 		Room.onFireChange();
 	},
@@ -649,8 +644,8 @@ var Room = {
 		if(Engine.activeModule != Room) {
 			Room.changed = true;
 		}
-		Notifications.notify(Room, "the fire is " + $SM.get('game.room.fire.text'), true);
-		if($SM.get('game.room.fire.value') > 1 && $SM.get('game.builder.level') < 0) {
+		Notifications.notify(Room, "the fire is " + Room.fire.text, true);
+		if(Room.fire.value > 1 && $SM.get('game.builder.level') < 0) {
 			$SM.set('game.builder.level', 0);
 			Notifications.notify(Room, "the light from the fire spills from the windows, out into the dark");
 			setTimeout(Room.updateBuilderState, Room._BUILDER_STATE_DELAY);
@@ -663,33 +658,30 @@ var Room = {
 	
 	coolFire: function() {
 		var wood = $SM.get('stores.wood');
-		var roomFire = $SM.get('game.room.fire');
-		if(roomFire.value <= Room.FireEnum.Flickering.value &&
+		if(Room.fire.value <= Room.FireEnum.Flickering.value &&
 			$SM.get('game.builder.level') > 3 && wood > 0) {
 			Notifications.notify(Room, "builder stokes the fire", true);
 			$SM.set('stores.wood', wood - 1);
-			roomFire = $SM.setget('game.room.fire', Room.FireEnum.fromInt(roomFire.value + 1));
+			Room.fire = Room.FireEnum.fromInt(Room.fire.value + 1);
 		}
-		if(roomFire.value > 0) {
-			$SM.set('game.room.fire', Room.FireEnum.fromInt(roomFire.value - 1));
+		if(Room.fire.value > 0) {
+			Room.fire = Room.FireEnum.fromInt(Room.fire.value - 1);
 			Room._fireTimer = setTimeout(Room.coolFire, Room._FIRE_COOL_DELAY);
 			Room.onFireChange();
 		}
 	},
 	
 	adjustTemp: function() {
-		var roomTemp = $SM.get('game.room.temperature');
-		var roomFire = $SM.get('game.room.fire');
-		var old = roomTemp.value;
-		if(roomTemp.value > 0 && roomTemp.value > roomFire.value) {
-			roomTemp = $SM.setget('game.room.temperature', Room.TempEnum.fromInt(roomTemp.value - 1));
-			Notifications.notify(Room, "the room is " + roomTemp.text, true);
+		var old = Room.temperature.value;
+		if(Room.temperature.value > 0 && Room.temperature.value > Room.fire.value) {
+			Room.temperature = Room.TempEnum.fromInt(Room.temperature.value - 1);
+			Notifications.notify(Room, "the room is " + Room.temperature.text, true);
 		}
-		if(roomTemp.value < 4 && roomTemp.value < roomFire.value) {
-			roomTemp = $SM.setget('game.room.temperature', Room.TempEnum.fromInt(roomTemp.value + 1));
-			Notifications.notify(Room, "the room is " + roomTemp.text, true);
+		if(Room.temperature.value < 4 && Room.temperature.value < Room.fire.value) {
+			Room.temperature = Room.TempEnum.fromInt(Room.temperature.value + 1);
+			Notifications.notify(Room, "the room is " + Room.temperature.text, true);
 		}
-		if(roomTemp.value != old) {
+		if(Room.temperature.value != old) {
 			Room.changed = true;
 		}
 		Room._tempTimer = setTimeout(Room.adjustTemp, Room._ROOM_WARM_DELAY);
@@ -710,7 +702,7 @@ var Room = {
 			lBuilder = $SM.setget('game.builder.level', 1);
 			setTimeout(Room.unlockForest, Room._NEED_WOOD_DELAY);
 		} 
-		else if(lBuilder < 3 && $SM.get('game.room.temperature.value') >= Room.TempEnum.Warm.value) {
+		else if(lBuilder < 3 && Room.temperature.value >= Room.TempEnum.Warm.value) {
 			var msg;
 			switch(lBuilder) {
 			case 1:
@@ -892,7 +884,7 @@ var Room = {
 	
 	build: function(buildBtn) {
 		var thing = $(buildBtn).attr('buildThing');
-		if($SM.get('game.room.temperature.value') <= Room.TempEnum.Cold.value) {
+		if(Room.temperature.value <= Room.TempEnum.Cold.value) {
 			Notifications.notify(Room, "builder just shivers");
 			return false;
 		}
@@ -949,7 +941,7 @@ var Room = {
 	},
 	
 	craftUnlocked: function(thing) {
-		if($SM.get('game.room.buttons[\''+thing+'\']')) {
+		if(Room.buttons[thing]) {
 			return true;
 		}
 		if($SM.get('game.builder.level') < 4) return false;
@@ -967,13 +959,13 @@ var Room = {
 			}
 		}
 		
-		$SM.set('game.room.buttons[\''+thing+'\']', true);
+		Room.buttons[thing] = true;
 		Notifications.notify(Room, craftable.availableMsg);
 		return true;
 	},
 	
 	buyUnlocked: function(thing) {
-		if($SM.get('game.room.buttons[\''+thing+'\']')) {
+		if(Room.buttons[thing]) {
 			return true;
 		} else if(Outside.numBuilding('trading post') > 0) {
 			if(thing == 'compass' || $SM.get('stores[\''+thing+'\']')) {
