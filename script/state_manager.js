@@ -147,7 +147,7 @@ var StateManager = {
 	//return state, undefined or 0
 	get: function(stateName, requestZero) {
 		var whichState = null;
-		var fullPath = $SM.buildPath(stateName, name);
+		var fullPath = $SM.buildPath(stateName);
 		
 		//catch errors if parent of state doesn't exist
 		try{
@@ -159,6 +159,13 @@ var StateManager = {
 		//prevents repeated if undefined, null, false or {}, then x = 0 situations
 		if((!whichState || whichState == {}) && requestZero) return 0;
 		else return whichState;
+	},
+	
+	//mainly for local copy use, add(M) can fail so we can't shortcut them
+	//since set does not fail, we know state exists and can simply return the object
+	setget: function(stateName, value, noEvent){
+		$SM.set(stateName, value, noEvent);
+		return eval('('+$SM.buildPath(stateName)+')');
 	},
 	
 	remove: function(stateName, noEvent) {
