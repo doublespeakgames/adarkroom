@@ -536,7 +536,7 @@ Events.Room = [
   					'some weird metal he picked up on his travels.'
   				],
   				onLoad: function() {
-  					$SM.add('stores[\'alien alloy\']', 1);
+  					$SM.add('stores["alien alloy"]', 1);
 			    },
   				buttons: {
   					'bye': {
@@ -552,7 +552,7 @@ Events.Room = [
   					'some weird glowing boxes he picked up on his travels.'
   				],
   				onLoad: function() {
-  					$SM.add('stores[\'energy cell\']', 3);
+  					$SM.add('stores["energy cell"]', 3);
 			    },
   				buttons: {
   					'bye': {

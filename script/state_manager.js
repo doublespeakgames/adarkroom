@@ -47,7 +47,7 @@ var StateManager = {
 	
 	//create all parents and then set state
 	createState: function(stateName, value) {
-		var words = stateName.split(/[.\[\]']+/);
+		var words = stateName.split(/[.\[\]'"]+/);
 		var obj = State;
 		var w = null;
 		for(var i=0, len=words.length-1;i<len;i++){
@@ -94,7 +94,7 @@ var StateManager = {
 		if($SM.get(parentName) == undefined) $SM.set(parentName, {}, true);
 		
 		for(var k in list){
-			$SM.set(parentName+'[\''+k+'\']', list[k], true);
+			$SM.set(parentName+'["'+k+'"]', list[k], true);
 		}
 		
 		if(!noEvent) {
@@ -134,7 +134,7 @@ var StateManager = {
 		if($SM.get(parentName) == undefined) $SM.set(parentName, {}, true);
 		
 		for(var k in list){
-			if(!$SM.add(parentName+'[\''+k+'\']', list[k], true)) err++;
+			if(!$SM.add(parentName+'["'+k+'"]', list[k], true)) err++;
 		}
 		
 		if(!noEvent) {
@@ -241,25 +241,25 @@ var StateManager = {
 	 ******************************************************************/
 	//PERKS
 	addPerk: function(name) {
-		$SM.set('character.perks[\''+name+'\']', true);
+		$SM.set('character.perks["'+name+'"]', true);
 		Notifications.notify(null, Engine.Perks[name].notify);
 	},
 	
 	hasPerk: function(name) {
-		return $SM.get('character.perks[\''+name+'\']') == true;
+		return $SM.get('character.perks["'+name+'"]') == true;
 	},
 	
 	//INCOME
 	setIncome: function(source, options) {
-		var existing = $SM.get('income[\''+source+'\']');
+		var existing = $SM.get('income["'+source+'"]');
 		if(typeof existing != 'undefined') {
 			options.timeLeft = existing.timeLeft;
 		}
-		$SM.set('income[\''+source+'\']', options);
+		$SM.set('income["'+source+'"]', options);
 	},
 	
 	getIncome: function(source) {
-		var existing = $SM.get('income[\''+source+'\']');
+		var existing = $SM.get('income["'+source+'"]');
 		if(typeof existing != 'undefined') {
 			return existing;
 		}
@@ -269,7 +269,7 @@ var StateManager = {
 	collectIncome: function() {
 		if(typeof $SM.get('income') != 'undefined' && Engine.activeModule != Space) {
 			for(var source in $SM.get('income')) {
-				var income = $SM.get('income[\''+source+'\']');
+				var income = $SM.get('income["'+source+'"]');
 				if(typeof income.timeLeft != 'number')
 				{
 					income.timeLeft = 0;
@@ -292,13 +292,13 @@ var StateManager = {
 	//Thieves
 	addStolen: function(stores) {
 		for(var k in stores) {
-			var old = $SM.get('stores[\''+k+'\']', true);
+			var old = $SM.get('stores["'+k+'"]', true);
 			var short = old - stores[k];
 			//if they would steal more than actually owned
 			if(short < 0){
-				$SM.add('game.stolen[\''+k+'\']', (stores[k] * -1) + short);
+				$SM.add('game.stolen["'+k+'"]', (stores[k] * -1) + short);
 			} else {
-				$SM.add('game.stolen[\''+k+'\']', stores[k] * -1);
+				$SM.add('game.stolen["'+k+'"]', stores[k] * -1);
 			}
 		};
 	},
@@ -322,9 +322,9 @@ var StateManager = {
 		case 'tool':
 		case 'weapon':
 		case 'upgrade':
-			return $SM.get('stores[\''+name+'\']', true);
+			return $SM.get('stores["'+name+'"]', true);
 		case 'building':
-			return Outside.numBuilding(name);
+			return $SM.get('game.buildings["'+name+'"]', true);
 		}
 	},
 	

@@ -140,11 +140,9 @@ var Outside = {
 		
 		if(typeof $SM.get('features.location.outside') == 'undefined') {
 			$SM.set('features.location.outside', true);
-			$SM.setM('game.outside', {
-				buildings: {},
-				population: 0,
-				workers: {}
-			});
+			if(!$SM.get('game.buildings')) $SM.set('game.buildings', {});
+			if(!$SM.get('game.population')) $SM.set('game.population', 0);
+			if(!$SM.get('game.workers')) $SM.set('game.workers', {});
 		}
 		
 		this.updateVillage();
@@ -162,44 +160,12 @@ var Outside = {
 		}).appendTo('div#outsidePanel');
 	},
 	
-	numBuilding: function(bName) {
-		return $SM.get('game.outside.buildings[\''+bName+'\']', true);
-	},
-	
-	addBuilding: function(bName, num) {
-		var cur = $SM.get('game.outside.buildings[\''+bName+'\']');
-		if(typeof cur != 'number') cur = 0;
-		cur += num;
-		if(cur < 0) cur = 0;
-		$SM.set('game.outside.buildings[\''+bName+'\']', cur);
-		this.updateVillage();
-		Engine.saveGame();
-	},
-	
-	addBuildings: function(list) {
-		for(k in list) {
-			var num = $SM.get('game.outside.buildings[\''+k+'\']');
-			if(typeof num != 'number') num = 0;
-			num += list[k];
-			$SM.set('game.outside.buildings[\''+k+'\']', num);
-		}
-		this.updateVillage();
-		Engine.saveGame();
-	},
-	
 	getMaxPopulation: function() {
-		return Outside.numBuilding('hut') * 4;
-	},
-	
-	getPopulation: function() {
-		if($SM.get('features.location.outside') && $SM.get('game.outside.population')) {
-			return $SM.get('game.outside.population');
-		}
-		return 0;
+		return $SM.get('game.buildings["hut"]', true) * 4;
 	},
 	
 	increasePopulation: function() {
-		var space = Outside.getMaxPopulation() - $SM.get('game.outside.population');
+		var space = Outside.getMaxPopulation() - $SM.get('game.population');
 		if(space > 0) {
 			var num = Math.floor(Math.random()*(space/2) + space/2);
 			if(num == 0) num = 1;
@@ -215,36 +181,30 @@ var Outside = {
 				Notifications.notify(null, "the town's booming. word does get around.");
 			}
 			Engine.log('population increased by ' + num);
-			$SM.add('game.outside.population', num);
-			Outside.updateVillage();
-			Outside.updateWorkersView();
-			Outside.updateVillageIncome();
+			$SM.add('game.population', num);
 		}
 		Outside.schedulePopIncrease();
 	},
 	
 	killVillagers: function(num) {
-		$SM.add('game.outside.population', num * -1);
-		if($SM.get('game.outside.population') < 0) {
-			$SM.set('game.outside.population', 0);
+		$SM.add('game.population', num * -1);
+		if($SM.get('game.population') < 0) {
+			$SM.set('game.population', 0);
 		}
 		var remaining = Outside.getNumGatherers();
 		if(remaining < 0) {
 			var gap = -remaining;
-			for(var k in $SM.get('game.outside.workers')) {
-				var num = $SM.get('game.outside.workers[\''+k+'\']');
+			for(var k in $SM.get('game.workers')) {
+				var num = $SM.get('game.workers["'+k+'"]');
 				if(num < gap) {
 					gap -= num;
-					$SM.set('game.outside.workers[\''+k+'\']', 0);
+					$SM.set('game.workers["'+k+'"]', 0);
 				} else {
-					$SM.add('game.outside.workers[\''+k+'\']', gap * -1);
+					$SM.add('game.workers["'+k+'"]', gap * -1);
 					break;
 				}
 			}
 		}
-		Outside.updateVillage();
-		Outside.updateWorkersView();
-		Outside.updateVillageIncome();
 	},
 	
 	schedulePopIncrease: function() {
@@ -258,7 +218,7 @@ var Outside = {
 
 		// If our population is 0 and we don't already have a workers view,
 		// there's nothing to do here.
-		if(!workers.length && $SM.get('game.outside.population') == 0) return;
+		if(!workers.length && $SM.get('game.population') == 0) return;
 
 		var needsAppend = false;
 		if(workers.length == 0) {
@@ -266,13 +226,14 @@ var Outside = {
 			workers = $('<div>').attr('id', 'workers').css('opacity', 0);
 		}
 		
-		var numGatherers = $SM.get('game.outside.population');
+		var numGatherers = $SM.get('game.population');
 		var gatherer = $('div#workers_row_gatherer', workers);
 		
-		for(var k in $SM.get('game.outside.workers')) {
+		for(var k in $SM.get('game.workers')) {
+			var workerCount = $SM.get('game.workers["'+k+'"]');
 			var row = $('div#workers_row_' + k.replace(' ', '-'), workers);
 			if(row.length == 0) {
-				row = Outside.makeWorkerRow(k, $SM.get('game.outside.workers[\''+k+'\']'));
+				row = Outside.makeWorkerRow(k, workerCount);
 				
 				var curPrev = null;
 				workers.children().each(function(i) {
@@ -297,10 +258,10 @@ var Outside = {
 				}
 				
 			} else {
-				$('div#' + row.attr('id') + ' > div.row_val > span', workers).text($SM.get('game.outside.workers[\''+k+'\']'));
+				$('div#' + row.attr('id') + ' > div.row_val > span', workers).text(workerCount);
 			}
-			numGatherers -= $SM.get('game.outside.workers[\''+k+'\']');
-			if($SM.get('game.outside.workers[\''+k+'\']') == 0) {
+			numGatherers -= workerCount;
+			if(workerCount == 0) {
 				$('.dnBtn', row).addClass('disabled');
 				$('.dnManyBtn', row).addClass('disabled');
 			} else {
@@ -331,9 +292,9 @@ var Outside = {
 	},
 	
 	getNumGatherers: function() {
-		var num = $SM.get('game.outside.population'); 
-		for(var k in $SM.get('game.outside.workers')) {
-			num -= $SM.get('game.outside.workers[\''+k+'\']');
+		var num = $SM.get('game.population'); 
+		for(var k in $SM.get('game.workers')) {
+			num -= $SM.get('game.workers["'+k+'"]');
 		}
 		return num;
 	},
@@ -373,20 +334,16 @@ var Outside = {
 		if(Outside.getNumGatherers() > 0) {
 		  var increaseAmt = Math.min(Outside.getNumGatherers(), btn.data);
 			Engine.log('increasing ' + worker + ' by ' + increaseAmt);
-			$SM.add('game.outside.workers[\''+worker+'\']', increaseAmt);
-			Outside.updateVillageIncome();
-			Outside.updateWorkersView();
+			$SM.add('game.workers["'+worker+'"]', increaseAmt);
 		}
 	},
 	
 	decreaseWorker: function(btn) {
 		var worker = $(this).closest('.workerRow').children('.row_key').text();
-		if($SM.get('game.outside.workers[\''+worker+'\']') > 0) {
-		  var decreaseAmt = Math.min($SM.get('game.outside.workers[\''+worker+'\']') || 0, btn.data);
+		if($SM.get('game.workers["'+worker+'"]') > 0) {
+		  var decreaseAmt = Math.min($SM.get('game.workers["'+worker+'"]') || 0, btn.data);
 			Engine.log('decreasing ' + worker + ' by ' + decreaseAmt);
-			$SM.add('game.outside.workers[\''+worker+'\']', decreaseAmt * -1);
-			Outside.updateVillageIncome();
-			Outside.updateWorkersView();
+			$SM.add('game.workers["'+worker+'"]', decreaseAmt * -1);
 		}
 	},
 	
@@ -430,9 +387,9 @@ var Outside = {
 			population = $('<div>').attr('id', 'population').appendTo(village);
 		}
 		
-		for(var k in $SM.get('game.outside.buildings')) {
+		for(var k in $SM.get('game.buildings')) {
 			if(k == 'trap') {
-				var numTraps = $SM.get('game.outside.buildings[\''+k+'\']');
+				var numTraps = $SM.get('game.buildings["'+k+'"]');
 				var numBait = $SM.get('stores.bait', true);
 				var traps = numTraps - numBait;
 				traps = traps < 0 ? 0 : traps;
@@ -442,14 +399,14 @@ var Outside = {
 				if(Outside.checkWorker(k)) {
 					Outside.updateWorkersView();
 				}
-				Outside.updateVillageRow(k, $SM.get('game.outside.buildings[\''+k+'\']'), village);
+				Outside.updateVillageRow(k, $SM.get('game.buildings["'+k+'"]'), village);
 			}
 		}
 		
-		population.text('pop ' + $SM.get('game.outside.population') + '/' + this.getMaxPopulation());
+		population.text('pop ' + $SM.get('game.population') + '/' + this.getMaxPopulation());
 		
 		var hasPeeps;
-		if(Outside.numBuilding('hut') == 0) {
+		if($SM.get('game.buildings["hut"]', true) == 0) {
 			hasPeeps = false;
 			village.addClass('noHuts');
 		} else {
@@ -490,10 +447,10 @@ var Outside = {
 		if(typeof jobs == 'object') {
 			for(var i = 0, len = jobs.length; i < len; i++) {
 				var job = jobs[i];
-				if(typeof $SM.get('game.outside.buildings[\''+name+'\']') == 'number' && 
-						typeof $SM.get('game.outside.workers[\''+job+'\']') != 'number') {
+				if(typeof $SM.get('game.buildings["'+name+'"]') == 'number' && 
+						typeof $SM.get('game.workers["'+job+'"]') != 'number') {
 					Engine.log('adding ' + job + ' to the workers list')
-					$SM.set('game.outside.workers[\''+job+'\']', 0);
+					$SM.set('game.workers["'+job+'"]', 0);
 					added = true;
 				}
 			}
@@ -504,7 +461,7 @@ var Outside = {
 	updateVillageIncome: function() {		
 		for(var worker in Outside._INCOME) {
 			var income = Outside._INCOME[worker];
-			var num = worker == 'gatherer' ? Outside.getNumGatherers() : $SM.get('game.outside.workers[\''+worker+'\']');
+			var num = worker == 'gatherer' ? Outside.getNumGatherers() : $SM.get('game.workers["'+worker+'"]');
 			if(typeof num == 'number') {
 				var stores = {};
 				if(num < 0) num = 0;
@@ -533,7 +490,7 @@ var Outside = {
 	
 	updateTrapButton: function() {
 		var btn = $('div#trapsButton');
-		if(Outside.numBuilding('trap') > 0) {
+		if($SM.get('game.buildings["trap"]', true) > 0) {
 			if(btn.length == 0) {
 				new Button.Button({
 					id: 'trapsButton',
@@ -553,7 +510,7 @@ var Outside = {
 	},
 	
 	setTitle: function() {
-		var numHuts = this.numBuilding('hut');
+		var numHuts = $SM.get('game.buildings["hut"]', true);
 		var title;
 		if(numHuts == 0) {
 			title = "A Silent Forest";
@@ -589,14 +546,14 @@ var Outside = {
 	
 	gatherWood: function() {
 		Notifications.notify(Outside, "dry brush and dead branches litter the forest floor")
-		var gatherAmt = Outside.numBuilding('cart') > 0 ? 50 : 10;
+		var gatherAmt = $SM.get('game.buildings["cart"]', true) > 0 ? 50 : 10;
 		$SM.add('stores.wood', gatherAmt);
 	},
 	
 	checkTraps: function() {
 		var drops = {};
 		var msg = [];
-		var numTraps = Outside.numBuilding('trap');
+		var numTraps = $SM.get('game.buildings["trap"]', true);
 		var numBait = $SM.get('stores.bait', true);
 		var numDrops = numTraps + (numBait < numTraps ? numBait : numTraps);
 		for(var i = 0; i < numDrops; i++) {
@@ -634,6 +591,11 @@ var Outside = {
 	handleStateUpdates: function(e){
 		if(e.category == 'stores'){
 			Outside.updateVillage();
-		}
+		} else if(e.stateName.indexOf('game.workers') == 0
+		          || e.stateName.indexOf('game.population') == 0){
+			Outside.updateVillage();
+			Outside.updateWorkersView();
+			Outside.updateVillageIncome();
+		};
 	}
 };

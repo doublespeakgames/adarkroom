@@ -22,7 +22,7 @@ var Room = {
 			maxMsg: "more traps won't help now",
 			type: 'building',
 			cost: function() {
-				var n = Outside.numBuilding('trap');
+				var n = $SM.get('game.buildings["trap"]', true);
 				return {
 					'wood': 10 + (n*10)
 				};
@@ -48,7 +48,7 @@ var Room = {
 			maxMsg: 'no more room for huts.',
 			type: 'building',
 			cost: function() {
-				var n = Outside.numBuilding('hut');
+				var n = $SM.get('game.buildings["hut"]', true);
 				return {
 					'wood': 100 + (n*50)
 				};
@@ -765,13 +765,13 @@ var Room = {
 			
 			var id = "row_" + k.replace(' ', '-');
 			var row = $('div#' + id, location);
-			var num = $SM.get('stores[\''+k+'\']');
+			var num = $SM.get('stores["'+k+'"]');
 			
 			if(typeof num != 'number' || isNaN(num)) {
 				// No idea how counts get corrupted, but I have reason to believe that they occassionally do.
 				// Build a little fence around it!
 				num = 0;
-				$SM.set('stores[\''+k+'\']', 0);
+				$SM.set('stores["'+k+'"]', 0);
 			}
 			
 			
@@ -834,7 +834,7 @@ var Room = {
 			var tt = $('<div>').addClass('tooltip bottom right');
 			var storeName = el.attr('id').substring(4).replace('-', ' ');
 			for(var incomeSource in $SM.get('income')) {
-				var income = $SM.get('income[\''+incomeSource+'\']');
+				var income = $SM.get('income["'+incomeSource+'"]');
 				for(var store in income.stores) {
 					if(store == storeName && income.stores[store] != 0) {
 						$('<div>').addClass('row_key').text(incomeSource).appendTo(tt);
@@ -854,7 +854,7 @@ var Room = {
 	buy: function(buyBtn) {
 		var thing = $(buyBtn).attr('buildThing');
 		var good = Room.TradeGoods[thing];
-		var numThings = $SM.get('stores[\''+thing+'\']', true);
+		var numThings = $SM.get('stores["'+thing+'"]', true);
 		if(numThings < 0) numThings = 0;
 		if(good.maximum <= numThings) {
 			return;
@@ -863,7 +863,7 @@ var Room = {
 		var storeMod = {};
 		var cost = good.cost();
 		for(var k in cost) {
-			var have = $SM.get('stores[\''+k+'\']', true);
+			var have = $SM.get('stores["'+k+'"]', true);
 			if(have < cost[k]) {
 				Notifications.notify(Room, "not enough " + k);
 				return false;
@@ -875,7 +875,7 @@ var Room = {
 		
 		Notifications.notify(Room, good.buildMsg);
 		
-		$SM.add('stores[\''+thing+'\']', 1);
+		$SM.add('stores["'+thing+'"]', 1);
 		
 		if(thing == 'compass') {
 			Path.openPath();
@@ -896,10 +896,10 @@ var Room = {
 		case 'weapon':
 		case 'tool':
 		case 'upgrade':
-			numThings = $SM.get('stores[\''+thing+'\']', true);
+			numThings = $SM.get('stores["'+thing+'"]', true);
 			break;
 		case 'building':
-			numThings = Outside.numBuilding(thing);
+			numThings = $SM.get('game.buildings["'+thing+'"]', true);
 			break;
 		}
 		
@@ -911,7 +911,7 @@ var Room = {
 		var storeMod = {};
 		var cost = craftable.cost();
 		for(var k in cost) {
-			var have = $SM.get('stores[\''+k+'\']', true);
+			var have = $SM.get('stores["'+k+'"]', true);
 			if(have < cost[k]) {
 				Notifications.notify(Room, "not enough " + k);
 				return false;
@@ -928,10 +928,10 @@ var Room = {
 		case 'weapon':
 		case 'upgrade':
 		case 'tool':
-			$SM.add('stores[\''+thing+'\']', 1);
+			$SM.add('stores["'+thing+'"]', 1);
 			break;
 		case 'building':
-			Outside.addBuilding(thing, 1);
+			$SM.add('game.buildings["'+thing+'"]', 1);
 			break;
 		}		
 	},
@@ -946,7 +946,7 @@ var Room = {
 		}
 		if($SM.get('game.builder.level') < 4) return false;
 		var craftable = Room.Craftables[thing];
-		if(Room.needsWorkshop(craftable.type) && Outside.numBuilding('workshop') == 0) return false;
+		if(Room.needsWorkshop(craftable.type) && $SM.get('game.buildings["workshop"]', true) == 0) return false;
 		var cost = craftable.cost();
 		
 		// Show buttons if we have at least 1/2 the wood, and all other components have been seen.
@@ -954,7 +954,7 @@ var Room = {
 			return false;
 		}
 		for(var c in cost) {
-			if(!$SM.get('stores[\''+c+'\']')) {
+			if(!$SM.get('stores["'+c+'"]')) {
 				return false;
 			}
 		}
@@ -967,8 +967,8 @@ var Room = {
 	buyUnlocked: function(thing) {
 		if(Room.buttons[thing]) {
 			return true;
-		} else if(Outside.numBuilding('trading post') > 0) {
-			if(thing == 'compass' || $SM.get('stores[\''+thing+'\']')) {
+		} else if($SM.get('game.buildings["trading post"]', true) > 0) {
+			if(thing == 'compass' || $SM.get('stores["'+thing+'"]')) {
 				// Allow the purchase of stuff once you've seen it
 				return true;
 			}
@@ -986,14 +986,14 @@ var Room = {
 		
 		var craftSection = $('#craftBtns');
 		var cNeedsAppend = false;
-		if(craftSection.length == 0 && Outside.numBuilding('workshop') > 0) {
+		if(craftSection.length == 0 && $SM.get('game.buildings["workshop"]', true) > 0) {
 			craftSection = $('<div>').attr('id', 'craftBtns').css('opacity', 0);
 			cNeedsAppend = true;
 		}
 		
 		var buySection = $('#buyBtns');
 		var bNeedsAppend = false;
-		if(buySection.length == 0 && Outside.numBuilding('trading post') > 0) {
+		if(buySection.length == 0 && $SM.get('game.buildings["trading post"]', true) > 0) {
 			buySection = $('<div>').attr('id', 'buyBtns').css('opacity', 0);
 			bNeedsAppend = true;
 		}
@@ -1083,6 +1083,8 @@ var Room = {
 			Room.updateBuildButtons();
 		} else if(e.category == 'income'){
 			Room.updateIncomeView();
-		};
+		} else if(e.stateName.indexOf('game.buildings') == 0){
+			Room.updateBuildButtons();
+		}
 	}
 };

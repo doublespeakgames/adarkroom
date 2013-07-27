@@ -649,7 +649,7 @@ var Events = {
 			} else if(b.cost) {
 				var disabled = false;
 				for(var store in b.cost) {
-					var num = Engine.activeModule == World ? Path.outfit[store] : $SM.get('stores[\''+store+'\']', true);
+					var num = Engine.activeModule == World ? Path.outfit[store] : $SM.get('stores["'+store+'"]', true);
 					if(typeof num != 'number') num = 0;
 					if(num < b.cost[store]) {
 						// Too expensive
@@ -668,7 +668,7 @@ var Events = {
 		var costMod = {};
 		if(info.cost) {
 			for(var store in info.cost) {
-				var num = Engine.activeModule == World ? Path.outfit[store] : $SM.get('stores[\''+store+'\']', true);
+				var num = Engine.activeModule == World ? Path.outfit[store] : $SM.get('stores["'+store+'"]', true);
 				if(typeof num != 'number') num = 0;
 				if(num < info.cost[store]) {
 					// Too expensive

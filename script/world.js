@@ -404,11 +404,11 @@ var World = {
 	checkDanger: function() {
 		World.danger = typeof World.danger == 'undefined' ? false: World.danger;
 		if(!World.danger) {
-			if(!$SM.get('stores[\'i armour\']', true) > 0 && World.getDistance() >= 8) {
+			if(!$SM.get('stores["i armour"]', true) > 0 && World.getDistance() >= 8) {
 				World.danger = true;
 				return true;
 			} 
-			if(!$SM.get('stores[\'s armour\']', true) > 0 && World.getDistance() >= 18) {
+			if(!$SM.get('stores["s armour"]', true) > 0 && World.getDistance() >= 18) {
 				World.danger = true;
 				return true;
 			}
@@ -417,7 +417,7 @@ var World = {
 				World.danger = false;
 				return true;
 			}
-			if(World.getDistance < 18 && $SM.get('stores[\'i armour\']', true) > 0) {
+			if(World.getDistance < 18 && $SM.get('stores["i armour"]', true) > 0) {
 				World.danger = false;
 				return true;
 			}
@@ -827,16 +827,16 @@ var World = {
 	goHome: function() {
 		// Home safe! Commit the changes.
 		$SM.setM('game.world', World.state);
-		if(World.state.sulphurmine && Outside.numBuilding('sulphur mine') == 0) {
-			Outside.addBuilding('sulphur mine', 1);
+		if(World.state.sulphurmine && $SM.get('game.buildings["sulphur mine"]', true) == 0) {
+			$SM.add('game.buildings["sulphur mine"]', 1);
 			Engine.event('progress', 'sulphur mine');
 		}
-		if(World.state.ironmine && Outside.numBuilding('iron mine') == 0) {
-			Outside.addBuilding('iron mine', 1);
+		if(World.state.ironmine && $SM.get('game.buildings["iron mine"]', true) == 0) {
+			$SM.add('game.buildings["iron mine"]', 1);
 			Engine.event('progress', 'iron mine');
 		}
-		if(World.state.coalmine && Outside.numBuilding('coal mine') == 0) {
-			Outside.addBuilding('coal mine', 1);
+		if(World.state.coalmine && $SM.get('game.buildings["coal mine"]', true) == 0) {
+			$SM.add('game.buildings["coal mine"]', 1);
 			Engine.event('progress', 'coal mine');
 		}
 		if(World.state.ship && !$SM.get('features.location.spaceShip')) {
@@ -852,7 +852,7 @@ var World = {
 		}
 		
 		for(var k in Path.outfit) {
-			$SM.add('stores[\''+k+'\']', Path.outfit[k]);
+			$SM.add('stores["'+k+'"]', Path.outfit[k]);
 			if(World.leaveItAtHome(k)) {
 				Path.outfit[k] = 0;
 			}
@@ -869,11 +869,11 @@ var World = {
 	},
 	
 	getMaxHealth: function() {
-		if($SM.get('stores[\'s armour\']', true) > 0) {
+		if($SM.get('stores["s armour"]', true) > 0) {
 			return World.BASE_HEALTH + 35;
-		} else if($SM.get('stores[\'i armour\']', true) > 0) {
+		} else if($SM.get('stores["i armour"]', true) > 0) {
 			return World.BASE_HEALTH + 15;
-		} else if($SM.get('stores[\'l armour\']', true) > 0) {
+		} else if($SM.get('stores["l armour"]', true) > 0) {
 			return World.BASE_HEALTH + 5;
 		}
 		return World.BASE_HEALTH;
@@ -887,7 +887,7 @@ var World = {
 	},
 	
 	getMaxWater: function() {
-		if($SM.get('stores[\'water tank\']', true) > 0) {
+		if($SM.get('stores["water tank"]', true) > 0) {
 			return World.BASE_WATER + 50;
 		} else if($SM.get('stores.cask', true) > 0) {
 			return World.BASE_WATER + 20;
