@@ -129,7 +129,7 @@ var World = {
 		World.LANDMARKS[World.TILE.SWAMP] = {num: 1, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'swamp', label: 'A&nbsp;Murky&nbsp;Swamp'};
 		
 		if(typeof $SM.get('features.location.world') == 'undefined') {
-			$SM.set('features.location.world');
+			$SM.set('features.location.world', true);
 			$SM.setM('game.world', {
 				map: World.generateMap(),
 				mask: World.newMask()

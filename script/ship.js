@@ -16,7 +16,7 @@ var Ship = {
 		);
 		
 		if(!$SM.get('features.location.spaceShip')) {
-			$SM.set('features.location.spaceShip');
+			$SM.set('features.location.spaceShip', true);
 			$SM.setM('game.spaceShip', {
 				hull: Ship.BASE_HULL,
 				thrusters: Ship.BASE_THRUSTERS
@@ -90,7 +90,6 @@ var Ship = {
 		if(!$SM.get('game.spaceShip.seenShip')) {
 			Notifications.notify(Ship, 'somewhere above the debris cloud, the wanderer fleet hovers. been on this rock too long.');
 			$SM.set('game.spaceShip.seenShip', true);
-			Engine.saveGame();
 		}
 
 		Engine.moveStoresView(null, transition_diff);
