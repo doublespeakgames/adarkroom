@@ -48,6 +48,13 @@ var StateManager = {
 	//create all parents and then set state
 	createState: function(stateName, value) {
 		var words = stateName.split(/[.\[\]'"]+/);
+		//for some reason there are sometimes empty strings
+		for (var i = 0; i < words.length; i++) {
+			if (words[i] == '') {         
+				words.splice(i, 1);
+				i--;
+			}
+		};
 		var obj = State;
 		var w = null;
 		for(var i=0, len=words.length-1;i<len;i++){
@@ -169,9 +176,9 @@ var StateManager = {
 	},
 	
 	remove: function(stateName, noEvent) {
-		var whichState = $SM.buildPath(whichState);
+		var whichState = $SM.buildPath(stateName);
 		try{
-			delete eval(whichState);
+			eval('(delete '+whichState+')');
 		} catch (e) {
 			//it didn't exist in the first place
 			Engine.log('WARNING: Tried to remove non-existant state \''+stateName+'\'.');
@@ -301,7 +308,7 @@ var StateManager = {
 	},
 	
 	hasPerk: function(name) {
-		return $SM.get('character.perks["'+name+'"]') == true;
+		return $SM.get('character.perks["'+name+'"]');
 	},
 	
 	//INCOME
@@ -322,6 +329,7 @@ var StateManager = {
 	},
 	
 	collectIncome: function() {
+		var changed = false;
 		if(typeof $SM.get('income') != 'undefined' && Engine.activeModule != Space) {
 			for(var source in $SM.get('income')) {
 				var income = $SM.get('income["'+source+'"]');
@@ -334,13 +342,17 @@ var StateManager = {
 				if(income.timeLeft <= 0) {
 					Engine.log('collection income from ' + source);
 					if(source == 'thieves')	$SM.addStolen(income.stores);
-					$SM.addM('stores', income.stores);
+					$SM.addM('stores', income.stores, true);
+					changed = true;
 					if(typeof income.delay == 'number') {
 						income.timeLeft = income.delay;
 					}
 				}
 			}
 		}
+		if(changed){
+			$SM.fireUpdate('income', true);
+		};
 		Engine._incomeTimeout = setTimeout($SM.collectIncome, 1000);
 	},
 	

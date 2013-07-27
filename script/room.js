@@ -777,7 +777,7 @@ var Room = {
 			
 			// thieves?
 			if(typeof $SM.get('game.thieves') == 'undefined' && num > 5000 && $SM.get('features.location.world')) {
-				Engine.startThieves();
+				$SM.startThieves();
 			}
 			
 			if(row.length == 0 && num > 0) {
@@ -799,10 +799,8 @@ var Room = {
 					row.insertAfter(location.find('#row_' + curPrev.replace(' ', '-')));
 				}
 				newRow = true;
-			} else if(num> 0){
+			} else if(num>= 0){
 				$('div#' + row.attr('id') + ' > div.row_val', location).text(Math.floor(num));
-			} else if(num == 0) {
-				row.remove();
 			}
 		}
 		
@@ -949,6 +947,11 @@ var Room = {
 		if(Room.needsWorkshop(craftable.type) && $SM.get('game.buildings["workshop"]', true) == 0) return false;
 		var cost = craftable.cost();
 		
+		//show button if one has already been built
+		if($SM.get('game.buildings["'+thing+'"]') > 0){
+			Room.buttons[thing] = true;
+			return true;
+		}
 		// Show buttons if we have at least 1/2 the wood, and all other components have been seen.
 		if($SM.get('stores.wood', true) < cost['wood'] * 0.5) {
 			return false;
@@ -960,7 +963,10 @@ var Room = {
 		}
 		
 		Room.buttons[thing] = true;
-		Notifications.notify(Room, craftable.availableMsg);
+		//don't notify if it has already been built before
+		if(!$SM.get('game.buildings["'+thing+'"]')){
+			Notifications.notify(Room, craftable.availableMsg);
+		}
 		return true;
 	},
 	
