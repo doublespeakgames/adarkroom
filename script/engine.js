@@ -7,7 +7,7 @@ var Engine = {
 	 * 	  That would be so elegant and awesome.
 	 */
 	SITE_URL: encodeURIComponent("http://adarkroom.doublespeakgames.com"),
-	VERSION: 1.2,
+	VERSION: 1.3,
 	MAX_STORE: 99999999999999,
 	SAVE_DISPLAY: 30 * 1000,
 	

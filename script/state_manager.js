@@ -233,6 +233,61 @@ var StateManager = {
 		};
 		if(version == 1.2) {
 			//StateManager added, so move data to new locations
+			$SM.remove('room.fire');
+			$SM.remove('room.temperature');
+			$SM.remove('room.buttons');
+			if($SM.get('room')){
+				$SM.set('features.location.room', true);
+				$SM.set('game.builder.level', $SM.get('room.builder'));
+				$SM.remove('room');
+			};
+			if($SM.get('outside')){
+				$SM.set('features.location.outside', true);
+				$SM.set('game.population', $SM.get('outside.population'));
+				$SM.set('game.buildings', $SM.get('outside.buildings'));
+				$SM.set('game.workers', $SM.get('outside.workers'));
+				$SM.set('game.outside.seenForest', $SM.get('outside.seenForest'));
+				$SM.remove('outside');
+			};
+			if($SM.get('world')){
+				$SM.set('features.location.world', true);
+				$SM.set('game.world.map', $SM.get('world.map'));
+				$SM.set('game.world.mask', $SM.get('world.mask'));
+				$SM.set('starved', $SM.get('character.starved', true));
+				$SM.set('dehydrated', $SM.get('character.dehydrated', true));
+				$SM.remove('world');
+				$SM.remove('starved');
+				$SM.remove('dehydrated');
+			};
+			if($SM.get('ship')){
+				$SM.set('features.location.spaceShip', true);
+				$SM.set('game.spaceShip.hull', $SM.get('ship.hull', true));
+				$SM.set('game.spaceShip.thrusters', $SM.get('ship.thrusters', true));
+				$SM.set('game.spaceShip.seenWarning', $SM.get('ship.seenWarning'));
+				$SM.set('game.spaceShip.seenShip', $SM.get('ship.seenShip'));
+				$SM.remove('ship');
+			};
+			if($SM.get('punches')){
+				$SM.set('character.punches', $SM.get('punches'));
+				$SM.remove('punches');
+			};
+			if($SM.get('perks')){
+				$SM.set('character.perks', $SM.get('perks'));
+				$SM.remove('perks');
+			};
+			if($SM.get('thieves')){
+				$SM.set('game.thieves', $SM.get('thieves'));
+				$SM.remove('thieves');
+			};
+			if($SM.get('stolen')){
+				$SM.set('game.stolen', $SM.get('stolen'));
+				$SM.remove('stolen');
+			};
+			if($SM.get('cityCleared')){
+				$SM.set('character.cityCleared', $SM.get('cityCleared'));
+				$SM.remove('cityCleared');
+			};
+			$SM.set('version', 1.3);
 		};
 	},
 	
