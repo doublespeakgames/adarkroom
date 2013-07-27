@@ -63,8 +63,8 @@ var Engine = {
 	
 	options: {
 		state: null,
-		debug: true,
-		log: true
+		debug: false,
+		log: false
 	},
 		
 	init: function(options) {
