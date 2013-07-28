@@ -5,7 +5,7 @@ Events.Global = [
 	{ /* The Thief */
 		title: 'The Thief',
 		isAvailable: function() {
-			return (Engine.activeModule == Room || Engine.activeModule == Outside) && State.thieves == 1;
+			return (Engine.activeModule == Room || Engine.activeModule == Outside) && $SM.get('game.thieves') == 1;
 		},
 		scenes: {
 			'start': {
@@ -32,9 +32,9 @@ Events.Global = [
 			       'the point is made. in the next few days, the missing supplies are returned.'
 		        ],
 		        onLoad: function() {
-		        	State.thieves = 2;
-		        	Engine.removeIncome('thieves');
-		        	Engine.addStores(State.stolen);
+		        	$SM.set('game.thieves', 2);
+		        	$SM.remove('income.thieves');
+		        	$SM.addM('stores', $SM.get('game.stolen'));
 		        },
 		        buttons: {
 					'leave': {
@@ -49,9 +49,9 @@ Events.Global = [
 			       "shares what he knows about sneaking before he goes."
 		        ],
 		        onLoad: function() {
-		        	State.thieves = 2;
-		        	Engine.removeIncome('thieves');
-		        	Engine.addPerk('stealthy');
+		        	$SM.set('game.thieves', 2);
+		        	$SM.remove('income.thieves');
+		        	$SM.addPerk('stealthy');
 		        },
 		        buttons: {
 		        	'leave': {
