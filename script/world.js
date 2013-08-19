@@ -128,11 +128,12 @@ var World = {
 		World.LANDMARKS[World.TILE.BATTLEFIELD] = {num: 5, minRadius: 18, maxRadius: World.RADIUS * 1.5, scene: 'battlefield', label: 'A&nbsp;Battlefield'};
 		World.LANDMARKS[World.TILE.SWAMP] = {num: 1, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'swamp', label: 'A&nbsp;Murky&nbsp;Swamp'};
 		
-		if(typeof State.world == 'undefined') {
-			State.world = {
+		if(typeof $SM.get('features.location.world') == 'undefined') {
+			$SM.set('features.location.world', true);
+			$SM.setM('game.world', {
 				map: World.generateMap(),
 				mask: World.newMask()
-			};
+			});
 		}
 		
 		// Create the World panel
@@ -148,6 +149,9 @@ var World = {
 		$('<div>').attr('id', 'healthCounter').appendTo(outer);
 		
 		Engine.updateOuterSlider();
+		
+		//subscribe to stateUpdates
+		$.Dispatch('stateUpdate').subscribe(World.handleStateUpdates);
 	},
 	
 	clearDungeon: function() {
@@ -265,7 +269,7 @@ var World = {
 		
 		// Update label
 		var t = 'pockets';
-		if(Engine.getStore('rucksack') > 0) {
+		if($SM.get('stores.rucksack', true) > 0) {
 			t = 'rucksack';
 		}
 		$('#backpackTitle').text(t);
@@ -400,11 +404,11 @@ var World = {
 	checkDanger: function() {
 		World.danger = typeof World.danger == 'undefined' ? false: World.danger;
 		if(!World.danger) {
-			if(!Engine.getStore('i armour') > 0 && World.getDistance() >= 8) {
+			if(!$SM.get('stores["i armour"]', true) > 0 && World.getDistance() >= 8) {
 				World.danger = true;
 				return true;
 			} 
-			if(!Engine.getStore('s armour') > 0 && World.getDistance() >= 18) {
+			if(!$SM.get('stores["s armour"]', true) > 0 && World.getDistance() >= 18) {
 				World.danger = true;
 				return true;
 			}
@@ -413,7 +417,7 @@ var World = {
 				World.danger = false;
 				return true;
 			}
-			if(World.getDistance < 18 && Engine.getStore('i armour') > 0) {
+			if(World.getDistance < 18 && $SM.get('stores["i armour"]', true) > 0) {
 				World.danger = false;
 				return true;
 			}
@@ -426,7 +430,7 @@ var World = {
 		World.waterMove++;
 		// Food
 		var movesPerFood = World.MOVES_PER_FOOD;
-		movesPerFood *= Engine.hasPerk('slow metabolism') ? 2 : 1;
+		movesPerFood *= $SM.hasPerk('slow metabolism') ? 2 : 1;
 		if(World.foodMove >= movesPerFood) {
 			World.foodMove = 0;
 			var num = Path.outfit['cured meat'];
@@ -440,10 +444,10 @@ var World = {
 					Notifications.notify(World, 'starvation sets in')
 					World.starvation = true;
 				} else {
-					State.starved = State.starved ? State.starved : 0;
-					State.starved++;
-					if(State.starved >= 10 && !Engine.hasPerk('slow metabolism')) {
-						Engine.addPerk('slow metabolism');
+					$SM.set('character.starved', $SM.get('character.starved', true));
+					$SM.add('character.starved', 1);
+					if($SM.get('character.starved') >= 10 && !$SM.hasPerk('slow metabolism')) {
+						$SM.addPerk('slow metabolism');
 					}
 					World.die();
 					return false;
@@ -456,7 +460,7 @@ var World = {
 		}
 		// Water
 		var movesPerWater = World.MOVES_PER_WATER;
-		movesPerWater *= Engine.hasPerk('desert rat') ? 2 : 1;
+		movesPerWater *= $SM.hasPerk('desert rat') ? 2 : 1;
 		if(World.waterMove >= movesPerWater) {
 			World.waterMove = 0;
 			var water = World.water;
@@ -469,10 +473,10 @@ var World = {
 					Notifications.notify(World, 'the thirst becomes unbearable');
 					World.thirst = true;
 				} else {
-					State.dehydrated = State.dehydrated ? State.dehydrated : 0;
-					State.dehydrated++;
-					if(State.dehydrated >= 10 && !Engine.hasPerk('desert rat')) {
-						Engine.addPerk('desert rat');
+					$SM.set('character.dehydrated', $SM.get('character.dehydrated', true));
+					$SM.add('character.dehydrated', 1);
+					if($SM.get('character.dehydrated') >= 10 && !$SM.hasPerk('desert rat')) {
+						$SM.addPerk('desert rat');
 					}
 					World.die();
 					return false;
@@ -487,7 +491,7 @@ var World = {
 	},
 	
 	meatHeal: function() {
-		return World.MEAT_HEAL * (Engine.hasPerk('gastronome') ? 2 : 1);
+		return World.MEAT_HEAL * ($SM.hasPerk('gastronome') ? 2 : 1);
 	},
 	
 	medsHeal: function() {
@@ -499,7 +503,7 @@ var World = {
 		World.fightMove++;
 		if(World.fightMove > World.FIGHT_DELAY) {
 			var chance = World.FIGHT_CHANCE;
-			chance *= Engine.hasPerk('stealthy') ? 0.5 : 1;
+			chance *= $SM.hasPerk('stealthy') ? 0.5 : 1;
 			if(Math.random() < chance) {
 				World.fightMove = 0;
 				Events.triggerFight();
@@ -583,7 +587,7 @@ var World = {
 	
 	lightMap: function(x, y, mask) {
 		var r = World.LIGHT_RADIUS;
-		r *= Engine.hasPerk('scout') ? 2 : 1;
+		r *= $SM.hasPerk('scout') ? 2 : 1;
 		World.uncoverMap(x, y, r, mask);
 		return mask;
 	},
@@ -604,7 +608,7 @@ var World = {
 	applyMap: function() {
 		var x = Math.floor(Math.random() * (World.RADIUS * 2) + 1);
 		var y = Math.floor(Math.random() * (World.RADIUS * 2) + 1);
-		World.uncoverMap(x, y, 5, State.world.mask);
+		World.uncoverMap(x, y, 5, $SM.get('game.world.mask'));
 	},
 	
 	generateMap: function() {
@@ -822,20 +826,20 @@ var World = {
 	
 	goHome: function() {
 		// Home safe! Commit the changes.
-		State.world = World.state;
-		if(World.state.sulphurmine && Outside.numBuilding('sulphur mine') == 0) {
-			Outside.addBuilding('sulphur mine', 1);
+		$SM.setM('game.world', World.state);
+		if(World.state.sulphurmine && $SM.get('game.buildings["sulphur mine"]', true) == 0) {
+			$SM.add('game.buildings["sulphur mine"]', 1);
 			Engine.event('progress', 'sulphur mine');
 		}
-		if(World.state.ironmine && Outside.numBuilding('iron mine') == 0) {
-			Outside.addBuilding('iron mine', 1);
+		if(World.state.ironmine && $SM.get('game.buildings["iron mine"]', true) == 0) {
+			$SM.add('game.buildings["iron mine"]', 1);
 			Engine.event('progress', 'iron mine');
 		}
-		if(World.state.coalmine && Outside.numBuilding('coal mine') == 0) {
-			Outside.addBuilding('coal mine', 1);
+		if(World.state.coalmine && $SM.get('game.buildings["coal mine"]', true) == 0) {
+			$SM.add('game.buildings["coal mine"]', 1);
 			Engine.event('progress', 'coal mine');
 		}
-		if(World.state.ship && !State.ship) {
+		if(World.state.ship && !$SM.get('features.location.spaceShip')) {
 			Ship.init();
 			Engine.event('progress', 'ship');
 		}
@@ -848,7 +852,7 @@ var World = {
 		}
 		
 		for(var k in Path.outfit) {
-			Engine.addStore(k, Path.outfit[k]);
+			$SM.add('stores["'+k+'"]', Path.outfit[k]);
 			if(World.leaveItAtHome(k)) {
 				Path.outfit[k] = 0;
 			}
@@ -865,29 +869,29 @@ var World = {
 	},
 	
 	getMaxHealth: function() {
-		if(Engine.getStore('s armour') > 0) {
+		if($SM.get('stores["s armour"]', true) > 0) {
 			return World.BASE_HEALTH + 35;
-		} else if(Engine.getStore('i armour') > 0) {
+		} else if($SM.get('stores["i armour"]', true) > 0) {
 			return World.BASE_HEALTH + 15;
-		} else if(Engine.getStore('l armour') > 0) {
+		} else if($SM.get('stores["l armour"]', true) > 0) {
 			return World.BASE_HEALTH + 5;
 		}
 		return World.BASE_HEALTH;
 	},
 	
 	getHitChance: function() {
-		if(Engine.hasPerk('precise')) {
+		if($SM.hasPerk('precise')) {
 			return World.BASE_HIT_CHANCE + 0.1;
 		}
 		return World.BASE_HIT_CHANCE;
 	},
 	
 	getMaxWater: function() {
-		if(Engine.getStore('water tank') > 0) {
+		if($SM.get('stores["water tank"]', true) > 0) {
 			return World.BASE_WATER + 50;
-		} else if(Engine.getStore('cask') > 0) {
+		} else if($SM.get('stores.cask', true) > 0) {
 			return World.BASE_WATER + 20;
-		} else if(Engine.getStore('waterskin') > 0) {
+		} else if($SM.get('stores.waterskin', true) > 0) {
 			return World.BASE_WATER + 10;
 		}
 		return World.BASE_WATER;
@@ -904,7 +908,7 @@ var World = {
 		Notifications.notify(null, 'water replenished');
 		World.setWater(World.getMaxWater());
 		// Save progress at outposts
-		State.world = World.state;
+		$SM.setM('game.world', World.state);
 		// Mark this outpost as used
 		World.usedOutposts[World.curPos[0] + ',' + World.curPos[1]] = true;
 	},
@@ -912,7 +916,7 @@ var World = {
 	onArrival: function() {
 		Engine.keyLock = false;
 		// Explore in a temporary world-state. We'll commit the changes if you return home safe.
-		World.state = $.extend(true, {}, State.world);
+		World.state = $.extend(true, {}, $SM.get('game.world'));
 		World.setWater(World.getMaxWater());
 		World.setHp(World.getMaxHealth());
 		World.foodMove = 0;
@@ -935,5 +939,9 @@ var World = {
 	
 	copyPos: function(pos) {
 		return [pos[0], pos[1]];
+	},
+	
+	handleStateUpdates: function(e){
+		
 	}
 };

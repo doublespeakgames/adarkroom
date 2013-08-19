@@ -26,6 +26,9 @@ var Events = {
 		Events.eventStack = [];
 		
 		Events.scheduleNextEvent();
+		
+		//subscribe to stateUpdates
+		$.Dispatch('stateUpdate').subscribe(Events.handleStateUpdates);
 	},
 	
 	options: {}, // Nothing for now
@@ -41,7 +44,7 @@ var Events = {
 		
 		// Scene reward
 		if(scene.reward) {
-			Engine.addStores(scene.reward, true);
+			$SM.addM('stores', scene.reward);
 		}
 		
 		// onLoad
@@ -157,7 +160,7 @@ var Events = {
 		var weapon = World.Weapons[weaponName];
 		var cd = weapon.cooldown;
 		if(weapon.type == 'unarmed') {
-			if(Engine.hasPerk('unarmed master')) {
+			if($SM.hasPerk('unarmed master')) {
 				cd /= 2;
 			}
 		}
@@ -243,14 +246,14 @@ var Events = {
 			var weaponName = btn.attr('id').substring(7).replace('-', ' ');
 			var weapon = World.Weapons[weaponName];
 			if(weapon.type == 'unarmed') {
-				if(!State.punches) State.punches = 0;
-				State.punches++;
-				if(State.punches == 50 && !Engine.hasPerk('boxer')) {
-					Engine.addPerk('boxer');
-				} else if(State.punches == 150 && !Engine.hasPerk('martial artist')) {
-					Engine.addPerk('martial artist');
-				} else if(State.punches == 300 && !Engine.hasPerk('unarmed master')) {
-					Engine.addPerk('unarmed master');
+				if(!$SM.get('character.punches')) $SM.set('character.punches', 0);
+				$SM.add('character.punches', 1);
+				if($SM.get('character.punches') == 50 && !$SM.hasPerk('boxer')) {
+					$SM.addPerk('boxer');
+				} else if($SM.get('character.punches') == 150 && !$SM.hasPerk('martial artist')) {
+					$SM.addPerk('martial artist');
+				} else if($SM.get('character.punches') == 300 && !$SM.hasPerk('unarmed master')) {
+					$SM.addPerk('unarmed master');
 				}
 				
 			}
@@ -294,16 +297,16 @@ var Events = {
 			if(Math.random() <= World.getHitChance()) {
 				dmg = weapon.damage;
 				if(typeof dmg == 'number') {
-					if(weapon.type == 'unarmed' && Engine.hasPerk('boxer')) {
+					if(weapon.type == 'unarmed' && $SM.hasPerk('boxer')) {
 						dmg *= 2
 					}
-					if(weapon.type == 'unarmed' && Engine.hasPerk('martial artist')) {
+					if(weapon.type == 'unarmed' && $SM.hasPerk('martial artist')) {
 						dmg *= 3;
 					}
-					if(weapon.type == 'unarmed' && Engine.hasPerk('unarmed master')) {
+					if(weapon.type == 'unarmed' && $SM.hasPerk('unarmed master')) {
 						dmg *= 2;
 					}
-					if(weapon.type == 'melee' && Engine.hasPerk('barbarian')) {
+					if(weapon.type == 'melee' && $SM.hasPerk('barbarian')) {
 						dmg = Math.floor(dmg * 1.5);
 					}
 				}
@@ -417,7 +420,7 @@ var Events = {
 		
 		if(!$('#enemy').data('stunned')) {
 			var toHit = scene.hit;
-			toHit *= Engine.hasPerk('evasive') ? 0.8 : 1;
+			toHit *= $SM.hasPerk('evasive') ? 0.8 : 1;
 			var dmg = -1;
 			if(Math.random() <= toHit) {
 				dmg = scene.damage;
@@ -646,7 +649,7 @@ var Events = {
 			} else if(b.cost) {
 				var disabled = false;
 				for(var store in b.cost) {
-					var num = Engine.activeModule == World ? Path.outfit[store] : Engine.getStore(store);
+					var num = Engine.activeModule == World ? Path.outfit[store] : $SM.get('stores["'+store+'"]', true);
 					if(typeof num != 'number') num = 0;
 					if(num < b.cost[store]) {
 						// Too expensive
@@ -665,7 +668,7 @@ var Events = {
 		var costMod = {};
 		if(info.cost) {
 			for(var store in info.cost) {
-				var num = Engine.activeModule == World ? Path.outfit[store] : Engine.getStore(store);
+				var num = Engine.activeModule == World ? Path.outfit[store] : $SM.get('stores["'+store+'"]', true);
 				if(typeof num != 'number') num = 0;
 				if(num < info.cost[store]) {
 					// Too expensive
@@ -679,7 +682,7 @@ var Events = {
 				}
 				World.updateSupplies();
 			} else {
-				Engine.addStores(costMod);
+				$SM.addM('stores', costMod);
 			}
 		}
 		
@@ -689,7 +692,7 @@ var Events = {
 		
 		// Reward
 		if(info.reward) {
-			Engine.addStores(info.reward);
+			$SM.addM('stores', info.reward);
 		}
 		
 		Events.updateButtons();
@@ -803,5 +806,11 @@ var Events = {
     		// Force refocus on the body. I hate you, IE.
     		$('body').focus();
     	});
-    }
+    },
+    
+    handleStateUpdates: function(e){
+		if(e.category == 'stores' && Events.activeEvent() != null){
+			Events.updateButtons();
+		}
+	}
 };

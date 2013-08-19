@@ -7,8 +7,12 @@ var Engine = {
 	 * 	  That would be so elegant and awesome.
 	 */
 	SITE_URL: encodeURIComponent("http://adarkroom.doublespeakgames.com"),
+	VERSION: 1.3,
 	MAX_STORE: 99999999999999,
 	SAVE_DISPLAY: 30 * 1000,
+	
+	//object event types
+	topics: {},
 		
 	Perks: {
 		'boxer': {
@@ -111,18 +115,22 @@ var Engine = {
 		swipeElement.on('swiperight', Engine.swipeRight);
 		swipeElement.on('swipeup', Engine.swipeUp);
 		swipeElement.on('swipedown', Engine.swipeDown);
+		
+		//subscribe to stateUpdates
+		$.Dispatch('stateUpdate').subscribe(Engine.handleStateUpdates);
 
+		$SM.init();
 		Notifications.init();
 		Events.init();
 		Room.init();
 		
-		if(Engine.storeAvailable('wood')) {
+		if($SM.get('stores.wood')) {
 			Outside.init();
 		}
-		if(Engine.getStore('compass') > 0) {
+		if($SM.get('stores.compass', true) > 0) {
 			Path.init();
 		}
-		if(State.ship) {
+		if($SM.get('features.location.spaceShip')) {
 			Ship.init();
 		}
 		
@@ -159,40 +167,13 @@ var Engine = {
 			var savedState = JSON.parse(localStorage.gameState);
 			if(savedState) {
 				State = savedState;
-				Engine.upgradeState();
+				$SM.updateOldState();
 				Engine.log("loaded save!");
 			}
 		} catch(e) {
-			State = {
-				version: 1.2,
-				stores: {},
-				perks: {}
-			};
+			State = {};
+			$SM.set('version', Engine.VERSION);
 			Engine.event('progress', 'new game');
-		}
-	},
-	
-	upgradeState: function() {
-		/* Use this function to make old 
-		 * save games compatible with newer versions */ 
-		if(typeof State.version != 'number') {
-			Engine.log('upgraded save to v1.0');
-			State.version = 1.0;
-		}
-		if(State.version == 1.0) {
-			// v1.1 introduced the Lodge, so get rid of lodgeless hunters
-			delete State.outside.workers.hunter;
-			delete State.income.hunter;
-			Engine.log('upgraded save to v1.1');
-			State.version = 1.1;
-		}
-		if(State.version == 1.1) {
-			//v1.2 added the Swamp to the map, so add it to already generated maps
-			if(State.world) {
-				World.placeLandmark(15, World.RADIUS * 1.5, World.TILE.SWAMP, State.world.map);
-			}
-			Engine.log('upgraded save to v1.2');
-			State.version = 1.2;
 		}
 	},
 	
@@ -298,7 +279,7 @@ var Engine = {
 			var diff = Math.abs(panelIndex - currentIndex);
 			slider.animate({left: -(panelIndex * 700) + 'px'}, 300 * diff);
 
-			if(Engine.storeAvailable('wood')) {
+			if($SM.get('stores.wood') != undefined) {
 			// FIXME Why does this work if there's an animation queue...?
 				stores.animate({right: -(panelIndex * 700) + 'px'}, 300 * diff);
 			}
@@ -322,204 +303,6 @@ var Engine = {
 			Notifications.printQueue(module);
 		}
 	},
-	
-	addPerk: function(name) {
-		if(!State.perks) {
-			State.perks = {};
-		}
-		State.perks[name] = true;
-		Notifications.notify(null, Engine.Perks[name].notify);
-		if(Engine.activeModule == Path) {
-			Path.updatePerks();
-		}
-	},
-	
-	hasPerk: function(name) {
-		return typeof State.perks == 'object' && State.perks[name] == true;
-	},
-	
-	setStore: function(name, number) {
-		if(typeof State.stores == 'undefined') {
-			State.stores = {};
-		}
-		if(number > Engine.MAX_STORE) number = Engine.MAX_STORE;
-		State.stores[name] = number;
-		Room.updateStoresView();
-		Room.updateBuildButtons();
-		if(State.outside) {
-			Outside.updateVillage();
-		}
-		Engine.saveGame();
-	},
-	
-	setStores: function(list) {
-		if(typeof State.stores == 'undefined') {
-			State.stores = {};
-		}
-		for(k in list) {
-			State.stores[k] = list[k] > Engine.MAX_STORE ? Engine.MAX_STORE : list[k];
-		}
-		Room.updateStoresView();
-		Room.updateBuildButtons();
-		if(State.outside) {
-			Outside.updateVillage();
-		}
-		Engine.saveGame();
-	},
-	
-	addStore: function(name, number) {
-		if(typeof State.stores == 'undefined') {
-			State.stores = {};
-		}
-		var num = State.stores[name];
-		if(typeof num != 'number' || isNaN(num) || num < 0) num = 0;
-		num += number;
-		if(num > Engine.MAX_STORE) num = Engine.MAX_STORE;
-		State.stores[name] = num;
-		Room.updateStoresView();
-		Room.updateBuildButtons();
-		Outside.updateVillage();
-		if(Engine.activeModule == Path) {
-			Path.updateOutfitting();
-		}
-		Engine.saveGame();
-	},
-	
-	addStores: function(list, ignoreCosts) {
-		if(typeof State.stores == 'undefined') {
-			State.stores = {};
-		}
-		
-		// Make sure any income costs can be paid
-		if(!ignoreCosts) {
-			for(k in list) {
-				var num = State.stores[k];
-				if(typeof num != 'number' || isNaN(num) || num < 0) num = 0;
-				if(num + list[k] < 0) {
-					return false;
-				}
-			}
-		}
-		
-		// Actually do the update
-		for(k in list) {
-			var num = State.stores[k];
-			if(typeof num != 'number') num = 0;
-			num += list[k];
-			num = num < 0 ? 0 : num;
-			num = num > Engine.MAX_STORE ? Engine.MAX_STORE : num;
-			State.stores[k] = num;
-		}
-		Room.updateStoresView();
-		Room.updateBuildButtons();
-		Outside.updateVillage();
-		if(Engine.activeModule == Path) {
-			Path.updateOutfitting();
-		}
-		Engine.saveGame();
-		return true;
-	},
-	
-	storeAvailable: function(name) {
-		return typeof State.stores[name] == 'number';
-	},
-	
-	getStore: function(name) {
-		if(typeof State.stores == 'undefined' || typeof State.stores[name] == 'undefined' ) {
-			return 0;
-		}
-		return State.stores[name];
-	},
-	
-	setIncome: function(source, options) {
-		if(typeof State.income == 'undefined') {
-			State.income = {};
-		}
-		var existing = State.income[source];
-		if(typeof existing != 'undefined') {
-			options.timeLeft = existing.timeLeft;
-		}
-		State.income[source] = options;
-	},
-	
-	getIncome: function(source) {
-		if(typeof State.income == 'undefined') {
-			State.income = {};
-		}
-		var existing = State.income[source];
-		if(typeof existing != 'undefined') {
-			return existing;
-		}
-		return {};
-	},
-	
-	removeIncome: function(source) {
-		if(State.income) {
-			delete State.income[source];
-		}
-		Room.updateIncomeView();
-	},
-	
-	collectIncome: function() {
-		if(typeof State.income != 'undefined' && Engine.activeModule != Space) {
-			var changed = false;
-			for(var source in State.income) {
-				var income = State.income[source];
-				if(typeof income.timeLeft != 'number')
-				{
-					income.timeLeft = 0;
-				}
-				income.timeLeft--;
-				
-				if(income.timeLeft <= 0) {
-					Engine.log('collection income from ' + source);
-					if(source == 'thieves') {
-						Engine.addStolen(income.stores);
-					}
-					changed = Engine.addStores(income.stores) || changed;
-					if(typeof income.delay == 'number') {
-						income.timeLeft = income.delay;
-					}
-				}
-			}
-			if(changed) {
-				Room.updateStoresView();
-				Room.updateBuildButtons();
-				Engine.saveGame();
-				if(Events.activeEvent() != null) {
-					Events.updateButtons();
-				}
-			}
-		}
-		Engine._incomeTimeout = setTimeout(Engine.collectIncome, 1000);
-	},
-	
-	openPath: function() {
-		Path.init();
-		Engine.event('progress', 'path');
-		Notifications.notify(Room, 'the compass points ' + World.dir);
-	},
-	
-	addStolen: function(stores) {
-		if(!State.stolen) State.stolen = {};
-		for(var k in stores) {
-			if(!State.stolen[k]) State.stolen[k] = 0;
-			State.stolen[k] -= stores[k];
-		}
-	},
-	
-	startThieves: function() {
-		State.thieves = 1;
-		Engine.setIncome('thieves', {
-			delay: 10,
-			stores: {
-				'wood': -10,
-				'fur': -5,
-				'meat': -5
-			}
-		});
-		Room.updateIncomeView();
-	},
 
 	// Move the stores panel beneath top_container (or to top: 0px if top_container
 	// either hasn't been filled in or is null) using transition_diff to sync with
@@ -541,18 +324,6 @@ var Engine = {
 		else {
 			stores.animate({top: top_container.height() + 26 + 'px'},
 						   {queue: false, duration: 300 * transition_diff});
-		}
-	},
-	
-	num: function(name, craftable) {
-		switch(craftable.type) {
-		case 'good':
-		case 'tool':
-		case 'weapon':
-		case 'upgrade':
-			return Engine.getStore(name);
-		case 'building':
-			return Outside.numBuilding(name);
 		}
 	},
 	
@@ -616,7 +387,30 @@ var Engine = {
 		if(Engine.activeModule.swipeDown) {
 			Engine.activeModule.swipeDown(e);
 		}
+	},
+	
+	handleStateUpdates: function(e){
+		
 	}
+};
+
+//create jQuery Callbacks() to handle object events 
+$.Dispatch = function( id ) {
+	var callbacks,
+		method,
+		topic = id && Engine.topics[ id ];
+	if ( !topic ) {
+		callbacks = jQuery.Callbacks();
+		topic = {
+				publish: callbacks.fire,
+				subscribe: callbacks.add,
+				unsubscribe: callbacks.remove
+		};
+		if ( id ) {
+			Engine.topics[ id ] = topic;
+		}
+	}
+	return topic;
 };
 
 $(function() {

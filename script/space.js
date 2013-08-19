@@ -41,6 +41,9 @@ var Space = {
 		var h = $('<div>').attr('id', 'hullRemaining').appendTo(this.panel);
 		$('<div>').addClass('row_key').text('hull: ').appendTo(h);
 		$('<div>').addClass('row_val').appendTo(h);
+		
+		//subscribe to stateUpdates
+		$.Dispatch('stateUpdate').subscribe(Space.handleStateUpdates);
 	},
 	
 	options: {}, // Nothing for now
@@ -87,7 +90,7 @@ var Space = {
 	},
 	
 	getSpeed: function() {
-		return Space.SHIP_SPEED + State.ship.thrusters;
+		return Space.SHIP_SPEED + $SM.get('game.spaceShip.thrusters');
 	},
 	
 	updateHull: function() {
@@ -445,5 +448,9 @@ var Space = {
 				Engine.log('right off');
 				break;
 		}
+	},
+	
+	handleStateUpdates: function(e){
+		
 	}
 };

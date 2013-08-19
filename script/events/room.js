@@ -5,7 +5,7 @@ Events.Room = [
 	{ /* The Nomad  --  Merchant */
 		title: 'The Nomad',
 		isAvailable: function() {
-			return Engine.activeModule == Room && Engine.getStore('fur') > 0;
+			return Engine.activeModule == Room && $SM.get('stores.fur', true) > 0;
 		},
 		scenes: {
 			'start': {
@@ -33,13 +33,13 @@ Events.Room = [
 					},
 					'buyCompass': {
 						available: function() {
-							return Engine.getStore('compass') < 1;
+							return $SM.get('stores.compass', true) < 1;
 						},
 						text: 'buy compass',
 						cost: { fur: 300, scales: 15, teeth: 5 },
 						reward: { 'compass': 1 },
 						notification: 'the old compass is dented and dusty, but it looks to work.',
-						onChoose: Engine.openPath
+						onChoose: Path.openPath
 					}, 
 					'goodbye': {
 						text: 'say goodbye',
@@ -51,7 +51,7 @@ Events.Room = [
 	}, { /* Noises Outside  --  gain wood/fur */
 		title: 'Noises',
 		isAvailable: function() {
-			return Engine.activeModule == Room && Engine.storeAvailable('wood');
+			return Engine.activeModule == Room && $SM.get('stores.wood');
 		},
 		scenes: {
 			'start': {
@@ -101,7 +101,7 @@ Events.Room = [
 	{ /* Noises Inside  --  trade wood for better good */
 		title: 'Noises',
 		isAvailable: function() {
-			return Engine.activeModule == Room && Engine.storeAvailable('wood');
+			return Engine.activeModule == Room && $SM.get('stores.wood');
 		},
 		scenes: {
 			start: {
@@ -127,12 +127,12 @@ Events.Room = [
 			       'the ground is littered with small scales'
 			    ],
 			    onLoad: function() {
-			    	var numWood = Engine.getStore('wood');
+			    	var numWood = $SM.get('stores.wood', true);
 			    	numWood = Math.floor(numWood * 0.1);
 			    	if(numWood == 0) numWood = 1;
 			    	var numScales = Math.floor(numWood / 5);
 			    	if(numScales == 0) numScales = 1;
-			    	Engine.addStores({wood: -numWood, scales: numScales});
+			    	$SM.addM('stores', {'wood': -numWood, 'scales': numScales});
 			    },
 			    buttons: {
 			    	'leave': {
@@ -147,12 +147,12 @@ Events.Room = [
 			       'the ground is littered with small teeth'
 			    ],
 			    onLoad: function() {
-			    	var numWood = Engine.getStore('wood');
+			    	var numWood = $SM.get('stores.wood', true);
 			    	numWood = Math.floor(numWood * 0.1);
 			    	if(numWood == 0) numWood = 1;
 			    	var numTeeth = Math.floor(numWood / 5);
 			    	if(numTeeth == 0) numTeeth = 1;
-			    	Engine.addStores({wood: -numWood, teeth: numTeeth});
+			    	$SM.addM('stores', {'wood': -numWood, 'teeth': numTeeth});
 			    },
 			    buttons: {
 			    	'leave': {
@@ -167,12 +167,12 @@ Events.Room = [
 			       'the ground is littered with scraps of cloth'
 			    ],
 			    onLoad: function() {
-			    	var numWood = Engine.getStore('wood');
+			    	var numWood = $SM.get('stores.wood', true);
 			    	numWood = Math.floor(numWood * 0.1);
 			    	if(numWood == 0) numWood = 1;
 			    	var numCloth = Math.floor(numWood / 5);
 			    	if(numCloth == 0) numCloth = 1;
-			    	Engine.addStores({wood: -numWood, cloth: numCloth});
+			    	$SM.addM('stores', {'wood': -numWood, 'cloth': numCloth});
 			    },
 			    buttons: {
 			    	'leave': {
@@ -186,7 +186,7 @@ Events.Room = [
 	{ /* The Beggar  --  trade fur for better good */
 		title: 'The Beggar',
 		isAvailable: function() {
-			return Engine.activeModule == Room && Engine.storeAvailable('fur');
+			return Engine.activeModule == Room && $SM.get('stores.fur');
 		},
 		scenes: {
 			start: {
@@ -257,7 +257,7 @@ Events.Room = [
 	{ /* Mysterious Wanderer  --  wood gambling */
 		title: 'The Mysterious Wanderer',
 		isAvailable: function() {
-			return Engine.activeModule == Room && Engine.storeAvailable('wood');
+			return Engine.activeModule == Room && $SM.get('stores.wood');
 		},
 		scenes: {
 			start: {
@@ -290,7 +290,7 @@ Events.Room = [
 			    onLoad: function() {
 			    	if(Math.random() < 0.5) {
 			    		setTimeout(function() {
-			    			Engine.addStore('wood', 300);
+			    			$SM.add('stores.wood', 300);
 			    			Notifications.notify(Room, 'the mysterious wanderer returns, cart piled high with wood.');
 			    		}, 60 * 1000);
 			    	}
@@ -309,7 +309,7 @@ Events.Room = [
 			    onLoad: function() {
 			    	if(Math.random() < 0.3) {
 			    		setTimeout(function() {
-			    			Engine.addStore('wood', 1500);
+			    			$SM.add('stores.wood', 1500);
 			    			Notifications.notify(Room, 'the mysterious wanderer returns, cart piled high with wood.');
 			    		}, 60 * 1000);
 			    	}
@@ -327,7 +327,7 @@ Events.Room = [
 	{ /* Mysterious Wanderer  --  fur gambling */
 		title: 'The Mysterious Wanderer',
 		isAvailable: function() {
-			return Engine.activeModule == Room && Engine.storeAvailable('fur');
+			return Engine.activeModule == Room && $SM.get('stores.fur');
 		},
 		scenes: {
 			start: {
@@ -360,7 +360,7 @@ Events.Room = [
 			    onLoad: function() {
 			    	if(Math.random() < 0.5) {
 			    		setTimeout(function() {
-			    			Engine.addStore('fur', 300);
+			    			$SM.add('stores.fur', 300);
 			    			Notifications.notify(Room, 'the mysterious wanderer returns, cart piled high with furs.');
 			    		}, 60 * 1000);
 			    	}
@@ -379,7 +379,7 @@ Events.Room = [
 			    onLoad: function() {
 			    	if(Math.random() < 0.3) {
 			    		setTimeout(function() {
-			    			Engine.addStore('fur', 1500);
+			    			$SM.add('stores.fur', 1500);
 			    			Notifications.notify(Room, 'the mysterious wanderer returns, cart piled high with furs.');
 			    		}, 60 * 1000);
 			    	}
@@ -397,7 +397,7 @@ Events.Room = [
 	{ /* The Scout  --  Map Merchant */
 		title: 'The Scout',
 		isAvailable: function() {
-			return Engine.activeModule == Room && typeof State.world == 'object';
+			return Engine.activeModule == Room && $SM.get('features.location.world');
 		},
 		scenes: {
 			'start': {
@@ -417,10 +417,10 @@ Events.Room = [
 						text: 'learn scouting',
 						cost: { 'fur': 1000, 'scales': 50, 'teeth': 20 },
 						available: function() {
-							return !Engine.hasPerk('scout');
+							return !$SM.hasPerk('scout');
 						},
 						onChoose: function() {
-							Engine.addPerk('scout');
+							$SM.addPerk('scout');
 						}
 					},
 					'leave': {
@@ -435,7 +435,7 @@ Events.Room = [
 	{ /* The Wandering Master */
 		title: 'The Master',
 		isAvailable: function() {
-			return Engine.activeModule == Room && typeof State.world == 'object';
+			return Engine.activeModule == Room && $SM.get('features.location.world');
 		},
 		scenes: {
 			'start': {
@@ -468,30 +468,30 @@ Events.Room = [
 		        	'evasion': {
 		        		text: 'evasion',
 		        		available: function() {
-		        			return !Engine.hasPerk('evasive');
+		        			return !$SM.hasPerk('evasive');
 		        		},
 		        		onChoose: function() {
-		        			Engine.addPerk('evasive');
+		        			$SM.addPerk('evasive');
 		        		},
 		        		nextScene: 'end'
 		        	},
 		        	'precision': {
 		        		text: 'precision',
 		        		available: function() {
-		        			return !Engine.hasPerk('precise');
+		        			return !$SM.hasPerk('precise');
 		        		},
 		        		onChoose: function() {
-		        			Engine.addPerk('precise');
+		        			$SM.addPerk('precise');
 		        		},
 		        		nextScene: 'end'
 		        	},
 		        	'force': {
 		        		text: 'force',
 		        		available: function() {
-		        			return !Engine.hasPerk('barbarian');
+		        			return !$SM.hasPerk('barbarian');
 		        		},
 		        		onChoose: function() {
-		        			Engine.addPerk('barbarian');
+		        			$SM.addPerk('barbarian');
 		        		},
 		        		nextScene: 'end'
 		        	},
@@ -507,7 +507,7 @@ Events.Room = [
 	{ /* The Sick Man */
   		title: 'The Sick Man',
   		isAvailable: function() {
-  			return Engine.activeModule == Room && typeof State.world == 'object';
+  			return Engine.activeModule == Room && $SM.get('features.location.world');
   		},
   		scenes: {
   			'start': {
@@ -536,7 +536,7 @@ Events.Room = [
   					'some weird metal he picked up on his travels.'
   				],
   				onLoad: function() {
-			    	Engine.addStore('alien alloy', 1);
+  					$SM.add('stores["alien alloy"]', 1);
 			    },
   				buttons: {
   					'bye': {
@@ -552,7 +552,7 @@ Events.Room = [
   					'some weird glowing boxes he picked up on his travels.'
   				],
   				onLoad: function() {
-			    	Engine.addStore('energy cell', 3);
+  					$SM.add('stores["energy cell"]', 3);
 			    },
   				buttons: {
   					'bye': {
@@ -568,7 +568,7 @@ Events.Room = [
   					'all he has are some scales.'
   				],
   				onLoad: function() {
-			    	Engine.addStore('scales', 5);
+  					$SM.add('stores.scales', 5);
 			    },
   				buttons: {
   					'bye': {
