@@ -1088,6 +1088,7 @@ var Room = {
 			Room.updateStoresView();
 			Room.updateBuildButtons();
 		} else if(e.category == 'income'){
+			Room.updateStoresView();
 			Room.updateIncomeView();
 		} else if(e.stateName.indexOf('game.buildings') == 0){
 			Room.updateBuildButtons();
