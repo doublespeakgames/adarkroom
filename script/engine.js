@@ -362,6 +362,40 @@ var Engine = {
 		if(Engine.activeModule.keyUp) {
 			Engine.activeModule.keyUp(e);
 		}
+        else
+        {
+            switch(event.which) {
+                case 38: // Up
+                case 87:
+                    Engine.log('up');
+                    break;
+                case 40: // Down
+                case 83:
+                    Engine.log('down');
+                    break;
+                case 37: // Left
+                case 65:
+                    if(Engine.activeModule == Ship && Path.tab)
+                        Engine.travelTo(Path)
+                    else if(Engine.activeModule == Path && Outside.tab)
+                        Engine.travelTo(Outside)
+                    else if(Engine.activeModule == Outside && Room.tab)
+                        Engine.travelTo(Room)
+                    Engine.log('left');
+                    break;
+                case 39: // Right
+                case 68:
+                    if(Engine.activeModule == Room && Outside.tab)
+                        Engine.travelTo(Outside)
+                    else if(Engine.activeModule == Outside && Path.tab)
+                        Engine.travelTo(Path)
+                    else if(Engine.activeModule == Path && Ship.tab)
+                        Engine.travelTo(Ship)
+                    Engine.log('right');
+                    break;
+            }
+		}
+	
 		return false;
 	},
 
