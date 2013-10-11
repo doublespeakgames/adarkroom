@@ -364,7 +364,7 @@ var Engine = {
 		}
         else
         {
-            switch(event.which) {
+            switch(e.which) {
                 case 38: // Up
                 case 87:
                     Engine.log('up');
