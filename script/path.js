@@ -35,7 +35,7 @@ var Path = {
 		
 		// Add the outfitting area
 		var outfitting = $('<div>').attr('id', 'outfitting').appendTo(this.panel);
-		var bagspace = $('<div>').attr('id', 'bagspace').appendTo(outfitting);
+		$('<div>').attr('id', 'bagspace').appendTo(outfitting);
 		
 		// Add the embark button
 		new Button.Button({
@@ -114,10 +114,10 @@ var Path = {
 			if(needsAppend && perks.children().length > 0) {
 				perks.appendTo(Path.panel);
 			}
-		}
-
-		if(Engine.activeModule === Path) {
-			$('#storesContainer').css({top: perks.height() + 26 + 'px'});
+			
+			if(Engine.activeModule === Path) {
+				$('#storesContainer').css({top: perks.height() + 26 + 'px'});
+			}
 		}
 	},
 	

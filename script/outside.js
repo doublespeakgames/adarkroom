@@ -350,36 +350,36 @@ var Outside = {
 	updateVillageRow: function(name, num, village) {
 		var id = 'building_row_' + name.replace(' ', '-');
 		var row = $('div#' + id, village);
-			if(row.length == 0 && num > 0) {
-				var row = $('<div>').attr('id', id).addClass('storeRow');
-				$('<div>').addClass('row_key').text(name).appendTo(row);
-				$('<div>').addClass('row_val').text(num).appendTo(row);
-				$('<div>').addClass('clear').appendTo(row);
-				var curPrev = null;
-				village.children().each(function(i) {
-					var child = $(this);
-					if(child.attr('id') != 'population') {
-						var cName = child.attr('id').substring(13).replace('-', ' ');
-						if(cName < name && (curPrev == null || cName > curPrev)) {
-							curPrev = cName;
-						}
+		if(row.length == 0 && num > 0) {
+			row = $('<div>').attr('id', id).addClass('storeRow');
+			$('<div>').addClass('row_key').text(name).appendTo(row);
+			$('<div>').addClass('row_val').text(num).appendTo(row);
+			$('<div>').addClass('clear').appendTo(row);
+			var curPrev = null;
+			village.children().each(function(i) {
+				var child = $(this);
+				if(child.attr('id') != 'population') {
+					var cName = child.attr('id').substring(13).replace('-', ' ');
+					if(cName < name && (curPrev == null || cName > curPrev)) {
+						curPrev = cName;
 					}
-				});
-				if(curPrev == null) {
-					row.prependTo(village);
-				} else {
-					row.insertAfter('#building_row_' + curPrev.replace(' ', '-'));
 				}
-			} else if(num > 0) {
-				$('div#' + row.attr('id') + ' > div.row_val', village).text(num);
-			} else if(num == 0) {
-				row.remove();
+			});
+			if(curPrev == null) {
+				row.prependTo(village);
+			} else {
+				row.insertAfter('#building_row_' + curPrev.replace(' ', '-'));
 			}
+		} else if(num > 0) {
+			$('div#' + row.attr('id') + ' > div.row_val', village).text(num);
+		} else if(num == 0) {
+			row.remove();
+		}
 	},
 	
 	updateVillage: function() {
 		var village = $('div#village');
-		var pop = $('div#population');
+		var population = $('div#population');
 		var needsAppend = false;
 		if(village.length == 0) {
 			needsAppend = true;
@@ -440,7 +440,7 @@ var Outside = {
 			'sulphur mine': ['sulphur miner'],
 			'steelworks': ['steelworker'],
 			'armoury' : ['armourer']
-		}
+		};
 		
 		var jobs = jobMap[name];
 		var added = false;
@@ -449,7 +449,7 @@ var Outside = {
 				var job = jobs[i];
 				if(typeof $SM.get('game.buildings["'+name+'"]') == 'number' && 
 						typeof $SM.get('game.workers["'+job+'"]') != 'number') {
-					Engine.log('adding ' + job + ' to the workers list')
+					Engine.log('adding ' + job + ' to the workers list');
 					$SM.set('game.workers["'+job+'"]', 0);
 					added = true;
 				}
@@ -545,7 +545,7 @@ var Outside = {
 	},
 	
 	gatherWood: function() {
-		Notifications.notify(Outside, "dry brush and dead branches litter the forest floor")
+		Notifications.notify(Outside, "dry brush and dead branches litter the forest floor");
 		var gatherAmt = $SM.get('game.buildings["cart"]', true) > 0 ? 50 : 10;
 		$SM.add('stores.wood', gatherAmt);
 	},
@@ -561,7 +561,7 @@ var Outside = {
 			for(var j in Outside.TrapDrops) {
 				var drop = Outside.TrapDrops[j];
 				if(roll < drop.rollUnder) {
-					var num = drops[drop.name]
+					var num = drops[drop.name];
 					if(typeof num == 'undefined') {
 						num = 0;
 						msg.push(drop.message);

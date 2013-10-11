@@ -103,7 +103,7 @@ var Space = {
 		if(r < 0.2)
 			c = '#';
 		else if(r < 0.4)
-			c = '$'
+			c = '$';
 		else if(r < 0.6)
 			c = '%';
 		else if(r < 0.8)
@@ -112,7 +112,7 @@ var Space = {
 			c = 'H';
 		
 		var x = Math.floor(Math.random() * 700);
-		var a = $('<div>').addClass('asteroid').text(c).appendTo('#spacePanel').css('left', x + 'px')
+		var a = $('<div>').addClass('asteroid').text(c).appendTo('#spacePanel').css('left', x + 'px');
 		a.data({
 			xMin: x,
 			xMax: x + a.width(),

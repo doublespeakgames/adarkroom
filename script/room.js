@@ -65,7 +65,7 @@ var Room = {
 					wood: 200,
 					fur: 10,
 					meat: 5
-				}
+				};
 			}
 		},
 		'trading post': {
@@ -261,7 +261,7 @@ var Room = {
 				return {
 					'leather': 200,
 					'iron': 100
-				}
+				};
 			}
 		},
 		's armour': {
@@ -272,7 +272,7 @@ var Room = {
 				return {
 					'leather': 200,
 					'steel': 100
-				}
+				};
 			}
 		},
 		'iron sword': {
@@ -307,7 +307,7 @@ var Room = {
 					'wood': 200,
 					'steel': 50,
 					'sulphur': 50
-				}
+				};
 			}
 		}
 	},
@@ -331,7 +331,7 @@ var Room = {
 				return {
 					'fur': 150,
 					'scales': 50
-				}
+				};
 			}
 		},
 		'coal': {
@@ -340,7 +340,7 @@ var Room = {
 				return {
 					'fur': 200,
 					'teeth': 50
-				}
+				};
 			}
 		},
 		'steel': {
@@ -350,7 +350,7 @@ var Room = {
 					'fur': 300,
 					'scales': 50,
 					'teeth': 50
-				}
+				};
 			}
 		},
 		'medicine': {
@@ -358,7 +358,7 @@ var Room = {
 			cost: function() {
 				return {
 					'scales': 50, 'teeth': 30
-				}
+				};
 			}
 		},
 		'bullets': {
@@ -366,7 +366,7 @@ var Room = {
 			cost: function() {
 				return {
 					'scales': 10
-				}
+				};
 			}
 		},
 		'energy cell': {
@@ -375,7 +375,7 @@ var Room = {
 				return {
 					'scales': 10,
 					'teeth': 10
-				}
+				};
 			}
 		},
 		'bolas': {
@@ -383,7 +383,7 @@ var Room = {
 			cost: function() {
 				return {
 					'teeth': 10
-				}
+				};
 			}
 		},
 		'grenade': {
@@ -392,7 +392,7 @@ var Room = {
 				return {
 					'scales': 100,
 					'teeth': 50
-				}
+				};
 			}
 		},
 		'bayonet': {
@@ -401,7 +401,7 @@ var Room = {
 				return {
 					'scales': 500,
 					'teeth': 250
-				}
+				};
 			}
 		},
 		'alien alloy': {
@@ -411,7 +411,7 @@ var Room = {
 					'fur': 1500,
 					'scales': 750,
 					'teeth': 300
-				}
+				};
 			}
 		},
 		'compass': {
@@ -468,7 +468,7 @@ var Room = {
 		Engine.updateSlider();
 		
 		// Create the light button
-		var lbtn = new Button.Button({
+		new Button.Button({
 			id: 'lightButton',
 			text: 'light fire',
 			click: Room.lightFire,
@@ -478,7 +478,7 @@ var Room = {
 		}).appendTo('div#roomPanel');
 		
 		// Create the stoke button
-		var btn = new Button.Button({
+		new Button.Button({
 			id: 'stokeButton',
 			text: "stoke fire",
 			click: Room.stokeFire,
@@ -537,7 +537,7 @@ var Room = {
 				stores: {'wood' : 2 }
 			});
 			Room.updateIncomeView();
-			Notifications.notify(Room, "the stranger is standing by the fire. she says she can help. says she builds things.")
+			Notifications.notify(Room, "the stranger is standing by the fire. she says she can help. says she builds things.");
 		}
 
 		Engine.moveStoresView(null, transition_diff);
@@ -703,7 +703,7 @@ var Room = {
 			setTimeout(Room.unlockForest, Room._NEED_WOOD_DELAY);
 		} 
 		else if(lBuilder < 3 && Room.temperature.value >= Room.TempEnum.Warm.value) {
-			var msg;
+			var msg = "";
 			switch(lBuilder) {
 			case 1:
 				msg = "the stranger shivers, and mumbles quietly. her words are unintelligible.";
@@ -781,7 +781,7 @@ var Room = {
 			}
 			
 			if(row.length == 0 && num > 0) {
-				var row = $('<div>').attr('id', id).addClass('storeRow');
+				row = $('<div>').attr('id', id).addClass('storeRow');
 				$('<div>').addClass('row_key').text(k).appendTo(row);
 				$('<div>').addClass('row_val').text(Math.floor(num)).appendTo(row);
 				$('<div>').addClass('clear').appendTo(row);

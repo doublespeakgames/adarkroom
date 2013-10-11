@@ -334,7 +334,7 @@ var World = {
 		World.doSpace();
 		if(World.checkDanger()) {
 			if(World.danger) {
-				Notifications.notify(World, 'dangerous to be this far from the village without proper protection')
+				Notifications.notify(World, 'dangerous to be this far from the village without proper protection');
 			} else {
 				Notifications.notify(World, 'safer here');
 			}
@@ -441,7 +441,7 @@ var World = {
 				// Starvation! Hooray!
 				num = 0;
 				if(!World.starvation) {
-					Notifications.notify(World, 'starvation sets in')
+					Notifications.notify(World, 'starvation sets in');
 					World.starvation = true;
 				} else {
 					$SM.set('character.starved', $SM.get('character.starved', true));
@@ -620,7 +620,7 @@ var World = {
 		// Spiral out from there
 		map[World.RADIUS][World.RADIUS] = World.TILE.VILLAGE;
 		for(var r = 1; r <= World.RADIUS; r++) {
-			for(t = 0; t < r * 8; t++) {
+			for(var t = 0; t < r * 8; t++) {
 				var x, y;
 				if(t < 2 * r) {
 					x = World.RADIUS - r + t;
@@ -688,8 +688,6 @@ var World = {
 	},
 	
 	chooseTile: function(x, y, map) {
-		
-		var log = x == World.RADIUS + 1 && y == World.RADIUS + 1;
 		
 		var adjacent = [
 			y > 0 ? map[x][y-1] : null,

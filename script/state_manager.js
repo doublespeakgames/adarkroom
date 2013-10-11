@@ -83,8 +83,8 @@ var StateManager = {
 		
 		//stores values can not be negative
 		if(stateName.indexOf('stores') == 0 && $SM.get(stateName, true) < 0) {
-			eval('('+fullPath+') = 0');;
-			Engine.log('WARNING: state:' + stateName + ' can not be a negative value. Set to 0 instead.')
+			eval('('+fullPath+') = 0');
+			Engine.log('WARNING: state:' + stateName + ' can not be a negative value. Set to 0 instead.');
 		}
 		
 		if(!noEvent) {
@@ -95,7 +95,7 @@ var StateManager = {
 	
 	//sets a list of states
 	setM: function(parentName, list, noEvent) {
-		var whichParent = $SM.buildPath(parentName);
+		$SM.buildPath(parentName);
 		
 		//make sure the state exists to avoid errors,
 		if($SM.get(parentName) == undefined) $SM.set(parentName, {}, true);
@@ -125,7 +125,7 @@ var StateManager = {
 			$SM.set(stateName, old + value, noEvent);
 		} else if(typeof old != 'number' || typeof value != 'number'){
 			Engine.log('WARNING: Can not do math with state:'+stateName+' or value:'+value+' because at least one is not a number.');
-			err = 1
+			err = 1;
 		} else {
 			$SM.set(stateName, old + value, noEvent); //setState handles event and save
 		}
@@ -199,7 +199,7 @@ var StateManager = {
 	fireUpdate: function(stateName, save){
 		var category = $SM.getCategory(stateName);
 		if(stateName == undefined) stateName = category = 'all'; //best if this doesn't happen as it will trigger more stuff
-		$.Dispatch('stateUpdate').publish({'category': category, 'stateName':stateName})
+		$.Dispatch('stateUpdate').publish({'category': category, 'stateName':stateName});
 		if(save) Engine.saveGame();
 	},
 	

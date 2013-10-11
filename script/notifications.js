@@ -43,8 +43,8 @@ var Notifications = {
 		Engine.saveGame();
 	},
 	
-	printMessage: function(text) {
-		var text = $('<div>').addClass('notification').css('opacity', '0').text(text).prependTo('div#notifications');
+	printMessage: function(t) {
+		var text = $('<div>').addClass('notification').css('opacity', '0').text(t).prependTo('div#notifications');
 		text.animate({opacity: 1}, 500, 'linear');
 	},
 	

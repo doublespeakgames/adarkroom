@@ -376,21 +376,21 @@ var Engine = {
                 case 37: // Left
                 case 65:
                     if(Engine.activeModule == Ship && Path.tab)
-                        Engine.travelTo(Path)
+                        Engine.travelTo(Path);
                     else if(Engine.activeModule == Path && Outside.tab)
-                        Engine.travelTo(Outside)
+                        Engine.travelTo(Outside);
                     else if(Engine.activeModule == Outside && Room.tab)
-                        Engine.travelTo(Room)
+                        Engine.travelTo(Room);
                     Engine.log('left');
                     break;
                 case 39: // Right
                 case 68:
                     if(Engine.activeModule == Room && Outside.tab)
-                        Engine.travelTo(Outside)
+                        Engine.travelTo(Outside);
                     else if(Engine.activeModule == Outside && Path.tab)
-                        Engine.travelTo(Path)
+                        Engine.travelTo(Path);
                     else if(Engine.activeModule == Path && Ship.tab)
-                        Engine.travelTo(Ship)
+                        Engine.travelTo(Ship);
                     Engine.log('right');
                     break;
             }
@@ -431,7 +431,6 @@ var Engine = {
 //create jQuery Callbacks() to handle object events 
 $.Dispatch = function( id ) {
 	var callbacks,
-		method,
 		topic = id && Engine.topics[ id ];
 	if ( !topic ) {
 		callbacks = jQuery.Callbacks();

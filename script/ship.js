@@ -120,7 +120,7 @@ var Ship = {
 			return false;
 		}
 		$SM.add('stores["alien alloy"]', -Ship.ALLOY_PER_THRUSTER);
-		$SM.add('game.spaceShip.thrusters', 1)
+		$SM.add('game.spaceShip.thrusters', 1);
 		$('#engineRow .row_val', Ship.panel).text($SM.get('game.spaceShip.thrusters'));
 	},
 	
