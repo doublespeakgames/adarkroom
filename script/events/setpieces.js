@@ -3392,5 +3392,54 @@ Events.Setpieces = {
 				}
 			}
  		}
+	},
+  "cache": { /* Cache - contains some of supplies from previous game */
+		title: 'An Underground Cache',
+		scenes: {
+			'start': {
+				text: [
+					'a destroyed village stands before you',
+					'with bodies littering the ground.'
+				],
+				notification: 'you smell the metallic tang of a wanderer afterburner.',
+				buttons: {
+					'enter': {
+						text: 'enter',
+						nextScene: {1: 'underground'}
+					},
+					'leave': {
+						text: 'leave',
+						nextScene: 'end'
+					}
+				}
+			},
+			'underground': {
+				text: [
+					'a small shack stands at the center of the village.',
+					'there are still supplies inside.'
+				],
+				buttons: {
+					'take': {
+						text: 'take',
+						nextScene: {1: 'exit'}
+					}
+				}
+			},
+			'exit': {
+				text: [
+					'all the work of a previous generation is here.',
+					'ripe for the picking.'
+				],
+				onLoad: function() {
+					World.markVisited(World.curPos[0], World.curPos[1]);
+				},
+				buttons: {
+					'leave': {
+						text: 'leave',
+						nextScene: 'end'
+					}
+				}
+			}
+		}
 	}
 };

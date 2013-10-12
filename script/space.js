@@ -386,6 +386,7 @@ var Space = {
 								$('#notifyGradient').attr('style', 'background-color:'+cur+';background:-webkit-' + s + ';background:' + s);
 							},
 							complete: function() {
+                Prestige.save();
 								$('#starsContainer').remove();
 								if(typeof Storage != 'undefined' && localStorage) {
 									localStorage.clear();
