@@ -19,7 +19,8 @@ var World = {
 		SHIP: 'W',
 		BOREHOLE: 'B',
 		BATTLEFIELD: 'F',
-		SWAMP: 'M'
+		SWAMP: 'M',
+    CACHE: 'U'
 	},
 	TILE_PROBS: {},
 	LANDMARKS: {},
@@ -123,10 +124,11 @@ var World = {
 		World.LANDMARKS[World.TILE.CAVE] = { num: 5, minRadius: 3, maxRadius: 10, scene: 'cave', label: 'A&nbsp;Damp&nbsp;Cave' };
 		World.LANDMARKS[World.TILE.TOWN] = { num: 10, minRadius: 10, maxRadius: 20, scene: 'town', label: 'An&nbsp;Abandoned&nbsp;Town' };
 		World.LANDMARKS[World.TILE.CITY] = { num: 20, minRadius: 20, maxRadius: World.RADIUS * 1.5, scene: 'city', label: 'A&nbsp;Ruined&nbsp;City' };
-		World.LANDMARKS[World.TILE.SHIP] = {num: 1, minRadius: 28, maxRadius: 28, scene: 'ship', label: 'A&nbsp;Crashed&nbsp;Starship'};
-		World.LANDMARKS[World.TILE.BOREHOLE] = {num: 10, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'borehole', label: 'A&nbsp;Borehole'};
-		World.LANDMARKS[World.TILE.BATTLEFIELD] = {num: 5, minRadius: 18, maxRadius: World.RADIUS * 1.5, scene: 'battlefield', label: 'A&nbsp;Battlefield'};
-		World.LANDMARKS[World.TILE.SWAMP] = {num: 1, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'swamp', label: 'A&nbsp;Murky&nbsp;Swamp'};
+		World.LANDMARKS[World.TILE.SHIP] = { num: 1, minRadius: 28, maxRadius: 28, scene: 'ship', label: 'A&nbsp;Crashed&nbsp;Starship'};
+		World.LANDMARKS[World.TILE.BOREHOLE] = { num: 10, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'borehole', label: 'A&nbsp;Borehole'};
+		World.LANDMARKS[World.TILE.BATTLEFIELD] = { num: 5, minRadius: 18, maxRadius: World.RADIUS * 1.5, scene: 'battlefield', label: 'A&nbsp;Battlefield'};
+		World.LANDMARKS[World.TILE.SWAMP] = { num: 1, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'swamp', label: 'A&nbsp;Murky&nbsp;Swamp'};
+    World.LANDMARKS[World.TILE.CACHE] = { num: 1, minRadius: 10, maxRadius: World.RADIUS * 1.5, scene: 'cache', label: 'An&nbsp;Underground&nbsp;Cache'};
 		
 		if(typeof $SM.get('features.location.world') == 'undefined') {
 			$SM.set('features.location.world', true);
