@@ -3421,7 +3421,7 @@ Events.Setpieces = {
 				buttons: {
 					'take': {
 						text: 'take',
-						nextScene: 'exit'
+						nextScene: {1: 'exit'}
 					}
 				}
 			},
