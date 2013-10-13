@@ -11,7 +11,7 @@ var Prestige = {
   },
   
   save: function() {
-    prevStores = [ //g = goods, w = weapons, a = ammo
+    var prevStores = [ //g = goods, w = weapons, a = ammo
       $SM.get('stores["wood"]'), // randGen('g'),
       $SM.get('stores["fur"]'), // randGen('g'),
       $SM.get('stores["meat"]'), // randGen('g'),
@@ -37,8 +37,14 @@ var Prestige = {
       $SM.get('stores["grenade"]'), // randGen('a'),
       $SM.get('stores["bolas"]') // randGen('a')
     ];
+    $SM.set('previous.stores', prevStores);
     return prevStores;
   },
+  
+  load: function() {
+    var prevStores = $SM.get('previous.stores');
+    return prevStores;
+  }
   
   /*randGen: function(storeType) {
       if (storeType == 'g') {
