@@ -387,10 +387,12 @@ var Space = {
 							},
 							complete: function() {
                 Prestige.save();
+                backup = $SM.get('previous.stores');
 								$('#starsContainer').remove();
 								if(typeof Storage != 'undefined' && localStorage) {
 									localStorage.clear();
 								}
+                $SM.set('previous.stores',backup);
 								delete window.State;
 								Engine.options = {};
 							}

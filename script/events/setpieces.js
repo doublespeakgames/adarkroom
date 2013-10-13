@@ -3432,6 +3432,7 @@ Events.Setpieces = {
 				],
 				onLoad: function() {
 					World.markVisited(World.curPos[0], World.curPos[1]);
+          Prestige.load();
 				},
 				buttons: {
 					'leave': {
