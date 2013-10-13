@@ -386,13 +386,11 @@ var Space = {
 								$('#notifyGradient').attr('style', 'background-color:'+cur+';background:-webkit-' + s + ';background:' + s);
 							},
 							complete: function() {
-                Prestige.save();
-                backup = $SM.get('previous.stores');
+                //Prestige.save();
 								$('#starsContainer').remove();
 								if(typeof Storage != 'undefined' && localStorage) {
 									localStorage.clear();
 								}
-                $SM.set('previous.stores',backup);
 								delete window.State;
 								Engine.options = {};
 							}

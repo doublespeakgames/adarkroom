@@ -206,10 +206,12 @@ var Engine = {
 	},
 	
 	deleteSave: function() {
+    //var carriedPrestige = $SM.get('previous.stores');
 		if(typeof Storage != 'undefined' && localStorage) {
 			localStorage.clear();
 		}
 		location.reload();
+    //$SM.set('previous.stores',carriedPrestige);
 	},
 	
 	share: function() {
