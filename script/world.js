@@ -7,7 +7,7 @@ var World = {
 		IRON_MINE: 'I',
 		COAL_MINE: 'C',
 		SULPHUR_MINE: 'S',
-		FOREST: 'T',
+		FOREST: ';',
 		FIELD: ',',
 		BARRENS: '.',
 		ROAD: '#',
