@@ -10,6 +10,7 @@ var Engine = {
 	VERSION: 1.3,
 	MAX_STORE: 99999999999999,
 	SAVE_DISPLAY: 30 * 1000,
+  GAME_OVER: false,
 	
 	//object event types
 	topics: {},
@@ -206,9 +207,11 @@ var Engine = {
 	},
 	
 	deleteSave: function() {
-		if(typeof Storage != 'undefined' && localStorage) {
-			localStorage.clear();
-		}
+    if (!Engine.GAME_OVER) {
+      if(typeof Storage != 'undefined' && localStorage) {
+        localStorage.clear();
+      }
+    }
 		location.reload();
 	},
 	

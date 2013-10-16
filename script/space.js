@@ -386,11 +386,18 @@ var Space = {
 								$('#notifyGradient').attr('style', 'background-color:'+cur+';background:-webkit-' + s + ';background:' + s);
 							},
 							complete: function() {
-								$('#starsContainer').remove();
+								Engine.GAME_OVER = true;
+                var backup;
+                $('#starsContainer').remove();
 								if(typeof Storage != 'undefined' && localStorage) {
-									localStorage.clear();
+                  backup = Prestige.save();
+                  localStorage.clear();
 								}
 								delete window.State;
+                $('.deleteSave, .share').remove();
+                Prestige.populateNewSave(backup);
+                $('#content, #notifications').remove();
+                $('.deleteSave, .share').attr('style', 'color: white;');
 								Engine.options = {};
 							}
 						});
