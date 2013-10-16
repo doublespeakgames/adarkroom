@@ -128,7 +128,7 @@ var World = {
 		World.LANDMARKS[World.TILE.BOREHOLE] = { num: 10, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'borehole', label: 'A&nbsp;Borehole'};
 		World.LANDMARKS[World.TILE.BATTLEFIELD] = { num: 5, minRadius: 18, maxRadius: World.RADIUS * 1.5, scene: 'battlefield', label: 'A&nbsp;Battlefield'};
 		World.LANDMARKS[World.TILE.SWAMP] = { num: 1, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'swamp', label: 'A&nbsp;Murky&nbsp;Swamp'};
-    World.LANDMARKS[World.TILE.CACHE] = { num: 1, minRadius: 10, maxRadius: World.RADIUS * 1.5, scene: 'cache', label: 'An&nbsp;Underground&nbsp;Cache'};
+    World.LANDMARKS[World.TILE.CACHE] = { num: 1, minRadius: 10, maxRadius: World.RADIUS * 1.5, scene: 'cache', label: 'A&nbsp;Destroyed&nbsp;Village'};
 		
 		if(typeof $SM.get('features.location.world') == 'undefined') {
 			$SM.set('features.location.world', true);
