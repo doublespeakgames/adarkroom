@@ -12,33 +12,46 @@ var Prestige = {
   
   save: function() {
     var prevStores = [ //g = goods, w = weapons, a = ammo
-      $SM.get('stores["wood"]'),
-      $SM.get('stores["fur"]'),
-      $SM.get('stores["meat"]'),
-      $SM.get('stores["iron"]'),
-      $SM.get('stores["coal"]'),
-      $SM.get('stores["sulphur"]'),
-      $SM.get('stores["steel"]'),
-      $SM.get('stores["cured meat"]'),
-      $SM.get('stores["scales"]'),
-      $SM.get('stores["teeth"]'),
-      $SM.get('stores["leather"]'),
-      $SM.get('stores["bait"]'),
-      $SM.get('stores["torch"]'),
-      $SM.get('stores["cloth"]'),
-      $SM.get('stores["bone spear"]'),
-      $SM.get('stores["iron sword"]'),
-      $SM.get('stores["steel sword"]'),
-      $SM.get('stores["bayonet"]'),
-      $SM.get('stores["rifle"]'),
-      $SM.get('stores["laser rifle"]'),
-      $SM.get('stores["bullets"]'),
-      $SM.get('stores["energy cell"]'),
-      $SM.get('stores["grenade"]'),
-      $SM.get('stores["bolas"]')
+      Math.floor($SM.get('stores["wood"]') / Prestige.randGen('g')),
+      Math.floor($SM.get('stores["fur"]') / Prestige.randGen('g')),
+      Math.floor($SM.get('stores["meat"]') / Prestige.randGen('g')),
+      Math.floor($SM.get('stores["iron"]') / Prestige.randGen('g')),
+      Math.floor($SM.get('stores["coal"]') / Prestige.randGen('g')),
+      Math.floor($SM.get('stores["sulphur"]') / Prestige.randGen('g')),
+      Math.floor($SM.get('stores["steel"]') / Prestige.randGen('g')),
+      Math.floor($SM.get('stores["cured meat"]') / Prestige.randGen('g')),
+      Math.floor($SM.get('stores["scales"]') / Prestige.randGen('g')),
+      Math.floor($SM.get('stores["teeth"]') / Prestige.randGen('g')),
+      Math.floor($SM.get('stores["leather"]') / Prestige.randGen('g')),
+      Math.floor($SM.get('stores["bait"]') / Prestige.randGen('g')),
+      Math.floor($SM.get('stores["torch"]') / Prestige.randGen('g')),
+      Math.floor($SM.get('stores["cloth"]') / Prestige.randGen('g')),
+      Math.floor($SM.get('stores["bone spear"]') / Prestige.randGen('w')),
+      Math.floor($SM.get('stores["iron sword"]') / Prestige.randGen('w')),
+      Math.floor($SM.get('stores["steel sword"]') / Prestige.randGen('w')),
+      Math.floor($SM.get('stores["bayonet"]') / Prestige.randGen('w')),
+      Math.floor($SM.get('stores["rifle"]') / Prestige.randGen('w')),
+      Math.floor($SM.get('stores["laser rifle"]') / Prestige.randGen('w')),
+      Math.floor($SM.get('stores["bullets"]') / Prestige.randGen('a')),
+      Math.floor($SM.get('stores["energy cell"]') / Prestige.randGen('a')),
+      Math.floor($SM.get('stores["grenade"]') / Prestige.randGen('a')),
+      Math.floor($SM.get('stores["bolas"]') / Prestige.randGen('a'))
     ];
+    for (var n = 0;n<=23;n++) {
+      if (isNaN(prevStores[n])) {prevStores[n] = 0};
+    }
     $SM.set('previous.stores', prevStores);
     return prevStores;
+  },
+  
+  populateNewSave: function(newstate) {
+    State = {
+      previous: {
+        stores: newstate
+      }
+    }; 
+    Engine.init({state: State});
+    return State;
   },
   
   load: function() {
@@ -68,9 +81,9 @@ var Prestige = {
     $SM.add('stores["grenade"]',prevStores[22]),
     $SM.add('stores["bolas"]',prevStores[23])
     return prevStores;
-  }
+  },
   
-  /*randGen: function(storeType) {
+  randGen: function(storeType) {
       if (storeType == 'g') {
         divisor = Math.floor(Math.random()*10)
       }
@@ -78,13 +91,13 @@ var Prestige = {
         divisor = Math.floor(Math.floor(Math.random()*10)/2)
       }
       else if (storeType == 'a') {
-        divisor = Math.floor(Math.random()*10*Math.floor(Math.random()*10/5))
+        divisor = Math.ceil(Math.random()*10*Math.ceil(Math.random()*10))
       }
       else { divisor = 1 };
       if (divisor === 0) {
         divisor = 1
       };
       return divisor;
-  }*/
+  }
   
 }
