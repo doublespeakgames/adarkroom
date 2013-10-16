@@ -3393,15 +3393,16 @@ Events.Setpieces = {
 			}
  		}
 	},
-  "cache": { /* Cache - contains some of supplies from previous game */
+	
+	"cache": { /* Cache - contains some of supplies from previous game */
 		title: 'A Destroyed Village',
 		scenes: {
 			'start': {
 				text: [
-					'a destroyed village stands before you',
-					'charred bodies littering the ground.'
+					'a destroyed village lies in the dust.',
+					'charred bodies litter the ground.'
 				],
-				notification: 'you smell the metallic tang of a wanderer afterburner.',
+				notification: 'the metallic tang of wanderer afterburner hangs in the air.',
 				buttons: {
 					'enter': {
 						text: 'enter',

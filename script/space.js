@@ -387,17 +387,17 @@ var Space = {
 							},
 							complete: function() {
 								Engine.GAME_OVER = true;
-                var backup;
-                $('#starsContainer').remove();
+								var backup;
+								$('#starsContainer').remove();
 								if(typeof Storage != 'undefined' && localStorage) {
-                  backup = Prestige.save();
-                  localStorage.clear();
+									backup = Prestige.save();
+									localStorage.clear();
 								}
 								delete window.State;
-                $('.deleteSave, .share').remove();
-                Prestige.populateNewSave(backup);
-                $('#content, #notifications').remove();
-                $('.deleteSave, .share').attr('style', 'color: white;');
+				                $('.deleteSave, .share').remove();
+				                Prestige.populateNewSave(backup);
+				                $('#content, #notifications').remove();
+				                $('.deleteSave, .share').attr('style', 'color: white;');
 								Engine.options = {};
 							}
 						});
