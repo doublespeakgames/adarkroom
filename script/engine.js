@@ -200,6 +200,10 @@ var Engine = {
 						'import': {
 							text: 'import',
 							nextScene: {1: 'confirm'},
+						},
+						'cancel': {
+							text: 'cancel',
+							nextScene: 'end'
 						}
 					}
 				},
