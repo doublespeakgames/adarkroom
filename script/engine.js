@@ -105,6 +105,12 @@ var Engine = {
 			.text('share.')
 			.click(Engine.share)
 			.appendTo('body');
+      
+      $('<span>')
+			.addClass('manualSave')
+			.text('save.')
+			.click(Engine.exportImport)
+			.appendTo('body');
 		
 		// Register keypress handlers
 		$('body').off('keydown').keydown(Engine.keyDown);
@@ -178,6 +184,58 @@ var Engine = {
 		}
 	},
 	
+  exportImport: function() {
+    Events.startEvent({
+			title: 'Export / Import',
+			scenes: {
+				start: {
+					text: ['export or import save data, for backing up',
+                 'or migrating computers'],
+					buttons: {
+						'export': {
+							text: 'export',
+							nextScene: 'end',
+							onChoose: Engine.export64
+						},
+						'import': {
+							text: 'import',
+							nextScene: {1: 'confirm'},
+						}
+					}
+				},
+        'confirm': {
+          text: ['are you sure?',
+                 'if the code is invalid, all data will be lost.',
+                 'this is irreversible.'],
+          buttons: {
+            'yes': {
+              text: 'yes',
+              nextScene: 'end',
+              onChoose: Engine.import64
+            },
+            'no': {
+              text: 'no',
+              nextScene: 'end'
+            }
+          }
+        }
+			}
+		});
+  },
+  
+  export64: function() {
+    Engine.saveGame();
+    var string64 = Base64.encode(localStorage.gameState);
+    prompt("save this.",string64);
+  },
+  
+  import64: function() {
+    var string64 = prompt("put the save code here.","");
+    var decodedSave = Base64.decode(string64);
+    localStorage.gameState = decodedSave;
+    location.reload();
+  },
+  
 	event: function(cat, act) {
 		if(typeof ga === 'function') {
 			ga('send', 'event', cat, act);
