@@ -157,6 +157,7 @@ var Engine = {
 	},
 	
 	saveGame: function() {
+    //Score.saveScore();
 		if(typeof Storage != 'undefined' && localStorage) {
 			if(Engine._saveTimer != null) {
 				clearTimeout(Engine._saveTimer);

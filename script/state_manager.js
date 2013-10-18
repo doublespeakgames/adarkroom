@@ -34,7 +34,8 @@ var StateManager = {
 				'income',
 				'timers',
 				'game', //mostly location related: fire temp, workers, population, world map, etc
-				'playStats' //anything play related: play time, loads, etc
+				'playStats', //anything play related: play time, loads, etc
+        'previous' // prestige, score, trophies (in future), achievements (again, not yet), etc
 				];
 		
 		for(var which in cats) {

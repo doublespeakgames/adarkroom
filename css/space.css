@@ -132,3 +132,14 @@
 	top: 0px;
 	left: 0px;
 }
+
+.centerCont {
+  padding-top:10%;
+}
+
+.endGame {
+  font-size:48px;
+  color:#FFFFFF;
+  opacity:0;
+  position:relative;
+}
