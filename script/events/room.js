@@ -507,7 +507,7 @@ Events.Room = [
 	{ /* The Sick Man */
   		title: 'The Sick Man',
   		isAvailable: function() {
-  			return Engine.activeModule == Room && $SM.get('features.location.world');
+  			return Engine.activeModule == Room && $SM.get('stores.medicine', true) > 0;
   		},
   		scenes: {
   			'start': {

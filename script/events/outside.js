@@ -66,7 +66,10 @@ Events.Outside = [
     { /* Sickness */
     	title: 'Sickness',
   		isAvailable: function() {
-  			return Engine.activeModule == Outside && $SM.get('game.population', true) > 10 && $SM.get('game.population', true) < 50;
+  			return Engine.activeModule == Outside && 
+  				$SM.get('game.population', true) > 10 && 
+  				$SM.get('game.population', true) < 50 && 
+  				$SM.get('stores.medicine', true) > 0;
   		},
   		scenes: {
   			'start': {
@@ -120,7 +123,7 @@ Events.Outside = [
     { /* Plague */
     	title: 'Plague',
   		isAvailable: function() {
-  			return Engine.activeModule == Outside && $SM.get('game.population', true) > 50;
+  			return Engine.activeModule == Outside && $SM.get('game.population', true) > 50 && $SM.get('stores.medicine', true) > 0;
   		},
   		scenes: {
   			'start': {
