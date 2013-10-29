@@ -377,7 +377,7 @@ var Outside = {
 		}
 	},
 	
-	updateVillage: function() {
+	updateVillage: function(ignoreStores) {
 		var village = $('div#village');
 		var population = $('div#population');
 		var needsAppend = false;
@@ -425,7 +425,7 @@ var Outside = {
 		
 		this.setTitle();
 
-		if(Engine.activeModule === Outside && village.children().length > 1) {
+		if(!ignoreStores && Engine.activeModule === Outside && village.children().length > 1) {
 			$('#storesContainer').css({top: village.height() + 26 + 'px'});
 		}
 	},
@@ -539,7 +539,7 @@ var Outside = {
 			$SM.set('game.outside.seenForest', true);
 		}
 		Outside.updateTrapButton();
-		Outside.updateVillage();
+		Outside.updateVillage(true);
 
 		Engine.moveStoresView($('#village'), transition_diff);
 	},

@@ -348,6 +348,8 @@ var Engine = {
 			// FIXME Why does this work if there's an animation queue...?
 				stores.animate({right: -(panelIndex * 700) + 'px'}, 300 * diff);
 			}
+			
+			Engine.activeModule = module;
 
 			module.onArrival(diff);
 
@@ -363,7 +365,7 @@ var Engine = {
 				$('div#weapons').animate({opacity: 1}, 300);
 			}
 
-			Engine.activeModule = module;
+			
 			
 			Notifications.printQueue(module);
 		}
