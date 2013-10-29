@@ -917,6 +917,8 @@ var World = {
 		Engine.keyLock = false;
 		// Explore in a temporary world-state. We'll commit the changes if you return home safe.
 		World.state = $.extend(true, {}, $SM.get('game.world'));
+		// Some weirdness in jQuery's extend method is causing the map to not be deep copied...
+		World.state.map = $.extend(true, {}, World.state.map);
 		World.setWater(World.getMaxWater());
 		World.setHp(World.getMaxHealth());
 		World.foodMove = 0;
