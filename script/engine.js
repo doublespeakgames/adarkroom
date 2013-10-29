@@ -235,6 +235,8 @@ var Engine = {
   
   import64: function() {
     var string64 = prompt("put the save code here.","");
+    string64 = string64.replace(/\s/g, '');
+    string64 = string64.replace(/\W/g, '');
     var decodedSave = Base64.decode(string64);
     localStorage.gameState = decodedSave;
     location.reload();
