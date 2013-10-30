@@ -230,6 +230,9 @@ var Engine = {
   export64: function() {
     Engine.saveGame();
     var string64 = Base64.encode(localStorage.gameState);
+    string64 = string64.replace(/\s/g, '');
+    string64 = string64.replace(/\W/g, '');
+    string64 = string64.replace(/\n/g, '');
     prompt("save this.",string64);
   },
   
@@ -237,6 +240,7 @@ var Engine = {
     var string64 = prompt("put the save code here.","");
     string64 = string64.replace(/\s/g, '');
     string64 = string64.replace(/\W/g, '');
+    string64 = string64.replace(/\n/g, '');
     var decodedSave = Base64.decode(string64);
     localStorage.gameState = decodedSave;
     location.reload();
