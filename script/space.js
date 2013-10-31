@@ -393,10 +393,7 @@ var Space = {
                 var backup = new Object();
                   backup.score = null;
                   backup.stores = null;
-				        $('.deleteSave, .share, .manualSave').remove();
-				        Prestige.populateNewSave(backup);
-				        $('#content, #notifications').remove();
-				        $('.deleteSave, .share, .manualSave').attr('style', 'color: white;').animate({opacity:0},1500);
+				  
                 
                 $('<center>')
                   .addClass('centerCont')
@@ -415,20 +412,25 @@ var Space = {
                   .animate({opacity:1},1500);
                   $('<br />')
                   .appendTo('.centerCont');
-                $('<span>')
-                  .addClass('deleteSave endGame')
-                  .text('restart.')
-                  .click(Engine.confirmDelete)
-                  .appendTo('.centerCont')
-                  .animate({opacity:1},1500);
+                
                   $('#starsContainer').remove();
-								if(typeof Storage != 'undefined' && localStorage) {
-									backup.stores = Prestige.saveStores(true);
-                					backup.score = Prestige.saveScore();
-									localStorage.clear();
-								}
-								delete window.State;
-								Engine.options = {};
+	    			if(typeof Storage != 'undefined' && localStorage) {
+	    				backup.stores = Prestige.saveStores(true);
+                 				backup.score = Prestige.saveScore();
+	    				localStorage.clear();
+	    			}
+	    			delete window.State;
+	    			Prestige.populateNewSave(backup);
+	    			$('.deleteSave, .share, .manualSave').remove();
+	    			$('#content, #notifications').remove();
+	    			$('.deleteSave, .share, .manualSave').attr('style', 'color: white;').animate({opacity:0},1500);
+	    			$('<span>')
+                 		.addClass('deleteSave endGame')
+                 		.text('restart.')
+                 		.click(Engine.confirmDelete)
+                 		.appendTo('.centerCont')
+                 		.animate({opacity:1},1500);
+	    			Engine.options = {};
 							}
 						});
 					}, 2000);
