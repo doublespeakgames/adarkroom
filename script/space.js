@@ -413,6 +413,8 @@ var Space = {
                   .animate({opacity:1},1500);
                 $('<br />')
                   .appendTo('.centerCont');
+                $('<br />')
+                  .appendTo('.centerCont');
                 
                 $('#starsContainer').remove();
 	    			if(typeof Storage != 'undefined' && localStorage) {
@@ -426,7 +428,7 @@ var Space = {
 	    		$('#content, #notifications').remove();
 	    		$('.deleteSave, .share, .manualSave').attr('style', 'color: white;').animate({opacity:0},1500);
 	    		$('<span>')
-                	.addClass('deleteSave endGame')
+                	.addClass('deleteSave endGame endGameRestart')
                 	.text('restart.')
                 	.click(Engine.confirmDelete)
                 	.appendTo('.centerCont')

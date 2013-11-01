@@ -143,3 +143,7 @@
   opacity:0;
   position:relative;
 }
+
+.endGameRestart {
+	font-size: 32px;
+}
