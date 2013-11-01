@@ -42,6 +42,9 @@ var Space = {
 		$('<div>').addClass('row_key').text('hull: ').appendTo(h);
 		$('<div>').addClass('row_val').appendTo(h);
 		
+		//save current score
+		Score.saveScore();
+		
 		//subscribe to stateUpdates
 		$.Dispatch('stateUpdate').subscribe(Space.handleStateUpdates);
 	},
@@ -251,7 +254,7 @@ var Space = {
 		}, 1000);
 		
 		Space._panelTimeout = setTimeout(function() {
-			$('#spacePanel, .deleteSave, .share').animate({color: 'white'}, 500, 'linear');
+			$('#spacePanel, .deleteSave, .share, .manualSave').animate({color: 'white'}, 500, 'linear');
 		}, Space.FTB_SPEED / 2);
 		
 		Space.createAsteroid();
@@ -331,7 +334,7 @@ var Space = {
 				$('#starsContainer').remove();
 			}
 		});
-		$('#spacePanel, .deleteSave, .share').animate({color: 'black'}, 300, 'linear');
+		$('#spacePanel, .deleteSave, .share, .manualSave').animate({color: 'black'}, 300, 'linear');
 		$('#outerSlider').animate({top: '0px'}, 300, 'linear');
 		Engine.activeModule = Ship;
 		Ship.onArrival();
@@ -387,21 +390,53 @@ var Space = {
 							},
 							complete: function() {
 								Engine.GAME_OVER = true;
-								var backup;
-								$('#starsContainer').remove();
-								if(typeof Storage != 'undefined' && localStorage) {
-									backup = Prestige.save();
-									localStorage.clear();
-								}
-								delete window.State;
-				                $('.deleteSave, .share').remove();
-				                Prestige.populateNewSave(backup);
-				                $('#content, #notifications').remove();
-				                $('.deleteSave, .share').attr('style', 'color: white;');
-								Engine.options = {};
-							}
-						});
-					}, 2000);
+                var backup = new Object();
+                  backup.score = null;
+                  backup.stores = null;
+                Prestige.saveStores();
+                Prestige.saveScore();		  
+                
+                $('<center>')
+                  .addClass('centerCont')
+                  .appendTo('body');
+                $('<span>')
+                  .addClass('endGame')
+                  .text('score for this game: ' + Score.calculateScore())
+                  .appendTo('.centerCont')
+                  .animate({opacity:1},1500);
+                $('<br />')
+                  .appendTo('.centerCont');
+                $('<span>')
+                  .addClass('endGame')
+                  .text('total score: ' + Score.totalScore())
+                  .appendTo('.centerCont')
+                  .animate({opacity:1},1500);
+                $('<br />')
+                  .appendTo('.centerCont');
+                $('<br />')
+                  .appendTo('.centerCont');
+                
+                $('#starsContainer').remove();
+	    			if(typeof Storage != 'undefined' && localStorage) {
+	    				backup.stores = $SM.getStores();
+                 		backup.score = Score.totalScore();
+	    				localStorage.clear();
+	    		}
+	    		delete window.State;
+	    		Prestige.populateNewSave(backup);
+	    		$('.deleteSave, .share, .manualSave').remove();
+	    		$('#content, #notifications').remove();
+	    		$('.deleteSave, .share, .manualSave').attr('style', 'color: white;').animate({opacity:0},1500);
+	    		$('<span>')
+                	.addClass('deleteSave endGame endGameRestart')
+                	.text('restart.')
+                	.click(Engine.confirmDelete)
+                	.appendTo('.centerCont')
+                	.animate({opacity:1},1500);
+	    		Engine.options = {};
+						}
+					});
+				}, 2000);
 				});
 			}, 2000);
 		});

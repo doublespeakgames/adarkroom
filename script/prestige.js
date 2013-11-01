@@ -8,7 +8,7 @@ var Prestige = {
 		this.options = $.extend(this.options, options);
 	},
   
-	save: function() {
+	saveStores: function(saveBool) {
 		var prevStores = [ //g = goods, w = weapons, a = ammo
 			Math.floor($SM.get('stores["wood"]') / Prestige.randGen('g')),
 			Math.floor($SM.get('stores["fur"]') / Prestige.randGen('g')),
@@ -40,24 +40,29 @@ var Prestige = {
 				prevStores[n] = 0;
 			}
 		}
-		$SM.set('previous.stores', prevStores);
-		return prevStores;
+    return prevStores;
 	},
   
+  saveScore: function() {
+    var prevScore = Score.totalScore();
+    $SM.set('previous.score',prevScore);
+    return prevScore;
+  },
 
-	  populateNewSave : function(newstate) {
+	populateNewSave : function(newstate) {
 		State = {
 			previous : {
-				stores : newstate
+				stores : newstate["stores"],
+        score : newstate["score"]
 			}
+      
 		};
 		Engine.init({
 			state : State
 		});
-		return State;
 	},
   
-	  load : function() {
+	load : function() {
 		var prevStores = $SM.get('previous.stores');
 		if(prevStores != null) {
 			$SM.add('stores["wood"]', prevStores[0]);
