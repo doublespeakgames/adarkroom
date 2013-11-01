@@ -393,7 +393,8 @@ var Space = {
                 var backup = new Object();
                   backup.score = null;
                   backup.stores = null;
-				  
+                Prestige.saveStores();
+                Prestige.saveScore();		  
                 
                 $('<center>')
                   .addClass('centerCont')
@@ -410,30 +411,30 @@ var Space = {
                   .text('total score: ' + Score.totalScore())
                   .appendTo('.centerCont')
                   .animate({opacity:1},1500);
-                  $('<br />')
+                $('<br />')
                   .appendTo('.centerCont');
                 
-                  $('#starsContainer').remove();
+                $('#starsContainer').remove();
 	    			if(typeof Storage != 'undefined' && localStorage) {
-	    				backup.stores = Prestige.saveStores(true);
-                 				backup.score = Prestige.saveScore();
+	    				backup.stores = $SM.getStores();
+                 		backup.score = Score.totalScore();
 	    				localStorage.clear();
-	    			}
-	    			delete window.State;
-	    			Prestige.populateNewSave(backup);
-	    			$('.deleteSave, .share, .manualSave').remove();
-	    			$('#content, #notifications').remove();
-	    			$('.deleteSave, .share, .manualSave').attr('style', 'color: white;').animate({opacity:0},1500);
-	    			$('<span>')
-                 		.addClass('deleteSave endGame')
-                 		.text('restart.')
-                 		.click(Engine.confirmDelete)
-                 		.appendTo('.centerCont')
-                 		.animate({opacity:1},1500);
-	    			Engine.options = {};
-							}
-						});
-					}, 2000);
+	    		}
+	    		delete window.State;
+	    		Prestige.populateNewSave(backup);
+	    		$('.deleteSave, .share, .manualSave').remove();
+	    		$('#content, #notifications').remove();
+	    		$('.deleteSave, .share, .manualSave').attr('style', 'color: white;').animate({opacity:0},1500);
+	    		$('<span>')
+                	.addClass('deleteSave endGame')
+                	.text('restart.')
+                	.click(Engine.confirmDelete)
+                	.appendTo('.centerCont')
+                	.animate({opacity:1},1500);
+	    		Engine.options = {};
+						}
+					});
+				}, 2000);
 				});
 			}, 2000);
 		});

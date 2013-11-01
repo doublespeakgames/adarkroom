@@ -9,7 +9,7 @@ var Score = {
 	},
 
   calculateScore: function() {
-    var scoreUnadded = Prestige.saveStores(false);
+    var scoreUnadded = $SM.getStores();
       var fullScore = 0;
       fullScore = fullScore + scoreUnadded[0] * 1;
       fullScore = fullScore + scoreUnadded[1] * 1.5;
