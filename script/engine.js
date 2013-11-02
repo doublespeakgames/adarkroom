@@ -194,8 +194,8 @@ var Engine = {
 					buttons: {
 						'export': {
 							text: 'export',
-							nextScene: 'end',
-							onChoose: Engine.export64
+							nextScene: {2: 'show'},
+							onChoose: code = Engine.export64
 						},
 						'import': {
 							text: 'import',
@@ -207,33 +207,45 @@ var Engine = {
 						}
 					}
 				},
-        'confirm': {
-          text: ['are you sure?',
-                 'if the code is invalid, all data will be lost.',
-                 'this is irreversible.'],
-          buttons: {
-            'yes': {
-              text: 'yes',
-              nextScene: 'end',
-              onChoose: Engine.import64
-            },
-            'no': {
-              text: 'no',
-              nextScene: 'end'
-            }
-          }
-        }
+        		'confirm': {
+        		  text: ['are you sure?',
+        		         'if the code is invalid, all data will be lost.',
+        		         'this is irreversible.'],
+        		  buttons: {
+        		    'yes': {
+        		      text: 'yes',
+        		      nextScene: 'end',
+        		      onChoose: Engine.import64
+        		    },
+        		    'no': {
+        		      text: 'no',
+        		      nextScene: 'end'
+        		    }
+        		  }
+        		},
+        		'show': {
+        			text: ['incorrectly modifying or copying only part',
+        					'of this text WILL break your save. you have been warned.'],
+        			//$('<textarea>').text(code).appendTo('#description'),
+        			buttons: {
+        				'ok': {
+        					text: 'ok',
+        					nextScene: 'end',
+        					onChoose: Engine.displayCode
+        				}
+        			}
+        		}
 			}
 		});
   },
   
   export64: function() {
     Engine.saveGame();
-    var string64 = Base64.encode(localStorage.gameState);
+    string64 = Base64.encode(localStorage.gameState);
     string64 = string64.replace(/\s/g, '');
     string64 = string64.replace(/\./g, '');
     string64 = string64.replace(/\n/g, '');
-    prompt("save this.",string64);
+    return string64;
   },
   
   import64: function() {
@@ -244,6 +256,11 @@ var Engine = {
     var decodedSave = Base64.decode(string64);
     localStorage.gameState = decodedSave;
     location.reload();
+  },
+
+  displayCode: function() {
+  	var popup = window.open('','Base64 Save Code','directories=no,location=no,menubar=no,scrollbars=no,toolbar=no,height=100');
+  	popup.document.body.innerHTML = string64;
   },
   
 	event: function(cat, act) {
