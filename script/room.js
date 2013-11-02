@@ -974,7 +974,7 @@ var Room = {
 		if(Room.buttons[thing]) {
 			return true;
 		} else if($SM.get('game.buildings["trading post"]', true) > 0) {
-			if(thing == 'compass' || $SM.get('stores["'+thing+'"]')) {
+			if(thing == 'compass' || typeof $SM.get('stores["'+thing+'"]') != 'undefined') {
 				// Allow the purchase of stuff once you've seen it
 				return true;
 			}

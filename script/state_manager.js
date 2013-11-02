@@ -28,15 +28,15 @@ var StateManager = {
 		
 		//create categories
 		var cats = [
-				'features', //big features like buildings, location availability, unlocks, etc
-				'stores', //little stuff, items, weapons, etc
-				'character', //this is for player's character stats such as perks
-				'income',
-				'timers',
-				'game', //mostly location related: fire temp, workers, population, world map, etc
-				'playStats', //anything play related: play time, loads, etc
-        'previous' // prestige, score, trophies (in future), achievements (again, not yet), etc
-				];
+			'features',		//big features like buildings, location availability, unlocks, etc
+			'stores', 		//little stuff, items, weapons, etc
+			'character', 	//this is for player's character stats such as perks
+			'income',
+			'timers',
+			'game', 		//mostly location related: fire temp, workers, population, world map, etc
+			'playStats',	//anything play related: play time, loads, etc
+			'previous' 		// prestige, score, trophies (in future), achievements (again, not yet), etc
+		];
 		
 		for(var which in cats) {
 			if(!$SM.get(cats[which])) $SM.set(cats[which], {}); 
@@ -189,41 +189,6 @@ var StateManager = {
 			$SM.fireUpdate(stateName);
 		};
 	},
-	
-	getStores: function() {
-    var stores = [ 
-      $SM.get('stores["wood"]'),
-      $SM.get('stores["fur"]'),
-      $SM.get('stores["meat"]'),
-      $SM.get('stores["iron"]'),
-      $SM.get('stores["coal"]'),
-      $SM.get('stores["sulphur"]'),
-      $SM.get('stores["steel"]'),
-      $SM.get('stores["cured meat"]'),
-      $SM.get('stores["scales"]'),
-      $SM.get('stores["teeth"]'),
-      $SM.get('stores["leather"]'),
-      $SM.get('stores["bait"]'),
-      $SM.get('stores["torch"]'),
-      $SM.get('stores["cloth"]'),
-      $SM.get('stores["bone spear"]'),
-      $SM.get('stores["iron sword"]'),
-      $SM.get('stores["steel sword"]'),
-      $SM.get('stores["bayonet"]'),
-      $SM.get('stores["rifle"]'),
-      $SM.get('stores["laser rifle"]'),
-      $SM.get('stores["bullets"]'),
-      $SM.get('stores["energy cell"]'),
-      $SM.get('stores["grenade"]'),
-      $SM.get('stores["bolas"]')
-    ];
-    for (var n = 0; n <= 23; n++) {
-      if (isNaN(stores[n])) {
-        stores[n] = 0;
-      }
-    }
-    return stores;
-  },
 	
 	//creates full reference from input
 	//hopefully this won't ever need to be more complicated

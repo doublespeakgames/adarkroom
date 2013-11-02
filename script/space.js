@@ -5,7 +5,7 @@ var Space = {
 	SHIP_SPEED: 3,
 	BASE_ASTEROID_DELAY: 500,
 	BASE_ASTEROID_SPEED: 1500,
-	FTB_SPEED: 60000,
+	FTB_SPEED: 1000,//60000,
 	STAR_WIDTH: 3000,
 	STAR_HEIGHT: 3000,
 	NUM_STARS: 200,
@@ -41,9 +41,6 @@ var Space = {
 		var h = $('<div>').attr('id', 'hullRemaining').appendTo(this.panel);
 		$('<div>').addClass('row_key').text('hull: ').appendTo(h);
 		$('<div>').addClass('row_val').appendTo(h);
-		
-		//save current score
-		Score.saveScore();
 		
 		//subscribe to stateUpdates
 		$.Dispatch('stateUpdate').subscribe(Space.handleStateUpdates);
@@ -390,53 +387,45 @@ var Space = {
 							},
 							complete: function() {
 								Engine.GAME_OVER = true;
-                var backup = new Object();
-                  backup.score = null;
-                  backup.stores = null;
-                Prestige.saveStores();
-                Prestige.saveScore();		  
-                
-                $('<center>')
-                  .addClass('centerCont')
-                  .appendTo('body');
-                $('<span>')
-                  .addClass('endGame')
-                  .text('score for this game: ' + Score.calculateScore())
-                  .appendTo('.centerCont')
-                  .animate({opacity:1},1500);
-                $('<br />')
-                  .appendTo('.centerCont');
-                $('<span>')
-                  .addClass('endGame')
-                  .text('total score: ' + Score.totalScore())
-                  .appendTo('.centerCont')
-                  .animate({opacity:1},1500);
-                $('<br />')
-                  .appendTo('.centerCont');
-                $('<br />')
-                  .appendTo('.centerCont');
-                
-                $('#starsContainer').remove();
-	    			if(typeof Storage != 'undefined' && localStorage) {
-	    				backup.stores = $SM.getStores();
-                 		backup.score = Score.totalScore();
-	    				localStorage.clear();
-	    		}
-	    		delete window.State;
-	    		Prestige.populateNewSave(backup);
-	    		$('.deleteSave, .share, .manualSave').remove();
-	    		$('#content, #notifications').remove();
-	    		$('.deleteSave, .share, .manualSave').attr('style', 'color: white;').animate({opacity:0},1500);
-	    		$('<span>')
-                	.addClass('deleteSave endGame endGameRestart')
-                	.text('restart.')
-                	.click(Engine.confirmDelete)
-                	.appendTo('.centerCont')
-                	.animate({opacity:1},1500);
-	    		Engine.options = {};
-						}
-					});
-				}, 2000);
+
+				                Score.save();
+				                Prestige.save();
+				                
+				                $('<center>')
+				                	.addClass('centerCont')
+			                		.appendTo('body');
+				                $('<span>')
+				                	.addClass('endGame')
+			                		.text('score for this game: ' + Score.calculateScore())
+			                		.appendTo('.centerCont')
+			                		.animate({opacity:1},1500);
+				                $('<br />')
+				                	.appendTo('.centerCont');
+				                $('<span>')
+				                	.addClass('endGame')
+			                		.text('total score: ' + Prestige.get().score)
+			                		.appendTo('.centerCont')
+			                		.animate({opacity:1},1500);
+				                $('<br />')
+				                	.appendTo('.centerCont');
+				                $('<br />')
+				                	.appendTo('.centerCont');
+				                
+				                $('#starsContainer').remove();
+					    		$('.deleteSave, .share, .manualSave').remove();
+					    		$('#content, #notifications').remove();
+					    		$('.deleteSave, .share, .manualSave').attr('style', 'color: white;').animate({opacity:0},1500);
+					    		$('<span>')
+				                	.addClass('deleteSave endGame endGameRestart')
+				                	.text('restart.')
+				                	.click(Engine.confirmDelete)
+				                	.appendTo('.centerCont')
+				                	.animate({opacity:1},1500);
+					    		Engine.options = {};
+				                Engine.deleteSave(true);
+							}
+						});
+					}, 2000);
 				});
 			}, 2000);
 		});

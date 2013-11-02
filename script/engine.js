@@ -10,7 +10,7 @@ var Engine = {
 	VERSION: 1.3,
 	MAX_STORE: 99999999999999,
 	SAVE_DISPLAY: 30 * 1000,
-  GAME_OVER: false,
+	GAME_OVER: false,
 	
 	//object event types
 	topics: {},
@@ -274,13 +274,16 @@ var Engine = {
 		});
 	},
 	
-	deleteSave: function() {
-    if (!Engine.GAME_OVER) {
-      if(typeof Storage != 'undefined' && localStorage) {
-        localStorage.clear();
-      }
-    }
-		location.reload();
+	deleteSave: function(noReload) {
+    	if(typeof Storage != 'undefined' && localStorage) {
+    		var prestige = Prestige.get();
+    		window.State = {};
+    		localStorage.clear();
+    		Prestige.set(prestige);
+    	}
+    	if(!noReload) {
+    		location.reload();
+    	}
 	},
 	
 	share: function() {
