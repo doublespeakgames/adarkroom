@@ -7,107 +7,89 @@ var Prestige = {
 	init: function(options) {
 		this.options = $.extend(this.options, options);
 	},
-  
-	saveStores: function(saveBool) {
-		var prevStores = [ //g = goods, w = weapons, a = ammo
-			Math.floor($SM.get('stores["wood"]') / Prestige.randGen('g')),
-			Math.floor($SM.get('stores["fur"]') / Prestige.randGen('g')),
-			Math.floor($SM.get('stores["meat"]') / Prestige.randGen('g')),
-			Math.floor($SM.get('stores["iron"]') / Prestige.randGen('g')),
-			Math.floor($SM.get('stores["coal"]') / Prestige.randGen('g')),
-			Math.floor($SM.get('stores["sulphur"]') / Prestige.randGen('g')),
-			Math.floor($SM.get('stores["steel"]') / Prestige.randGen('g')),
-			Math.floor($SM.get('stores["cured meat"]') / Prestige.randGen('g')),
-			Math.floor($SM.get('stores["scales"]') / Prestige.randGen('g')),
-			Math.floor($SM.get('stores["teeth"]') / Prestige.randGen('g')),
-			Math.floor($SM.get('stores["leather"]') / Prestige.randGen('g')),
-			Math.floor($SM.get('stores["bait"]') / Prestige.randGen('g')),
-			Math.floor($SM.get('stores["torch"]') / Prestige.randGen('g')),
-			Math.floor($SM.get('stores["cloth"]') / Prestige.randGen('g')),
-			Math.floor($SM.get('stores["bone spear"]') / Prestige.randGen('w')),
-			Math.floor($SM.get('stores["iron sword"]') / Prestige.randGen('w')),
-			Math.floor($SM.get('stores["steel sword"]') / Prestige.randGen('w')),
-			Math.floor($SM.get('stores["bayonet"]') / Prestige.randGen('w')),
-			Math.floor($SM.get('stores["rifle"]') / Prestige.randGen('w')),
-			Math.floor($SM.get('stores["laser rifle"]') / Prestige.randGen('w')),
-			Math.floor($SM.get('stores["bullets"]') / Prestige.randGen('a')),
-			Math.floor($SM.get('stores["energy cell"]') / Prestige.randGen('a')),
-			Math.floor($SM.get('stores["grenade"]') / Prestige.randGen('a')),
-			Math.floor($SM.get('stores["bolas"]') / Prestige.randGen('a'))
-		];
-		for (var n = 0; n <= 23; n++) {
-			if (isNaN(prevStores[n])) {
-				prevStores[n] = 0;
-			}
+	
+	storesMap: [
+		{ store: 'wood', type: 'g' },
+		{ store: 'fur', type: 'g' },
+		{ store: 'meat', type: 'g' },
+		{ store: 'iron', type: 'g' },
+		{ store: 'coal', type: 'g' },
+		{ store: 'sulphur', type: 'g' },
+		{ store: 'steel', type: 'g' },
+		{ store: 'cured meat', type: 'g' },
+		{ store: 'scales', type: 'g' },
+		{ store: 'teeth', type: 'g' },
+		{ store: 'leather', type: 'g' },
+		{ store: 'bait', type: 'g' },
+		{ store: 'torch', type: 'g' },
+		{ store: 'cloth', type: 'g' },
+		{ store: 'bone spear', type: 'w' },
+		{ store: 'iron sword', type: 'w' },
+		{ store: 'steel sword', type: 'w' },
+		{ store: 'bayonet', type: 'w' },
+		{ store: 'rifle', type: 'w' },
+		{ store: 'laser rifle', type: 'w' },
+		{ store: 'bullets', type: 'a' },
+		{ store: 'energy cell', type: 'a' },
+		{ store: 'grenade', type: 'a' },
+		{ store: 'bolas', type: 'a' }
+	],
+	
+	getStores: function(reduce) {
+		var stores = [];
+		
+		for(var i in this.storesMap) {
+			var s = this.storesMap[i];
+			stores.push($SM.get('stores["' + s.store + '"]', true) / 
+					(reduce ? this.randGen(s.type) : 1));
 		}
-    return prevStores;
+		
+		return stores;
 	},
-  
-  saveScore: function() {
-    var prevScore = Score.totalScore();
-    $SM.set('previous.score',prevScore);
-    return prevScore;
-  },
-
-	populateNewSave : function(newstate) {
-		State = {
-			previous : {
-				stores : newstate["stores"],
-        score : newstate["score"]
-			}
-      
+	
+	get: function() {
+		return {
+			stores: $SM.get('previous.stores'),
+			score: $SM.get('previous.score')
 		};
-		Engine.init({
-			state : State
-		});
+	},
+	
+	set: function(prestige) {
+		$SM.set('previous.stores', prestige.stores);
+		$SM.set('previous.score', prestige.score);
+	},
+	
+	save: function() {
+		$SM.set('previous.stores', this.getStores(true));
+		$SM.set('previous.score', Score.totalScore());
 	},
   
-	load : function() {
+	collectStores : function() {
 		var prevStores = $SM.get('previous.stores');
 		if(prevStores != null) {
-			$SM.add('stores["wood"]', prevStores[0]);
-			$SM.add('stores["fur"]', prevStores[1]);
-			$SM.add('stores["meat"]', prevStores[2]);
-			$SM.add('stores["iron"]', prevStores[3]);
-			$SM.add('stores["coal"]', prevStores[4]);
-			$SM.add('stores["sulphur"]', prevStores[5]);
-			$SM.add('stores["steel"]', prevStores[6]);
-			$SM.add('stores["cured meat"]', prevStores[7]);
-			$SM.add('stores["scales"]', prevStores[8]);
-			$SM.add('stores["teeth"]', prevStores[9]);
-			$SM.add('stores["leather"]', prevStores[10]);
-			$SM.add('stores["bait"]', prevStores[11]);
-			$SM.add('stores["torch"]', prevStores[12]);
-			$SM.add('stores["cloth"]', prevStores[13]);
-			$SM.add('stores["bone spear"]', prevStores[14]);
-			$SM.add('stores["iron sword"]', prevStores[15]);
-			$SM.add('stores["steel sword"]', prevStores[16]);
-			$SM.add('stores["bayonet"]', prevStores[17]);
-			$SM.add('stores["rifle"]', prevStores[18]);
-			$SM.add('stores["laser rifle"]', prevStores[19]);
-			$SM.add('stores["bullets"]', prevStores[20]);
-			$SM.add('stores["energy cell"]', prevStores[21]);
-			$SM.add('stores["grenade"]', prevStores[22]);
-			$SM.add('stores["bolas"]', prevStores[23]);
+			var toAdd = {};
+			for(var i in this.storesMap) {
+				var s = this.storesMap[i];
+				toAdd[s.store] = prevStores[i];
+			}
+			$SM.addM('stores', toAdd);
+			
+			// Loading the stores clears em from the save
+			prevStores.length = 0;
 		}
-		return prevStores;
 	},
 
 	randGen : function(storeType) {
-		if (storeType == 'g') {
-			divisor = Math.floor(Math.random() * 10);
-		} else if (storeType == 'w') {
-			divisor = Math.floor(Math.floor(Math.random() * 10) / 2);
-		} else if (storeType == 'a') {
-			divisor = Math.ceil(Math.random() * 10
-					* Math.ceil(Math.random() * 10));
-		} else {
-			divisor = 1;
+		switch(storeType) {
+		case 'g':
+			return Math.floor(Math.random() * 10);
+		case 'w':
+			return Math.floor(Math.floor(Math.random() * 10) / 2);
+		case 'a':
+			return Math.ceil(Math.random() * 10 * Math.ceil(Math.random() * 10));
+		default:
+			return 1;
 		}
-		if (divisor === 0) {
-			divisor = 1;
-		}
-		return divisor;
 	}
 
 };
