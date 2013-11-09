@@ -93,7 +93,13 @@ var Engine = {
 		}
 		
 		$('<div>').attr('id', 'locationSlider').appendTo('#main');
-		
+
+		$('<span>')
+			.addClass('lightsOff')
+			.text('lights off.')
+			.click(Engine.turnLightsOff)
+			.appendTo('body');
+
 		$('<span>')
 			.addClass('deleteSave')
 			.text('restart.')
@@ -320,6 +326,15 @@ var Engine = {
 				}
 			}
 		}, {width: '400px'});
+	},
+
+	turnLightsOff: function() {
+		if ($('#darkenLights').is('[disabled=disabled]')){
+			$("#darkenLights").removeAttr('disabled')
+ 		}
+ 		else {
+ 			$("#darkenLights").attr("disabled", "disabled");
+ 		}
 	},
 	
 	// Gets a guid
