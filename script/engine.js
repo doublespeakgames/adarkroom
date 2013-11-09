@@ -328,12 +328,30 @@ var Engine = {
 		}, {width: '400px'});
 	},
 
+	findStylesheet: function(title) {
+		for(var i=0; i<document.styleSheets.length; i++) {
+    		var sheet = document.styleSheets[i];
+    		if(sheet.title == title) {
+    			return sheet;
+    		}
+    	}
+    	return null;
+	},
+
 	turnLightsOff: function() {
-		if ($('#darkenLights').is('[disabled=disabled]')){
-			$("#darkenLights").removeAttr('disabled')
- 		}
+		var darkCss = Engine.findStylesheet('darkenLights');
+    	if (darkCss == null) {
+    		$('head').append('<link rel="stylesheet" href="css/dark.css" type="text/css" title="darkenLights" />');
+    		Engine.turnLightsOff
+    		$('.lightsOff').text('lights on.')
+    	}
+		if (darkCss.disabled) {
+			darkCss.disabled = false;
+			$('.lightsOff').text('lights on.')
+		}
  		else {
- 			$("#darkenLights").attr("disabled", "disabled");
+ 			darkCss.disabled = true;
+ 			$('.lightsOff').text('lights off.')
  		}
 	},
 	
