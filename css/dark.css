@@ -1,0 +1,119 @@
+body {
+    background-color: #272823;
+    color: #eee;
+}
+
+div#notifyGradient {
+    background-color: #272823;
+    background: -webkit-linear-gradient( rgba(39, 40, 35, 0) 0%, rgba(39, 40, 35, 1) 100% );
+    background: linear-gradient( rgba(39, 40, 35, 0) 0%, rgba(39, 40, 35, 1) 100% );
+    filter: alpha( Opacity=0, FinishOpacity=100, Style=1, StartX=0, StartY=0, FinishX=0, FinishY=500 );
+}
+
+div#saveNotify {
+    background: #272823;
+}
+
+.eventPanel:before {
+    background-color: #272823;
+}
+
+.eventTitle:after {
+    background-color: #272823;
+}
+
+div.tooltip {
+    background-color: #111;
+    border: 1px solid black;
+    box-shadow: -1px 3px 2px #111;
+}
+
+div#population {
+    background-color: #272823;
+}
+
+div#village:before {
+    background: #272823;
+}
+
+div#village {
+    border: 1px solid #eee;
+}
+
+div#stores:before {
+    background: #272823;
+}
+
+div#stores {
+    border: 1px solid #eee;
+}
+
+div#weapons:before {
+    background: #272823;
+}
+
+div#weapons {
+    border: 1px solid #eee;
+}
+
+div#bagspace {
+    background-color: #272823;
+}
+
+div#outfitting:before {
+    background: #272823;
+}
+
+div#perks {
+    border: 1px solid #eee;
+}
+
+div#perks:before {
+    background-color: #272823;
+}
+
+div#outfitting {
+    border: 1px solid #eee;
+}
+
+#bagspace-world {
+    border: 1px solid #eee;
+}
+
+div.supplyItem {
+    border: 1px solid #eee;
+}
+
+#backpackTitle {
+    background-color: #272823;
+}
+
+#backpackSpace {
+    background-color: #272823;
+}
+
+#healthCounter {
+    background-color: #272823;
+}
+
+#map {
+    border: 1px solid #eee;
+}
+
+#map .landmark {
+    color: #eee;
+}
+
+#dropMenu {
+    background: none repeat scroll 0 0 #272823;
+    box-shadow: -1px 3px 2px #111;
+}
+
+div.button {
+    border: 1px solid #eee;
+}
+
+div.button.disabled, div.button.disabled:hover {
+    border-color: #444;
+    color: #444;
+}

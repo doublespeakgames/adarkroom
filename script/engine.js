@@ -93,7 +93,13 @@ var Engine = {
 		}
 		
 		$('<div>').attr('id', 'locationSlider').appendTo('#main');
-		
+
+		$('<span>')
+			.addClass('lightsOff')
+			.text('lights off.')
+			.click(Engine.turnLightsOff)
+			.appendTo('body');
+
 		$('<span>')
 			.addClass('deleteSave')
 			.text('restart.')
@@ -329,6 +335,33 @@ var Engine = {
 				}
 			}
 		}, {width: '400px'});
+	},
+
+	findStylesheet: function(title) {
+		for(var i=0; i<document.styleSheets.length; i++) {
+    		var sheet = document.styleSheets[i];
+    		if(sheet.title == title) {
+    			return sheet;
+    		}
+    	}
+    	return null;
+	},
+
+	turnLightsOff: function() {
+		var darkCss = Engine.findStylesheet('darkenLights');
+    	if (darkCss == null) {
+    		$('head').append('<link rel="stylesheet" href="css/dark.css" type="text/css" title="darkenLights" />');
+    		Engine.turnLightsOff
+    		$('.lightsOff').text('lights on.')
+    	}
+		if (darkCss.disabled) {
+			darkCss.disabled = false;
+			$('.lightsOff').text('lights on.')
+		}
+ 		else {
+ 			darkCss.disabled = true;
+ 			$('.lightsOff').text('lights off.')
+ 		}
 	},
 	
 	// Gets a guid

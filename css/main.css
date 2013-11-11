@@ -62,7 +62,15 @@ div#header {
 	cursor: pointer;
 }
 
-.deleteSave:hover, .share:hover, .manualSave:hover {
+.lightsOff {
+	position: absolute;
+	right: 170px;
+	bottom: 10px;
+	cursor: pointer;
+}
+
+
+.deleteSave:hover, .share:hover, .manualSave:hover, .lightsOff:hover{
 	text-decoration: underline;	
 }
 
