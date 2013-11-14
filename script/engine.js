@@ -97,6 +97,12 @@ var Engine = {
 		var menu = $('<div>')
 			.addClass('menu')
 			.appendTo('body');
+
+		 $('<span>')
+			.addClass('lightsOff menuBtn')
+			.text('lights off.')
+			.click(Engine.turnLightsOff)
+			.appendTo(menu);
 		
 		$('<span>')
 			.addClass('menuBtn')
@@ -340,6 +346,44 @@ var Engine = {
 			}
 		}, {width: '400px'});
 	},
+
+ 	findStylesheet: function(title) {
+ 	  	for(var i=0; i<document.styleSheets.length; i++) {
+ 	      	var sheet = document.styleSheets[i];
+ 	      	if(sheet.title == title) {
+ 	        	return sheet;
+ 	      	}
+ 	    }
+ 	    return null;
+ 	},
+
+ 	isLightsOff: function() {
+ 		var darkCss = Engine.findStylesheet('darkenLights');
+ 		if (darkCss != null) {
+ 			if (darkCss.disabled)
+ 				return false;
+ 			return true;
+ 		}
+ 		return false;
+ 	},
+ 	
+ 	turnLightsOff: function() {
+ 	  	var darkCss = Engine.findStylesheet('darkenLights');
+ 	    if (darkCss == null) {
+ 	      	$('head').append('<link rel="stylesheet" href="css/dark.css" type="text/css" title="darkenLights" />');
+ 	      	Engine.turnLightsOff;
+ 	      	$('.lightsOff').text('lights on.');
+ 	    }
+ 	  	else if (darkCss.disabled) {
+ 	    	darkCss.disabled = false;
+ 	    	$('.lightsOff').text('lights on.');
+ 	  	}
+ 	   	else {
+ 	     	$("#darkenLights").attr("disabled", "disabled");
+ 	     	darkCss.disabled = true;
+ 	     	$('.lightsOff').text('lights off.');
+ 	   	}
+ 	},
 	
 	// Gets a guid
 	getGuid: function() {
