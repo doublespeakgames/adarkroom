@@ -146,4 +146,9 @@
 
 .endGameRestart {
 	font-size: 32px;
+	cursor: pointer;
+}
+
+.endGameRestart:hover {
+	text-decoration: underline;
 }

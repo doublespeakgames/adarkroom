@@ -48,29 +48,21 @@ div#header {
 	height: 20px;
 }
 
-.deleteSave {
+.menu {
 	position: absolute;
 	right: 10px;
 	bottom: 10px;
-	cursor: pointer;
+	color: #666;
 }
 
-.manualSave {
-	position: absolute;
-	right: 125px;
-	bottom: 10px;
+.menu span {
 	cursor: pointer;
+	float: right;
+	margin-left: 20px;
 }
 
-.deleteSave:hover, .share:hover, .manualSave:hover {
-	text-decoration: underline;	
-}
-
-.share {
-	position: absolute;
-	right: 70px;
-	bottom: 10px;
-	cursor: pointer;
+.menu span:hover {
+	text-decoration: underline;
 }
 
 div.headerButton {

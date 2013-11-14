@@ -94,23 +94,33 @@ var Engine = {
 		
 		$('<div>').attr('id', 'locationSlider').appendTo('#main');
 		
-		$('<span>')
-			.addClass('deleteSave')
-			.text('restart.')
-			.click(Engine.confirmDelete)
+		var menu = $('<div>')
+			.addClass('menu')
 			.appendTo('body');
 		
-		$('<div>')
-			.addClass('share')
+		$('<span>')
+			.addClass('menuBtn')
+			.text('restart.')
+			.click(Engine.confirmDelete)
+			.appendTo(menu);
+		
+		$('<span>')
+			.addClass('menuBtn')
 			.text('share.')
 			.click(Engine.share)
-			.appendTo('body');
+			.appendTo(menu);
       
-      $('<span>')
-			.addClass('manualSave')
+		$('<span>')
+			.addClass('menuBtn')
 			.text('save.')
 			.click(Engine.exportImport)
-			.appendTo('body');
+			.appendTo(menu);
+			
+		$('<span>')
+			.addClass('menuBtn')
+			.text('app store.')
+			.click(function() { window.open('https://itunes.apple.com/us/app/a-dark-room/id736683061'); })
+			.appendTo(menu);	
 		
 		// Register keypress handlers
 		$('body').off('keydown').keydown(Engine.keyDown);

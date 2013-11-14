@@ -251,7 +251,7 @@ var Space = {
 		}, 1000);
 		
 		Space._panelTimeout = setTimeout(function() {
-			$('#spacePanel, .deleteSave, .share, .manualSave').animate({color: 'white'}, 500, 'linear');
+			$('#spacePanel, .menu').animate({color: 'white'}, 500, 'linear');
 		}, Space.FTB_SPEED / 2);
 		
 		Space.createAsteroid();
@@ -331,7 +331,7 @@ var Space = {
 				$('#starsContainer').remove();
 			}
 		});
-		$('#spacePanel, .deleteSave, .share, .manualSave').animate({color: 'black'}, 300, 'linear');
+		$('#spacePanel, .menu').animate({color: 'black'}, 300, 'linear');
 		$('#outerSlider').animate({top: '0px'}, 300, 'linear');
 		Engine.activeModule = Ship;
 		Ship.onArrival();
@@ -410,13 +410,10 @@ var Space = {
 				                	.appendTo('.centerCont');
 				                $('<br />')
 				                	.appendTo('.centerCont');
-				                
 				                $('#starsContainer').remove();
-					    		$('.deleteSave, .share, .manualSave').remove();
 					    		$('#content, #notifications').remove();
-					    		$('.deleteSave, .share, .manualSave').attr('style', 'color: white;').animate({opacity:0},1500);
 					    		$('<span>')
-				                	.addClass('deleteSave endGame endGameRestart')
+				                	.addClass('endGame endGameRestart')
 				                	.text('restart.')
 				                	.click(Engine.confirmDelete)
 				                	.appendTo('.centerCont')
