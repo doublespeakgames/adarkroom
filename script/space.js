@@ -226,8 +226,17 @@ var Space = {
 	},
 	
 	startAscent: function() {
-		$('body').addClass('noMask').css({backgroundColor: '#FFFFFF'}).animate({
-			backgroundColor: '#000000'
+		if (Engine.isLightsOff()) {
+			var body_color = '#272823';
+			var to_color = '#EEEEEE';
+		}
+		else {
+			var body_color = '#FFFFFF';
+			var to_color = '#000000';
+		}
+
+		$('body').addClass('noMask').css({backgroundColor: body_color}).animate({
+			backgroundColor: to_color
 		}, {
 			duration: Space.FTB_SPEED, 
 			easing: 'linear',
@@ -251,7 +260,10 @@ var Space = {
 		}, 1000);
 		
 		Space._panelTimeout = setTimeout(function() {
-			$('#spacePanel, .menu').animate({color: 'white'}, 500, 'linear');
+			if (Engine.isLightsOff())
+				$('#spacePanel, .menu').animate({color: '#272823'}, 500, 'linear');
+			else
+				$('#spacePanel, .menu').animate({color: 'white'}, 500, 'linear');
 		}, Space.FTB_SPEED / 2);
 		
 		Space.createAsteroid();
@@ -312,10 +324,13 @@ var Space = {
 		clearInterval(Space._timer);
 		clearInterval(Space._shipTimer);
 		clearTimeout(Space._panelTimeout);
-		
+		if (Engine.isLightsOff())
+			var body_color = '#272823';
+		else
+			var body_color = '#FFFFFF';
 		// Craaaaash!
 		$('body').removeClass('noMask').stop().animate({
-			backgroundColor: '#FFFFFF'
+			backgroundColor: body_color
 		}, {
 			duration: 300, 
 			progress: function() {
@@ -329,9 +344,12 @@ var Space = {
 				Space.starsBack.remove();
 				Space.stars = Space.starsBack = null;
 				$('#starsContainer').remove();
+				$('body').attr('style', '');
+				$('#notifyGradient').attr('style', '');	
+				$('#spacePanel').attr('style', '');			
 			}
 		});
-		$('#spacePanel, .menu').animate({color: 'black'}, 300, 'linear');
+		$('.menu').animate({color: '#666'}, 300, 'linear');
 		$('#outerSlider').animate({top: '0px'}, 300, 'linear');
 		Engine.activeModule = Ship;
 		Ship.onArrival();
@@ -374,9 +392,13 @@ var Space = {
 					$('#header').empty();
 					setTimeout(function() {
 						$('body').stop();
+						if (Engine.isLightsOff())
+							var container_color = '#EEE';
+						else
+							var container_color = '#000';
 						$('#starsContainer').animate({
 							opacity: 0,
-							'background-color': '#000'
+							'background-color': container_color
 						}, {
 							duration: 2000, 
 							progress: function() {
