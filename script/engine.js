@@ -200,11 +200,10 @@ var Engine = {
 			scenes: {
 				start: {
 					text: ['export or import save data, for backing up',
-                 'or migrating computers'],
+					       'or migrating computers'],
 					buttons: {
 						'export': {
 							text: 'export',
-							nextScene: 'end',
 							onChoose: Engine.export64
 						},
 						'import': {
@@ -217,22 +216,22 @@ var Engine = {
 						}
 					}
 				},
-        'confirm': {
-          text: ['are you sure?',
-                 'if the code is invalid, all data will be lost.',
-                 'this is irreversible.'],
-          buttons: {
-            'yes': {
-              text: 'yes',
-              nextScene: 'end',
-              onChoose: Engine.import64
-            },
-            'no': {
-              text: 'no',
-              nextScene: 'end'
-            }
-          }
-        }
+				'confirm': {
+					text: ['are you sure?',
+					       'if the code is invalid, all data will be lost.',
+					       'this is irreversible.'],
+					buttons: {
+						'yes': {
+							text: 'yes',
+							nextScene: 'end',
+							onChoose: Engine.import64
+						},
+						'no': {
+							text: 'no',
+							nextScene: 'end'
+						}
+					}
+				}
 			}
 		});
   },
@@ -243,7 +242,21 @@ var Engine = {
     string64 = string64.replace(/\s/g, '');
     string64 = string64.replace(/\./g, '');
     string64 = string64.replace(/\n/g, '');
-    prompt("save this.",string64);
+    Events.startEvent({
+    	title: 'Export',
+    	scenes: {
+    		start: {
+    			text: ['save this.'],
+    			textarea: string64,
+    			buttons: {
+    				'done': {
+    					text: 'got it',
+    					nextScene: 'end'
+    				}
+    			}
+    		}
+    	}
+    });
   },
   
   import64: function() {

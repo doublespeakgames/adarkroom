@@ -427,6 +427,11 @@ body.noMask .eventTitle:after {
 	min-height: 100px;
 }
 
+#description textarea {
+	width: 100%;
+	height: 225px;
+}
+
 body.noMask #description {
 	color: white;
 }

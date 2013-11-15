@@ -611,6 +611,10 @@ var Events = {
 			$('<div>').text(scene.text[i]).appendTo(desc);
 		}
 		
+		if(scene.textarea) {
+			$('<textarea>').val(scene.textarea).appendTo(desc);
+		}
+		
 		// Draw any loot
 		if(scene.loot) {
 			Events.drawLoot(scene.loot);
