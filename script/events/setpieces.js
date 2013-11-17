@@ -2274,7 +2274,7 @@ Events.Setpieces = {
 			'end2': {
 				text: [
 				   'not much here.',
-				   'scavengers much have gotten to this place already.'
+				   'scavengers must have gotten to this place already.'
 				],
 				onLoad: function() {
 					World.clearDungeon();
