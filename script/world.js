@@ -911,8 +911,6 @@ var World = {
 	useOutpost: function() {
 		Notifications.notify(null, 'water replenished');
 		World.setWater(World.getMaxWater());
-		// Save progress at outposts
-		$SM.setM('game.world', World.state);
 		// Mark this outpost as used
 		World.usedOutposts[World.curPos[0] + ',' + World.curPos[1]] = true;
 	},
@@ -921,8 +919,6 @@ var World = {
 		Engine.keyLock = false;
 		// Explore in a temporary world-state. We'll commit the changes if you return home safe.
 		World.state = $.extend(true, {}, $SM.get('game.world'));
-		// Some weirdness in jQuery's extend method is causing the map to not be deep copied...
-		World.state.map = $.extend(true, {}, World.state.map);
 		World.setWater(World.getMaxWater());
 		World.setHp(World.getMaxHealth());
 		World.foodMove = 0;
