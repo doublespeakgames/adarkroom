@@ -16,6 +16,10 @@ body {
 	margin: 0;
 }
 
+::selection{
+	background-color: transparent;
+}
+
 /* Framework stuff */
 
 div.clear {
