@@ -87,32 +87,32 @@ var Outside = {
 		{
 			rollUnder: 0.5,
 			name: 'fur',
-			message: 'scraps of fur'
+			message: _('scraps of fur')
 		},
 		{
 			rollUnder: 0.75,
 			name: 'meat',
-			message: 'bits of meat'
+			message: _('bits of meat')
 		},
 		{
 			rollUnder: 0.85,
 			name: 'scales',
-			message: 'strange scales'
+			message: _('strange scales')
 		},
 		{
 			rollUnder: 0.93,
 			name: 'teeth',
-			message: 'scattered teeth'
+			message: _('scattered teeth')
 		},
 		{
 			rollUnder: 0.995,
 			name: 'cloth',
-			message: 'tattered cloth'
+			message: _('tattered cloth')
 		},
 		{
 			rollUnder: 1.0,
 			name: 'charm',
-			message: 'a crudely made charm'
+			message: _('a crudely made charm')
 		}
 	],
 	
@@ -153,7 +153,7 @@ var Outside = {
 		// Create the gather button
 		new Button.Button({
 			id: 'gatherButton',
-			text: "gather wood",
+			text: _("gather wood"),
 			click: Outside.gatherWood,
 			cooldown: Outside._GATHER_DELAY,
 			width: '80px'
@@ -170,15 +170,15 @@ var Outside = {
 			var num = Math.floor(Math.random()*(space/2) + space/2);
 			if(num == 0) num = 1;
 			if(num == 1) {
-				Notifications.notify(null, 'a stranger arrives in the night');
+				Notifications.notify(null, _('a stranger arrives in the night'));
 			} else if(num < 5) {
-				Notifications.notify(null, 'a weathered family takes up in one of the huts.');
+				Notifications.notify(null, _('a weathered family takes up in one of the huts.'));
 			} else if(num < 10) {
-				Notifications.notify(null, 'a small group arrives, all dust and bones.');
+				Notifications.notify(null, _('a small group arrives, all dust and bones.'));
 			} else if(num < 30) {
-				Notifications.notify(null, 'a convoy lurches in, equal parts worry and hope.');
+				Notifications.notify(null, _('a convoy lurches in, equal parts worry and hope.'));
 			} else {
-				Notifications.notify(null, "the town's booming. word does get around.");
+				Notifications.notify(null, _("the town's booming. word does get around."));
 			}
 			Engine.log('population increased by ' + num);
 			$SM.add('game.population', num);

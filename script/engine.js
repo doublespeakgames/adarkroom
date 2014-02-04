@@ -17,48 +17,48 @@ var Engine = {
 		
 	Perks: {
 		'boxer': {
-			desc: 'punches do more damage',
-			notify: 'learned to throw punches with purpose'
+			desc: _('punches do more damage'),
+			notify: _('learned to throw punches with purpose')
 		},
 		'martial artist': {
-			desc: 'punches do even more damage.',
-			notify: 'learned to fight quite effectively without weapons'
+			desc: _('punches do even more damage.'),
+			notify: _('learned to fight quite effectively without weapons')
 		},
 		'unarmed master': {
-			desc: 'punch twice as fast, and with even more force',
-			notify: 'learned to strike faster without weapons'
+			desc: _('punch twice as fast, and with even more force'),
+			notify: _('learned to strike faster without weapons')
 		},
 		'barbarian': {
-			desc: 'melee weapons deal more damage',
-			notify: 'learned to swing weapons with force'
+			desc: _('melee weapons deal more damage'),
+			notify: _('learned to swing weapons with force')
 		},
 		'slow metabolism': {
-			desc: 'go twice as far without eating',
-			notify: 'learned how to ignore the hunger'
+			desc: _('go twice as far without eating'),
+			notify: _('learned how to ignore the hunger')
 		},
 		'desert rat': {
-			desc: 'go twice as far without drinking',
-			notify: 'learned to love the dry air'
+			desc: _('go twice as far without drinking'),
+			notify: _('learned to love the dry air')
 		},
 		'evasive': {
-			desc: 'dodge attacks more effectively',
-			notify: "learned to be where they're not"
+			desc: _('dodge attacks more effectively'),
+			notify: _("learned to be where they're not")
 		},
 		'precise': {
-			desc: 'land blows more often',
-			notify: 'learned to predict their movement'
+			desc: _('land blows more often'),
+			notify: _('learned to predict their movement')
 		},
 		'scout': {
-			desc: 'see farther',
-			notify: 'learned to look ahead'
+			desc: _('see farther'),
+			notify: _('learned to look ahead')
 		},
 		'stealthy': {
-			desc: 'better avoid conflict in the wild',
-			notify: 'learned how not to be seen'
+			desc: _('better avoid conflict in the wild'),
+			notify: _('learned how not to be seen')
 		},
 		'gastronome': {
-			desc: 'restore more health when eating',
-			notify: 'learned to make the most of food'
+			desc: _('restore more health when eating'),
+			notify: _('learned to make the most of food')
 		}
 	},
 	
@@ -100,31 +100,31 @@ var Engine = {
 
 		 $('<span>')
 			.addClass('lightsOff menuBtn')
-			.text('lights off.')
+			.text(_('lights off.'))
 			.click(Engine.turnLightsOff)
 			.appendTo(menu);
 		
 		$('<span>')
 			.addClass('menuBtn')
-			.text('restart.')
+			.text(_('restart.'))
 			.click(Engine.confirmDelete)
 			.appendTo(menu);
 		
 		$('<span>')
 			.addClass('menuBtn')
-			.text('share.')
+			.text(_('share.'))
 			.click(Engine.share)
 			.appendTo(menu);
       
 		$('<span>')
 			.addClass('menuBtn')
-			.text('save.')
+			.text(_('save.'))
 			.click(Engine.exportImport)
 			.appendTo(menu);
 			
 		$('<span>')
 			.addClass('menuBtn')
-			.text('app store.')
+			.text(_('app store.'))
 			.click(function() { window.open('https://itunes.apple.com/us/app/a-dark-room/id736683061'); })
 			.appendTo(menu);	
 		
@@ -202,38 +202,38 @@ var Engine = {
 	
   exportImport: function() {
     Events.startEvent({
-			title: 'Export / Import',
+			title: _('Export / Import'),
 			scenes: {
 				start: {
-					text: ['export or import save data, for backing up',
-					       'or migrating computers'],
+					text: [_('export or import save data, for backing up'),
+					       _('or migrating computers')],
 					buttons: {
 						'export': {
-							text: 'export',
+							text: _('export'),
 							onChoose: Engine.export64
 						},
 						'import': {
-							text: 'import',
+							text: _('import'),
 							nextScene: {1: 'confirm'},
 						},
 						'cancel': {
-							text: 'cancel',
+							text: _('cancel'),
 							nextScene: 'end'
 						}
 					}
 				},
 				'confirm': {
-					text: ['are you sure?',
-					       'if the code is invalid, all data will be lost.',
-					       'this is irreversible.'],
+					text: [_('are you sure?'),
+					       _('if the code is invalid, all data will be lost.'),
+					       _('this is irreversible.')],
 					buttons: {
 						'yes': {
-							text: 'yes',
+							text: _('yes'),
 							nextScene: 'end',
 							onChoose: Engine.import64
 						},
 						'no': {
-							text: 'no',
+							text: _('no'),
 							nextScene: 'end'
 						}
 					}
@@ -249,14 +249,14 @@ var Engine = {
     string64 = string64.replace(/\./g, '');
     string64 = string64.replace(/\n/g, '');
     Events.startEvent({
-    	title: 'Export',
+    	title: _('Export'),
     	scenes: {
     		start: {
-    			text: ['save this.'],
+    			text: [_('save this.')],
     			textarea: string64,
     			buttons: {
     				'done': {
-    					text: 'got it',
+    					text: _('got it'),
     					nextScene: 'end'
     				}
     			}
@@ -266,7 +266,7 @@ var Engine = {
   },
   
   import64: function() {
-    var string64 = prompt("put the save code here.","");
+    var string64 = prompt(_("put the save code here."),"");
     string64 = string64.replace(/\s/g, '');
     string64 = string64.replace(/\./g, '');
     string64 = string64.replace(/\n/g, '');
@@ -283,18 +283,18 @@ var Engine = {
 	
 	confirmDelete: function() {
 		Events.startEvent({
-			title: 'Restart?',
+			title: _('Restart?'),
 			scenes: {
 				start: {
-					text: ['restart the game?'],
+					text: [_('restart the game?')],
 					buttons: {
 						'yes': {
-							text: 'yes',
+							text: _('yes'),
 							nextScene: 'end',
 							onChoose: Engine.deleteSave
 						},
 						'no': {
-							text: 'no',
+							text: _('no'),
 							nextScene: 'end'
 						}
 					}
@@ -317,41 +317,41 @@ var Engine = {
 	
 	share: function() {
 		Events.startEvent({
-			title: 'Share',
+			title: _('Share'),
 			scenes: {
 				start: {
-					text: ['bring your friends.'],
+					text: [_('bring your friends.')],
 					buttons: {
 						'facebook': {
-							text: 'facebook',
+							text: _('facebook'),
 							nextScene: 'end',
 							onChoose: function() {
 								window.open('https://www.facebook.com/sharer/sharer.php?u=' + Engine.SITE_URL, 'sharer', 'width=626,height=436,location=no,menubar=no,resizable=no,scrollbars=no,status=no,toolbar=no');
 							}
 						},
 						'google': {
-							text:'google+',
+							text:_('google+'),
 							nextScene: 'end',
 							onChoose: function() {
 								window.open('https://plus.google.com/share?url=' + Engine.SITE_URL, 'sharer', 'width=480,height=436,location=no,menubar=no,resizable=no,scrollbars=no,status=no,toolbar=no');
 							}
 						},
 						'twitter': {
-							text: 'twitter',
+							text: _('twitter'),
 							onChoose: function() {
 								window.open('https://twitter.com/intent/tweet?text=A%20Dark%20Room&url=' + Engine.SITE_URL, 'sharer', 'width=660,height=260,location=no,menubar=no,resizable=no,scrollbars=yes,status=no,toolbar=no');
 							},
 							nextScene: 'end'
 						},
 						'reddit': {
-							text: 'reddit',
+							text: _('reddit'),
 							onChoose: function() {
 								window.open('http://www.reddit.com/submit?url=' + Engine.SITE_URL, 'sharer', 'width=960,height=700,location=no,menubar=no,resizable=no,scrollbars=yes,status=no,toolbar=no');
 							},
 							nextScene: 'end'
 						},
 						'close': {
-							text: 'close',
+							text: _('close'),
 							nextScene: 'end'
 						}
 					}
@@ -385,16 +385,16 @@ var Engine = {
  	    if (darkCss == null) {
  	      	$('head').append('<link rel="stylesheet" href="css/dark.css" type="text/css" title="darkenLights" />');
  	      	Engine.turnLightsOff;
- 	      	$('.lightsOff').text('lights on.');
+ 	      	$('.lightsOff').text(_('lights on.'));
  	    }
  	  	else if (darkCss.disabled) {
  	    	darkCss.disabled = false;
- 	    	$('.lightsOff').text('lights on.');
+ 	    	$('.lightsOff').text(_('lights on.'));
  	  	}
  	   	else {
  	     	$("#darkenLights").attr("disabled", "disabled");
  	     	darkCss.disabled = true;
- 	     	$('.lightsOff').text('lights off.');
+ 	     	$('.lightsOff').text(_('lights off.'));
  	   	}
  	},
 	

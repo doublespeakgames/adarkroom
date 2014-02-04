@@ -3,15 +3,15 @@
  **/
 Events.Outside = [
     { /* Ruined traps */
-    	title: 'A Ruined Trap',
+    	title: _('A Ruined Trap'),
 		isAvailable: function() {
 			return Engine.activeModule == Outside && $SM.get('game.buildings["trap"]', true) > 0;
 		},
 		scenes: {
 			'start': {
 				text: [
-					'some of the traps have been torn apart.',
-					'large prints lead away, into the forest.'
+					_('some of the traps have been torn apart.'),
+					_('large prints lead away, into the forest.')
 				],
 				onLoad: function() {
 					var numWrecked = Math.floor(Math.random() * $SM.get('game.buildings["trap"]', true)) + 1;
@@ -19,34 +19,34 @@ Events.Outside = [
 					Outside.updateVillage();
 					Outside.updateTrapButton();
 				},
-				notification: 'some traps have been destroyed',
+				notification: _('some traps have been destroyed'),
 				buttons: {
 					'track': {
-						text: 'track them',
+						text: _('track them'),
 						nextScene: {0.5: 'nothing', 1: 'catch'}
 					},
 					'ignore': {
-						text: 'ignore them',
+						text: _('ignore them'),
 						nextScene: 'end'
 					}
 				}
 			},
 			'nothing': {
 				text: [
-					'the tracks disappear after just a few minutes.',
-					'the forest is silent.'
+					_('the tracks disappear after just a few minutes.'),
+					_('the forest is silent.')
 				],
 				buttons: {
 					'end': {
-						text: 'go home',
+						text: _('go home'),
 						nextScene: 'end'
 					}
 				}
 			},
 			'catch': {
 				text: [
-			       'not far from the village lies a large beast, its fur matted with blood.',
-			       'it puts up little resistance before the knife.'
+			       _('not far from the village lies a large beast, its fur matted with blood.'),
+			       _('it puts up little resistance before the knife.')
 		        ],
 				reward: {
 					fur: 100,
@@ -55,7 +55,7 @@ Events.Outside = [
 				},
 				buttons: {
 					'end': {
-						text: 'go home',
+						text: _('go home'),
 						nextScene: 'end'
 					}
 				}
@@ -64,7 +64,7 @@ Events.Outside = [
     },
     
     { /* Sickness */
-    	title: 'Sickness',
+    	title: _('Sickness'),
   		isAvailable: function() {
   			return Engine.activeModule == Outside && 
   				$SM.get('game.population', true) > 10 && 
@@ -74,37 +74,37 @@ Events.Outside = [
   		scenes: {
   			'start': {
   				text: [
-  			    'a sickness is spreading through the village.',
-  			    'medicine is needed immediately.'
+  			    _('a sickness is spreading through the village.'),
+  			    _('medicine is needed immediately.')
   		    ],
   		    buttons: {
   		      'heal': {
-  		        text: '1 medicine',
+  		        text: _('1 medicine'),
   		        cost: { 'medicine' : 1 },
   		        nextScene: {1: 'healed'}
   		      },
   					'ignore': {
-  						text: 'ignore it',
+  						text: _('ignore it'),
   						nextScene: {1: 'death'}
   					}
   				}
   			},
   			'healed': {
   				text: [
-  			    'the sickness is cured in time.'
+  			    _('the sickness is cured in time.')
   		    ],
   		    buttons: {
   					'end': {
-  						text: 'go home',
+  						text: _('go home'),
   						nextScene: 'end'
   					}
   				}
   			},
   			'death': {
   				text: [
-  			    'the sickness spreads through the village.',
-  			    'the days are spent with burials.',
-  			    'the nights are rent with screams.'
+  			    _('the sickness spreads through the village.'),
+  			    _('the days are spent with burials.'),
+  			    _('the nights are rent with screams.')
   		    ],
   		    onLoad: function() {
 				    var numKilled = Math.floor(Math.random() * 20) + 1;
@@ -112,7 +112,7 @@ Events.Outside = [
     			},
   		    buttons: {
   					'end': {
-  						text: 'go home',
+  						text: _('go home'),
   						nextScene: 'end'
   					}
   				}
@@ -121,33 +121,33 @@ Events.Outside = [
     },
     
     { /* Plague */
-    	title: 'Plague',
+    	title: _('Plague'),
   		isAvailable: function() {
   			return Engine.activeModule == Outside && $SM.get('game.population', true) > 50 && $SM.get('stores.medicine', true) > 0;
   		},
   		scenes: {
   			'start': {
   				text: [
-  			    'a terrible plague is fast spreading through the village.',
-  			    'medicine is needed immediately.'
+  			    _('a terrible plague is fast spreading through the village.'),
+  			    _('medicine is needed immediately.')
   		    ],
   		    buttons: {
   		      'heal': {
-  		        text: '5 medicine',
+  		        text: _('5 medicine'),
   		        cost: { 'medicine' : 5 },
   		        nextScene: {1: 'healed'}
   		      },
   					'ignore': {
-  						text: 'do nothing',
+  						text: _('do nothing'),
   						nextScene: {1: 'death'}
   					}
   				}
   			},
   			'healed': {
   				text: [
-  			    'the plague is kept from spreading.',
-  			    'only a few die.',
-  			    'the rest bury them.'
+  			    _('the plague is kept from spreading.'),
+  			    _('only a few die.'),
+  			    _('the rest bury them.')
   		    ],
   		    onLoad: function() {
 				    var numKilled = Math.floor(Math.random() * 5) + 2;
@@ -155,16 +155,16 @@ Events.Outside = [
     			},
   		    buttons: {
   					'end': {
-  						text: 'go home',
+  						text: _('go home'),
   						nextScene: 'end'
   					}
   				}
   			},
   			'death': {
   				text: [
-  			    'the plague rips through the village.',
-  			    'the nights are rent with screams.',
-  			    'the only hope is a quick death.'
+  			    _('the plague rips through the village.'),
+  			    _('the nights are rent with screams.'),
+  			    _('the only hope is a quick death.')
   		    ],
   		    onLoad: function() {
 				    var numKilled = Math.floor(Math.random() * 80) + 10;
@@ -172,7 +172,7 @@ Events.Outside = [
     			},
   		    buttons: {
   					'end': {
-  						text: 'go home',
+  						text: _('go home'),
   						nextScene: 'end'
   					}
   				}
@@ -181,16 +181,16 @@ Events.Outside = [
     },
     
     { /* Beast attack */
-    	title: 'A Beast Attack',
+    	title: _('A Beast Attack'),
 		isAvailable: function() {
 			return Engine.activeModule == Outside && $SM.get('game.population', true) > 0;
 		},
 		scenes: {
 			'start': {
 				text: [
-			       'a pack of snarling beasts pours out of the trees.',
-			       'the fight is short and bloody, but the beasts are repelled.',
-			       'the villagers retreat to mourn the dead.'
+			       _('a pack of snarling beasts pours out of the trees.'),
+			       _('the fight is short and bloody, but the beasts are repelled.'),
+			       _('the villagers retreat to mourn the dead.')
 		        ],
 		        onLoad: function() {
 					var numKilled = Math.floor(Math.random() * 10) + 1;
@@ -203,7 +203,7 @@ Events.Outside = [
 		        },
 		        buttons: {
 					'end': {
-						text: 'go home',
+						text: _('go home'),
 						nextScene: 'end'
 					}
 				}
@@ -212,16 +212,16 @@ Events.Outside = [
     },
     
     { /* Soldier attack */
-    	title: 'A Military Raid',
+    	title: _('A Military Raid'),
 		isAvailable: function() {
 			return Engine.activeModule == Outside && $SM.get('game.population', true) > 0 && $SM.get('game.cityCleared');;
 		},
 		scenes: {
 			'start': {
 				text: [
-			       'a gunshot rings through the trees.',
-			       'well armed men charge out of the forest, firing into the crowd.',
-			       'after a skirmish they are driven away, but not without losses.'
+			       _('a gunshot rings through the trees.'),
+			       _('well armed men charge out of the forest, firing into the crowd.'),
+			       _('after a skirmish they are driven away, but not without losses.')
 		        ],
 		        onLoad: function() {
 					var numKilled = Math.floor(Math.random() * 40) + 1;
@@ -233,7 +233,7 @@ Events.Outside = [
 		        },
 		        buttons: {
 					'end': {
-						text: 'go home',
+						text: _('go home'),
 						nextScene: 'end'
 					}
 				}

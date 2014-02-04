@@ -123,7 +123,7 @@ var Events = {
 		
 		var btn = new Button.Button({
 			id: 'eat',
-			text: 'eat meat',
+			text: _('eat meat'),
 			cooldown: cooldown,
 			click: Events.eatMeat,
 			cost: { 'cured meat': 1 }
@@ -143,7 +143,7 @@ var Events = {
 		
 		var btn = new Button.Button({
 			id: 'meds',
-			text: 'use meds',
+			text: _('use meds'),
 			cooldown: cooldown,
 			click: Events.useMeds,
 			cost: { 'medicine': 1 }
@@ -453,7 +453,7 @@ var Events = {
 					var btns = $('#buttons', Events.eventPanel());
 					desc.empty();
 					btns.empty();
-					$('<div>').text('the ' + scene.enemy + (scene.plural ? ' are' : ' is') + ' dead.').appendTo(desc);
+					$('<div>').text(_("the {0} is dead.",scene.enemy)).appendTo(desc);
 					
 					Events.drawLoot(scene.loot);
 					
@@ -471,7 +471,7 @@ var Events = {
 									Events.endEvent(); 
 								}
 							},
-							text: 'leave'
+							text: _('leave')
 						}).appendTo(btns);
 						
 						Events.createEatMeatButton(0).appendTo(btns);

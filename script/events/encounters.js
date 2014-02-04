@@ -4,7 +4,7 @@
 Events.Encounters = [
 	/* Tier 1 */
 	{ /* Snarling Beast */
-		title: 'A Snarling Beast',
+		title: _('A Snarling Beast'),
  		isAvailable: function() {
  			return World.getDistance() <= 10 && World.getTerrain() == World.TILE.FOREST;
  		},
@@ -34,12 +34,12 @@ Events.Encounters = [
  						chance: 0.8
  					}
  				},
- 				notification: 'a snarling beast leaps out of the underbrush'
+ 				notification: _('a snarling beast leaps out of the underbrush')
  			}
  		}
 	},
 	{ /* Gaunt Man */
-     	title: 'A Gaunt Man',
+     	title: _('A Gaunt Man'),
   		isAvailable: function() {
   			return World.getDistance() <= 10 && World.getTerrain() == World.TILE.BARRENS;
   		},
@@ -69,12 +69,12 @@ Events.Encounters = [
   						chance: 0.5
   					}
   				},
-  				notification: 'a gaunt man approaches, a crazed look in his eye'
+  				notification: _('a gaunt man approaches, a crazed look in his eye')
   			}
 		}
   	},
 	{ /* Strange Bird */
-     	title: 'A Strange Bird',
+     	title: _('A Strange Bird'),
   		isAvailable: function() {
   			return World.getDistance() <= 10 && World.getTerrain() == World.TILE.FIELD;
   		},
@@ -104,13 +104,13 @@ Events.Encounters = [
   						chance: 0.8
   					}
   				},
-  				notification: 'a strange looking bird speeds across the plains'
+  				notification: _('a strange looking bird speeds across the plains')
   			}
 		}
   	},
 	/* Tier 2*/
 	{ /* Shivering Man */
-     	title: 'A Shivering Man',
+     	title: _('A Shivering Man'),
   		isAvailable: function() {
   			return World.getDistance() > 10 && World.getDistance() <= 20 && World.getTerrain() == World.TILE.BARRENS;
   		},
@@ -145,12 +145,12 @@ Events.Encounters = [
   					  chance: 0.7
   					}
   				},
-  				notification: 'a shivering man approaches and attacks with surprising strength'
+  				notification: _('a shivering man approaches and attacks with surprising strength')
   			}
 		}
   },
 	{ /* Man-eater */
-		title: 'A Man-Eater',
+		title: _('A Man-Eater'),
  		isAvailable: function() {
  			return World.getDistance() > 10 && World.getDistance() <= 20 && World.getTerrain() == World.TILE.FOREST;
  		},
@@ -180,12 +180,12 @@ Events.Encounters = [
  						chance: 0.8
  					}
  				},
- 				notification: 'a large creature attacks, claws freshly bloodied'
+ 				notification: _('a large creature attacks, claws freshly bloodied')
  			}
  		}
 	},
 	{ /* Scavenger */
-     	title: 'A Scavenger',
+     	title: _('A Scavenger'),
   		isAvailable: function() {
   			return World.getDistance() > 10 && World.getDistance() <= 20 && World.getTerrain() == World.TILE.BARRENS;
   		},
@@ -220,12 +220,12 @@ Events.Encounters = [
   					  chance: 0.1
   					}
   				},
-  				notification: 'a scavenger draws close, hoping for an easy score'
+  				notification: _('a scavenger draws close, hoping for an easy score')
   			}
 		}
   	},
 	{ /* Huge Lizard */
-     	title: 'A Huge Lizard',
+     	title: _('A Huge Lizard'),
   		isAvailable: function() {
   			return World.getDistance() > 10 && World.getDistance() <= 20 && World.getTerrain() == World.TILE.FIELD;
   		},
@@ -255,13 +255,13 @@ Events.Encounters = [
   						chance: 0.8
   					}
   				},
-  				notification: 'the grass thrashes wildly as a huge lizard pushes through'
+  				notification: _('the grass thrashes wildly as a huge lizard pushes through')
   			}
 		}
   	},
 	/* Tier 3*/
 	{ /* Feral Terror */
-		title: 'A Feral Terror',
+		title: _('A Feral Terror'),
  		isAvailable: function() {
  			return World.getDistance() > 20 && World.getTerrain() == World.TILE.FOREST;
  		},
@@ -291,12 +291,12 @@ Events.Encounters = [
  						chance: 0.8
  					}
  				},
- 				notification: 'a beast, wilder than imagining, erupts out of the foliage'
+ 				notification: _('a beast, wilder than imagining, erupts out of the foliage')
  			}
  		}
 	},
 	{ /* Soldier */
-     	title: 'A Soldier',
+     	title: _('A Soldier'),
   		isAvailable: function() {
   			return World.getDistance() > 20 && World.getTerrain() == World.TILE.BARRENS;
   		},
@@ -332,12 +332,12 @@ Events.Encounters = [
   					  chance: 0.1
   					}
   				},
-  				notification: 'a soldier opens fire from across the desert'
+  				notification: _('a soldier opens fire from across the desert')
   			}
 		}
   	},
 	{ /* Sniper */
-     	title: 'A Sniper',
+     	title: _('A Sniper'),
   		isAvailable: function() {
   			return World.getDistance() > 20 && World.getTerrain() == World.TILE.FIELD;
   		},
@@ -373,7 +373,7 @@ Events.Encounters = [
   					  chance: 0.1
   					}
   				},
-  				notification: 'a shot rings out, from somewhere in the long grass'
+  				notification: _('a shot rings out, from somewhere in the long grass'à
   			}
 		}
   	}
