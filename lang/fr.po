@@ -1,0 +1,288 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: adarkroom\n"
+"POT-Creation-Date: 2014-02-04 21:32+0100\n"
+"PO-Revision-Date: 2014-02-04 22:00+0100\n"
+"Last-Translator: Vanadar <vanadar.univers@gmail.com>\n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: s;\n"
+"X-Poedit-SearchPath-0: ./../script\n"
+
+#: ../script/events.js:126
+msgid "eat meat"
+msgstr "manger de la viande"
+
+#: ../script/events.js:146
+msgid "use meds"
+msgstr "utiliser un médicament"
+
+#: ../script/events.js:456
+msgid "the {0} is dead."
+msgstr ""
+
+#: ../script/events.js:474
+msgid "leave"
+msgstr "partir"
+
+#: ../script/engine.js:20
+msgid "punches do more damage"
+msgstr "les points font plus de dégats"
+
+#: ../script/engine.js:21
+msgid "learned to throw punches with purpose"
+msgstr "appris à donner des coups de points avec un objectif"
+
+#: ../script/engine.js:24
+msgid "punches do even more damage."
+msgstr "les coups de points font plus de dégats"
+
+#: ../script/engine.js:25
+msgid "learned to fight quite effectively without weapons"
+msgstr "apprendre à se battre de façon efficace sans arme"
+
+#: ../script/engine.js:28
+msgid "punch twice as fast, and with even more force"
+msgstr "frapper deux fois plus vite, et avec plus de force"
+
+#: ../script/engine.js:29
+msgid "learned to strike faster without weapons"
+msgstr "appris à attaquer plus vite sans arme"
+
+#: ../script/engine.js:32
+msgid "melee weapons deal more damage"
+msgstr ""
+
+#: ../script/engine.js:33
+msgid "learned to swing weapons with force"
+msgstr ""
+
+#: ../script/engine.js:36
+msgid "go twice as far without eating"
+msgstr ""
+
+#: ../script/engine.js:37
+msgid "learned how to ignore the hunger"
+msgstr ""
+
+#: ../script/engine.js:40
+msgid "go twice as far without drinking"
+msgstr ""
+
+#: ../script/engine.js:41
+msgid "learned to love the dry air"
+msgstr ""
+
+#: ../script/engine.js:44
+msgid "dodge attacks more effectively"
+msgstr ""
+
+#: ../script/engine.js:45
+msgid "learned to be where they're not"
+msgstr ""
+
+#: ../script/engine.js:48
+msgid "land blows more often"
+msgstr ""
+
+#: ../script/engine.js:49
+msgid "learned to predict their movement"
+msgstr ""
+
+#: ../script/engine.js:52
+msgid "see farther"
+msgstr "voir plus loin"
+
+#: ../script/engine.js:53
+msgid "learned to look ahead"
+msgstr ""
+
+#: ../script/engine.js:56
+msgid "better avoid conflict in the wild"
+msgstr ""
+
+#: ../script/engine.js:57
+msgid "learned how not to be seen"
+msgstr ""
+
+#: ../script/engine.js:60
+msgid "restore more health when eating"
+msgstr ""
+
+#: ../script/engine.js:61
+msgid "learned to make the most of food"
+msgstr ""
+
+#: ../script/engine.js:103 ../script/engine.js:397
+msgid "lights off."
+msgstr "lumières éteintes."
+
+#: ../script/engine.js:109
+msgid "restart."
+msgstr "recommencer."
+
+#: ../script/engine.js:115
+msgid "share."
+msgstr "partager."
+
+#: ../script/engine.js:121
+msgid "save."
+msgstr "sauvegarder."
+
+#: ../script/engine.js:127
+msgid "app store."
+msgstr "app store"
+
+#: ../script/engine.js:205
+msgid "Export / Import"
+msgstr "Exporter/Importer"
+
+#: ../script/engine.js:208
+msgid "export or import save data, for backing up"
+msgstr "exporter ou importer vos données de sauvegarde"
+
+#: ../script/engine.js:209
+msgid "or migrating computers"
+msgstr "pour sauver votre partie ou changer d'ordinateur"
+
+#: ../script/engine.js:212
+msgid "export"
+msgstr "exporter"
+
+#: ../script/engine.js:216
+msgid "import"
+msgstr "importer"
+
+#: ../script/engine.js:220
+msgid "cancel"
+msgstr "annuler"
+
+#: ../script/engine.js:226
+msgid "are you sure?"
+msgstr "êtes vous sur ?"
+
+#: ../script/engine.js:227
+msgid "if the code is invalid, all data will be lost."
+msgstr "si le code est incorrect, toutes les données seront perdues."
+
+#: ../script/engine.js:228
+msgid "this is irreversible."
+msgstr "Il n'y a pas de retour en arrière possible."
+
+#: ../script/engine.js:231 ../script/engine.js:292
+msgid "yes"
+msgstr "oui"
+
+#: ../script/engine.js:236 ../script/engine.js:297
+msgid "no"
+msgstr "non"
+
+#: ../script/engine.js:252
+msgid "Export"
+msgstr "Exporter"
+
+#: ../script/engine.js:255
+msgid "save this."
+msgstr "sauvegarder."
+
+#: ../script/engine.js:259
+msgid "got it"
+msgstr "compris"
+
+#: ../script/engine.js:269
+msgid "put the save code here."
+msgstr "copier le code ici."
+
+#: ../script/engine.js:286
+msgid "Restart?"
+msgstr "Recommencer ?"
+
+#: ../script/engine.js:289
+msgid "restart the game?"
+msgstr "recommencer la partie ?"
+
+#: ../script/engine.js:320
+msgid "Share"
+msgstr "Partager"
+
+#: ../script/engine.js:323
+msgid "bring your friends."
+msgstr "Invitez vos amis."
+
+#: ../script/engine.js:326
+msgid "facebook"
+msgstr "facebook"
+
+#: ../script/engine.js:333
+msgid "google+"
+msgstr "google+"
+
+#: ../script/engine.js:340
+msgid "twitter"
+msgstr "twitter"
+
+#: ../script/engine.js:347
+msgid "reddit"
+msgstr "reddit"
+
+#: ../script/engine.js:354
+msgid "close"
+msgstr "fermer"
+
+#: ../script/engine.js:388 ../script/engine.js:392
+msgid "lights on."
+msgstr "lumières allumées."
+
+#: ../script/outside.js:90
+msgid "scraps of fur"
+msgstr "morceaux de fourrure"
+
+#: ../script/outside.js:95
+msgid "bits of meat"
+msgstr "morceaux de viande"
+
+#: ../script/outside.js:100
+msgid "strange scales"
+msgstr "écailles étranges"
+
+#: ../script/outside.js:105
+msgid "scattered teeth"
+msgstr "tas de dents"
+
+#: ../script/outside.js:110
+msgid "tattered cloth"
+msgstr "tas de vetements"
+
+#: ../script/outside.js:115
+msgid "a crudely made charm"
+msgstr "un charme rudimentaire"
+
+#: ../script/outside.js:156
+msgid "gather wood"
+msgstr "récoleter du bois"
+
+#: ../script/outside.js:173
+msgid "a stranger arrives in the night"
+msgstr "Une étrangère arrive durant la nuit"
+
+#: ../script/outside.js:175
+msgid "a weathered family takes up in one of the huts."
+msgstr "une famille épuisée s'intalle dans une hutte."
+
+#: ../script/outside.js:177
+msgid "a small group arrives, all dust and bones."
+msgstr "un petit groupe arrive, sale et affamé."
+
+#: ../script/outside.js:179
+msgid "a convoy lurches in, equal parts worry and hope."
+msgstr "un convoi arrive, plein de crainte et d'éspoir."
+
+#: ../script/outside.js:181
+msgid "the town's booming. word does get around."
+msgstr "la ville s'agrandie, le mot se passe."
