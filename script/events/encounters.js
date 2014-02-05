@@ -373,7 +373,7 @@ Events.Encounters = [
   					  chance: 0.1
   					}
   				},
-  				notification: _('a shot rings out, from somewhere in the long grass'à
+  				notification: _('a shot rings out, from somewhere in the long grass')
   			}
 		}
   	}

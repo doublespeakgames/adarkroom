@@ -128,7 +128,7 @@ var Outside = {
 		}
 		
 		// Create the outside tab
-		this.tab = Header.addLocation("A Silent Forest", "outside", Outside);
+		this.tab = Header.addLocation(_("A Silent Forest"), "outside", Outside);
 		
 		// Create the Outside panel
 		this.panel = $('<div>').attr('id', "outsidePanel")
@@ -494,7 +494,7 @@ var Outside = {
 			if(btn.length == 0) {
 				new Button.Button({
 					id: 'trapsButton',
-					text: "check traps",
+					text: _("check traps"),
 					click: Outside.checkTraps,
 					cooldown: Outside._TRAPS_DELAY,
 					width: '80px'
@@ -513,17 +513,17 @@ var Outside = {
 		var numHuts = $SM.get('game.buildings["hut"]', true);
 		var title;
 		if(numHuts == 0) {
-			title = "A Silent Forest";
+			title = _("A Silent Forest");
 		} else if(numHuts == 1) {
-			title = "A Lonely Hut";
+			title = _("A Lonely Hut");
 		} else if(numHuts <= 4) {
-			title = "A Tiny Village";
+			title = _("A Tiny Village");
 		} else if(numHuts <= 8) {
-			title = "A Modest Village";
+			title = _("A Modest Village");
 		} else if(numHuts <= 14) {
-			title = "A Large Village";
+			title = _("A Large Village");
 		} else {
-			title = "A Raucous Village";
+			title = _("A Raucous Village");
 		}
 		
 		if(Engine.activeModule == this) {
@@ -535,7 +535,7 @@ var Outside = {
 	onArrival: function(transition_diff) {
 		Outside.setTitle();
 		if(!$SM.get('game.outside.seenForest')) {
-			Notifications.notify(Outside, "the sky is grey and the wind blows relentlessly");
+			Notifications.notify(Outside, _("the sky is grey and the wind blows relentlessly"));
 			$SM.set('game.outside.seenForest', true);
 		}
 		Outside.updateTrapButton();
@@ -545,7 +545,7 @@ var Outside = {
 	},
 	
 	gatherWood: function() {
-		Notifications.notify(Outside, "dry brush and dead branches litter the forest floor");
+		Notifications.notify(Outside, _("dry brush and dead branches litter the forest floor"));
 		var gatherAmt = $SM.get('game.buildings["cart"]', true) > 0 ? 50 : 10;
 		$SM.add('stores.wood', gatherAmt);
 	},
@@ -571,12 +571,12 @@ var Outside = {
 				}
 			}
 		}
-		var s = 'the traps contain ';
+		var s = _('the traps contain ');
 		for(var i = 0, len = msg.length; i < len; i++) {
 			if(len > 1 && i > 0 && i < len - 1) {
 				s += ", ";
 			} else if(len > 1 && i == len - 1) {
-				s += " and ";
+				s += _(" and ");
 			}
 			s += msg[i];
 		}

@@ -487,7 +487,8 @@ var Engine = {
 	},
 	
 	getIncomeMsg: function(num, delay) {
-		return (num > 0 ? "+" : "") + num + " per " + delay + "s";
+		return _("{0} per {1}s", (num > 0 ? "+" : "") + num, delay);
+		//return (num > 0 ? "+" : "") + num + " per " + delay + "s";
 	},
 	
 	keyDown: function(e) {
