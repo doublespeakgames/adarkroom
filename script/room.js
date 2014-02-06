@@ -944,7 +944,7 @@ var Room = {
 		}
 		if($SM.get('game.builder.level') < 4) return false;
 		var craftable = Room.Craftables[thing];
-		if(Room.needsWorkshop(craftable.type) && $SM.get('game.buildings["workshop"]', true) == 0) return false;
+		if(Room.needsWorkshop(craftable.type) && $SM.get('game.buildings["'+'workshop'+'"]', true) == 0) return false;
 		var cost = craftable.cost();
 		
 		//show button if one has already been built

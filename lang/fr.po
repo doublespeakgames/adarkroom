@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adarkroom\n"
-"POT-Creation-Date: 2014-02-05 16:08+0100\n"
-"PO-Revision-Date: 2014-02-05 16:24+0100\n"
+"POT-Creation-Date: 2014-02-06 14:28+0100\n"
+"PO-Revision-Date: 2014-02-06 18:34+0100\n"
 "Last-Translator: louis <louis@make-me-viral.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -419,7 +419,7 @@ msgstr ""
 
 #: ../script/room.js:128
 msgid "a haze falls over the village as the steelworks fires up"
-msgstr "une brume tombe sur le village lorsque l'acierie démarre"
+msgstr "une brume tombe sur le village lorsque l’aciérie démarre"
 
 #: ../script/room.js:141
 msgid "builder says it'd be useful to have a steady source of bullets"
@@ -718,17 +718,69 @@ msgstr "sidérurgiste"
 msgid "bait"
 msgstr "appât"
 
-#: ../script/localization.js:8
+#: ../script/localization.js:8 ../script/localization.js:10
 msgid "cured meat"
 msgstr "viande fumée"
 
-#: ../script/localization.js:8
+#: ../script/localization.js:8 ../script/localization.js:9
 msgid "scales"
 msgstr "écailles"
 
-#: ../script/localization.js:13
+#: ../script/localization.js:8
+msgid "compass"
+msgstr "compas"
+
+#: ../script/localization.js:9
+msgid "bone spear"
+msgstr "lance"
+
+#: ../script/localization.js:9
+msgid "rucksack"
+msgstr "gourde"
+
+#: ../script/localization.js:9
+msgid "l armour"
+msgstr "c amure"
+
+#: ../script/localization.js:9
+msgid "trading post"
+msgstr "comptoir"
+
+#: ../script/localization.js:10
+msgid "lodge"
+msgstr "cabane de chasseur"
+
+#: ../script/localization.js:10
+msgid "tannery"
+msgstr "tannerie"
+
+#: ../script/localization.js:10
+msgid "smokehouse"
+msgstr "fumoir"
+
+#: ../script/localization.js:10
+msgid "workshop"
+msgstr "atelier"
+
+#: ../script/localization.js:15
 msgid "stores"
 msgstr "entrepôt"
+
+#: ../script/localization.js:16
+msgid "weapons"
+msgstr "armes"
+
+#: ../script/localization.js:17
+msgid "build:"
+msgstr "construire:"
+
+#: ../script/localization.js:18
+msgid "craft:"
+msgstr "fabriquer:"
+
+#: ../script/localization.js:19
+msgid "buy:"
+msgstr "acheter:"
 
 #: ../script/events.js:126
 msgid "eat meat"
@@ -1366,9 +1418,10 @@ msgstr "des racines pourrissantes ressortent des marécages."
 msgid "a lone frog sits in the muck, silently."
 msgstr "une grenouille solitaire est assise dans la vase, silencieuse."
 
+# dur dur dur
 #: ../script/events/setpieces.js:40
 msgid "a swamp festers in the stagnant air."
-msgstr ""
+msgstr "un marécage empeste."
 
 #: ../script/events/setpieces.js:43 ../script/events/setpieces.js:530
 #: ../script/events/setpieces.js:585 ../script/events/setpieces.js:853
@@ -1379,11 +1432,11 @@ msgstr "entrer"
 
 #: ../script/events/setpieces.js:54
 msgid "deep in the swamp is a moss-covered cabin."
-msgstr ""
+msgstr "au centre du marécage, une cabane recouverte de mousse."
 
 #: ../script/events/setpieces.js:55
 msgid "an old wanderer sits inside, in a seeming trance."
-msgstr ""
+msgstr "à l'intérieur, un vieux vagabond est assis. il à l'air en trance."
 
 #: ../script/events/setpieces.js:60
 msgid "talk"
@@ -1391,44 +1444,47 @@ msgstr "parler"
 
 #: ../script/events/setpieces.js:71
 msgid "the wanderer takes the charm and nods slowly."
-msgstr ""
+msgstr "le vagabond prend le charme et hoche lentement la tête."
 
 #: ../script/events/setpieces.js:72
 msgid "he speaks of once leading the great fleets to fresh worlds."
 msgstr ""
+"il raconte qu'il fut un temps ou il menait la grande flotte en quête d'un "
+"monde meilleur."
 
+# :( :(
 #: ../script/events/setpieces.js:73
 msgid "unfathomable destruction to fuel wanderer hungers."
 msgstr ""
 
 #: ../script/events/setpieces.js:74
 msgid "his time here, now, is his penance."
-msgstr ""
+msgstr "sa présence ici est sa pénitence."
 
 #: ../script/events/setpieces.js:90
 msgid "A Damp Cave"
-msgstr ""
+msgstr "Une grotte humide"
 
 #: ../script/events/setpieces.js:94
 msgid "the mouth of the cave is wide and dark."
-msgstr ""
+msgstr "l'entrée de la grotte est grande et sombre."
 
 #: ../script/events/setpieces.js:95
 msgid "can't see what's inside."
-msgstr ""
+msgstr "impossible de voir ce qu'il y'a à l'intérieur."
 
 #: ../script/events/setpieces.js:97
 msgid "the earth here is split, as if bearing an ancient wound"
-msgstr ""
+msgstr "à cet endroit, la terre s'ouvre en deux, comme une ancienne blessure"
 
 #: ../script/events/setpieces.js:100 ../script/events/setpieces.js:2834
 #: ../script/events/setpieces.js:3333
 msgid "go inside"
-msgstr ""
+msgstr "entrer"
 
 #: ../script/events/setpieces.js:119 ../script/events/setpieces.js:257
 msgid "a startled beast defends its home"
-msgstr ""
+msgstr "Une bête effrayée défend son territoire"
 
 #: ../script/events/setpieces.js:134 ../script/events/setpieces.js:183
 #: ../script/events/setpieces.js:222 ../script/events/setpieces.js:239
@@ -1474,39 +1530,41 @@ msgstr "sortir de la cave"
 
 #: ../script/events/setpieces.js:145
 msgid "the cave narrows a few feet in."
-msgstr ""
+msgstr "la grotte se rétrécit après quelques pas à l'intérieur."
 
 #: ../script/events/setpieces.js:146
 msgid "the walls are moist and moss-covered"
-msgstr ""
+msgstr "les murs sont humides et recouverts de moisissures"
 
 #: ../script/events/setpieces.js:150
 msgid "squeeze"
-msgstr ""
+msgstr "serrer"
 
 #: ../script/events/setpieces.js:161
 msgid "the remains of an old camp sits just inside the cave."
-msgstr ""
+msgstr "a l'intérieur de la grotte, les restes d'un ancien campement."
 
 #: ../script/events/setpieces.js:162
 msgid "bedrolls, torn and blackened, lay beneath a thin layer of dust."
 msgstr ""
+"des sacs de couchage, déchirés et noircis, traînent sous une mince couche de "
+"poussière."
 
 #: ../script/events/setpieces.js:194
 msgid "the body of a wanderer lies in a small cavern."
-msgstr ""
+msgstr "le corps d'un vagabond repose dans une petite caverne."
 
 #: ../script/events/setpieces.js:195
 msgid "rot's been to work on it, and some of the pieces are missing."
-msgstr ""
+msgstr "le corps est en pleine décomposition et il en manque une partie."
 
 #: ../script/events/setpieces.js:196
 msgid "can't tell what left it here."
-msgstr ""
+msgstr "impossible de savoir ce qui à fait ça."
 
 #: ../script/events/setpieces.js:233
 msgid "the torch sputters and dies in the damp air"
-msgstr ""
+msgstr "la torche crépite une dernière fois et  s’éteint dans l'air humide."
 
 #: ../script/events/setpieces.js:234
 msgid "the darkness is absolute"
@@ -1526,7 +1584,7 @@ msgstr "Une grande bête apparaît dans l'obscurité en chargeant"
 
 #: ../script/events/setpieces.js:353
 msgid "a giant lizard shambles forward"
-msgstr ""
+msgstr "Un lézard gigantesque  se traîne vers vous"
 
 #: ../script/events/setpieces.js:379
 msgid "the nest of a large animal lies at the back of the cave."
@@ -1539,6 +1597,8 @@ msgstr "une petite cachette à provision se trouve au fond de la cave."
 #: ../script/events/setpieces.js:471
 msgid "an old case is wedged behind a rock, covered in a thick layer of dust."
 msgstr ""
+"une vieille valise est posée contre un rocher. elle est recouverte d'une "
+"épaisse couche de poussière."
 
 #: ../script/events/setpieces.js:503
 msgid "A Deserted Town"
@@ -1546,13 +1606,14 @@ msgstr "Une ville déserte"
 
 #: ../script/events/setpieces.js:507
 msgid "a small suburb lays ahead, empty houses scorched and peeling."
-msgstr ""
+msgstr "devant, un petit lotissement. ses maisons brûlées ou effondrées."
 
 #: ../script/events/setpieces.js:508
 msgid ""
 "broken streetlights stand, rusting. light hasn't graced this place in a long "
 "time."
 msgstr ""
+"des réverbères cassés ont rouillés. Cet endroit est déserté depuis longtemps."
 
 #: ../script/events/setpieces.js:510
 msgid "the town lies abandoned, its citizens long dead"
@@ -1567,6 +1628,8 @@ msgid ""
 "where the windows of the schoolhouse aren't shattered, they're blackened "
 "with soot."
 msgstr ""
+"les quelques fenêtres de l'école qui n'ont pas été brisées sont recouvertes "
+"de suie."
 
 #: ../script/events/setpieces.js:526
 msgid "the double doors creak endlessly in the wind."
@@ -1590,25 +1653,26 @@ msgstr "quitter la ville"
 msgid "ambushed on the street."
 msgstr "une embuscade dans la rue."
 
+# ?
 #: ../script/events/setpieces.js:580
 msgid "a squat building up ahead."
 msgstr ""
 
 #: ../script/events/setpieces.js:581
 msgid "a green cross barely visible behind grimy windows."
-msgstr ""
+msgstr "une croix verte est a peine visible derrière des rideaux dépareillés."
 
 #: ../script/events/setpieces.js:597
 msgid "a small cache of supplies is tucked inside a rusting locker."
-msgstr ""
+msgstr "quelques objets sont cachés dans un casier rouillé."
 
 #: ../script/events/setpieces.js:657
 msgid "a scavenger waits just inside the door."
-msgstr ""
+msgstr "un pillard attend de l'autre coté de la porte."
 
 #: ../script/events/setpieces.js:689
 msgid "a beast stands alone in an overgrown park."
-msgstr ""
+msgstr "au milieu d'un parc se trouve une bête."
 
 #: ../script/events/setpieces.js:703
 msgid "an overturned caravan is spread across the pockmarked street."
@@ -1622,7 +1686,7 @@ msgstr ""
 
 #: ../script/events/setpieces.js:764
 msgid "a madman attacks, screeching."
-msgstr ""
+msgstr "un fou attaque un hurlant."
 
 #: ../script/events/setpieces.js:801
 msgid "a thug moves out of the shadows."
@@ -1663,7 +1727,7 @@ msgstr ""
 
 #: ../script/events/setpieces.js:913
 msgid "can't read the words."
-msgstr ""
+msgstr "impossibles de déchiffrer les mots."
 
 #: ../script/events/setpieces.js:958
 msgid "a panicked scavenger bursts through the door, screaming."
@@ -1725,7 +1789,7 @@ msgstr ""
 
 #: ../script/events/setpieces.js:1190
 msgid "A Ruined City"
-msgstr ""
+msgstr "Une ville en ruine"
 
 #: ../script/events/setpieces.js:1194
 msgid ""
@@ -1748,7 +1812,7 @@ msgstr ""
 
 #: ../script/events/setpieces.js:1212
 msgid "the streets are empty."
-msgstr ""
+msgstr "les rues sont vides."
 
 #: ../script/events/setpieces.js:1213
 msgid "the air is filled with dust, driven relentlessly by the hard winds."
@@ -1804,7 +1868,7 @@ msgstr ""
 
 #: ../script/events/setpieces.js:1276
 msgid "the old tower seems mostly intact."
-msgstr ""
+msgstr "la vieille tour à l'air globalement intacte."
 
 #: ../script/events/setpieces.js:1277
 msgid "the shell of a burned out car blocks the entrance."
@@ -2042,7 +2106,7 @@ msgstr ""
 
 #: ../script/events/setpieces.js:2388
 msgid "time to move on."
-msgstr ""
+msgstr "il est temps de repartir"
 
 #: ../script/events/setpieces.js:2426
 msgid "the small settlement has clearly been burning a while."
