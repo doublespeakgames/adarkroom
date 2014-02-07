@@ -26,7 +26,13 @@
 	<script src="lib/jquery.event.swipe.js"></script>
 	<script src="lib/base64.js"></script>
 	<script src="lib/translate.js"></script>
-	<script src="lang/fr.js"></script>
+	
+	<script>
+		//load language
+		document.write('<script src="lang/fr.js"><\/script>');
+		document.write('<link rel="stylesheet" type="text/css" href="lang/fr.css" \/>');
+	</script>
+	
 	<script src="script/Button.js"></script>
 	<script src="script/engine.js"></script>
 	<script src="script/state_manager.js"></script>

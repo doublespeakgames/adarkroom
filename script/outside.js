@@ -2,7 +2,7 @@
  * Module that registers the outdoors functionality
  */
 var Outside = {
-	name: "Outside",
+	name: _("Outside"),
 	
 	_GATHER_DELAY: 60,
 	_TRAPS_DELAY: 90,
@@ -10,12 +10,14 @@ var Outside = {
 	
 	_INCOME: {
 		'gatherer': {
+			name: _('gatherer'),
 			delay: 10,
 			stores: {
 				'wood': 1
 			}
 		},
 		'hunter': {
+			name: _('hunter'),
 			delay: 10,
 			stores: {
 				'fur': 0.5,
@@ -23,6 +25,7 @@ var Outside = {
 			}
 		},
 		'trapper': {
+			name: _('trapper'),
 			delay: 10,
 			stores: {
 				'meat': -1,
@@ -30,6 +33,7 @@ var Outside = {
 			}
 		},
 		'tanner': {
+			name: _('tanner'),
 			delay: 10,
 			stores: {
 				'fur': -5,
@@ -37,6 +41,7 @@ var Outside = {
 			}
 		},
 		'charcutier': {
+			name: _('charcutier'),
 			delay: 10,
 			stores: {
 				'meat': -5,
@@ -45,6 +50,7 @@ var Outside = {
 			}
 		},
 		'iron miner': {
+			name: _('iron miner'),
 			delay: 10,
 			stores: {
 				'cured meat': -1,
@@ -52,6 +58,7 @@ var Outside = {
 			}
 		},
 		'coal miner': {
+			name: _('coal miner'),
 			delay: 10,
 			stores: {
 				'cured meat': -1,
@@ -59,6 +66,7 @@ var Outside = {
 			}
 		},
 		'sulphur miner': {
+			name: _('sulphur miner'),
 			delay: 10,
 			stores: {
 				'cured meat': -1,
@@ -66,6 +74,7 @@ var Outside = {
 			}
 		},
 		'steelworker': {
+			name: _('steelworker'),
 			delay: 10,
 			stores: {
 				'iron': -1,
@@ -74,6 +83,7 @@ var Outside = {
 			}
 		},
 		'armourer': {
+			name: _('armourer'),
 			delay: 10,
 			stores: {
 				'steel': -1,
@@ -299,16 +309,19 @@ var Outside = {
 		return num;
 	},
 	
-	makeWorkerRow: function(name, num) {
+	makeWorkerRow: function(key, num) {
+		name = Outside._INCOME[key].name;
+		if(!name) name = key;
 		var row = $('<div>')
-			.attr('id', 'workers_row_' + name.replace(' ','-'))
+			.attr('key', key)
+			.attr('id', 'workers_row_' + key.replace(' ','-'))
 			.addClass('workerRow');
 		$('<div>').addClass('row_key').text(name).appendTo(row);
 		var val = $('<div>').addClass('row_val').appendTo(row);
 		
 		$('<span>').text(num).appendTo(val);
 		
-		if(name != 'gatherer') {
+		if(key != 'gatherer') {
 		  $('<div>').addClass('upManyBtn').appendTo(val).click([10], Outside.increaseWorker);
 			$('<div>').addClass('upBtn').appendTo(val).click([1], Outside.increaseWorker);
 			$('<div>').addClass('dnBtn').appendTo(val).click([1], Outside.decreaseWorker);
@@ -318,10 +331,10 @@ var Outside = {
 		$('<div>').addClass('clear').appendTo(row);
 		
 		var tooltip = $('<div>').addClass('tooltip bottom right').appendTo(row);
-		var income = Outside._INCOME[name];
+		var income = Outside._INCOME[key];
 		for(var s in income.stores) {
 			var r = $('<div>').addClass('storeRow');
-			$('<div>').addClass('row_key').text(s).appendTo(r);
+			$('<div>').addClass('row_key').text(_(s)).appendTo(r);
 			$('<div>').addClass('row_val').text(Engine.getIncomeMsg(income.stores[s], income.delay)).appendTo(r);
 			r.appendTo(tooltip);
 		}
@@ -330,7 +343,7 @@ var Outside = {
 	},
 	
 	increaseWorker: function(btn) {
-		var worker = $(this).closest('.workerRow').children('.row_key').text();
+		var worker = $(this).closest('.workerRow').attr('key');
 		if(Outside.getNumGatherers() > 0) {
 		  var increaseAmt = Math.min(Outside.getNumGatherers(), btn.data);
 			Engine.log('increasing ' + worker + ' by ' + increaseAmt);
@@ -339,7 +352,7 @@ var Outside = {
 	},
 	
 	decreaseWorker: function(btn) {
-		var worker = $(this).closest('.workerRow').children('.row_key').text();
+		var worker = $(this).closest('.workerRow').attr('key');
 		if($SM.get('game.workers["'+worker+'"]') > 0) {
 		  var decreaseAmt = Math.min($SM.get('game.workers["'+worker+'"]') || 0, btn.data);
 			Engine.log('decreasing ' + worker + ' by ' + decreaseAmt);
@@ -352,7 +365,7 @@ var Outside = {
 		var row = $('div#' + id, village);
 		if(row.length == 0 && num > 0) {
 			row = $('<div>').attr('id', id).addClass('storeRow');
-			$('<div>').addClass('row_key').text(name).appendTo(row);
+			$('<div>').addClass('row_key').text(_(name)).appendTo(row);
 			$('<div>').addClass('row_val').text(num).appendTo(row);
 			$('<div>').addClass('clear').appendTo(row);
 			var curPrev = null;
@@ -473,7 +486,7 @@ var Outside = {
 					stores[store] = income.stores[store] * num;
 					if(curIncome[store] != stores[store]) needsUpdate = true;
 					var row = $('<div>').addClass('storeRow');
-					$('<div>').addClass('row_key').text(store).appendTo(row);
+					$('<div>').addClass('row_key').text(_(store)).appendTo(row);
 					$('<div>').addClass('row_val').text(Engine.getIncomeMsg(stores[store], income.delay)).appendTo(row);
 					row.appendTo(tooltip);
 				}

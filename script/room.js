@@ -15,6 +15,7 @@ var Room = {
 	
 	Craftables: {
 		'trap': {
+			name: _('trap'),
 			button: null,
 			maximum: 10,
 			availableMsg: _('builder says she can make traps to catch any creatures might still be alive out there'),
@@ -29,6 +30,7 @@ var Room = {
 			}
 		},
 		'cart': {
+			name: _('cart'),
 			button: null,
 			maximum: 1,
 			availableMsg: _('builder says she can make a cart for carrying wood'),
@@ -41,6 +43,7 @@ var Room = {
 			}
 		},
 		'hut': {
+			name: _('hut'),
 			button: null,
 			maximum: 20,
 			availableMsg: _("builder says there are more wanderers. says they'll work, too."),
@@ -55,6 +58,7 @@ var Room = {
 			}
 		},
 		'lodge': {
+			name: _('lodge'),
 			button: null,
 			maximum: 1,
 			availableMsg: _('villagers could help hunt, given the means'),
@@ -69,6 +73,7 @@ var Room = {
 			}
 		},
 		'trading post': {
+			name: _('trading post'),
 			button: null,
 			maximum: 1,
 			availableMsg: _("a trading post would make commerce easier"),
@@ -82,6 +87,7 @@ var Room = {
 			}
 		},
 		'tannery': {
+			name: _('tannery'),
 			button: null,
 			maximum: 1,
 			availableMsg: _("builder says leather could be useful. says the villagers could make it."),
@@ -95,6 +101,7 @@ var Room = {
 			}
 		},
 		'smokehouse': {
+			name: _('smokehouse'),
 			button: null,
 			maximum: 1,
 			availableMsg: _("should cure the meat, or it'll spoil. builder says she can fix something up."),
@@ -108,6 +115,7 @@ var Room = {
 			}
 		},
 		'workshop': {
+			name: _('workshop'),
 			button: null,
 			maximum: 1,
 			availableMsg: _("builder says she could make finer things, if she had the tools"),
@@ -122,6 +130,7 @@ var Room = {
 			}
 		},
 		'steelworks': {
+			name: _('steelworks'),
 			button: null,
 			maximum: 1,
 			availableMsg: _("builder says the villagers could make steel, given the tools"),
@@ -136,6 +145,7 @@ var Room = {
 			}
 		},
 		'armoury': {
+			name: _('armoury'),
 			button: null,
 			maximum: 1,
 			availableMsg: _("builder says it'd be useful to have a steady source of bullets"),
@@ -150,6 +160,7 @@ var Room = {
 			}
 		},
 		'torch': {
+			name: _('torch'),
 			button: null,
 			type: 'tool',
 			buildMsg: _('a torch to keep the dark away'),
@@ -161,6 +172,7 @@ var Room = {
 			}
 		},
 		'waterskin': {
+			name: _('waterskin'),
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
@@ -172,6 +184,7 @@ var Room = {
 			}
 		},
 		'cask': {
+			name: _('cask'),
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
@@ -184,6 +197,7 @@ var Room = {
 			}
 		},
 		'water tank': {
+			name: _('water tank'),
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
@@ -196,6 +210,7 @@ var Room = {
 			}
 		},
 		'bone spear': {
+			name: _('bone spear'),
 			button: null,
 			type: 'weapon',
 			buildMsg: _("this spear's not elegant, but it's pretty good at stabbing"),
@@ -207,6 +222,7 @@ var Room = {
 			}
 		},
 		'rucksack': {
+			name: _('rucksack'),
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
@@ -218,6 +234,7 @@ var Room = {
 			}
 		},
 		'wagon': {
+			name: _('wagon'),
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
@@ -230,6 +247,7 @@ var Room = {
 			}
 		},
 		'convoy': {
+			name: _('convoy'),
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
@@ -243,6 +261,7 @@ var Room = {
 			}
 		},
 		'l armour': {
+			name: _('l armour'),
 			type: 'upgrade',
 			maximum: 1,
 			buildMsg: _("leather's not strong. better than rags, though."),
@@ -254,6 +273,7 @@ var Room = {
 			}
 		},
 		'i armour': {
+			name: _('i armour'),
 			type: 'upgrade',
 			maximum: 1,
 			buildMsg: _("iron's stronger than leather"),
@@ -265,6 +285,7 @@ var Room = {
 			}
 		},
 		's armour': {
+			name: _('s armour'),
 			type: 'upgrade',
 			maximum: 1,
 			buildMsg: _("steel's stronger than iron"),
@@ -276,6 +297,7 @@ var Room = {
 			}
 		},
 		'iron sword': {
+			name: _('iron sword'),
 			button: null,
 			type: 'weapon',
 			buildMsg: _("sword is sharp. good protection out in the wilds."),
@@ -288,6 +310,7 @@ var Room = {
 			}
 		},
 		'steel sword': {
+			name: _('steel sword'),
 			button: null,
 			type: 'weapon',
 			buildMsg: _("the steel is strong, and the blade true."),
@@ -300,6 +323,7 @@ var Room = {
 			}
 		},
 		'rifle': {
+			name: _('rifle'),
 			type: 'weapon',
 			buildMsg: _("black powder and bullets, like the old days."),
 			cost: function() {
@@ -782,7 +806,7 @@ var Room = {
 			
 			if(row.length == 0 && num > 0) {
 				row = $('<div>').attr('id', id).addClass('storeRow');
-				$('<div>').addClass('row_key').text(k).appendTo(row);
+				$('<div>').addClass('row_key').text(_(k)).appendTo(row);
 				$('<div>').addClass('row_val').text(Math.floor(num)).appendTo(row);
 				$('<div>').addClass('clear').appendTo(row);
 				var curPrev = null;
@@ -835,7 +859,7 @@ var Room = {
 				var income = $SM.get('income["'+incomeSource+'"]');
 				for(var store in income.stores) {
 					if(store == storeName && income.stores[store] != 0) {
-						$('<div>').addClass('row_key').text(incomeSource).appendTo(tt);
+						$('<div>').addClass('row_key').text(_(incomeSource)).appendTo(tt);
 						$('<div>')
 							.addClass('row_val')
 							.text(Engine.getIncomeMsg(income.stores[store], income.delay))
@@ -863,7 +887,7 @@ var Room = {
 		for(var k in cost) {
 			var have = $SM.get('stores["'+k+'"]', true);
 			if(have < cost[k]) {
-				Notifications.notify(Room, "not enough " + k);
+				Notifications.notify(Room, _("not enough " + k));
 				return false;
 			} else {
 				storeMod[k] = have - cost[k];
@@ -883,7 +907,7 @@ var Room = {
 	build: function(buildBtn) {
 		var thing = $(buildBtn).attr('buildThing');
 		if(Room.temperature.value <= Room.TempEnum.Cold.value) {
-			Notifications.notify(Room, "builder just shivers");
+			Notifications.notify(Room, _("builder just shivers"));
 			return false;
 		}
 		var craftable = Room.Craftables[thing];
@@ -911,7 +935,7 @@ var Room = {
 		for(var k in cost) {
 			var have = $SM.get('stores["'+k+'"]', true);
 			if(have < cost[k]) {
-				Notifications.notify(Room, _("not enough {0}", k));
+				Notifications.notify(Room, _("not enough "+k));
 				return false;
 			} else {
 				storeMod[k] = have - cost[k];
@@ -1025,7 +1049,7 @@ var Room = {
 				costTooltip.empty();
 				var cost = craftable.cost();
 				for(var k in cost) {
-					$("<div>").addClass('row_key').text(k).appendTo(costTooltip);
+					$("<div>").addClass('row_key').text(_(k)).appendTo(costTooltip);
 					$("<div>").addClass('row_val').text(cost[k]).appendTo(costTooltip);
 				}
 				if(max && !craftable.button.hasClass('disabled')) {
@@ -1058,7 +1082,7 @@ var Room = {
 				costTooltip.empty();
 				var cost = good.cost();
 				for(var k in cost) {
-					$("<div>").addClass('row_key').text(k).appendTo(costTooltip);
+					$("<div>").addClass('row_key').text(_(k)).appendTo(costTooltip);
 					$("<div>").addClass('row_val').text(cost[k]).appendTo(costTooltip);
 				}
 				if(max && !good.button.hasClass('disabled')) {

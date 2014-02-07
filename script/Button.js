@@ -28,7 +28,7 @@ var Button = {
 			var ttPos = options.ttPos ? options.ttPos : "bottom right";
 			var costTooltip = $('<div>').addClass('tooltip ' + ttPos);
 			for(var k in options.cost) {
-				$("<div>").addClass('row_key').text(k).appendTo(costTooltip);
+				$("<div>").addClass('row_key').text(_(k)).appendTo(costTooltip);
 				$("<div>").addClass('row_val').text(options.cost[k]).appendTo(costTooltip);
 			}
 			if(costTooltip.children().length > 0) {

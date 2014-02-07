@@ -2848,7 +2848,7 @@ Events.Setpieces = {
 				onLoad: function() {
 					World.markVisited(World.curPos[0], World.curPos[1]);
 					World.setWater(World.getMaxWater());
-					Notifications.notify(null, 'water replenished');
+					Notifications.notify(null, _('water replenished'));
 				},
 				loot: {
  					'cured meat': {

@@ -453,7 +453,7 @@ var Events = {
 					var btns = $('#buttons', Events.eventPanel());
 					desc.empty();
 					btns.empty();
-					$('<div>').text(_("the {0} is dead.",scene.enemy)).appendTo(desc);
+					$('<div>').text(scene.deathMessage).appendTo(desc);
 					
 					Events.drawLoot(scene.loot);
 					
@@ -495,7 +495,7 @@ var Events = {
 				var num = Math.floor(Math.random() * (loot.max - loot.min)) + loot.min;
 				new Button.Button({
 					id: 'loot_' + k.replace(' ', '-'),
-					text: k + ' [' + num + ']',
+					text: _(k) + ' [' + num + ']',
 					click: Events.getLoot
 				}).data('numLeft', num).appendTo(lootButtons);
 			}
@@ -518,11 +518,11 @@ var Events = {
 		if(lootBtn.length > 0) {
 			var curNum = lootBtn.data('numLeft');
 			curNum += num;
-			lootBtn.text(thing + ' [' + curNum + ']').data('numLeft', curNum);
+			lootBtn.text(_(thing) + ' [' + curNum + ']').data('numLeft', curNum);
 		} else {
 			new Button.Button({
 				id: 'loot_' + thing.replace(' ', '-'),
-				text: thing + ' [' + num + ']',
+				text: _(thing) + ' [' + num + ']',
 				click: Events.getLoot
 			}).data('numLeft', num).insertBefore($('.clear', lootButtons));
 		}
@@ -550,7 +550,7 @@ var Events = {
 					});
 				} else {
 					// #dropMenu gets removed by this.
-					btn.text(name + ' [' + num + ']');
+					btn.text(_(name) + ' [' + num + ']');
 				}
 				var curNum = Path.outfit[name];
 				curNum = typeof curNum == 'number' ? curNum : 0;
@@ -578,7 +578,7 @@ var Events = {
 						}
 						if(numToDrop > 0) {
 							var dropRow = $('<div>').attr('id', 'drop_' + k.replace(' ', '-'))
-								.text(k + ' x' + numToDrop)
+								.text(_(k) + ' x' + numToDrop)
 								.data('thing', k)
 								.data('num', numToDrop)
 								.click(Events.dropStuff);
@@ -595,7 +595,7 @@ var Events = {
 	},
 	
 	createFighterDiv: function(chara, hp, maxhp) {
-		var fighter = $('<div>').addClass('fighter').text(chara).data('hp', hp).data('maxHp', maxhp);
+		var fighter = $('<div>').addClass('fighter').text(_(chara)).data('hp', hp).data('maxHp', maxhp).data('refname',chara);
 		$('<div>').addClass('hp').text(hp+'/'+maxhp).appendTo(fighter);
 		return fighter;
 	},
