@@ -1,0 +1,29 @@
+ 
+  HOWTO TRANSLATE 
+===================
+
+for people who doesn't need translation : 
+- all strings sent to the page must go through the javascript function _() which will translate it. so please, if you add new strings, wrap them with _('') function.
+- if you want to add some strings in the css (using content), please, edit /script/localization.js too 
+- thank you :)
+
+  ADD A NEW LANGUAGE 
+======================
+
+- copy the /lang/fr folder to /lang/{new_language}
+- open /lang/{new_language}/strings.po with a software like PoEdit (available on linux/mac/windows, no excuses)
+- translate ...
+- keep translating ...
+- finished ? sure ?
+- use the python script (/tools/po2js.py) to convert the po file to a js file
+- edit index.html and add the following script after '<script src="lib/translate.js"></script>' (replace the path with your language)
+
+	<script>
+		//load language
+		document.write('<script src="lang/fr/strings.js"><\/script>');
+		document.write('<link rel="stylesheet" type="text/css" href="lang/fr/main.css" \/>');
+	</script>
+
+- if your sentence are too big and you need to update some css, overload it in /lang/{new_language}/main.css
+
+	
