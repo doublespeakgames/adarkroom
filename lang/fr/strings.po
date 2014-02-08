@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adarkroom\n"
-"POT-Creation-Date: 2014-02-08 14:12+0100\n"
-"PO-Revision-Date: 2014-02-08 14:13+0100\n"
+"POT-Creation-Date: 2014-02-08 15:16+0100\n"
+"PO-Revision-Date: 2014-02-08 15:53+0100\n"
 "Last-Translator: Vanadar <vanadar.univers@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -185,7 +185,7 @@ msgstr "cette gourde retiendra un peu d'eau, au moins"
 
 #: ../../script/room.js:187
 msgid "cask"
-msgstr "casque"
+msgstr "tonneau"
 
 #: ../../script/room.js:191
 msgid "the cask holds enough water for longer expeditions"
@@ -193,7 +193,7 @@ msgstr "le tonneau contiendra assez d'eau pour des expéditions plus longues"
 
 #: ../../script/room.js:200
 msgid "water tank"
-msgstr "tonneau"
+msgstr "réservoir d'eau"
 
 #: ../../script/room.js:204
 msgid "never go thirsty again"
@@ -304,7 +304,7 @@ msgstr "la pièce est {0}"
 
 #: ../../script/room.js:545 ../../script/room.js:553 ../../script/room.js:671
 msgid "the fire is {0}"
-msgstr "le feu est {0}"
+msgstr "le feu {0}"
 
 #: ../../script/room.js:564
 msgid ""
@@ -336,27 +336,27 @@ msgstr "chaude"
 
 #: ../../script/room.js:595
 msgid "dead"
-msgstr "éteint"
+msgstr "est éteint"
 
 #: ../../script/room.js:596
 msgid "smoldering"
-msgstr "fumant"
+msgstr "est fumant"
 
 #: ../../script/room.js:597
 msgid "flickering"
-msgstr "vacillant"
+msgstr "vacille"
 
 #: ../../script/room.js:598
 msgid "burning"
-msgstr "crépitant"
+msgstr "crépite"
 
 #: ../../script/room.js:599
 msgid "roaring"
-msgstr "flambant"
+msgstr "brûle"
 
 #: ../../script/room.js:603
 msgid "A Firelit Room"
-msgstr "Une pièce éclairé"
+msgstr "Une pièce éclairée"
 
 #: ../../script/room.js:641
 msgid "not enough wood to get the fire going"
@@ -391,11 +391,11 @@ msgstr "une étrangère en loque rentre en titubant et s'effondre dans un coin"
 msgid ""
 "the stranger shivers, and mumbles quietly. her words are unintelligible."
 msgstr ""
-"l'étrangère tremble, marmonne quelques mots. ses mots sont inintelligible"
+"l'étrangère tremble, marmonne quelques mots. ses mots sont inintelligibles."
 
 #: ../../script/room.js:736
 msgid "the stranger in the corner stops shivering. her breathing calms."
-msgstr "l'étrangère dans le coin arrête de tremble. sa respiration se calme."
+msgstr "l'étrangère dans le coin arrête de trembler. sa respiration se calme."
 
 #: ../../script/room.js:890 ../../script/room.js:938
 msgid "not enough "
@@ -786,7 +786,7 @@ msgstr "appât"
 
 #: ../../script/localization.js:7 ../../script/localization.js:8
 msgid "cured meat"
-msgstr "viande fumée"
+msgstr "viande séchée"
 
 #: ../../script/localization.js:7 ../../script/localization.js:8
 msgid "scales"
@@ -794,7 +794,7 @@ msgstr "écailles"
 
 #: ../../script/localization.js:7
 msgid "compass"
-msgstr "compas"
+msgstr "boussole"
 
 #: ../../script/localization.js:8 ../../script/outside.js:13
 msgid "gatherer"
@@ -809,86 +809,102 @@ msgid "thieves"
 msgstr "voleurs"
 
 #: ../../script/localization.js:9
-msgid "not enough fur."
-msgstr "fourrure insuffisante."
+msgid "not enough fur"
+msgstr "fourrure insuffisante"
 
 #: ../../script/localization.js:9
-msgid "not enough wood."
-msgstr "bois insuffisant."
+msgid "not enough wood"
+msgstr "bois insuffisant"
 
 #: ../../script/localization.js:9
-msgid "not enough coal."
-msgstr "charbon insuffisant."
+msgid "not enough coal"
+msgstr "charbon insuffisant"
 
 #: ../../script/localization.js:9
-msgid "not enough iron."
-msgstr "fer insuffisant."
+msgid "not enough iron"
+msgstr "fer insuffisant"
 
 #: ../../script/localization.js:9
-msgid "not enough steel."
-msgstr "acier insuffisant."
+msgid "not enough steel"
+msgstr "acier insuffisant"
 
 #: ../../script/localization.js:9
 msgid "baited trap"
 msgstr "piège avec appât"
 
 #: ../../script/localization.js:10
-msgid "not enough scales."
-msgstr "écaille insuffisante."
+msgid "not enough scales"
+msgstr "écaille insuffisante"
 
 #: ../../script/localization.js:10
-msgid "not enough teeth."
-msgstr "dent insuffisante."
+msgid "not enough teeth"
+msgstr "dent insuffisante"
 
 #: ../../script/localization.js:10
-msgid "not enough leather."
-msgstr "cuir insuffisant."
+msgid "not enough leather"
+msgstr "cuir insuffisant"
 
 #: ../../script/localization.js:11
 msgid "the compass points east."
-msgstr "le compas indique l'est."
+msgstr "la boussole pointe vers l'est."
 
 #: ../../script/localization.js:11
 msgid "the compass points west."
-msgstr "le compas indique l'ouest"
+msgstr "le boussole pointe vers l'ouest"
 
 #: ../../script/localization.js:11
 msgid "the compass points north."
-msgstr "le compas indique le nord."
+msgstr "le boussole pointe vers le nord."
 
 #: ../../script/localization.js:11
 msgid "the compass points south."
-msgstr "le compas indique le sud."
+msgstr "la boussole pointe vers le sud"
 
-#: ../../script/localization.js:16
+#: ../../script/localization.js:12
+msgid "the compass points northeast."
+msgstr "le boussole pointe vers le nord est."
+
+#: ../../script/localization.js:12
+msgid "the compass points northwest."
+msgstr "le boussole pointe vers le nord ouest."
+
+#: ../../script/localization.js:12
+msgid "the compass points southeast."
+msgstr "la boussole pointe vers le sud est"
+
+#: ../../script/localization.js:12
+msgid "the compass points southwest."
+msgstr "la boussole pointe vers le sud ouest."
+
+#: ../../script/localization.js:17
 msgid "stores"
 msgstr "entrepôt"
 
-#: ../../script/localization.js:17
+#: ../../script/localization.js:18
 msgid "weapons"
 msgstr "armes"
 
-#: ../../script/localization.js:18
+#: ../../script/localization.js:19
 msgid "build:"
 msgstr "construire:"
 
-#: ../../script/localization.js:19
+#: ../../script/localization.js:20
 msgid "craft:"
 msgstr "fabriquer:"
 
-#: ../../script/localization.js:20
+#: ../../script/localization.js:21
 msgid "buy:"
 msgstr "acheter:"
 
-#: ../../script/localization.js:21
+#: ../../script/localization.js:22
 msgid "supplies:"
 msgstr "équipement:"
 
-#: ../../script/localization.js:22
+#: ../../script/localization.js:23
 msgid "perks:"
 msgstr "avantages:"
 
-#: ../../script/localization.js:23
+#: ../../script/localization.js:24
 msgid "take:"
 msgstr "prendre:"
 
@@ -902,7 +918,7 @@ msgstr "partir"
 
 #: ../../script/path.js:60
 msgid "the compass points "
-msgstr "le compas indique :"
+msgstr "la boussole montre :"
 
 #: ../../script/path.js:132
 msgid "none"
@@ -1242,7 +1258,7 @@ msgstr "Un village"
 
 #: ../../script/outside.js:537
 msgid "A Large Village"
-msgstr "A grand village"
+msgstr "Un grand village"
 
 #: ../../script/outside.js:539
 msgid "A Raucous Village"
@@ -1337,12 +1353,13 @@ msgstr "les pièges sont plus efficace avec des appâts"
 
 #: ../../script/events/room.js:38
 msgid "buy compass"
-msgstr "acheter un compas"
+msgstr "acheter une boussole"
 
 #: ../../script/events/room.js:41
 msgid "the old compass is dented and dusty, but it looks to work."
 msgstr ""
-"le vieux compas est abîmé et rouillé, mais il semble encore fonctionner"
+"la vieille boussole est abîmée et rouillée, mais elle semble encore "
+"fonctionner"
 
 #: ../../script/events/room.js:45 ../../script/events/room.js:223
 #: ../../script/events/room.js:236 ../../script/events/room.js:249
@@ -1368,7 +1385,7 @@ msgstr "impossible de comprendre ce qui se dit."
 
 #: ../../script/events/room.js:62
 msgid "strange noises can be heard through the walls"
-msgstr "de l'autre coté du mur s'échappe des bruits étranges "
+msgstr "de l'autre coté du mur s'échappent des bruits étranges "
 
 #: ../../script/events/room.js:65 ../../script/events/room.js:115
 #: ../../script/events/setpieces.js:1599
@@ -1382,7 +1399,7 @@ msgstr "les ignorer"
 
 #: ../../script/events/room.js:76
 msgid "vague shapes move, just out of sight."
-msgstr "une forme indistincte se déplace dans l'ombre"
+msgstr "une forme indistincte s'éloigne dans l'ombre."
 
 #: ../../script/events/room.js:77
 msgid "the sounds stop."
