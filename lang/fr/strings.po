@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adarkroom\n"
-"POT-Creation-Date: 2014-02-08 15:16+0100\n"
-"PO-Revision-Date: 2014-02-08 15:53+0100\n"
+"POT-Creation-Date: 2014-02-09 13:11+0100\n"
+"PO-Revision-Date: 2014-02-09 13:12+0100\n"
 "Last-Translator: Vanadar <vanadar.univers@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -117,8 +117,8 @@ msgstr "fumoir"
 msgid ""
 "should cure the meat, or it'll spoil. builder says she can fix something up."
 msgstr ""
-"il faudrait fumer la viande pour éviter qu'elle pourrisse. L'ouvrière dit "
-"qu'elle pourra bricoler quelque chose."
+"il faudrait faire sécher la viande pour éviter qu'elle pourrisse. L'ouvrière "
+"dit qu'elle pourra bricoler quelque chose."
 
 #: ../../script/room.js:108
 msgid "builder finishes the smokehouse. she looks hungry."
@@ -235,7 +235,7 @@ msgstr "le convoi peut transporter presque tout"
 
 #: ../../script/room.js:264
 msgid "l armour"
-msgstr "c amure"
+msgstr "armure cuir"
 
 #: ../../script/room.js:267
 msgid "leather's not strong. better than rags, though."
@@ -243,7 +243,7 @@ msgstr "le cuir n'est pas très résistant, mais c'est mieux que des chiffons."
 
 #: ../../script/room.js:276
 msgid "i armour"
-msgstr "f armure"
+msgstr "armure fer"
 
 #: ../../script/room.js:279
 msgid "iron's stronger than leather"
@@ -251,7 +251,7 @@ msgstr "le fer est plus dur que le cuir"
 
 #: ../../script/room.js:288
 msgid "s armour"
-msgstr "a armure"
+msgstr "armure acier"
 
 #: ../../script/room.js:291
 msgid "steel's stronger than iron"
@@ -740,6 +740,10 @@ msgstr "acier"
 msgid "coal"
 msgstr "charbon"
 
+#: ../../script/localization.js:4
+msgid "enegy cell"
+msgstr "chargeur energie"
+
 #: ../../script/localization.js:5
 msgid "medicine"
 msgstr "médicament"
@@ -795,6 +799,10 @@ msgstr "écailles"
 #: ../../script/localization.js:7
 msgid "compass"
 msgstr "boussole"
+
+#: ../../script/localization.js:7
+msgid "laser rifle"
+msgstr "fusil lazer"
 
 #: ../../script/localization.js:8 ../../script/outside.js:13
 msgid "gatherer"
@@ -907,6 +915,10 @@ msgstr "avantages:"
 #: ../../script/localization.js:24
 msgid "take:"
 msgstr "prendre:"
+
+#: ../../script/localization.js:25
+msgid "forest"
+msgstr "foret"
 
 #: ../../script/path.js:29 ../../script/path.js:295
 msgid "A Dusty Path"
@@ -1890,7 +1902,8 @@ msgid ""
 "broken streetlights stand, rusting. light hasn't graced this place in a long "
 "time."
 msgstr ""
-"des réverbères cassés ont rouillés. Cet endroit est déserté depuis longtemps."
+"les réverbères sont cassés et rouillés. Cet endroit est désert depuis "
+"longtemps."
 
 #: ../../script/events/setpieces.js:510
 msgid "the town lies abandoned, its citizens long dead"
@@ -1933,7 +1946,7 @@ msgstr "une embuscade dans la rue."
 # ?
 #: ../../script/events/setpieces.js:580
 msgid "a squat building up ahead."
-msgstr "Un squat est bien visible devant."
+msgstr "Unsquat en vue devant."
 
 #: ../../script/events/setpieces.js:581
 msgid "a green cross barely visible behind grimy windows."
@@ -2055,12 +2068,12 @@ msgstr "œil pour œil, dent pour dent, cela semble équitable."
 
 #: ../../script/events/setpieces.js:1111
 msgid "always worked before, at least."
-msgstr "du moins, ça à toujours marché avant."
+msgstr "du moins, ça fonctionnait comme ça avant."
 
 #: ../../script/events/setpieces.js:1112
 msgid "picking the bones finds some useful trinkets."
 msgstr ""
-"en fouillant dans les ossements, on trouver quelques babioles qui pourraient "
+"en fouillant dans les ossements, on trouve quelques babioles qui pourraient "
 "être utiles."
 
 #: ../../script/events/setpieces.js:1153
@@ -2183,7 +2196,7 @@ msgstr "descendre"
 
 #: ../../script/events/setpieces.js:1329
 msgid "the shot echoes in the empty street."
-msgstr "l'écho du tir se propage dans les rues vides. "
+msgstr "l'écho du tir se propage dans les rues désertes. "
 
 #: ../../script/events/setpieces.js:1367
 msgid "the soldier steps out from between the buildings, rifle raised."
@@ -2243,7 +2256,7 @@ msgstr "une chaine rouillée bloque l'entrée de l'allée."
 
 #: ../../script/events/setpieces.js:1614
 msgid "fires burn in the courtyard beyond."
-msgstr "un feu brule dans une cour derrière."
+msgstr "un feu brûle dans une cour derrière."
 
 #: ../../script/events/setpieces.js:1630
 msgid "more voices can be heard ahead."
@@ -2674,7 +2687,7 @@ msgstr "seul le chef reste."
 
 #: ../../script/events/setpieces.js:3303
 msgid "the camp is still, save for the crackling of the fires."
-msgstr "le camp est prêt, il ne manque plus que le feu."
+msgstr "il ne reste plus qu'un camp vite avec un feu crépitant."
 
 #: ../../script/events/setpieces.js:3306
 msgid "the coal mine is clear of dangers"
@@ -2786,7 +2799,7 @@ msgstr "l'homme décharné est mort."
 
 #: ../../script/events/encounters.js:76
 msgid "a gaunt man approaches, a crazed look in his eye"
-msgstr "un homme décharné approche, ses yeux ont un regard dément"
+msgstr "un homme décharné approche, un regard dément dans ses yeux"
 
 #: ../../script/events/encounters.js:81
 msgid "A Strange Bird"
