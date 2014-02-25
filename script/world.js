@@ -330,21 +330,26 @@ var World = {
 		if(World.curPos[0] < World.RADIUS * 2) World.move(World.EAST);
 	},
 	
-	move: function(direction) {
-		var oldTile = World.state.map[World.curPos[0]][World.curPos[1]];
-		World.curPos[0] += direction[0];
-		World.curPos[1] += direction[1];
-		World.narrateMove(oldTile, World.state.map[World.curPos[0]][World.curPos[1]]);
-		World.lightMap(World.curPos[0], World.curPos[1], World.state.mask);
-		World.drawMap();
-		World.doSpace();
-		if(World.checkDanger()) {
-			if(World.danger) {
-				Notifications.notify(World, 'dangerous to be this far from the village without proper protection');
-			} else {
-				Notifications.notify(World, 'safer here');
-			}
-		}
+	move: function (direction) {
+	    if (World.state) {
+	        var oldTile = World.state.map[World.curPos[0]][World.curPos[1]];
+	        World.curPos[0] += direction[0];
+	        World.curPos[1] += direction[1];
+	        World.narrateMove(oldTile, World.state.map[World.curPos[0]][World.curPos[1]]);
+	        World.lightMap(World.curPos[0], World.curPos[1], World.state.mask);
+	        World.drawMap();
+	        World.doSpace();
+	        if (World.checkDanger()) {
+	            if (World.danger) {
+	                Notifications.notify(World, 'dangerous to be this far from the village without proper protection');
+	            } else {
+	                Notifications.notify(World, 'safer here');
+	            }
+	        }
+	    }
+	    else {
+	        Debug.writeln("");
+	    }
 	},
 	
 	keyDown: function(event) {
