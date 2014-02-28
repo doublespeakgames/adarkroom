@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adarkroom\n"
 "POT-Creation-Date: 2014-02-09 13:11+0100\n"
-"PO-Revision-Date: 2014-02-09 13:12+0100\n"
+"PO-Revision-Date: 2014-02-28 20:44+0100\n"
 "Last-Translator: Vanadar <vanadar.univers@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -810,7 +810,7 @@ msgstr "ramasseur"
 
 #: ../../script/localization.js:8
 msgid "cloth"
-msgstr "vêtements"
+msgstr "chiffon"
 
 #: ../../script/localization.js:8
 msgid "thieves"
@@ -1218,7 +1218,7 @@ msgstr "des dents"
 
 #: ../../script/outside.js:120
 msgid "tattered cloth"
-msgstr "des vêtements"
+msgstr "un tas de chiffons"
 
 #: ../../script/outside.js:125
 msgid "a crudely made charm"
@@ -1459,7 +1459,7 @@ msgstr "le sol est jonché de petites dents"
 
 #: ../../script/events/room.js:167
 msgid "the ground is littered with scraps of cloth"
-msgstr "le sol est jonché de morceaux de vêtements"
+msgstr "des chiffons sont éparpillés au sol"
 
 #: ../../script/events/room.js:187
 msgid "The Beggar"
@@ -1506,7 +1506,7 @@ msgstr "il laisse une pile de petites dents derrière lui."
 
 #: ../../script/events/room.js:245
 msgid "leaves some scraps of cloth behind."
-msgstr "il laisse quelques vieux vêtements derrière lui."
+msgstr "il laisse quelques vieux chiffons derrière lui."
 
 #: ../../script/events/room.js:258 ../../script/events/room.js:328
 msgid "The Mysterious Wanderer"
@@ -2349,7 +2349,7 @@ msgstr "la foule s'élance."
 
 #: ../../script/events/setpieces.js:2111
 msgid "a youth lashes out with a tree branch."
-msgstr "un jeune se déchaine avec une branche d'arbre."
+msgstr "un jeune attaque armé d'une branche d'arbre."
 
 #: ../../script/events/setpieces.js:2144
 msgid "a squatter stands firmly in the doorway of a small hut."
@@ -2895,7 +2895,7 @@ msgstr "la terreur sauvage est morte"
 
 #: ../../script/events/encounters.js:310
 msgid "a beast, wilder than imagining, erupts out of the foliage"
-msgstr "une bête, incroyablement sauvage, surgit des feuillage"
+msgstr "une bête inimaginable surgit des feuillages"
 
 #: ../../script/events/encounters.js:315
 msgid "A Soldier"
@@ -2907,7 +2907,7 @@ msgstr "soldat"
 
 #: ../../script/events/encounters.js:324
 msgid "the soldier is dead"
-msgstr "le soldat est mord"
+msgstr "le soldat est mort"
 
 #: ../../script/events/encounters.js:353
 msgid "a soldier opens fire from across the desert"
