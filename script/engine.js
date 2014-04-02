@@ -85,6 +85,8 @@ var Engine = {
 		if(Engine.isMobile()) {
 			window.location = 'mobileWarning.html';
 		}
+
+		Engine.disableSelection();
 		
 		if(this.options.state != null) {
 			window.State = this.options.state;
@@ -564,6 +566,11 @@ var Engine = {
 		if(Engine.activeModule.swipeDown) {
 			Engine.activeModule.swipeDown(e);
 		}
+	},
+
+	disableSelection: function() {
+		document.onselectstart = function() {return false;} // this is for IE
+		document.onmousedown = function() {return false;} // this is for the rest
 	},
 	
 	handleStateUpdates: function(e){
