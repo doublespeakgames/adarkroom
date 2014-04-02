@@ -85,6 +85,8 @@ var Engine = {
 		if(Engine.isMobile()) {
 			window.location = 'mobileWarning.html';
 		}
+
+		Engine.disableSelection();
 		
 		if(this.options.state != null) {
 			window.State = this.options.state;
@@ -248,6 +250,7 @@ var Engine = {
     string64 = string64.replace(/\s/g, '');
     string64 = string64.replace(/\./g, '');
     string64 = string64.replace(/\n/g, '');
+    Engine.enableSelection();
     Events.startEvent({
     	title: 'Export',
     	scenes: {
@@ -257,7 +260,8 @@ var Engine = {
     			buttons: {
     				'done': {
     					text: 'got it',
-    					nextScene: 'end'
+    					nextScene: 'end',
+    					onChoose: Engine.disableSelection
     				}
     			}
     		}
@@ -564,6 +568,16 @@ var Engine = {
 		if(Engine.activeModule.swipeDown) {
 			Engine.activeModule.swipeDown(e);
 		}
+	},
+
+	disableSelection: function() {
+		document.onselectstart = function() {return false;} // this is for IE
+		document.onmousedown = function() {return false;} // this is for the rest
+	},
+
+	enableSelection: function() {
+		document.onselectstart = function() {return true;}
+		document.onmousedown = function() {return true;}
 	},
 	
 	handleStateUpdates: function(e){
