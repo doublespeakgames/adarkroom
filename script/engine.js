@@ -149,7 +149,7 @@ var Engine = {
 		Events.init();
 		Room.init();
 		
-		if($SM.get('stores.wood')) {
+		if(typeof $SM.get('stores.wood') != 'undefined') {
 			Outside.init();
 		}
 		if($SM.get('stores.compass', true) > 0) {
