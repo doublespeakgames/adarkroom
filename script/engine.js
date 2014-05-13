@@ -16,49 +16,49 @@ var Engine = {
 	topics: {},
 		
 	Perks: {
-		'boxer': {
-			desc: 'punches do more damage',
-			notify: 'learned to throw punches with purpose'
+		'拳击手': {
+			desc: '徒手伤害增加',
+			notify: '学会了有目的地挥拳'
 		},
-		'martial artist': {
-			desc: 'punches do even more damage.',
-			notify: 'learned to fight quite effectively without weapons'
+		'武斗家': {
+			desc: '徒手伤害再增加',
+			notify: '学会了如何不用武器高效战斗'
 		},
-		'unarmed master': {
-			desc: 'punch twice as fast, and with even more force',
-			notify: 'learned to strike faster without weapons'
+		'徒手宗师': {
+			desc: '拳速翻倍，威力再增加',
+			notify: '学会了如何更敏捷地不使用武器进攻'
 		},
-		'barbarian': {
-			desc: 'melee weapons deal more damage',
-			notify: 'learned to swing weapons with force'
+		'野蛮人': {
+			desc: '近战武器伤害增加',
+			notify: '学会了猛力地挥动武器'
 		},
-		'slow metabolism': {
-			desc: 'go twice as far without eating',
-			notify: 'learned how to ignore the hunger'
+		'缓慢代谢': {
+			desc: '不吃东西能走两倍路程',
+			notify: '学会了如何忍耐饥饿'
 		},
-		'desert rat': {
-			desc: 'go twice as far without drinking',
-			notify: 'learned to love the dry air'
+		'荒漠跳鼠': {
+			desc: '不喝水能走两倍路程',
+			notify: '学会了对这干燥空气的保有爱慕'
 		},
-		'evasive': {
-			desc: 'dodge attacks more effectively',
-			notify: "learned to be where they're not"
+		'避实就虚': {
+			desc: '更高效地闪避攻击',
+			notify: "学会了闪到对手打不着的地方"
 		},
-		'precise': {
-			desc: 'land blows more often',
-			notify: 'learned to predict their movement'
+		'精密': {
+			desc: '命中率提高',
+			notify: '学会了预判对手的行动'
 		},
-		'scout': {
-			desc: 'see farther',
-			notify: 'learned to look ahead'
+		'侦查': {
+			desc: '看得更远',
+			notify: '学会了往前看'
 		},
-		'stealthy': {
-			desc: 'better avoid conflict in the wild',
-			notify: 'learned how not to be seen'
+		'诡秘': {
+			desc: '更好地规避狂野中的冲突',
+			notify: '学会了隐匿身形'
 		},
-		'gastronome': {
-			desc: 'restore more health when eating',
-			notify: 'learned to make the most of food'
+		'美食家': {
+			desc: '吃东西的时候恢复更多生命',
+			notify: '学会了吸收更多的营养'
 		}
 	},
 	
@@ -102,31 +102,31 @@ var Engine = {
 
 		 $('<span>')
 			.addClass('lightsOff menuBtn')
-			.text('lights off.')
+			.text('关灯')
 			.click(Engine.turnLightsOff)
 			.appendTo(menu);
 		
 		$('<span>')
 			.addClass('menuBtn')
-			.text('restart.')
+			.text('重启')
 			.click(Engine.confirmDelete)
 			.appendTo(menu);
 		
 		$('<span>')
 			.addClass('menuBtn')
-			.text('share.')
+			.text('分享')
 			.click(Engine.share)
 			.appendTo(menu);
       
 		$('<span>')
 			.addClass('menuBtn')
-			.text('save.')
+			.text('存档')
 			.click(Engine.exportImport)
 			.appendTo(menu);
 			
 		$('<span>')
 			.addClass('menuBtn')
-			.text('app store.')
+			.text('移动版')
 			.click(function() { window.open('https://itunes.apple.com/us/app/a-dark-room/id736683061'); })
 			.appendTo(menu);	
 		
@@ -204,38 +204,38 @@ var Engine = {
 	
   exportImport: function() {
     Events.startEvent({
-			title: 'Export / Import',
+			title: '导出 / 导入',
 			scenes: {
 				start: {
-					text: ['export or import save data, for backing up',
-					       'or migrating computers'],
+					text: ['导出或导入存档以备份',
+					       '或用以在不同电脑之间分享进度'],
 					buttons: {
 						'export': {
-							text: 'export',
+							text: '导出',
 							onChoose: Engine.export64
 						},
 						'import': {
-							text: 'import',
+							text: '导入',
 							nextScene: {1: 'confirm'},
 						},
 						'cancel': {
-							text: 'cancel',
+							text: '取消',
 							nextScene: 'end'
 						}
 					}
 				},
 				'confirm': {
-					text: ['are you sure?',
-					       'if the code is invalid, all data will be lost.',
-					       'this is irreversible.'],
+					text: ['你确定吗？',
+					       '如果存档代码无效，所有数据均会丢失。',
+					       '此操作不可撤销。'],
 					buttons: {
 						'yes': {
-							text: 'yes',
+							text: '是',
 							nextScene: 'end',
 							onChoose: Engine.import64
 						},
 						'no': {
-							text: 'no',
+							text: '否',
 							nextScene: 'end'
 						}
 					}
@@ -255,11 +255,11 @@ var Engine = {
     	title: 'Export',
     	scenes: {
     		start: {
-    			text: ['save this.'],
+    			text: ['保存存档代码'],
     			textarea: string64,
     			buttons: {
     				'done': {
-    					text: 'got it',
+    					text: '已完成',
     					nextScene: 'end',
     					onChoose: Engine.disableSelection
     				}
@@ -270,7 +270,7 @@ var Engine = {
   },
   
   import64: function() {
-    var string64 = prompt("put the save code here.","");
+    var string64 = prompt("此处可填入存档代码。","");
     string64 = string64.replace(/\s/g, '');
     string64 = string64.replace(/\./g, '');
     string64 = string64.replace(/\n/g, '');
@@ -287,18 +287,18 @@ var Engine = {
 	
 	confirmDelete: function() {
 		Events.startEvent({
-			title: 'Restart?',
+			title: '重开?',
 			scenes: {
 				start: {
-					text: ['restart the game?'],
+					text: ['重开游戏?'],
 					buttons: {
 						'yes': {
-							text: 'yes',
+							text: '是',
 							nextScene: 'end',
 							onChoose: Engine.deleteSave
 						},
 						'no': {
-							text: 'no',
+							text: '否',
 							nextScene: 'end'
 						}
 					}
@@ -321,34 +321,34 @@ var Engine = {
 	
 	share: function() {
 		Events.startEvent({
-			title: 'Share',
+			title: '分享',
 			scenes: {
 				start: {
-					text: ['bring your friends.'],
+					text: ['分享给你的好友。'],
 					buttons: {
 						'facebook': {
-							text: 'facebook',
+							text: '脸书',
 							nextScene: 'end',
 							onChoose: function() {
 								window.open('https://www.facebook.com/sharer/sharer.php?u=' + Engine.SITE_URL, 'sharer', 'width=626,height=436,location=no,menubar=no,resizable=no,scrollbars=no,status=no,toolbar=no');
 							}
 						},
 						'google': {
-							text:'google+',
+							text:'环聊',
 							nextScene: 'end',
 							onChoose: function() {
 								window.open('https://plus.google.com/share?url=' + Engine.SITE_URL, 'sharer', 'width=480,height=436,location=no,menubar=no,resizable=no,scrollbars=no,status=no,toolbar=no');
 							}
 						},
 						'twitter': {
-							text: 'twitter',
+							text: '推特',
 							onChoose: function() {
 								window.open('https://twitter.com/intent/tweet?text=A%20Dark%20Room&url=' + Engine.SITE_URL, 'sharer', 'width=660,height=260,location=no,menubar=no,resizable=no,scrollbars=yes,status=no,toolbar=no');
 							},
 							nextScene: 'end'
 						},
 						'reddit': {
-							text: 'reddit',
+							text: '红迪',
 							onChoose: function() {
 								window.open('http://www.reddit.com/submit?url=' + Engine.SITE_URL, 'sharer', 'width=960,height=700,location=no,menubar=no,resizable=no,scrollbars=yes,status=no,toolbar=no');
 							},
