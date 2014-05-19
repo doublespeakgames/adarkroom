@@ -611,7 +611,7 @@ var Events = {
 			$('<div>').text(scene.text[i]).appendTo(desc);
 		}
 		
-		if(scene.textarea) {
+		if(scene.textarea != null) {
 			$('<textarea>').val(scene.textarea).appendTo(desc);
 		}
 		
@@ -690,7 +690,8 @@ var Events = {
 		}
 		
 		if(typeof info.onChoose == 'function') {
-			info.onChoose();
+			var textarea = Events.eventPanel().find('textarea');
+			info.onChoose(textarea.length > 0 ? textarea.val() : null);
 		}
 		
 		// Reward

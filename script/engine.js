@@ -204,44 +204,59 @@ var Engine = {
 	
   exportImport: function() {
     Events.startEvent({
-			title: 'Export / Import',
-			scenes: {
-				start: {
-					text: ['export or import save data, for backing up',
-					       'or migrating computers'],
-					buttons: {
-						'export': {
-							text: 'export',
-							onChoose: Engine.export64
-						},
-						'import': {
-							text: 'import',
-							nextScene: {1: 'confirm'},
-						},
-						'cancel': {
-							text: 'cancel',
-							nextScene: 'end'
-						}
+		title: 'Export / Import',
+		scenes: {
+			start: {
+				text: ['export or import save data, for backing up',
+				       'or migrating computers'],
+				buttons: {
+					'export': {
+						text: 'export',
+						onChoose: Engine.export64
+					},
+					'import': {
+						text: 'import',
+						nextScene: {1: 'confirm'},
+					},
+					'cancel': {
+						text: 'cancel',
+						nextScene: 'end'
 					}
-				},
-				'confirm': {
-					text: ['are you sure?',
-					       'if the code is invalid, all data will be lost.',
-					       'this is irreversible.'],
-					buttons: {
-						'yes': {
-							text: 'yes',
-							nextScene: 'end',
-							onChoose: Engine.import64
-						},
-						'no': {
-							text: 'no',
-							nextScene: 'end'
-						}
+				}
+			},
+			'confirm': {
+				text: ['are you sure?',
+				       'if the code is invalid, all data will be lost.',
+				       'this is irreversible.'],
+				buttons: {
+					'yes': {
+						text: 'yes',
+						nextScene: {1: 'inputImport'},
+						onChoose: Engine.enableSelection
+					},
+					'no': {
+						text: 'no',
+						nextScene: 'end'
+					}
+				}
+			},
+			'inputImport': {
+				text: ['put the save code here.'],
+				textarea: '',
+				buttons: {
+					'okay': {
+						text: 'okay',
+						nextScene: 'end',
+						onChoose: Engine.import64
+					},
+					'cancel': {
+						text: 'cancel',
+						nextScene: 'end'
 					}
 				}
 			}
-		});
+		}
+	});
   },
   
   export64: function() {
@@ -269,14 +284,14 @@ var Engine = {
     });
   },
   
-  import64: function() {
-    var string64 = prompt("put the save code here.","");
-    string64 = string64.replace(/\s/g, '');
-    string64 = string64.replace(/\./g, '');
-    string64 = string64.replace(/\n/g, '');
-    var decodedSave = Base64.decode(string64);
-    localStorage.gameState = decodedSave;
-    location.reload();
+  import64: function(string64) {
+	  Engine.disableSelection();
+      string64 = string64.replace(/\s/g, '');
+      string64 = string64.replace(/\./g, '');
+      string64 = string64.replace(/\n/g, '');
+      var decodedSave = Base64.decode(string64);
+      localStorage.gameState = decodedSave;
+      location.reload();
   },
   
 	event: function(cat, act) {
