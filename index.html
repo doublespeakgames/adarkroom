@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html itemscope itemtype="http://schema.org/CreativeWork">
 <head>
+	<meta charset="UTF-8"/>
 	<!--  
 		A Dark Room (v1.4)
 		==================
@@ -28,9 +29,19 @@
 	<script src="lib/translate.js"></script>
 	
 	<script>
-		//load language
-		document.write('<script src="lang/fr/strings.js"><\/script>');
-		document.write('<link rel="stylesheet" type="text/css" href="lang/fr/main.css" \/>');
+		// try to read "lang" param's from url
+		var lang = decodeURIComponent((new RegExp('[?|&]lang=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+		// if no language requested, try to read it from local storage
+		if(!lang){
+			try {
+				lang = localStorage.lang;
+			} catch(e) {}
+		}
+		// if a language different than english requested, load all translations
+		if(lang && lang != 'en'){
+			document.write('<script src="lang/'+lang+'/strings.js"><\/script>');
+			document.write('<link rel="stylesheet" type="text/css" href="lang/'+'lang'+'/main.css" \/>');
+		}
 	</script>
 	
 	<script src="script/Button.js"></script>

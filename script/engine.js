@@ -109,6 +109,14 @@ var Engine = {
 			.addClass('menu')
 			.appendTo('body');
 
+		 $('<select>')
+			.addClass('menuBtn')
+			.append($('<option>').text("choose your language"))
+			.append($('<option>').text("English").val("en"))
+			.append($('<option>').text("Français").val("fr"))
+			.change(Engine.switchLanguage)
+			.appendTo(menu);
+			
 		 $('<span>')
 			.addClass('lightsOff menuBtn')
 			.text(_('lights off.'))
@@ -137,7 +145,9 @@ var Engine = {
 			.addClass('menuBtn')
 			.text(_('app store.'))
 			.click(function() { window.open('https://itunes.apple.com/us/app/a-dark-room/id736683061'); })
-			.appendTo(menu);	
+			.appendTo(menu);
+			
+		
 		
 		// Register keypress handlers
 		$('body').off('keydown').keydown(Engine.keyDown);
@@ -168,6 +178,7 @@ var Engine = {
 			Ship.init();
 		}
 		
+		Engine.saveLanguage();
 		Engine.travelTo(Room);
 
 	},
@@ -580,6 +591,22 @@ var Engine = {
 	
 	handleStateUpdates: function(e){
 		
+	},
+	
+	switchLanguage: function(dom){
+		var lang = $(this).val();
+		if(document.location.href.search(/[\?\&]lang=[a-z]+/) != -1){
+			document.location.href = document.location.href.replace( /([\?\&]lang=)([a-z]+)/gi , "$1"+lang );
+		}else{
+			document.location.href = document.location.href + ( (document.location.href.search(/\?/) != -1 )?"&":"?") + "lang="+lang;
+		}
+	},
+	
+	saveLanguage: function(){
+		var lang = decodeURIComponent((new RegExp('[?|&]lang=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;	
+		if(lang && typeof Storage != 'undefined' && localStorage) {
+			localStorage.lang = lang;
+		}
 	}
 };
 
