@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html itemscope itemtype="http://schema.org/CreativeWork">
 <head>
+	<meta charset="UTF-8"/>
 	<!--  
 		A Dark Room (v1.4)
 		==================
@@ -25,6 +26,24 @@
 	<script src="lib/jquery.event.move.js"></script>
 	<script src="lib/jquery.event.swipe.js"></script>
 	<script src="lib/base64.js"></script>
+	<script src="lib/translate.js"></script>
+	
+	<script>
+		// try to read "lang" param's from url
+		var lang = decodeURIComponent((new RegExp('[?|&]lang=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+		// if no language requested, try to read it from local storage
+		if(!lang){
+			try {
+				lang = localStorage.lang;
+			} catch(e) {}
+		}
+		// if a language different than english requested, load all translations
+		if(lang && lang != 'en'){
+			document.write('<script src="lang/'+lang+'/strings.js"><\/script>');
+			document.write('<link rel="stylesheet" type="text/css" href="lang/'+'lang'+'/main.css" \/>');
+		}
+	</script>
+	
 	<script src="script/Button.js"></script>
 	<script src="script/engine.js"></script>
 	<script src="script/state_manager.js"></script>
@@ -37,8 +56,8 @@
 	<script src="script/path.js"></script>
 	<script src="script/ship.js"></script>
 	<script src="script/space.js"></script>
-  <script src="script/prestige.js"></script>
-  <script src="script/scoring.js"></script>
+	<script src="script/prestige.js"></script>
+	<script src="script/scoring.js"></script>
 	<!-- Event modules -->
 	<script src="script/events/global.js"></script>
 	<script src="script/events/room.js"></script>
@@ -61,6 +80,7 @@
 	<link rel="stylesheet" type="text/css" href="css/ship.css" />
 	<link rel="stylesheet" type="text/css" href="css/space.css" />
 	
+	<script src="script/localization.js"></script>
 	<!-- Google Analytics -->
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -75,7 +95,7 @@
 </head>
 <body>
 	<div id="wrapper">
-		<div id="saveNotify">saved.</div>
+		<div id="saveNotify"><script>document.write(_("saved."));</script></div>
 		<div id="content">
 			<div id="outerSlider">
 				<div id="main">

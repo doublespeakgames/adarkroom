@@ -17,48 +17,59 @@ var Engine = {
 		
 	Perks: {
 		'boxer': {
-			desc: 'punches do more damage',
-			notify: 'learned to throw punches with purpose'
+			name: _('boxer'),
+			desc: _('punches do more damage'),
+			notify: _('learned to throw punches with purpose')
 		},
 		'martial artist': {
-			desc: 'punches do even more damage.',
-			notify: 'learned to fight quite effectively without weapons'
+			name: _('martial artist'),
+			desc: _('punches do even more damage.'),
+			notify: _('learned to fight quite effectively without weapons')
 		},
 		'unarmed master': {
-			desc: 'punch twice as fast, and with even more force',
-			notify: 'learned to strike faster without weapons'
+			name: _('unarmed master'),
+			desc: _('punch twice as fast, and with even more force'),
+			notify: _('learned to strike faster without weapons')
 		},
 		'barbarian': {
-			desc: 'melee weapons deal more damage',
-			notify: 'learned to swing weapons with force'
+			name: _('barbarian'),
+			desc: _('melee weapons deal more damage'),
+			notify: _('learned to swing weapons with force')
 		},
 		'slow metabolism': {
-			desc: 'go twice as far without eating',
-			notify: 'learned how to ignore the hunger'
+			name: _('slow metabolism'),
+			desc: _('go twice as far without eating'),
+			notify: _('learned how to ignore the hunger')
 		},
 		'desert rat': {
-			desc: 'go twice as far without drinking',
-			notify: 'learned to love the dry air'
+			name: _('desert rat'),
+			desc: _('go twice as far without drinking'),
+			notify: _('learned to love the dry air')
 		},
 		'evasive': {
-			desc: 'dodge attacks more effectively',
-			notify: "learned to be where they're not"
+			name: _('evasive'),
+			desc: _('dodge attacks more effectively'),
+			notify: _("learned to be where they're not")
 		},
 		'precise': {
-			desc: 'land blows more often',
-			notify: 'learned to predict their movement'
+			name: _('precise'),
+			desc: _('land blows more often'),
+			notify: _('learned to predict their movement')
 		},
 		'scout': {
-			desc: 'see farther',
-			notify: 'learned to look ahead'
+			name: _('scout'),
+			desc: _('see farther'),
+			notify: _('learned to look ahead')
 		},
 		'stealthy': {
-			desc: 'better avoid conflict in the wild',
-			notify: 'learned how not to be seen'
+			name: _('stealthy'),
+			desc: _('better avoid conflict in the wild'),
+			notify: _('learned how not to be seen')
 		},
 		'gastronome': {
-			desc: 'restore more health when eating',
-			notify: 'learned to make the most of food'
+			name: _('gastronome'),
+			desc: _('restore more health when eating'),
+			notify: _('learned to make the most of food')
 		}
 	},
 	
@@ -100,35 +111,45 @@ var Engine = {
 			.addClass('menu')
 			.appendTo('body');
 
+		 $('<select>')
+			.addClass('menuBtn')
+			.append($('<option>').text("choose your language"))
+			.append($('<option>').text("English").val("en"))
+			.append($('<option>').text("Français").val("fr"))
+			.change(Engine.switchLanguage)
+			.appendTo(menu);
+			
 		 $('<span>')
 			.addClass('lightsOff menuBtn')
-			.text('lights off.')
+			.text(_('lights off.'))
 			.click(Engine.turnLightsOff)
 			.appendTo(menu);
 		
 		$('<span>')
 			.addClass('menuBtn')
-			.text('restart.')
+			.text(_('restart.'))
 			.click(Engine.confirmDelete)
 			.appendTo(menu);
 		
 		$('<span>')
 			.addClass('menuBtn')
-			.text('share.')
+			.text(_('share.'))
 			.click(Engine.share)
 			.appendTo(menu);
       
 		$('<span>')
 			.addClass('menuBtn')
-			.text('save.')
+			.text(_('save.'))
 			.click(Engine.exportImport)
 			.appendTo(menu);
 			
 		$('<span>')
 			.addClass('menuBtn')
-			.text('app store.')
+			.text(_('app store.'))
 			.click(function() { window.open('https://itunes.apple.com/us/app/a-dark-room/id736683061'); })
-			.appendTo(menu);	
+			.appendTo(menu);
+			
+		
 		
 		// Register keypress handlers
 		$('body').off('keydown').keydown(Engine.keyDown);
@@ -159,6 +180,7 @@ var Engine = {
 			Ship.init();
 		}
 		
+		Engine.saveLanguage();
 		Engine.travelTo(Room);
 
 	},
@@ -207,50 +229,50 @@ var Engine = {
 		title: 'Export / Import',
 		scenes: {
 			start: {
-				text: ['export or import save data, for backing up',
-				       'or migrating computers'],
+				text: [_('export or import save data, for backing up'),
+				       _('or migrating computers')],
 				buttons: {
 					'export': {
-						text: 'export',
+						text: _('export'),
 						onChoose: Engine.export64
 					},
 					'import': {
-						text: 'import',
+						text: _('import'),
 						nextScene: {1: 'confirm'},
 					},
 					'cancel': {
-						text: 'cancel',
+						text: _('cancel'),
 						nextScene: 'end'
 					}
 				}
 			},
 			'confirm': {
-				text: ['are you sure?',
-				       'if the code is invalid, all data will be lost.',
-				       'this is irreversible.'],
+				text: [_('are you sure?'),
+				       _('if the code is invalid, all data will be lost.'),
+				       _('this is irreversible.')],
 				buttons: {
 					'yes': {
-						text: 'yes',
+						text: _('yes'),
 						nextScene: {1: 'inputImport'},
 						onChoose: Engine.enableSelection
 					},
 					'no': {
-						text: 'no',
+						text: _('no'),
 						nextScene: 'end'
 					}
 				}
 			},
 			'inputImport': {
-				text: ['put the save code here.'],
+				text: [_('put the save code here.')],
 				textarea: '',
 				buttons: {
 					'okay': {
-						text: 'okay',
+						text: _('import'),
 						nextScene: 'end',
 						onChoose: Engine.import64
 					},
 					'cancel': {
-						text: 'cancel',
+						text: _('cancel'),
 						nextScene: 'end'
 					}
 				}
@@ -267,14 +289,14 @@ var Engine = {
     string64 = string64.replace(/\n/g, '');
     Engine.enableSelection();
     Events.startEvent({
-    	title: 'Export',
+    	title: _('Export'),
     	scenes: {
     		start: {
-    			text: ['save this.'],
+    			text: [_('save this.')],
     			textarea: string64,
     			buttons: {
     				'done': {
-    					text: 'got it',
+    					text: _('got it'),
     					nextScene: 'end',
     					onChoose: Engine.disableSelection
     				}
@@ -302,18 +324,18 @@ var Engine = {
 	
 	confirmDelete: function() {
 		Events.startEvent({
-			title: 'Restart?',
+			title: _('Restart?'),
 			scenes: {
 				start: {
-					text: ['restart the game?'],
+					text: [_('restart the game?')],
 					buttons: {
 						'yes': {
-							text: 'yes',
+							text: _('yes'),
 							nextScene: 'end',
 							onChoose: Engine.deleteSave
 						},
 						'no': {
-							text: 'no',
+							text: _('no'),
 							nextScene: 'end'
 						}
 					}
@@ -336,41 +358,41 @@ var Engine = {
 	
 	share: function() {
 		Events.startEvent({
-			title: 'Share',
+			title: _('Share'),
 			scenes: {
 				start: {
-					text: ['bring your friends.'],
+					text: [_('bring your friends.')],
 					buttons: {
 						'facebook': {
-							text: 'facebook',
+							text: _('facebook'),
 							nextScene: 'end',
 							onChoose: function() {
 								window.open('https://www.facebook.com/sharer/sharer.php?u=' + Engine.SITE_URL, 'sharer', 'width=626,height=436,location=no,menubar=no,resizable=no,scrollbars=no,status=no,toolbar=no');
 							}
 						},
 						'google': {
-							text:'google+',
+							text:_('google+'),
 							nextScene: 'end',
 							onChoose: function() {
 								window.open('https://plus.google.com/share?url=' + Engine.SITE_URL, 'sharer', 'width=480,height=436,location=no,menubar=no,resizable=no,scrollbars=no,status=no,toolbar=no');
 							}
 						},
 						'twitter': {
-							text: 'twitter',
+							text: _('twitter'),
 							onChoose: function() {
 								window.open('https://twitter.com/intent/tweet?text=A%20Dark%20Room&url=' + Engine.SITE_URL, 'sharer', 'width=660,height=260,location=no,menubar=no,resizable=no,scrollbars=yes,status=no,toolbar=no');
 							},
 							nextScene: 'end'
 						},
 						'reddit': {
-							text: 'reddit',
+							text: _('reddit'),
 							onChoose: function() {
 								window.open('http://www.reddit.com/submit?url=' + Engine.SITE_URL, 'sharer', 'width=960,height=700,location=no,menubar=no,resizable=no,scrollbars=yes,status=no,toolbar=no');
 							},
 							nextScene: 'end'
 						},
 						'close': {
-							text: 'close',
+							text: _('close'),
 							nextScene: 'end'
 						}
 					}
@@ -404,16 +426,16 @@ var Engine = {
  	    if (darkCss == null) {
  	      	$('head').append('<link rel="stylesheet" href="css/dark.css" type="text/css" title="darkenLights" />');
  	      	Engine.turnLightsOff;
- 	      	$('.lightsOff').text('lights on.');
+ 	      	$('.lightsOff').text(_('lights on.'));
  	    }
  	  	else if (darkCss.disabled) {
  	    	darkCss.disabled = false;
- 	    	$('.lightsOff').text('lights on.');
+ 	    	$('.lightsOff').text(_('lights on.'));
  	  	}
  	   	else {
  	     	$("#darkenLights").attr("disabled", "disabled");
  	     	darkCss.disabled = true;
- 	     	$('.lightsOff').text('lights off.');
+ 	     	$('.lightsOff').text(_('lights off.'));
  	   	}
  	},
 	
@@ -506,7 +528,8 @@ var Engine = {
 	},
 	
 	getIncomeMsg: function(num, delay) {
-		return (num > 0 ? "+" : "") + num + " per " + delay + "s";
+		return _("{0} per {1}s", (num > 0 ? "+" : "") + num, delay);
+		//return (num > 0 ? "+" : "") + num + " per " + delay + "s";
 	},
 	
 	keyDown: function(e) {
@@ -586,17 +609,33 @@ var Engine = {
 	},
 
 	disableSelection: function() {
-		document.onselectstart = function() {return false;} // this is for IE
-		document.onmousedown = function() {return false;} // this is for the rest
+		document.onselectstart = function() {return false;}; // this is for IE
+		document.onmousedown = function() {return false;}; // this is for the rest
 	},
 
 	enableSelection: function() {
-		document.onselectstart = function() {return true;}
-		document.onmousedown = function() {return true;}
+		document.onselectstart = function() {return true;};
+		document.onmousedown = function() {return true;};
 	},
 	
 	handleStateUpdates: function(e){
 		
+	},
+	
+	switchLanguage: function(dom){
+		var lang = $(this).val();
+		if(document.location.href.search(/[\?\&]lang=[a-z]+/) != -1){
+			document.location.href = document.location.href.replace( /([\?\&]lang=)([a-z]+)/gi , "$1"+lang );
+		}else{
+			document.location.href = document.location.href + ( (document.location.href.search(/\?/) != -1 )?"&":"?") + "lang="+lang;
+		}
+	},
+	
+	saveLanguage: function(){
+		var lang = decodeURIComponent((new RegExp('[?|&]lang=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;	
+		if(lang && typeof Storage != 'undefined' && localStorage) {
+			localStorage.lang = lang;
+		}
 	}
 };
 

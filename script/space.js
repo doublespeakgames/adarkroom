@@ -39,7 +39,7 @@ var Space = {
 		
 		// Create the hull display
 		var h = $('<div>').attr('id', 'hullRemaining').appendTo(this.panel);
-		$('<div>').addClass('row_key').text('hull: ').appendTo(h);
+		$('<div>').addClass('row_key').text(_('hull: ')).appendTo(h);
 		$('<div>').addClass('row_val').appendTo(h);
 		
 		//subscribe to stateUpdates
@@ -73,17 +73,17 @@ var Space = {
 		if(Engine.activeModule == this) {
 			var t;
 			if(Space.altitude < 10) {
-				t = "Troposphere";
+				t = _("Troposphere");
 			} else if(Space.altitude < 20) {
-				t = "Stratosphere";
+				t = _("Stratosphere");
 			} else if(Space.altitude < 30) {
-				t = "Mesosphere";
+				t = _("Mesosphere");
 			} else if(Space.altitude < 45) {
-				t = "Thermosphere";
+				t = _("Thermosphere");
 			} else if(Space.altitude < 60){
-				t = "Exosphere";
+				t = _("Exosphere");
 			} else {
-				t = "Space";
+				t = _("Space");
 			}
 			document.title = t;
 		}
@@ -418,14 +418,14 @@ var Space = {
 			                		.appendTo('body');
 				                $('<span>')
 				                	.addClass('endGame')
-			                		.text('score for this game: ' + Score.calculateScore())
+			                		.text(_('score for this game: {0}', Score.calculateScore()))
 			                		.appendTo('.centerCont')
 			                		.animate({opacity:1},1500);
 				                $('<br />')
 				                	.appendTo('.centerCont');
 				                $('<span>')
 				                	.addClass('endGame')
-			                		.text('total score: ' + Prestige.get().score)
+			                		.text(_('total score: {0}', Prestige.get().score))
 			                		.appendTo('.centerCont')
 			                		.animate({opacity:1},1500);
 				                $('<br />')
@@ -436,7 +436,7 @@ var Space = {
 					    		$('#content, #notifications').remove();
 					    		$('<span>')
 				                	.addClass('endGame endGameRestart')
-				                	.text('restart.')
+				                	.text(_('restart.'))
 				                	.click(Engine.confirmDelete)
 				                	.appendTo('.centerCont')
 				                	.animate({opacity:1},1500);
