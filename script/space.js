@@ -261,9 +261,9 @@ var Space = {
 		
 		Space._panelTimeout = setTimeout(function() {
 			if (Engine.isLightsOff())
-				$('#spacePanel, .menu').animate({color: '#272823'}, 500, 'linear');
+				$('#spacePanel, .menu, select.menuBtn').animate({color: '#272823'}, 500, 'linear');
 			else
-				$('#spacePanel, .menu').animate({color: 'white'}, 500, 'linear');
+				$('#spacePanel, .menu, select.menuBtn').animate({color: 'white'}, 500, 'linear');
 		}, Space.FTB_SPEED / 2);
 		
 		Space.createAsteroid();
@@ -349,7 +349,7 @@ var Space = {
 				$('#spacePanel').attr('style', '');			
 			}
 		});
-		$('.menu').animate({color: '#666'}, 300, 'linear');
+		$('.menu, select.menuBtn').animate({color: '#666'}, 300, 'linear');
 		$('#outerSlider').animate({top: '0px'}, 300, 'linear');
 		Engine.activeModule = Ship;
 		Ship.onArrival();
