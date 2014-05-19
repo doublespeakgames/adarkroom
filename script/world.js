@@ -43,58 +43,58 @@ var World = {
 	
 	Weapons: {
 		'fists': {
-			verb: 'punch',
+			verb: _('punch'),
 			type: 'unarmed',
 			damage: 1,
 			cooldown: 2
 		},
 		'bone spear': {
-			verb: 'stab',
+			verb: _('stab'),
 			type: 'melee',
 			damage: 2,
 			cooldown: 2
 		},
 		'iron sword': {
-			verb: 'swing',
+			verb: _('swing'),
 			type: 'melee',
 			damage: 4,
 			cooldown: 2
 		},
 		'steel sword': {
-			verb: 'slash',
+			verb: _('slash'),
 			type: 'melee',
 			damage: 6,
 			cooldown: 2
 		},
 		'bayonet': {
-			verb: 'thrust',
+			verb: _('thrust'),
 			type: 'melee',
 			damage: 8,
 			cooldown: 2
 		},
 		'rifle': {
-			verb: 'shoot',
+			verb: _('shoot'),
 			type: 'ranged',
 			damage: 5,
 			cooldown: 1,
 			cost: { 'bullets': 1 }
 		},
 		'laser rifle': {
-			verb: 'blast',
+			verb: _('blast'),
 			type: 'ranged',
 			damage: 8,
 			cooldown: 1,
 			cost: { 'energy cell': 1 }
 		},
 		'grenade': {
-			verb: 'lob',
+			verb: _('lob'),
 			type: 'ranged',
 			damage: 15,
 			cooldown: 5,
 			cost: { 'grenade': 1 }
 		},
 		'bolas': {
-			verb: 'tangle',
+			verb: _('tangle'),
 			type: 'ranged',
 			damage: 'stun',
 			cooldown: 15,
@@ -116,22 +116,22 @@ var World = {
 		World.TILE_PROBS[World.TILE.BARRENS] = 0.5;
 		
 		// Setpiece definitions
-		World.LANDMARKS[World.TILE.OUTPOST] = { num: 0, minRadius: 0, maxRadius: 0, scene: 'outpost', label: 'An&nbsp;Outpost' };
-		World.LANDMARKS[World.TILE.IRON_MINE] = { num: 1, minRadius: 5, maxRadius: 5, scene: 'ironmine', label: 'Iron&nbsp;Mine' };
-		World.LANDMARKS[World.TILE.COAL_MINE] = { num: 1, minRadius: 10, maxRadius: 10, scene: 'coalmine', label: 'Coal&nbsp;Mine' };
-		World.LANDMARKS[World.TILE.SULPHUR_MINE] = { num: 1, minRadius: 20, maxRadius: 20, scene: 'sulphurmine', label: 'Sulphur&nbsp;Mine' };
-		World.LANDMARKS[World.TILE.HOUSE] = { num: 10, minRadius: 0, maxRadius: World.RADIUS * 1.5, scene: 'house', label: 'An&nbsp;Old&nbsp;House' };
-		World.LANDMARKS[World.TILE.CAVE] = { num: 5, minRadius: 3, maxRadius: 10, scene: 'cave', label: 'A&nbsp;Damp&nbsp;Cave' };
-		World.LANDMARKS[World.TILE.TOWN] = { num: 10, minRadius: 10, maxRadius: 20, scene: 'town', label: 'An&nbsp;Abandoned&nbsp;Town' };
-		World.LANDMARKS[World.TILE.CITY] = { num: 20, minRadius: 20, maxRadius: World.RADIUS * 1.5, scene: 'city', label: 'A&nbsp;Ruined&nbsp;City' };
-		World.LANDMARKS[World.TILE.SHIP] = { num: 1, minRadius: 28, maxRadius: 28, scene: 'ship', label: 'A&nbsp;Crashed&nbsp;Starship'};
-		World.LANDMARKS[World.TILE.BOREHOLE] = { num: 10, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'borehole', label: 'A&nbsp;Borehole'};
-		World.LANDMARKS[World.TILE.BATTLEFIELD] = { num: 5, minRadius: 18, maxRadius: World.RADIUS * 1.5, scene: 'battlefield', label: 'A&nbsp;Battlefield'};
-		World.LANDMARKS[World.TILE.SWAMP] = { num: 1, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'swamp', label: 'A&nbsp;Murky&nbsp;Swamp'};
+		World.LANDMARKS[World.TILE.OUTPOST] = { num: 0, minRadius: 0, maxRadius: 0, scene: 'outpost', label: _('An&nbsp;Outpost') };
+		World.LANDMARKS[World.TILE.IRON_MINE] = { num: 1, minRadius: 5, maxRadius: 5, scene: 'ironmine', label:  _('Iron&nbsp;Mine') };
+		World.LANDMARKS[World.TILE.COAL_MINE] = { num: 1, minRadius: 10, maxRadius: 10, scene: 'coalmine', label:  _('Coal&nbsp;Mine') };
+		World.LANDMARKS[World.TILE.SULPHUR_MINE] = { num: 1, minRadius: 20, maxRadius: 20, scene: 'sulphurmine', label:  _('Sulphur&nbsp;Mine') };
+		World.LANDMARKS[World.TILE.HOUSE] = { num: 10, minRadius: 0, maxRadius: World.RADIUS * 1.5, scene: 'house', label:  _('An&nbsp;Old&nbsp;House') };
+		World.LANDMARKS[World.TILE.CAVE] = { num: 5, minRadius: 3, maxRadius: 10, scene: 'cave', label:  _('A&nbsp;Damp&nbsp;Cave') };
+		World.LANDMARKS[World.TILE.TOWN] = { num: 10, minRadius: 10, maxRadius: 20, scene: 'town', label:  _('An&nbsp;Abandoned&nbsp;Town') };
+		World.LANDMARKS[World.TILE.CITY] = { num: 20, minRadius: 20, maxRadius: World.RADIUS * 1.5, scene: 'city', label:  _('A&nbsp;Ruined&nbsp;City') };
+		World.LANDMARKS[World.TILE.SHIP] = { num: 1, minRadius: 28, maxRadius: 28, scene: 'ship', label:  _('A&nbsp;Crashed&nbsp;Starship')};
+		World.LANDMARKS[World.TILE.BOREHOLE] = { num: 10, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'borehole', label:  _('A&nbsp;Borehole')};
+		World.LANDMARKS[World.TILE.BATTLEFIELD] = { num: 5, minRadius: 18, maxRadius: World.RADIUS * 1.5, scene: 'battlefield', label:  _('A&nbsp;Battlefield')};
+		World.LANDMARKS[World.TILE.SWAMP] = { num: 1, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'swamp', label:  _('A&nbsp;Murky&nbsp;Swamp')};
 		
 		// Only add the cache if there is prestige data
 		if($SM.get('previous.stores')) {
-    			World.LANDMARKS[World.TILE.CACHE] = { num: 1, minRadius: 10, maxRadius: World.RADIUS * 1.5, scene: 'cache', label: 'A&nbsp;Destroyed&nbsp;Village'};
+    			World.LANDMARKS[World.TILE.CACHE] = { num: 1, minRadius: 10, maxRadius: World.RADIUS * 1.5, scene: 'cache', label:  _('A&nbsp;Destroyed&nbsp;Village')};
 		}
 		
 		if(typeof $SM.get('features.location.world') == 'undefined') {
@@ -247,7 +247,7 @@ var World = {
 			water = World.createItemDiv('water', World.water);
 			water.prependTo(supplies);
 		} else if(World.water > 0) {
-			$('div#supply_water', supplies).text('water:' + World.water);
+			$('div#supply_water', supplies).text(_('water:{0}' , World.water));
 		} else {
 			water.remove();
 		}
@@ -267,21 +267,21 @@ var World = {
 					item.appendTo(supplies);
 				}
 			} else if(num > 0) {
-				$('div#' + item.attr('id'), supplies).text(k + ':' + num);
+				$('div#' + item.attr('id'), supplies).text(_(k) + ':' + num);
 			} else {
 				item.remove();
 			}
 		}
 		
 		// Update label
-		var t = 'pockets';
+		var t = _('pockets');
 		if($SM.get('stores.rucksack', true) > 0) {
-			t = 'rucksack';
+			t = _('rucksack');
 		}
 		$('#backpackTitle').text(t);
 		
 		// Update bagspace
-		$('#backpackSpace').text('free ' + Math.floor(Path.getCapacity() - total) + '/' + Path.getCapacity());
+		$('#backpackSpace').text(_('free {0}/{1}', Math.floor(Path.getCapacity() - total) , Path.getCapacity()));
 	},
 	
 	setWater: function(w) {
@@ -298,14 +298,14 @@ var World = {
 			if(World.health > World.getMaxHealth()) {
 				World.health = World.getMaxHealth();
 			}
-			$('#healthCounter').text('hp: ' + World.health + '/' + World.getMaxHealth());
+			$('#healthCounter').text(_('hp: {0}/{1}', World.health , World.getMaxHealth()));
 		}
 	},
 	
 	createItemDiv: function(name, num) {
 		var div = $('<div>').attr('id', 'supply_' + name.replace(' ', '-'))
 			.addClass('supplyItem')
-			.text(name + ':' + num);
+			.text(_('{0}:{1}',_(name), num));
 		
 		return div;
 	},
@@ -340,9 +340,9 @@ var World = {
 		World.doSpace();
 		if(World.checkDanger()) {
 			if(World.danger) {
-				Notifications.notify(World, 'dangerous to be this far from the village without proper protection');
+				Notifications.notify(World, _('dangerous to be this far from the village without proper protection'));
 			} else {
-				Notifications.notify(World, 'safer here');
+				Notifications.notify(World, _('safer here'));
 			}
 		}
 	},
@@ -442,12 +442,12 @@ var World = {
 			var num = Path.outfit['cured meat'];
 			num--;
 			if(num == 0) {
-				Notifications.notify(World, 'the meat has run out');
+				Notifications.notify(World, _('the meat has run out'));
 			} else if(num < 0) {
 				// Starvation! Hooray!
 				num = 0;
 				if(!World.starvation) {
-					Notifications.notify(World, 'starvation sets in');
+					Notifications.notify(World, _('starvation sets in'));
 					World.starvation = true;
 				} else {
 					$SM.set('character.starved', $SM.get('character.starved', true));
@@ -472,11 +472,11 @@ var World = {
 			var water = World.water;
 			water--;
 			if(water == 0) {
-				Notifications.notify(World, 'there is no more water');
+				Notifications.notify(World, _('there is no more water'));
 			} else if(water < 0) {
 				water = 0;
 				if(!World.thirst) {
-					Notifications.notify(World, 'the thirst becomes unbearable');
+					Notifications.notify(World, _('the thirst becomes unbearable'));
 					World.thirst = true;
 				} else {
 					$SM.set('character.dehydrated', $SM.get('character.dehydrated', true));
@@ -549,30 +549,30 @@ var World = {
 			case World.TILE.FOREST:
 				switch(newTile) {
 					case World.TILE.FIELD:
-						msg = "the trees yield to dry grass. the yellowed brush rustles in the wind.";
+						msg = _("the trees yield to dry grass. the yellowed brush rustles in the wind.");
 						break;
 					case World.TILE.BARRENS:
-						msg = "the trees are gone. parched earth and blowing dust are poor replacements.";
+						msg = _("the trees are gone. parched earth and blowing dust are poor replacements.");
 						break;
 				}
 				break;
 			case World.TILE.FIELD:
 				switch(newTile) {
 					case World.TILE.FOREST:
-						msg = "trees loom on the horizon. grasses gradually yield to a forest floor of dry branches and fallen leaves.";
+						msg = _("trees loom on the horizon. grasses gradually yield to a forest floor of dry branches and fallen leaves.");
 						break;
 					case World.TILE.BARRENS:
-						msg = "the grasses thin. soon, only dust remains.";
+						msg = _("the grasses thin. soon, only dust remains.");
 						break;
 				}
 				break;
 			case World.TILE.BARRENS:
 				switch(newTile) {
 					case World.TILE.FIELD:
-						msg = "the barrens break at a sea of dying grass, swaying in the arid breeze.";
+						msg = _("the barrens break at a sea of dying grass, swaying in the arid breeze.");
 						break;
 					case World.TILE.FOREST:
-						msg = "a wall of gnarled trees rises from the dust. their branches twist into a skeletal canopy overhead.";
+						msg = _("a wall of gnarled trees rises from the dust. their branches twist into a skeletal canopy overhead.");
 						break;
 				}
 				break;
@@ -774,12 +774,12 @@ var World = {
 					ttClass += " bottom";
 				}
 				if(World.curPos[0] == i && World.curPos[1] == j) {
-					mapString += '<span class="landmark">@<div class="tooltip ' + ttClass + '">Wanderer</div></span>';
+					mapString += '<span class="landmark">@<div class="tooltip ' + ttClass + '">'+_('Wanderer')+'</div></span>';
 				} else if(World.state.mask[i][j]) {
 					var c = World.state.map[i][j];
 					switch(c) {
 						case World.TILE.VILLAGE:
-							mapString += '<span class="landmark">' + c + '<div class="tooltip' + ttClass + '">The&nbsp;Village</div></span>';
+							mapString += '<span class="landmark">' + c + '<div class="tooltip' + ttClass + '">'+_('The&nbsp;Village')+'</div></span>';
 							break;
 						default:
 							if(typeof World.LANDMARKS[c] != 'undefined' && (c != World.TILE.OUTPOST || !World.outpostUsed(i, j))) {
@@ -808,7 +808,7 @@ var World = {
 			Engine.event('game event', 'death');
 			Engine.keyLock = true;
 			// Dead! Discard any world changes and go home
-			Notifications.notify(World, 'the world fades');
+			Notifications.notify(World, _('the world fades'));
 			World.state = null;
 			Path.outfit = {};
 			$('#outerSlider').animate({opacity: '0'}, 600, 'linear', function() {
@@ -909,7 +909,7 @@ var World = {
 	},
 	
 	useOutpost: function() {
-		Notifications.notify(null, 'water replenished');
+		Notifications.notify(null, _('water replenished'));
 		World.setWater(World.getMaxWater());
 		// Mark this outpost as used
 		World.usedOutposts[World.curPos[0] + ',' + World.curPos[1]] = true;
@@ -936,7 +936,7 @@ var World = {
 	},
 	
 	setTitle: function() {
-		document.title = 'A Barren World';
+		document.title = _('A Barren World');
 	},
 	
 	copyPos: function(pos) {

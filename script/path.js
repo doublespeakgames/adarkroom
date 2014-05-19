@@ -26,7 +26,7 @@ var Path = {
 		World.init();
 		
 		// Create the path tab
-		this.tab = Header.addLocation("A Dusty Path", "path", Path);
+		this.tab = Header.addLocation(_("A Dusty Path"), "path", Path);
 		
 		// Create the Path panel
 		this.panel = $('<div>').attr('id', "pathPanel")
@@ -40,7 +40,7 @@ var Path = {
 		// Add the embark button
 		new Button.Button({
 			id: 'embarkButton',
-			text: "embark",
+			text: _("embark"),
 			click: Path.embark,
 			width: '80px',
 			cooldown: World.DEATH_COOLDOWN
@@ -57,7 +57,7 @@ var Path = {
 	openPath: function() {
 		Path.init();
 		Engine.event('progress', 'path');
-		Notifications.notify(Room, 'the compass points ' + World.dir);
+		Notifications.notify(Room, _('the compass points ' + World.dir));
 	},
 	
 	getWeight: function(thing) {
@@ -106,7 +106,7 @@ var Path = {
 				var r = $('#' + id);
 				if($SM.get('character.perks["'+k+'"]') && r.length == 0) {
 					r = $('<div>').attr('id', id).addClass('perkRow').appendTo(perks);
-					$('<div>').addClass('row_key').text(k).appendTo(r);
+					$('<div>').addClass('row_key').text(_(k)).appendTo(r);
 					$('<div>').addClass('tooltip bottom right').text(Engine.Perks[k].desc).appendTo(r);
 				}
 			}
@@ -129,17 +129,17 @@ var Path = {
 		}
 		
 		// Add the armour row
-		var armour = "none";
+		var armour = _("none");
 		if($SM.get('stores["s armour"]', true) > 0)
-			armour = "steel";
+			armour = _("steel");
 		else if($SM.get('stores["i armour"]', true) > 0)
-			armour = "iron";
+			armour = _("iron");
 		else if($SM.get('stores["l armour"]', true) > 0)
-			armour = "leather";
+			armour = _("leather");
 		var aRow = $('#armourRow');
 		if(aRow.length == 0) {
 			aRow = $('<div>').attr('id', 'armourRow').addClass('outfitRow').prependTo(outfit);
-			$('<div>').addClass('row_key').text('armour').appendTo(aRow);
+			$('<div>').addClass('row_key').text(_('armour')).appendTo(aRow);
 			$('<div>').addClass('row_val').text(armour).appendTo(aRow);
 			$('<div>').addClass('clear').appendTo(aRow);
 		} else {
@@ -150,7 +150,7 @@ var Path = {
 		var wRow = $('#waterRow');
 		if(wRow.length == 0) {
 			wRow = $('<div>').attr('id', 'waterRow').addClass('outfitRow').insertAfter(aRow);
-			$('<div>').addClass('row_key').text('water').appendTo(wRow);
+			$('<div>').addClass('row_key').text(_('water')).appendTo(wRow);
 			$('<div>').addClass('row_val').text(World.getMaxWater()).appendTo(wRow);
 			$('<div>').addClass('clear').appendTo(wRow);
 		} else {
@@ -183,7 +183,7 @@ var Path = {
 			if((store.type == 'tool' || store.type == 'weapon') && have > 0) {
 				total += num * Path.getWeight(k);
 				if(row.length == 0) {
-					row = Path.createOutfittingRow(k, num);
+					row = Path.createOutfittingRow(k, num, store.name);
 					
 					var curPrev = null;
 					outfit.children().each(function(i) {
@@ -226,7 +226,7 @@ var Path = {
 		}
 		
 		// Update bagspace
-		$('#bagspace').text('free ' + Math.floor(Path.getCapacity() - total) + '/' + Path.getCapacity());
+		$('#bagspace').text(_('free {0}/{1}', Math.floor(Path.getCapacity() - total) , Path.getCapacity()));
 		
 		if(Path.outfit['cured meat'] > 0) {
 			Button.setDisabled($('#embarkButton'), false);
@@ -235,8 +235,9 @@ var Path = {
 		}
 	},
 	
-	createOutfittingRow: function(name, num) {
-		var row = $('<div>').attr('id', 'outfit_row_' + name.replace(' ', '-')).addClass('outfitRow');
+	createOutfittingRow: function(key, num, name) {
+		if(!name) name = _(key);
+		var row = $('<div>').attr('id', 'outfit_row_' + key.replace(' ', '-')).addClass('outfitRow').attr('key',key);
 		$('<div>').addClass('row_key').text(name).appendTo(row);
 		var val = $('<div>').addClass('row_val').appendTo(row);
 		
@@ -247,18 +248,18 @@ var Path = {
 		$('<div>').addClass('dnManyBtn').appendTo(val).click([10], Path.decreaseSupply);
 		$('<div>').addClass('clear').appendTo(row);
 		
-		var numAvailable = $SM.get('stores["'+name+'"]', true);
+		var numAvailable = $SM.get('stores["'+key+'"]', true);
 		var tt = $('<div>').addClass('tooltip bottom right').appendTo(row);
-		$('<div>').addClass('row_key').text('weight').appendTo(tt);
-		$('<div>').addClass('row_val').text(Path.getWeight(name)).appendTo(tt);
-		$('<div>').addClass('row_key').text('available').appendTo(tt);
+		$('<div>').addClass('row_key').text(_('weight')).appendTo(tt);
+		$('<div>').addClass('row_val').text(Path.getWeight(key)).appendTo(tt);
+		$('<div>').addClass('row_key').text(_('available')).appendTo(tt);
 		$('<div>').addClass('row_val').addClass('numAvailable').text(numAvailable).appendTo(tt);
 		
 		return row;
 	},
 	
   increaseSupply: function(btn) {
-		var supply = $(this).closest('.outfitRow').children('.row_key').text().replace('-', ' ');
+		var supply = $(this).closest('.outfitRow').attr('key');
 		Engine.log('increasing ' + supply + ' by up to ' + btn.data);
 		var cur = Path.outfit[supply];
 		cur = typeof cur == 'number' ? cur : 0;
@@ -272,7 +273,7 @@ var Path = {
 	},
 	
 	decreaseSupply: function(btn) {
-		var supply = $(this).closest('.outfitRow').children('.row_key').text().replace('-', ' ');
+		var supply = $(this).closest('.outfitRow').attr('key');
 		Engine.log('decreasing ' + supply + ' by up to ' + btn.data);
 		var cur = Path.outfit[supply];
 		cur = typeof cur == 'number' ? cur : 0;
@@ -291,7 +292,7 @@ var Path = {
 	},
 	
 	setTitle: function() {
-		document.title = 'A Dusty Path';
+		document.title = _('A Dusty Path');
 	},
 	
 	embark: function() {

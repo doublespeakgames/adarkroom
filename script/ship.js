@@ -8,7 +8,7 @@ var Ship = {
 	BASE_HULL: 0,
 	BASE_THRUSTERS: 1,
 	
-	name: "Ship",
+	name: _("Ship"),
 	init: function(options) {
 		this.options = $.extend(
 			this.options,
@@ -24,7 +24,7 @@ var Ship = {
 		}
 		
 		// Create the Ship tab
-		this.tab = Header.addLocation("An Old Starship", "ship", Ship);
+		this.tab = Header.addLocation(_("An Old Starship"), "ship", Ship);
 		
 		// Create the Ship panel
 		this.panel = $('<div>').attr('id', "shipPanel")
@@ -35,20 +35,20 @@ var Ship = {
 		
 		// Draw the hull label
 		var hullRow = $('<div>').attr('id', 'hullRow').appendTo('div#shipPanel');
-		$('<div>').addClass('row_key').text('hull:').appendTo(hullRow);
+		$('<div>').addClass('row_key').text(_('hull:')).appendTo(hullRow);
 		$('<div>').addClass('row_val').text($SM.get('game.spaceShip.hull')).appendTo(hullRow);
 		$('<div>').addClass('clear').appendTo(hullRow);
 		
 		// Draw the thrusters label
 		var engineRow = $('<div>').attr('id', 'engineRow').appendTo('div#shipPanel');
-		$('<div>').addClass('row_key').text('engine:').appendTo(engineRow);
+		$('<div>').addClass('row_key').text(_('engine:')).appendTo(engineRow);
 		$('<div>').addClass('row_val').text($SM.get('game.spaceShip.thrusters')).appendTo(engineRow);
 		$('<div>').addClass('clear').appendTo(engineRow);
 		
 		// Draw the reinforce button
 		new Button.Button({
 			id: 'reinforceButton',
-			text: 'reinforce hull',
+			text: _('reinforce hull'),
 			click: Ship.reinforceHull,
 			width: '100px',
 			cost: {'alien alloy': Ship.ALLOY_PER_HULL}
@@ -57,7 +57,7 @@ var Ship = {
 		// Draw the engine button
 		new Button.Button({
 			id: 'engineButton',
-			text: 'upgrade engine',
+			text: _('upgrade engine'),
 			click: Ship.upgradeEngine,
 			width: '100px',
 			cost: {'alien alloy': Ship.ALLOY_PER_THRUSTER}
@@ -66,7 +66,7 @@ var Ship = {
 		// Draw the lift off button
 		var b = new Button.Button({
 			id: 'liftoffButton',
-			text: 'lift off',
+			text: _('lift off'),
 			click: Ship.checkLiftOff,
 			width: '100px',
 			cooldown: Ship.LIFTOFF_COOLDOWN
@@ -88,7 +88,7 @@ var Ship = {
 	onArrival: function(transition_diff) {
 		Ship.setTitle();
 		if(!$SM.get('game.spaceShip.seenShip')) {
-			Notifications.notify(Ship, 'somewhere above the debris cloud, the wanderer fleet hovers. been on this rock too long.');
+			Notifications.notify(Ship, _('somewhere above the debris cloud, the wanderer fleet hovers. been on this rock too long.'));
 			$SM.set('game.spaceShip.seenShip', true);
 		}
 
@@ -103,7 +103,7 @@ var Ship = {
 	
 	reinforceHull: function() {
 		if($SM.get('stores["alien alloy"]', true) < Ship.ALLOY_PER_HULL) {
-			Notifications.notify(Ship, "not enough alien alloy");
+			Notifications.notify(Ship, _("not enough alien alloy"));
 			return false;
 		}
 		$SM.add('stores["alien alloy"]', -Ship.ALLOY_PER_HULL);
@@ -116,7 +116,7 @@ var Ship = {
 	
 	upgradeEngine: function() {
 		if($SM.get('stores["alien alloy"]', true) < Ship.ALLOY_PER_THRUSTER) {
-			Notifications.notify(Ship, "not enough alien alloy");
+			Notifications.notify(Ship, _("not enough alien alloy"));
 			return false;
 		}
 		$SM.add('stores["alien alloy"]', -Ship.ALLOY_PER_THRUSTER);
@@ -131,15 +131,15 @@ var Ship = {
 	checkLiftOff: function() {
 		if(!$SM.get('game.spaceShip.seenWarning')) {
 			Events.startEvent({
-				title: 'Ready to Leave?',
+				title: _('Ready to Leave?'),
 				scenes: {
 					'start': {
 						text: [
-							"time to get out of this place. won't be coming back."
+							_("time to get out of this place. won't be coming back.")
 						],
 						buttons: {
 							'fly': {
-								text: 'lift off',
+								text: _('lift off'),
 								onChoose: function() {
 									$SM.set('game.spaceShip.seenWarning', true);
 									Ship.liftOff();
@@ -147,7 +147,7 @@ var Ship = {
 								nextScene: 'end'
 							},
 							'wait': {
-								text: 'linger',
+								text: _('linger'),
 								onChoose: function() {
 									Button.clearCooldown($('#liftoffButton'));
 								},
