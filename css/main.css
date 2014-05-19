@@ -1,5 +1,5 @@
 /* Fonts */
-body, .tooltip {
+body, .tooltip, select.menuBtn {
 	font-family: "Times New Roman", Times, serif;
 	font-size: 16px;
 	font-weight: normal;
@@ -63,6 +63,19 @@ div#header {
 	cursor: pointer;
 	float: right;
 	margin-left: 20px;
+}
+
+.select-wrap {
+	display: inline-block;
+	overflow: hidden;
+	height: 20px;
+}
+
+select.menuBtn {
+	color: #666;
+	border: none;
+	cursor: pointer;
+	margin: -1px -20px 0 0;
 }
 
 .menu span:hover {
