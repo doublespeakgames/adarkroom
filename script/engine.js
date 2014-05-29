@@ -115,13 +115,18 @@
 			 var selectWrap = $('<span>')
 			 	.addClass('select-wrap')
 			 	.appendTo(menu);
-			 $('<select>')
+			 var select = $('<select>')
 				.addClass('menuBtn')
 				.append($('<option>').text("language."))
-				.append($('<option>').text("english").val("en"))
-				.append($('<option>').text("français").val("fr"))
+				//.append($('<option>').text("english").val("en"))
+				//.append($('<option>').text("français").val("fr"))
 				.change(Engine.switchLanguage)
 				.appendTo(selectWrap);
+			
+			$.each(langs, function(name,display){
+				$('<options>').text(display).val(name).appendTo(select)
+			});
+			
 				
 			 $('<span>')
 				.addClass('lightsOff menuBtn')
