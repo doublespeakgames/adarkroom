@@ -124,7 +124,7 @@
 				.appendTo(selectWrap);
 			
 			$.each(langs, function(name,display){
-				$('<options>').text(display).val(name).appendTo(select)
+				$('<option>').text(display).val(name).appendTo(select)
 			});
 			
 				
