@@ -118,8 +118,6 @@
 			 var select = $('<select>')
 				.addClass('menuBtn')
 				.append($('<option>').text("language."))
-				//.append($('<option>').text("english").val("en"))
-				//.append($('<option>').text("français").val("fr"))
 				.change(Engine.switchLanguage)
 				.appendTo(selectWrap);
 			
