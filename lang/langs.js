@@ -1,4 +1,4 @@
 var langs = {
- 'en':'English',
+ 'en':'english',
  'fr':'français'
 }
