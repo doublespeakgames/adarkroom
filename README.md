@@ -10,4 +10,6 @@ A Minimalist Text Adventure Game
 
 ***Another Chinese Dark Room***
 - [Home page](http://dreamz.cn/a-dark-room/index.html?lang=cn)  Some Translations come from U77 team.
-- [Git Repo](http://github.com/lilj/adarkroom
+- [Git Repo](http://github.com/lilj/adarkroom)
+
+
