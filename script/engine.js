@@ -112,18 +112,20 @@
 				.addClass('menu')
 				.appendTo('body');
 	
-			 var selectWrap = $('<span>')
-			 	.addClass('select-wrap')
-			 	.appendTo(menu);
-			 var select = $('<select>')
-				.addClass('menuBtn')
-				.append($('<option>').text("language."))
-				.change(Engine.switchLanguage)
-				.appendTo(selectWrap);
-			
-			$.each(langs, function(name,display){
-				$('<option>').text(display).val(name).appendTo(select)
-			});
+			if(typeof langs != 'undefined'){
+				 var selectWrap = $('<span>')
+				 	.addClass('select-wrap')
+				 	.appendTo(menu);
+				 var select = $('<select>')
+					.addClass('menuBtn')
+					.append($('<option>').text("language."))
+					.change(Engine.switchLanguage)
+					.appendTo(selectWrap);
+				
+				$.each(langs, function(name,display){
+					$('<option>').text(display).val(name).appendTo(select)
+				})
+			}
 			
 				
 			 $('<span>')
@@ -233,7 +235,7 @@
 		
 	  exportImport: function() {
 	    Events.startEvent({
-			title: 'Export / Import',
+			title: _('Export / Import'),
 			scenes: {
 				start: {
 					text: [_('export or import save data, for backing up'),

@@ -8,4 +8,8 @@ A Minimalist Text Adventure Game
 [Click to play](http://adarkroom.doublespeakgames.com/)
 
 
-[Another Chinese Dark Room](http://dreamz.cn/a-dark-room/index.html?lang=cn)
+***Another Chinese Dark Room***
+- [Home page](http://dreamz.cn/a-dark-room/index.html?lang=cn)  Some Translations come from U77 team.
+- [Git Repo](http://github.com/lilj/adarkroom)
+
+
