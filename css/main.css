@@ -1,10 +1,13 @@
 /* Fonts */
+
+
 body, .tooltip, select.menuBtn {
-	font-family: "Times New Roman", Times, serif;
+	font-family: "Comic Sans MS", serif;
 	font-size: 16px;
 	font-weight: normal;
 	line-height: normal;
 	letter-spacing: normal;
+	background-color: #c4ff00;
 }
 
 html {
