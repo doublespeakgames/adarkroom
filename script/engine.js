@@ -313,6 +313,7 @@
 	    		}
 	    	}
 	    });
+	    Engine.autoSelect('#description textarea')
 	  },
 	  
 	  import64: function(string64) {
@@ -625,6 +626,10 @@
 		enableSelection: function() {
 			document.onselectstart = eventPassthrough;
 			document.onmousedown = eventPassthrough;
+		},
+		
+		autoSelect: function(selector) {
+			$(selector).focus().select();
 		},
 		
 		handleStateUpdates: function(e){
