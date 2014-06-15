@@ -845,6 +845,10 @@ msgid "not enough scales"
 msgstr "écaille insuffisante"
 
 #: ../../script/localization.js:10
+msgid "not enough cloth"
+msgstr "chiffon insuffisante"
+
+#: ../../script/localization.js:10
 msgid "not enough teeth"
 msgstr "dent insuffisante"
 

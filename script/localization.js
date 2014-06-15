@@ -7,7 +7,7 @@
 	                 _('steelworker'),_('bait'),_('cured meat'), _('scales'), _('compass'), _('laser rifle'),
 	                 _('gatherer'),_('cloth'), _('scales'), _('cured meat'), _('thieves'),
 	                 _('not enough fur'), _('not enough wood'), _('not enough coal'), _('not enough iron'), _('not enough steel'), _('baited trap'),
-			 _('not enough scales'),_('not enough clouth'),  _('not enough teeth'), _('not enough leather'),
+			 _('not enough scales'),_('not enough cloth'),  _('not enough teeth'), _('not enough leather'),
 	                 _('the compass points east.'), _('the compass points west.'), _('the compass points north.'), _('the compass points south.'), 
 	                 _('the compass points northeast.'), _('the compass points northwest.'), _('the compass points southeast.'), _('the compass points southwest.')]; 
 	delete keywords;
