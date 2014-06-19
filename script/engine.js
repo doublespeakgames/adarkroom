@@ -549,7 +549,7 @@
 					Engine.activeModule.keyDown(e);
 				}
 			}
-			return false;
+			return !(jQuery.inArray(window.event.keycode, [37,38,39,40]));
 		},
 		
 		keyUp: function(e) {
