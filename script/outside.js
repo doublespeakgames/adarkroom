@@ -416,7 +416,7 @@ var Outside = {
 			}
 		}
 		
-		population.text('pop ' + $SM.get('game.population') + '/' + this.getMaxPopulation());
+		population.text(_('pop ') + $SM.get('game.population') + '/' + this.getMaxPopulation());
 		
 		var hasPeeps;
 		if($SM.get('game.buildings["hut"]', true) == 0) {
