@@ -22,6 +22,8 @@
 			div#outfitting:before{ content: \''+ _("supplies:") + '\'}\
 			div#perks:before{ content: \''+ _("perks:") + '\'}\
 			div#lootButtons:before { content: \''+ _("take:") + '\'}\
-			div#village:before{ content: \''+_('forest')+'\'}\
+			div#dropMenu:before { content: \''+ _("drop:") + '\'}\
+			div#village.noHuts:before { content: \'' + _("forest") + '\'}\
+			div#village:before { content: \'' + _("village") + '\'}\
 	').appendTo($('head'));
 })();
