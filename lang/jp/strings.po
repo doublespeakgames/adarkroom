@@ -2130,43 +2130,43 @@ msgstr "古い塔は、ほとんど無傷でいるようだ。"
 
 #: ../../script/events/setpieces.js:1277
 msgid "the shell of a burned out car blocks the entrance."
-msgstr "烧烂的汽车壳子挡住了入口."
+msgstr "燃え尽きカーブロックの入り口の外殻。"
 
 #: ../../script/events/setpieces.js:1278
 msgid "most of the windows at ground level are busted anyway."
-msgstr "大多数的落地窗户被捣毁了."
+msgstr "グランドレベルウィンドウの大部分はとにかく逮捕されている。"
 
 #: ../../script/events/setpieces.js:1293
 msgid "a huge lizard scrambles up out of the darkness of an old metro station."
-msgstr "一个巨大的蜥蜴打破了老地铁站的宁静."
+msgstr "巨大なトカゲは、古い駅の闇から上ってスクランブルする。"
 
 #: ../../script/events/setpieces.js:1319
 msgid "descend"
-msgstr "拜访"
+msgstr "降りる"
 
 #: ../../script/events/setpieces.js:1329
 msgid "the shot echoes in the empty street."
-msgstr "枪响在街道上产生回声."
+msgstr "ショットは、空の通りにエコーします。"
 
 #: ../../script/events/setpieces.js:1367
 msgid "the soldier steps out from between the buildings, rifle raised."
-msgstr "士兵在建筑之间战斗, 奔跑和射击."
+msgstr "兵士が高く、建物、ライフルの間から繰り返します。"
 
 #: ../../script/events/setpieces.js:1405
 msgid "a frail man stands defiantly, blocking the path."
-msgstr "一个看上去挺斯文的人挡住去路并挑衅."
+msgstr "虚弱男は経路を遮断、ふてくされて立っている。"
 
 #: ../../script/events/setpieces.js:1448
 msgid "nothing but downcast eyes."
-msgstr "除了低垂的眼帘."
+msgstr "伏し目がちが、何も。"
 
 #: ../../script/events/setpieces.js:1449
 msgid "the people here were broken a long time ago."
-msgstr "这个人很旧以前就被杀死了."
+msgstr "ここの人々は、長い時間前に壊れている。"
 
 #: ../../script/events/setpieces.js:1464
 msgid "empty corridors."
-msgstr "空荡的走廊."
+msgstr "空の廊下。"
 
 #: ../../script/events/setpieces.js:1465
 msgid "the place has been swept clean by scavengers."
