@@ -1873,25 +1873,25 @@ msgstr "小さな郊外の先にある、空の家は焦げや剥離。"
 msgid ""
 "broken streetlights stand, rusting. light hasn't graced this place in a long "
 "time."
-msgstr "路灯都破烂锈迹斑斑, 这个地方失去光明很旧了."
+msgstr "壊れた街灯は、錆、立っている。光が長い時間でこの場所を飾っていません。"
 
 #: ../../script/events/setpieces.js:510
 msgid "the town lies abandoned, its citizens long dead"
-msgstr "小镇废弃在前方, 里面的居民已经死了很久了"
+msgstr "町の嘘は、その市民の長い死んで、捨てられた"
 
 #: ../../script/events/setpieces.js:513 ../../script/events/setpieces.js:1201
 msgid "explore"
-msgstr "探索"
+msgstr "探る"
 
 #: ../../script/events/setpieces.js:525
 msgid ""
 "where the windows of the schoolhouse aren't shattered, they're blackened "
 "with soot."
-msgstr "学校房屋的玻璃窗都没有碎掉, 但是都被熏黑了."
+msgstr "校舎の窓が粉々にされていない場合、それらはすすで黒くなっています。"
 
 #: ../../script/events/setpieces.js:526
 msgid "the double doors creak endlessly in the wind."
-msgstr "大门吱吱不停的摇曳在残风中."
+msgstr "二重扉が風に延々ときしみ。"
 
 #: ../../script/events/setpieces.js:535 ../../script/events/setpieces.js:573
 #: ../../script/events/setpieces.js:590 ../../script/events/setpieces.js:627
@@ -1905,176 +1905,176 @@ msgstr "大门吱吱不停的摇曳在残风中."
 #: ../../script/events/setpieces.js:1103 ../../script/events/setpieces.js:1146
 #: ../../script/events/setpieces.js:1167 ../../script/events/setpieces.js:1182
 msgid "leave town"
-msgstr "离开"
+msgstr "町を離れる"
 
 #: ../../script/events/setpieces.js:566
 msgid "ambushed on the street."
-msgstr "街头有埋伏."
+msgstr "路上で待ち伏せ。"
 
 # ?
 #: ../../script/events/setpieces.js:580
 msgid "a squat building up ahead."
-msgstr "前方有一坐建筑物."
+msgstr "スクワット先に構築。"
 
 #: ../../script/events/setpieces.js:581
 msgid "a green cross barely visible behind grimy windows."
-msgstr "在肮脏的窗子后面有一个绿十字."
+msgstr "汚れた窓の後ろにほとんど見えミドリ十字。"
 
 #: ../../script/events/setpieces.js:597
 msgid "a small cache of supplies is tucked inside a rusting locker."
-msgstr "生锈的锁柜里面有一些供给品."
+msgstr "物資の小さなキャッシュは、錆びたロッカーの中に隠れている。"
 
 #: ../../script/events/setpieces.js:657
 msgid "a scavenger waits just inside the door."
-msgstr "一个清道夫就在门里面."
+msgstr "スカベンジャーはちょうどドアの内側に待機します。"
 
 #: ../../script/events/setpieces.js:689
 msgid "a beast stands alone in an overgrown park."
-msgstr "有一头野兽坐在杂草丛生的公园内."
+msgstr "獣は生い茂った公園に一人で立っている。"
 
 #: ../../script/events/setpieces.js:703
 msgid "an overturned caravan is spread across the pockmarked street."
-msgstr "一个撞翻的大篷车中的物件洒落在整个街道."
+msgstr "覆さキャラバンはあばた通りの向こう側に広がる。"
 
 #: ../../script/events/setpieces.js:704
 msgid ""
 "it's been picked over by scavengers, but there's still some things worth "
 "taking."
-msgstr "拾荒者已经扫荡过一遍了, 但是应该还找得到一些有用的东西."
+msgstr "それはスカベンジャーに引き継が選んだが、取る価値のものがまだあるされています。"
 
 #: ../../script/events/setpieces.js:764
 msgid "a madman attacks, screeching."
-msgstr "一个疯子尖叫着攻击你."
+msgstr "狂人攻撃をきしませながら。"
 
 #: ../../script/events/setpieces.js:801
 msgid "a thug moves out of the shadows."
-msgstr "一个暴徒走出了阴影."
+msgstr "刺客は影の外に移動します。"
 
 #: ../../script/events/setpieces.js:833
 msgid "a beast charges out of a ransacked classroom."
-msgstr "一头野兽冲突了已经空荡荡的教室."
+msgstr "獣は物色教室の外に充電します。"
 
 #: ../../script/events/setpieces.js:847
 msgid "through the large gymnasium doors, footsteps can be heard."
-msgstr "在通过体育馆大门的时候, 脚步声清晰可闻."
+msgstr "大体育館のドアを通って、足音を聞くことができる。"
 
 #: ../../script/events/setpieces.js:848
 msgid "the torchlight casts a flickering glow down the hallway."
-msgstr "火炬照亮了走廊."
+msgstr "たいまつは、ちらつきが廊下をグローキャストします。"
 
 #: ../../script/events/setpieces.js:849
 msgid "the footsteps stop."
-msgstr "脚步声停了下来."
+msgstr "足音が停止します。"
 
 #: ../../script/events/setpieces.js:882
 msgid "another beast, draw by the noise, leaps out of a copse of trees."
-msgstr "通过噪声可以感觉到另外一头野兽, 在树林里面."
+msgstr "別の獣は、ノイズによる描き、木の雑木林から跳躍。"
 
 #: ../../script/events/setpieces.js:896
 msgid "something's causing a commotion a ways down the road."
-msgstr "有什么事情在下边的路上引起了骚动."
+msgstr "何かがやり方道騒ぎを引き起こしている。"
 
 #: ../../script/events/setpieces.js:897
 msgid "a fight, maybe."
-msgstr "可能是战斗."
+msgstr "戦い、多分。"
 
 #: ../../script/events/setpieces.js:912
 msgid ""
 "a small basket of food is hidden under a park bench, with a note attached."
-msgstr "一个装满食物的小篮子隐藏在公园的长椅下, 上面还有个纸条."
+msgstr "食品の小さなバスケットは付属のノートで、公園のベンチの下に隠されている。"
 
 #: ../../script/events/setpieces.js:913
 msgid "can't read the words."
-msgstr "看不懂写的什么."
+msgstr "言葉を読み取ることができません。"
 
 #: ../../script/events/setpieces.js:958
 msgid "a panicked scavenger bursts through the door, screaming."
-msgstr "一个惊慌的清道夫尖叫着闯过了大门."
+msgstr "パニックスカベンジャーは叫んで、ドアを通ってバースト。"
 
 #: ../../script/events/setpieces.js:995
 msgid "a man stands over a dead wanderer. notices he's not alone."
-msgstr "一个男人站在死去的流浪汉边上, 意识到他不是唯一的人类."
+msgstr "男は死んで放浪上で立っている。通知彼は一人ではありません。"
 
 #: ../../script/events/setpieces.js:1009
 msgid "scavenger had a small camp in the school."
-msgstr "清道夫有一个小营地在学校里面."
+msgstr "スカベンジャーは、学校の小さなキャンプを持っていた。"
 
 #: ../../script/events/setpieces.js:1010
 msgid "collected scraps spread across the floor like they fell from heaven."
-msgstr "收集的各种垃圾散落在地面上, 就好像是从天上下下来的."
+msgstr "彼らは天から落ちたような床の上スクラップを収集した。"
 
 #: ../../script/events/setpieces.js:1051
 msgid "scavenger'd been looking for supplies in here, it seems."
-msgstr "清道夫似乎一直在寻找各种物资."
+msgstr "スカベンジャーがここにある消耗品を探していた、それはそうです。"
 
 #: ../../script/events/setpieces.js:1052
 msgid "a shame to let what he'd found go to waste."
-msgstr "不好意思, 我笑纳了."
+msgstr "彼が発見したいものをできるように恥を無駄に。"
 
 #: ../../script/events/setpieces.js:1083
 msgid ""
 "beneath the wanderer's rags, clutched in one of its many hands, a glint of "
 "steel."
-msgstr "流浪汉身体下有一些东西, 手上也抓着很多, 闪闪发光."
+msgstr "放浪者のぼろの下、彼の多くの手の1、鋼の輝きに握りしめ。"
 
 #: ../../script/events/setpieces.js:1084
 msgid "worth killing for, it seems."
-msgstr "真值得一杀."
+msgstr "のために殺す価値は、それはそうです。"
 
 #: ../../script/events/setpieces.js:1110
 msgid "eye for an eye seems fair."
-msgstr "以牙还牙相当公平."
+msgstr "目には目を、公正と思われる。"
 
 #: ../../script/events/setpieces.js:1111
 msgid "always worked before, at least."
-msgstr "无往而不利."
+msgstr "常に少なくとも、前に働いていた。"
 
 #: ../../script/events/setpieces.js:1112
 msgid "picking the bones finds some useful trinkets."
-msgstr "骨头捡起来之后发现了一些小东西."
+msgstr "骨を拾うことはいくつかの有用な装身具を検索します。"
 
 #: ../../script/events/setpieces.js:1153
 msgid "some medicine abandoned in the drawers."
-msgstr "抽屉里面有一些治疗药剂."
+msgstr "引き出しに放棄されたいくつかの薬。"
 
 #: ../../script/events/setpieces.js:1174
 msgid "the clinic has been ransacked."
-msgstr "诊所已经被洗劫一空."
+msgstr "診療所は荒らされています。"
 
 #: ../../script/events/setpieces.js:1175
 msgid "only dust and stains remain."
-msgstr "只有污浊的尘土依旧."
+msgstr "唯一のほこりや汚れが残っている。"
 
 #: ../../script/events/setpieces.js:1190
 msgid "A Ruined City"
-msgstr "一座诅咒之城"
+msgstr "廃墟の街"
 
 #: ../../script/events/setpieces.js:1194
 msgid ""
 "a battered highway sign stands guard at the entrance to this once-great city."
-msgstr "一个可怜的高速公路标志坐落在这座曾经的大城市的入口."
+msgstr "虐待高速道路のサインは、このかつて偉大な都市の入り口にガードを立っている。"
 
 #: ../../script/events/setpieces.js:1195
 msgid ""
 "the towers that haven't crumbled jut from the landscape like the ribcage of "
 "some ancient beast."
-msgstr "曾经壮观的高塔就好比是野兽的身体突出部位一般诡异."
+msgstr "塔はいくつかの古代獣の胸郭のような風景から崩れていない。"
 
 #: ../../script/events/setpieces.js:1196
 msgid "might be things worth having still inside."
-msgstr "可能有一些有用的东西在里面."
+msgstr "まだ内部持つ価値なものかもしれません。"
 
 #: ../../script/events/setpieces.js:1198
 msgid "the towers of a decaying city dominate the skyline"
-msgstr "一个破损的高塔指向天际"
+msgstr "腐敗都市の塔はスカイラインを支配"
 
 #: ../../script/events/setpieces.js:1212
 msgid "the streets are empty."
-msgstr "街道都是空的."
+msgstr "通りは空です。"
 
 #: ../../script/events/setpieces.js:1213
 msgid "the air is filled with dust, driven relentlessly by the hard winds."
-msgstr "空气飘满了灰尘, 任凭风吹雨打."
+msgstr "空気が硬い風によって執拗に吹き飛ばさホコリが充填されている。"
 
 #: ../../script/events/setpieces.js:1221 ../../script/events/setpieces.js:1237
 #: ../../script/events/setpieces.js:1253 ../../script/events/setpieces.js:1269
@@ -2102,31 +2102,31 @@ msgstr "空气飘满了灰尘, 任凭风吹雨打."
 #: ../../script/events/setpieces.js:2729 ../../script/events/setpieces.js:2773
 #: ../../script/events/setpieces.js:2816
 msgid "leave city"
-msgstr "离开"
+msgstr "街を離れる"
 
 #: ../../script/events/setpieces.js:1228
 msgid "orange traffic cones are set across the street, faded and cracked."
-msgstr "橙色的交通警示标记平方在街道上, 不过都破烂得不行了."
+msgstr "オレンジ色のトラフィックコーンは、通りの向こう側に設定色あせやひび割れている。"
 
 #: ../../script/events/setpieces.js:1229
 msgid "lights flash through the alleys between buildings."
-msgstr "灯光闪烁在建筑的缝隙中."
+msgstr "ライトは建物の間の路地を通って点滅する。"
 
 #: ../../script/events/setpieces.js:1244
 msgid "a large shanty town sprawls across the streets."
-msgstr "一直巨大的棚屋延绵穿过了街区."
+msgstr "大貧民街は、街全体に広がって。"
 
 #: ../../script/events/setpieces.js:1245
 msgid "faces, darkened by soot and blood, stare out from crooked huts."
-msgstr "一张张灰黑布满血迹的脸从小破屋里面伸出来."
+msgstr "すすと血によって暗く顔は、曲がった小屋から外を眺める。"
 
 #: ../../script/events/setpieces.js:1260
 msgid "the shell of an abandoned hospital looms ahead."
-msgstr "一个废弃的医院坐落在前方."
+msgstr "放棄された病院のシェルが先に織機。"
 
 #: ../../script/events/setpieces.js:1276
 msgid "the old tower seems mostly intact."
-msgstr "塔的内部似乎保存完整."
+msgstr "古い塔は、ほとんど無傷でいるようだ。"
 
 #: ../../script/events/setpieces.js:1277
 msgid "the shell of a burned out car blocks the entrance."
