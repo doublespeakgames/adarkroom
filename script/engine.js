@@ -77,7 +77,8 @@
 		options: {
 			state: null,
 			debug: false,
-			log: false
+			log: false,
+      dropbox: true
 		},
 			
 		init: function(options) {
@@ -107,7 +108,7 @@
 			}
 			
 			$('<div>').attr('id', 'locationSlider').appendTo('#main');
-			
+
 			var menu = $('<div>')
 				.addClass('menu')
 				.appendTo('body');
@@ -157,8 +158,16 @@
 				.text(_('app store.'))
 				.click(function() { window.open('https://itunes.apple.com/us/app/a-dark-room/id736683061'); })
 				.appendTo(menu);
-				
-			
+
+      if(this.options.dropbox && Engine.Dropbox) {
+        this.dropbox = Engine.Dropbox.init();
+
+        $('<span>')
+            .addClass('menuBtn')
+            .text(_('dropbox.'))
+            .click(Engine.Dropbox.startDropbox)
+            .appendTo(menu);
+      }
 			
 			// Register keypress handlers
 			$('body').off('keydown').keydown(Engine.keyDown);
@@ -289,13 +298,19 @@
 			}
 		});
 	  },
+
+    generateExport64: function(){
+      var string64 = Base64.encode(localStorage.gameState);
+      string64 = string64.replace(/\s/g, '');
+      string64 = string64.replace(/\./g, '');
+      string64 = string64.replace(/\n/g, '');
+
+      return string64;
+    },
 	  
 	  export64: function() {
 	    Engine.saveGame();
-	    var string64 = Base64.encode(localStorage.gameState);
-	    string64 = string64.replace(/\s/g, '');
-	    string64 = string64.replace(/\./g, '');
-	    string64 = string64.replace(/\n/g, '');
+	    var string64 = Engine.generateExport64();
 	    Engine.enableSelection();
 	    Events.startEvent({
 	    	title: _('Export'),
