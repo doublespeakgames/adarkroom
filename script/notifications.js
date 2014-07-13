@@ -43,9 +43,29 @@ var Notifications = {
 		Engine.saveGame();
 	},
 	
+	clearHidden: function() {
+	
+		// To fix some memory usage issues, we clear notifications that have been hidden.
+		
+		// We use position().top here, because we know that the parent will be the same, so the position will be the same.
+		var bottom = $('#notifyGradient').position().top + $('#notifyGradient').outerHeight(true);
+		
+		$('.notification').each(function() {
+		
+			if($(this).position().top > bottom){
+				$(this).remove();
+			}
+		
+		});
+		
+	},
+	
 	printMessage: function(t) {
 		var text = $('<div>').addClass('notification').css('opacity', '0').text(t).prependTo('div#notifications');
-		text.animate({opacity: 1}, 500, 'linear');
+		text.animate({opacity: 1}, 500, 'linear', function() {
+			// Do this every time we add a new message, this way we never have a large backlog to iterate through. Keeps things faster.
+			Notifications.clearHidden();
+		});
 	},
 	
 	printQueue: function(module) {
