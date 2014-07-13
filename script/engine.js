@@ -112,10 +112,10 @@
 				.addClass('menu')
 				.appendTo('body');
 	
-			 var selectWrap = $('<span>')
-			 	.addClass('select-wrap')
-			 	.appendTo(menu);
-			 $('<select>')
+			var selectWrap = $('<span>')
+				.addClass('select-wrap')
+				.appendTo(menu);
+			$('<select>')
 				.addClass('menuBtn')
 				.append($('<option>').text("language."))
 				.append($('<option>').text("english").val("en"))
@@ -123,7 +123,7 @@
 				.change(Engine.switchLanguage)
 				.appendTo(selectWrap);
 				
-			 $('<span>')
+			$('<span>')
 				.addClass('lightsOff menuBtn')
 				.text(_('lights off.'))
 				.click(Engine.turnLightsOff)
@@ -140,7 +140,7 @@
 				.text(_('share.'))
 				.click(Engine.share)
 				.appendTo(menu);
-	      
+
 			$('<span>')
 				.addClass('menuBtn')
 				.text(_('save.'))
@@ -190,14 +190,11 @@
 		},
 		
 		browserValid: function() {
-			return location.search.indexOf('ignorebrowser=true') >= 0 || (
-					typeof Storage != 'undefined' &&
-					!oldIE);
+			return ( location.search.indexOf( 'ignorebrowser=true' ) >= 0 || ( typeof Storage != 'undefined' && !oldIE ) );
 		},
 		
 		isMobile: function() {
-			return location.search.indexOf('ignorebrowser=true') < 0 &&
-				/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+			return ( location.search.indexOf( 'ignorebrowser=true' ) < 0 && /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test( navigator.userAgent ) );
 		},
 		
 		saveGame: function() {
@@ -228,97 +225,103 @@
 			}
 		},
 		
-	  exportImport: function() {
-	    Events.startEvent({
-			title: 'Export / Import',
-			scenes: {
-				start: {
-					text: [_('export or import save data, for backing up'),
-					       _('or migrating computers')],
-					buttons: {
-						'export': {
-							text: _('export'),
-							onChoose: Engine.export64
-						},
-						'import': {
-							text: _('import'),
-							nextScene: {1: 'confirm'},
-						},
-						'cancel': {
-							text: _('cancel'),
-							nextScene: 'end'
+		exportImport: function() {
+			Events.startEvent({
+				title: 'Export / Import',
+				scenes: {
+					start: {
+						text: [_('export or import save data, for backing up'),
+						_('or migrating computers')],
+						buttons: {
+							'export': {
+								text: _('export'),
+								onChoose: Engine.export64
+							},
+							'import': {
+								text: _('import'),
+								nextScene: {
+									1: 'confirm'
+								},
+							},
+							'cancel': {
+								text: _('cancel'),
+								nextScene: 'end'
+							}
 						}
-					}
-				},
-				'confirm': {
-					text: [_('are you sure?'),
-					       _('if the code is invalid, all data will be lost.'),
-					       _('this is irreversible.')],
-					buttons: {
-						'yes': {
-							text: _('yes'),
-							nextScene: {1: 'inputImport'},
-							onChoose: Engine.enableSelection
-						},
-						'no': {
-							text: _('no'),
-							nextScene: 'end'
+					},
+					'confirm': {
+						text: [
+							_('are you sure?'),
+							_('if the code is invalid, all data will be lost.'),
+							_('this is irreversible.')
+						],
+						buttons: {
+							'yes': {
+								text: _('yes'),
+								nextScene: {1: 'inputImport'},
+								onChoose: Engine.enableSelection
+							},
+							'no': {
+								text: _('no'),
+								nextScene: 'end'
+							}
 						}
-					}
-				},
-				'inputImport': {
-					text: [_('put the save code here.')],
-					textarea: '',
-					buttons: {
-						'okay': {
-							text: _('import'),
-							nextScene: 'end',
-							onChoose: Engine.import64
-						},
-						'cancel': {
-							text: _('cancel'),
-							nextScene: 'end'
+					},
+					'inputImport': {
+						text: [
+							_('put the save code here.')
+						],
+						textarea: '',
+						buttons: {
+							'okay': {
+								text: _('import'),
+								nextScene: 'end',
+								onChoose: Engine.import64
+							},
+							'cancel': {
+								text: _('cancel'),
+								nextScene: 'end'
+							}
 						}
 					}
 				}
-			}
-		});
-	  },
+			});
+		},
 	  
-	  export64: function() {
-	    Engine.saveGame();
-	    var string64 = Base64.encode(localStorage.gameState);
-	    string64 = string64.replace(/\s/g, '');
-	    string64 = string64.replace(/\./g, '');
-	    string64 = string64.replace(/\n/g, '');
-	    Engine.enableSelection();
-	    Events.startEvent({
-	    	title: _('Export'),
-	    	scenes: {
-	    		start: {
-	    			text: [_('save this.')],
-	    			textarea: string64,
-	    			buttons: {
-	    				'done': {
-	    					text: _('got it'),
-	    					nextScene: 'end',
-	    					onChoose: Engine.disableSelection
-	    				}
-	    			}
-	    		}
-	    	}
-	    });
-	  },
+		export64: function() {
+			Engine.saveGame();
+			var string64 = Base64.encode(localStorage.gameState);
+			string64 = string64.replace(/\s/g, '');
+			string64 = string64.replace(/\./g, '');
+			string64 = string64.replace(/\n/g, '');
+			Engine.enableSelection();
+			Events.startEvent({
+				title: _('Export'),
+				scenes: {
+					start: {
+						text: [_('save this.')],
+						textarea: string64,
+						buttons: {
+							'done': {
+								text: _('got it'),
+								nextScene: 'end',
+								onChoose: Engine.disableSelection
+							}
+						}
+					}
+				}
+			});
+		},
 	  
-	  import64: function(string64) {
-		  Engine.disableSelection();
-	      string64 = string64.replace(/\s/g, '');
-	      string64 = string64.replace(/\./g, '');
-	      string64 = string64.replace(/\n/g, '');
-	      var decodedSave = Base64.decode(string64);
-	      localStorage.gameState = decodedSave;
-	      location.reload();
-	  },
+		import64: function(string64) {
+			Engine.disableSelection();
+			string64 = string64.replace(/\s/g, '');
+			string64 = string64.replace(/\./g, '');
+			string64 = string64.replace(/\n/g, '');
+			var decodedSave = Base64.decode(string64);
+			localStorage.gameState = decodedSave;
+			location.reload();
+		},
 	  
 		event: function(cat, act) {
 			if(typeof ga === 'function') {
@@ -349,15 +352,15 @@
 		},
 		
 		deleteSave: function(noReload) {
-	    	if(typeof Storage != 'undefined' && localStorage) {
-	    		var prestige = Prestige.get();
-	    		window.State = {};
-	    		localStorage.clear();
-	    		Prestige.set(prestige);
-	    	}
-	    	if(!noReload) {
-	    		location.reload();
-	    	}
+			if(typeof Storage != 'undefined' && localStorage) {
+				var prestige = Prestige.get();
+				window.State = {};
+				localStorage.clear();
+				Prestige.set(prestige);
+			}
+			if(!noReload) {
+				location.reload();
+			}
 		},
 		
 		share: function() {
@@ -383,17 +386,17 @@
 							},
 							'twitter': {
 								text: _('twitter'),
+								nextScene: 'end',
 								onChoose: function() {
 									window.open('https://twitter.com/intent/tweet?text=A%20Dark%20Room&url=' + Engine.SITE_URL, 'sharer', 'width=660,height=260,location=no,menubar=no,resizable=no,scrollbars=yes,status=no,toolbar=no');
-								},
-								nextScene: 'end'
+								}
 							},
 							'reddit': {
 								text: _('reddit'),
+								nextScene: 'end',
 								onChoose: function() {
 									window.open('http://www.reddit.com/submit?url=' + Engine.SITE_URL, 'sharer', 'width=960,height=700,location=no,menubar=no,resizable=no,scrollbars=yes,status=no,toolbar=no');
-								},
-								nextScene: 'end'
+								}
 							},
 							'close': {
 								text: _('close'),
@@ -402,52 +405,51 @@
 						}
 					}
 				}
-			}, {width: '400px'});
+			},
+			{
+				width: '400px'
+			});
 		},
 	
-	 	findStylesheet: function(title) {
-	 	  	for(var i=0; i<document.styleSheets.length; i++) {
-	 	      	var sheet = document.styleSheets[i];
-	 	      	if(sheet.title == title) {
-	 	        	return sheet;
-	 	      	}
-	 	    }
-	 	    return null;
-	 	},
+		findStylesheet: function(title) {
+			for(var i=0; i<document.styleSheets.length; i++) {
+				var sheet = document.styleSheets[i];
+				if(sheet.title == title) {
+					return sheet;
+				}
+			}
+			return null;
+		},
 	
-	 	isLightsOff: function() {
-	 		var darkCss = Engine.findStylesheet('darkenLights');
-	 		if (darkCss != null) {
-	 			if (darkCss.disabled)
-	 				return false;
-	 			return true;
-	 		}
-	 		return false;
-	 	},
+		isLightsOff: function() {
+			var darkCss = Engine.findStylesheet('darkenLights');
+			if ( darkCss != null && !darkCss.disabled ) {
+				return true;
+			}
+			return false;
+		},
 	 	
-	 	turnLightsOff: function() {
-	 	  	var darkCss = Engine.findStylesheet('darkenLights');
-	 	    if (darkCss == null) {
-	 	      	$('head').append('<link rel="stylesheet" href="css/dark.css" type="text/css" title="darkenLights" />');
-	 	      	Engine.turnLightsOff;
-	 	      	$('.lightsOff').text(_('lights on.'));
-	 	    }
-	 	  	else if (darkCss.disabled) {
-	 	    	darkCss.disabled = false;
-	 	    	$('.lightsOff').text(_('lights on.'));
-	 	  	}
-	 	   	else {
-	 	     	$("#darkenLights").attr("disabled", "disabled");
-	 	     	darkCss.disabled = true;
-	 	     	$('.lightsOff').text(_('lights off.'));
-	 	   	}
-	 	},
+		turnLightsOff: function() {
+			var darkCss = Engine.findStylesheet('darkenLights');
+			if (darkCss == null) {
+				$('head').append('<link rel="stylesheet" href="css/dark.css" type="text/css" title="darkenLights" />');
+				Engine.turnLightsOff;
+				$('.lightsOff').text(_('lights on.'));
+			} else if (darkCss.disabled) {
+				darkCss.disabled = false;
+				$('.lightsOff').text(_('lights on.'));
+			} else {
+				$("#darkenLights").attr("disabled", "disabled");
+				darkCss.disabled = true;
+				$('.lightsOff').text(_('lights off.'));
+			}
+		},
 		
 		// Gets a guid
 		getGuid: function() {
 			return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-			    var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
-			    return v.toString(16);
+				var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+				return v.toString(16);
 			});
 		},
 		
@@ -486,15 +488,15 @@
 					$('div#weapons').animate({opacity: 1}, 300);
 				}
 	
-				
-				
 				Notifications.printQueue(module);
+				
 			}
 		},
 	
-		// Move the stores panel beneath top_container (or to top: 0px if top_container
-		// either hasn't been filled in or is null) using transition_diff to sync with
-		// the animation in Engine.travelTo().
+		/* Move the stores panel beneath top_container (or to top: 0px if top_container
+		 * either hasn't been filled in or is null) using transition_diff to sync with
+		 * the animation in Engine.travelTo().
+		 */
 		moveStoresView: function(top_container, transition_diff) {
 			var stores = $('#storesContainer');
 	
@@ -510,8 +512,13 @@
 				stores.animate({top: '0px'}, {queue: false, duration: 300 * transition_diff});
 			}
 			else {
-				stores.animate({top: top_container.height() + 26 + 'px'},
-							   {queue: false, duration: 300 * transition_diff});
+				stores.animate({
+						top: top_container.height() + 26 + 'px'
+					},
+					{
+						queue: false, 
+						duration: 300 * transition_diff
+				});
 			}
 		},
 		
@@ -551,38 +558,38 @@
 			if(Engine.activeModule.keyUp) {
 				Engine.activeModule.keyUp(e);
 			}
-	        else
-	        {
-	            switch(e.which) {
-	                case 38: // Up
-	                case 87:
-	                    Engine.log('up');
-	                    break;
-	                case 40: // Down
-	                case 83:
-	                    Engine.log('down');
-	                    break;
-	                case 37: // Left
-	                case 65:
-	                    if(Engine.activeModule == Ship && Path.tab)
-	                        Engine.travelTo(Path);
-	                    else if(Engine.activeModule == Path && Outside.tab)
-	                        Engine.travelTo(Outside);
-	                    else if(Engine.activeModule == Outside && Room.tab)
-	                        Engine.travelTo(Room);
-	                    Engine.log('left');
-	                    break;
-	                case 39: // Right
-	                case 68:
-	                    if(Engine.activeModule == Room && Outside.tab)
-	                        Engine.travelTo(Outside);
-	                    else if(Engine.activeModule == Outside && Path.tab)
-	                        Engine.travelTo(Path);
-	                    else if(Engine.activeModule == Path && Ship.tab)
-	                        Engine.travelTo(Ship);
-	                    Engine.log('right');
-	                    break;
-	            }
+			else
+			{
+				switch(e.which) {
+					case 38: // Up
+					case 87:
+						Engine.log('up');
+						break;
+					case 40: // Down
+					case 83:
+						Engine.log('down');
+						break;
+					case 37: // Left
+					case 65:
+						if(Engine.activeModule == Ship && Path.tab)
+							Engine.travelTo(Path);
+						else if(Engine.activeModule == Path && Outside.tab)
+							Engine.travelTo(Outside);
+						else if(Engine.activeModule == Outside && Room.tab)
+							Engine.travelTo(Room);
+						Engine.log('left');
+						break;
+					case 39: // Right
+					case 68:
+						if(Engine.activeModule == Room && Outside.tab)
+							Engine.travelTo(Outside);
+						else if(Engine.activeModule == Outside && Path.tab)
+							Engine.travelTo(Path);
+						else if(Engine.activeModule == Path && Ship.tab)
+							Engine.travelTo(Ship);
+						Engine.log('right');
+						break;
+				}
 			}
 		
 			return false;
@@ -655,8 +662,7 @@
 
 //create jQuery Callbacks() to handle object events 
 $.Dispatch = function( id ) {
-	var callbacks,
-		topic = id && Engine.topics[ id ];
+	var callbacks, topic = id && Engine.topics[ id ];
 	if ( !topic ) {
 		callbacks = jQuery.Callbacks();
 		topic = {
