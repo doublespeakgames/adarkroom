@@ -20,11 +20,12 @@
 		_('hunter'),
 		_('trapper'),
 		_('tanner'),
+		_('grenade'),
+		_('bolas'),
 		_("charcutier"),
 		_('iron miner'),
 		_('coal miner'),
-		_('sulphur miner'),
-		_('armourer'),
+		_('sulphur miner'),  _('armourer'),
 		_('steelworker'),
 		_('bait'),
 		_('cured meat'),
@@ -43,7 +44,7 @@
 		_('not enough steel'),
 		_('baited trap'),
 		_('not enough scales'),
-		_('not enough teeth'),
+		_('not enough cloth'),  _('not enough teeth'),
 		_('not enough leather'),
 		_('the compass points east.'),
 		_('the compass points west.'),
@@ -54,6 +55,7 @@
 		_('the compass points southeast.'),
 		_('the compass points southwest.')
 	]; 
+
 	delete keywords;
 	
 	//translate text in css by overriding attributes
@@ -66,6 +68,8 @@
 		div#outfitting:before{ content: \''+ _("supplies:") + '\'}\
 		div#perks:before{ content: \''+ _("perks:") + '\'}\
 		div#lootButtons:before { content: \''+ _("take:") + '\'}\
-		div#village:before{ content: \''+_('forest')+'\'}\
+		div#dropMenu:before { content: \''+ _("drop:") + '\'}\
+		div#village.noHuts:before { content: \'' + _("forest") + '\'}\
+		div#village:before { content: \'' + _("village") + '\'}\
 	').appendTo($('head'));
 })();

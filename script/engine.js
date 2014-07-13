@@ -112,17 +112,21 @@
 				.addClass('menu')
 				.appendTo('body');
 	
-			var selectWrap = $('<span>')
-				.addClass('select-wrap')
-				.appendTo(menu);
-			$('<select>')
-				.addClass('menuBtn')
-				.append($('<option>').text("language."))
-				.append($('<option>').text("english").val("en"))
-				.append($('<option>').text("français").val("fr"))
-				.change(Engine.switchLanguage)
-				.appendTo(selectWrap);
+			if(typeof langs != 'undefined'){
+				var selectWrap = $('<span>')
+					.addClass('select-wrap')
+					.appendTo(menu);
+				var select = $('<select>')
+					.addClass('menuBtn')
+					.append($('<option>').text("language."))
+					.change(Engine.switchLanguage)
+					.appendTo(selectWrap);
 				
+				$.each(langs, function(name,display){
+					$('<option>').text(display).val(name).appendTo(select)
+				})
+			}
+
 			$('<span>')
 				.addClass('lightsOff menuBtn')
 				.text(_('lights off.'))
@@ -226,27 +230,26 @@
 		},
 		
 		exportImport: function() {
-			Events.startEvent({
-				title: 'Export / Import',
-				scenes: {
-					start: {
-						text: [_('export or import save data, for backing up'),
-						_('or migrating computers')],
-						buttons: {
-							'export': {
-								text: _('export'),
-								onChoose: Engine.export64
-							},
-							'import': {
-								text: _('import'),
-								nextScene: {
-									1: 'confirm'
-								},
-							},
-							'cancel': {
-								text: _('cancel'),
-								nextScene: 'end'
-							}
+		Events.startEvent({
+			title: _('Export / Import'),
+			scenes: {
+				start: {
+					text: [
+						_('export or import save data, for backing up'),
+						_('or migrating computers')
+					],
+					buttons: {
+						'export': {
+							text: _('export'),
+							onChoose: Engine.export64
+						},
+						'import': {
+							text: _('import'),
+							nextScene: {1: 'confirm'},
+						},
+						'cancel': {
+							text: _('cancel'),
+							nextScene: 'end'
 						}
 					},
 					'confirm': {
@@ -263,6 +266,7 @@
 							},
 							'no': {
 								text: _('no'),
+
 								nextScene: 'end'
 							}
 						}
@@ -282,6 +286,21 @@
 								text: _('cancel'),
 								nextScene: 'end'
 							}
+						}
+					}
+				},
+				'inputImport': {
+					text: [_('put the save code here.')],
+					textarea: '',
+					buttons: {
+						'okay': {
+							text: _('import'),
+							nextScene: 'end',
+							onChoose: Engine.import64
+						},
+						'cancel': {
+							text: _('cancel'),
+							nextScene: 'end'
 						}
 					}
 				}
@@ -311,8 +330,9 @@
 					}
 				}
 			});
+			Engine.autoSelect('#description textarea')
 		},
-	  
+
 		import64: function(string64) {
 			Engine.disableSelection();
 			string64 = string64.replace(/\s/g, '');
@@ -322,7 +342,7 @@
 			localStorage.gameState = decodedSave;
 			location.reload();
 		},
-	  
+	
 		event: function(cat, act) {
 			if(typeof ga === 'function') {
 				ga('send', 'event', cat, act);
@@ -428,7 +448,7 @@
 			}
 			return false;
 		},
-	 	
+		
 		turnLightsOff: function() {
 			var darkCss = Engine.findStylesheet('darkenLights');
 			if (darkCss == null) {
@@ -550,7 +570,7 @@
 					Engine.activeModule.keyDown(e);
 				}
 			}
-			return false;
+			return !(jQuery.inArray(window.event.keycode, [37,38,39,40]));
 		},
 		
 		keyUp: function(e) {
@@ -627,6 +647,10 @@
 		enableSelection: function() {
 			document.onselectstart = eventPassthrough;
 			document.onmousedown = eventPassthrough;
+		},
+		
+		autoSelect: function(selector) {
+			$(selector).focus().select();
 		},
 		
 		handleStateUpdates: function(e){
