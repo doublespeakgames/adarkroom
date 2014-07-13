@@ -409,39 +409,38 @@ var Space = {
 							},
 							complete: function() {
 								Engine.GAME_OVER = true;
-
-				                Score.save();
-				                Prestige.save();
-				                
-				                $('<center>')
-				                	.addClass('centerCont')
-			                		.appendTo('body');
-				                $('<span>')
-				                	.addClass('endGame')
-			                		.text(_('score for this game: {0}', Score.calculateScore()))
-			                		.appendTo('.centerCont')
-			                		.animate({opacity:1},1500);
-				                $('<br />')
-				                	.appendTo('.centerCont');
-				                $('<span>')
-				                	.addClass('endGame')
-			                		.text(_('total score: {0}', Prestige.get().score))
-			                		.appendTo('.centerCont')
-			                		.animate({opacity:1},1500);
-				                $('<br />')
-				                	.appendTo('.centerCont');
-				                $('<br />')
-				                	.appendTo('.centerCont');
-				                $('#starsContainer').remove();
-					    		$('#content, #notifications').remove();
-					    		$('<span>')
-				                	.addClass('endGame endGameRestart')
-				                	.text(_('restart.'))
-				                	.click(Engine.confirmDelete)
-				                	.appendTo('.centerCont')
-				                	.animate({opacity:1},1500);
-					    		Engine.options = {};
-				                Engine.deleteSave(true);
+								Score.save();
+								Prestige.save();
+						
+								$('<center>')
+									.addClass('centerCont')
+									.appendTo('body');
+								$('<span>')
+									.addClass('endGame')
+									.text(_('score for this game: {0}', Score.calculateScore()))
+									.appendTo('.centerCont')
+									.animate({opacity:1},1500);
+								$('<br />')
+									.appendTo('.centerCont');
+								$('<span>')
+									.addClass('endGame')
+									.text(_('total score: {0}', Prestige.get().score))
+									.appendTo('.centerCont')
+									.animate({opacity:1},1500);
+								$('<br />')
+									.appendTo('.centerCont');
+								$('<br />')
+									.appendTo('.centerCont');
+								$('#starsContainer').remove();
+								$('#content, #notifications').remove();
+								$('<span>')
+									.addClass('endGame endGameRestart')
+									.text(_('restart.'))
+									.click(Engine.confirmDelete)
+									.appendTo('.centerCont')
+									.animate({opacity:1},1500);
+								Engine.options = {};
+								Engine.deleteSave(true);
 							}
 						});
 					}, 2000);
