@@ -230,51 +230,67 @@
 		},
 		
 		exportImport: function() {
-		Events.startEvent({
-			title: _('Export / Import'),
-			scenes: {
-				start: {
-					text: [
-						_('export or import save data, for backing up'),
-						_('or migrating computers')
-					],
-					buttons: {
-						'export': {
-							text: _('export'),
-							onChoose: Engine.export64
-						},
-						'import': {
-							text: _('import'),
-							nextScene: {1: 'confirm'},
-						},
-						'cancel': {
-							text: _('cancel'),
-							nextScene: 'end'
-						}
-					},
-					'confirm': {
+			Events.startEvent({
+				title: _('Export / Import'),
+				scenes: {
+					start: {
 						text: [
-							_('are you sure?'),
-							_('if the code is invalid, all data will be lost.'),
-							_('this is irreversible.')
+							_('export or import save data, for backing up'),
+							_('or migrating computers')
 						],
 						buttons: {
-							'yes': {
-								text: _('yes'),
-								nextScene: {1: 'inputImport'},
-								onChoose: Engine.enableSelection
+							'export': {
+								text: _('export'),
+								onChoose: Engine.export64
 							},
-							'no': {
-								text: _('no'),
-
+							'import': {
+								text: _('import'),
+								nextScene: {1: 'confirm'},
+							},
+							'cancel': {
+								text: _('cancel'),
 								nextScene: 'end'
+							}
+						},
+						'confirm': {
+							text: [
+								_('are you sure?'),
+								_('if the code is invalid, all data will be lost.'),
+								_('this is irreversible.')
+							],
+							buttons: {
+								'yes': {
+									text: _('yes'),
+									nextScene: {1: 'inputImport'},
+									onChoose: Engine.enableSelection
+								},
+								'no': {
+									text: _('no'),
+	
+									nextScene: 'end'
+								}
+							}
+						},
+						'inputImport': {
+							text: [
+								_('put the save code here.')
+							],
+							textarea: '',
+							buttons: {
+								'okay': {
+									text: _('import'),
+									nextScene: 'end',
+									onChoose: Engine.import64
+								},
+								'cancel': {
+									text: _('cancel'),
+									nextScene: 'end'
+								}
 							}
 						}
 					},
 					'inputImport': {
-						text: [
-							_('put the save code here.')
-						],
+						text: [_('put the save code here.')],
 						textarea: '',
 						buttons: {
 							'okay': {
@@ -288,25 +304,10 @@
 							}
 						}
 					}
-				},
-				'inputImport': {
-					text: [_('put the save code here.')],
-					textarea: '',
-					buttons: {
-						'okay': {
-							text: _('import'),
-							nextScene: 'end',
-							onChoose: Engine.import64
-						},
-						'cancel': {
-							text: _('cancel'),
-							nextScene: 'end'
-						}
-					}
 				}
 			});
 		},
-	  
+			  
 		export64: function() {
 			Engine.saveGame();
 			var string64 = Base64.encode(localStorage.gameState);
