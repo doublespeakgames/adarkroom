@@ -1,14 +1,26 @@
-(function (Engine, Dropbox) {
+(function (Engine, Events, Dropbox, $) {
 
-  if (!Engine) return false;  // Game Engine not available
-  if (!Dropbox) return false; // Dropbox Connector not available
+  /**
+   * Module that enables a save of the gamestate to the dropbox datastore
+   * @see https://www.dropbox.com/developers/datastore
+   *
+   * The dropbox datastore (dbds) connector lets you save your data to your own dropbox datastore
+   * without jamming files to it.
+   *
+   * This connector uses the game engines own base64 encoder.
+   */
 
-  var DropboxConnector = window.Engine.Dropbox = {
+  'use strict';
+
+  if (!Engine) { return false; }  // Game Engine not available
+  if (!Dropbox) { return false; } // Dropbox Connector not available
+
+  var DropboxConnector = {
 
     options: {
       log: false,
       key: 'YOUR_DROPBOX_APP_KEY',   // get one at https://www.dropbox.com/developers/apps
-      table: 'adarkroom'             //
+      table: 'adarkroom'             // use whatever you like
     },
 
     client: false,
@@ -19,8 +31,8 @@
 
     init: function (options) {
       this.options = $.extend(
-          this.options,
-          options
+        this.options,
+        options
       );
 
       this._log = this.options.log;
@@ -31,7 +43,6 @@
       return this;
     },
 
-
     startDropbox: function () {
       if (!DropboxConnector.client || !DropboxConnector.table) {
         DropboxConnector.startDropboxConnectEvent();
@@ -39,6 +50,12 @@
         DropboxConnector.startDropboxImportEvent();
       }
     },
+
+    /**
+     * ******
+     * Events
+     * ******
+     */
 
     startDropboxConnectEvent: function () {
       Events.startEvent({
@@ -51,7 +68,7 @@
                 text: _('connect'),
                 nextScene: 'end',
                 onChoose: function () {
-                  DropboxConnector.connectToDropbox(DropboxConnector.startDropboxImportEvent)
+                  DropboxConnector.connectToDropbox(DropboxConnector.startDropboxImportEvent);
                 }
               },
               'cancel': {
@@ -94,7 +111,7 @@
           },
           saveToSlot: {
             text: [_('choose one slot to save to')],
-            buttons: function () {
+            buttons: (function () {
               var buttons = {};
 
               $.each(DropboxConnector.savegames, function (n, savegame) {
@@ -106,23 +123,23 @@
                     // timeout prevents error due to fade out animation of the previous event
                     window.setTimeout(function () {
                       DropboxConnector.log('Save to slot ' + n);
-                      DropboxConnector.saveGameToDropbox(n, DropboxConnector.savedtoDropboxEvent)
+                      DropboxConnector.saveGameToDropbox(n, DropboxConnector.savedtoDropboxEvent);
                     }, 1000);
                   }
                 };
               });
 
-              buttons['cancel'] = {
+              buttons.cancel = {
                 text: _('cancel'),
                 nextScene: 'end'
               };
 
               return buttons;
-            }()
+            }())
           },
           loadFromSlot: {
             text: [_('choose one slot to load from')],
-            buttons: function () {
+            buttons: (function () {
               var buttons = {};
 
               $.each(DropboxConnector.savegames, function (n, savegame) {
@@ -135,20 +152,20 @@
                       // timeout prevents error due to fade out animation of the previous event
                       window.setTimeout(function () {
                         DropboxConnector.log('Load from slot ' + n);
-                        DropboxConnector.loadGameFromDropbox(n)
+                        DropboxConnector.loadGameFromDropbox(n);
                       }, 1000);
                     }
                   };
                 }
               });
 
-              buttons['cancel'] = {
+              buttons.cancel = {
                 text: _('cancel'),
                 nextScene: 'end'
               };
 
               return buttons;
-            }()
+            }())
           }
         }
       });
@@ -172,6 +189,18 @@
       });
     },
 
+    /**
+     * ***************
+     * functional code
+     * ***************
+     */
+
+    /**
+     * Initiate dropbox connection
+     *
+     * @param interactive
+     * @param callback
+     */
     connectToDropbox: function (interactive, callback) {
 
       DropboxConnector.log('start dropbox');
@@ -204,7 +233,7 @@
 
             DropboxConnector.log("Got savegames", DropboxConnector.savegames);
 
-            if (typeof callback == "function") {
+            if (typeof callback === "function") {
               callback.call(DropboxConnector.table);
             }
           }
@@ -214,8 +243,12 @@
       }
     },
 
+    /**
+     * Requests your savegames fom dbds
+     *
+     * @returns {*}
+     */
     loadGamesFromDropbox: function () {
-
       var savegames = DropboxConnector.savegames;
 
       $.each(savegames, function (n) {
@@ -226,11 +259,15 @@
       return savegames;
     },
 
+    /**
+     * Imports a gamestate of a given slotnumber to your game
+     *
+     * @param slotnumber
+     */
     loadGameFromDropbox: function (slotnumber) {
 
       var table = DropboxConnector.table;
       var id = DropboxConnector.prepareSavegameID(slotnumber);
-
       var results = table.query({savegameId: id});
       var record = results[0];
 
@@ -239,6 +276,12 @@
       }
     },
 
+    /**
+     * Saves a gamestate to a given slot in dbds
+     *
+     * @param slotnumber
+     * @param callback
+     */
     saveGameToDropbox: function (slotnumber, callback) {
 
       var table = DropboxConnector.table;
@@ -251,7 +294,7 @@
         timestamp: new Date().getTime()
       };
 
-      if (DropboxConnector.savegames[slotnumber]) { // slot aleady user -> overwrite
+      if (DropboxConnector.savegames[slotnumber]) { // slot aleady used -> overwrite
         record = DropboxConnector.savegames[slotnumber];
         try {
           record.update(saveGame);
@@ -271,20 +314,14 @@
           success = false;
         }
       }
-      if (typeof callback == "function") {
+      if (typeof callback === "function") {
         callback(success);
       }
     },
 
-    prepareSavegameID: function (slotnumber) {
-      return 'adarkroom_savegame_' + slotnumber;
-    },
-
-    prepareSaveDate: function (timestamp) {
-      var date = new Date(timestamp);
-      return date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
-    },
-
+    /**
+     * Terminates the connection to your db account
+     */
     signout: function () {
       DropboxConnector.client.signOut({}, function (error) {
         if (error) {
@@ -298,11 +335,28 @@
       });
     },
 
+    /**
+     * **************
+     * Helper methods
+     * **************
+     */
+
+    prepareSavegameID: function (slotnumber) {
+      return 'adarkroom_savegame_' + slotnumber;
+    },
+
+    prepareSaveDate: function (timestamp) {
+      var date = new Date(timestamp);
+      return date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
+    },
+
     log: function () {
       if (this._log) {
         console.log(arguments);
       }
     }
-  }
+  };
 
-})(window.Engine, window.Dropbox);
+  Engine.Dropbox = DropboxConnector;
+
+})(Engine, Events, Dropbox, jQuery);
