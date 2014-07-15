@@ -1,2 +1,13 @@
 /.settings
-*.TODO
+
+      function getLevel(points)
+{
+  var level = -1 + Math.sqrt(4 + points/20);
+
+  // Round down to nearest level
+  return Math.floor(level);
+}
+  function getPoints(level)
+{
+  return 20*(level-1)*(level+3);
+}
