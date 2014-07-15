@@ -1,5 +1,5 @@
 /.settings
-*.TODO
+
       function getLevel(points)
 {
   var level = -1 + Math.sqrt(4 + points/20);
