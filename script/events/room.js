@@ -104,7 +104,7 @@ Events.Room = [
 			return Engine.activeModule == Room && $SM.get('stores.wood');
 		},
 		scenes: {
-			start: {
+			'start': {
 				text: [
 			       _('scratching noises can be heard from the store room.'),
 			       _('something\'s in there.')
@@ -121,7 +121,7 @@ Events.Room = [
 					}
 				}
 			},
-			scales: {
+			'scales': {
 				text: [
 			       _('some wood is missing.'),
 			       _('the ground is littered with small scales')
@@ -141,7 +141,7 @@ Events.Room = [
 			    	}
 			    }
 			},
-			teeth: {
+			'teeth': {
 				text: [
 			       _('some wood is missing.'),
 			       _('the ground is littered with small teeth')
@@ -161,7 +161,7 @@ Events.Room = [
 			    	}
 			    }
 			},
-			cloth: {
+			'cloth': {
 				text: [
 			       _('some wood is missing.'),
 			       _('the ground is littered with scraps of cloth')
@@ -189,7 +189,7 @@ Events.Room = [
 			return Engine.activeModule == Room && $SM.get('stores.fur');
 		},
 		scenes: {
-			start: {
+			'start': {
 				text: [
 			       _('a beggar arrives.'),
 			       _('asks for any spare furs to keep him warm at night.')
@@ -212,7 +212,7 @@ Events.Room = [
 					}
 				}
 			},
-			scales: {
+			'scales': {
 				reward: { scales: 20 },
 				text: [
 			       _('the beggar expresses his thanks.'),
@@ -225,7 +225,7 @@ Events.Room = [
 			    	}
 			    }
 			},
-			teeth: {
+			'teeth': {
 				reward: { teeth: 20 },
 				text: [
 			       _('the beggar expresses his thanks.'),
@@ -238,7 +238,7 @@ Events.Room = [
 			    	}
 			    }
 			},
-			cloth: {
+			'cloth': {
 				reward: { cloth: 20 },
 				text: [
 			       _('the beggar expresses his thanks.'),
@@ -260,7 +260,7 @@ Events.Room = [
 			return Engine.activeModule == Room && $SM.get('stores.wood');
 		},
 		scenes: {
-			start: {
+			'start': {
 				text: [
 			       _('a wanderer arrives with an empty cart. says if he leaves with wood, he\'ll be back with more.'),
 			       _("builder's not sure he's to be trusted.")
@@ -330,7 +330,7 @@ Events.Room = [
 			return Engine.activeModule == Room && $SM.get('stores.fur');
 		},
 		scenes: {
-			start: {
+			'start': {
 				text: [
 			       _('a wanderer arrives with an empty cart. says if she leaves with furs, she\'ll be back with more.'),
 			       _("builder's not sure she's to be trusted.")
