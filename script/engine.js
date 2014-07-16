@@ -125,7 +125,7 @@
 				
 				$.each(langs, function(name,display){
 					$('<option>').text(display).val(name).appendTo(select)
-				})
+				});
 			}
 			
 				
