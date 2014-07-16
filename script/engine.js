@@ -78,7 +78,7 @@
 			state: null,
 			debug: false,
 			log: false,
-			dropbox: true
+			dropbox: false
 		},
 			
 		init: function(options) {
