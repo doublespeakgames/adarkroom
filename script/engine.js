@@ -78,7 +78,7 @@
 			state: null,
 			debug: false,
 			log: false,
-      dropbox: true
+			dropbox: true
 		},
 			
 		init: function(options) {
@@ -152,37 +152,37 @@
 				.text(_('save.'))
 				.click(Engine.exportImport)
 				.appendTo(menu);
-				
+
+			if(this.options.dropbox && Engine.Dropbox) {
+				this.dropbox = Engine.Dropbox.init();
+
+				$('<span>')
+					.addClass('menuBtn')
+					.text(_('dropbox.'))
+					.click(Engine.Dropbox.startDropbox)
+					.appendTo(menu);
+			}
+			
 			$('<span>')
 				.addClass('menuBtn')
 				.text(_('app store.'))
 				.click(function() { window.open('https://itunes.apple.com/us/app/a-dark-room/id736683061'); })
 				.appendTo(menu);
-
-      if(this.options.dropbox && Engine.Dropbox) {
-        this.dropbox = Engine.Dropbox.init();
-
-        $('<span>')
-            .addClass('menuBtn')
-            .text(_('dropbox.'))
-            .click(Engine.Dropbox.startDropbox)
-            .appendTo(menu);
-      }
 			
 			// Register keypress handlers
 			$('body').off('keydown').keydown(Engine.keyDown);
 			$('body').off('keyup').keyup(Engine.keyUp);
-	
+
 			// Register swipe handlers
 			swipeElement = $('#outerSlider');
 			swipeElement.on('swipeleft', Engine.swipeLeft);
 			swipeElement.on('swiperight', Engine.swipeRight);
 			swipeElement.on('swipeup', Engine.swipeUp);
 			swipeElement.on('swipedown', Engine.swipeDown);
-			
-			//subscribe to stateUpdates
+		
+			// subscribe to stateUpdates
 			$.Dispatch('stateUpdate').subscribe(Engine.handleStateUpdates);
-	
+
 			$SM.init();
 			Notifications.init();
 			Events.init();

@@ -19,8 +19,8 @@
 
     options: {
       log: false,
-      key: 'YOUR_DROPBOX_APP_KEY',   // get one at https://www.dropbox.com/developers/apps
-      table: 'adarkroom'             // use whatever you like
+      key: 'q7vyvfsakyfmp3o',
+      table: 'adarkroom'
     },
 
     client: false,
