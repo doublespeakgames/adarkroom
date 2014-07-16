@@ -51,7 +51,7 @@ var StateManager = {
 		var words = stateName.split(/[.\[\]'"]+/);
 		//for some reason there are sometimes empty strings
 		for (var i = 0; i < words.length; i++) {
-			if (words[i] == '') {         
+			if (words[i] == '') {
 				words.splice(i, 1);
 				i--;
 			}
