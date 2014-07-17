@@ -316,13 +316,19 @@
 				}
 			});
 		},
-			  
-		export64: function() {
-			Engine.saveGame();
+
+		generateExport64: function(){
 			var string64 = Base64.encode(localStorage.gameState);
 			string64 = string64.replace(/\s/g, '');
 			string64 = string64.replace(/\./g, '');
 			string64 = string64.replace(/\n/g, '');
+
+			return string64;
+		},
+
+		export64: function() {
+			Engine.saveGame();
+			var string64 = Engine.generateExport64();
 			Engine.enableSelection();
 			Events.startEvent({
 				title: _('Export'),
@@ -339,58 +345,26 @@
 						}
 					}
 				}
-			}
-		});
-	  },
+			});
+			Engine.autoSelect('#description textarea')
+		},
 
-    generateExport64: function(){
-      var string64 = Base64.encode(localStorage.gameState);
-      string64 = string64.replace(/\s/g, '');
-      string64 = string64.replace(/\./g, '');
-      string64 = string64.replace(/\n/g, '');
+		import64: function(string64) {
+			Engine.disableSelection();
+			string64 = string64.replace(/\s/g, '');
+			string64 = string64.replace(/\./g, '');
+			string64 = string64.replace(/\n/g, '');
+			var decodedSave = Base64.decode(string64);
+			localStorage.gameState = decodedSave;
+			location.reload();
+		},
 
-      return string64;
-    },
-	  
-	  export64: function() {
-	    Engine.saveGame();
-	    var string64 = Engine.generateExport64();
-	    Engine.enableSelection();
-	    Events.startEvent({
-	    	title: _('Export'),
-	    	scenes: {
-	    		start: {
-	    			text: [_('save this.')],
-	    			textarea: string64,
-	    			buttons: {
-	    				'done': {
-	    					text: _('got it'),
-	    					nextScene: 'end',
-	    					onChoose: Engine.disableSelection
-	    				}
-	    			}
-	    		}
-	    	}
-	    });
-	    Engine.autoSelect('#description textarea')
-	  },
-	  
-	  import64: function(string64) {
-		  Engine.disableSelection();
-	      string64 = string64.replace(/\s/g, '');
-	      string64 = string64.replace(/\./g, '');
-	      string64 = string64.replace(/\n/g, '');
-	      var decodedSave = Base64.decode(string64);
-	      localStorage.gameState = decodedSave;
-	      location.reload();
-	  },
-	  
 		event: function(cat, act) {
 			if(typeof ga === 'function') {
 				ga('send', 'event', cat, act);
 			}
 		},
-		
+	
 		confirmDelete: function() {
 			Events.startEvent({
 				title: _('Restart?'),
@@ -412,7 +386,7 @@
 				}
 			});
 		},
-		
+	
 		deleteSave: function(noReload) {
 			if(typeof Storage != 'undefined' && localStorage) {
 				var prestige = Prestige.get();
@@ -424,7 +398,7 @@
 				location.reload();
 			}
 		},
-		
+	
 		share: function() {
 			Events.startEvent({
 				title: _('Share'),
@@ -472,7 +446,7 @@
 				width: '400px'
 			});
 		},
-	
+
 		findStylesheet: function(title) {
 			for(var i=0; i<document.styleSheets.length; i++) {
 				var sheet = document.styleSheets[i];
@@ -482,7 +456,7 @@
 			}
 			return null;
 		},
-	
+
 		isLightsOff: function() {
 			var darkCss = Engine.findStylesheet('darkenLights');
 			if ( darkCss != null && !darkCss.disabled ) {
@@ -490,7 +464,7 @@
 			}
 			return false;
 		},
-		
+	
 		turnLightsOff: function() {
 			var darkCss = Engine.findStylesheet('darkenLights');
 			if (darkCss == null) {
@@ -506,7 +480,7 @@
 				$('.lightsOff').text(_('lights off.'));
 			}
 		},
-		
+	
 		// Gets a guid
 		getGuid: function() {
 			return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -514,30 +488,30 @@
 				return v.toString(16);
 			});
 		},
-		
+	
 		activeModule: null,
-		
+	
 		travelTo: function(module) {
 			if(Engine.activeModule != module) {
 				var currentIndex = Engine.activeModule ? $('.location').index(Engine.activeModule.panel) : 1;
 				$('div.headerButton').removeClass('selected');
 				module.tab.addClass('selected');
-	
+
 				var slider = $('#locationSlider');
 				var stores = $('#storesContainer');
 				var panelIndex = $('.location').index(module.panel);
 				var diff = Math.abs(panelIndex - currentIndex);
 				slider.animate({left: -(panelIndex * 700) + 'px'}, 300 * diff);
-	
+
 				if($SM.get('stores.wood') != undefined) {
 				// FIXME Why does this work if there's an animation queue...?
 					stores.animate({right: -(panelIndex * 700) + 'px'}, 300 * diff);
 				}
-				
+			
 				Engine.activeModule = module;
-	
+
 				module.onArrival(diff);
-	
+
 				if(Engine.activeModule == Room || Engine.activeModule == Path) {
 					// Don't fade out the weapons if we're switching to a module
 					// where we're going to keep showing them anyway.
@@ -545,28 +519,28 @@
 						$('div#weapons').animate({opacity: 0}, 300);
 					}
 				}
-	
+
 				if(module == Room || module == Path) {
 					$('div#weapons').animate({opacity: 1}, 300);
 				}
-	
+
 				Notifications.printQueue(module);
-				
+			
 			}
 		},
-	
+
 		/* Move the stores panel beneath top_container (or to top: 0px if top_container
 		 * either hasn't been filled in or is null) using transition_diff to sync with
 		 * the animation in Engine.travelTo().
 		 */
 		moveStoresView: function(top_container, transition_diff) {
 			var stores = $('#storesContainer');
-	
+
 			// If we don't have a storesContainer yet, leave.
 			if(typeof(stores) === 'undefined') return;
-	
+
 			if(typeof(transition_diff) === 'undefined') transition_diff = 1;
-	
+
 			if(top_container === null) {
 				stores.animate({top: '0px'}, {queue: false, duration: 300 * transition_diff});
 			}
@@ -583,28 +557,28 @@
 				});
 			}
 		},
-		
+	
 		log: function(msg) {
 			if(this._log) {
 				console.log(msg);
 			}
 		},
-		
+	
 		updateSlider: function() {
 			var slider = $('#locationSlider');
 			slider.width((slider.children().length * 700) + 'px');
 		},
-		
+	
 		updateOuterSlider: function() {
 			var slider = $('#outerSlider');
 			slider.width((slider.children().length * 700) + 'px');
 		},
-		
+	
 		getIncomeMsg: function(num, delay) {
 			return _("{0} per {1}s", (num > 0 ? "+" : "") + num, delay);
 			//return (num > 0 ? "+" : "") + num + " per " + delay + "s";
 		},
-		
+	
 		keyDown: function(e) {
 			if(!Engine.keyPressed && !Engine.keyLock) {
 				Engine.pressed = true;
@@ -614,7 +588,7 @@
 			}
 			return !(jQuery.inArray(window.event.keycode, [37,38,39,40]));
 		},
-		
+	
 		keyUp: function(e) {
 			Engine.pressed = false;
 			if(Engine.activeModule.keyUp) {
@@ -653,52 +627,52 @@
 						break;
 				}
 			}
-		
+	
 			return false;
 		},
-	
+
 		swipeLeft: function(e) {
 			if(Engine.activeModule.swipeLeft) {
 				Engine.activeModule.swipeLeft(e);
 			}
 		},
-	
+
 		swipeRight: function(e) {
 			if(Engine.activeModule.swipeRight) {
 				Engine.activeModule.swipeRight(e);
 			}
 		},
-	
+
 		swipeUp: function(e) {
 			if(Engine.activeModule.swipeUp) {
 				Engine.activeModule.swipeUp(e);
 			}
 		},
-	
+
 		swipeDown: function(e) {
 			if(Engine.activeModule.swipeDown) {
 				Engine.activeModule.swipeDown(e);
 			}
 		},
-	
+
 		disableSelection: function() {
 			document.onselectstart = eventNullifier; // this is for IE
 			document.onmousedown = eventNullifier; // this is for the rest
 		},
-	
+
 		enableSelection: function() {
 			document.onselectstart = eventPassthrough;
 			document.onmousedown = eventPassthrough;
 		},
-		
+	
 		autoSelect: function(selector) {
 			$(selector).focus().select();
 		},
-		
+	
 		handleStateUpdates: function(e){
-			
-		},
 		
+		},
+	
 		switchLanguage: function(dom){
 			var lang = $(this).val();
 			if(document.location.href.search(/[\?\&]lang=[a-z]+/) != -1){
@@ -707,7 +681,7 @@
 				document.location.href = document.location.href + ( (document.location.href.search(/\?/) != -1 )?"&":"?") + "lang="+lang;
 			}
 		},
-		
+	
 		saveLanguage: function(){
 			var lang = decodeURIComponent((new RegExp('[?|&]lang=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;	
 			if(lang && typeof Storage != 'undefined' && localStorage) {
@@ -715,15 +689,15 @@
 			}
 		}
 	};
-	
+
 	function eventNullifier(e) {
 		return $(e.target).hasClass('menuBtn');
 	}
-	
+
 	function eventPassthrough(e) {
 		return true;
 	}
-	
+
 })();
 
 //create jQuery Callbacks() to handle object events 
