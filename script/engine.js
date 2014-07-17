@@ -77,7 +77,8 @@
 		options: {
 			state: null,
 			debug: false,
-			log: false
+			log: false,
+			dropbox: false
 		},
 			
 		init: function(options) {
@@ -107,7 +108,7 @@
 			}
 			
 			$('<div>').attr('id', 'locationSlider').appendTo('#main');
-			
+
 			var menu = $('<div>')
 				.addClass('menu')
 				.appendTo('body');
@@ -124,7 +125,7 @@
 				
 				$.each(langs, function(name,display){
 					$('<option>').text(display).val(name).appendTo(select)
-				})
+				});
 			}
 
 			$('<span>')
@@ -150,29 +151,37 @@
 				.text(_('save.'))
 				.click(Engine.exportImport)
 				.appendTo(menu);
-				
+
+			if(this.options.dropbox && Engine.Dropbox) {
+				this.dropbox = Engine.Dropbox.init();
+
+				$('<span>')
+					.addClass('menuBtn')
+					.text(_('dropbox.'))
+					.click(Engine.Dropbox.startDropbox)
+					.appendTo(menu);
+			}
+			
 			$('<span>')
 				.addClass('menuBtn')
 				.text(_('app store.'))
 				.click(function() { window.open('https://itunes.apple.com/us/app/a-dark-room/id736683061'); })
 				.appendTo(menu);
-				
-			
 			
 			// Register keypress handlers
 			$('body').off('keydown').keydown(Engine.keyDown);
 			$('body').off('keyup').keyup(Engine.keyUp);
-	
+
 			// Register swipe handlers
 			swipeElement = $('#outerSlider');
 			swipeElement.on('swipeleft', Engine.swipeLeft);
 			swipeElement.on('swiperight', Engine.swipeRight);
 			swipeElement.on('swipeup', Engine.swipeUp);
 			swipeElement.on('swipedown', Engine.swipeDown);
-			
-			//subscribe to stateUpdates
+		
+			// subscribe to stateUpdates
 			$.Dispatch('stateUpdate').subscribe(Engine.handleStateUpdates);
-	
+
 			$SM.init();
 			Notifications.init();
 			Events.init();
@@ -330,20 +339,52 @@
 						}
 					}
 				}
-			});
-			Engine.autoSelect('#description textarea')
-		},
+			}
+		});
+	  },
 
-		import64: function(string64) {
-			Engine.disableSelection();
-			string64 = string64.replace(/\s/g, '');
-			string64 = string64.replace(/\./g, '');
-			string64 = string64.replace(/\n/g, '');
-			var decodedSave = Base64.decode(string64);
-			localStorage.gameState = decodedSave;
-			location.reload();
-		},
-	
+    generateExport64: function(){
+      var string64 = Base64.encode(localStorage.gameState);
+      string64 = string64.replace(/\s/g, '');
+      string64 = string64.replace(/\./g, '');
+      string64 = string64.replace(/\n/g, '');
+
+      return string64;
+    },
+	  
+	  export64: function() {
+	    Engine.saveGame();
+	    var string64 = Engine.generateExport64();
+	    Engine.enableSelection();
+	    Events.startEvent({
+	    	title: _('Export'),
+	    	scenes: {
+	    		start: {
+	    			text: [_('save this.')],
+	    			textarea: string64,
+	    			buttons: {
+	    				'done': {
+	    					text: _('got it'),
+	    					nextScene: 'end',
+	    					onChoose: Engine.disableSelection
+	    				}
+	    			}
+	    		}
+	    	}
+	    });
+	    Engine.autoSelect('#description textarea')
+	  },
+	  
+	  import64: function(string64) {
+		  Engine.disableSelection();
+	      string64 = string64.replace(/\s/g, '');
+	      string64 = string64.replace(/\./g, '');
+	      string64 = string64.replace(/\n/g, '');
+	      var decodedSave = Base64.decode(string64);
+	      localStorage.gameState = decodedSave;
+	      location.reload();
+	  },
+	  
 		event: function(cat, act) {
 			if(typeof ga === 'function') {
 				ga('send', 'event', cat, act);
