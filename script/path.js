@@ -93,7 +93,7 @@ var Path = {
 		return Path.getCapacity() - num;
 	},
 	
-	updatePerks: function() {
+	updatePerks: function(ignoreStores) {
 		if($SM.get('character.perks')) {
 			var perks = $('#perks');
 			var needsAppend = false;
@@ -115,7 +115,7 @@ var Path = {
 				perks.appendTo(Path.panel);
 			}
 			
-			if(Engine.activeModule === Path) {
+			if(!ignoreStores && Engine.activeModule === Path) {
 				$('#storesContainer').css({top: perks.height() + 26 + 'px'});
 			}
 		}
@@ -286,7 +286,7 @@ var Path = {
 	onArrival: function(transition_diff) {
 		Path.setTitle();
 		Path.updateOutfitting();
-		Path.updatePerks();
+		Path.updatePerks(true);
 
 		Engine.moveStoresView($('#perks'), transition_diff);
 	},
