@@ -258,15 +258,15 @@ var Path = {
 		return row;
 	},
 	
-  increaseSupply: function(btn) {
+	increaseSupply: function(btn) {
 		var supply = $(this).closest('.outfitRow').attr('key');
 		Engine.log('increasing ' + supply + ' by up to ' + btn.data);
 		var cur = Path.outfit[supply];
 		cur = typeof cur == 'number' ? cur : 0;
 		if(Path.getFreeSpace() >= Path.getWeight(supply) && cur < $SM.get('stores["'+supply+'"]', true)) {
-		  var maxExtraByWeight = Math.floor(Path.getFreeSpace() / Path.getWeight(supply));
-		  var maxExtraByStore  = $SM.get('stores["'+supply+'"]', true) - cur;
-		  var maxExtraByBtn    = btn.data;
+			var maxExtraByWeight = Math.floor(Path.getFreeSpace() / Path.getWeight(supply));
+			var maxExtraByStore  = $SM.get('stores["'+supply+'"]', true) - cur;
+			var maxExtraByBtn    = btn.data;
 			Path.outfit[supply] = cur + Math.min(maxExtraByBtn, Math.min(maxExtraByWeight, maxExtraByStore));
 			Path.updateOutfitting();
 		}

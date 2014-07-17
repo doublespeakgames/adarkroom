@@ -109,8 +109,8 @@ var Events = {
 		
 		Events.createEatMeatButton().appendTo(btns);
 		if((Path.outfit['medicine'] || 0) != 0) {
-		  Events.createUseMedsButton().appendTo(btns);
-	  }
+			Events.createUseMedsButton().appendTo(btns);
+		}
 		
 		// Set up the enemy attack timer
 		Events._enemyAttackTimer = setTimeout(Events.enemyAttack, scene.attackDelay * 1000);
@@ -438,8 +438,7 @@ var Events = {
 			});
 		}
 		
-		Events._enemyAttackTimer = 
-			setTimeout(Events.enemyAttack, scene.attackDelay * 1000);
+		Events._enemyAttackTimer = setTimeout(Events.enemyAttack, scene.attackDelay * 1000);
 	},
 	
 	winFight: function() {
@@ -476,8 +475,8 @@ var Events = {
 						
 						Events.createEatMeatButton(0).appendTo(btns);
 						if((Path.outfit['medicine'] || 0) != 0) {
-						  Events.createUseMedsButton(0).appendTo(btns);
-					  }
+							Events.createUseMedsButton(0).appendTo(btns);
+						}
 					}
 				} catch(e) {
 					// It is possible to die and win if the timing is perfect. Just let it fail.
@@ -728,41 +727,41 @@ var Events = {
 		}
 	},
 	
-    // Makes an event happen!
-    triggerEvent: function() {
-    	if(Events.activeEvent() == null) {
-	    	var possibleEvents = [];
-	    	for(var i in Events.EventPool) {
-	    		var event = Events.EventPool[i];
-	    		if(event.isAvailable()) {
-	    			possibleEvents.push(event);
-	    		}
-	    	}
-			
+	// Makes an event happen!
+	triggerEvent: function() {
+		if(Events.activeEvent() == null) {
+			var possibleEvents = [];
+			for(var i in Events.EventPool) {
+				var event = Events.EventPool[i];
+				if(event.isAvailable()) {
+					possibleEvents.push(event);
+				}
+			}
+
 			if(possibleEvents.length == 0) {
 				Events.scheduleNextEvent(0.5);
 				return;
 			} else {
-		    	var r = Math.floor(Math.random()*(possibleEvents.length));
-		    	Events.startEvent(possibleEvents[r]);
-	    	}
-    	}
-    	
-    	Events.scheduleNextEvent();
-    },
-    
-    triggerFight: function() {
-    	var possibleFights = [];
-    	for(var i in Events.Encounters) {
-    		var fight = Events.Encounters[i];
-    		if(fight.isAvailable()) {
-    			possibleFights.push(fight);
-    		}
-    	}
-    	
+				var r = Math.floor(Math.random()*(possibleEvents.length));
+				Events.startEvent(possibleEvents[r]);
+			}
+		}
+
+		Events.scheduleNextEvent();
+	},
+
+	triggerFight: function() {
+		var possibleFights = [];
+		for(var i in Events.Encounters) {
+			var fight = Events.Encounters[i];
+			if(fight.isAvailable()) {
+				possibleFights.push(fight);
+			}
+		}
+
 		var r = Math.floor(Math.random()*(possibleFights.length));
-    	Events.startEvent(possibleFights[r]);
-    },
+		Events.startEvent(possibleFights[r]);
+	},
 	
 	activeEvent: function() {
 		if(Events.eventStack && Events.eventStack.length > 0) {
@@ -774,8 +773,8 @@ var Events = {
 	eventPanel: function() {
 		return Events.activeEvent().eventPanel;
 	},
-    
-    startEvent: function(event, options) {
+
+	startEvent: function(event, options) {
 		if(event) {
 			Engine.event('game event', 'event');
 			Engine.keyLock = true;
@@ -791,28 +790,28 @@ var Events = {
 			$('div#wrapper').append(Events.eventPanel());
 			Events.eventPanel().animate({opacity: 1}, Events._PANEL_FADE, 'linear');
 		}
-    },
-    
-    scheduleNextEvent: function(scale) {
-    	var nextEvent = Math.floor(Math.random()*(Events._EVENT_TIME_RANGE[1] - Events._EVENT_TIME_RANGE[0])) + Events._EVENT_TIME_RANGE[0];
-    	if(scale > 0) { nextEvent *= scale; }
-    	Engine.log('next event scheduled in ' + nextEvent + ' minutes');
-    	Events._eventTimeout = setTimeout(Events.triggerEvent, nextEvent * 60 * 1000);
-    },
-    
-    endEvent: function() {
-    	Events.eventPanel().animate({opacity:0}, Events._PANEL_FADE, 'linear', function() {
-    		Events.eventPanel().remove();
+	},
+
+	scheduleNextEvent: function(scale) {
+		var nextEvent = Math.floor(Math.random()*(Events._EVENT_TIME_RANGE[1] - Events._EVENT_TIME_RANGE[0])) + Events._EVENT_TIME_RANGE[0];
+		if(scale > 0) { nextEvent *= scale; }
+		Engine.log('next event scheduled in ' + nextEvent + ' minutes');
+		Events._eventTimeout = setTimeout(Events.triggerEvent, nextEvent * 60 * 1000);
+	},
+
+	endEvent: function() {
+		Events.eventPanel().animate({opacity:0}, Events._PANEL_FADE, 'linear', function() {
+			Events.eventPanel().remove();
 			Events.activeEvent().eventPanel = null;
 			Events.eventStack.shift();
-        	Engine.log(Events.eventStack.length + ' events remaining');
-    		Engine.keyLock = false;
-    		// Force refocus on the body. I hate you, IE.
-    		$('body').focus();
-    	});
-    },
-    
-    handleStateUpdates: function(e){
+			Engine.log(Events.eventStack.length + ' events remaining');
+			Engine.keyLock = false;
+			// Force refocus on the body. I hate you, IE.
+			$('body').focus();
+		});
+	},
+
+	handleStateUpdates: function(e){
 		if(e.category == 'stores' && Events.activeEvent() != null){
 			Events.updateButtons();
 		}
