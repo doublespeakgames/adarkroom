@@ -7,7 +7,7 @@ A Minimalist Text Adventure Game
 
 [Click to play](http://adarkroom.doublespeakgames.com/)
 
-[Play on GitHub](http://anubisthejackle.github.io/adarkroom)
+[Play on GitHub](http://continuities.github.io/adarkroom)
 
 ***Another Chinese Dark Room***
 - [Home page](http://dreamz.cn/a-dark-room/index.html?lang=cn)  Some Translations come from U77 team.
