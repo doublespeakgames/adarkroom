@@ -254,47 +254,29 @@
 							},
 							'import': {
 								text: _('import'),
-								nextScene: {1: 'confirm'},
+								nextScene: {1: 'confirm'}
 							},
 							'cancel': {
 								text: _('cancel'),
 								nextScene: 'end'
 							}
-						},
-						'confirm': {
-							text: [
-								_('are you sure?'),
-								_('if the code is invalid, all data will be lost.'),
-								_('this is irreversible.')
-							],
-							buttons: {
-								'yes': {
-									text: _('yes'),
-									nextScene: {1: 'inputImport'},
-									onChoose: Engine.enableSelection
-								},
-								'no': {
-									text: _('no'),
-	
-									nextScene: 'end'
-								}
-							}
-						},
-						'inputImport': {
-							text: [
-								_('put the save code here.')
-							],
-							textarea: '',
-							buttons: {
-								'okay': {
-									text: _('import'),
-									nextScene: 'end',
-									onChoose: Engine.import64
-								},
-								'cancel': {
-									text: _('cancel'),
-									nextScene: 'end'
-								}
+						}
+					},
+					'confirm': {
+						text: [
+							_('are you sure?'),
+							_('if the code is invalid, all data will be lost.'),
+							_('this is irreversible.')
+						],
+						buttons: {
+							'yes': {
+								text: _('yes'),
+								nextScene: {1: 'inputImport'},
+								onChoose: Engine.enableSelection
+							},
+							'no': {
+								text: _('no'),
+								nextScene: 'end'
 							}
 						}
 					},
