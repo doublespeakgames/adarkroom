@@ -812,7 +812,7 @@ var Events = {
 	},
 
 	handleStateUpdates: function(e){
-		if(e.category == 'stores' && Events.activeEvent() != null){
+		if((e.category == 'stores' || e.category == 'income') && Events.activeEvent() != null){
 			Events.updateButtons();
 		}
 	}
