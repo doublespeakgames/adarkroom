@@ -481,7 +481,7 @@ var Events = {
 				} catch(e) {
 					// It is possible to die and win if the timing is perfect. Just let it fail.
 				}
-			}, 1000);
+			}, 3000);
 		});
 	},
 	
