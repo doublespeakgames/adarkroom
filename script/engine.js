@@ -10,7 +10,7 @@
 		SITE_URL: encodeURIComponent("http://adarkroom.doublespeakgames.com"),
 		VERSION: 1.3,
 		MAX_STORE: 99999999999999,
-		SAVE_DISPLAY: 120 * 1000,
+		SAVE_DISPLAY: 30 * 1000,
 		GAME_OVER: false,
 		
 		//object event types
@@ -216,18 +216,12 @@
 					clearTimeout(Engine._saveTimer);
 				}
 				if(typeof Engine._lastNotify == 'undefined' || Date.now() - Engine._lastNotify > Engine.SAVE_DISPLAY){
-					$('#saveNotify').css('opacity', 1).animate({opacity: 0}, 2000, 'linear');
+					$('#saveNotify').css('opacity', 1).animate({opacity: 0}, 1000, 'linear');
 					Engine._lastNotify = Date.now();
 				}
 				localStorage.gameState = JSON.stringify(State);
 			}
 		},
-
-		manualSave: function() {
-			Engine._lastNotify = Date.now() - Engine._lastNotify;
-			Engine.saveGame;
-		},
-
 		
 		loadGame: function() {
 			try {
@@ -246,20 +240,14 @@
 		
 		exportImport: function() {
 			Events.startEvent({
-				title: _('Save / Export / Import'),
+				title: _('Export / Import'),
 				scenes: {
 					start: {
 						text: [
-							_('manual save'),
 							_('export or import save data, for backing up'),
 							_('or migrating computers')
 						],
 						buttons: {
-							'manual save': {
-								text: _('manual save'),
-								nextScene: 'end',
-								onChoose: Engine.manualSave
-							},
 							'export': {
 								text: _('export'),
 								onChoose: Engine.export64
