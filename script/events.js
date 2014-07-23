@@ -726,6 +726,19 @@ var Events = {
 			}
 		}
 	},
+
+	//blinks the browser window title
+	blinkTitle: function() {
+		var title = document.title;
+		blinkInterval = setInterval(function() {
+			document.title = '*** EVENT ***';
+			setTimeout(function() {document.title = title;}, 1500);
+		}, 3000);
+	},
+
+	stopTitleBlink: function() {
+		clearInterval(blinkInterval);
+	},
 	
 	// Makes an event happen!
 	triggerEvent: function() {
@@ -789,6 +802,7 @@ var Events = {
 			Events.loadScene('start');
 			$('div#wrapper').append(Events.eventPanel());
 			Events.eventPanel().animate({opacity: 1}, Events._PANEL_FADE, 'linear');
+			Events.blinkTitle();
 		}
 	},
 
@@ -806,6 +820,7 @@ var Events = {
 			Events.eventStack.shift();
 			Engine.log(Events.eventStack.length + ' events remaining');
 			Engine.keyLock = false;
+			Events.stopTitleBlink();
 			// Force refocus on the body. I hate you, IE.
 			$('body').focus();
 		});
