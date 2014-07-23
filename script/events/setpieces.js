@@ -23,6 +23,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -132,10 +133,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'b1', 1: 'b2'}
 					},
 					'leave': {
 						text: _('leave cave'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -181,10 +184,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'b3', 1: 'b4'}
 					},
 					'leave': {
 						text: _('leave cave'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -220,10 +225,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: { 1: 'c1' }
 					},
 					'leave': {
 						text: _('leave cave'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -270,10 +277,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {1: 'c2'}
 					},
 					'leave': {
 						text: _('leave cave'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -302,10 +311,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {1: 'c2'}
 					},
 					'leave': {
 						text: _('leave cave'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -334,10 +345,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'end1', 1: 'end2'}
 					},
 					'leave': {
 						text: _('leave cave'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -366,10 +379,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.7: 'end2', 1: 'end3'}
 					},
 					'leave': {
 						text: _('leave cave'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -411,6 +426,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave cave'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -462,6 +478,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave cave'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -493,6 +510,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave cave'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -567,10 +585,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'b3', 1: 'b4'}
 					},
 					'leave': {
 						text: _('leave town'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -621,10 +641,12 @@ Events.Setpieces = {
 			buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'c1', 1: 'c2'}
 					},
 					'leave': {
 						text: _('leave town'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -658,10 +680,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'c2', 1: 'c3'}
 					},
 					'leave': {
 						text: _('leave town'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -690,10 +714,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'c4', 1: 'c5'}
 					},
 					'leave': {
 						text: _('leave town'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -728,10 +754,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'c5', 1: 'c6' }
 					},
 					'leave': {
 						text: _('leave town'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -765,10 +793,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.3: 'end5', 1: 'end6'}
 					},
 					'leave': {
 						text: _('leave town'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -802,10 +832,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {1: 'd1'}
 					},
 					'leave': {
 						text: _('leave town'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -834,10 +866,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {1: 'd1'}
 					},
 					'leave': {
 						text: _('leave town'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -883,10 +917,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {1: 'd2'}
 					},
 					'leave': {
 						text: _('leave town'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -922,10 +958,12 @@ Events.Setpieces = {
 			buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {1: 'd2'}
 					},
 					'leave': {
 						text: _('leave town'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -959,10 +997,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'end1', 1: 'end2'}
 					},
 					'leave': {
 						text: _('leave town'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -996,10 +1036,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'end3', 1: 'end4'}
 					},
 					'leave': {
 						text: _('leave town'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1042,6 +1084,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave town'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1074,6 +1117,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave town'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1101,6 +1145,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave town'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1144,6 +1189,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave town'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1165,6 +1211,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave town'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1180,6 +1227,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave town'),
+
 						nextScene: 'end'
 					}
 				}
@@ -1317,10 +1365,12 @@ Events.Setpieces = {
 				buttons: {
 					'descend': {
 						text: _('descend'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'c2', 1: 'c3'}
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1355,10 +1405,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'c4', 1: 'c5'}
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1393,10 +1445,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'c5', 1: 'c6'}
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1435,10 +1489,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'c7', 1: 'c8'}
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1504,10 +1560,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.3: 'c13', 0.7: 'c11', 1: 'end15'}
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1541,10 +1599,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'd1', 1: 'd2'}
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1579,10 +1639,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {1: 'd2'}
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1711,10 +1773,12 @@ Events.Setpieces = {
 				buttons: {
 					'enter': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {1: 'd8'}
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1735,10 +1799,12 @@ Events.Setpieces = {
 				buttons: {
 					'enter': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'd8', 1: 'd9'}
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1790,10 +1856,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: { 1: 'end10' }
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1829,10 +1897,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: { 1: 'end10' }
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1852,10 +1922,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: { 0.5: 'end10', 1: 'end11' }
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1880,10 +1952,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'end1', 1: 'end2'}
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1919,10 +1993,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {1: 'end2'}
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1953,10 +2029,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'end2', 1: 'end3'}
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -1986,10 +2064,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'end4', 1: 'end5'}
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2025,10 +2105,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {1: 'end5'}
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2064,10 +2146,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'end5', 1: 'end6'}
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2098,10 +2182,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'end7', 1: 'end8'}
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2131,10 +2217,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {1: 'end8'}
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2164,10 +2252,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {0.5: 'end8', 1: 'end9'}
 					},
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2207,6 +2297,7 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {1: 'end14'}
 					}
 				}
@@ -2232,6 +2323,7 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: {1: 'end13'}
 					}
 				}
@@ -2266,6 +2358,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2295,6 +2388,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2340,6 +2434,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2375,6 +2470,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2415,6 +2511,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2450,6 +2547,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2484,6 +2582,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2519,6 +2618,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2559,6 +2659,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2599,6 +2700,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2633,6 +2735,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2681,6 +2784,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2725,6 +2829,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2769,6 +2874,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2812,6 +2918,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave city'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2868,6 +2975,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2890,6 +2998,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2926,6 +3035,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -2978,6 +3088,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave'),
+
 						nextScene: 'end'
 					}
 				}
@@ -3006,6 +3117,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -3085,10 +3197,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: { 1: 'a2' }
 					},
 					'run': {
 						text: _('run'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -3123,10 +3237,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: { 1: 'a3' }
 					},
 					'run': {
 						text: _('run'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -3155,6 +3271,7 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: { 1: 'cleared' }
 					}
 				}
@@ -3223,10 +3340,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: { 1: 'a2' }
 					},
 					'run': {
 						text: _('run'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -3255,10 +3374,12 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: { 1: 'a3' }
 					},
 					'run': {
 						text: _('run'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: 'end'
 					}
 				}
@@ -3292,6 +3413,7 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('continue'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: { 1: 'cleared' }
 					}
 				}
@@ -3367,6 +3489,7 @@ Events.Setpieces = {
 				buttons: {
 					'leave': {
 						text: _('leave'),
+						cooldown: Events._LEAVE_COOLDOWN,
 						nextScene: { 1: 'cleared' }
 					}
 				}
