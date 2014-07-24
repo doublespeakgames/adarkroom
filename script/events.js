@@ -802,7 +802,10 @@ var Events = {
 			Events.loadScene('start');
 			$('div#wrapper').append(Events.eventPanel());
 			Events.eventPanel().animate({opacity: 1}, Events._PANEL_FADE, 'linear');
-			Events.blinkTitle();
+			var currentSceneInformation = Events.activeEvent().scenes[Events.activeScene];
+			if (typeof currentSceneInformation.blink == 'boolean' && currentSceneInformation.blink == true) {
+				Events.blinkTitle();
+			}
 		}
 	},
 
@@ -820,7 +823,9 @@ var Events = {
 			Events.eventStack.shift();
 			Engine.log(Events.eventStack.length + ' events remaining');
 			Engine.keyLock = false;
-			Events.stopTitleBlink();
+			if (typeof blinkInterval != 'undefined') {
+				Events.stopTitleBlink();
+			}
 			// Force refocus on the body. I hate you, IE.
 			$('body').focus();
 		});

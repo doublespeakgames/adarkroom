@@ -14,6 +14,7 @@ Events.Room = [
 					_("won't say from where he came, but it's clear that he's not staying.")
 				],
 				notification: _('a nomad arrives, looking to trade'),
+				blink: true,
 				buttons: {
 					'buyScales': {
 						text: _('buy scales'),
@@ -60,6 +61,7 @@ Events.Room = [
 					_("can't tell what they're up to.")
 				],
 				notification: _('strange noises can be heard through the walls'),
+				blink: true,
 				buttons: {
 					'investigate': {
 						text: _('investigate'),
@@ -110,6 +112,7 @@ Events.Room = [
 					_('something\'s in there.')
 				],
 				notification: _('something\'s in the store room'),
+				blink: true,
 				buttons: {
 					'investigate': {
 						text: _('investigate'),
@@ -195,6 +198,7 @@ Events.Room = [
 					_('asks for any spare furs to keep him warm at night.')
 				],
 				notification: _('a beggar arrives'),
+				blink: true,
 				buttons: {
 					'50furs': {
 						text: _('give 50'),
@@ -266,6 +270,7 @@ Events.Room = [
 					_("builder's not sure he's to be trusted.")
 				],
 				notification: _('a mysterious wanderer arrives'),
+				blink: true,
 				buttons: {
 					'100wood': {
 						text: _('give 100'),
@@ -336,6 +341,7 @@ Events.Room = [
 					_("builder's not sure she's to be trusted.")
 				],
 				notification: _('a mysterious wanderer arrives'),
+				blink: true,
 				buttons: {
 					'100fur': {
 						text: _('give 100'),
@@ -406,6 +412,7 @@ Events.Room = [
 					_("willing to talk about it, for a price.")
 				],
 				notification: _('a scout stops for the night'),
+				blink: true,
 				buttons: {
 					'buyMap': {
 						text: _('buy map'),
@@ -444,6 +451,7 @@ Events.Room = [
 					_('he smiles warmly and asks for lodgings for the night.')
 				],
 				notification: _('an old wanderer arrives'),
+				blink: true,
 				buttons: {
 					'agree': {
 						text: _('agree'),
@@ -516,6 +524,7 @@ Events.Room = [
 					_("he begs for medicine.")
 				],
 				notification: _('a sick man hobbles up'),
+				blink: true,
 				buttons: {
 					'help': {
 						text: _('give 1 medicine'),
