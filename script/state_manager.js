@@ -349,7 +349,7 @@ var StateManager = {
 					for(var k in cost) {
 						var have = $SM.get('stores["'+k+'"]', true);
 						if(have + cost[k] < 0) {
-							ok = false;
+							if(source != 'thieves') ok = false;
 						}
 					}
 					if(ok){
