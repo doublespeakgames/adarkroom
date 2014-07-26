@@ -8,6 +8,7 @@ var Events = {
 	_FIGHT_SPEED: 100,
 	_EAT_COOLDOWN: 5,
 	_MEDS_COOLDOWN: 7,
+	_LEAVE_COOLDOWN: 1,
 	STUN_DURATION: 4000,
 	
 	init: function(options) {
@@ -460,8 +461,9 @@ var Events = {
 						// Draw the buttons
 						Events.drawButtons(scene);
 					} else {
-						new Button.Button({
+						Button.cooldown(new Button.Button({
 							id: 'leaveBtn',
+							cooldown: Events._LEAVE_COOLDOWN,
 							click: function() {
 								var scene = Events.activeEvent().scenes[Events.activeScene];
 								if(scene.nextScene && scene.nextScene != 'end') {
@@ -471,7 +473,7 @@ var Events = {
 								}
 							},
 							text: _('leave')
-						}).appendTo(btns);
+						}).appendTo(btns));
 						
 						Events.createEatMeatButton(0).appendTo(btns);
 						if((Path.outfit['medicine'] || 0) != 0) {
@@ -631,10 +633,14 @@ var Events = {
 					id: id,
 					text: info.text,
 					cost: info.cost,
-					click: Events.buttonClick
+					click: Events.buttonClick,
+					cooldown: info.cooldown
 				}).appendTo(btns);
 			if(typeof info.available == 'function' && !info.available()) {
 				Button.setDisabled(b, true);
+			}
+			if(typeof info.cooldown == 'number') {
+				Button.cooldown(b);
 			}
 		}
 		
