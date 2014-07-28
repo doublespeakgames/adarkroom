@@ -9,6 +9,7 @@ var Events = {
 	_EAT_COOLDOWN: 5,
 	_MEDS_COOLDOWN: 7,
 	STUN_DURATION: 4000,
+	BLINK_INTERVAL: false,
 	
 	init: function(options) {
 		this.options = $.extend(
@@ -727,17 +728,20 @@ var Events = {
 		}
 	},
 
-	//blinks the browser window title
+	// blinks the browser window title
 	blinkTitle: function() {
 		var title = document.title;
-		blinkInterval = setInterval(function() {
-			document.title = '*** EVENT ***';
-			setTimeout(function() {document.title = title;}, 1500);
+
+		// every 3 seconds change title to '*** EVENT ***', then 1.5 seconds later, change it back to the original title.
+		Events.BLINK_INTERVAL = setInterval(function() {
+			document.title = _('*** EVENT ***');
+			setTimeout(function() {document.title = title;}, 1500); 
 		}, 3000);
 	},
 
 	stopTitleBlink: function() {
-		clearInterval(blinkInterval);
+		clearInterval(Events.BLINK_INTERVAL);
+		Events.BLINK_INTERVAL = false;
 	},
 	
 	// Makes an event happen!
@@ -803,7 +807,7 @@ var Events = {
 			$('div#wrapper').append(Events.eventPanel());
 			Events.eventPanel().animate({opacity: 1}, Events._PANEL_FADE, 'linear');
 			var currentSceneInformation = Events.activeEvent().scenes[Events.activeScene];
-			if (typeof currentSceneInformation.blink == 'boolean' && currentSceneInformation.blink == true) {
+			if (currentSceneInformation.blink) {
 				Events.blinkTitle();
 			}
 		}
@@ -823,7 +827,7 @@ var Events = {
 			Events.eventStack.shift();
 			Engine.log(Events.eventStack.length + ' events remaining');
 			Engine.keyLock = false;
-			if (typeof blinkInterval != 'undefined') {
+			if (Events.BLINK_INTERVAL) {
 				Events.stopTitleBlink();
 			}
 			// Force refocus on the body. I hate you, IE.
