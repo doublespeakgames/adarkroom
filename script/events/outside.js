@@ -20,6 +20,7 @@ Events.Outside = [
 					Outside.updateTrapButton();
 				},
 				notification: _('some traps have been destroyed'),
+				blink: true,
 				buttons: {
 					'track': {
 						text: _('track them'),
@@ -74,6 +75,8 @@ Events.Outside = [
 					_('a sickness is spreading through the village.'),
 					_('medicine is needed immediately.')
 				],
+
+				blink: true,
 				buttons: {
 					'heal': {
 						text: _('1 medicine'),
@@ -128,6 +131,7 @@ Events.Outside = [
 					_('a terrible plague is fast spreading through the village.'),
 					_('medicine is needed immediately.')
 				],
+				blink: true,
 				buttons: {
 					'heal': {
 						text: _('5 medicine'),
@@ -193,12 +197,13 @@ Events.Outside = [
 					var numKilled = Math.floor(Math.random() * 10) + 1;
 					Outside.killVillagers(numKilled);
 				},
-						reward: {
+				reward: {
 					fur: 100,
 					meat: 100,
 					teeth: 10
-						},
-						buttons: {
+				},
+				blink: true,
+				buttons: {
 					'end': {
 						text: _('go home'),
 						nextScene: 'end'
@@ -228,6 +233,8 @@ Events.Outside = [
 					bullets: 10,
 					'cured meat': 50
 				},
+				
+				blink: true,
 				buttons: {
 					'end': {
 						text: _('go home'),

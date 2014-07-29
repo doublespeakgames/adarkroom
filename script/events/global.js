@@ -15,6 +15,7 @@ Events.Global = [
 					_('say he should be strung up as an example.')
 				],
 				notification: _('a thief is caught'),
+				blink: true,
 				buttons: {
 					'kill': {
 						text: _('hang him'),
