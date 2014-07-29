@@ -562,13 +562,14 @@
 		},
 	
 		keyDown: function(e) {
+			e = e || window.event;
 			if(!Engine.keyPressed && !Engine.keyLock) {
 				Engine.pressed = true;
 				if(Engine.activeModule.keyDown) {
 					Engine.activeModule.keyDown(e);
 				}
 			}
-			return !(jQuery.inArray(window.event.keycode, [37,38,39,40]));
+			return !(jQuery.inArray(e.keycode, [37,38,39,40]));
 		},
 	
 		keyUp: function(e) {
