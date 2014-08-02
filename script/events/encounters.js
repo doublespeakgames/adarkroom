@@ -9,7 +9,7 @@ Events.Encounters = [
 			return World.getDistance() <= 10 && World.getTerrain() == World.TILE.FOREST;
 		},
 		scenes: {
-			'start': {
+			start: {
 				combat: true,
 				enemy: 'snarling beast',
 				enemyName: _('snarling beast'),
@@ -20,17 +20,17 @@ Events.Encounters = [
 				attackDelay: 1,
 				health: 5,
 				loot: {
-					'fur': {
+					fur: {
 						min: 1,
 						max: 3,
 						chance: 1
 					},
-					'meat': {
+					meat: {
 						min: 1,
 						max: 3,
 						chance: 1
 					},
-					'teeth': {
+					teeth: {
 						min: 1,
 						max: 3,
 						chance: 0.8
@@ -46,7 +46,7 @@ Events.Encounters = [
 			return World.getDistance() <= 10 && World.getTerrain() == World.TILE.BARRENS;
 		},
 		scenes: {
-			'start': {
+			start: {
 				combat: true,
 				enemy: 'gaunt man',
 				enemyName: _('gaunt man'),
@@ -57,17 +57,17 @@ Events.Encounters = [
 				attackDelay: 2,
 				health: 6,
 				loot: {
-					'cloth': {
+					cloth: {
 						min: 1,
 						max: 3,
 						chance: 0.8
 					},
-					'teeth': {
+					teeth: {
 						min: 1,
 						max: 2,
 						chance: 0.8
 					},
-					'leather': {
+					leather: {
 						min: 1,
 						max: 2,
 						chance: 0.5
@@ -83,7 +83,7 @@ Events.Encounters = [
 			return World.getDistance() <= 10 && World.getTerrain() == World.TILE.FIELD;
 		},
 		scenes: {
-			'start': {
+			start: {
 				combat: true,
 				enemy: 'strange bird',
 				enemyName: _('strange bird'),
@@ -94,17 +94,17 @@ Events.Encounters = [
 				attackDelay: 2,
 				health: 4,
 				loot: {
-					'scales': {
+					scales: {
 						min: 1,
 						max: 3,
 						chance: 0.8
 					},
-					'teeth': {
+					teeth: {
 						min: 1,
 						max: 2,
 						chance: 0.5
 					},
-					'meat': {
+					meat: {
 						min: 1,
 						max: 3,
 						chance: 0.8
@@ -121,7 +121,7 @@ Events.Encounters = [
 			return World.getDistance() > 10 && World.getDistance() <= 20 && World.getTerrain() == World.TILE.BARRENS;
 		},
 		scenes: {
-			'start': {
+			start: {
 				combat: true,
 				enemy: 'shivering man', 
 				enemyName: _('shivering man'), 
@@ -132,22 +132,22 @@ Events.Encounters = [
 				attackDelay: 1,
 				health: 20,
 				loot: {
-					'cloth': {
+					cloth: {
 						min: 1,
 						max: 1,
 						chance: 0.2
 					},
-					'teeth': {
+					teeth: {
 						min: 1,
 						max: 2,
 						chance: 0.8
 					},
-					'leather': {
+					leather: {
 						min: 1,
 						max: 1,
 						chance: 0.2
 					},
-					'medicine': {
+					medicine: {
 						min: 1,
 						max: 3,
 						chance: 0.7
@@ -163,7 +163,7 @@ Events.Encounters = [
 			return World.getDistance() > 10 && World.getDistance() <= 20 && World.getTerrain() == World.TILE.FOREST;
 		},
 		scenes: {
-			'start': {
+			start: {
 				combat: true,
 				enemy: 'man-eater', 
 				enemyName: _('man-eater'), 
@@ -174,17 +174,17 @@ Events.Encounters = [
 				attackDelay: 1,
 				health: 25,
 				loot: {
-					'fur': {
+					fur: {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'meat': {
+					meat: {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'teeth': {
+					teeth: {
 						min: 5,
 						max: 10,
 						chance: 0.8
@@ -200,7 +200,7 @@ Events.Encounters = [
 			return World.getDistance() > 10 && World.getDistance() <= 20 && World.getTerrain() == World.TILE.BARRENS;
 		},
 		scenes: {
-			'start': {
+			start: {
 				combat: true,
 				enemy: 'scavenger', 
 				enemyName: _('scavenger'), 
@@ -211,22 +211,22 @@ Events.Encounters = [
 				attackDelay: 2,
 				health: 30,
 				loot: {
-					'cloth': {
+					cloth: {
 						min: 5,
 						max: 10,
 						chance: 0.8
 					},
-					'leather': {
+					leather: {
 						min: 5,
 						max: 10,
 						chance: 0.8
 					},
-					'iron': {
+					iron: {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'medicine': {
+					medicine: {
 						min: 1,
 						max: 2,
 						chance: 0.1
@@ -242,7 +242,7 @@ Events.Encounters = [
 			return World.getDistance() > 10 && World.getDistance() <= 20 && World.getTerrain() == World.TILE.FIELD;
 		},
 		scenes: {
-			'start': {
+			start: {
 				combat: true,
 				enemy: 'lizard', 
 				enemyName: _('lizard'), 
@@ -253,17 +253,17 @@ Events.Encounters = [
 				attackDelay: 2,
 				health: 20,
 				loot: {
-					'scales': {
+					scales: {
 						min: 5,
 						max: 10,
 						chance: 0.8
 					},
-					'teeth': {
+					teeth: {
 						min: 5,
 						max: 10,
 						chance: 0.5
 					},
-					'meat': {
+					meat: {
 						min: 5,
 						max: 10,
 						chance: 0.8
@@ -280,7 +280,7 @@ Events.Encounters = [
 			return World.getDistance() > 20 && World.getTerrain() == World.TILE.FOREST;
 		},
 		scenes: {
-			'start': {
+			start: {
 				combat: true,
 				enemy: 'feral terror', 
 				enemyName: _('feral terror'), 
@@ -291,17 +291,17 @@ Events.Encounters = [
 				attackDelay: 1,
 				health: 45,
 				loot: {
-					'fur': {
+					fur: {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'meat': {
+					meat: {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'teeth': {
+					teeth: {
 						min: 5,
 						max: 10,
 						chance: 0.8
@@ -317,7 +317,7 @@ Events.Encounters = [
 			return World.getDistance() > 20 && World.getTerrain() == World.TILE.BARRENS;
 		},
 		scenes: {
-			'start': {
+			start: {
 				combat: true,
 				enemy: 'soldier', 
 				enemyName: _('soldier'), 
@@ -329,22 +329,22 @@ Events.Encounters = [
 				attackDelay: 2,
 				health: 50,
 				loot: {
-					'cloth': {
+					cloth: {
 						min: 5,
 						max: 10,
 						chance: 0.8
 					},
-					'bullets': {
+					bullets: {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'rifle': {
+					rifle: {
 						min: 1,
 						max: 1,
 						chance: 0.2
 					},
-					'medicine': {
+					medicine: {
 						min: 1,
 						max: 2,
 						chance: 0.1
@@ -360,7 +360,7 @@ Events.Encounters = [
 			return World.getDistance() > 20 && World.getTerrain() == World.TILE.FIELD;
 		},
 		scenes: {
-			'start': {
+			start: {
 				combat: true,
 				enemy: 'sniper', 
 				enemyName: _('sniper'), 
@@ -372,22 +372,22 @@ Events.Encounters = [
 				health: 30,
 				ranged: true,
 				loot: {
-					'cloth': {
+					cloth: {
 						min: 5,
 						max: 10,
 						chance: 0.8
 					},
-					'bullets': {
+					bullets: {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'rifle': {
+					rifle: {
 						min: 1,
 						max: 1,
 						chance: 0.2
 					},
-					'medicine': {
+					medicine: {
 						min: 1,
 						max: 2,
 						chance: 0.1

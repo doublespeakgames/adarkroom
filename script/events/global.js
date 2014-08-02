@@ -8,7 +8,7 @@ Events.Global = [
 			return (Engine.activeModule == Room || Engine.activeModule == Outside) && $SM.get('game.thieves') == 1;
 		},
 		scenes: {
-			'start': {
+			start: {
 				text: [
 					_('the villagers haul a filthy man out of the store room.'),
 					_("say his folk have been skimming the supplies."),
@@ -17,17 +17,17 @@ Events.Global = [
 				notification: _('a thief is caught'),
 				blink: true,
 				buttons: {
-					'kill': {
+					kill: {
 						text: _('hang him'),
 						nextScene: {1: 'hang'}
 					},
-					'spare': {
+					spare: {
 						text: _('spare him'),
 						nextScene: {1: 'spare'}
 					}
 				}
 			},
-			'hang': {
+			hang: {
 				text: [
 					_('the villagers hang the thief high in front of the store room.'),
 					_('the point is made. in the next few days, the missing supplies are returned.')
@@ -38,13 +38,13 @@ Events.Global = [
 					$SM.addM('stores', $SM.get('game.stolen'));
 				},
 				buttons: {
-					'leave': {
+					leave: {
 						text: _('leave'),
 						nextScene: 'end'
 					}
 				}
 			},
-			'spare': {
+			spare: {
 				text: [
 					_("the man says he's grateful. says he won't come around any more."),
 					_("shares what he knows about sneaking before he goes.")
@@ -55,7 +55,7 @@ Events.Global = [
 					$SM.addPerk('stealthy');
 				},
 				buttons: {
-					'leave': {
+					leave: {
 						text: _('leave'),
 						nextScene: 'end'
 					}
