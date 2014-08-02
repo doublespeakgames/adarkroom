@@ -51,7 +51,7 @@ var StateManager = {
 		var words = stateName.split(/[.\[\]'"]+/);
 		//for some reason there are sometimes empty strings
 		for (var i = 0; i < words.length; i++) {
-			if (words[i] == '') {         
+			if (words[i] == '') {
 				words.splice(i, 1);
 				i--;
 			}
@@ -343,7 +343,18 @@ var StateManager = {
 				if(income.timeLeft <= 0) {
 					Engine.log('collection income from ' + source);
 					if(source == 'thieves')	$SM.addStolen(income.stores);
-					$SM.addM('stores', income.stores, true);
+
+					var cost = income.stores;
+					var ok = true;
+					for(var k in cost) {
+						var have = $SM.get('stores["'+k+'"]', true);
+						if(have + cost[k] < 0) {
+							if(source != 'thieves') ok = false;
+						}
+					}
+					if(ok){
+						$SM.addM('stores', income.stores, true);
+					}
 					changed = true;
 					if(typeof income.delay == 'number') {
 						income.timeLeft = income.delay;

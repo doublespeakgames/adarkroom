@@ -219,8 +219,8 @@ var Outside = {
 	
 	schedulePopIncrease: function() {
 		var nextIncrease = Math.floor(Math.random()*(Outside._POP_DELAY[1] - Outside._POP_DELAY[0])) + Outside._POP_DELAY[0];
-    	Engine.log('next population increase scheduled in ' + nextIncrease + ' minutes');
-    	Outside._popTimeout = setTimeout(Outside.increasePopulation, nextIncrease * 60 * 1000);
+		Engine.log('next population increase scheduled in ' + nextIncrease + ' minutes');
+		Outside._popTimeout = setTimeout(Outside.increasePopulation, nextIncrease * 60 * 1000);
 	},
 	
 	updateWorkersView: function() {
@@ -322,7 +322,7 @@ var Outside = {
 		$('<span>').text(num).appendTo(val);
 		
 		if(key != 'gatherer') {
-		  $('<div>').addClass('upManyBtn').appendTo(val).click([10], Outside.increaseWorker);
+			$('<div>').addClass('upManyBtn').appendTo(val).click([10], Outside.increaseWorker);
 			$('<div>').addClass('upBtn').appendTo(val).click([1], Outside.increaseWorker);
 			$('<div>').addClass('dnBtn').appendTo(val).click([1], Outside.decreaseWorker);
 			$('<div>').addClass('dnManyBtn').appendTo(val).click([10], Outside.decreaseWorker);
@@ -345,7 +345,7 @@ var Outside = {
 	increaseWorker: function(btn) {
 		var worker = $(this).closest('.workerRow').attr('key');
 		if(Outside.getNumGatherers() > 0) {
-		  var increaseAmt = Math.min(Outside.getNumGatherers(), btn.data);
+			var increaseAmt = Math.min(Outside.getNumGatherers(), btn.data);
 			Engine.log('increasing ' + worker + ' by ' + increaseAmt);
 			$SM.add('game.workers["'+worker+'"]', increaseAmt);
 		}
@@ -354,7 +354,7 @@ var Outside = {
 	decreaseWorker: function(btn) {
 		var worker = $(this).closest('.workerRow').attr('key');
 		if($SM.get('game.workers["'+worker+'"]') > 0) {
-		  var decreaseAmt = Math.min($SM.get('game.workers["'+worker+'"]') || 0, btn.data);
+			var decreaseAmt = Math.min($SM.get('game.workers["'+worker+'"]') || 0, btn.data);
 			Engine.log('decreasing ' + worker + ' by ' + decreaseAmt);
 			$SM.add('game.workers["'+worker+'"]', decreaseAmt * -1);
 		}
@@ -604,8 +604,7 @@ var Outside = {
 	handleStateUpdates: function(e){
 		if(e.category == 'stores'){
 			Outside.updateVillage();
-		} else if(e.stateName.indexOf('game.workers') == 0
-		          || e.stateName.indexOf('game.population') == 0){
+		} else if(e.stateName.indexOf('game.workers') == 0 || e.stateName.indexOf('game.population') == 0){
 			Outside.updateVillage();
 			Outside.updateWorkersView();
 			Outside.updateVillageIncome();

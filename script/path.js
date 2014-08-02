@@ -93,7 +93,7 @@ var Path = {
 		return Path.getCapacity() - num;
 	},
 	
-	updatePerks: function() {
+	updatePerks: function(ignoreStores) {
 		if($SM.get('character.perks')) {
 			var perks = $('#perks');
 			var needsAppend = false;
@@ -115,7 +115,7 @@ var Path = {
 				perks.appendTo(Path.panel);
 			}
 			
-			if(Engine.activeModule === Path) {
+			if(!ignoreStores && Engine.activeModule === Path) {
 				$('#storesContainer').css({top: perks.height() + 26 + 'px'});
 			}
 		}
@@ -258,15 +258,15 @@ var Path = {
 		return row;
 	},
 	
-  increaseSupply: function(btn) {
+	increaseSupply: function(btn) {
 		var supply = $(this).closest('.outfitRow').attr('key');
 		Engine.log('increasing ' + supply + ' by up to ' + btn.data);
 		var cur = Path.outfit[supply];
 		cur = typeof cur == 'number' ? cur : 0;
 		if(Path.getFreeSpace() >= Path.getWeight(supply) && cur < $SM.get('stores["'+supply+'"]', true)) {
-		  var maxExtraByWeight = Math.floor(Path.getFreeSpace() / Path.getWeight(supply));
-		  var maxExtraByStore  = $SM.get('stores["'+supply+'"]', true) - cur;
-		  var maxExtraByBtn    = btn.data;
+			var maxExtraByWeight = Math.floor(Path.getFreeSpace() / Path.getWeight(supply));
+			var maxExtraByStore  = $SM.get('stores["'+supply+'"]', true) - cur;
+			var maxExtraByBtn    = btn.data;
 			Path.outfit[supply] = cur + Math.min(maxExtraByBtn, Math.min(maxExtraByWeight, maxExtraByStore));
 			Path.updateOutfitting();
 		}
@@ -286,7 +286,7 @@ var Path = {
 	onArrival: function(transition_diff) {
 		Path.setTitle();
 		Path.updateOutfitting();
-		Path.updatePerks();
+		Path.updatePerks(true);
 
 		Engine.moveStoresView($('#perks'), transition_diff);
 	},

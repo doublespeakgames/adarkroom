@@ -3,13 +3,9 @@ A Dark Room
 
 A Minimalist Text Adventure Game
 
-[Chinese translation](https://github.com/Tedko/CHN-Ver-of-ADarkRoom)
+[Click to play](http://adarkroom.doublespeakgames.com/)  
+[ [Chinese](http://adarkroom.doublespeakgames.com/?lang=cn) | [French](http://adarkroom.doublespeakgames.com/?lang=fr) | [Spanish](http://adarkroom.doublespeakgames.com/?lang=es) ]
 
-[Click to play](http://adarkroom.doublespeakgames.com/)
-
-
-***Another Chinese Dark Room***
-- [Home page](http://dreamz.cn/a-dark-room/index.html?lang=cn)  Some Translations come from U77 team.
-- [Git Repo](http://github.com/lilj/adarkroom)
+[Play on GitHub](http://continuities.github.io/adarkroom)
 
 

@@ -17,6 +17,7 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="image_src" href="img/adr.png" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="https://www.dropbox.com/static/api/dropbox-datastores-1.1-latest.js" type="text/javascript"></script>
 	<script>
 		if(!window.jQuery) {
 			document.write('<script src="lib/jquery.min.js"><\/script>')
@@ -49,10 +50,11 @@
 	<script src="script/Button.js"></script>
 	<script src="script/engine.js"></script>
 	<script src="script/state_manager.js"></script>
-	<script src="script/header.js"></script>
-	<script src="script/notifications.js"></script>
-	<script src="script/events.js"></script>
-	<script src="script/room.js"></script>
+    <script src="script/header.js"></script>
+    <script src="script/notifications.js"></script>
+    <script src="script/events.js"></script>
+    <script src="script/dropbox.js"></script>
+    <script src="script/room.js"></script>
 	<script src="script/outside.js"></script>
 	<script src="script/world.js"></script>
 	<script src="script/path.js"></script>
@@ -89,7 +91,7 @@
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
-		
+
 		ga('create', 'UA-41314886-1', 'doublespeakgames.com');
 		ga('send', 'pageview');
 	</script>
