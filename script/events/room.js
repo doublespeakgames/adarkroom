@@ -8,7 +8,7 @@ Events.Room = [
 			return Engine.activeModule == Room && $SM.get('stores.fur', true) > 0;
 		},
 		scenes: {
-			'start': {
+			start: {
 				text: [
 					_('a nomad shuffles into view, laden with makeshift bags bound with rough twine.'),
 					_("won't say from where he came, but it's clear that he's not staying.")
@@ -16,23 +16,23 @@ Events.Room = [
 				notification: _('a nomad arrives, looking to trade'),
 				blink: true,
 				buttons: {
-					'buyScales': {
+					buyScales: {
 						text: _('buy scales'),
 						cost: { 'fur': 100 },
 						reward: { 'scales': 1 }
 					},
-					'buyTeeth': {
+					buyTeeth: {
 						text: _('buy teeth'),
 						cost: { 'fur': 200 },
 						reward: { 'teeth': 1 }
 					},
-					'buyBait': {
+					buyBait: {
 						text: _('buy bait'),
 						cost: { 'fur': 5 },
 						reward: { 'bait': 1 },
 						notification: _('traps are more effective with bait.')
 					},
-					'buyCompass': {
+					buyCompass: {
 						available: function() {
 							return $SM.get('stores.compass', true) < 1;
 						},
@@ -42,7 +42,7 @@ Events.Room = [
 						notification: _('the old compass is dented and dusty, but it looks to work.'),
 						onChoose: Path.openPath
 					}, 
-					'goodbye': {
+					goodbye: {
 						text: _('say goodbye'),
 						nextScene: 'end'
 					}
@@ -55,7 +55,7 @@ Events.Room = [
 			return Engine.activeModule == Room && $SM.get('stores.wood');
 		},
 		scenes: {
-			'start': {
+			start: {
 				text: [
 					_('through the walls, shuffling noises can be heard.'),
 					_("can't tell what they're up to.")
@@ -63,36 +63,36 @@ Events.Room = [
 				notification: _('strange noises can be heard through the walls'),
 				blink: true,
 				buttons: {
-					'investigate': {
+					investigate: {
 						text: _('investigate'),
 						nextScene: { 0.3: 'stuff', 1: 'nothing' }
 					},
-					'ignore': {
+					ignore: {
 						text: _('ignore them'),
 						nextScene: 'end'
 					}
 				}
 			},
-			'nothing': {
+			nothing: {
 				text: [
 					_('vague shapes move, just out of sight.'),
 					_('the sounds stop.')
 				],
 				buttons: {
-					'backinside': {
+					backinside: {
 						text: _('go back inside'),
 						nextScene: 'end'
 					}
 				}
 			},
-			'stuff': {
+			stuff: {
 				reward: { wood: 100, fur: 10 },
 				text: [
 					_('a bundle of sticks lies just beyond the threshold, wrapped in coarse furs.'),
 					_('the night is silent.')
 				],
 				buttons: {
-					'backinside': {
+					backinside: {
 						text: _('go back inside'),
 						nextScene: 'end'
 					}
@@ -114,11 +114,11 @@ Events.Room = [
 				notification: _('something\'s in the store room'),
 				blink: true,
 				buttons: {
-					'investigate': {
+					investigate: {
 						text: _('investigate'),
 						nextScene: { 0.5: 'scales', 0.8: 'teeth', 1: 'cloth' }
 					},
-					'ignore': {
+					ignore: {
 						text: _('ignore them'),
 						nextScene: 'end'
 					}
@@ -138,7 +138,7 @@ Events.Room = [
 					$SM.addM('stores', {'wood': -numWood, 'scales': numScales});
 				},
 				buttons: {
-					'leave': {
+					leave: {
 						text: _('leave'),
 						nextScene: 'end'
 					}
@@ -158,7 +158,7 @@ Events.Room = [
 					$SM.addM('stores', {'wood': -numWood, 'teeth': numTeeth});
 				},
 				buttons: {
-					'leave': {
+					leave: {
 						text: _('leave'),
 						nextScene: 'end'
 					}
@@ -178,7 +178,7 @@ Events.Room = [
 					$SM.addM('stores', {'wood': -numWood, 'cloth': numCloth});
 				},
 				buttons: {
-					'leave': {
+					leave: {
 						text: _('leave'),
 						nextScene: 'end'
 					}
@@ -200,17 +200,17 @@ Events.Room = [
 				notification: _('a beggar arrives'),
 				blink: true,
 				buttons: {
-					'50furs': {
+					50furs: {
 						text: _('give 50'),
 						cost: {fur: 50},
 						nextScene: { 0.5: 'scales', 0.8: 'teeth', 1: 'cloth' }
 					},
-					'100furs': {
+					100furs: {
 						text: _('give 100'),
 						cost: {fur: 100},
 						nextScene: { 0.5: 'teeth', 0.8: 'scales', 1: 'cloth' }
 					},
-					'deny': {
+					deny: {
 						text: _('turn him away'),
 						nextScene: 'end'
 					}
@@ -223,7 +223,7 @@ Events.Room = [
 					_('leaves a pile of small scales behind.')
 				],
 				buttons: {
-					'leave': {
+					leave: {
 						text: _('say goodbye'),
 						nextScene: 'end'
 					}
@@ -236,7 +236,7 @@ Events.Room = [
 					_('leaves a pile of small teeth behind.')
 				],
 				buttons: {
-					'leave': {
+					leave: {
 						text: _('say goodbye'),
 						nextScene: 'end'
 					}
@@ -249,7 +249,7 @@ Events.Room = [
 					_('leaves some scraps of cloth behind.')
 				],
 				buttons: {
-					'leave': {
+					leave: {
 						text: _('say goodbye'),
 						nextScene: 'end'
 					}
@@ -272,23 +272,23 @@ Events.Room = [
 				notification: _('a mysterious wanderer arrives'),
 				blink: true,
 				buttons: {
-					'100wood': {
+					100wood: {
 						text: _('give 100'),
 						cost: {wood: 100},
 						nextScene: { 1: '100wood'}
 					},
-					'500wood': {
+					500wood: {
 						text: _('give 500'),
 						cost: {wood: 500},
 						nextScene: { 1: '500wood' }
 					},
-					'deny': {
+					deny: {
 						text: _('turn him away'),
 						nextScene: 'end'
 					}
 				}
 			},
-			'100wood': {
+			100wood: {
 				text: [
 					_('the wanderer leaves, cart loaded with wood')
 				],
@@ -301,13 +301,13 @@ Events.Room = [
 					}
 				},
 				buttons: {
-					'leave': {
+					leave: {
 						text: _('say goodbye'),
 						nextScene: 'end'
 					}
 				}
 			},
-			'500wood': {
+			500wood: {
 				text: [
 					_('the wanderer leaves, cart loaded with wood')
 				],
@@ -320,7 +320,7 @@ Events.Room = [
 					}
 				},
 				buttons: {
-					'leave': {
+					leave: {
 						text: _('say goodbye'),
 						nextScene: 'end'
 					}
@@ -343,23 +343,23 @@ Events.Room = [
 				notification: _('a mysterious wanderer arrives'),
 				blink: true,
 				buttons: {
-					'100fur': {
+					100fur: {
 						text: _('give 100'),
 						cost: {fur: 100},
 						nextScene: { 1: '100fur'}
 					},
-					'500fur': {
+					500fur: {
 						text: _('give 500'),
 						cost: {fur: 500},
 						nextScene: { 1: '500fur' }
 					},
-					'deny': {
+					deny: {
 						text: _('turn her away'),
 						nextScene: 'end'
 					}
 				}
 			},
-			'100fur': {
+			100fur: {
 				text: [
 					_('the wanderer leaves, cart loaded with furs')
 				],
@@ -372,13 +372,13 @@ Events.Room = [
 					}
 				},
 				buttons: {
-					'leave': {
+					leave: {
 						text: _('say goodbye'),
 						nextScene: 'end'
 					}
 				}
 			},
-			'500fur': {
+			500fur: {
 				text: [
 					_('the wanderer leaves, cart loaded with furs')
 				],
@@ -391,7 +391,7 @@ Events.Room = [
 					}
 				},
 				buttons: {
-					'leave': {
+					leave: {
 						text: _('say goodbye'),
 						nextScene: 'end'
 					}
@@ -406,7 +406,7 @@ Events.Room = [
 			return Engine.activeModule == Room && $SM.get('features.location.world');
 		},
 		scenes: {
-			'start': {
+			start: {
 				text: [
 					_("the scout says she's been all over."),
 					_("willing to talk about it, for a price.")
@@ -414,13 +414,13 @@ Events.Room = [
 				notification: _('a scout stops for the night'),
 				blink: true,
 				buttons: {
-					'buyMap': {
+					buyMap: {
 						text: _('buy map'),
 						cost: { 'fur': 200, 'scales': 10 },
 						notification: _('the map uncovers a bit of the world'),
 						onChoose: World.applyMap
 					},
-					'learn': {
+					learn: {
 						text: _('learn scouting'),
 						cost: { 'fur': 1000, 'scales': 50, 'teeth': 20 },
 						available: function() {
@@ -430,7 +430,7 @@ Events.Room = [
 							$SM.addPerk('scout');
 						}
 					},
-					'leave': {
+					leave: {
 						text: _('say goodbye'),
 						nextScene: 'end'
 					}
@@ -445,7 +445,7 @@ Events.Room = [
 			return Engine.activeModule == Room && $SM.get('features.location.world');
 		},
 		scenes: {
-			'start': {
+			start: {
 				text: [
 					_('an old wanderer arrives.'),
 					_('he smiles warmly and asks for lodgings for the night.')
@@ -453,7 +453,7 @@ Events.Room = [
 				notification: _('an old wanderer arrives'),
 				blink: true,
 				buttons: {
-					'agree': {
+					agree: {
 						text: _('agree'),
 						cost: {
 							'cured meat': 100,
@@ -462,18 +462,18 @@ Events.Room = [
 						},
 						nextScene: {1: 'agree'}
 					},
-					'deny': {
+					deny: {
 						text: _('turn him away'),
 						nextScene: 'end'
 					}
 				}
 			},
-			'agree': {
+			agree: {
 				text: [
 					_('in exchange, the wanderer offers his wisdom.')
 				],
 				buttons: {
-					'evasion': {
+					evasion: {
 						text: _('evasion'),
 						available: function() {
 							return !$SM.hasPerk('evasive');
@@ -483,7 +483,7 @@ Events.Room = [
 						},
 						nextScene: 'end'
 					},
-					'precision': {
+					precision: {
 						text: _('precision'),
 						available: function() {
 							return !$SM.hasPerk('precise');
@@ -493,7 +493,7 @@ Events.Room = [
 						},
 						nextScene: 'end'
 					},
-					'force': {
+					force: {
 						text: _('force'),
 						available: function() {
 							return !$SM.hasPerk('barbarian');
@@ -503,7 +503,7 @@ Events.Room = [
 						},
 						nextScene: 'end'
 					},
-					'nothing': {
+					nothing: {
 						text: _('nothing'),
 						nextScene: 'end'
 					}
@@ -518,7 +518,7 @@ Events.Room = [
 			return Engine.activeModule == Room && $SM.get('stores.medicine', true) > 0;
 		},
 		scenes: {
-			'start': {
+			start: {
 				text: [
 					_("a man hobbles up, coughing."),
 					_("he begs for medicine.")
@@ -526,19 +526,19 @@ Events.Room = [
 				notification: _('a sick man hobbles up'),
 				blink: true,
 				buttons: {
-					'help': {
+					help: {
 						text: _('give 1 medicine'),
 						cost: { 'medicine': 1 },
 						notification: _('the man swallows the medicine eagerly'),
 						nextScene: { 0.1: 'alloy', 0.3: 'cells', 0.5: 'scales', 1.0: 'nothing' }
 					},
-					'ignore': {
+					ignore: {
 						text: _('tell him to leave'),
 						nextScene: 'end'
 					}
 				}
 			},
-			'alloy': {
+			alloy: {
 				text: [
 					_("the man is thankful."),
 					_('he leaves a reward.'),
@@ -548,13 +548,13 @@ Events.Room = [
 					$SM.add('stores["alien alloy"]', 1);
 				},
 				buttons: {
-					'bye': {
+					bye: {
 						text: _('say goodbye'),
 						nextScene: 'end'
 					}
 				}
 			},
-			'cells': {
+			cells: {
 				text: [
 					_("the man is thankful."),
 					_('he leaves a reward.'),
@@ -564,13 +564,13 @@ Events.Room = [
 					$SM.add('stores["energy cell"]', 3);
 				},
 				buttons: {
-					'bye': {
+					bye: {
 						text: _('say goodbye'),
 						nextScene: 'end'
 					}
 				}
 			},
-			'scales': {
+			scales: {
 				text: [
 					_("the man is thankful."),
 					_('he leaves a reward.'),
@@ -580,18 +580,18 @@ Events.Room = [
 					$SM.add('stores.scales', 5);
 				},
 				buttons: {
-					'bye': {
+					bye: {
 						text: _('say goodbye'),
 						nextScene: 'end'
 					}
 				}
 			},
-			'nothing': {
+			nothing: {
 				text: [
 					_("the man expresses his thanks and hobbles off.")
 				],
 				buttons: {
-					'bye': {
+					bye: {
 						text: _('say goodbye'),
 						nextScene: 'end'
 					}

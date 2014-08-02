@@ -8,7 +8,7 @@ Events.Outside = [
 			return Engine.activeModule == Outside && $SM.get('game.buildings["trap"]', true) > 0;
 		},
 		scenes: {
-			'start': {
+			start: {
 				text: [
 					_('some of the traps have been torn apart.'),
 					_('large prints lead away, into the forest.')
@@ -22,23 +22,23 @@ Events.Outside = [
 				notification: _('some traps have been destroyed'),
 				blink: true,
 				buttons: {
-					'track': {
+					track: {
 						text: _('track them'),
 						nextScene: {0.5: 'nothing', 1: 'catch'}
 					},
-					'ignore': {
+					ignore: {
 						text: _('ignore them'),
 						nextScene: 'end'
 					}
 				}
 			},
-			'nothing': {
+			nothing: {
 				text: [
 					_('the tracks disappear after just a few minutes.'),
 					_('the forest is silent.')
 				],
 				buttons: {
-					'end': {
+					end: {
 						text: _('go home'),
 						nextScene: 'end'
 					}
@@ -55,7 +55,7 @@ Events.Outside = [
 					teeth: 10
 				},
 				buttons: {
-					'end': {
+					end: {
 						text: _('go home'),
 						nextScene: 'end'
 					}
@@ -70,7 +70,7 @@ Events.Outside = [
 			return Engine.activeModule == Outside && $SM.get('game.population', true) > 10 && $SM.get('game.population', true) < 50 && $SM.get('stores.medicine', true) > 0;
 		},
 		scenes: {
-			'start': {
+			start: {
 				text: [
 					_('a sickness is spreading through the village.'),
 					_('medicine is needed immediately.')
@@ -78,29 +78,29 @@ Events.Outside = [
 
 				blink: true,
 				buttons: {
-					'heal': {
+					heal: {
 						text: _('1 medicine'),
 						cost: { 'medicine' : 1 },
 						nextScene: {1: 'healed'}
 					},
-					'ignore': {
+					ignore: {
 						text: _('ignore it'),
 						nextScene: {1: 'death'}
 					}
 				}
 			},
-			'healed': {
+			healed: {
 				text: [
 					_('the sickness is cured in time.')
 				],
 				buttons: {
-					'end': {
+					end: {
 						text: _('go home'),
 						nextScene: 'end'
 					}
 				}
 			},
-			'death': {
+			death: {
 				text: [
 					_('the sickness spreads through the village.'),
 					_('the days are spent with burials.'),
@@ -111,7 +111,7 @@ Events.Outside = [
 					Outside.killVillagers(numKilled);
 				},
 				buttons: {
-					'end': {
+					end: {
 						text: _('go home'),
 						nextScene: 'end'
 					}
@@ -126,25 +126,25 @@ Events.Outside = [
 			return Engine.activeModule == Outside && $SM.get('game.population', true) > 50 && $SM.get('stores.medicine', true) > 0;
 		},
 		scenes: {
-			'start': {
+			start: {
 				text: [
 					_('a terrible plague is fast spreading through the village.'),
 					_('medicine is needed immediately.')
 				],
 				blink: true,
 				buttons: {
-					'heal': {
+					heal: {
 						text: _('5 medicine'),
 						cost: { 'medicine' : 5 },
 						nextScene: {1: 'healed'}
 					},
-					'ignore': {
+					ignore: {
 						text: _('do nothing'),
 						nextScene: {1: 'death'}
 					}
 				}
 			},
-			'healed': {
+			healed: {
 				text: [
 					_('the plague is kept from spreading.'),
 					_('only a few die.'),
@@ -155,13 +155,13 @@ Events.Outside = [
 					Outside.killVillagers(numKilled);
 				},
 				buttons: {
-					'end': {
+					end: {
 						text: _('go home'),
 						nextScene: 'end'
 					}
 				}
 			},
-			'death': {
+			death: {
 				text: [
 					_('the plague rips through the village.'),
 					_('the nights are rent with screams.'),
@@ -172,7 +172,7 @@ Events.Outside = [
 					Outside.killVillagers(numKilled);
 				},
 				buttons: {
-					'end': {
+					end: {
 						text: _('go home'),
 						nextScene: 'end'
 					}
@@ -187,7 +187,7 @@ Events.Outside = [
 			return Engine.activeModule == Outside && $SM.get('game.population', true) > 0;
 		},
 		scenes: {
-			'start': {
+			start: {
 				text: [
 					 _('a pack of snarling beasts pours out of the trees.'),
 					 _('the fight is short and bloody, but the beasts are repelled.'),
@@ -204,7 +204,7 @@ Events.Outside = [
 				},
 				blink: true,
 				buttons: {
-					'end': {
+					end: {
 						text: _('go home'),
 						nextScene: 'end'
 					}
@@ -219,7 +219,7 @@ Events.Outside = [
 			return Engine.activeModule == Outside && $SM.get('game.population', true) > 0 && $SM.get('game.cityCleared');;
 		},
 		scenes: {
-			'start': {
+			start: {
 				text: [
 					_('a gunshot rings through the trees.'),
 					_('well armed men charge out of the forest, firing into the crowd.'),
@@ -236,7 +236,7 @@ Events.Outside = [
 				
 				blink: true,
 				buttons: {
-					'end': {
+					end: {
 						text: _('go home'),
 						nextScene: 'end'
 					}
