@@ -44,7 +44,7 @@ var Notifications = {
 	
 	clearHidden: function() {
 		// To fix some memory usage issues, we clear notifications after the last 50.
-		$('.notification').find("div:nth-child(n+" + this.options.maxSize + ")").remove();
+		$('#notifications').find(":nth-child(n+" + this.options.maxSize + ")").remove();
 	},
 	
 	printMessage: function(t) {
