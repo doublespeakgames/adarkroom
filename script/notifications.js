@@ -48,13 +48,13 @@ var Notifications = {
 	},
 	
 	printMessage: function(text, tooltipText) {
-		tooltipText = "helo";
 		var text = $('<div>').addClass('notification').text(text).prependTo('div#notifications');
-		if (tooltipText) {
-			var tooltip = $('<div>').addClass('tooltip');
-			tooltip.text(tooltipText);
-			tooltip.appendTo(text);
-		}
+		var tooltip = $('<div>').addClass('tooltip');
+		tooltip.text(tooltipText);
+		var timeText = $('<div>').addClass('timeText');
+		timeText.text(new Date().toLocaleTimeString());
+		timeText.appendTo(tooltip);
+		tooltip.appendTo(text);
 		Notifications.clearHidden();
 	},
 	

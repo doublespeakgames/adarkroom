@@ -141,13 +141,20 @@ div#notifications {
 	top: 20px;
 	left: 0px;
 	height: 700px;
-	width: 200px;
+	width: 190px;
 	border: 1px solid #888;
-	padding: 10px 0 10px 10px;
+	padding: 10px;
+	overflow: scroll;
 }
 
 div#notifications div.notification {
 	margin-bottom: 10px;
+}
+
+div.timeText {
+	font-size: 11px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #ccc;
 }
 
 /* Button */
