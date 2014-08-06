@@ -47,8 +47,14 @@ var Notifications = {
 		$('#notifications').find(":nth-child(n+" + this.options.maxSize + ")").remove();
 	},
 	
-	printMessage: function(t) {
-		var text = $('<div>').addClass('notification').text(t).prependTo('div#notifications');
+	printMessage: function(text, tooltipText) {
+		tooltipText = "helo";
+		var text = $('<div>').addClass('notification').text(text).prependTo('div#notifications');
+		if (tooltipText) {
+			var tooltip = $('<div>').addClass('tooltip');
+			tooltip.text(tooltipText);
+			tooltip.appendTo(text);
+		}
 		Notifications.clearHidden();
 	},
 	
