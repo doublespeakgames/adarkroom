@@ -143,7 +143,6 @@ div#notifications {
 	height: 700px;
 	width: 200px;
 	overflow: hidden;
-	color: #666;
 }
 
 div#notifications div.notification {

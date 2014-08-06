@@ -48,7 +48,7 @@ var Notifications = {
 	},
 	
 	printMessage: function(t) {
-		var text = $('<div>').addClass('notification').css('opacity', '0').text(t).prependTo('div#notifications');
+		var text = $('<div>').addClass('notification').text(t).prependTo('div#notifications');
 		Notifications.clearHidden();
 	},
 	
