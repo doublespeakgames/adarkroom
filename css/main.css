@@ -142,6 +142,8 @@ div#notifications {
 	left: 0px;
 	height: 700px;
 	width: 200px;
+	border: 1px solid #888;
+	padding: 10px 0 10px 10px;
 }
 
 div#notifications div.notification {
