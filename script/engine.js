@@ -318,6 +318,7 @@
 					start: {
 						text: [_('save this.')],
 						textarea: string64,
+						readonly: true,
 						buttons: {
 							'done': {
 								text: _('got it'),

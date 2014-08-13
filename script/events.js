@@ -614,7 +614,10 @@ var Events = {
 		}
 		
 		if(scene.textarea != null) {
-			$('<textarea>').val(scene.textarea).appendTo(desc);
+			var ta = $('<textarea>').val(scene.textarea).appendTo(desc);
+			if(scene.readonly) {
+				ta.attr('readonly', true);
+			}
 		}
 		
 		// Draw any loot
