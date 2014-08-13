@@ -569,7 +569,7 @@
 					Engine.activeModule.keyDown(e);
 				}
 			}
-			return !(jQuery.inArray(e.keycode, [37,38,39,40]));
+			return jQuery.inArray(e.keycode, [37,38,39,40]) < 0;
 		},
 	
 		keyUp: function(e) {
