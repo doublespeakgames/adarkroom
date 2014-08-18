@@ -16,10 +16,6 @@ body {
 	margin: 0;
 }
 
-::selection{
-	background-color: transparent;
-}
-
 /* Framework stuff */
 
 div.clear {
@@ -145,30 +141,20 @@ div#notifications {
 	top: 20px;
 	left: 0px;
 	height: 700px;
-	width: 200px;
-	overflow: hidden;
+	width: 190px;
+	border: 1px solid #888;
+	padding: 10px;
+	overflow: scroll;
 }
 
 div#notifications div.notification {
 	margin-bottom: 10px;
 }
 
-div#notifyGradient {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	height: 100%;
-	width: 100%;
-	background-color: white;
-	background: -webkit-linear-gradient(
-		rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%
-	);
-	background: linear-gradient(
-		rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%
-	);
-	filter: alpha(
-		Opacity=0, FinishOpacity=100, Style=1, StartX=0, StartY=0, FinishX=0, FinishY=500
-	);
+div.timeText {
+	font-size: 11px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #c6c6c6;
 }
 
 /* Button */

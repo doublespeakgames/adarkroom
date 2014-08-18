@@ -8,14 +8,13 @@ var Notifications = {
 			this.options,
 			options
 		);
+		this.options.maxSize = 50;
 		
 		// Create the notifications box
 		elem = $('<div>').attr({
 			id: 'notifications',
 			className: 'notifications'
 		});
-		// Create the transparency gradient
-		$('<div>').attr('id', 'notifyGradient').appendTo(elem);
 		
 		elem.appendTo('div#wrapper');
 	},
@@ -44,28 +43,19 @@ var Notifications = {
 	},
 	
 	clearHidden: function() {
-	
-		// To fix some memory usage issues, we clear notifications that have been hidden.
-		
-		// We use position().top here, because we know that the parent will be the same, so the position will be the same.
-		var bottom = $('#notifyGradient').position().top + $('#notifyGradient').outerHeight(true);
-		
-		$('.notification').each(function() {
-		
-			if($(this).position().top > bottom){
-				$(this).remove();
-			}
-		
-		});
-		
+		// To fix some memory usage issues, we clear notifications after the last 50.
+		$('#notifications').find(":nth-child(n+" + this.options.maxSize + ")").remove();
 	},
 	
-	printMessage: function(t) {
-		var text = $('<div>').addClass('notification').css('opacity', '0').text(t).prependTo('div#notifications');
-		text.animate({opacity: 1}, 500, 'linear', function() {
-			// Do this every time we add a new message, this way we never have a large backlog to iterate through. Keeps things faster.
-			Notifications.clearHidden();
-		});
+	printMessage: function(text, tooltipText) {
+		var text = $('<div>').addClass('notification').text(text).prependTo('div#notifications');
+		var tooltip = $('<div>').addClass('tooltip');
+		tooltip.text(tooltipText);
+		var timeText = $('<div>').addClass('timeText');
+		timeText.text(new Date().toLocaleTimeString());
+		timeText.appendTo(tooltip);
+		tooltip.appendTo(text);
+		Notifications.clearHidden();
 	},
 	
 	printQueue: function(module) {
