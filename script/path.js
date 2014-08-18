@@ -178,6 +178,7 @@ var Path = {
 			var have = $SM.get('stores["'+k+'"]');
 			var num = Path.outfit[k];
 			num = typeof num == 'number' ? num : 0;
+			if (have < num) { num = have; }
 			var numAvailable = $SM.get('stores["'+k+'"]', true);
 			var row = $('div#outfit_row_' + k.replace(' ', '-'), outfit);
 			if((store.type == 'tool' || store.type == 'weapon') && have > 0) {
