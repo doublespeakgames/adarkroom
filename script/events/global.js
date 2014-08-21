@@ -15,6 +15,7 @@ Events.Global = [
 					_('say he should be strung up as an example.')
 				],
 				notification: _('a thief is caught'),
+				blink: true,
 				buttons: {
 					'kill': {
 						text: _('hang him'),
@@ -28,15 +29,15 @@ Events.Global = [
 			},
 			'hang': {
 				text: [
-			       _('the villagers hang the thief high in front of the store room.'),
-			       _('the point is made. in the next few days, the missing supplies are returned.')
-		        ],
-		        onLoad: function() {
-		        	$SM.set('game.thieves', 2);
-		        	$SM.remove('income.thieves');
-		        	$SM.addM('stores', $SM.get('game.stolen'));
-		        },
-		        buttons: {
+					_('the villagers hang the thief high in front of the store room.'),
+					_('the point is made. in the next few days, the missing supplies are returned.')
+				],
+				onLoad: function() {
+					$SM.set('game.thieves', 2);
+					$SM.remove('income.thieves');
+					$SM.addM('stores', $SM.get('game.stolen'));
+				},
+				buttons: {
 					'leave': {
 						text: _('leave'),
 						nextScene: 'end'
@@ -45,20 +46,20 @@ Events.Global = [
 			},
 			'spare': {
 				text: [
-			       _("the man says he's grateful. says he won't come around any more."),
-			       _("shares what he knows about sneaking before he goes.")
-		        ],
-		        onLoad: function() {
-		        	$SM.set('game.thieves', 2);
-		        	$SM.remove('income.thieves');
-		        	$SM.addPerk('stealthy');
-		        },
-		        buttons: {
-		        	'leave': {
-		        		text: _('leave'),
-		        		nextScene: 'end'
-		        	}
-		        }
+					_("the man says he's grateful. says he won't come around any more."),
+					_("shares what he knows about sneaking before he goes.")
+				],
+				onLoad: function() {
+					$SM.set('game.thieves', 2);
+					$SM.remove('income.thieves');
+					$SM.addPerk('stealthy');
+				},
+				buttons: {
+					'leave': {
+						text: _('leave'),
+						nextScene: 'end'
+					}
+				}
 			}
 		}
 	}

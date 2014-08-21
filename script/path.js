@@ -178,6 +178,7 @@ var Path = {
 			var have = $SM.get('stores["'+k+'"]');
 			var num = Path.outfit[k];
 			num = typeof num == 'number' ? num : 0;
+			if (have < num) { num = have; }
 			var numAvailable = $SM.get('stores["'+k+'"]', true);
 			var row = $('div#outfit_row_' + k.replace(' ', '-'), outfit);
 			if((store.type == 'tool' || store.type == 'weapon') && have > 0) {
@@ -258,15 +259,15 @@ var Path = {
 		return row;
 	},
 	
-  increaseSupply: function(btn) {
+	increaseSupply: function(btn) {
 		var supply = $(this).closest('.outfitRow').attr('key');
 		Engine.log('increasing ' + supply + ' by up to ' + btn.data);
 		var cur = Path.outfit[supply];
 		cur = typeof cur == 'number' ? cur : 0;
 		if(Path.getFreeSpace() >= Path.getWeight(supply) && cur < $SM.get('stores["'+supply+'"]', true)) {
-		  var maxExtraByWeight = Math.floor(Path.getFreeSpace() / Path.getWeight(supply));
-		  var maxExtraByStore  = $SM.get('stores["'+supply+'"]', true) - cur;
-		  var maxExtraByBtn    = btn.data;
+			var maxExtraByWeight = Math.floor(Path.getFreeSpace() / Path.getWeight(supply));
+			var maxExtraByStore  = $SM.get('stores["'+supply+'"]', true) - cur;
+			var maxExtraByBtn    = btn.data;
 			Path.outfit[supply] = cur + Math.min(maxExtraByBtn, Math.min(maxExtraByWeight, maxExtraByStore));
 			Path.updateOutfitting();
 		}

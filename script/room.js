@@ -450,9 +450,9 @@ var Room = {
 	},
 	
 	MiscItems: {
-	  'laser rifle': {
-	    type: 'weapon'
-	  }
+		'laser rifle': {
+			type: 'weapon'
+		}
 	},
 	
 	name: _("Room"),
@@ -770,7 +770,7 @@ var Room = {
 			} else if(Room.TradeGoods[k]) {
 				type = Room.TradeGoods[k].type;
 			} else if (Room.MiscItems[k]) {
-			  type = Room.MiscItems[k].type;
+				type = Room.MiscItems[k].type;
 			}
 			
 			var location;
