@@ -195,8 +195,8 @@ div.button:hover {
 
 div.button.disabled, div.button.disabled:hover {
 	cursor: default;
-	border-color: grey;
-	color: grey;
+	border-color: #b2b2b2;
+	color: #b2b2b2;
 	text-decoration: none;
 }
 
