@@ -2,16 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adarkroom\n"
 "POT-Creation-Date: 2014-08-25 16:44+0200\n"
-"PO-Revision-Date: 2014-08-25 16:44+0200\n"
+"PO-Revision-Date: 2014-08-25 22:26+0200\n"
 "Last-Translator: Olexandr Nesterenko <olexn@ukr.net>\n"
 "Language-Team: uk\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.6.8\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.5.4\n"
 "X-Poedit-KeywordsList: _\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ./../../script\n"
@@ -40,11 +39,11 @@ msgstr "Dropbox Експорт / Імпорт"
 
 #: ../../script/dropbox.js:89
 msgid "export or import save data to dropbox datastorage"
-msgstr "експорт чи імпорт данних до сховища dropbox"
+msgstr "експорт чи імпорт даних до сховища dropbox"
 
 #: ../../script/dropbox.js:90
 msgid "your are connected to dropbox with account / email "
-msgstr "ви підключені до dropbox аккаунту "
+msgstr "ви підключені до облікового запису dropbox"
 
 #: ../../script/dropbox.js:93
 msgid "save"
@@ -60,7 +59,7 @@ msgstr "вийти"
 
 #: ../../script/dropbox.js:113
 msgid "choose one slot to save to"
-msgstr "оберіть один слод для збереження"
+msgstr "оберіть один слот для збереження"
 
 #: ../../script/dropbox.js:119
 msgid "save to slot"
@@ -68,7 +67,7 @@ msgstr "зберегти в комірку"
 
 #: ../../script/dropbox.js:141
 msgid "choose one slot to load from"
-msgstr "оберіть один слод для завантаження"
+msgstr "оберіть один слот для завантаження"
 
 #: ../../script/dropbox.js:148
 msgid "load from slot"
@@ -112,11 +111,11 @@ msgstr "навчає ефективно битися без зброї"
 
 #: ../../script/engine.js:31
 msgid "unarmed master"
-msgstr "знезброєний майстер"
+msgstr "обеззброєний майстер"
 
 #: ../../script/engine.js:32
 msgid "punch twice as fast, and with even more force"
-msgstr "удари вдвічи бистріші та сильніші"
+msgstr "удари вдвічі швидші та сильніші"
 
 #: ../../script/engine.js:33
 msgid "learned to strike faster without weapons"
@@ -141,7 +140,7 @@ msgstr "сповільнений метаболізм"
 
 #: ../../script/engine.js:42
 msgid "go twice as far without eating"
-msgstr "у двічи довше обходитися без їжі"
+msgstr "вдвічі довше обходитися без їжі"
 
 #: ../../script/engine.js:43
 msgid "learned how to ignore the hunger"
@@ -153,7 +152,7 @@ msgstr "пустельний щур"
 
 #: ../../script/engine.js:47
 msgid "go twice as far without drinking"
-msgstr "вдвічи довше невідчувати спраги"
+msgstr "удвічі довше не відчувати спраги"
 
 #: ../../script/engine.js:48
 msgid "learned to love the dry air"
@@ -202,7 +201,7 @@ msgstr "маскування"
 
 #: ../../script/engine.js:67
 msgid "better avoid conflict in the wild"
-msgstr "краже уникати конфліктів на пустощах"
+msgstr "краще уникати конфліктів на пустощах"
 
 #: ../../script/engine.js:68
 msgid "learned how not to be seen"
@@ -250,11 +249,11 @@ msgstr "Експорт / Імпорт"
 
 #: ../../script/engine.js:247
 msgid "export or import save data, for backing up"
-msgstr "експорт чи імпорт данних, за для отримання резервної копії"
+msgstr "експорт чи імпорт даних, за для отримання резервної копії"
 
 #: ../../script/engine.js:248
 msgid "or migrating computers"
-msgstr "чи переносу на ішний комп'ютер"
+msgstr "чи переносу на інший комп'ютер"
 
 #: ../../script/engine.js:252
 msgid "export"
@@ -424,20 +423,19 @@ msgstr "через рівнину набираючи швидкість набл
 
 #: ../../script/events/encounters.js:119
 msgid "A Shivering Man"
-msgstr "Тремтляча людина"
+msgstr "Тремтяча людина"
 
 #: ../../script/events/encounters.js:127
 msgid "shivering man"
-msgstr "тремтляча людина"
+msgstr "тремтяча людина"
 
 #: ../../script/events/encounters.js:128
 msgid "the shivering man is dead"
-msgstr "тремтляча людина загинула"
+msgstr "тремтяча людина загинула"
 
 #: ../../script/events/encounters.js:156
 msgid "a shivering man approaches and attacks with surprising strength"
-msgstr ""
-"наближається якісь чоловік, його сильно трусить, і атакує з неймовірною силою"
+msgstr "наближається якісь чоловік, його сильно трусить, і атакує з неймовірною силою"
 
 #: ../../script/events/encounters.js:161
 msgid "A Man-Eater"
@@ -453,7 +451,7 @@ msgstr "людожер загинув"
 
 #: ../../script/events/encounters.js:193
 msgid "a large creature attacks, claws freshly bloodied"
-msgstr "велика істота, із закривавлиними кігтями, атакує"
+msgstr "велика істота, із закривавленими кігтями, атакує"
 
 #: ../../script/events/encounters.js:198
 msgid "A Scavenger"
@@ -533,7 +531,7 @@ msgstr "снайпер загинув"
 
 #: ../../script/events/encounters.js:396
 msgid "a shot rings out, from somewhere in the long grass"
-msgstr "звідкісь з-за високої трави пролунав постріл"
+msgstr "звідкись з-за високої трави пролунав постріл"
 
 #: ../../script/events/global.js:6
 msgid "The Thief"
@@ -568,8 +566,7 @@ msgid "the villagers hang the thief high in front of the store room."
 msgstr "поселенці повішали крадія перед коморою."
 
 #: ../../script/events/global.js:33
-msgid ""
-"the point is made. in the next few days, the missing supplies are returned."
+msgid "the point is made. in the next few days, the missing supplies are returned."
 msgstr "вибір зроблено. на протязі декількох днів зниклі речі були повернуті."
 
 #: ../../script/events/global.js:49
@@ -622,12 +619,11 @@ msgstr "йти додому"
 
 #: ../../script/events/outside.js:49
 msgid "not far from the village lies a large beast, its fur matted with blood."
-msgstr ""
-"неподалік від поселення лежить здоровення тварюка, її хутро замащено кров'ю."
+msgstr "неподалік від поселення лежить здоровенна тварюка, її хутро вкрито кров'ю."
 
 #: ../../script/events/outside.js:50
 msgid "it puts up little resistance before the knife."
-msgstr "знеслаблена, перед ножем вона навіть не опирається."
+msgstr "ослаблена, перед ножем вона навіть не опирається."
 
 #: ../../script/events/outside.js:68
 msgid "Sickness"
@@ -738,8 +734,7 @@ msgid "The Nomad"
 msgstr ""
 
 #: ../../script/events/room.js:13
-msgid ""
-"a nomad shuffles into view, laden with makeshift bags bound with rough twine."
+msgid "a nomad shuffles into view, laden with makeshift bags bound with rough twine."
 msgstr ""
 
 #: ../../script/events/room.js:14
@@ -818,8 +813,7 @@ msgid "go back inside"
 msgstr "повернутись в середину"
 
 #: ../../script/events/room.js:91
-msgid ""
-"a bundle of sticks lies just beyond the threshold, wrapped in coarse furs."
+msgid "a bundle of sticks lies just beyond the threshold, wrapped in coarse furs."
 msgstr ""
 
 #: ../../script/events/room.js:92
@@ -861,11 +855,11 @@ msgstr "Жабрак"
 
 #: ../../script/events/room.js:197
 msgid "a beggar arrives."
-msgstr "брибув жебрак."
+msgstr "прибув жебрак."
 
 #: ../../script/events/room.js:198
 msgid "asks for any spare furs to keep him warm at night."
-msgstr "питає, чи немаємо ми трохи шкур, аби було чим зігрітися вночі."
+msgstr "питає, чи не маємо ми трохи шкур, аби було чим зігрітися вночі."
 
 #: ../../script/events/room.js:200
 msgid "a beggar arrives"
@@ -896,7 +890,7 @@ msgstr "і лишає купку дрібної луски."
 
 #: ../../script/events/room.js:236
 msgid "leaves a pile of small teeth behind."
-msgstr "і лишає купку дрібних ікол."
+msgstr "і лишає купку дрібних іклів."
 
 #: ../../script/events/room.js:249
 msgid "leaves some scraps of cloth behind."
@@ -907,16 +901,12 @@ msgid "The Mysterious Wanderer"
 msgstr "Загадковий мандрівник"
 
 #: ../../script/events/room.js:269
-msgid ""
-"a wanderer arrives with an empty cart. says if he leaves with wood, he'll be "
-"back with more."
-msgstr ""
-"прибув мандрівник із порожнім возиком. каже, що якщо дати йому трохи "
-"деревини, з часом він поверне її у більшій кількості."
+msgid "a wanderer arrives with an empty cart. says if he leaves with wood, he'll be back with more."
+msgstr "прибув мандрівник із порожнім возиком. каже, що якщо дати йому трохи деревини, з часом він поверне її у більшій кількості."
 
 #: ../../script/events/room.js:270
 msgid "builder's not sure he's to be trusted."
-msgstr "будівельниця не впевненна, чи варто йому довіряти."
+msgstr "будівельниця не впевнена, чи варто йому довіряти."
 
 #: ../../script/events/room.js:272 ../../script/events/room.js:343
 msgid "a mysterious wanderer arrives"
@@ -932,18 +922,15 @@ msgstr "з возиком наповненим деревиною мандрів
 
 #: ../../script/events/room.js:299 ../../script/events/room.js:318
 msgid "the mysterious wanderer returns, cart piled high with wood."
-msgstr ""
-"загадковий мандрівник повернувся, його возик доверху наповнений деревиною."
+msgstr "загадковий мандрівник повернувся, його возик доверху наповнений деревиною."
 
 #: ../../script/events/room.js:340
-msgid ""
-"a wanderer arrives with an empty cart. says if she leaves with furs, she'll "
-"be back with more."
+msgid "a wanderer arrives with an empty cart. says if she leaves with furs, she'll be back with more."
 msgstr ""
 
 #: ../../script/events/room.js:341
 msgid "builder's not sure she's to be trusted."
-msgstr "будівельниця не впевненна, чи варто їй довіряти."
+msgstr "будівельниця не впевнена, чи варто їй довіряти."
 
 #: ../../script/events/room.js:357
 msgid "turn her away"
@@ -1031,7 +1018,7 @@ msgstr "Хворий чоловік"
 
 #: ../../script/events/room.js:523
 msgid "a man hobbles up, coughing."
-msgstr "прийшов хворий чоловік, він хромає й кашляє."
+msgstr "прийшов хворий чоловік, він кульгає й кашляє."
 
 #: ../../script/events/room.js:524
 msgid "he begs for medicine."
@@ -1113,11 +1100,11 @@ msgstr "увійти"
 
 #: ../../script/events/setpieces.js:55
 msgid "deep in the swamp is a moss-covered cabin."
-msgstr "глибоко в середені болота розташована, покрита мхом, кабіна."
+msgstr "глибоко посеред болота розташована, покрита мохом, кабіна."
 
 #: ../../script/events/setpieces.js:56
 msgid "an old wanderer sits inside, in a seeming trance."
-msgstr "в середені сидить мандрівник, схоже він в трансі."
+msgstr "в середині сидить мандрівник, схоже він в трансі."
 
 #: ../../script/events/setpieces.js:61
 msgid "talk"
@@ -1129,8 +1116,7 @@ msgstr "мандрівник бере намисто і повільно кив�
 
 #: ../../script/events/setpieces.js:73
 msgid "he speaks of once leading the great fleets to fresh worlds."
-msgstr ""
-"він розповідає про те, що колись вів величезні флоти назустріч новим світам."
+msgstr "він розповідає про те, що колись вів величезні флоти назустріч новим світам."
 
 # :( :(
 #: ../../script/events/setpieces.js:74
@@ -1214,7 +1200,7 @@ msgstr "печера звужується."
 
 #: ../../script/events/setpieces.js:149
 msgid "the walls are moist and moss-covered"
-msgstr "стіни покриті мхом і дуже вологі"
+msgstr "стіни покриті мохом і дуже вологі"
 
 #: ../../script/events/setpieces.js:153
 msgid "squeeze"
@@ -1222,11 +1208,11 @@ msgstr "протиснутись"
 
 #: ../../script/events/setpieces.js:164
 msgid "the remains of an old camp sits just inside the cave."
-msgstr "всередені печери знаходяться залишки старого табору."
+msgstr "в середині печери знаходяться залишки старого табору."
 
 #: ../../script/events/setpieces.js:165
 msgid "bedrolls, torn and blackened, lay beneath a thin layer of dust."
-msgstr "під тонким шару пилу лежать порвані почорнівші спальні мішки."
+msgstr "під тонким шару пилу лежать порвані почорнівши спальні мішки."
 
 #: ../../script/events/setpieces.js:199
 msgid "the body of a wanderer lies in a small cavern."
@@ -1266,7 +1252,7 @@ msgstr "гігантська ящірка прямує до вас"
 
 #: ../../script/events/setpieces.js:394
 msgid "the nest of a large animal lies at the back of the cave."
-msgstr "в глибині печері знагодиться лігво великого звіра."
+msgstr "в глибині печері знаходиться лігво великого звіра."
 
 #: ../../script/events/setpieces.js:436
 msgid "a small supply cache is hidden at the back of the cave."
@@ -1282,13 +1268,10 @@ msgstr "Пустельне місто"
 
 #: ../../script/events/setpieces.js:525
 msgid "a small suburb lays ahead, empty houses scorched and peeling."
-msgstr ""
-"попереду розташовано невеличке місто, пусті будівля обшарпані і облущені."
+msgstr "попереду розташовано невеличке місто, пусті будівля обшарпані і облущені."
 
 #: ../../script/events/setpieces.js:526
-msgid ""
-"broken streetlights stand, rusting. light hasn't graced this place in a long "
-"time."
+msgid "broken streetlights stand, rusting. light hasn't graced this place in a long time."
 msgstr ""
 
 #: ../../script/events/setpieces.js:528
@@ -1300,9 +1283,7 @@ msgid "explore"
 msgstr "дослідити"
 
 #: ../../script/events/setpieces.js:543
-msgid ""
-"where the windows of the schoolhouse aren't shattered, they're blackened "
-"with soot."
+msgid "where the windows of the schoolhouse aren't shattered, they're blackened with soot."
 msgstr ""
 
 #: ../../script/events/setpieces.js:544
@@ -1338,7 +1319,7 @@ msgstr "за її брудними вікнами ледь видно зелен
 
 #: ../../script/events/setpieces.js:617
 msgid "a small cache of supplies is tucked inside a rusting locker."
-msgstr "в середені заіржавілої шафки лежить трохи речей."
+msgstr "в середині заіржавілої шафки лежить трохи речей."
 
 #: ../../script/events/setpieces.js:679
 msgid "a scavenger waits just inside the door."
@@ -1353,9 +1334,7 @@ msgid "an overturned caravan is spread across the pockmarked street."
 msgstr ""
 
 #: ../../script/events/setpieces.js:730
-msgid ""
-"it's been picked over by scavengers, but there's still some things worth "
-"taking."
+msgid "it's been picked over by scavengers, but there's still some things worth taking."
 msgstr ""
 
 #: ../../script/events/setpieces.js:792
@@ -1395,9 +1374,8 @@ msgid "a fight, maybe."
 msgstr "це бійка, можливо."
 
 #: ../../script/events/setpieces.js:948
-msgid ""
-"a small basket of food is hidden under a park bench, with a note attached."
-msgstr "під лавкою в парку схована торбинка з їжею, до неї причіплен записка."
+msgid "a small basket of food is hidden under a park bench, with a note attached."
+msgstr "під лавкою в парку схована торбинка з їжею, до неї причеплена записка."
 
 #: ../../script/events/setpieces.js:949
 msgid "can't read the words."
@@ -1405,7 +1383,7 @@ msgstr "але жодного слова на ній не розібрати."
 
 #: ../../script/events/setpieces.js:996
 msgid "a panicked scavenger bursts through the door, screaming."
-msgstr "панікуючий сміттяр з криком вривається з дверей."
+msgstr "сміттяр, в паніці, з криком вривається з дверей."
 
 #: ../../script/events/setpieces.js:1035
 msgid "a man stands over a dead wanderer. notices he's not alone."
@@ -1428,9 +1406,7 @@ msgid "a shame to let what he'd found go to waste."
 msgstr ""
 
 #: ../../script/events/setpieces.js:1127
-msgid ""
-"beneath the wanderer's rags, clutched in one of its many hands, a glint of "
-"steel."
+msgid "beneath the wanderer's rags, clutched in one of its many hands, a glint of steel."
 msgstr ""
 
 #: ../../script/events/setpieces.js:1128
@@ -1466,19 +1442,16 @@ msgid "A Ruined City"
 msgstr "Зруйноване місто"
 
 #: ../../script/events/setpieces.js:1242
-msgid ""
-"a battered highway sign stands guard at the entrance to this once-great city."
+msgid "a battered highway sign stands guard at the entrance to this once-great city."
 msgstr ""
 
 #: ../../script/events/setpieces.js:1243
-msgid ""
-"the towers that haven't crumbled jut from the landscape like the ribcage of "
-"some ancient beast."
+msgid "the towers that haven't crumbled jut from the landscape like the ribcage of some ancient beast."
 msgstr ""
 
 #: ../../script/events/setpieces.js:1244
 msgid "might be things worth having still inside."
-msgstr "можливо в середені хоч щось лишилось."
+msgstr "можливо в середині хоч щось лишилось."
 
 #: ../../script/events/setpieces.js:1246
 msgid "the towers of a decaying city dominate the skyline"
@@ -1598,7 +1571,7 @@ msgstr "з-за протилежної стіни вибігає бандит і
 
 #: ../../script/events/setpieces.js:1614
 msgid "a snarling beast jumps out from behind a car."
-msgstr "дикий звір вистрибує з-за атомобіля."
+msgstr "дикий звір вистрибує з-за автомобіля."
 
 #: ../../script/events/setpieces.js:1655
 msgid "street above the subway platform is blown away."
@@ -1761,9 +1734,7 @@ msgid "the small military outpost is well supplied."
 msgstr ""
 
 #: ../../script/events/setpieces.js:2446
-msgid ""
-"arms and munitions, relics from the war, are neatly arranged on the store-"
-"room floor."
+msgid "arms and munitions, relics from the war, are neatly arranged on the store-room floor."
 msgstr ""
 
 #: ../../script/events/setpieces.js:2447
@@ -1787,17 +1758,15 @@ msgid "the small settlement has clearly been burning a while."
 msgstr ""
 
 #: ../../script/events/setpieces.js:2523
-msgid ""
-"the bodies of the wanderers that lived here are still visible in the flames."
+msgid "the bodies of the wanderers that lived here are still visible in the flames."
 msgstr ""
 
 #: ../../script/events/setpieces.js:2524
 msgid "still time to rescue a few supplies."
-msgstr "ще є час вряувати хоч шось."
+msgstr "ще є час врятувати хоч щось."
 
 #: ../../script/events/setpieces.js:2558
-msgid ""
-"the remaining settlers flee from the violence, their belongings forgotten."
+msgid "the remaining settlers flee from the violence, their belongings forgotten."
 msgstr ""
 
 #: ../../script/events/setpieces.js:2559
@@ -1874,7 +1843,7 @@ msgstr "Старий будинок"
 
 #: ../../script/events/setpieces.js:2933
 msgid "an old house remains here, once white siding yellowed and peeling."
-msgstr "стоїть стара, пожовктла і облущена будівля."
+msgstr "стоїть стара, пожовкла і облущена будівля."
 
 #: ../../script/events/setpieces.js:2934
 msgid "the door hangs open."
@@ -1917,8 +1886,7 @@ msgid "a battle was fought here, long ago."
 msgstr "колись тут була битва, але це було дуже давно."
 
 #: ../../script/events/setpieces.js:3051
-msgid ""
-"battered technology from both sides lays dormant on the blasted landscape."
+msgid "battered technology from both sides lays dormant on the blasted landscape."
 msgstr "поламана техніка обох сторін розкидана по землі."
 
 #: ../../script/events/setpieces.js:3099
@@ -1934,9 +1902,7 @@ msgid "they took what they came for, and left."
 msgstr "вони забрали, що шукали і пішли."
 
 #: ../../script/events/setpieces.js:3105
-msgid ""
-"castoff from the mammoth drills can still be found by the edges of the "
-"precipice."
+msgid "castoff from the mammoth drills can still be found by the edges of the precipice."
 msgstr "запчастині від здоровезного буру досі лежать на краю прірви."
 
 #: ../../script/events/setpieces.js:3128
@@ -1944,13 +1910,12 @@ msgid "A Crashed Ship"
 msgstr "Розбитий корабель"
 
 #: ../../script/events/setpieces.js:3137
-msgid ""
-"the familiar curves of a wanderer vessel rise up out of the dust and ash. "
+msgid "the familiar curves of a wanderer vessel rise up out of the dust and ash. "
 msgstr "знайомі мандрівнику форми виступають з пилу та попелу. "
 
 #: ../../script/events/setpieces.js:3138
 msgid "lucky that the natives can't work the mechanisms."
-msgstr "нащастя, місцеві не вміють працювати з механізмами."
+msgstr "на щастя, місцеві не вміють працювати з механізмами."
 
 #: ../../script/events/setpieces.js:3139
 msgid "with a little effort, it might fly again."
@@ -1966,9 +1931,7 @@ msgstr "Копальня сірки"
 
 #: ../../script/events/setpieces.js:3155
 msgid "the military is already set up at the mine's entrance."
-msgstr ""
-"біля входу до копальні стоять військові. схоже вони при повній бойовій "
-"готовності."
+msgstr "біля входу до копальні стоять військові. схоже вони при повній бойовій готовності."
 
 #: ../../script/events/setpieces.js:3156
 msgid "soldiers patrol the perimeter, rifles slung over their shoulders."
@@ -1984,7 +1947,7 @@ msgstr "атакувати"
 
 #: ../../script/events/setpieces.js:3196
 msgid "a soldier, alerted, opens fire."
-msgstr "солдат, піднятий по тревозі, відкрив вогонь."
+msgstr "солдат, піднятий по тривозі, відкрив вогонь."
 
 #: ../../script/events/setpieces.js:3204 ../../script/events/setpieces.js:3244
 #: ../../script/events/setpieces.js:3347 ../../script/events/setpieces.js:3381
@@ -2026,7 +1989,7 @@ msgstr ""
 
 #: ../../script/events/setpieces.js:3307
 msgid "this old mine is not abandoned"
-msgstr "ця стара щахте не покинута"
+msgstr "ця стара шахта не покинута"
 
 #: ../../script/events/setpieces.js:3339 ../../script/events/setpieces.js:3373
 msgid "a man joins the fight"
@@ -2053,9 +2016,7 @@ msgid "an old iron mine sits here, tools abandoned and left to rust."
 msgstr ""
 
 #: ../../script/events/setpieces.js:3447
-msgid ""
-"bleached bones are strewn about the entrance. many, deeply scored with "
-"jagged grooves."
+msgid "bleached bones are strewn about the entrance. many, deeply scored with jagged grooves."
 msgstr ""
 
 #: ../../script/events/setpieces.js:3448
@@ -2512,12 +2473,8 @@ msgid "trap"
 msgstr "пастка"
 
 #: ../../script/room.js:19
-msgid ""
-"builder says she can make traps to catch any creatures might still be alive "
-"out there"
-msgstr ""
-"будівельниця каже, що може змайструвати пастки для полювання на тварин, яких "
-"вдосталь навколо"
+msgid "builder says she can make traps to catch any creatures might still be alive out there"
+msgstr "будівельниця каже, що може змайструвати пастки для полювання на тварин, яких вдосталь навколо"
 
 #: ../../script/room.js:20
 msgid "more traps to catch more creatures"
@@ -2545,9 +2502,7 @@ msgstr "хатина"
 
 #: ../../script/room.js:47
 msgid "builder says there are more wanderers. says they'll work, too."
-msgstr ""
-"будівельниця каже, що навколо є такі ж мандрівники. вони також можуть чимось "
-"допомогти."
+msgstr "будівельниця каже, що навколо є такі ж мандрівники. вони також можуть чимось допомогти."
 
 #: ../../script/room.js:48
 msgid "builder puts up a hut, out in the forest. says word will get around."
@@ -2567,7 +2522,7 @@ msgstr "поселенці можуть допомогти полюванням,
 
 #: ../../script/room.js:63
 msgid "the hunting lodge stands in the forest, a ways out of town"
-msgstr "мисливсьска сторожка розташувалась в лісі, подалі від поселення"
+msgstr "мисливська сторожка розташувалась в лісі, подалі від поселення"
 
 #: ../../script/room.js:74
 msgid "trading post"
@@ -2578,8 +2533,7 @@ msgid "a trading post would make commerce easier"
 msgstr "торгова площадка має покращити торги"
 
 #: ../../script/room.js:78
-msgid ""
-"now the nomads have a place to set up shop, they might stick around a while"
+msgid "now the nomads have a place to set up shop, they might stick around a while"
 msgstr "тепер кочівники мають місце де зупинитись і запропонувати свій товар"
 
 #: ../../script/room.js:88
@@ -2588,9 +2542,7 @@ msgstr "дубильня"
 
 #: ../../script/room.js:91
 msgid "builder says leather could be useful. says the villagers could make it."
-msgstr ""
-"будівельниця каже, що щкіра може статися у нагоді, і жителі легко можуть її "
-"виготовляти."
+msgstr "будівельниця каже, що шкіра може статися у нагоді, і жителі легко можуть її виготовляти."
 
 #: ../../script/room.js:92
 msgid "tannery goes up quick, on the edge of the village"
@@ -2601,16 +2553,12 @@ msgid "smokehouse"
 msgstr "коптильня"
 
 #: ../../script/room.js:105
-msgid ""
-"should cure the meat, or it'll spoil. builder says she can fix something up."
-msgstr ""
-"мусимо обробляти м'ясо, інакше воно зіпсується. будівельниця каже, що може "
-"зарадити цьому."
+msgid "should cure the meat, or it'll spoil. builder says she can fix something up."
+msgstr "мусимо обробляти м'ясо, інакше воно зіпсується. будівельниця каже, що може зарадити цьому."
 
 #: ../../script/room.js:106
 msgid "builder finishes the smokehouse. she looks hungry."
-msgstr ""
-"будівельниця завершила коптильню. вона дивиться на неї голодними очима."
+msgstr "будівельниця завершила коптильню. вона дивиться на неї голодними очима."
 
 #: ../../script/room.js:116
 msgid "workshop"
@@ -2618,8 +2566,7 @@ msgstr "майстерня"
 
 #: ../../script/room.js:119
 msgid "builder says she could make finer things, if she had the tools"
-msgstr ""
-"за допомогою інструментів, будівельниця може зробити багато надійних речей"
+msgstr "за допомогою інструментів, будівельниця може зробити багато надійних речей"
 
 #: ../../script/room.js:120
 msgid "workshop's finally ready. builder's excited to get to it"
@@ -2631,13 +2578,11 @@ msgstr "сталеварня"
 
 #: ../../script/room.js:134
 msgid "builder says the villagers could make steel, given the tools"
-msgstr ""
-"будівельниця каже, що поселення може виготовляти сталь, якщо забезпечити "
-"його інструментом"
+msgstr "будівельниця каже, що поселення може виготовляти сталь, якщо забезпечити його інструментом"
 
 #: ../../script/room.js:135
 msgid "a haze falls over the village as the steelworks fires up"
-msgstr "лега димка укрила поселення, це запустили сталеварню"
+msgstr "легка димка укрила поселення, це запустили сталеварню"
 
 #: ../../script/room.js:146
 msgid "armoury"
@@ -2741,7 +2686,7 @@ msgstr "залізний меч"
 
 #: ../../script/room.js:301
 msgid "sword is sharp. good protection out in the wilds."
-msgstr "меч гострий. непоганий захист в нетрах."
+msgstr "меч гострий. непоганий захист в нетрях."
 
 #: ../../script/room.js:311
 msgid "steel sword"
@@ -2787,11 +2732,8 @@ msgid "the fire is {0}"
 msgstr "вогонь {0}"
 
 #: ../../script/room.js:563
-msgid ""
-"the stranger is standing by the fire. she says she can help. says she builds "
-"things."
-msgstr ""
-"незнайомка підійшла до вогню. пропонує допомогу. каже, що вміє майструвати."
+msgid "the stranger is standing by the fire. she says she can help. says she builds things."
+msgstr "незнайомка підійшла до вогню. пропонує допомогу. каже, що вміє майструвати."
 
 #: ../../script/room.js:578
 msgid "freezing"
@@ -2863,11 +2805,10 @@ msgstr "закінчується дерево"
 
 #: ../../script/room.js:724
 msgid "a ragged stranger stumbles through the door and collapses in the corner"
-msgstr "обірва незнайомка зашпортилася через поріг і впала у кутку"
+msgstr "обірвана незнайомка зашпорталася через поріг і впала у кутку"
 
 #: ../../script/room.js:732
-msgid ""
-"the stranger shivers, and mumbles quietly. her words are unintelligible."
+msgid "the stranger shivers, and mumbles quietly. her words are unintelligible."
 msgstr "дивна незнайомка тремтить і щось нерозбірливо бурмоче."
 
 #: ../../script/room.js:735
@@ -2911,9 +2852,7 @@ msgid "lift off"
 msgstr "запуск"
 
 #: ../../script/ship.js:91
-msgid ""
-"somewhere above the debris cloud, the wanderer fleet hovers. been on this "
-"rock too long."
+msgid "somewhere above the debris cloud, the wanderer fleet hovers. been on this rock too long."
 msgstr ""
 
 #: ../../script/ship.js:106 ../../script/ship.js:119
@@ -2968,7 +2907,7 @@ msgstr "кількість балів за гру: {0}"
 #: ../../script/space.js:427
 #, python-brace-format
 msgid "total score: {0}"
-msgstr "балів взагалом: {0}"
+msgstr "балів загалом: {0}"
 
 # Бити кулаком
 #: ../../script/world.js:46
@@ -3104,32 +3043,26 @@ msgstr "спрага стає нестерпною"
 
 #: ../../script/world.js:552
 msgid "the trees yield to dry grass. the yellowed brush rustles in the wind."
-msgstr ""
-"дерева зникають і заміняються сухою травою. пожовкле листя гуляє повітру."
+msgstr "дерева зникають і заміняються сухою травою. пожовкле листя гуляє повітру."
 
 #: ../../script/world.js:555
-msgid ""
-"the trees are gone. parched earth and blowing dust are poor replacements."
+msgid "the trees are gone. parched earth and blowing dust are poor replacements."
 msgstr "дерев вже немає. залишилась випалена земля та пилюка."
 
 #: ../../script/world.js:562
-msgid ""
-"trees loom on the horizon. grasses gradually yield to a forest floor of dry "
-"branches and fallen leaves."
+msgid "trees loom on the horizon. grasses gradually yield to a forest floor of dry branches and fallen leaves."
 msgstr ""
 
 #: ../../script/world.js:565
 msgid "the grasses thin. soon, only dust remains."
-msgstr "трави все манше і менше. скоро лишиться лише пил."
+msgstr "трави все менше і менше. скоро лишиться лише пил."
 
 #: ../../script/world.js:572
 msgid "the barrens break at a sea of dying grass, swaying in the arid breeze."
 msgstr ""
 
 #: ../../script/world.js:575
-msgid ""
-"a wall of gnarled trees rises from the dust. their branches twist into a "
-"skeletal canopy overhead."
+msgid "a wall of gnarled trees rises from the dust. their branches twist into a skeletal canopy overhead."
 msgstr ""
 
 #: ../../script/world.js:777
@@ -3147,3 +3080,4 @@ msgstr ""
 #: ../../script/world.js:939
 msgid "A Barren World"
 msgstr ""
+
