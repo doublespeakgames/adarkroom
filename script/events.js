@@ -341,7 +341,7 @@ var Events = {
 			var msg = "";
 			if(typeof dmg == 'number') {
 				if(dmg < 0) {
-					msg = 'miss';
+					msg = _('miss');
 					dmg = 0;
 				} else {
 					msg = '-' + dmg;
@@ -354,7 +354,7 @@ var Events = {
 				}
 			} else {
 				if(dmg == 'stun') {
-					msg = 'stunned';
+					msg = _('stunned');
 					enemy.data('stunned', true);
 					setTimeout(function() {
 						enemy.data('stunned', false);
@@ -386,7 +386,7 @@ var Events = {
 			var msg = "";
 			if(typeof dmg == 'number') {
 				if(dmg < 0) {
-					msg = 'miss';
+					msg = _('miss');
 					dmg = 0;
 				} else {
 					msg = '-' + dmg;
@@ -399,7 +399,7 @@ var Events = {
 				}
 			} else {
 				if(dmg == 'stun') {
-					msg = 'stunned';
+					msg = _('stunned');
 					enemy.data('stunned', true);
 					setTimeout(function() {
 						enemy.data('stunned', false);
