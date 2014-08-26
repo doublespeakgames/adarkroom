@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adarkroom\n"
-"POT-Creation-Date: 2014-08-25 16:44+0200\n"
-"PO-Revision-Date: 2014-08-26 13:39+0200\n"
+"POT-Creation-Date: 2014-08-26 17:04+0200\n"
+"PO-Revision-Date: 2014-08-26 17:04+0200\n"
 "Last-Translator: Olexandr Nesterenko <olexn@ukr.net>\n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -202,7 +202,7 @@ msgstr "маскування"
 
 #: ../../script/engine.js:67
 msgid "better avoid conflict in the wild"
-msgstr "краще уникати конфліктів на пустощах"
+msgstr "краще уникати конфліктів на пустищі"
 
 #: ../../script/engine.js:68
 msgid "learned how not to be seen"
@@ -298,7 +298,7 @@ msgstr "зберегти це."
 
 #: ../../script/engine.js:324
 msgid "got it"
-msgstr ""
+msgstr "вже зробив"
 
 #: ../../script/engine.js:353
 msgid "Restart?"
@@ -517,7 +517,7 @@ msgstr "солдат загинув"
 
 #: ../../script/events/encounters.js:353
 msgid "a soldier opens fire from across the desert"
-msgstr "солдат відкриває вогонь крізь пустощі"
+msgstr "солдат відкриває вогонь крізь пустелю"
 
 #: ../../script/events/encounters.js:358
 msgid "A Sniper"
@@ -883,7 +883,7 @@ msgstr "надати 100"
 #: ../../script/events/room.js:214 ../../script/events/room.js:286
 #: ../../script/events/room.js:466
 msgid "turn him away"
-msgstr "відправити його назад"
+msgstr "відправити геть"
 
 #: ../../script/events/room.js:222 ../../script/events/room.js:235
 #: ../../script/events/room.js:248
@@ -949,7 +949,7 @@ msgstr "будівельниця не впевнена, чи варто їй д�
 
 #: ../../script/events/room.js:357
 msgid "turn her away"
-msgstr "відправити його геть"
+msgstr "відправити її геть"
 
 #: ../../script/events/room.js:364 ../../script/events/room.js:383
 msgid "the wanderer leaves, cart loaded with furs"
@@ -1088,7 +1088,7 @@ msgstr "Блокпост"
 
 #: ../../script/events/setpieces.js:10 ../../script/events/setpieces.js:12
 msgid "a safe place in the wilds."
-msgstr "безпечне місце в пустощах."
+msgstr "безпечне місце в пустищах."
 
 #: ../../script/events/setpieces.js:34
 msgid "A Murky Swamp"
@@ -2219,15 +2219,15 @@ msgstr "коптярі"
 
 #: ../../script/localization.js:26 ../../script/outside.js:53
 msgid "iron miner"
-msgstr "залізна копальня"
+msgstr "рудокопи"
 
 #: ../../script/localization.js:27 ../../script/outside.js:61
 msgid "coal miner"
-msgstr "вугільна копальня"
+msgstr "вуглекопи"
 
 #: ../../script/localization.js:28 ../../script/outside.js:69
 msgid "sulphur miner"
-msgstr "копальня сірки"
+msgstr "хіміки"
 
 #: ../../script/localization.js:28 ../../script/outside.js:86
 msgid "armourer"
@@ -2367,7 +2367,7 @@ msgstr "спорядження:"
 
 #: ../../script/localization.js:69
 msgid "perks:"
-msgstr ""
+msgstr "навички:"
 
 #: ../../script/localization.js:70
 msgid "take:"
@@ -2447,7 +2447,7 @@ msgstr "населення "
 
 #: ../../script/outside.js:510
 msgid "check traps"
-msgstr "перевірити пастки"
+msgstr "оглянути пастки"
 
 #: ../../script/outside.js:531
 msgid "A Lonely Hut"
@@ -2487,7 +2487,7 @@ msgstr " та "
 
 #: ../../script/path.js:29 ../../script/path.js:296
 msgid "A Dusty Path"
-msgstr "Пустощі"
+msgstr "Пустельний шлях"
 
 #: ../../script/path.js:43
 msgid "embark"
@@ -2728,27 +2728,27 @@ msgstr "з конвоєм можна вивезти практично все"
 
 #: ../../script/room.js:262
 msgid "l armour"
-msgstr "шкір. захист"
+msgstr "шкіряна броня"
 
 #: ../../script/room.js:265
 msgid "leather's not strong. better than rags, though."
-msgstr "шкіра не міцна, але це краще ніж нічого."
+msgstr "шкіра не дуже і міцна, але це краще ніж нічого."
 
 #: ../../script/room.js:274
 msgid "i armour"
-msgstr "зал. захист"
+msgstr "залізна броня"
 
 #: ../../script/room.js:277
 msgid "iron's stronger than leather"
-msgstr "залізо міцніше за шкіру"
+msgstr "залізо набагато міцніше за шкіру"
 
 #: ../../script/room.js:286
 msgid "s armour"
-msgstr "стал. захист"
+msgstr "сталева броня"
 
 #: ../../script/room.js:289
 msgid "steel's stronger than iron"
-msgstr "сталь міцніша за залізо"
+msgstr "сталь надійніша за залізо"
 
 #: ../../script/room.js:298
 msgid "iron sword"
@@ -3133,7 +3133,7 @@ msgstr "дерев вже немає. залишилась випалена зе
 msgid ""
 "trees loom on the horizon. grasses gradually yield to a forest floor of dry "
 "branches and fallen leaves."
-msgstr "на горизонті з'являються дерева, за траву змінює ліс з опалим листям."
+msgstr "на горизонті з'являються дерева, траву змінює ліс з опалим листям."
 
 #: ../../script/world.js:565
 msgid "the grasses thin. soon, only dust remains."
@@ -3166,4 +3166,19 @@ msgstr "світ втрачає барви..."
 
 #: ../../script/world.js:939
 msgid "A Barren World"
-msgstr "Пустельний світ"
+msgstr "Безплідний світ"
+
+#~ msgid "miss"
+#~ msgstr "промах"
+
+#~ msgid "stunned"
+#~ msgstr "оплутано"
+
+#~ msgid "iron mine"
+#~ msgstr "залізна копальня"
+
+#~ msgid "coal mine"
+#~ msgstr "вугільна копальня"
+
+#~ msgid "sulphur mine"
+#~ msgstr "сірчана копальня"
