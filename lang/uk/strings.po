@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adarkroom\n"
-"POT-Creation-Date: 2014-08-26 17:04+0200\n"
-"PO-Revision-Date: 2014-08-26 17:04+0200\n"
+"POT-Creation-Date: 2014-08-28 17:54+0200\n"
+"PO-Revision-Date: 2014-08-28 17:56+0200\n"
 "Last-Translator: Olexandr Nesterenko <olexn@ukr.net>\n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -165,7 +165,7 @@ msgstr "невловимий"
 
 #: ../../script/engine.js:52
 msgid "dodge attacks more effectively"
-msgstr "більш ефективніше уникайте атаки"
+msgstr "більш ефективно уникайте атаки"
 
 #: ../../script/engine.js:53
 msgid "learned to be where they're not"
@@ -744,7 +744,7 @@ msgstr "з'являється кочівник з купою торб."
 
 #: ../../script/events/room.js:14
 msgid "won't say from where he came, but it's clear that he's not staying."
-msgstr "невідомо звідки від прийшов, але лишатись не збирається."
+msgstr "невідомо звідки він прийшов, але лишатись не збирається."
 
 #: ../../script/events/room.js:16
 msgid "a nomad arrives, looking to trade"
@@ -764,7 +764,7 @@ msgstr "придбати приманку"
 
 #: ../../script/events/room.js:33
 msgid "traps are more effective with bait."
-msgstr "пастки з приманкою більш ефективніші."
+msgstr "пастки з приманкою більш ефективні."
 
 #: ../../script/events/room.js:39
 msgid "buy compass"
@@ -1269,11 +1269,11 @@ msgstr "гігантська ящірка прямує до вас"
 
 #: ../../script/events/setpieces.js:394
 msgid "the nest of a large animal lies at the back of the cave."
-msgstr "в глибині печері знаходиться лігво великого звіра."
+msgstr "у глибині печери знаходиться лігво великого звіра."
 
 #: ../../script/events/setpieces.js:436
 msgid "a small supply cache is hidden at the back of the cave."
-msgstr "в глибині печери приховано трохи речей."
+msgstr "у глибині печери приховано трохи речей."
 
 #: ../../script/events/setpieces.js:488
 msgid "an old case is wedged behind a rock, covered in a thick layer of dust."
@@ -1286,7 +1286,7 @@ msgstr "Пустельне місто"
 #: ../../script/events/setpieces.js:525
 msgid "a small suburb lays ahead, empty houses scorched and peeling."
 msgstr ""
-"попереду розташовано невеличке місто, пусті будівля обшарпані і облущені."
+"попереду розташовано невеличке місто, пусті будівлі обшарпані і облущені."
 
 #: ../../script/events/setpieces.js:526
 msgid ""
@@ -2915,7 +2915,7 @@ msgstr "рушій:"
 
 #: ../../script/ship.js:51
 msgid "reinforce hull"
-msgstr "підсилити корпус"
+msgstr "зміцнити корпус"
 
 #: ../../script/ship.js:60
 msgid "upgrade engine"
@@ -3182,3 +3182,6 @@ msgstr "Безплідний світ"
 
 #~ msgid "sulphur mine"
 #~ msgstr "сірчана копальня"
+
+#~ msgid "sulphur"
+#~ msgstr "сірка"
