@@ -15,7 +15,7 @@
 		_('steel'),
 		_('coal'),
 		_('sulphur'),
-		_('enegy cell'),
+		_('energy cell'),
 		_('torch'),
 		_('medicine'),
 		_('hunter'),
