@@ -52,14 +52,14 @@
 		_('not enough cloth'),
 		_('not enough teeth'),
 		_('not enough leather'),
-		_('the compass points east.'),
-		_('the compass points west.'),
-		_('the compass points north.'),
-		_('the compass points south.'),
-		_('the compass points northeast.'),
-		_('the compass points northwest.'),
-		_('the compass points southeast.'),
-		_('the compass points southwest.')
+		_('the compass points east'),
+		_('the compass points west'),
+		_('the compass points north'),
+		_('the compass points south'),
+		_('the compass points northeast'),
+		_('the compass points northwest'),
+		_('the compass points southeast'),
+		_('the compass points southwest')
 	]; 
 
 	delete keywords;
