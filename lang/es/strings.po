@@ -767,7 +767,7 @@ msgstr "minero de carbón"
 
 #: ../../script/localization.js:6 ../../script/outside.js:69
 msgid "sulphur miner"
-msgstr "minero de sulfuro"
+msgstr "minero de azufre"
 
 #: ../../script/localization.js:6 ../../script/outside.js:86
 msgid "armourer"
@@ -2650,7 +2650,7 @@ msgstr "la mina ahora está a salvo para los trabajadores."
 
 #: ../../script/events/setpieces.js:3169
 msgid "the sulphur mine is clear of dangers"
-msgstr "la mina de sulfuro está despejada de peligros"
+msgstr "la mina de azufre está despejada de peligros"
 
 #: ../../script/events/setpieces.js:3185
 msgid "The Coal Mine"
