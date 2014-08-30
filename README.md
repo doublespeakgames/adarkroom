@@ -3,9 +3,13 @@ A Dark Room
 
 A Minimalist Text Adventure Game
 
-[Click to play](http://adarkroom.doublespeakgames.com/)  
-[ [Chinese](http://adarkroom.doublespeakgames.com/?lang=cn) | [French](http://adarkroom.doublespeakgames.com/?lang=fr) | [Spanish](http://adarkroom.doublespeakgames.com/?lang=es) ]
+Select language to play  
+[ 
+[Chinese](http://adarkroom.doublespeakgames.com/?lang=cn) | 
+[French](http://adarkroom.doublespeakgames.com/?lang=fr) | 
+[Spanish](http://adarkroom.doublespeakgames.com/?lang=es) |
+[Russian](http://adarkroom.doublespeakgames.com/?lang=ru) |
+[Polish](http://adarkroom.doublespeakgames.com/?lang=pl) 
+]
 
-[Play on GitHub](http://continuities.github.io/adarkroom)
-
-
+or [play on GitHub](http://continuities.github.io/adarkroom)
