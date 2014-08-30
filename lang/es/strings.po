@@ -24,7 +24,7 @@ msgid ""
 "builder says she can make traps to catch any creatures might still be alive "
 "out there"
 msgstr ""
-"la constructora dice que puede hacer trampas para capturar cualquier "
+"el manitas dice que puede hacer trampas para capturar cualquier "
 "creatura que esté viva allá afuera"
 
 #: ../../script/room.js:22
@@ -41,7 +41,7 @@ msgstr "carro"
 
 #: ../../script/room.js:36
 msgid "builder says she can make a cart for carrying wood"
-msgstr "la constructora dice que puede hacer un carro para transportar madera"
+msgstr "el manitas dice que puede hacer un carro para transportar madera"
 
 #: ../../script/room.js:37
 msgid "the rickety cart will carry more wood from the forest"
@@ -54,12 +54,12 @@ msgstr "cabaña"
 #: ../../script/room.js:49
 msgid "builder says there are more wanderers. says they'll work, too."
 msgstr ""
-"la constructora dice que hay más vagabundos. dice que trabajarán, también."
+"el manitas dice que hay más vagabundos. dice que trabajarán también."
 
 #: ../../script/room.js:50
 msgid "builder puts up a hut, out in the forest. says word will get around."
 msgstr ""
-"la constructora levanta una cabaña, afuera en el bosque. dice que la voz se "
+"el manitas levanta una cabaña, afuera en el bosque. dice que la voz se "
 "correrá."
 
 #: ../../script/room.js:51
@@ -102,7 +102,7 @@ msgstr "tenería"
 #: ../../script/room.js:93
 msgid "builder says leather could be useful. says the villagers could make it."
 msgstr ""
-"la constructora dice que el cuero puede ser útil. dice que los aldeanos "
+"el manitas dice que el cuero puede ser útil. dice que los aldeanos "
 "podrían hacerlo."
 
 #: ../../script/room.js:94
@@ -117,12 +117,12 @@ msgstr "ahumador"
 msgid ""
 "should cure the meat, or it'll spoil. builder says she can fix something up."
 msgstr ""
-"la carne debe curarse, o se echará a perder. la constructora dice que puede "
+"la carne debe curarse, o se echará a perder. el manitas dice que puede "
 "hacer algo al respecto."
 
 #: ../../script/room.js:108
 msgid "builder finishes the smokehouse. she looks hungry."
-msgstr "la constructora termina el ahumador. se ve hambrienta."
+msgstr "el manitas termina el ahumador. se ve hambrienta."
 
 #: ../../script/room.js:118
 msgid "workshop"
@@ -131,12 +131,12 @@ msgstr "taller"
 #: ../../script/room.js:121
 msgid "builder says she could make finer things, if she had the tools"
 msgstr ""
-"la constructora dice que podría hacer cosas más sofisticadas, si tuviera los "
+"el manitas dice que podría hacer cosas más sofisticadas, si tuviera los "
 "medios"
 
 #: ../../script/room.js:122
 msgid "workshop's finally ready. builder's excited to get to it"
-msgstr "el taller está listo. la constructora no puede esperar para usarlo"
+msgstr "el taller está listo. el manitas no puede esperar para usarlo"
 
 #: ../../script/room.js:133
 msgid "steelworks"
@@ -145,7 +145,7 @@ msgstr "acería"
 #: ../../script/room.js:136
 msgid "builder says the villagers could make steel, given the tools"
 msgstr ""
-"la constructora dice que los aldeanos podrían fabricar acero, si tuvieran "
+"el manitas dice que los aldeanos podrían fabricar acero, si tuvieran "
 "los medios"
 
 #: ../../script/room.js:137
@@ -158,7 +158,7 @@ msgstr "armería"
 
 #: ../../script/room.js:151
 msgid "builder says it'd be useful to have a steady source of bullets"
-msgstr "la constructora dice que sería útil tener una fuente continua de balas"
+msgstr "el manitas dice que sería útil tener una fuente continua de balas"
 
 #: ../../script/room.js:152
 msgid "armoury's done, welcoming back the weapons of the past."
@@ -367,7 +367,7 @@ msgstr "la luz de la fogata sale desde las ventanas, hacia la oscuridad"
 
 #: ../../script/room.js:687
 msgid "builder stokes the fire"
-msgstr "la constructora aviva el fuego"
+msgstr "el manitas aviva el fuego"
 
 #: ../../script/room.js:717
 msgid "the wind howls outside"
@@ -396,7 +396,7 @@ msgstr "no es suficiente"
 
 #: ../../script/room.js:910
 msgid "builder just shivers"
-msgstr "la constructora sólo tiembla"
+msgstr "el manitas sólo tiembla"
 
 #: ../../script/events.js:126
 msgid "eat meat"
@@ -1516,7 +1516,7 @@ msgstr ""
 
 #: ../../script/events/room.js:266
 msgid "builder's not sure he's to be trusted."
-msgstr "la constructora no está segura de que se pueda confiar en él."
+msgstr "el manitas no está segura de que se pueda confiar en él."
 
 #: ../../script/events/room.js:268 ../../script/events/room.js:338
 msgid "a mysterious wanderer arrives"
@@ -1544,7 +1544,7 @@ msgstr ""
 
 #: ../../script/events/room.js:336
 msgid "builder's not sure she's to be trusted."
-msgstr "la constructora no está segura de que se pueda confiar en ella."
+msgstr "el manitas no está segura de que se pueda confiar en ella."
 
 #: ../../script/events/room.js:351
 msgid "turn her away"
