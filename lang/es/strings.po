@@ -388,7 +388,7 @@ msgstr "el extraño tiembla, y murmura despacio. sus palabras no se entienden."
 
 #: ../../script/room.js:736
 msgid "the stranger in the corner stops shivering. her breathing calms."
-msgstr "el extraño en la esquina deja de templar. su respiración se calma."
+msgstr "el extraño en la esquina deja de temblar. su respiración se calma."
 
 #: ../../script/room.js:890 ../../script/room.js:938
 msgid "not enough "
