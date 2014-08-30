@@ -747,7 +747,7 @@ msgstr "cazador"
 
 #: ../../script/localization.js:5 ../../script/outside.js:28
 msgid "trapper"
-msgstr "trampa"
+msgstr "trampero"
 
 #: ../../script/localization.js:5 ../../script/outside.js:36
 msgid "tanner"
