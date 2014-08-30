@@ -1,0 +1,4 @@
+.button{width: 115px !important;}
+#outsidePanel .button{width: 115px !important;}
+.eventPanel .button {width: 122px !important;}
+.button .tooltip {width: 125px !important;}
