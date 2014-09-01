@@ -57,7 +57,7 @@ var Path = {
 	openPath: function() {
 		Path.init();
 		Engine.event('progress', 'path');
-		Notifications.notify(Room, _('the compass points ' + World.dir));
+		Notifications.notify(Room, 'the compass points ' + World.dir);
 	},
 	
 	getWeight: function(thing) {
