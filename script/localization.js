@@ -52,6 +52,7 @@
 		_('not enough cloth'),
 		_('not enough teeth'),
 		_('not enough leather'),
+		_('not enough meat'),
 		_('the compass points east'),
 		_('the compass points west'),
 		_('the compass points north'),
