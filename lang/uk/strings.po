@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adarkroom\n"
-"POT-Creation-Date: 2014-08-28 17:54+0200\n"
-"PO-Revision-Date: 2014-08-28 17:56+0200\n"
+"POT-Creation-Date: 2014-09-02 08:47+0200\n"
+"PO-Revision-Date: 2014-09-02 09:10+0200\n"
 "Last-Translator: Olexandr Nesterenko <olexn@ukr.net>\n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -178,7 +178,7 @@ msgstr "передбачливий"
 # description pour la précision ...
 #: ../../script/engine.js:57
 msgid "land blows more often"
-msgstr ""
+msgstr "дозволяє частіше наносити удари"
 
 #: ../../script/engine.js:58
 msgid "learned to predict their movement"
@@ -352,6 +352,14 @@ msgstr "з'їсти м'ясо"
 #: ../../script/events.js:148
 msgid "use meds"
 msgstr "прийняти ліки"
+
+#: ../../script/events.js:344 ../../script/events.js:389
+msgid "miss"
+msgstr "промах"
+
+#: ../../script/events.js:357 ../../script/events.js:402
+msgid "stunned"
+msgstr "оплутано"
 
 #: ../../script/events.js:476 ../../script/events/global.js:42
 #: ../../script/events/global.js:59 ../../script/events/room.js:142
@@ -820,7 +828,7 @@ msgstr "повернутись в середину"
 #: ../../script/events/room.js:91
 msgid ""
 "a bundle of sticks lies just beyond the threshold, wrapped in coarse furs."
-msgstr "біля порогу лежить купка хмизу, загорнутих в шкуру."
+msgstr "біля порогу лежить купа дров, загорнутих в шкуру."
 
 #: ../../script/events/room.js:92
 msgid "the night is silent."
@@ -2182,206 +2190,226 @@ msgid "coal"
 msgstr "вугілля"
 
 #: ../../script/localization.js:17
-msgid "enegy cell"
-msgstr "енергетична комірка"
+msgid "sulphur"
+msgstr "сірка"
 
-#: ../../script/localization.js:18 ../../script/room.js:161
+#: ../../script/localization.js:18
+msgid "energy cell"
+msgstr "батарея"
+
+#: ../../script/localization.js:19 ../../script/room.js:161
 msgid "torch"
 msgstr "смолоскип"
 
-#: ../../script/localization.js:19
+#: ../../script/localization.js:20
 msgid "medicine"
 msgstr "ліки"
 
-#: ../../script/localization.js:20 ../../script/outside.js:20
+#: ../../script/localization.js:21 ../../script/outside.js:20
 msgid "hunter"
 msgstr "мисливці"
 
-#: ../../script/localization.js:21 ../../script/outside.js:28
+#: ../../script/localization.js:22 ../../script/outside.js:28
 msgid "trapper"
 msgstr "ловчі"
 
-#: ../../script/localization.js:22 ../../script/outside.js:36
+#: ../../script/localization.js:23 ../../script/outside.js:36
 msgid "tanner"
 msgstr "кожум'яки"
 
-#: ../../script/localization.js:23
+#: ../../script/localization.js:24
 msgid "grenade"
 msgstr "граната"
 
-#: ../../script/localization.js:24
+#: ../../script/localization.js:25
 msgid "bolas"
 msgstr "болас"
 
-#: ../../script/localization.js:25 ../../script/outside.js:44
+#: ../../script/localization.js:26 ../../script/outside.js:44
 msgid "charcutier"
 msgstr "коптярі"
 
-#: ../../script/localization.js:26 ../../script/outside.js:53
+#: ../../script/localization.js:27 ../../script/outside.js:53
 msgid "iron miner"
 msgstr "рудокопи"
 
-#: ../../script/localization.js:27 ../../script/outside.js:61
+#: ../../script/localization.js:28
+msgid "iron mine"
+msgstr "залізна копальня"
+
+#: ../../script/localization.js:29 ../../script/outside.js:61
 msgid "coal miner"
 msgstr "вуглекопи"
 
-#: ../../script/localization.js:28 ../../script/outside.js:69
+#: ../../script/localization.js:30
+msgid "coal mine"
+msgstr "вугільна копальня"
+
+#: ../../script/localization.js:31 ../../script/outside.js:69
 msgid "sulphur miner"
 msgstr "хіміки"
 
-#: ../../script/localization.js:28 ../../script/outside.js:86
+#: ../../script/localization.js:32
+msgid "sulphur mine"
+msgstr "сірчана копальня"
+
+#: ../../script/localization.js:33 ../../script/outside.js:86
 msgid "armourer"
 msgstr "зброярі"
 
-#: ../../script/localization.js:29 ../../script/outside.js:77
+#: ../../script/localization.js:34 ../../script/outside.js:77
 msgid "steelworker"
 msgstr "сталевари"
 
-#: ../../script/localization.js:30
+#: ../../script/localization.js:35
 msgid "bait"
 msgstr "приманка"
 
-#: ../../script/localization.js:31 ../../script/localization.js:38
+#: ../../script/localization.js:36 ../../script/localization.js:43
 msgid "cured meat"
 msgstr "копченина"
 
-#: ../../script/localization.js:32 ../../script/localization.js:37
+#: ../../script/localization.js:37 ../../script/localization.js:42
 msgid "scales"
 msgstr "луска"
 
-#: ../../script/localization.js:33
+#: ../../script/localization.js:38
 msgid "compass"
 msgstr "компас"
 
-#: ../../script/localization.js:34
+#: ../../script/localization.js:39
 msgid "laser rifle"
 msgstr "лазерна рушниця"
 
-#: ../../script/localization.js:35 ../../script/outside.js:13
+#: ../../script/localization.js:40 ../../script/outside.js:13
 msgid "gatherer"
 msgstr "збирачі"
 
-#: ../../script/localization.js:36
+#: ../../script/localization.js:41
 msgid "cloth"
 msgstr "шмаття"
 
-#: ../../script/localization.js:39
+#: ../../script/localization.js:44
 msgid "thieves"
 msgstr "злодії"
 
-#: ../../script/localization.js:40
+#: ../../script/localization.js:45
 msgid "not enough fur"
 msgstr "не достатньо шкур"
 
-#: ../../script/localization.js:41
+#: ../../script/localization.js:46
 msgid "not enough wood"
 msgstr "недостатньо дерева"
 
-#: ../../script/localization.js:42
+#: ../../script/localization.js:47
 msgid "not enough coal"
 msgstr "недостатньо вугілля"
 
-#: ../../script/localization.js:43
+#: ../../script/localization.js:48
 msgid "not enough iron"
 msgstr "недостатньо заліза"
 
-#: ../../script/localization.js:44
+#: ../../script/localization.js:49
 msgid "not enough steel"
 msgstr "недостатньо сталі"
 
-#: ../../script/localization.js:45
+#: ../../script/localization.js:50
 msgid "baited trap"
 msgstr "пастки з приманкою"
 
-#: ../../script/localization.js:46
+#: ../../script/localization.js:51
 msgid "not enough scales"
 msgstr "недостатньо луски"
 
-#: ../../script/localization.js:47
+#: ../../script/localization.js:52
 msgid "not enough cloth"
 msgstr "недостатньо шмаття"
 
-#: ../../script/localization.js:47
+#: ../../script/localization.js:53
 msgid "not enough teeth"
 msgstr "недостатньо іклів"
 
-#: ../../script/localization.js:48
+#: ../../script/localization.js:54
 msgid "not enough leather"
 msgstr "не достатньо шкіри"
 
-#: ../../script/localization.js:49
-msgid "the compass points east."
-msgstr "компас вказує на схід."
-
-#: ../../script/localization.js:50
-msgid "the compass points west."
-msgstr "компас вказує на захід."
-
-#: ../../script/localization.js:51
-msgid "the compass points north."
-msgstr "компас вказує на північ."
-
-#: ../../script/localization.js:52
-msgid "the compass points south."
-msgstr "компас вказує на південь."
-
-#: ../../script/localization.js:53
-msgid "the compass points northeast."
-msgstr "компас вказує на північний схід."
-
-#: ../../script/localization.js:54
-msgid "the compass points northwest."
-msgstr "компас вказує на північний захід."
-
 #: ../../script/localization.js:55
-msgid "the compass points southeast."
-msgstr "компас вказує на південний схід."
+msgid "not enough meat"
+msgstr "не достатньо м'яса"
 
 #: ../../script/localization.js:56
-msgid "the compass points southwest."
-msgstr "компас вказує на південний захід."
+msgid "the compass points east"
+msgstr "компас вказує на схід"
+
+#: ../../script/localization.js:57
+msgid "the compass points west"
+msgstr "компас вказує на захід"
+
+#: ../../script/localization.js:58
+msgid "the compass points north"
+msgstr "компас вказує на північ"
+
+#: ../../script/localization.js:59
+msgid "the compass points south"
+msgstr "компас вказує на південь"
+
+#: ../../script/localization.js:60
+msgid "the compass points northeast"
+msgstr "компас вказує на північний схід"
+
+#: ../../script/localization.js:61
+msgid "the compass points northwest"
+msgstr "компас вказує на північний захід"
+
+#: ../../script/localization.js:62
+msgid "the compass points southeast"
+msgstr "компас вказує на південний схід"
 
 #: ../../script/localization.js:63
+msgid "the compass points southwest"
+msgstr "компас вказує на південний захід"
+
+#: ../../script/localization.js:70
 msgid "stores"
 msgstr "комора"
 
-#: ../../script/localization.js:64
+#: ../../script/localization.js:71
 msgid "weapons"
 msgstr "зброя"
 
-#: ../../script/localization.js:65
+#: ../../script/localization.js:72
 msgid "build:"
 msgstr "будівлі:"
 
-#: ../../script/localization.js:66
+#: ../../script/localization.js:73
 msgid "craft:"
 msgstr "крам:"
 
-#: ../../script/localization.js:67
+#: ../../script/localization.js:74
 msgid "buy:"
 msgstr "придбати:"
 
-#: ../../script/localization.js:68
+#: ../../script/localization.js:75
 msgid "supplies:"
 msgstr "спорядження:"
 
-#: ../../script/localization.js:69
+#: ../../script/localization.js:76
 msgid "perks:"
 msgstr "навички:"
 
-#: ../../script/localization.js:70
+#: ../../script/localization.js:77
 msgid "take:"
 msgstr "взяти:"
 
-#: ../../script/localization.js:71
+#: ../../script/localization.js:78
 msgid "drop:"
 msgstr "кинути:"
 
-#: ../../script/localization.js:72
+#: ../../script/localization.js:79
 msgid "forest"
 msgstr "ліс"
 
-#: ../../script/localization.js:73
+#: ../../script/localization.js:80
 msgid "village"
 msgstr "поселення"
 
@@ -2419,7 +2447,7 @@ msgstr "Тихий ліс"
 
 #: ../../script/outside.js:166
 msgid "gather wood"
-msgstr "зібрати хмиз"
+msgstr "зібрати дрова"
 
 #: ../../script/outside.js:183
 msgid "a stranger arrives in the night"
@@ -2439,7 +2467,7 @@ msgstr "прибув конвой, сповнений одночасно хви�
 
 #: ../../script/outside.js:191
 msgid "the town's booming. word does get around."
-msgstr ""
+msgstr "місто розростається, чутки про нього ширяться."
 
 #: ../../script/outside.js:419
 msgid "pop "
@@ -2475,7 +2503,7 @@ msgstr "небо затягнуто сірою пеленою і невпинн�
 
 #: ../../script/outside.js:561
 msgid "dry brush and dead branches litter the forest floor"
-msgstr "сухий хмиз та зламані гілки встелили ліс"
+msgstr "сухі дрова та зламані гілки встелили ліс"
 
 #: ../../script/outside.js:587
 msgid "the traps contain "
@@ -2493,6 +2521,7 @@ msgstr "Пустельний шлях"
 msgid "embark"
 msgstr "в дорогу"
 
+# Не використовується в грі, але має лишитись для програми локалізації.
 #: ../../script/path.js:60
 msgid "the compass points "
 msgstr "компас вказує на "
@@ -2862,7 +2891,7 @@ msgstr "закінчується дерево"
 
 #: ../../script/room.js:673
 msgid "the light from the fire spills from the windows, out into the dark"
-msgstr "з вікна світло від полум'я розганяє навколишню пітьму"
+msgstr "світло від вогню розганяє навколишню пітьму за вікном"
 
 #: ../../script/room.js:686
 msgid "builder stokes the fire"
@@ -2889,6 +2918,7 @@ msgstr "дивна незнайомка тремтить і щось нероз�
 msgid "the stranger in the corner stops shivering. her breathing calms."
 msgstr "незнайомка перестала тремтіти в кутку і її дихання заспокоїлось."
 
+# Не використовується в грі, але має лишитись для програми локалізації.
 #: ../../script/room.js:889 ../../script/room.js:937
 msgid "not enough "
 msgstr "не достатньо "
@@ -3083,7 +3113,7 @@ msgstr "вода:{0}"
 
 #: ../../script/world.js:277
 msgid "pockets"
-msgstr ""
+msgstr "кармани"
 
 #: ../../script/world.js:301
 #, python-brace-format
@@ -3167,21 +3197,3 @@ msgstr "світ втрачає барви..."
 #: ../../script/world.js:939
 msgid "A Barren World"
 msgstr "Безплідний світ"
-
-#~ msgid "miss"
-#~ msgstr "промах"
-
-#~ msgid "stunned"
-#~ msgstr "оплутано"
-
-#~ msgid "iron mine"
-#~ msgstr "залізна копальня"
-
-#~ msgid "coal mine"
-#~ msgstr "вугільна копальня"
-
-#~ msgid "sulphur mine"
-#~ msgstr "сірчана копальня"
-
-#~ msgid "sulphur"
-#~ msgstr "сірка"
