@@ -43,7 +43,7 @@ var Path = {
 			text: _("embark"),
 			click: Path.embark,
 			width: '80px',
-			cooldown: 0 //no recharge, hopefully?
+			cooldown: World.DEATH_COOLDOWN
 		}).appendTo(this.panel);
 		
 		Path.outfit = {};
