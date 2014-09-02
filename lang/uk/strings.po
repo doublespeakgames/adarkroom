@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adarkroom\n"
-"POT-Creation-Date: 2014-09-01 07:34+0200\n"
-"PO-Revision-Date: 2014-09-01 07:34+0200\n"
+"POT-Creation-Date: 2014-09-02 08:47+0200\n"
+"PO-Revision-Date: 2014-09-02 09:10+0200\n"
 "Last-Translator: Olexandr Nesterenko <olexn@ukr.net>\n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -178,7 +178,7 @@ msgstr "передбачливий"
 # description pour la précision ...
 #: ../../script/engine.js:57
 msgid "land blows more often"
-msgstr ""
+msgstr "дозволяє частіше наносити удари"
 
 #: ../../script/engine.js:58
 msgid "learned to predict their movement"
@@ -2334,78 +2334,82 @@ msgid "not enough leather"
 msgstr "не достатньо шкіри"
 
 #: ../../script/localization.js:55
+msgid "not enough meat"
+msgstr "не достатньо м'яса"
+
+#: ../../script/localization.js:56
 msgid "the compass points east"
 msgstr "компас вказує на схід"
 
-#: ../../script/localization.js:56
+#: ../../script/localization.js:57
 msgid "the compass points west"
 msgstr "компас вказує на захід"
 
-#: ../../script/localization.js:57
+#: ../../script/localization.js:58
 msgid "the compass points north"
 msgstr "компас вказує на північ"
 
-#: ../../script/localization.js:58
+#: ../../script/localization.js:59
 msgid "the compass points south"
 msgstr "компас вказує на південь"
 
-#: ../../script/localization.js:59
+#: ../../script/localization.js:60
 msgid "the compass points northeast"
 msgstr "компас вказує на північний схід"
 
-#: ../../script/localization.js:60
+#: ../../script/localization.js:61
 msgid "the compass points northwest"
 msgstr "компас вказує на північний захід"
 
-#: ../../script/localization.js:61
+#: ../../script/localization.js:62
 msgid "the compass points southeast"
 msgstr "компас вказує на південний схід"
 
-#: ../../script/localization.js:62
+#: ../../script/localization.js:63
 msgid "the compass points southwest"
 msgstr "компас вказує на південний захід"
 
-#: ../../script/localization.js:69
+#: ../../script/localization.js:70
 msgid "stores"
 msgstr "комора"
 
-#: ../../script/localization.js:70
+#: ../../script/localization.js:71
 msgid "weapons"
 msgstr "зброя"
 
-#: ../../script/localization.js:71
+#: ../../script/localization.js:72
 msgid "build:"
 msgstr "будівлі:"
 
-#: ../../script/localization.js:72
+#: ../../script/localization.js:73
 msgid "craft:"
 msgstr "крам:"
 
-#: ../../script/localization.js:73
+#: ../../script/localization.js:74
 msgid "buy:"
 msgstr "придбати:"
 
-#: ../../script/localization.js:74
+#: ../../script/localization.js:75
 msgid "supplies:"
 msgstr "спорядження:"
 
-#: ../../script/localization.js:75
+#: ../../script/localization.js:76
 msgid "perks:"
 msgstr "навички:"
 
-#: ../../script/localization.js:76
+#: ../../script/localization.js:77
 msgid "take:"
 msgstr "взяти:"
 
-#: ../../script/localization.js:77
+#: ../../script/localization.js:78
 msgid "drop:"
 msgstr "кинути:"
 
-#: ../../script/localization.js:78
+#: ../../script/localization.js:79
 msgid "forest"
 msgstr "ліс"
 
-#: ../../script/localization.js:79
+#: ../../script/localization.js:80
 msgid "village"
 msgstr "поселення"
 
@@ -2463,7 +2467,7 @@ msgstr "прибув конвой, сповнений одночасно хви�
 
 #: ../../script/outside.js:191
 msgid "the town's booming. word does get around."
-msgstr ""
+msgstr "місто розростається, чутки про нього ширяться."
 
 #: ../../script/outside.js:419
 msgid "pop "
@@ -2517,6 +2521,7 @@ msgstr "Пустельний шлях"
 msgid "embark"
 msgstr "в дорогу"
 
+# Не використовується в грі, але має лишитись для програми локалізації.
 #: ../../script/path.js:60
 msgid "the compass points "
 msgstr "компас вказує на "
@@ -2913,6 +2918,7 @@ msgstr "дивна незнайомка тремтить і щось нероз�
 msgid "the stranger in the corner stops shivering. her breathing calms."
 msgstr "незнайомка перестала тремтіти в кутку і її дихання заспокоїлось."
 
+# Не використовується в грі, але має лишитись для програми локалізації.
 #: ../../script/room.js:889 ../../script/room.js:937
 msgid "not enough "
 msgstr "не достатньо "
@@ -3107,7 +3113,7 @@ msgstr "вода:{0}"
 
 #: ../../script/world.js:277
 msgid "pockets"
-msgstr ""
+msgstr "кармани"
 
 #: ../../script/world.js:301
 #, python-brace-format
