@@ -2,16 +2,16 @@ var Path = {
 		
 	DEFAULT_BAG_SPACE: 10,
 	
-	// Everything not in this list weighs 1
+	// Everything not in this list also weighs 0
 	Weight: {
-		'bone spear': 2,
-		'iron sword': 3,
-		'steel sword': 5,
-		'rifle': 5,
-		'bullets': 0.1,
-		'energy cell': 0.2,
-		'laser rifle': 5,
-		'bolas': 0.5
+		'bone spear': 0,
+		'iron sword': 0,
+		'steel sword': 0,
+		'rifle': 0,
+		'bullets': 0,
+		'energy cell': 0,
+		'laser rifle': 0,
+		'bolas': 0
 	},
 		
 	name: 'Path',
@@ -43,7 +43,7 @@ var Path = {
 			text: _("embark"),
 			click: Path.embark,
 			width: '80px',
-			cooldown: World.DEATH_COOLDOWN
+			cooldown: 0 //no recharge, hopefully?
 		}).appendTo(this.panel);
 		
 		Path.outfit = {};
@@ -62,7 +62,7 @@ var Path = {
 	
 	getWeight: function(thing) {
 		var w = Path.Weight[thing];
-		if(typeof w != 'number') w = 1;
+		if(typeof w != 'number') w = 0;
 		
 		return w;
 	},
