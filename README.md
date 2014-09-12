@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/dittoslash/adarkroom.png?label=ready&title=Ready)](https://waffle.io/dittoslash/adarkroom)
 A Dark Room
 ===========
 
