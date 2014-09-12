@@ -1,4 +1,4 @@
-[![Stories in Ready](https://badge.waffle.io/dittoslash/adarkroom.png?label=ready&title=Ready)](https://waffle.io/dittoslash/adarkroom) [![Stories in Backlog](https://badge.waffle.io/dittoslash/adarkroom.png?label=backlogy&title=Backlog)](https://waffle.io/dittoslash/adarkroom) [![Stories in Progress](https://badge.waffle.io/dittoslash/adarkroom.png?label=in+progress&title=In+Progress)](https://waffle.io/dittoslash/adarkroom) [![Stories Done](https://badge.waffle.io/dittoslash/adarkroom.png?label=done&title=Done)](https://waffle.io/dittoslash/adarkroom) 
+[![Stories in Backlog](https://badge.waffle.io/dittoslash/adarkroom.png?label=backlogy&title=Backlog)](https://waffle.io/dittoslash/adarkroom) [![Stories in Ready](https://badge.waffle.io/dittoslash/adarkroom.png?label=ready&title=Ready)](https://waffle.io/dittoslash/adarkroom)  [![Stories in Progress](https://badge.waffle.io/dittoslash/adarkroom.png?label=in+progress&title=In+Progress)](https://waffle.io/dittoslash/adarkroom) [![Stories Done](https://badge.waffle.io/dittoslash/adarkroom.png?label=done&title=Done)](https://waffle.io/dittoslash/adarkroom) 
 A Dark Room
 ===========
 
