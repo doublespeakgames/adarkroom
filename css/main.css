@@ -16,7 +16,11 @@ body {
 	margin: 0;
 }
 
-::selection{
+::selection {
+	background-color: transparent;
+}
+
+::-moz-selection {
 	background-color: transparent;
 }
 
