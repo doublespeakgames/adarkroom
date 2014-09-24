@@ -75,8 +75,23 @@ select.menuBtn {
 	color: #666;
 	border: none;
 	cursor: pointer;
-	margin: -1px -20px 0 0;
+	margin: 0;
 	background: transparent;
+	-webkit-appearance: none;
+	-moz-appearance:window;
+}
+
+select.menuBtn:hover {
+	text-decoration: underline;
+}
+
+select.menuBtn:focus {
+	outline-width: 0;
+}
+
+select.menuBtn:-moz-focusring {
+	color: transparent;
+	text-shadow: 0 0 0 #000;
 }
 
 .menu span:hover {
