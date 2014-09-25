@@ -2451,7 +2451,7 @@ msgstr "en govt snidad talisman"
 
 #: ../../script/outside.js:141 ../../script/outside.js:529
 msgid "A Silent Forest"
-msgstr "En tyst skog"
+msgstr "En Tyst Skog"
 
 #: ../../script/outside.js:166
 msgid "gather wood"
