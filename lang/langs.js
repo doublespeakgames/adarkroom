@@ -6,5 +6,6 @@ var langs = {
 	'uk':'українська',
 	//'jp':'日本語',
 	'ru':'русский',
+	'sv':'svenska',
 	'pl':'polski'
 };
