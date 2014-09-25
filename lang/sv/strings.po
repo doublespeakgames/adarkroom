@@ -2515,11 +2515,11 @@ msgstr "torra buskar och döda grenar ligger på marken i skogen"
 
 #: ../../script/outside.js:587
 msgid "the traps contain "
-msgstr "fällan innehåller"
+msgstr "fällan innehåller "
 
 #: ../../script/outside.js:592
 msgid " and "
-msgstr "och"
+msgstr " och "
 
 #: ../../script/path.js:29 ../../script/path.js:296
 msgid "A Dusty Path"
@@ -2912,7 +2912,7 @@ msgstr "veden håller på att ta slut"
 
 #: ../../script/room.js:724
 msgid "a ragged stranger stumbles through the door and collapses in the corner"
-msgstr "en sliten främling tumlar in genom dörren och kolappsar i hörnet"
+msgstr "en sliten främling tumlar in genom dörren och kollapsar i hörnet"
 
 #: ../../script/room.js:732
 msgid ""
