@@ -22,17 +22,17 @@ msgstr "Dropbox anslutning"
 
 #: ../../script/dropbox.js:65
 msgid "connect game to dropbox local storage"
-msgstr "Anslut till lokal dropboxlagring"
+msgstr "anslut till lokal dropboxlagring"
 
 #: ../../script/dropbox.js:68
 msgid "connect"
-msgstr "Koppla upp"
+msgstr "koppla upp"
 
 #: ../../script/dropbox.js:75 ../../script/dropbox.js:107
 #: ../../script/dropbox.js:133 ../../script/dropbox.js:163
 #: ../../script/engine.js:260 ../../script/engine.js:293
 msgid "cancel"
-msgstr "Avbryt"
+msgstr "avbryt"
 
 #: ../../script/dropbox.js:86 ../../script/dropbox.js:176
 msgid "Dropbox Export / Import"
@@ -40,11 +40,11 @@ msgstr "Dropbox import / export"
 
 #: ../../script/dropbox.js:89
 msgid "export or import save data to dropbox datastorage"
-msgstr "Exportera eller importera dawta till dropbox datalager"
+msgstr "exportera eller importera dawta till dropbox datalager"
 
 #: ../../script/dropbox.js:90
 msgid "your are connected to dropbox with account / email "
-msgstr "Du är kopplad till dropbox med konto / epost"
+msgstr "du är kopplad till dropbox med konto / epost"
 
 #: ../../script/dropbox.js:93
 msgid "save"
@@ -56,31 +56,31 @@ msgstr "öppna"
 
 #: ../../script/dropbox.js:102
 msgid "signout"
-msgstr "Logga ut"
+msgstr "logga ut"
 
 #: ../../script/dropbox.js:113
 msgid "choose one slot to save to"
-msgstr "Välj plats att spara till"
+msgstr "välj plats att spara till"
 
 #: ../../script/dropbox.js:119
 msgid "save to slot"
-msgstr "Spara till plats"
+msgstr "spara till plats"
 
 #: ../../script/dropbox.js:141
 msgid "choose one slot to load from"
-msgstr "Välj plats att ladda från"
+msgstr "välj plats att ladda från"
 
 #: ../../script/dropbox.js:148
 msgid "load from slot"
-msgstr "Ladda från plats"
+msgstr "ladda från plats"
 
 #: ../../script/dropbox.js:179
 msgid "successfully saved to dropbox datastorage"
-msgstr "Sparade till dropbox datalagring"
+msgstr "sparade till dropbox datalagring"
 
 #: ../../script/dropbox.js:180
 msgid "error while saving to dropbox datastorage"
-msgstr "Kunde inte spara till dropbox datalagring"
+msgstr "kunde inte spara till dropbox datalagring"
 
 #: ../../script/dropbox.js:183
 msgid "ok"
@@ -100,7 +100,7 @@ msgstr "learned to throw punches with purpose"
 
 #: ../../script/engine.js:26
 msgid "martial artist"
-msgstr "Kampsports expert"
+msgstr "kampsports expert"
 
 #: ../../script/engine.js:27
 msgid "punches do even more damage."
@@ -124,7 +124,7 @@ msgstr "undervisad att slå snabbare utan vapen"
 
 #: ../../script/engine.js:36
 msgid "barbarian"
-msgstr "Babar"
+msgstr "babar"
 
 #: ../../script/engine.js:37
 msgid "melee weapons deal more damage"
@@ -149,7 +149,7 @@ msgstr "undervisad i att ignorera hunger"
 
 #: ../../script/engine.js:46
 msgid "desert rat"
-msgstr "Ökenråtta"
+msgstr "ökenråtta"
 
 #: ../../script/engine.js:47
 msgid "go twice as far without drinking"
