@@ -96,7 +96,7 @@ msgstr "slag gör mer skada"
 
 #: ../../script/engine.js:23
 msgid "learned to throw punches with purpose"
-msgstr "learned to throw punches with purpose"
+msgstr "undervisad i att slå slag med kraft"
 
 #: ../../script/engine.js:26
 msgid "martial artist"
