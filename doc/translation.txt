@@ -9,8 +9,19 @@ for people who doesn't need translation :
 
   ADD A NEW LANGUAGE 
 ======================
+Required tools:
 
-- copy the /lang/fr folder to /lang/{new_language}
+* gettext
+  in ubuntu: apt-get install gettext
+
+* poedit
+  in ubuntu: apt-get install poedit
+
+- create an new directory /lang/{new_language}
+- run:
+	msginit --locale {locale for new language eg: en_US} -i adarkroom.pot -o {new_language}/strings.po 
+
+- copy lang/main.css to /lang/{new_language}
 - open /lang/{new_language}/strings.po with a software like PoEdit (available on linux/mac/windows, no excuses)
 - translate ...
 - keep translating ...
@@ -26,4 +37,28 @@ for people who doesn't need translation :
 
 - if your sentence are too big and you need to update some css, overload it in /lang/{new_language}/main.css
 
+
+   UPDATE TEMPLATEFILE
+======================
+When new content or changes in the code introduce new strings the file lang/adarkroom.pot must be updated.
+
+Required tools:
+
+* python3-babel
+  in ubuntu: apt-get install python3-babel
+
+- run:
+	pybabel extract -F babel.cfg script > lang/adarkroom.pot
+
 	
+  UPDATE LANGUAGE AFTER UPDATE
+===============================
+
+Required tools:
+
+* gettext
+
+- run:
+	msgmerge -U lang/{language}strings.po lang/adarkroom.pot	
+
+- Edit in poedit as in "ADD A NEW LANGUAGE"
