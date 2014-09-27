@@ -2,28 +2,112 @@
   HOWTO TRANSLATE 
 ===================
 
-for people who doesn't need translation : 
+**NOTE TO DEVELOPERS**: 
 - all strings sent to the page must go through the javascript function _() which will translate it. so please, if you add new strings, wrap them with _('') function.
 - if you want to add some strings in the css (using content), please, edit /script/localization.js too 
 - thank you :)
 
   ADD A NEW LANGUAGE 
 ======================
+Required tools:
 
-- copy the /lang/fr folder to /lang/{new_language}
-- open /lang/{new_language}/strings.po with a software like PoEdit (available on linux/mac/windows, no excuses)
+ubuntu:
+   apt-get install gettext
+   apt-get install poedit
+   apt-get install python
+
+
+windows:
+   windows: http://poedit.net/
+   https://www.python.org/download/windows/
+
+
+- create an new directory lang/{new_language}
+- create the new po file:
+  ubuntu:
+	msginit --locale {locale for new language eg: en_US} -i lang/adarkroom.pot -o lang/{new_language}/strings.po
+  windows:
+
+
+- copy lang/main.css to lang/{new_language}
+- open lang/{new_language}/strings.po with a software poedit
 - translate ...
 - keep translating ...
 - finished ? sure ?
 - use the python script (/tools/po2js.py) to convert the po file to a js file
-- edit index.html and add the following script after '<script src="lib/translate.js"></script>' (replace the path with your language)
+	python tools/po2js.py lang/{new_language}/strings.po
 
-	<script>
-		//load language
-		document.write('<script src="lang/fr/strings.js"><\/script>');
-		document.write('<link rel="stylesheet" type="text/css" href="lang/fr/main.css" \/>');
-	</script>
+- edit README.md and add the following string: [{new_language_name}](http://adarkroom.doublespeakgames.com/?lang={new_language_code})
+- edit lang/langs.js and add the new language
 
 - if your sentence are too big and you need to update some css, overload it in /lang/{new_language}/main.css
 
-	
+
+   UPDATE TEMPLATEFILE
+======================
+When new content or changes in the code introduce new strings the file lang/adarkroom.pot must be updated.
+
+Required tools:
+
+ubuntu:
+  apt-get install python3-babel
+
+windows:
+  poedit
+
+- ubuntu:
+	pybabel extract -F babel.cfg script > lang/adarkroom.pot
+  windows:
+	use poedit
+	Use menu "Cataloge"-> "New Catalog from POT file..."
+
+
+  UPDATE LANGUAGE AFTER UPDATE
+===============================
+Required tools:
+
+ubuntu:
+  * gettext
+windows:
+  * poedit
+
+
+- ubuntu:
+	msgmerge -U lang/{language}/strings.po lang/adarkroom.pot
+
+  windows:
+	Open lang/{language}strings.po in poedit
+	Use menu "Cataloge"-> "Update from POT file..."
+
+	OR
+
+	After "SETUP POEDIT"
+	Use menu "Cataloge"-> "Update from source"
+
+- Edit in poedit as in "ADD A NEW LANGUAGE"
+
+
+  SETUP POEDIT
+=================
+To update from source without pot file need:
+
+- Create new parser:
+  File > Preferences > Parsers > New
+
+  Language:
+  JS
+
+  List of extension:
+  *.js
+
+  Parser command:
+  xgettext --language=JavaScript --force-po -o %o %C %K %F
+
+  Item in Keyword List:
+  -k%k
+
+  Item in input files list:
+  %f
+
+  Source code charset:
+  --from-code=%c
