@@ -17,23 +17,22 @@ Required tools:
 * poedit
   in ubuntu: apt-get install poedit
 
-- create an new directory /lang/{new_language}
-- run:
-	msginit --locale {locale for new language eg: en_US} -i adarkroom.pot -o {new_language}/strings.po 
+* python
+  in ubuntu: apt-get install python
 
-- copy lang/main.css to /lang/{new_language}
-- open /lang/{new_language}/strings.po with a software like PoEdit (available on linux/mac/windows, no excuses)
+- create an new directory lang/{new_language}
+- run:
+	msginit --locale {locale for new language eg: en_US} -i lang/adarkroom.pot -o lang/{new_language}/strings.po
+
+- copy lang/main.css to lang/{new_language}
+- open lang/{new_language}/strings.po with a software like PoEdit (available on linux/mac/windows, no excuses)
 - translate ...
 - keep translating ...
 - finished ? sure ?
 - use the python script (/tools/po2js.py) to convert the po file to a js file
-- edit index.html and add the following script after '<script src="lib/translate.js"></script>' (replace the path with your language)
+	python tools/po2js.py lang/{new_language}/strings.po
 
-	<script>
-		//load language
-		document.write('<script src="lang/fr/strings.js"><\/script>');
-		document.write('<link rel="stylesheet" type="text/css" href="lang/fr/main.css" \/>');
-	</script>
+- edit README.md and add the following string: [{new_language_name}](http://adarkroom.doublespeakgames.com/?lang={new_language_code})
 
 - if your sentence are too big and you need to update some css, overload it in /lang/{new_language}/main.css
 
@@ -50,7 +49,7 @@ Required tools:
 - run:
 	pybabel extract -F babel.cfg script > lang/adarkroom.pot
 
-	
+
   UPDATE LANGUAGE AFTER UPDATE
 ===============================
 
@@ -59,6 +58,14 @@ Required tools:
 * gettext
 
 - run:
-	msgmerge -U lang/{language}strings.po lang/adarkroom.pot	
+	msgmerge -U lang/{language}/strings.po lang/adarkroom.pot
 
+- Edit in poedit as in "ADD A NEW LANGUAGE"
+
+  OR
+
+* Poedit
+
+- Open lang/{language}strings.po in poedit
+- Use menu "Cataloge"-> "Update from POT file..."
 - Edit in poedit as in "ADD A NEW LANGUAGE"
