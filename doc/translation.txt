@@ -11,21 +11,26 @@ for people who doesn't need translation :
 ======================
 Required tools:
 
-* gettext
-  in ubuntu: apt-get install gettext
+ubuntu:
+   apt-get install gettext
+   apt-get install poedit
+   apt-get install python
 
-* poedit
-  in ubuntu: apt-get install poedit
 
-* python
-  in ubuntu: apt-get install python
+windows:
+   windows: http://poedit.net/
+   https://www.python.org/download/windows/
+
 
 - create an new directory lang/{new_language}
-- run:
+- create the new po file:
+  ubuntu:
 	msginit --locale {locale for new language eg: en_US} -i lang/adarkroom.pot -o lang/{new_language}/strings.po
+  windows:
+
 
 - copy lang/main.css to lang/{new_language}
-- open lang/{new_language}/strings.po with a software like PoEdit (available on linux/mac/windows, no excuses)
+- open lang/{new_language}/strings.po with a software poedit
 - translate ...
 - keep translating ...
 - finished ? sure ?
@@ -33,6 +38,7 @@ Required tools:
 	python tools/po2js.py lang/{new_language}/strings.po
 
 - edit README.md and add the following string: [{new_language_name}](http://adarkroom.doublespeakgames.com/?lang={new_language_code})
+- edit lang/langs.js and add the new language
 
 - if your sentence are too big and you need to update some css, overload it in /lang/{new_language}/main.css
 
@@ -43,38 +49,40 @@ When new content or changes in the code introduce new strings the file lang/adar
 
 Required tools:
 
-* python3-babel
-  in ubuntu: apt-get install python3-babel
+ubuntu:
+  apt-get install python3-babel
 
-- run:
+windows:
+  poedit
+
+- ubuntu:
 	pybabel extract -F babel.cfg script > lang/adarkroom.pot
+  windows:
+	use poedit
+	Use menu "Cataloge"-> "New Catalog from POT file..."
 
 
   UPDATE LANGUAGE AFTER UPDATE
 ===============================
 Required tools:
 
-* gettext
+ubuntu:
+  * gettext
+windows:
+  * poedit
 
-- run:
+
+- ubuntu:
 	msgmerge -U lang/{language}/strings.po lang/adarkroom.pot
 
-- Edit in poedit as in "ADD A NEW LANGUAGE"
+  windows:
+	Open lang/{language}strings.po in poedit
+	Use menu "Cataloge"-> "Update from POT file..."
 
-  OR
+	OR
 
-Required tools:
-
-* Poedit
-
-- Open lang/{language}strings.po in poedit
-
-- Use menu "Cataloge"-> "Update from POT file..."
-
-  OR
-
-  After "SETUP POEDIT"
-- Use menu "Cataloge"-> "Update from source"
+	After "SETUP POEDIT"
+	Use menu "Cataloge"-> "Update from source"
 
 - Edit in poedit as in "ADD A NEW LANGUAGE"
 
