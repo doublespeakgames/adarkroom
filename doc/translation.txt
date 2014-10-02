@@ -52,7 +52,6 @@ Required tools:
 
   UPDATE LANGUAGE AFTER UPDATE
 ===============================
-
 Required tools:
 
 * gettext
@@ -64,8 +63,43 @@ Required tools:
 
   OR
 
+Required tools:
+
 * Poedit
 
 - Open lang/{language}strings.po in poedit
+
 - Use menu "Cataloge"-> "Update from POT file..."
+
+  OR
+
+  After "SETUP POEDIT"
+- Use menu "Cataloge"-> "Update from source"
+
 - Edit in poedit as in "ADD A NEW LANGUAGE"
+
+
+  SETUP POEDIT
+=================
+To update from source without pot file need:
+
+- Create new parser:
+  File > Preferences > Parsers > New
+
+  Language:
+  JS
+
+  List of extension:
+  *.js
+
+  Parser command:
+  xgettext --language=JavaScript --force-po -o %o %C %K %F
+
+  Item in Keyword List:
+  -k%k
+
+  Item in input files list:
+  %f
+
+  Source code charset:
+  --from-code=%c
