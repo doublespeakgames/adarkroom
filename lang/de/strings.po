@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2014-09-27 12:34+0200\n"
-"PO-Revision-Date: 2014-10-02 23:32+0100\n"
+"PO-Revision-Date: 2014-10-03 01:06+0100\n"
 "Last-Translator: Thilo Voigt <eiskalt555@web.de>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -205,8 +205,9 @@ msgid "learned to look ahead"
 msgstr "gelernt voraus zu schauen"
 
 #: script/engine.js:67
+#, fuzzy
 msgid "stealthy"
-msgstr ""
+msgstr "heimlich"
 
 #: script/engine.js:68
 msgid "better avoid conflict in the wild"
@@ -526,7 +527,7 @@ msgstr ""
 
 #: script/localization.js:35
 msgid "bait"
-msgstr ""
+msgstr "köder"
 
 #: script/localization.js:36 script/localization.js:43
 msgid "cured meat"
@@ -558,7 +559,7 @@ msgstr "diebe"
 
 #: script/localization.js:45
 msgid "not enough fur"
-msgstr ""
+msgstr "nicht genügend felle"
 
 #: script/localization.js:46
 msgid "not enough wood"
@@ -578,7 +579,7 @@ msgstr "nicht genug stahl"
 
 #: script/localization.js:50
 msgid "baited trap"
-msgstr ""
+msgstr "falle mit köder"
 
 #: script/localization.js:51
 msgid "not enough scales"
@@ -645,8 +646,9 @@ msgid "build:"
 msgstr "baue:"
 
 #: script/localization.js:73
+#, fuzzy
 msgid "craft:"
-msgstr ""
+msgstr "herstellen:"
 
 #: script/localization.js:74
 msgid "buy:"
@@ -682,7 +684,7 @@ msgstr ""
 
 #: script/outside.js:100
 msgid "scraps of fur"
-msgstr ""
+msgstr "fellstücke"
 
 #: script/outside.js:105
 msgid "bits of meat"
@@ -694,11 +696,11 @@ msgstr "seltsame schuppen"
 
 #: script/outside.js:115
 msgid "scattered teeth"
-msgstr ""
+msgstr "vereinzelte zähne"
 
 #: script/outside.js:120
 msgid "tattered cloth"
-msgstr ""
+msgstr "stofffetzen"
 
 #: script/outside.js:125
 msgid "a crudely made charm"
@@ -718,19 +720,20 @@ msgstr "ein fremder erscheint in der nacht"
 
 #: script/outside.js:189
 msgid "a weathered family takes up in one of the huts."
-msgstr ""
+msgstr "eine stark mitgenommene familie zieht in eine der hütten ein."
 
 #: script/outside.js:191
 msgid "a small group arrives, all dust and bones."
-msgstr ""
+msgstr "eine kleine gruppe kommt an, abgemagert und verdreckt."
 
 #: script/outside.js:193
 msgid "a convoy lurches in, equal parts worry and hope."
 msgstr ""
 
 #: script/outside.js:195
+#, fuzzy
 msgid "the town's booming. word does get around."
-msgstr ""
+msgstr "die stadt wächst. Gerüchte verbreiten sich doch."
 
 #: script/outside.js:425
 msgid "pop "
@@ -758,7 +761,7 @@ msgstr "Ein Großes Dorf"
 
 #: script/outside.js:545
 msgid "A Raucous Village"
-msgstr ""
+msgstr "Ein Lärmendes Dorf"
 
 #: script/outside.js:557
 msgid "the sky is grey and the wind blows relentlessly"
@@ -782,7 +785,7 @@ msgstr "Ein Staubiger Pfad"
 
 #: script/path.js:50
 msgid "embark"
-msgstr ""
+msgstr "aufbrechen"
 
 #: script/path.js:68
 msgid "the compass points "
@@ -861,28 +864,28 @@ msgstr "kein platz mehr für hütten"
 
 #: script/room.js:65
 msgid "lodge"
-msgstr ""
+msgstr "jagdhütte"
 
 #: script/room.js:68
 msgid "villagers could help hunt, given the means"
-msgstr ""
+msgstr "dorfbewohner könnten jagen, falls sie die möglichkeit haben"
 
 #: script/room.js:69
 msgid "the hunting lodge stands in the forest, a ways out of town"
-msgstr ""
+msgstr "die Jagdhütte steht im wald, ein weg aus der stadt"
 
 #: script/room.js:80
 msgid "trading post"
-msgstr ""
+msgstr "händler"
 
 #: script/room.js:83
 msgid "a trading post would make commerce easier"
-msgstr ""
+msgstr "ein handelsposten würde den tausch fördern"
 
 #: script/room.js:84
 msgid ""
 "now the nomads have a place to set up shop, they might stick around a while"
-msgstr ""
+msgstr "jetzt haben die nomaden einen ort zum handeln, sie bleiben villeicht"
 
 #: script/room.js:94
 msgid "tannery"
@@ -894,7 +897,7 @@ msgstr ""
 
 #: script/room.js:98
 msgid "tannery goes up quick, on the edge of the village"
-msgstr ""
+msgstr "die gerberei steht schnell, am rand des dorfes"
 
 #: script/room.js:108
 msgid "smokehouse"
@@ -972,7 +975,7 @@ msgstr "wassertank"
 
 #: script/room.js:208
 msgid "never go thirsty again"
-msgstr ""
+msgstr "werde nie wieder durstig"
 
 #: script/room.js:217
 msgid "bone spear"
@@ -980,7 +983,7 @@ msgstr "knochenspeer"
 
 #: script/room.js:220
 msgid "this spear's not elegant, but it's pretty good at stabbing"
-msgstr ""
+msgstr "ein speer ist nicht elegant, aber gut im erstechen"
 
 #: script/room.js:229 script/world.js:300
 msgid "rucksack"
@@ -988,7 +991,7 @@ msgstr "rucksack"
 
 #: script/room.js:233
 msgid "carrying more means longer expeditions to the wilds"
-msgstr ""
+msgstr "mehr tragen zu können bedeutet weiter in die wildnis zu ziehen"
 
 #: script/room.js:241
 #, fuzzy
@@ -997,55 +1000,56 @@ msgstr "wagen"
 
 #: script/room.js:245
 msgid "the wagon can carry a lot of supplies"
-msgstr ""
+msgstr "ein wagen kann viel ausrüstung tragen"
 
 #: script/room.js:254
 msgid "convoy"
-msgstr ""
+msgstr "wagenkolonne"
 
 #: script/room.js:258
 msgid "the convoy can haul mostly everything"
-msgstr ""
+msgstr "eine wagenkolonne kann fast alles transportieren"
 
 #: script/room.js:268
 msgid "l armour"
-msgstr ""
+msgstr "lederrüstung"
 
 #: script/room.js:271
 msgid "leather's not strong. better than rags, though."
 msgstr ""
+"leder ist nicht sehr widerstandsfähig, aber wesentlich besser als stoff."
 
 #: script/room.js:280
 msgid "i armour"
-msgstr ""
+msgstr "eisenrüstung"
 
 #: script/room.js:283
 msgid "iron's stronger than leather"
-msgstr ""
+msgstr "eisen ist stabiler als leder"
 
 #: script/room.js:292
 msgid "s armour"
-msgstr ""
+msgstr "stahlrüstung"
 
 #: script/room.js:295
 msgid "steel's stronger than iron"
-msgstr ""
+msgstr "stahl ist stabiler als eisen"
 
 #: script/room.js:304
 msgid "iron sword"
-msgstr ""
+msgstr "eisenschwert"
 
 #: script/room.js:307
 msgid "sword is sharp. good protection out in the wilds."
-msgstr ""
+msgstr "schwert ist scharf. guter schutz in der wildnis."
 
 #: script/room.js:317
 msgid "steel sword"
-msgstr ""
+msgstr "stahlschwert"
 
 #: script/room.js:320
 msgid "the steel is strong, and the blade true."
-msgstr ""
+msgstr "der stahl ist stark und die klinge scharf."
 
 #: script/room.js:330
 msgid "rifle"
@@ -1053,7 +1057,7 @@ msgstr "gewehr"
 
 #: script/room.js:332
 msgid "black powder and bullets, like the old days."
-msgstr ""
+msgstr "schwarzpulver und kugeln, wie in der alten zeit."
 
 #: script/room.js:464
 msgid "Room"
@@ -1065,65 +1069,67 @@ msgstr ""
 
 #: script/room.js:507
 msgid "light fire"
-msgstr ""
+msgstr "feuer machen"
 
 #: script/room.js:518
 msgid "stoke fire"
-msgstr ""
+msgstr "feuer schüren"
 
 #: script/room.js:557 script/room.js:568 script/room.js:716 script/room.js:720
 msgid "the room is {0}"
-msgstr ""
+msgstr "der raum ist {0}"
 
+# wont work well with 'is'
 #: script/room.js:558 script/room.js:567 script/room.js:685
 msgid "the fire is {0}"
-msgstr ""
+msgstr "das feuer {0}"
 
 #: script/room.js:578
 msgid ""
 "the stranger is standing by the fire. she says she can help. says she builds "
 "things."
 msgstr ""
+"die fremde steht am feuer. sie sagt sie könne helfen. sagt sie baut dinge."
 
 #: script/room.js:593
 msgid "freezing"
-msgstr ""
+msgstr "kalt"
 
 #: script/room.js:594
 msgid "cold"
-msgstr ""
+msgstr "kühl"
 
 #: script/room.js:595
 msgid "mild"
-msgstr ""
+msgstr "lauwarm"
 
 #: script/room.js:596
 msgid "warm"
-msgstr ""
+msgstr "warm"
 
 #: script/room.js:597
 msgid "hot"
-msgstr ""
+msgstr "heiß"
 
 #: script/room.js:609
 msgid "dead"
-msgstr ""
+msgstr "ist erloschen"
 
 #: script/room.js:610
 msgid "smoldering"
-msgstr ""
+msgstr "glimmt"
 
 #: script/room.js:611
 msgid "flickering"
-msgstr ""
+msgstr "flackert"
 
 #: script/room.js:612
 msgid "burning"
-msgstr ""
+msgstr "brennt"
 
 #: script/room.js:613
 msgid "roaring"
-msgstr ""
+msgstr "brennt lichterloh"
 
 #: script/room.js:617
 msgid "A Firelit Room"
@@ -1131,11 +1137,11 @@ msgstr ""
 
 #: script/room.js:655
 msgid "not enough wood to get the fire going"
-msgstr ""
+msgstr "nicht genug holz um feuer zu entfachen"
 
 #: script/room.js:668
 msgid "the wood has run out"
-msgstr ""
+msgstr "das holz ist aus gegangen"
 
 #: script/room.js:688
 msgid "the light from the fire spills from the windows, out into the dark"
@@ -1229,7 +1235,7 @@ msgstr ""
 
 #: script/space.js:45
 msgid "hull: "
-msgstr ""
+msgstr "rumpf:"
 
 #: script/space.js:81
 msgid "Troposphere"
@@ -1265,27 +1271,28 @@ msgstr "gesamtpunktzahl: {0}"
 
 #: script/world.js:48
 msgid "punch"
-msgstr ""
+msgstr "schlagen"
 
 #: script/world.js:54
 msgid "stab"
-msgstr ""
+msgstr "stechen"
 
 #: script/world.js:60
 msgid "swing"
-msgstr ""
+msgstr "schwingen"
 
 #: script/world.js:66
 msgid "slash"
-msgstr ""
+msgstr "schlitzen"
 
 #: script/world.js:72
+#, fuzzy
 msgid "thrust"
-msgstr ""
+msgstr "stoßen"
 
 #: script/world.js:78
 msgid "shoot"
-msgstr ""
+msgstr "schießen"
 
 #: script/world.js:85
 msgid "blast"
@@ -1296,8 +1303,9 @@ msgid "lob"
 msgstr ""
 
 #: script/world.js:99
+#, fuzzy
 msgid "tangle"
-msgstr ""
+msgstr "verheddern"
 
 #: script/world.js:124
 msgid "An&nbsp;Outpost"
@@ -1305,51 +1313,52 @@ msgstr ""
 
 #: script/world.js:125
 msgid "Iron&nbsp;Mine"
-msgstr ""
+msgstr "Eisenmine"
 
 #: script/world.js:126
 msgid "Coal&nbsp;Mine"
-msgstr ""
+msgstr "Kohlemine"
 
 #: script/world.js:127
 msgid "Sulphur&nbsp;Mine"
-msgstr ""
+msgstr "Schwefelmine"
 
 #: script/world.js:128
 msgid "An&nbsp;Old&nbsp;House"
-msgstr ""
+msgstr "Ein&nbsp;Altes&nbsp;Haus"
 
 #: script/world.js:129
 msgid "A&nbsp;Damp&nbsp;Cave"
-msgstr ""
+msgstr "Eine&nbsp;Höhle"
 
 #: script/world.js:130
 msgid "An&nbsp;Abandoned&nbsp;Town"
-msgstr ""
+msgstr "Eine&nbsp;Verlassene&nbsp;Stadt"
 
 #: script/world.js:131
 msgid "A&nbsp;Ruined&nbsp;City"
-msgstr ""
+msgstr "Eine&nbsp;Stadtruine"
 
 #: script/world.js:132
 msgid "A&nbsp;Crashed&nbsp;Starship"
-msgstr ""
+msgstr "Ein&nbsp;Abgestürzes&nbsp;Raumschiff"
 
 #: script/world.js:133
+#, fuzzy
 msgid "A&nbsp;Borehole"
-msgstr ""
+msgstr "Ein&nbsp;Bohrloch"
 
 #: script/world.js:134
 msgid "A&nbsp;Battlefield"
-msgstr ""
+msgstr "Ein&nbsp;Schlachtfeld"
 
 #: script/world.js:135
 msgid "A&nbsp;Murky&nbsp;Swamp"
-msgstr ""
+msgstr "Ein&nbsp;Düsterer&nbsp;Sumpf"
 
 #: script/world.js:140
 msgid "A&nbsp;Destroyed&nbsp;Village"
-msgstr ""
+msgstr "Ein&nbsp;Zerstörtes&nbsp;Dorf"
 
 #: script/world.js:270
 msgid "water:{0}"
@@ -1373,23 +1382,23 @@ msgstr ""
 
 #: script/world.js:367
 msgid "safer here"
-msgstr ""
+msgstr "sicherer hier"
 
 #: script/world.js:473
 msgid "the meat has run out"
-msgstr ""
+msgstr "kein fleisch mehr"
 
 #: script/world.js:479
 msgid "starvation sets in"
-msgstr ""
+msgstr "langsames verhungern"
 
 #: script/world.js:505
 msgid "there is no more water"
-msgstr ""
+msgstr "kein wasser mehr"
 
 #: script/world.js:509
 msgid "the thirst becomes unbearable"
-msgstr ""
+msgstr "der durst wird unerträglich"
 
 #: script/world.js:582
 msgid "the trees yield to dry grass. the yellowed brush rustles in the wind."
@@ -1422,15 +1431,15 @@ msgstr ""
 
 #: script/world.js:812
 msgid "Wanderer"
-msgstr ""
+msgstr "Wanderer"
 
 #: script/world.js:817
 msgid "The&nbsp;Village"
-msgstr ""
+msgstr "Das&nbsp;Dorf"
 
 #: script/world.js:847
 msgid "the world fades"
-msgstr ""
+msgstr "die welt verblasst"
 
 #: script/world.js:950 script/events/setpieces.js:2956
 msgid "water replenished"
@@ -1446,95 +1455,96 @@ msgstr ""
 
 #: script/events/encounters.js:15
 msgid "snarling beast"
-msgstr ""
+msgstr "knurrende bestie"
 
 #: script/events/encounters.js:16
 msgid "the snarling beast is dead"
-msgstr ""
+msgstr "die knurrende bestie ist tot"
 
 #: script/events/encounters.js:39
 msgid "a snarling beast leaps out of the underbrush"
-msgstr ""
+msgstr "eine knurrende bestie springt aus dem unterholz"
 
 #: script/events/encounters.js:44
 msgid "A Gaunt Man"
-msgstr ""
+msgstr "Ein Ausgemergelter Mann"
 
 #: script/events/encounters.js:52
 msgid "gaunt man"
-msgstr ""
+msgstr "ausgemergelter mann"
 
 #: script/events/encounters.js:53
 msgid "the gaunt man is dead"
-msgstr ""
+msgstr "der ausgemergelte mann ist tot"
 
 #: script/events/encounters.js:76
 msgid "a gaunt man approaches, a crazed look in his eye"
-msgstr ""
+msgstr "ein ausgemergelter mann kommt näher, wahnsinn in deinem blick"
 
 #: script/events/encounters.js:81
 msgid "A Strange Bird"
-msgstr ""
+msgstr "Ein Seltsamer Vogel"
 
 #: script/events/encounters.js:89
 msgid "strange bird"
-msgstr ""
+msgstr "seltsamer vogel"
 
 #: script/events/encounters.js:90
 msgid "the strange bird is dead"
-msgstr ""
+msgstr "der seltsame vogel ist tot"
 
 #: script/events/encounters.js:113
 msgid "a strange looking bird speeds across the plains"
-msgstr ""
+msgstr "ein seltsam aussehender vogel rennt über die ebene"
 
 #: script/events/encounters.js:119
 msgid "A Shivering Man"
-msgstr ""
+msgstr "Ein Zitternder Mann"
 
 #: script/events/encounters.js:127
 msgid "shivering man"
-msgstr ""
+msgstr "zitternder mann"
 
 #: script/events/encounters.js:128
 msgid "the shivering man is dead"
-msgstr ""
+msgstr "der zitternde mann ist tot"
 
 #: script/events/encounters.js:156
 msgid "a shivering man approaches and attacks with surprising strength"
 msgstr ""
+"ein zitternder mann kommt näher und greift mit überraschender stärke an"
 
 #: script/events/encounters.js:161
 msgid "A Man-Eater"
-msgstr ""
+msgstr "Ein Menschen-Esser"
 
 #: script/events/encounters.js:169
 msgid "man-eater"
-msgstr ""
+msgstr "menschen-esser"
 
 #: script/events/encounters.js:170
 msgid "the man-eater is dead"
-msgstr ""
+msgstr "der menschen-esser ist tot"
 
 #: script/events/encounters.js:193
 msgid "a large creature attacks, claws freshly bloodied"
-msgstr ""
+msgstr "eine große kreatur greift an, klauen noch blutig"
 
 #: script/events/encounters.js:198
 msgid "A Scavenger"
-msgstr ""
+msgstr "Ein Plünderer"
 
 #: script/events/encounters.js:206
 msgid "scavenger"
-msgstr ""
+msgstr "plünderer"
 
 #: script/events/encounters.js:207
 msgid "the scavenger is dead"
-msgstr ""
+msgstr "der plünderer ist tot"
 
 #: script/events/encounters.js:235
 msgid "a scavenger draws close, hoping for an easy score"
-msgstr ""
+msgstr "der plünderer schleicht näher, auf eine leichtes opfer hoffend"
 
 #: script/events/encounters.js:240
 msgid "A Huge Lizard"
@@ -1550,23 +1560,23 @@ msgstr "die eidechse ist tot"
 
 #: script/events/encounters.js:272
 msgid "the grass thrashes wildly as a huge lizard pushes through"
-msgstr ""
+msgstr "das gras peitscht umher, als die riesige eidechse hindurch spurtet"
 
 #: script/events/encounters.js:278
 msgid "A Feral Terror"
-msgstr ""
+msgstr "Ein Wildes Biest"
 
 #: script/events/encounters.js:286
 msgid "feral terror"
-msgstr ""
+msgstr "wildes biest"
 
 #: script/events/encounters.js:287
 msgid "the feral terror is dead"
-msgstr ""
+msgstr "das wilde biest ist tot"
 
 #: script/events/encounters.js:310
 msgid "a beast, wilder than imagining, erupts out of the foliage"
-msgstr ""
+msgstr "ein biest, wilder als alles vorstellbare, springt aus dem gestrüpp"
 
 #: script/events/encounters.js:315
 msgid "A Soldier"
