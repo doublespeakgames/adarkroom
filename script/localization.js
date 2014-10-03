@@ -60,7 +60,17 @@
 		_('the compass points northeast'),
 		_('the compass points northwest'),
 		_('the compass points southeast'),
-		_('the compass points southwest')
+		_('the compass points southwest'),
+		_('the fire is dead'),
+		_('the fire is smoldering'),
+		_('the fire is flickering'),
+		_('the fire is burning'),
+		_('the fire is roaring'),
+		_('the room is freezing'),
+		_('the room is cold'),
+		_('the room is mild'),
+		_('the room is warm'),
+		_('the room is hot')
 	]; 
 
 	delete keywords;
