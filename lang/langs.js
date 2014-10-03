@@ -6,11 +6,7 @@ var langs = {
 	'uk':'українська',
 	//'jp':'日本語',
 	'ru':'русский',
-<<<<<<< HEAD
 	'sv':'svenska',
 	'pl':'polski',
-	'tr':'Türkçe'
-=======
 	'tr':'türkçe'
->>>>>>> lowercase correction for lang string.
 };
