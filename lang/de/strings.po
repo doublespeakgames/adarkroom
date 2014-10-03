@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2014-09-27 12:34+0200\n"
-"PO-Revision-Date: 2014-10-03 01:06+0100\n"
+"PO-Revision-Date: 2014-10-03 10:04+0100\n"
 "Last-Translator: Thilo Voigt <eiskalt555@web.de>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr "verbindung zu Dropbox"
 
 #: script/dropbox.js:67
 msgid "connect game to dropbox local storage"
-msgstr "spiel mit lokaler Dropbox verbinden"
+msgstr "das spiel mit lokaler Dropbox verbinden"
 
 #: script/dropbox.js:70
 msgid "connect"
@@ -41,14 +41,12 @@ msgid "Dropbox Export / Import"
 msgstr "Dropbox Export / Import"
 
 #: script/dropbox.js:91
-#, fuzzy
 msgid "export or import save data to dropbox datastorage"
-msgstr "spielstand in die Dropbox im- oder exportieren "
+msgstr "spielstand in die dropbox im- oder exportieren "
 
 #: script/dropbox.js:92
-#, fuzzy
 msgid "your are connected to dropbox with account / email "
-msgstr "sie sind mit Dropbox verbunden"
+msgstr "sie sind jetzt mit dropbox verbunden"
 
 #: script/dropbox.js:95
 msgid "save"
@@ -119,7 +117,7 @@ msgstr "gelernt effizient ohne Waffen zu kämpfen"
 #: script/engine.js:32
 #, fuzzy
 msgid "unarmed master"
-msgstr "unbewaffneter Meister"
+msgstr "Meister des unbewaffneten kampfes"
 
 #: script/engine.js:33
 #, fuzzy
@@ -129,7 +127,7 @@ msgstr "Faustschläge werden noch stärker und doppelt so schnell"
 #: script/engine.js:34
 #, fuzzy
 msgid "learned to strike faster without weapons"
-msgstr "gelernt Waffenlos schneller anzugreifen"
+msgstr "gelernt waffenlos schneller anzugreifen"
 
 #: script/engine.js:37
 msgid "barbarian"
@@ -425,7 +423,7 @@ msgstr "felle"
 #: script/localization.js:10
 #, fuzzy
 msgid "alien alloy"
-msgstr "außerirdisches metall"
+msgstr "alien legierung"
 
 #: script/localization.js:11
 #, fuzzy
@@ -478,7 +476,7 @@ msgstr "fallensteller"
 
 #: script/localization.js:23 script/outside.js:36
 msgid "tanner"
-msgstr ""
+msgstr "gerber"
 
 #: script/localization.js:24
 msgid "grenade"
@@ -486,11 +484,11 @@ msgstr "granate"
 
 #: script/localization.js:25
 msgid "bolas"
-msgstr ""
+msgstr "bola"
 
 #: script/localization.js:26 script/outside.js:44
 msgid "charcutier"
-msgstr ""
+msgstr "räuchermeister"
 
 #: script/localization.js:27 script/outside.js:53
 msgid "iron miner"
@@ -523,7 +521,7 @@ msgstr "rüstungsbauer"
 
 #: script/localization.js:34 script/outside.js:77
 msgid "steelworker"
-msgstr ""
+msgstr "stahlarbeiter"
 
 #: script/localization.js:35
 msgid "bait"
@@ -531,7 +529,7 @@ msgstr "köder"
 
 #: script/localization.js:36 script/localization.js:43
 msgid "cured meat"
-msgstr ""
+msgstr "räucherfleisch"
 
 #: script/localization.js:37 script/localization.js:42
 msgid "scales"
@@ -659,8 +657,9 @@ msgid "supplies:"
 msgstr "vorräte:"
 
 #: script/localization.js:76
+#, fuzzy
 msgid "perks:"
-msgstr ""
+msgstr "boni:"
 
 #: script/localization.js:77
 msgid "take:"
@@ -727,8 +726,9 @@ msgid "a small group arrives, all dust and bones."
 msgstr "eine kleine gruppe kommt an, abgemagert und verdreckt."
 
 #: script/outside.js:193
+#, fuzzy
 msgid "a convoy lurches in, equal parts worry and hope."
-msgstr ""
+msgstr "eine wagenkolonne trifft ein, gleichzeitig besorgt und hoffnungvoll."
 
 #: script/outside.js:195
 #, fuzzy
@@ -834,9 +834,8 @@ msgid "more traps won't help now"
 msgstr "mehr fallen werden nicht mehr helfen"
 
 #: script/room.js:37
-#, fuzzy
 msgid "cart"
-msgstr "wagen"
+msgstr "karren"
 
 #: script/room.js:40
 msgid "builder says she can make a cart for carrying wood"
@@ -927,7 +926,7 @@ msgstr ""
 
 #: script/room.js:137
 msgid "steelworks"
-msgstr ""
+msgstr "stahlhütte"
 
 #: script/room.js:140
 msgid "builder says the villagers could make steel, given the tools"
@@ -936,10 +935,11 @@ msgstr ""
 #: script/room.js:141
 msgid "a haze falls over the village as the steelworks fires up"
 msgstr ""
+"ein rußschleier fällt über das dorf, als die stahlhütte ihre arbeit auf nimmt"
 
 #: script/room.js:152
 msgid "armoury"
-msgstr ""
+msgstr "waffenarsenal"
 
 #: script/room.js:155
 msgid "builder says it'd be useful to have a steady source of bullets"
@@ -948,6 +948,7 @@ msgstr ""
 #: script/room.js:156
 msgid "armoury's done, welcoming back the weapons of the past."
 msgstr ""
+"das waffenarsenal steht und bringt die waffen aus früheren zeiten zurück"
 
 #: script/room.js:170
 msgid "a torch to keep the dark away"
@@ -994,7 +995,6 @@ msgid "carrying more means longer expeditions to the wilds"
 msgstr "mehr tragen zu können bedeutet weiter in die wildnis zu ziehen"
 
 #: script/room.js:241
-#, fuzzy
 msgid "wagon"
 msgstr "wagen"
 
@@ -1065,7 +1065,7 @@ msgstr "Raum"
 
 #: script/room.js:492 script/room.js:617
 msgid "A Dark Room"
-msgstr ""
+msgstr "Ein Dunkler Raum"
 
 #: script/room.js:507
 msgid "light fire"
@@ -1132,8 +1132,9 @@ msgid "roaring"
 msgstr "brennt lichterloh"
 
 #: script/room.js:617
+#, fuzzy
 msgid "A Firelit Room"
-msgstr ""
+msgstr "Ein erleuchteter Raum"
 
 #: script/room.js:655
 msgid "not enough wood to get the fire going"
@@ -1145,7 +1146,7 @@ msgstr "das holz ist aus gegangen"
 
 #: script/room.js:688
 msgid "the light from the fire spills from the windows, out into the dark"
-msgstr ""
+msgstr "das licht scheint zum fenster hinaus in die dunkelheit"
 
 #: script/room.js:701
 msgid "builder stokes the fire"
@@ -1162,15 +1163,16 @@ msgstr "das holz wird knapp"
 #: script/room.js:739
 msgid "a ragged stranger stumbles through the door and collapses in the corner"
 msgstr ""
+"ein zerlumpter fremder stolpert durch die tür und bricht im eck zusammen"
 
 #: script/room.js:747
 msgid ""
 "the stranger shivers, and mumbles quietly. her words are unintelligible."
-msgstr ""
+msgstr "die fremde zittert und murmelt leise. ihre worte sind unverständlich."
 
 #: script/room.js:750
 msgid "the stranger in the corner stops shivering. her breathing calms."
-msgstr ""
+msgstr "die fremde im eck hört auf zu zitern. ihr körper entspannt sich."
 
 #: script/room.js:908 script/room.js:956
 msgid "not enough "
@@ -1189,9 +1191,8 @@ msgid "An Old Starship"
 msgstr "Ein Altes Raumschiff"
 
 #: script/ship.js:41
-#, fuzzy
 msgid "hull:"
-msgstr "hülle:"
+msgstr "rumpf:"
 
 #: script/ship.js:48
 #, fuzzy
@@ -1199,9 +1200,8 @@ msgid "engine:"
 msgstr "triebwerk:"
 
 #: script/ship.js:56
-#, fuzzy
 msgid "reinforce hull"
-msgstr "hülle verstärken"
+msgstr "rumpf verstärken"
 
 #: script/ship.js:66
 msgid "upgrade engine"
@@ -1216,22 +1216,25 @@ msgid ""
 "somewhere above the debris cloud, the wanderer fleet hovers. been on this "
 "rock too long."
 msgstr ""
+"irgendwo über der trümmerwolke wartet die flotte der wanderer. war zu lang "
+"auf diesem felsen."
 
 #: script/ship.js:116 script/ship.js:129
 msgid "not enough alien alloy"
-msgstr ""
+msgstr "nich genug alien legierung"
 
 #: script/ship.js:144
+#, fuzzy
 msgid "Ready to Leave?"
-msgstr ""
+msgstr "bereit zum abheben?"
 
 #: script/ship.js:148
 msgid "time to get out of this place. won't be coming back."
-msgstr ""
+msgstr "zeit zu gehen. werde nicht wieder kommen."
 
 #: script/ship.js:160
 msgid "linger"
-msgstr ""
+msgstr "bleiben"
 
 #: script/space.js:45
 msgid "hull: "
@@ -1258,8 +1261,9 @@ msgid "Exosphere"
 msgstr ""
 
 #: script/space.js:91
+#, fuzzy
 msgid "Space"
-msgstr ""
+msgstr "Weltall"
 
 #: script/space.js:432
 msgid "score for this game: {0}"
@@ -1309,7 +1313,7 @@ msgstr "verheddern"
 
 #: script/world.js:124
 msgid "An&nbsp;Outpost"
-msgstr ""
+msgstr "Ein&nbsp;Außenposten"
 
 #: script/world.js:125
 msgid "Iron&nbsp;Mine"
@@ -1365,12 +1369,13 @@ msgid "water:{0}"
 msgstr "wasser:{0}"
 
 #: script/world.js:298
+#, fuzzy
 msgid "pockets"
-msgstr ""
+msgstr "taschen"
 
 #: script/world.js:323
 msgid "hp: {0}/{1}"
-msgstr ""
+msgstr "hp: {0}/{1}"
 
 #: script/world.js:330
 msgid "{0}:{1}"
@@ -1378,7 +1383,7 @@ msgstr "{0}:{1}"
 
 #: script/world.js:365
 msgid "dangerous to be this far from the village without proper protection"
-msgstr ""
+msgstr "gefährlich so weit vom dorf entfernt zu sein. ohne ausreichend schutz"
 
 #: script/world.js:367
 msgid "safer here"
@@ -1451,7 +1456,7 @@ msgstr ""
 
 #: script/events/encounters.js:7
 msgid "A Snarling Beast"
-msgstr ""
+msgstr "Eine Knurrende Bestie"
 
 #: script/events/encounters.js:15
 msgid "snarling beast"
@@ -1616,15 +1621,15 @@ msgstr "Der Dieb"
 
 #: script/events/global.js:13
 msgid "the villagers haul a filthy man out of the store room."
-msgstr ""
+msgstr "die dorfbewohner schleppen einen verdreckten mann aus dem lagerraum."
 
 #: script/events/global.js:14
 msgid "say his folk have been skimming the supplies."
-msgstr ""
+msgstr "sagen, dass er und seine leute die vorräte geplündert haben."
 
 #: script/events/global.js:15
 msgid "say he should be strung up as an example."
-msgstr ""
+msgstr "sagen, er sollte als warnung erhängt werden."
 
 #: script/events/global.js:17
 msgid "a thief is caught"
@@ -1643,17 +1648,20 @@ msgid "the villagers hang the thief high in front of the store room."
 msgstr "die dorfbewohner erhängen den dieb hoch oben im lagerraum"
 
 #: script/events/global.js:33
+#, fuzzy
 msgid ""
 "the point is made. in the next few days, the missing supplies are returned."
 msgstr ""
+"die nachricht ist angekommen. in den nächsten tagen tauchen die "
+"verschundenen vorräte wieder auf."
 
 #: script/events/global.js:49
 msgid "the man says he's grateful. says he won't come around any more."
-msgstr ""
+msgstr "der mann sagt er sei dankbar. sagt, er wird nicht wieder kommen."
 
 #: script/events/global.js:50
 msgid "shares what he knows about sneaking before he goes."
-msgstr ""
+msgstr "teilt geheimnisse über perfektes schleichen, bevor er geht."
 
 #: script/events/outside.js:6
 msgid "A Ruined Trap"
@@ -1664,9 +1672,8 @@ msgid "some of the traps have been torn apart."
 msgstr "einige der fallen sind zerrissen worden."
 
 #: script/events/outside.js:14
-#, fuzzy
 msgid "large prints lead away, into the forest."
-msgstr "große fußspuren führen in den wald."
+msgstr "große fußspuren führen in die ferne, in den wald."
 
 #: script/events/outside.js:22
 msgid "some traps have been destroyed"
@@ -1699,10 +1706,12 @@ msgstr "gehe nach hause"
 #: script/events/outside.js:49
 msgid "not far from the village lies a large beast, its fur matted with blood."
 msgstr ""
+"nicht weit vom dorf entfernt liegt eine bestie am waldboden. ihr fell "
+"blutgetränkt."
 
 #: script/events/outside.js:50
 msgid "it puts up little resistance before the knife."
-msgstr ""
+msgstr "es wehrt sich kaum gegen das messer."
 
 #: script/events/outside.js:68
 msgid "Sickness"
@@ -1734,11 +1743,12 @@ msgstr "die krankheit verbreitet sich in dem dorf."
 
 #: script/events/outside.js:106
 msgid "the days are spent with burials."
-msgstr ""
+msgstr "die tage werden mit beerdigungen verbracht."
 
 #: script/events/outside.js:107 script/events/outside.js:167
+#, fuzzy
 msgid "the nights are rent with screams."
-msgstr ""
+msgstr "die nächte sind erfüllt von leid und schreien."
 
 #: script/events/outside.js:124
 msgid "Plague"
@@ -1778,19 +1788,19 @@ msgstr "die einzige hoffnung ist ein schneller tod."
 
 #: script/events/outside.js:185
 msgid "A Beast Attack"
-msgstr ""
+msgstr "Ein Bestienangriff"
 
 #: script/events/outside.js:192
 msgid "a pack of snarling beasts pours out of the trees."
-msgstr ""
+msgstr "ein rudel knurrender bestien bricht aus dem dickicht."
 
 #: script/events/outside.js:193
 msgid "the fight is short and bloody, but the beasts are repelled."
-msgstr ""
+msgstr "der kampf ist kurz und blutig. die bestien werden vertrieben."
 
 #: script/events/outside.js:194
 msgid "the villagers retreat to mourn the dead."
-msgstr ""
+msgstr "die dorfbewohner ziehen sich zurück um den toten zu gedenken."
 
 #: script/events/outside.js:217
 msgid "A Military Raid"
