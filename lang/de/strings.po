@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2014-09-27 12:34+0200\n"
-"PO-Revision-Date: 2014-10-03 10:04+0100\n"
+"PO-Revision-Date: 2014-10-03 15:15+0100\n"
 "Last-Translator: Thilo Voigt <eiskalt555@web.de>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -432,7 +432,7 @@ msgstr "kugeln"
 
 #: script/localization.js:12
 msgid "charm"
-msgstr ""
+msgstr "amulett"
 
 #: script/localization.js:13 script/path.js:148
 msgid "leather"
@@ -703,7 +703,7 @@ msgstr "stofffetzen"
 
 #: script/outside.js:125
 msgid "a crudely made charm"
-msgstr ""
+msgstr "ein amulett einfacher herstellung"
 
 #: script/outside.js:142 script/outside.js:535
 msgid "A Silent Forest"
@@ -765,11 +765,11 @@ msgstr "Ein Lärmendes Dorf"
 
 #: script/outside.js:557
 msgid "the sky is grey and the wind blows relentlessly"
-msgstr ""
+msgstr "der himmel ist grau und der wind heult erbarmungslos"
 
 #: script/outside.js:567
 msgid "dry brush and dead branches litter the forest floor"
-msgstr ""
+msgstr "trochenes gestrüpp und herabgefallene äste bedecken den waldboden"
 
 #: script/outside.js:593
 msgid "the traps contain "
@@ -843,7 +843,7 @@ msgstr ""
 
 #: script/room.js:41
 msgid "the rickety cart will carry more wood from the forest"
-msgstr ""
+msgstr "der klapprige karren wird mehr holz aus dem wald tragen können"
 
 #: script/room.js:50
 msgid "hut"
@@ -1242,23 +1242,23 @@ msgstr "rumpf:"
 
 #: script/space.js:81
 msgid "Troposphere"
-msgstr ""
+msgstr "Troposphäre"
 
 #: script/space.js:83
 msgid "Stratosphere"
-msgstr ""
+msgstr "Stratosphäre"
 
 #: script/space.js:85
 msgid "Mesosphere"
-msgstr ""
+msgstr "Mesosphäre"
 
 #: script/space.js:87
 msgid "Thermosphere"
-msgstr ""
+msgstr "Thermosphäre"
 
 #: script/space.js:89
 msgid "Exosphere"
-msgstr ""
+msgstr "Exosphäre"
 
 #: script/space.js:91
 #, fuzzy
@@ -1299,12 +1299,13 @@ msgid "shoot"
 msgstr "schießen"
 
 #: script/world.js:85
+#, fuzzy
 msgid "blast"
-msgstr ""
+msgstr "sprengen"
 
 #: script/world.js:92
 msgid "lob"
-msgstr ""
+msgstr "werfen"
 
 #: script/world.js:99
 #, fuzzy
@@ -1407,22 +1408,24 @@ msgstr "der durst wird unerträglich"
 
 #: script/world.js:582
 msgid "the trees yield to dry grass. the yellowed brush rustles in the wind."
-msgstr ""
+msgstr "die bäume weichen trockenem gras. das gelbe gestrüpp raschelt im wind."
 
 #: script/world.js:585
 msgid ""
 "the trees are gone. parched earth and blowing dust are poor replacements."
-msgstr ""
+msgstr "keine bäume mehr. verdorrte erde und staub sind noch schlimmer."
 
 #: script/world.js:592
 msgid ""
 "trees loom on the horizon. grasses gradually yield to a forest floor of dry "
 "branches and fallen leaves."
 msgstr ""
+"bäume säumen den horizont. das gras gibt langsam dem wald mit trockenen "
+"ästen und blättern nach."
 
 #: script/world.js:595
 msgid "the grasses thin. soon, only dust remains."
-msgstr ""
+msgstr "das gras spärlich. bald bleibt nur noch der staub."
 
 #: script/world.js:602
 msgid "the barrens break at a sea of dying grass, swaying in the arid breeze."
@@ -1452,7 +1455,7 @@ msgstr "wasser aufgefüllt"
 
 #: script/world.js:979
 msgid "A Barren World"
-msgstr ""
+msgstr "Eine Karge Welt"
 
 #: script/events/encounters.js:7
 msgid "A Snarling Beast"
@@ -1596,8 +1599,9 @@ msgid "the soldier is dead"
 msgstr "der soldat ist tot"
 
 #: script/events/encounters.js:353
+#, fuzzy
 msgid "a soldier opens fire from across the desert"
-msgstr ""
+msgstr "ein soldat eröffnet das feuer von der ferne."
 
 #: script/events/encounters.js:358
 msgid "A Sniper"
@@ -1613,7 +1617,7 @@ msgstr "der scharfschütze ist tot"
 
 #: script/events/encounters.js:396
 msgid "a shot rings out, from somewhere in the long grass"
-msgstr ""
+msgstr "ein schuss ist zu hören, irgendwo aus dem hohen gras"
 
 #: script/events/global.js:6
 msgid "The Thief"
@@ -1804,36 +1808,38 @@ msgstr "die dorfbewohner ziehen sich zurück um den toten zu gedenken."
 
 #: script/events/outside.js:217
 msgid "A Military Raid"
-msgstr ""
+msgstr "Ein Überfall des Militärs"
 
 #: script/events/outside.js:224
 msgid "a gunshot rings through the trees."
-msgstr ""
+msgstr "ein schuss donnert durch den wald."
 
 #: script/events/outside.js:225
 msgid "well armed men charge out of the forest, firing into the crowd."
-msgstr ""
+msgstr "schwer bewaffnete männer stürmen aus dem wald, feuern in die menge."
 
 #: script/events/outside.js:226
 msgid "after a skirmish they are driven away, but not without losses."
-msgstr ""
+msgstr "nach dem gefecht werden sie zurück gedrängt, aber nicht ohne verluste."
 
 #: script/events/room.js:6
 msgid "The Nomad"
-msgstr ""
+msgstr "Der Nomade"
 
 #: script/events/room.js:13
+#, fuzzy
 msgid ""
 "a nomad shuffles into view, laden with makeshift bags bound with rough twine."
 msgstr ""
+"ein nomade schlurft in das licht, beladen mit lumpen und selbst gebautem."
 
 #: script/events/room.js:14
 msgid "won't say from where he came, but it's clear that he's not staying."
-msgstr ""
+msgstr "verrät nicht wo er her kommt. er wird nicht bleiben."
 
 #: script/events/room.js:16
 msgid "a nomad arrives, looking to trade"
-msgstr ""
+msgstr "ein nomade trifft ein, auf der suche nach handel"
 
 #: script/events/room.js:20
 msgid "buy scales"
@@ -1845,11 +1851,11 @@ msgstr "kaufe zähne"
 
 #: script/events/room.js:30
 msgid "buy bait"
-msgstr ""
+msgstr "kaufe köder"
 
 #: script/events/room.js:33
 msgid "traps are more effective with bait."
-msgstr ""
+msgstr "fallen sind effizienter mit ködern."
 
 #: script/events/room.js:39
 msgid "buy compass"
@@ -1871,37 +1877,41 @@ msgid "say goodbye"
 msgstr "verabschiede dich"
 
 #: script/events/room.js:53 script/events/room.js:104
+#, fuzzy
 msgid "Noises"
-msgstr ""
+msgstr "Geräusche"
 
 #: script/events/room.js:60
+#, fuzzy
 msgid "through the walls, shuffling noises can be heard."
-msgstr ""
+msgstr "durch die wände, kratzende geräusche sind zu hören."
 
 #: script/events/room.js:61
 msgid "can't tell what they're up to."
-msgstr ""
+msgstr "scher zu sagen, was sie vor haben."
 
 #: script/events/room.js:63
 msgid "strange noises can be heard through the walls"
-msgstr ""
+msgstr "seltsame geräusche sind durch die wände zu hören"
 
 #: script/events/room.js:67 script/events/room.js:118
 #: script/events/setpieces.js:1661
 msgid "investigate"
-msgstr ""
+msgstr "untersuchen"
 
 #: script/events/room.js:78
+#, fuzzy
 msgid "vague shapes move, just out of sight."
-msgstr ""
+msgstr "schatten bewegen sich, gerade außer sichtweite."
 
 #: script/events/room.js:79
 msgid "the sounds stop."
-msgstr ""
+msgstr "die geräusche verstummen."
 
 #: script/events/room.js:83 script/events/room.js:96
+#, fuzzy
 msgid "go back inside"
-msgstr ""
+msgstr "geh wieder zurück"
 
 #: script/events/room.js:91
 msgid ""
@@ -1910,93 +1920,95 @@ msgstr ""
 
 #: script/events/room.js:92
 msgid "the night is silent."
-msgstr ""
+msgstr "die nacht ist still."
 
 #: script/events/room.js:111
 msgid "scratching noises can be heard from the store room."
-msgstr ""
+msgstr "kratzende geräusche sind aus dem lagerraum zu hören."
 
 #: script/events/room.js:112
 msgid "something's in there."
-msgstr ""
+msgstr "irgend etwas ist dort drin."
 
 #: script/events/room.js:114
 msgid "something's in the store room"
-msgstr ""
+msgstr "etwas ist in dem lagerraum"
 
 #: script/events/room.js:129 script/events/room.js:149
 #: script/events/room.js:169
 msgid "some wood is missing."
-msgstr ""
+msgstr "etwas holz fehlt."
 
 #: script/events/room.js:130
 msgid "the ground is littered with small scales"
-msgstr ""
+msgstr "der boden ist von kleinen schuppen bedeckt"
 
 #: script/events/room.js:150
 msgid "the ground is littered with small teeth"
-msgstr ""
+msgstr "der boden ist von vereinzelten zähnen bedeckt"
 
 #: script/events/room.js:170
 msgid "the ground is littered with scraps of cloth"
-msgstr ""
+msgstr "der boden ist mit stofffetzen bedeckt"
 
 #: script/events/room.js:190
 msgid "The Beggar"
-msgstr ""
+msgstr "Der Bettler"
 
 #: script/events/room.js:197
 msgid "a beggar arrives."
-msgstr ""
+msgstr "ein bettler trifft ein"
 
 #: script/events/room.js:198
 msgid "asks for any spare furs to keep him warm at night."
-msgstr ""
+msgstr "fragt nach ein paar fellen, um ihn in der nacht zu wärmen."
 
 #: script/events/room.js:200
 msgid "a beggar arrives"
-msgstr ""
+msgstr "ein betttler trifft ein"
 
 #: script/events/room.js:204
 msgid "give 50"
-msgstr ""
+msgstr "übergebe 50"
 
 #: script/events/room.js:209 script/events/room.js:276
 #: script/events/room.js:347
 msgid "give 100"
-msgstr ""
+msgstr "übergebe 100"
 
 #: script/events/room.js:214 script/events/room.js:286
 #: script/events/room.js:466
 msgid "turn him away"
-msgstr ""
+msgstr "schicke ihn weg"
 
 #: script/events/room.js:222 script/events/room.js:235
 #: script/events/room.js:248
 msgid "the beggar expresses his thanks."
-msgstr ""
+msgstr "der bettler ist dankbar."
 
 #: script/events/room.js:223
 msgid "leaves a pile of small scales behind."
-msgstr ""
+msgstr "er hinterlässt einige schuppen."
 
 #: script/events/room.js:236
 msgid "leaves a pile of small teeth behind."
-msgstr ""
+msgstr "er hinterlässt einige zähne."
 
 #: script/events/room.js:249
 msgid "leaves some scraps of cloth behind."
-msgstr ""
+msgstr "er hinterlässt einige stofffetzen."
 
 #: script/events/room.js:262 script/events/room.js:333
 msgid "The Mysterious Wanderer"
-msgstr ""
+msgstr "Der Geheimnisvolle Wanderer"
 
 #: script/events/room.js:269
 msgid ""
 "a wanderer arrives with an empty cart. says if he leaves with wood, he'll be "
 "back with more."
 msgstr ""
+"ein wanderer taucht mit einem leeren karren auf. sagt, wenn er mit holz "
+"geht, wird er mit mehr zurück kommen."
 
 #: script/events/room.js:270
 msgid "builder's not sure he's to be trusted."
@@ -2004,25 +2016,28 @@ msgstr ""
 
 #: script/events/room.js:272 script/events/room.js:343
 msgid "a mysterious wanderer arrives"
-msgstr ""
+msgstr "ein geheimnisvoller wanderer taucht auf"
 
 #: script/events/room.js:281 script/events/room.js:352
 msgid "give 500"
-msgstr ""
+msgstr "übergebe 500"
 
 #: script/events/room.js:293 script/events/room.js:312
 msgid "the wanderer leaves, cart loaded with wood"
-msgstr ""
+msgstr "der wanderer zieht davon, karren voll mit holz"
 
 #: script/events/room.js:299 script/events/room.js:318
 msgid "the mysterious wanderer returns, cart piled high with wood."
 msgstr ""
+"der geheimnisvolle wanderer kommt wieder, karren hoch mit holz gestapelt."
 
 #: script/events/room.js:340
 msgid ""
 "a wanderer arrives with an empty cart. says if she leaves with furs, she'll "
 "be back with more."
 msgstr ""
+"ein wanderer taucht mit einem leeren karren auf. sagt, wenn sie mit fellen "
+"geht, wird sie mit noch mehr zurück kommen."
 
 #: script/events/room.js:341
 msgid "builder's not sure she's to be trusted."
@@ -2030,43 +2045,45 @@ msgstr ""
 
 #: script/events/room.js:357
 msgid "turn her away"
-msgstr ""
+msgstr "schicke sie weg"
 
 #: script/events/room.js:364 script/events/room.js:383
 msgid "the wanderer leaves, cart loaded with furs"
-msgstr ""
+msgstr "der wanderer zieht davon, karren voll mit fellen"
 
 #: script/events/room.js:370 script/events/room.js:389
 msgid "the mysterious wanderer returns, cart piled high with furs."
 msgstr ""
+"der geheimnisvolle wanderer kommt wieder, karren hoch mit fellen gestapelt."
 
 #: script/events/room.js:404
 msgid "The Scout"
-msgstr ""
+msgstr "Der Kundschafter"
 
 #: script/events/room.js:411
 msgid "the scout says she's been all over."
-msgstr ""
+msgstr "der kundschafter sagt, sie sei überall gewesen."
 
 #: script/events/room.js:412
 msgid "willing to talk about it, for a price."
-msgstr ""
+msgstr "sie ist bereit darüber zu berichten. gegen bezahlung."
 
 #: script/events/room.js:414
 msgid "a scout stops for the night"
-msgstr ""
+msgstr "ein kundschafter bleibt für eine nacht"
 
 #: script/events/room.js:418
 msgid "buy map"
-msgstr ""
+msgstr "kaufe karte"
 
 #: script/events/room.js:420
 msgid "the map uncovers a bit of the world"
-msgstr ""
+msgstr "die landkarte deckt einen teil der welt auf"
 
 #: script/events/room.js:424
+#, fuzzy
 msgid "learn scouting"
-msgstr ""
+msgstr "erlerne kundschaften"
 
 #: script/events/room.js:443
 msgid "The Master"
@@ -2110,141 +2127,145 @@ msgstr "nichts"
 
 #: script/events/room.js:516
 msgid "The Sick Man"
-msgstr ""
+msgstr "Ein Kranker Mann"
 
 #: script/events/room.js:523
 msgid "a man hobbles up, coughing."
-msgstr ""
+msgstr "ein mann humpelt herein, hustend."
 
 #: script/events/room.js:524
 msgid "he begs for medicine."
-msgstr ""
+msgstr "er bittet um medizin."
 
 #: script/events/room.js:526
 msgid "a sick man hobbles up"
-msgstr ""
+msgstr "ein kranker mann humpelt herein"
 
 #: script/events/room.js:530
 msgid "give 1 medicine"
-msgstr ""
+msgstr "übergebe 1 medizin"
 
 #: script/events/room.js:532
 msgid "the man swallows the medicine eagerly"
-msgstr ""
+msgstr "der mann schuckt die medizin hastig"
 
 #: script/events/room.js:536
 msgid "tell him to leave"
-msgstr ""
+msgstr "schicke ihn davon"
 
 #: script/events/room.js:543 script/events/room.js:559
 #: script/events/room.js:575
 msgid "the man is thankful."
-msgstr ""
+msgstr "der mann ist dankbar."
 
 #: script/events/room.js:544 script/events/room.js:560
 #: script/events/room.js:576
 msgid "he leaves a reward."
-msgstr ""
+msgstr "er hinterlässt eine belohnung."
 
 #: script/events/room.js:545
 msgid "some weird metal he picked up on his travels."
-msgstr ""
+msgstr "ein seltsames metall. hat es auf seinen reisen gefunden."
 
 #: script/events/room.js:561
+#, fuzzy
 msgid "some weird glowing boxes he picked up on his travels."
-msgstr ""
+msgstr "seltsame leuchtende kästen. hat es auf seinen reisen gefunden."
 
 #: script/events/room.js:577
 msgid "all he has are some scales."
-msgstr ""
+msgstr "alles was er hat sind ein paar schuppen."
 
 #: script/events/room.js:591
 msgid "the man expresses his thanks and hobbles off."
-msgstr ""
+msgstr "der mann bedankt sich und humpelt davon."
 
 #: script/events/setpieces.js:6
 msgid "An Outpost"
-msgstr ""
+msgstr "Ein Außenposten"
 
 #: script/events/setpieces.js:10 script/events/setpieces.js:12
 msgid "a safe place in the wilds."
-msgstr ""
+msgstr "ein sicherer ort in der wildnis."
 
 #: script/events/setpieces.js:34
 msgid "A Murky Swamp"
-msgstr ""
+msgstr "Ein Düsterer Sumpf"
 
 #: script/events/setpieces.js:38
 msgid "rotting reeds rise out of the swampy earth."
-msgstr ""
+msgstr "verwestes schilf ragt aus der sumpfigen erde."
 
 #: script/events/setpieces.js:39
+#, fuzzy
 msgid "a lone frog sits in the muck, silently."
-msgstr ""
+msgstr "ein einsamer frosch sitzt in der brühe, still."
 
 #: script/events/setpieces.js:41
 msgid "a swamp festers in the stagnant air."
-msgstr ""
+msgstr "ein sumpf gedeiht in der trägen luft."
 
 #: script/events/setpieces.js:44 script/events/setpieces.js:548
 #: script/events/setpieces.js:605 script/events/setpieces.js:887
 #: script/events/setpieces.js:1312 script/events/setpieces.js:1330
 #: script/events/setpieces.js:3529
 msgid "enter"
-msgstr ""
+msgstr "hineingehen"
 
 #: script/events/setpieces.js:55
 msgid "deep in the swamp is a moss-covered cabin."
-msgstr ""
+msgstr "tief in dem sumpf steht eine moosbedeckte hütte."
 
 #: script/events/setpieces.js:56
 msgid "an old wanderer sits inside, in a seeming trance."
-msgstr ""
+msgstr "innen sitzt ein alter wanderer, scheinbar in trance."
 
 #: script/events/setpieces.js:61
 msgid "talk"
-msgstr ""
+msgstr "sprechen"
 
 #: script/events/setpieces.js:72
 msgid "the wanderer takes the charm and nods slowly."
-msgstr ""
+msgstr "der wanderer nimmt das amulett und nickt langsam."
 
 #: script/events/setpieces.js:73
 msgid "he speaks of once leading the great fleets to fresh worlds."
 msgstr ""
+"er spricht davon einst eine mächtige flotte zu neuen welten geführt zu haben."
 
 #: script/events/setpieces.js:74
 msgid "unfathomable destruction to fuel wanderer hungers."
-msgstr ""
+msgstr "unbeschreibliche zerstörung um den hunger der wanderer zu stillen."
 
 #: script/events/setpieces.js:75
 msgid "his time here, now, is his penance."
-msgstr ""
+msgstr "die zeit hier, jetzt, ist seine buße."
 
 #: script/events/setpieces.js:91
 msgid "A Damp Cave"
-msgstr ""
+msgstr "Eine Stickige Höhle"
 
 #: script/events/setpieces.js:95
+#, fuzzy
 msgid "the mouth of the cave is wide and dark."
-msgstr ""
+msgstr "der höhleneingang ist groß und schwarz."
 
 #: script/events/setpieces.js:96
 msgid "can't see what's inside."
-msgstr ""
+msgstr "zu dunkel um hinein zu sehen."
 
 #: script/events/setpieces.js:98
 msgid "the earth here is split, as if bearing an ancient wound"
-msgstr ""
+msgstr "der boden hier ist gespalten, wie von einer alten wunde"
 
 #: script/events/setpieces.js:101 script/events/setpieces.js:2939
 #: script/events/setpieces.js:3453
 msgid "go inside"
-msgstr ""
+msgstr "gehe hinein"
 
 #: script/events/setpieces.js:120 script/events/setpieces.js:264
 msgid "a startled beast defends its home"
-msgstr ""
+msgstr "eine erschockene bestie verteidigt ihr heim"
 
 #: script/events/setpieces.js:135 script/events/setpieces.js:186
 #: script/events/setpieces.js:227 script/events/setpieces.js:246
@@ -2277,7 +2298,7 @@ msgstr ""
 #: script/events/setpieces.js:3342 script/events/setpieces.js:3376
 #: script/events/setpieces.js:3415
 msgid "continue"
-msgstr ""
+msgstr "weiter gehen"
 
 #: script/events/setpieces.js:140 script/events/setpieces.js:157
 #: script/events/setpieces.js:191 script/events/setpieces.js:232
@@ -2286,31 +2307,32 @@ msgstr ""
 #: script/events/setpieces.js:386 script/events/setpieces.js:428
 #: script/events/setpieces.js:480 script/events/setpieces.js:512
 msgid "leave cave"
-msgstr ""
+msgstr "höhle verlassen"
 
 #: script/events/setpieces.js:148
 msgid "the cave narrows a few feet in."
-msgstr ""
+msgstr "die höhle wird schmäler nach ein paar schritten."
 
 #: script/events/setpieces.js:149
 msgid "the walls are moist and moss-covered"
-msgstr ""
+msgstr "die wände sind feucht und moos bewachsen"
 
 #: script/events/setpieces.js:153
 msgid "squeeze"
-msgstr ""
+msgstr "hindurchzwängen"
 
 #: script/events/setpieces.js:164
+#, fuzzy
 msgid "the remains of an old camp sits just inside the cave."
-msgstr ""
+msgstr "die überreste eines alten lagers befindet sich in der höhle."
 
 #: script/events/setpieces.js:165
 msgid "bedrolls, torn and blackened, lay beneath a thin layer of dust."
-msgstr ""
+msgstr "ein schlafplatz, zerrissen und verstaubt."
 
 #: script/events/setpieces.js:199
 msgid "the body of a wanderer lies in a small cavern."
-msgstr ""
+msgstr "der körper eines wanderes liegt in einer kleinen aushöhlung."
 
 #: script/events/setpieces.js:200
 msgid "rot's been to work on it, and some of the pieces are missing."
@@ -2322,71 +2344,77 @@ msgstr ""
 
 #: script/events/setpieces.js:240
 msgid "the torch sputters and dies in the damp air"
-msgstr ""
+msgstr "die fackel flackert und erlischt in der feuchten luft"
 
 #: script/events/setpieces.js:241
 msgid "the darkness is absolute"
-msgstr ""
+msgstr "die dunkelheit ist undurchdringlich"
 
 #: script/events/setpieces.js:243
 msgid "the torch goes out"
-msgstr ""
+msgstr "die fackel erlischt"
 
 #: script/events/setpieces.js:298
 msgid "a cave lizard attacks"
-msgstr ""
+msgstr "eine höhleneidechse greift an"
 
 #: script/events/setpieces.js:332
 msgid "a large beast charges out of the dark"
-msgstr ""
+msgstr "eine monströse bestie schnellt aus der dunkelheit"
 
 #: script/events/setpieces.js:366
 msgid "a giant lizard shambles forward"
-msgstr ""
+msgstr "eine riesige eidechse kriecht herbei"
 
 #: script/events/setpieces.js:394
 msgid "the nest of a large animal lies at the back of the cave."
-msgstr ""
+msgstr "das nest eines großen tieres befindet sich am ende der höhle."
 
 #: script/events/setpieces.js:436
 msgid "a small supply cache is hidden at the back of the cave."
-msgstr ""
+msgstr "eine kleine vorratskammer befindet sich am ende der höhle."
 
 #: script/events/setpieces.js:488
 msgid "an old case is wedged behind a rock, covered in a thick layer of dust."
 msgstr ""
+"eine alte kiste liegt unter einem stein, von einer dicken staubschicht "
+"bedeckt."
 
 #: script/events/setpieces.js:521
 msgid "A Deserted Town"
-msgstr ""
+msgstr "Eine Wüstenstadt"
 
 #: script/events/setpieces.js:525
+#, fuzzy
 msgid "a small suburb lays ahead, empty houses scorched and peeling."
-msgstr ""
+msgstr "eine kleine vorstadt, leere häuser, versengt und staubig"
 
 #: script/events/setpieces.js:526
 msgid ""
 "broken streetlights stand, rusting. light hasn't graced this place in a long "
 "time."
 msgstr ""
+"kaputte straßenlaternen, rostig und alt. lange haben sie kein licht mehr "
+"gespendet."
 
 #: script/events/setpieces.js:528
 msgid "the town lies abandoned, its citizens long dead"
-msgstr ""
+msgstr "die stadt verlassen, alle einwohner lange tot"
 
 #: script/events/setpieces.js:531 script/events/setpieces.js:1249
 msgid "explore"
-msgstr ""
+msgstr "erkunden"
 
 #: script/events/setpieces.js:543
 msgid ""
 "where the windows of the schoolhouse aren't shattered, they're blackened "
 "with soot."
 msgstr ""
+"die fenster des schulhauses sind entweder zwebrocken oder mit ruß bedeckt."
 
 #: script/events/setpieces.js:544
 msgid "the double doors creak endlessly in the wind."
-msgstr ""
+msgstr "die doppeltüren knarren endlos im wind"
 
 #: script/events/setpieces.js:553 script/events/setpieces.js:592
 #: script/events/setpieces.js:610 script/events/setpieces.js:648
@@ -2400,69 +2428,75 @@ msgstr ""
 #: script/events/setpieces.js:1147 script/events/setpieces.js:1191
 #: script/events/setpieces.js:1213 script/events/setpieces.js:1229
 msgid "leave town"
-msgstr ""
+msgstr "stadt verlassen"
 
 #: script/events/setpieces.js:584
 msgid "ambushed on the street."
-msgstr ""
+msgstr "ein hinterhalt in den straßen."
 
 #: script/events/setpieces.js:600
 msgid "a squat building up ahead."
-msgstr ""
+msgstr "eine gruppe sammelt sich dort vorn."
 
+# what kind of green cross?
 #: script/events/setpieces.js:601
+#, fuzzy
 msgid "a green cross barely visible behind grimy windows."
-msgstr ""
+msgstr "ein grünes kreuz ist kaum sichbar hinter verdreckten fenstern."
 
 #: script/events/setpieces.js:617
 msgid "a small cache of supplies is tucked inside a rusting locker."
 msgstr ""
+"ein kleiner vorrat an ausrüstung ist in einem rostigen schließfach verstaut."
 
 #: script/events/setpieces.js:679
 msgid "a scavenger waits just inside the door."
-msgstr ""
+msgstr "ein plünderer wartet hinter der tür."
 
 #: script/events/setpieces.js:713
 msgid "a beast stands alone in an overgrown park."
-msgstr ""
+msgstr "ein biest steht allein in einem verwilderten park."
 
 #: script/events/setpieces.js:729
+#, fuzzy
 msgid "an overturned caravan is spread across the pockmarked street."
-msgstr ""
+msgstr "ein umgefallener wohnwagen liegt in der marktstraße."
 
 #: script/events/setpieces.js:730
 msgid ""
 "it's been picked over by scavengers, but there's still some things worth "
 "taking."
 msgstr ""
+"er ist von plünderern durchsucht worden, aber manches ist immernoch wertvoll."
 
 #: script/events/setpieces.js:792
 msgid "a madman attacks, screeching."
-msgstr ""
+msgstr "ein irrer greift an, kreischend."
 
 #: script/events/setpieces.js:831
 msgid "a thug moves out of the shadows."
-msgstr ""
+msgstr "ein gauner tritt aus den schatten."
 
 #: script/events/setpieces.js:865
 msgid "a beast charges out of a ransacked classroom."
-msgstr ""
+msgstr "ein biest stürmt aus dem verwüsteten klassenzimmer"
 
 #: script/events/setpieces.js:881
 msgid "through the large gymnasium doors, footsteps can be heard."
-msgstr ""
+msgstr "durch die großen türen der sporthalle sind schritte zu hören."
 
 #: script/events/setpieces.js:882
+#, fuzzy
 msgid "the torchlight casts a flickering glow down the hallway."
-msgstr ""
+msgstr "das licht der fackel beleuchtet den flur nur schlecht."
 
 #: script/events/setpieces.js:883
 msgid "the footsteps stop."
-msgstr ""
+msgstr "die schritte verstummen."
 
 #: script/events/setpieces.js:916
 msgid "another beast, draw by the noise, leaps out of a copse of trees."
-msgstr ""
+msgstr "noch eine bestie, durch den lärm angelockt, kommt rasch näher."
 
 #: script/events/setpieces.js:932
 msgid "something's causing a commotion a ways down the road."
@@ -2470,24 +2504,27 @@ msgstr ""
 
 #: script/events/setpieces.js:933
 msgid "a fight, maybe."
-msgstr ""
+msgstr "vielleicht ein kampf."
 
 #: script/events/setpieces.js:948
 msgid ""
 "a small basket of food is hidden under a park bench, with a note attached."
 msgstr ""
+"ein kleiner korb mit nahrung ist unter einer parkbank versteckt. kein "
+"besitzer."
 
 #: script/events/setpieces.js:949
+#, fuzzy
 msgid "can't read the words."
-msgstr ""
+msgstr "kann die worte nicht lesen."
 
 #: script/events/setpieces.js:996
 msgid "a panicked scavenger bursts through the door, screaming."
-msgstr ""
+msgstr "ein panischer plünderer bricht schreiend durch die tür."
 
 #: script/events/setpieces.js:1035
 msgid "a man stands over a dead wanderer. notices he's not alone."
-msgstr ""
+msgstr "ein mann steht über einem toten "
 
 #: script/events/setpieces.js:1051
 msgid "scavenger had a small camp in the school."
