@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2014-09-27 12:34+0200\n"
-"PO-Revision-Date: 2014-10-04 23:27+0100\n"
+"PO-Revision-Date: 2014-10-06 16:18+0100\n"
 "Last-Translator: Thilo Voigt <eiskalt555@web.de>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -96,11 +96,10 @@ msgstr "boxer"
 msgid "punches do more damage"
 msgstr "faustschläge verursachen mehr schaden"
 
-# more force or more precition?
+# more force
 #: script/engine.js:24
-#, fuzzy
 msgid "learned to throw punches with purpose"
-msgstr "gelernt gezielte schläge zu verteilen"
+msgstr "gelernt kraftvolle schläge auszuteilen"
 
 #: script/engine.js:27
 msgid "martial artist"
@@ -114,11 +113,10 @@ msgstr "faustschläge verursachen noch mehr schaden"
 msgid "learned to fight quite effectively without weapons"
 msgstr "gelernt effizienter ohne Waffen zu kämpfen"
 
-# unarmed master = master of unarmed combat?
+# unarmed master = master of unarmed combat.
 #: script/engine.js:32
-#, fuzzy
 msgid "unarmed master"
-msgstr "meister des unbewaffneten kampfes"
+msgstr "nahkampfmeister"
 
 #: script/engine.js:33
 msgid "punch twice as fast, and with even more force"
@@ -719,11 +717,10 @@ msgstr "eine wagenkolonne trifft ein. gleichzeitig besorgt und hoffnungvoll."
 msgid "the town's booming. word does get around."
 msgstr "die stadt wächst. gerüchte verbreiten sich doch."
 
-# which weapon is that?
+# short for population.
 #: script/outside.js:425
-#, fuzzy
 msgid "pop "
-msgstr "ballern"
+msgstr "volk"
 
 #: script/outside.js:516
 msgid "check traps"
@@ -1221,7 +1218,6 @@ msgid "not enough alien alloy"
 msgstr "nich genug alien legierung"
 
 #: script/ship.js:144
-#, fuzzy
 msgid "Ready to Leave?"
 msgstr "bereit zum abheben?"
 
@@ -2325,11 +2321,10 @@ msgstr "der körper eines wanderes liegt in einer kleinen aushöhlung."
 msgid "rot's been to work on it, and some of the pieces are missing."
 msgstr "verwesung hat eingesetzt. einige teile fehlen."
 
-# what is 'it'?
+# 'it' is a wanderer corpse
 #: script/events/setpieces.js:201
-#, fuzzy
 msgid "can't tell what left it here."
-msgstr "schwer zu sagen was es hier gelassen hat."
+msgstr "schwer zu sagen was ihn hier zurückgelassen hat."
 
 #: script/events/setpieces.js:240
 msgid "the torch sputters and dies in the damp air"
@@ -2728,11 +2723,11 @@ msgstr "ein ton ist aus dem tunnel voraus zu hören."
 msgid "looks like a camp of sorts up ahead."
 msgstr "sieht dort vorn nach einer art lager aus."
 
-# one chainlink?
+# a chainlink fence
 #: script/events/setpieces.js:1675
 #, fuzzy
 msgid "rusted chainlink is pulled across an alleyway."
-msgstr "rostige ketten werden über die gassen gezogen."
+msgstr "rostiger zaun wird durch die gassen gezogen."
 
 #: script/events/setpieces.js:1676
 msgid "fires burn in the courtyard beyond."
@@ -2868,7 +2863,6 @@ msgstr "plünderer waren wohl schon hier."
 
 # part of the subway?
 #: script/events/setpieces.js:2399
-#, fuzzy
 msgid "the tunnel opens up at another platform."
 msgstr "der tunnel öffnet sich an einer anderen haltestelle."
 
@@ -2924,7 +2918,6 @@ msgid "still time to rescue a few supplies."
 msgstr "noch genug zeit um vorräte zu sichern."
 
 #: script/events/setpieces.js:2558
-#, fuzzy
 msgid ""
 "the remaining settlers flee from the violence, their belongings forgotten."
 msgstr ""
@@ -2987,9 +2980,8 @@ msgstr "der tentakelschrecken ist besiegt."
 msgid "inside, the remains of its victims are everywhere."
 msgstr "innen liegen die überreste seiner opfer verstreut."
 
-# warped? part of the tentacle event?
+# extremly disfigured
 #: script/events/setpieces.js:2840
-#, fuzzy
 msgid "the warped man lies dead."
 msgstr "der entstellte mann liegt tot am boden."
 
@@ -3228,11 +3220,10 @@ msgstr "ein zerstörtes dorf steht im staub."
 msgid "charred bodies litter the ground."
 msgstr "verkohlte leichen bedecken den boden."
 
-# afterburner: like a wapon or an engine?
+# afterburner: a engine
 #: script/events/setpieces.js:3526
-#, fuzzy
 msgid "the metallic tang of wanderer afterburner hangs in the air."
-msgstr "der metallische hauch eines wanderer-nachbrenners hängt in der luft."
+msgstr "der metallische geruch eines wanderer-nachbrenners hängt in der luft."
 
 #: script/events/setpieces.js:3540
 msgid "a shack stands at the center of the village."
