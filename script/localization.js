@@ -47,6 +47,7 @@
 		_('not enough coal'),
 		_('not enough iron'),
 		_('not enough steel'),
+		_('not enough sulphur'),
 		_('baited trap'),
 		_('not enough scales'),
 		_('not enough cloth'),
