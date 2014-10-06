@@ -540,8 +540,8 @@ var Room = {
 		}
 		setTimeout($SM.collectIncome, 1000);
 
-		Notifications.notify(Room, _("the room is {0}", $SM.get('game.temperature.text')));
-		Notifications.notify(Room, _("the fire is {0}", $SM.get('game.fire.text')));
+		Notifications.notify(Room, _("the room is {0}", Room.TempEnum.fromInt($SM.get('game.temperature.value')).text));
+		Notifications.notify(Room, _("the fire is {0}", Room.FireEnum.fromInt($SM.get('game.fire.value')).text));
 	},
 	
 	options: {}, // Nothing for now
@@ -549,8 +549,8 @@ var Room = {
 	onArrival: function(transition_diff) {
 		Room.setTitle();
 		if(Room.changed) {
-			Notifications.notify(Room, _("the fire is {0}", $SM.get('game.fire.text')));
-			Notifications.notify(Room, _("the room is {0}", $SM.get('game.temperature.text')));
+			Notifications.notify(Room, _("the fire is {0}", Room.FireEnum.fromInt($SM.get('game.fire.value')).text));
+			Notifications.notify(Room, _("the room is {0}", Room.TempEnum.fromInt($SM.get('game.temperature.value')).text));
 			Room.changed = false;
 		}
 		if($SM.get('game.builder.level') == 3) {
@@ -667,7 +667,7 @@ var Room = {
 		if(Engine.activeModule != Room) {
 			Room.changed = true;
 		}
-		Notifications.notify(Room, _("the fire is {0}", $SM.get('game.fire.text')), true);
+		Notifications.notify(Room, _("the fire is {0}", Room.FireEnum.fromInt($SM.get('game.fire.value')).text), true);
 		if($SM.get('game.fire.value') > 1 && $SM.get('game.builder.level') < 0) {
 			$SM.set('game.builder.level', 0);
 			Notifications.notify(Room, _("the light from the fire spills from the windows, out into the dark"));
@@ -698,11 +698,11 @@ var Room = {
 		var old = $SM.get('game.temperature.value');
 		if($SM.get('game.temperature.value') > 0 && $SM.get('game.temperature.value') > $SM.get('game.fire.value')) {
 			$SM.set('game.temperature',Room.TempEnum.fromInt($SM.get('game.temperature.value') - 1));
-			Notifications.notify(Room, _("the room is {0}" , $SM.get('game.temperature.text')), true);
+			Notifications.notify(Room, _("the room is {0}" , Room.TempEnum.fromInt($SM.get('game.temperature.value')).text), true);
 		}
 		if($SM.get('game.temperature.value') < 4 && $SM.get('game.temperature.value') < $SM.get('game.fire.value')) {
 			$SM.set('game.temperature', Room.TempEnum.fromInt($SM.get('game.temperature.value') + 1));
-			Notifications.notify(Room, _("the room is {0}" , $SM.get('game.temperature.text')), true);
+			Notifications.notify(Room, _("the room is {0}" , Room.TempEnum.fromInt($SM.get('game.temperature.value')).text), true);
 		}
 		if($SM.get('game.temperature.value') != old) {
 			Room.changed = true;
