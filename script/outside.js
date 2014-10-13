@@ -415,7 +415,7 @@ var Outside = {
 				Outside.updateVillageRow(k, $SM.get('game.buildings["'+k+'"]'), village);
 			}
 		}
-		
+		/// TRANSLATORS : pop is short for population.
 		population.text(_('pop ') + $SM.get('game.population') + '/' + this.getMaxPopulation());
 		
 		var hasPeeps;

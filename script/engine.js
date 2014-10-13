@@ -20,6 +20,7 @@
 			'boxer': {
 				name: _('boxer'),
 				desc: _('punches do more damage'),
+				/// TRANSLATORS : means with more force.
 				notify: _('learned to throw punches with purpose')
 			},
 			'martial artist': {
@@ -28,6 +29,7 @@
 				notify: _('learned to fight quite effectively without weapons')
 			},
 			'unarmed master': {
+				/// TRANSLATORS : master of unarmed combat
 				name: _('unarmed master'),
 				desc: _('punch twice as fast, and with even more force'),
 				notify: _('learned to strike faster without weapons')
