@@ -198,6 +198,7 @@ Events.Setpieces = {
 				text: [
 					_('the body of a wanderer lies in a small cavern.'),
 					_("rot's been to work on it, and some of the pieces are missing."),
+                    /// TRANSLATORS : 'it' is a rotting wanderes body
 					_("can't tell what left it here.")
 				],
 				loot: {
@@ -1672,6 +1673,7 @@ Events.Setpieces = {
 			'c4': {
 				text: [
 					_('looks like a camp of sorts up ahead.'),
+                    /// TRANSLATORS : chainlink is a type of metal fence.
 					_('rusted chainlink is pulled across an alleyway.'),
 					_('fires burn in the courtyard beyond.')
 				],
@@ -1723,6 +1725,7 @@ Events.Setpieces = {
 			
 			'c7': {
 				text: [
+                    /// TRANSLATORS : squatters occupie abandoned dwellings they don't own.
 					_('more squatters are crowding around now.'),
 					_('someone throws a stone.')
 				],
@@ -2396,6 +2399,7 @@ Events.Setpieces = {
 			
 			'end3': {
 				text: [
+                    /// TRANSLATORS : a platform in the subway
 					_('the tunnel opens up at another platform.'),
 					_('the walls are scorched from an old battle.'),
 					_('bodies and supplies from both sides litter the ground.')
@@ -2837,6 +2841,7 @@ Events.Setpieces = {
 			
 			'end14': {
 				text: [
+                    /// TRANSLATORS : warped means extremely disfigured.
 					_('the warped man lies dead.'),
 					_('the operating theatre has a lot of curious equipment.')
 				],
@@ -3523,6 +3528,7 @@ Events.Setpieces = {
 					_('a destroyed village lies in the dust.'),
 					_('charred bodies litter the ground.')
 				],
+                /// TRANSLATORS : tang = strong metallic smell, wanderer afterburner = ships engines
 				notification: _('the metallic tang of wanderer afterburner hangs in the air.'),
 				buttons: {
 					'enter': {
