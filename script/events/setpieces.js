@@ -198,7 +198,7 @@ Events.Setpieces = {
 				text: [
 					_('the body of a wanderer lies in a small cavern.'),
 					_("rot's been to work on it, and some of the pieces are missing."),
-                    /// TRANSLATORS : 'it' is a rotting wanderes body
+                    /// TRANSLATORS : 'it' is a rotting wanderer's body
 					_("can't tell what left it here.")
 				],
 				loot: {
@@ -1725,7 +1725,7 @@ Events.Setpieces = {
 			
 			'c7': {
 				text: [
-                    /// TRANSLATORS : squatters occupie abandoned dwellings they don't own.
+                    /// TRANSLATORS : squatters occupy abandoned dwellings they don't own.
 					_('more squatters are crowding around now.'),
 					_('someone throws a stone.')
 				],
@@ -3528,7 +3528,7 @@ Events.Setpieces = {
 					_('a destroyed village lies in the dust.'),
 					_('charred bodies litter the ground.')
 				],
-                /// TRANSLATORS : tang = strong metallic smell, wanderer afterburner = ships engines
+                /// TRANSLATORS : tang = strong metallic smell, wanderer afterburner = ship's engines
 				notification: _('the metallic tang of wanderer afterburner hangs in the air.'),
 				buttons: {
 					'enter': {
