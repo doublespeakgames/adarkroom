@@ -9,12 +9,12 @@ A Minimalist Text Adventure Game
   [Chinese](http://adarkroom.doublespeakgames.com/?lang=cn) |
   [French](http://adarkroom.doublespeakgames.com/?lang=fr)  |
   [German](http://adarkroom.doublespeakgames.com/?lang=de)  |
+  [Polish](http://adarkroom.doublespeakgames.com/?lang=pl) |
   [Russian](http://adarkroom.doublespeakgames.com/?lang=ru) |
   [Spanish](http://adarkroom.doublespeakgames.com/?lang=es) |
   [Swedish](http://adarkroom.doublespeakgames.com/?lang=sv) |
-  [Ukrainian](http://adarkroom.doublespeakgames.com/?lang=uk) |
-  [Polish](http://adarkroom.doublespeakgames.com/?lang=pl) |
-  [Turkish](http://adarkroom.doublespeakgames.com/?lang=tr)
+  [Turkish](http://adarkroom.doublespeakgames.com/?lang=tr) |
+  [Ukrainian](http://adarkroom.doublespeakgames.com/?lang=uk)
 ]
 
 
