@@ -56,7 +56,7 @@ windows:
   poedit
 
 - ubuntu:
-	pybabel extract -F babel.cfg script > lang/adarkroom.pot
+	pybabel extract -F babel.cfg -c "TRANSLATORS" script > lang/adarkroom.pot
   windows:
 	use poedit
 	Use menu "Cataloge"-> "New Catalog from POT file..."
@@ -101,7 +101,7 @@ To update from source without pot file need:
   *.js
 
   Parser command:
-  xgettext --language=JavaScript --force-po -o %o %C %K %F
+  xgettext --language=JavaScript --force-po --add-comments=TRANSLATORS -o %o %C %K %F
 
   Item in Keyword List:
   -k%k
