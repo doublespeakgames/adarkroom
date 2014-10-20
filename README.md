@@ -4,7 +4,6 @@ A Minimalist Text Adventure Game
 
 
   - Awake. Head throbbing. Vision blurry. Come light the fire.
-  - #1 Game *overall* in the US, UK, Australia, Singapore and Canada. Ranked as one of the top 10 games in 17 countries worldwide.
 
 [![adr logo](http://i.imgur.com/rmzPxrY.png)](http://adarkroom.doublespeakgames.com/)
 
