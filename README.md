@@ -5,8 +5,6 @@ A Minimalist Text Adventure Game
 
   - Awake. Head throbbing. Vision blurry. Come light the fire.
 
-[![adr logo](http://i.imgur.com/rmzPxrY.png)](http://adarkroom.doublespeakgames.com/)
-
 [![store](http://i.imgur.com/M6jlJQH.png)](https://itunes.apple.com/us/app/a-dark-room/id736683061)
 
 
