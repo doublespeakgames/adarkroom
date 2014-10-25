@@ -9,5 +9,6 @@ var langs = {
 	'ru':'русский',
 	'sv':'svenska',
 	'pl':'polski',
-	'tr':'türkçe'
+	'tr':'türkçe',
+	'kr':'한국어'
 };
