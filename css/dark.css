@@ -114,7 +114,9 @@ div.supplyItem {
 }
 
 div.button {
-	border: 1px solid #EEE;
+	border: 1px solid black;
+	background: burlywood;
+	color:white;
 }
 
 div.button.disabled, div.button.disabled:hover {
