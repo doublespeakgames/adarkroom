@@ -141,7 +141,9 @@ div.row_key {
 div.row_val {
 	float: right;
 }
-
+.row_val {
+color: rgb(164, 101, 109);
+}
 /* Notifications */
 
 div#notifications {
@@ -208,9 +210,10 @@ div.button div.cooldown {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	z-index: -1;
+	z-index: 1;
 	height: 100%;
-	background-color: #DDDDDD;
+	background-color: darkorange;
+	opacity:0.5;
 }
 
 /* Up/Down buttons. They're complicated! */
