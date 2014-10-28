@@ -1,14 +1,13 @@
 var langs = {
-	'en':'english',
-	'fr':'français',
-	'de':'deutsch',
 	'cn':'简体中文',
+	'de':'deutsch',
+	'en':'english',
 	'es': 'español',
-	'uk':'українська',
-	//'jp':'日本語',
+	'fr':'français',
+	'kr':'한국어',
+	'pl':'polski',
 	'ru':'русский',
 	'sv':'svenska',
-	'pl':'polski',
 	'tr':'türkçe',
-	'kr':'한국어'
+	'uk':'українська'
 };
