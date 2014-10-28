@@ -65,33 +65,49 @@ div#header {
 	margin-left: 20px;
 }
 
-.select-wrap {
-	display: inline-block;
-	overflow: hidden;
+.customSelect {
 	height: 20px;
 }
 
-select.menuBtn {
-	color: #666;
-	border: none;
-	cursor: pointer;
+span.customSelectOptions {
 	margin: 0;
-	background: transparent;
-	-webkit-appearance: none;
-	-moz-appearance:window;
+	width: 80px;
 }
 
-select.menuBtn:hover {
+.customSelectOptions > ul {
+	max-height: 20px;
+	width: 80px;
+	overflow: hidden;
+	-webkit-transition: max-height 1s;
+	transition: max-height 1s;
+	padding: 0;
+	margin: 0;
+	bottom: 0;
+	position: absolute;
+	right: 0;
+}
+
+.customSelectOptions > ul:hover {
+	max-height: 400px;
+}
+
+.customSelectOptions > ul > li {
+	padding: 0 0 3px 0;
+	list-style-type: none;
+	height: 20px;
+}
+
+.customSelectOptions > ul > li:last-child {
+	padding: 0;
+}
+
+.customSelectOptions > ul > li:hover {
 	text-decoration: underline;
 }
 
-select.menuBtn:focus {
-	outline-width: 0;
-}
-
-select.menuBtn:-moz-focusring {
-	color: transparent;
-	text-shadow: 0 0 0 #000;
+.customSelectOptions > ul > li:first-child:hover {
+	cursor: default;
+	text-decoration: none;
 }
 
 .menu span:hover {
