@@ -116,17 +116,25 @@
 				.appendTo('body');
 	
 			if(typeof langs != 'undefined'){
-				var selectWrap = $('<span>')
-					.addClass('select-wrap')
-					.appendTo(menu);
-				var select = $('<select>')
+				var customSelect = $('<span>')
+					.addClass('customSelect')
 					.addClass('menuBtn')
-					.append($('<option>').text("language."))
-					.change(Engine.switchLanguage)
-					.appendTo(selectWrap);
+					.appendTo(menu);
+				var options = $('<span>')
+					.addClass('customSelectOptions')
+					.appendTo(customSelect);
+				var optionsList = $('<ul>')
+					.appendTo(options);
+				$('<li>')
+					.text("language.")
+					.appendTo(optionsList);
 				
 				$.each(langs, function(name,display){
-					$('<option>').text(display).val(name).appendTo(select)
+					$('<li>')
+						.text(display)
+						.attr('data-language', name)
+						.on("click", function() { Engine.switchLanguage(this); })
+						.appendTo(optionsList);
 				});
 			}
 
@@ -660,7 +668,7 @@
 		},
 	
 		switchLanguage: function(dom){
-			var lang = $(this).val();
+			var lang = $(dom).data("language");
 			if(document.location.href.search(/[\?\&]lang=[a-z]+/) != -1){
 				document.location.href = document.location.href.replace( /([\?\&]lang=)([a-z]+)/gi , "$1"+lang );
 			}else{
