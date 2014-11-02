@@ -23,7 +23,7 @@ msgstr "陷阱"
 msgid ""
 "builder says she can make traps to catch any creatures might still be alive "
 "out there"
-msgstr "工人说她能制作可以捕获活的猎物的陷阱"
+msgstr "工匠说她能制作可以捕获活的猎物的陷阱"
 
 #: ../../script/room.js:22
 msgid "more traps to catch more creatures"
@@ -39,7 +39,7 @@ msgstr "小推车"
 
 #: ../../script/room.js:36
 msgid "builder says she can make a cart for carrying wood"
-msgstr "工人说她能制作运输木头的小推车"
+msgstr "工匠说她能制作运输木头的小推车"
 
 #: ../../script/room.js:37
 msgid "the rickety cart will carry more wood from the forest"
@@ -51,11 +51,11 @@ msgstr "小木屋"
 
 #: ../../script/room.js:49
 msgid "builder says there are more wanderers. says they'll work, too."
-msgstr "工人们说会有更多的流浪汉会加入我们."
+msgstr "工匠们说会有更多的流浪汉会加入我们. 他们也会帮忙干活"
 
 #: ../../script/room.js:50
 msgid "builder puts up a hut, out in the forest. says word will get around."
-msgstr "工人在森林里搭起一座木屋"
+msgstr "工匠在森林里搭起一座木屋, 说这件事很快就会传播出去。"
 
 #: ../../script/room.js:51
 msgid "no more room for huts."
@@ -84,7 +84,7 @@ msgstr "有了贸易栈你就能很灵活的调度物资"
 #: ../../script/room.js:80
 msgid ""
 "now the nomads have a place to set up shop, they might stick around a while"
-msgstr "游牧民族们可以有地方落脚了"
+msgstr "游牧民族们可以有地方落脚了, 他们可能会在这待一段时间"
 
 #: ../../script/room.js:90
 msgid "tannery"
@@ -92,7 +92,7 @@ msgstr "制革坊"
 
 #: ../../script/room.js:93
 msgid "builder says leather could be useful. says the villagers could make it."
-msgstr "工人说皮革很有用, 我们的村民能搞定."
+msgstr "工匠说皮革很有用, 我们的村民能搞定."
 
 #: ../../script/room.js:94
 msgid "tannery goes up quick, on the edge of the village"
@@ -105,11 +105,11 @@ msgstr "腌肉厂"
 #: ../../script/room.js:107
 msgid ""
 "should cure the meat, or it'll spoil. builder says she can fix something up."
-msgstr "工人说如果不腌制, 鲜肉很快就会腐烂, 她有办法."
+msgstr "工匠说如果不腌制, 鲜肉很快就会腐烂, 工匠说她有办法搞定."
 
 #: ../../script/room.js:108
 msgid "builder finishes the smokehouse. she looks hungry."
-msgstr "工人很快建成了腌制房, 很快就能吃到湖南腊肉了"
+msgstr "工匠很快建成了腌制房, 很快就能吃到湖南腊肉了"
 
 #: ../../script/room.js:118
 msgid "workshop"
@@ -117,11 +117,11 @@ msgstr "工具房"
 
 #: ../../script/room.js:121
 msgid "builder says she could make finer things, if she had the tools"
-msgstr "工人说如果有合适的工具, 她能做的更好"
+msgstr "工匠说如果有合适的工具, 她能做更高级的东西"
 
 #: ../../script/room.js:122
 msgid "workshop's finally ready. builder's excited to get to it"
-msgstr "工具间总算完工了, 工人兴奋极了"
+msgstr "工具间总算完工了, 工匠兴奋极了"
 
 #: ../../script/room.js:133
 msgid "steelworks"
@@ -129,7 +129,7 @@ msgstr "炼钢炉"
 
 #: ../../script/room.js:136
 msgid "builder says the villagers could make steel, given the tools"
-msgstr "工人说只要有合适的工具, 就可以炼钢"
+msgstr "工匠说只要有合适的工具, 就可以炼钢"
 
 #: ../../script/room.js:137
 msgid "a haze falls over the village as the steelworks fires up"
@@ -141,7 +141,7 @@ msgstr "兵工厂"
 
 #: ../../script/room.js:151
 msgid "builder says it'd be useful to have a steady source of bullets"
-msgstr "工人说稳定的武器和弹药供应是必要的"
+msgstr "工匠说稳定的武器和弹药供应是必要的"
 
 #: ../../script/room.js:152
 msgid "armoury's done, welcoming back the weapons of the past."
@@ -209,7 +209,7 @@ msgstr "大货车"
 
 #: ../../script/room.js:254
 msgid "the convoy can haul mostly everything"
-msgstr "超级大货车可以装载一切"
+msgstr "超级大货车几乎可以装任何东西"
 
 #: ../../script/room.js:264
 msgid "l armour"
@@ -269,7 +269,7 @@ msgstr "小黑屋"
 
 #: ../../script/room.js:497
 msgid "light fire"
-msgstr "点火"
+msgstr "生火"
 
 #: ../../script/room.js:507
 msgid "stoke fire"
@@ -288,11 +288,11 @@ msgstr "{0} 的火堆"
 msgid ""
 "the stranger is standing by the fire. she says she can help. says she builds "
 "things."
-msgstr "陌生人围坐在火堆旁, 她说她会帮忙建造建筑或者制造物件工具"
+msgstr "陌生人围坐在火堆旁, 她说她可以帮忙，她是个工匠"
 
 #: ../../script/room.js:579
 msgid "freezing"
-msgstr "极度深寒"
+msgstr "寒冷刺骨"
 
 #: ../../script/room.js:580
 msgid "cold"
@@ -308,7 +308,7 @@ msgstr "暖和"
 
 #: ../../script/room.js:583
 msgid "hot"
-msgstr "很热"
+msgstr "热"
 
 #: ../../script/room.js:595
 msgid "dead"
@@ -348,7 +348,7 @@ msgstr "火堆的光芒映过窗户射进了茫茫黑暗"
 
 #: ../../script/room.js:687
 msgid "builder stokes the fire"
-msgstr "工人给火堆添加木头"
+msgstr "工匠给火堆添加木头"
 
 #: ../../script/room.js:717
 msgid "the wind howls outside"
@@ -369,7 +369,7 @@ msgstr "陌生人冻得发抖并且胡言乱语不知所云."
 
 #: ../../script/room.js:736
 msgid "the stranger in the corner stops shivering. her breathing calms."
-msgstr "陌生人缩在墙角并不再发抖, 呼吸也平静下来了."
+msgstr "陌生人缩在墙角并不再发抖, 她呼吸也平静下来了."
 
 #: ../../script/room.js:890 ../../script/room.js:938
 msgid "not enough "
@@ -377,7 +377,7 @@ msgstr "不足"
 
 #: ../../script/room.js:910
 msgid "builder just shivers"
-msgstr "工人们冷得在发抖"
+msgstr "工匠们冷得在发抖"
 
 #: ../../script/events.js:126
 msgid "eat meat"
@@ -418,7 +418,7 @@ msgstr "学会了通臂拳"
 
 #: ../../script/engine.js:25
 msgid "martial artist"
-msgstr "金刚掌"
+msgstr "功夫家"
 
 #: ../../script/engine.js:26
 msgid "punches do even more damage."
@@ -430,7 +430,7 @@ msgstr "学会了金刚掌"
 
 #: ../../script/engine.js:30
 msgid "unarmed master"
-msgstr "降龙十八掌"
+msgstr "徒手搏击大师"
 
 #: ../../script/engine.js:31
 msgid "punch twice as fast, and with even more force"
@@ -442,7 +442,7 @@ msgstr "学会了降龙十八掌"
 
 #: ../../script/engine.js:35
 msgid "barbarian"
-msgstr "夺命连环剑"
+msgstr "野蛮人"
 
 #: ../../script/engine.js:36
 msgid "melee weapons deal more damage"
@@ -475,11 +475,11 @@ msgstr "两倍忍渴能力"
 
 #: ../../script/engine.js:47
 msgid "learned to love the dry air"
-msgstr "学习如何避免流失水分"
+msgstr "习得适应干燥空气"
 
 #: ../../script/engine.js:50
 msgid "evasive"
-msgstr "凌波微步"
+msgstr "闪避术"
 
 #: ../../script/engine.js:51
 msgid "dodge attacks more effectively"
@@ -491,7 +491,7 @@ msgstr "学会了凌波微步"
 
 #: ../../script/engine.js:55
 msgid "precise"
-msgstr "小李飞刀"
+msgstr "精准术"
 
 # description pour la précision ...
 #: ../../script/engine.js:56
@@ -504,7 +504,7 @@ msgstr "提高了命中率"
 
 #: ../../script/engine.js:60
 msgid "scout"
-msgstr "千里眼"
+msgstr "寻踪术"
 
 #: ../../script/engine.js:61
 msgid "see farther"
@@ -512,7 +512,7 @@ msgstr "扩大视野"
 
 #: ../../script/engine.js:62
 msgid "learned to look ahead"
-msgstr "看的更远了"
+msgstr "学会向前看"
 
 #: ../../script/engine.js:65
 msgid "stealthy"
@@ -528,7 +528,7 @@ msgstr "降低遇敌概率"
 
 #: ../../script/engine.js:70
 msgid "gastronome"
-msgstr "九阳神功"
+msgstr "生存术"
 
 #: ../../script/engine.js:71
 msgid "restore more health when eating"
@@ -536,7 +536,7 @@ msgstr "进食恢复hp加强"
 
 #: ../../script/engine.js:72
 msgid "learned to make the most of food"
-msgstr "学会了九阳神功"
+msgstr "学会了充分利用食物"
 
 #: ../../script/engine.js:114 ../../script/engine.js:408
 msgid "lights off."
@@ -672,7 +672,7 @@ msgstr "木头"
 
 #: ../../script/localization.js:3
 msgid "builder"
-msgstr "工人"
+msgstr "工匠"
 
 #: ../../script/localization.js:3
 msgid "teeth"
@@ -764,7 +764,7 @@ msgstr "军械员"
 
 #: ../../script/localization.js:7 ../../script/outside.js:77
 msgid "steelworker"
-msgstr "炼钢工人"
+msgstr "炼钢工匠"
 
 #: ../../script/localization.js:7
 msgid "bait"
@@ -1115,7 +1115,7 @@ msgstr "{0}:{1}"
 
 #: ../../script/world.js:343
 msgid "dangerous to be this far from the village without proper protection"
-msgstr "离村子很远了, 这样极其危险"
+msgstr "离村子很远了, 没有适当保护的情况下很危险"
 
 #: ../../script/world.js:345
 msgid "safer here"
@@ -1127,7 +1127,7 @@ msgstr "肉吃完了"
 
 #: ../../script/world.js:450
 msgid "starvation sets in"
-msgstr "人是铁饭是钢, 饥饿如山一般压来"
+msgstr "饥饿袭来"
 
 #: ../../script/world.js:475
 msgid "there is no more water"
@@ -1188,7 +1188,7 @@ msgstr "一个荒芜的世界"
 
 #: ../../script/outside.js:5
 msgid "Outside"
-msgstr "外面"
+msgstr "探险"
 
 #: ../../script/outside.js:100
 msgid "scraps of fur"
@@ -1224,7 +1224,7 @@ msgstr "收集木头"
 
 #: ../../script/outside.js:183
 msgid "a stranger arrives in the night"
-msgstr "一个陌生人在夜晚到来"
+msgstr "一个陌生人在夜色中到来"
 
 #: ../../script/outside.js:185
 msgid "a weathered family takes up in one of the huts."
@@ -1236,11 +1236,11 @@ msgstr "一小群人抵达了, 个个瘦骨嶙峋"
 
 #: ../../script/outside.js:189
 msgid "a convoy lurches in, equal parts worry and hope."
-msgstr "一大队人群抵达, 带来了磨难与希望"
+msgstr "一大队人群抵达, 带来了担忧与希望"
 
 #: ../../script/outside.js:191
 msgid "the town's booming. word does get around."
-msgstr "小村已成为小镇, 热闹非凡, 言语无法形容"
+msgstr "小村已成为小镇, 热闹非凡, 消息传播开去"
 
 #: ../../script/outside.js:510
 msgid "check traps"
@@ -1276,7 +1276,7 @@ msgstr "干枯的灌木和树枝把树林的地面弄得一团糟"
 
 #: ../../script/outside.js:587
 msgid "the traps contain "
-msgstr "陷阱可能会带来"
+msgstr "陷阱里发现了"
 
 #: ../../script/outside.js:592
 msgid " and "
@@ -1393,11 +1393,11 @@ msgstr "调查"
 #: ../../script/events/room.js:69 ../../script/events/room.js:119
 #: ../../script/events/outside.js:29
 msgid "ignore them"
-msgstr "不理他"
+msgstr "不理他们"
 
 #: ../../script/events/room.js:76
 msgid "vague shapes move, just out of sight."
-msgstr "模糊的身影移动着进入了黑暗."
+msgstr "模糊的身影在视野外移动着."
 
 #: ../../script/events/room.js:77
 msgid "the sounds stop."
@@ -1422,7 +1422,7 @@ msgstr "有螅螅砕砕的声音从储藏室内传来."
 
 #: ../../script/events/room.js:110
 msgid "something's in there."
-msgstr "一定有什么东西在那."
+msgstr "有什么东西在那."
 
 #: ../../script/events/room.js:112
 msgid "something's in the store room"
@@ -1473,7 +1473,7 @@ msgstr "赏他100"
 #: ../../script/events/room.js:210 ../../script/events/room.js:281
 #: ../../script/events/room.js:458
 msgid "turn him away"
-msgstr "滚蛋"
+msgstr "让他离开"
 
 #: ../../script/events/room.js:218 ../../script/events/room.js:231
 #: ../../script/events/room.js:244
@@ -1504,7 +1504,7 @@ msgstr "一个流浪汉带着一个空筐子来到了木屋, 说如果能给她�
 
 #: ../../script/events/room.js:266
 msgid "builder's not sure he's to be trusted."
-msgstr "不知道他是否值得信任."
+msgstr "工匠不知道他是否值得信任."
 
 #: ../../script/events/room.js:268 ../../script/events/room.js:338
 msgid "a mysterious wanderer arrives"
@@ -1530,7 +1530,7 @@ msgstr "一个流浪女带着一个空筐子来到了木屋, 说如果能给她�
 
 #: ../../script/events/room.js:336
 msgid "builder's not sure she's to be trusted."
-msgstr "不知道她是否值得信任."
+msgstr "工匠不知道她是否值得信任."
 
 #: ../../script/events/room.js:351
 msgid "turn her away"
@@ -1566,7 +1566,7 @@ msgstr "购买地图"
 
 #: ../../script/events/room.js:413
 msgid "the map uncovers a bit of the world"
-msgstr "地图包含大地图的一角"
+msgstr "地图展现了世界的一角"
 
 #: ../../script/events/room.js:417
 msgid "learn scouting"
@@ -1824,7 +1824,7 @@ msgstr "尸体高度腐烂, 一些肢体已经不见了."
 
 #: ../../script/events/setpieces.js:196
 msgid "can't tell what left it here."
-msgstr "鬼知道还剩下些什么有用东西."
+msgstr "很难说这里还剩下些什么东西."
 
 #: ../../script/events/setpieces.js:233
 msgid "the torch sputters and dies in the damp air"
@@ -1868,17 +1868,17 @@ msgstr "一个沙漠小镇"
 
 #: ../../script/events/setpieces.js:507
 msgid "a small suburb lays ahead, empty houses scorched and peeling."
-msgstr "一个小型社区坐落在前方, 房子都烧焦残破了."
+msgstr "一个小村落坐落在前方, 房子都烧焦残破了."
 
 #: ../../script/events/setpieces.js:508
 msgid ""
 "broken streetlights stand, rusting. light hasn't graced this place in a long "
 "time."
-msgstr "路灯都破烂锈迹斑斑, 这个地方失去光明很旧了."
+msgstr "路灯都破烂锈迹斑斑, 这个地方已经很久没有光亮了."
 
 #: ../../script/events/setpieces.js:510
 msgid "the town lies abandoned, its citizens long dead"
-msgstr "小镇废弃在前方, 里面的居民已经死了很久了"
+msgstr "小镇废弃在前方, 里面的居民早就死了"
 
 #: ../../script/events/setpieces.js:513 ../../script/events/setpieces.js:1201
 msgid "explore"
@@ -1906,7 +1906,7 @@ msgstr "大门吱吱不停的摇曳在残风中."
 #: ../../script/events/setpieces.js:1103 ../../script/events/setpieces.js:1146
 #: ../../script/events/setpieces.js:1167 ../../script/events/setpieces.js:1182
 msgid "leave town"
-msgstr "离开"
+msgstr "离开小镇"
 
 #: ../../script/events/setpieces.js:566
 msgid "ambushed on the street."
@@ -1927,7 +1927,7 @@ msgstr "生锈的锁柜里面有一些供给品."
 
 #: ../../script/events/setpieces.js:657
 msgid "a scavenger waits just inside the door."
-msgstr "一个清道夫就在门里面."
+msgstr "一个拾荒者就在门里面."
 
 #: ../../script/events/setpieces.js:689
 msgid "a beast stands alone in an overgrown park."
@@ -1973,11 +1973,11 @@ msgstr "通过噪声可以感觉到另外一头野兽, 在树林里面."
 
 #: ../../script/events/setpieces.js:896
 msgid "something's causing a commotion a ways down the road."
-msgstr "有什么事情在下边的路上引起了骚动."
+msgstr "有什么东西在下边的路上引起了骚动."
 
 #: ../../script/events/setpieces.js:897
 msgid "a fight, maybe."
-msgstr "可能是战斗."
+msgstr "可能是一场战斗."
 
 #: ../../script/events/setpieces.js:912
 msgid ""
@@ -1990,15 +1990,15 @@ msgstr "看不懂写的什么."
 
 #: ../../script/events/setpieces.js:958
 msgid "a panicked scavenger bursts through the door, screaming."
-msgstr "一个惊慌的清道夫尖叫着闯过了大门."
+msgstr "一个惊慌的拾荒者尖叫着闯过了大门."
 
 #: ../../script/events/setpieces.js:995
 msgid "a man stands over a dead wanderer. notices he's not alone."
-msgstr "一个男人站在死去的流浪汉边上, 意识到他不是唯一的人类."
+msgstr "一个男人站在死去的流浪汉边上, 意识到他不是一个人."
 
 #: ../../script/events/setpieces.js:1009
 msgid "scavenger had a small camp in the school."
-msgstr "清道夫有一个小营地在学校里面."
+msgstr "拾荒者有一个小营地在学校里面."
 
 #: ../../script/events/setpieces.js:1010
 msgid "collected scraps spread across the floor like they fell from heaven."
@@ -2006,7 +2006,7 @@ msgstr "收集的各种垃圾散落在地面上, 就好像是从天上下下来�
 
 #: ../../script/events/setpieces.js:1051
 msgid "scavenger'd been looking for supplies in here, it seems."
-msgstr "清道夫似乎一直在寻找各种物资."
+msgstr "拾荒者似乎一直在寻找各种物资."
 
 #: ../../script/events/setpieces.js:1052
 msgid "a shame to let what he'd found go to waste."
@@ -2171,7 +2171,7 @@ msgstr "空荡的走廊."
 
 #: ../../script/events/setpieces.js:1465
 msgid "the place has been swept clean by scavengers."
-msgstr "清道夫已经把这搜刮干净了."
+msgstr "拾荒者已经把这搜刮干净了."
 
 #: ../../script/events/setpieces.js:1479
 msgid "an old man bursts through a door, wielding a scalpel."
@@ -2247,7 +2247,7 @@ msgstr "很多肉条晒在路边."
 
 #: ../../script/events/setpieces.js:1726
 msgid "the people back away, avoiding eye contact."
-msgstr "人们纷纷后退, 躲闪着眼光."
+msgstr "人们纷纷后退, 回避着目光接触."
 
 #: ../../script/events/setpieces.js:1749
 msgid "someone has locked and barricaded the door to this operating theatre."
@@ -2275,7 +2275,7 @@ msgstr "这里碎片密布."
 
 #: ../../script/events/setpieces.js:1895
 msgid "maybe some useful stuff in the rubble."
-msgstr "可能在碎片中会有一些有用的东西."
+msgstr "在碎片中可能会有一些有用的东西."
 
 #: ../../script/events/setpieces.js:1932
 msgid "a swarm of rats rushes up the tunnel."
@@ -2307,11 +2307,11 @@ msgstr "有个人坚守在小木屋的门口."
 
 #: ../../script/events/setpieces.js:2177
 msgid "behind the door, a deformed figure awakes and attacks."
-msgstr "在门后的一个畸形人进行攻击."
+msgstr "在门后的一个畸形人发起了攻击."
 
 #: ../../script/events/setpieces.js:2216
 msgid "as soon as the door is open a little bit, hundreds of tentacles erupt."
-msgstr "门只要开了一点, 几百个触手就涌过来."
+msgstr "门一开了一点, 几百个触手就涌过来."
 
 #: ../../script/events/setpieces.js:2242
 msgid "bird must have liked shiney things."
@@ -2327,7 +2327,7 @@ msgstr "没什么东西了."
 
 #: ../../script/events/setpieces.js:2277
 msgid "scavengers must have gotten to this place already."
-msgstr "清道夫已经来过这里了."
+msgstr "拾荒者已经来过这里了."
 
 #: ../../script/events/setpieces.js:2305
 msgid "the tunnel opens up at another platform."
@@ -2339,7 +2339,7 @@ msgstr "残破的墙壁."
 
 #: ../../script/events/setpieces.js:2307
 msgid "bodies and supplies from both sides litter the ground."
-msgstr "肢体和供给散落在墙壁两旁."
+msgstr "双方的尸体和物资散落在墙壁两旁."
 
 #: ../../script/events/setpieces.js:2351
 msgid "the small military outpost is well supplied."
@@ -2361,11 +2361,11 @@ msgstr "搜索尸体会得到一些物资."
 
 #: ../../script/events/setpieces.js:2387
 msgid "more soldiers will be on their way."
-msgstr "路上会遇到更多的尸体的."
+msgstr "更多的士兵在赶来的路上."
 
 #: ../../script/events/setpieces.js:2388
 msgid "time to move on."
-msgstr "该离开了."
+msgstr "是时候离开了."
 
 #: ../../script/events/setpieces.js:2426
 msgid "the small settlement has clearly been burning a while."
@@ -2443,7 +2443,7 @@ msgstr "里面到处都是遇难者的尸体."
 
 #: ../../script/events/setpieces.js:2737
 msgid "the warped man lies dead."
-msgstr "扭曲的男人死了."
+msgstr "扭曲的人死了."
 
 #: ../../script/events/setpieces.js:2738
 msgid "the operating theatre has a lot of curious equipment."
@@ -2471,11 +2471,11 @@ msgstr "老房子好比是一座对时代的纪念碑一般"
 
 #: ../../script/events/setpieces.js:2845
 msgid "the house is abandoned, but not yet picked over."
-msgstr "房子虽然被废弃了, 但是还有一些东西."
+msgstr "房子虽然被废弃了, 但没被搜刮过."
 
 #: ../../script/events/setpieces.js:2846
 msgid "still a few drops of water in the old well."
-msgstr "水井里面依旧有水."
+msgstr "水井里面依旧有一些水."
 
 #: ../../script/events/setpieces.js:2879
 msgid "the house has been ransacked."
@@ -2495,7 +2495,7 @@ msgstr "遗落战场"
 
 #: ../../script/events/setpieces.js:2942
 msgid "a battle was fought here, long ago."
-msgstr "很久以前的大战."
+msgstr "很久以前这里有场大战."
 
 #: ../../script/events/setpieces.js:2943
 msgid ""
@@ -2512,7 +2512,7 @@ msgstr "一个巨大的深坑切入地表."
 
 #: ../../script/events/setpieces.js:2995
 msgid "they took what they came for, and left."
-msgstr "他们拿走所需,拍拍屁股走了."
+msgstr "他们拿走他们想要的然后走了."
 
 #: ../../script/events/setpieces.js:2996
 msgid ""
@@ -2531,11 +2531,11 @@ msgstr "尘土和灰烬之下流露出熟悉的各种曲线."
 
 #: ../../script/events/setpieces.js:3028
 msgid "lucky that the natives can't work the mechanisms."
-msgstr "很幸运当地人不会机械."
+msgstr "很幸运当地人不懂机械."
 
 #: ../../script/events/setpieces.js:3029
 msgid "with a little effort, it might fly again."
-msgstr "飞船可以被修复."
+msgstr "只要一点小小的修复，它或许可以重新飞起来."
 
 #: ../../script/events/setpieces.js:3033
 msgid "salvage"
@@ -2609,7 +2609,7 @@ msgstr "这座老矿坑没有被遗弃"
 
 #: ../../script/events/setpieces.js:3224 ../../script/events/setpieces.js:3256
 msgid "a man joins the fight"
-msgstr "一个人加入战斗攻击"
+msgstr "一个人加入了战斗"
 
 #: ../../script/events/setpieces.js:3293
 msgid "only the chief remains."
@@ -2629,7 +2629,7 @@ msgstr "一座铁矿"
 
 #: ../../script/events/setpieces.js:3326
 msgid "an old iron mine sits here, tools abandoned and left to rust."
-msgstr "一个老矿坑在哪, 生锈的工具被乱丢."
+msgstr "一个老铁矿坑, 工具被乱丢任其朽烂."
 
 #: ../../script/events/setpieces.js:3327
 msgid ""
@@ -2663,7 +2663,7 @@ msgstr "矿坑解除危险了"
 
 #: ../../script/events/setpieces.js:3402
 msgid "a destroyed village lies in the dust."
-msgstr "一个毁灭的村庄"
+msgstr "一个被毁灭的村庄，只剩下废墟"
 
 #: ../../script/events/setpieces.js:3403
 msgid "charred bodies litter the ground."
@@ -2675,7 +2675,7 @@ msgstr "破烂的尸体到处都是. 被烧焦的尸体挂在空中."
 
 #: ../../script/events/setpieces.js:3419
 msgid "a shack stands at the center of the village."
-msgstr "一个木屋处理在村子中心."
+msgstr "一个木屋坐落在村子中心."
 
 #: ../../script/events/setpieces.js:3420
 msgid "there are still supplies inside."
@@ -2687,7 +2687,7 @@ msgstr "带走"
 
 #: ../../script/events/setpieces.js:3431
 msgid "all the work of a previous generation is here."
-msgstr "前代人的痕迹就在这里了."
+msgstr "上一代人的痕迹都留了下来."
 
 #: ../../script/events/setpieces.js:3432
 msgid "ripe for the picking."
@@ -2719,7 +2719,7 @@ msgstr "落魄的人"
 
 #: ../../script/events/encounters.js:53
 msgid "the gaunt man is dead"
-msgstr "落魄的人已经被打败"
+msgstr "落魄的人死了"
 
 #: ../../script/events/encounters.js:76
 msgid "a gaunt man approaches, a crazed look in his eye"
@@ -2751,11 +2751,11 @@ msgstr "发抖的人"
 
 #: ../../script/events/encounters.js:128
 msgid "the shivering man is dead"
-msgstr "不能再得瑟了"
+msgstr "发抖的人死掉了"
 
 #: ../../script/events/encounters.js:156
 msgid "a shivering man approaches and attacks with surprising strength"
-msgstr "一个瑟瑟发抖的人接近中, 看上去力量无穷"
+msgstr "一个瑟瑟发抖的人接近中, 看上去出奇的有利"
 
 #: ../../script/events/encounters.js:161
 msgid "A Man-Eater"
@@ -2775,19 +2775,19 @@ msgstr "一个食人族接近了, 爪子上鲜血淋漓"
 
 #: ../../script/events/encounters.js:198
 msgid "A Scavenger"
-msgstr "一个清道夫"
+msgstr "一个拾荒者"
 
 #: ../../script/events/encounters.js:206
 msgid "scavenger"
-msgstr "清道夫"
+msgstr "拾荒者"
 
 #: ../../script/events/encounters.js:207
 msgid "the scavenger is dead"
-msgstr "清道夫被消灭了"
+msgstr "拾荒者被消灭了"
 
 #: ../../script/events/encounters.js:235
 msgid "a scavenger draws close, hoping for an easy score"
-msgstr "一个清道夫快速接近中, 想要偷袭"
+msgstr "一个拾荒者快速接近中, 想要偷袭"
 
 #: ../../script/events/encounters.js:240
 msgid "A Huge Lizard"
@@ -2851,7 +2851,7 @@ msgstr "狙击手被灭"
 
 #: ../../script/events/encounters.js:396
 msgid "a shot rings out, from somewhere in the long grass"
-msgstr "一声枪响, 远远得传来"
+msgstr "一声枪响从长草中传来"
 
 #: ../../script/events/outside.js:6
 msgid "A Ruined Trap"
@@ -2863,7 +2863,7 @@ msgstr "一些陷阱已经严重损毁."
 
 #: ../../script/events/outside.js:14
 msgid "large prints lead away, into the forest."
-msgstr "巨大的足印导向森林."
+msgstr "巨大的足印延伸进入森林."
 
 #: ../../script/events/outside.js:22
 msgid "some traps have been destroyed"
@@ -2894,7 +2894,7 @@ msgstr "在离开村子的不远处发现了一只巨大的野兽, 它的皮毛�
 
 #: ../../script/events/outside.js:49
 msgid "it puts up little resistance before the knife."
-msgstr "在武器面前, 它已经没什么抵抗力了."
+msgstr "在武器面前, 它只做了微弱的抵抗."
 
 #: ../../script/events/outside.js:67
 msgid "Sickness"
@@ -2926,7 +2926,7 @@ msgstr "疾病蔓延在整个村庄."
 
 #: ../../script/events/outside.js:106
 msgid "the days are spent with burials."
-msgstr "天天都有人死去."
+msgstr "花了几天掩埋尸体."
 
 #: ../../script/events/outside.js:107 ../../script/events/outside.js:166
 msgid "the nights are rent with screams."
@@ -2958,7 +2958,7 @@ msgstr "我们只失去了几个人."
 
 #: ../../script/events/outside.js:150
 msgid "the rest bury them."
-msgstr "我们埋葬了这些死者."
+msgstr "幸存下的埋葬了这些死者."
 
 #: ../../script/events/outside.js:165
 msgid "the plague rips through the village."
@@ -2966,7 +2966,7 @@ msgstr "瘟疫席卷了整个村庄."
 
 #: ../../script/events/outside.js:167
 msgid "the only hope is a quick death."
-msgstr "死亡也许是更好的归宿."
+msgstr "唯一的希望是能死得利落点."
 
 #: ../../script/events/outside.js:184
 msgid "A Beast Attack"
@@ -3006,7 +3006,7 @@ msgstr "小偷"
 
 #: ../../script/events/global.js:13
 msgid "the villagers haul a filthy man out of the store room."
-msgstr "村名们从储藏室拖出了一个肮脏的家伙."
+msgstr "村民们从储藏室拖出了一个肮脏的家伙."
 
 #: ../../script/events/global.js:14
 msgid "say his folk have been skimming the supplies."
