@@ -84,7 +84,7 @@ msgstr "有了贸易栈你就能很灵活的调度物资"
 #: ../../script/room.js:80
 msgid ""
 "now the nomads have a place to set up shop, they might stick around a while"
-msgstr "游牧民族们可以有地方落脚了, 他们可能会在这待一段时间"
+msgstr "游牧民族们可以有地方落脚了, 他们可能会在这待一会"
 
 #: ../../script/room.js:90
 msgid "tannery"
