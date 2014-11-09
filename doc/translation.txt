@@ -22,7 +22,7 @@ windows:
    https://www.python.org/download/windows/
 
 
-- create an new directory lang/{new_language}
+- create an new directory lang/{new_language_code}
 - create the new po file:
   ubuntu:
 	msginit --locale {locale for new language eg: en_US} -i lang/adarkroom.pot -o lang/{new_language}/strings.po
