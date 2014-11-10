@@ -22,12 +22,14 @@ windows:
    https://www.python.org/download/windows/
 
 
-- create an new directory lang/{new_language_code}
+- create a new directory lang/{new_language_code}
+- download the file adarkroom.pot in the lang folder as translation template
 - create the new po file:
   ubuntu:
 	msginit --locale {locale for new language eg: en_US} -i lang/adarkroom.pot -o lang/{new_language}/strings.po
   windows:
-
+        open application interface > File > New... > [select language for translation] > Save as... > lang/{new_language_code}/strings.po
+        [update from POT file] > select lang/adarkroom.pot
 
 - copy lang/main.css to lang/{new_language}
 - open lang/{new_language}/strings.po with a software poedit
