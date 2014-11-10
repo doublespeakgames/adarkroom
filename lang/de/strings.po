@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2014-09-27 12:34+0200\n"
-"PO-Revision-Date: 2014-10-06 16:18+0100\n"
+"PO-Revision-Date: 2014-11-10 18:25+0100\n"
 "Last-Translator: Thilo Voigt <eiskalt555@web.de>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -297,7 +297,7 @@ msgstr "Export"
 
 #: script/engine.js:325
 msgid "save this."
-msgstr "speichere dies."
+msgstr "speichere das."
 
 #: script/engine.js:330
 msgid "got it"
@@ -666,11 +666,11 @@ msgstr "Außen"
 
 #: script/outside.js:100
 msgid "scraps of fur"
-msgstr "stück fell"
+msgstr "felle"
 
 #: script/outside.js:105
 msgid "bits of meat"
-msgstr "stück fleisch"
+msgstr "fleischstücke"
 
 #: script/outside.js:110
 msgid "strange scales"
@@ -720,7 +720,7 @@ msgstr "die stadt wächst. gerüchte verbreiten sich doch."
 # short for population.
 #: script/outside.js:425
 msgid "pop "
-msgstr "volk"
+msgstr "volk "
 
 #: script/outside.js:516
 msgid "check traps"
@@ -756,11 +756,11 @@ msgstr "trockenes gestrüpp und herabgefallene äste bedecken den waldboden"
 
 #: script/outside.js:593
 msgid "the traps contain "
-msgstr "die fallen beinhalten"
+msgstr "die fallen beinhalten "
 
 #: script/outside.js:598
 msgid " and "
-msgstr "und"
+msgstr " und "
 
 #: script/path.js:33 script/path.js:309
 msgid "A Dusty Path"
@@ -838,11 +838,11 @@ msgstr "hütte"
 #: script/room.js:53
 msgid "builder says there are more wanderers. says they'll work, too."
 msgstr ""
-"baumeister sagt es gibt noch mehr wanderer. sagt sie werden auch arbeiten."
+"baumeister sagt es gibt noch mehr wanderer. sagt, sie werden auch arbeiten."
 
 #: script/room.js:54
 msgid "builder puts up a hut, out in the forest. says word will get around."
-msgstr "baumeister errichtet eine hütte im wald. sagt sie werden davon hören."
+msgstr "baumeister errichtet eine hütte im wald. sagt, sie werden davon hören."
 
 #: script/room.js:55
 msgid "no more room for huts."
@@ -866,7 +866,7 @@ msgstr "händler"
 
 #: script/room.js:83
 msgid "a trading post would make commerce easier"
-msgstr "ein handelsposten würde den tausch fördern"
+msgstr "ein handelsposten würde tauschgeschäfte fördern"
 
 #: script/room.js:84
 msgid ""
@@ -882,7 +882,7 @@ msgstr "gerberei"
 #: script/room.js:97
 msgid "builder says leather could be useful. says the villagers could make it."
 msgstr ""
-"baumeister sagt leder könnte nützlich sein. sagt dorfbewohner könnten es "
+"baumeister sagt leder könnte nützlich sein. sagt, dorfbewohner könnten es "
 "herstellen."
 
 #: script/room.js:98
@@ -980,7 +980,7 @@ msgstr "knochenspeer"
 
 #: script/room.js:220
 msgid "this spear's not elegant, but it's pretty good at stabbing"
-msgstr "ein speer ist nicht elegant, aber gut im stechen"
+msgstr "ein speer ist nicht elegant. aber recht gut im zustechen"
 
 #: script/room.js:229 script/world.js:300
 msgid "rucksack"
@@ -1037,7 +1037,7 @@ msgstr "eisenschwert"
 
 #: script/room.js:307
 msgid "sword is sharp. good protection out in the wilds."
-msgstr "schwert ist scharf. guter schutz in der wildnis."
+msgstr "das schwert ist scharf. guter schutz in der wildnis."
 
 #: script/room.js:317
 msgid "steel sword"
@@ -1291,9 +1291,8 @@ msgid "shoot"
 msgstr "schießen"
 
 #: script/world.js:85
-#, fuzzy
 msgid "blast"
-msgstr "sprengen"
+msgstr "strahlen"
 
 #: script/world.js:92
 msgid "lob"
@@ -1480,7 +1479,7 @@ msgstr "der ausgemergelte mann ist tot"
 
 #: script/events/encounters.js:76
 msgid "a gaunt man approaches, a crazed look in his eye"
-msgstr "ein ausgemergelter mann kommt näher, wahnsinn in deinem blick"
+msgstr "ein ausgemergelter mann kommt näher, wahnsinn in seinem blick"
 
 #: script/events/encounters.js:81
 msgid "A Strange Bird"
@@ -1545,7 +1544,7 @@ msgstr "der plünderer ist tot"
 
 #: script/events/encounters.js:235
 msgid "a scavenger draws close, hoping for an easy score"
-msgstr "der plünderer schleicht näher, auf eine leichtes opfer hoffend"
+msgstr "der plünderer schleicht näher. er hofft auf ein leichtes opfer"
 
 #: script/events/encounters.js:240
 msgid "A Huge Lizard"
@@ -1770,7 +1769,7 @@ msgstr "nur wenige sterben."
 
 #: script/events/outside.js:151
 msgid "the rest bury them."
-msgstr "der rest beerdigt sie."
+msgstr "die überlebenden beerdigen sie."
 
 #: script/events/outside.js:166
 msgid "the plague rips through the village."
@@ -1876,7 +1875,7 @@ msgstr "durch die wände sind kratzende geräusche zu hören."
 
 #: script/events/room.js:61
 msgid "can't tell what they're up to."
-msgstr "schwer zu sagen, was sie vor haben."
+msgstr "schwer zu sagen, was sie bedeuten."
 
 #: script/events/room.js:63
 msgid "strange noises can be heard through the walls"
@@ -2299,7 +2298,7 @@ msgstr "die höhle wird schmäler nach ein paar schritten."
 
 #: script/events/setpieces.js:149
 msgid "the walls are moist and moss-covered"
-msgstr "die wände sind feucht und von moos bewachsen"
+msgstr "die wände sind feucht und moosbewachsen"
 
 #: script/events/setpieces.js:153
 msgid "squeeze"
@@ -2392,8 +2391,7 @@ msgstr "erkunden"
 msgid ""
 "where the windows of the schoolhouse aren't shattered, they're blackened "
 "with soot."
-msgstr ""
-"die fenster des schulhauses sind entweder zerbrochen oder mit ruß bedeckt."
+msgstr "die fenster des schulhauses sind entweder zerbrochen oder rußbedeckt."
 
 #: script/events/setpieces.js:544
 msgid "the double doors creak endlessly in the wind."
@@ -2424,7 +2422,7 @@ msgstr "eine gruppe sammelt sich dort vorn."
 # what kind of green cross?
 #: script/events/setpieces.js:601
 msgid "a green cross barely visible behind grimy windows."
-msgstr "ein grünes kreuz ist kaum sichtbar hinter schmierigen fenstern."
+msgstr "ein grünes kreuz, kaum sichtbar hinter schmierigen fenstern."
 
 #: script/events/setpieces.js:617
 msgid "a small cache of supplies is tucked inside a rusting locker."
@@ -2725,9 +2723,8 @@ msgstr "sieht dort vorn nach einer art lager aus."
 
 # a chainlink fence
 #: script/events/setpieces.js:1675
-#, fuzzy
 msgid "rusted chainlink is pulled across an alleyway."
-msgstr "rostiger zaun wird durch die gassen gezogen."
+msgstr "rostiger drahtzaun liegt in der gasse."
 
 #: script/events/setpieces.js:1676
 msgid "fires burn in the courtyard beyond."
@@ -3009,7 +3006,7 @@ msgstr "die tür steht offen."
 
 #: script/events/setpieces.js:2936
 msgid "the remains of an old house stand as a monument to simpler times"
-msgstr "die überreste eines alten hauses. ein monument einfacherer zeiten."
+msgstr "die überreste eines alten hauses. ein denkmal einfacherer zeiten."
 
 #: script/events/setpieces.js:2950
 msgid "the house is abandoned, but not yet picked over."
