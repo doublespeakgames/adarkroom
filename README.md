@@ -6,16 +6,17 @@ A Minimalist Text Adventure Game
 [Click to play](http://adarkroom.doublespeakgames.com/)
 
 [
-  [Chinese](http://adarkroom.doublespeakgames.com/?lang=cn) |
-  [French](http://adarkroom.doublespeakgames.com/?lang=fr)  |
-  [German](http://adarkroom.doublespeakgames.com/?lang=de)  |
-  [Korean](http://adarkroom.doublespeakgames.com/?lang=kr)  |
-  [Polish](http://adarkroom.doublespeakgames.com/?lang=pl) |
-  [Russian](http://adarkroom.doublespeakgames.com/?lang=ru) |
-  [Spanish](http://adarkroom.doublespeakgames.com/?lang=es) |
-  [Swedish](http://adarkroom.doublespeakgames.com/?lang=sv) |
-  [Turkish](http://adarkroom.doublespeakgames.com/?lang=tr) |
-  [Ukrainian](http://adarkroom.doublespeakgames.com/?lang=uk)
+  [Chinese](http://adarkroom.doublespeakgames.com/?lang=cn)  |
+  [French](http://adarkroom.doublespeakgames.com/?lang=fr)   |
+  [German](http://adarkroom.doublespeakgames.com/?lang=de)   |
+  [Korean](http://adarkroom.doublespeakgames.com/?lang=kr)   |
+  [Polish](http://adarkroom.doublespeakgames.com/?lang=pl)   |
+  [Russian](http://adarkroom.doublespeakgames.com/?lang=ru)  |
+  [Spanish](http://adarkroom.doublespeakgames.com/?lang=es)  |
+  [Swedish](http://adarkroom.doublespeakgames.com/?lang=sv)  |
+  [Turkish](http://adarkroom.doublespeakgames.com/?lang=tr)  |
+  [Ukrainian](http://adarkroom.doublespeakgames.com/?lang=uk)|
+  [Italian](http://adarkroom.doublespeakgames.com/?lang=it)
 ]
 
 
