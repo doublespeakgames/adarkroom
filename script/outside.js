@@ -584,11 +584,13 @@ var Outside = {
 				}
 			}
 		}
+        /// TRANSLATORS : Mind the whitespace at the end.
 		var s = _('the traps contain ');
 		for(var i = 0, len = msg.length; i < len; i++) {
 			if(len > 1 && i > 0 && i < len - 1) {
 				s += ", ";
 			} else if(len > 1 && i == len - 1) {
+                /// TRANSLATORS : Mind the whitespaces at the beginning and end.
 				s += _(" and ");
 			}
 			s += msg[i];
