@@ -233,11 +233,11 @@ msgstr "salva."
 
 #: script/engine.js:163
 msgid "dropbox."
-msgstr "Dropbox."
+msgstr "dropbox."
 
 #: script/engine.js:170
 msgid "app store."
-msgstr "App store."
+msgstr "app store."
 
 #: script/engine.js:249
 msgid "Export / Import"
@@ -245,7 +245,7 @@ msgstr "Esporta / Importa"
 
 #: script/engine.js:253
 msgid "export or import save data, for backing up"
-msgstr "Esporta o importa i dati salvati, per conservarli"
+msgstr "esporta o importa i dati salvati, per conservarli"
 
 #: script/engine.js:254
 msgid "or migrating computers"
@@ -313,19 +313,19 @@ msgstr "porta i tuoi amici."
 
 #: script/engine.js:399
 msgid "facebook"
-msgstr "Facebook"
+msgstr "facebook"
 
 #: script/engine.js:406
 msgid "google+"
-msgstr "Google+"
+msgstr "google+"
 
 #: script/engine.js:413
 msgid "twitter"
-msgstr "Twitter"
+msgstr "twitter"
 
 #: script/engine.js:420
 msgid "reddit"
-msgstr "Reddit"
+msgstr "reddit"
 
 #: script/engine.js:427
 msgid "close"
@@ -578,35 +578,35 @@ msgstr "la carne non basta"
 
 #: script/localization.js:56
 msgid "the compass points east"
-msgstr "la bussola punta a Est"
+msgstr "la bussola punta a est"
 
 #: script/localization.js:57
 msgid "the compass points west"
-msgstr "la bussola punta a Ovest"
+msgstr "la bussola punta a ovest"
 
 #: script/localization.js:58
 msgid "the compass points north"
-msgstr "la bussola punta a Nord"
+msgstr "la bussola punta a nord"
 
 #: script/localization.js:59
 msgid "the compass points south"
-msgstr "la bussola punta a Sud"
+msgstr "la bussola punta a sud"
 
 #: script/localization.js:60
 msgid "the compass points northeast"
-msgstr "la bussola punta a Nord-Est"
+msgstr "la bussola punta a nord-est"
 
 #: script/localization.js:61
 msgid "the compass points northwest"
-msgstr "la bussola punta a Nord-Ovest"
+msgstr "la bussola punta a nord-ovest"
 
 #: script/localization.js:62
 msgid "the compass points southeast"
-msgstr "la bussola punta a Sud-Est"
+msgstr "la bussola punta a sud-est"
 
 #: script/localization.js:63
 msgid "the compass points southwest"
-msgstr "la bussola punta a Sud-Ovest"
+msgstr "la bussola punta a sud-ovest"
 
 #: script/localization.js:70
 msgid "stores"
@@ -707,7 +707,7 @@ msgstr ""
 
 #: script/outside.js:195
 msgid "the town's booming. word does get around."
-msgstr "la città si sta espandendo. La voce si sparge rapida."
+msgstr "la città si sta espandendo. la voce si sparge rapida."
 
 #: script/outside.js:425
 msgid "pop "
@@ -747,7 +747,7 @@ msgstr "frasche secche e rami spezzati sono sparsi sul terreno, nella foresta"
 
 #: script/outside.js:593
 msgid "the traps contain "
-msgstr "Le trappole contengono"
+msgstr "le trappole contengono "
 
 #: script/outside.js:598
 msgid " and "
@@ -759,11 +759,11 @@ msgstr "Un Sentiero Polveroso"
 
 #: script/path.js:50
 msgid "embark"
-msgstr "Inizia il viaggio"
+msgstr "inizia il viaggio"
 
 #: script/path.js:68
 msgid "the compass points "
-msgstr "La bussola punta verso "
+msgstr "la bussola punta verso "
 
 #: script/path.js:142
 msgid "none"
@@ -798,7 +798,7 @@ msgid ""
 "builder says she can make traps to catch any creatures might still be alive "
 "out there"
 msgstr ""
-"La costruttrice dice che può costruire trappole, per catturare le creature "
+"la costruttrice dice che può costruire trappole, per catturare le creature "
 "che sono ancora in giro"
 
 #: script/room.js:26
@@ -830,13 +830,13 @@ msgstr "capanna"
 #: script/room.js:53
 msgid "builder says there are more wanderers. says they'll work, too."
 msgstr ""
-"la costruttrice dice che ci sono altri raminghi. Dice che potranno anche "
+"la costruttrice dice che ci sono altri raminghi. dice che potranno anche "
 "lavorare."
 
 #: script/room.js:54
 msgid "builder puts up a hut, out in the forest. says word will get around."
 msgstr ""
-"la costruttrice edifica una capanna, fuori nella foresta. Dice che la voce "
+"la costruttrice edifica una capanna, fuori nella foresta. dice che la voce "
 "si spargerà."
 
 #: script/room.js:55
@@ -877,7 +877,7 @@ msgstr "conceria"
 #: script/room.js:97
 msgid "builder says leather could be useful. says the villagers could make it."
 msgstr ""
-"la costruttrice dice che il cuoio potrebbe essere utile. Dice che i paesani "
+"la costruttrice dice che il cuoio potrebbe essere utile. dice che i paesani "
 "sarebbero capaci di produrlo."
 
 #: script/room.js:98
@@ -892,12 +892,12 @@ msgstr "affumicatoio"
 msgid ""
 "should cure the meat, or it'll spoil. builder says she can fix something up."
 msgstr ""
-"bisognerebbe affumicare la carne, o si avarierà. La costruttrice dice che "
+"bisognerebbe affumicare la carne, o si avarierà. la costruttrice dice che "
 "potrebbe mettere in piedi qualcosa."
 
 #: script/room.js:112
 msgid "builder finishes the smokehouse. she looks hungry."
-msgstr "la costruttrice ha completato l'affumicatoio. Sembra affamata."
+msgstr "la costruttrice ha completato l'affumicatoio. sembra affamata."
 
 #: script/room.js:122
 msgid "workshop"
@@ -912,7 +912,7 @@ msgstr ""
 #: script/room.js:126
 msgid "workshop's finally ready. builder's excited to get to it"
 msgstr ""
-"l'officina è pronta, finalmente. La costruttrice è impaziente di andarci"
+"l'officina è pronta, finalmente. la costruttrice è impaziente di andarci"
 
 #: script/room.js:137
 msgid "steelworks"
@@ -1010,7 +1010,7 @@ msgstr "arm. cuoio"
 
 #: script/room.js:271
 msgid "leather's not strong. better than rags, though."
-msgstr "il cuoio non è resistente. Però è meglio dei cenci."
+msgstr "il cuoio non è resistente. però è meglio dei cenci."
 
 #: script/room.js:280
 msgid "i armour"
@@ -1035,7 +1035,7 @@ msgstr "spada di ferro"
 #: script/room.js:307
 msgid "sword is sharp. good protection out in the wilds."
 msgstr ""
-"la spada è affilata. Una buona protezione nelle spedizioni all'esterno."
+"la spada è affilata. una buona protezione nelle spedizioni all'esterno."
 
 #: script/room.js:317
 msgid "steel sword"
@@ -1082,7 +1082,7 @@ msgid ""
 "the stranger is standing by the fire. she says she can help. says she builds "
 "things."
 msgstr ""
-"la forestiera rimane in piedi, vicino al fuoco. Dice che può aiutare. Dice "
+"la forestiera rimane in piedi, vicino al fuoco. dice che può aiutare. dice "
 "di saper costruire cose."
 
 #: script/room.js:593
@@ -1165,12 +1165,12 @@ msgstr ""
 msgid ""
 "the stranger shivers, and mumbles quietly. her words are unintelligible."
 msgstr ""
-"la forestiera trema e mormora debolmente. Le sue parole sono incomprensibili."
+"la forestiera trema e mormora debolmente. le sue parole sono incomprensibili."
 
 #: script/room.js:750
 msgid "the stranger in the corner stops shivering. her breathing calms."
 msgstr ""
-"la forestiera nell'angolo smette di tremare. Il suo respiro si fa più calmo."
+"la forestiera nell'angolo smette di tremare. il suo respiro si fa più calmo."
 
 #: script/room.js:908 script/room.js:956
 msgid "not enough "
@@ -1226,7 +1226,7 @@ msgstr "Pronto a Partire?"
 
 #: script/ship.js:148
 msgid "time to get out of this place. won't be coming back."
-msgstr "è giunto il tempo di lasciare questo posto. Non ci sarà ritorno."
+msgstr "è giunto il tempo di lasciare questo posto. non ci sarà ritorno."
 
 #: script/ship.js:160
 msgid "linger"
@@ -1366,7 +1366,7 @@ msgstr "tasche"
 
 #: script/world.js:323
 msgid "hp: {0}/{1}"
-msgstr "PS: {0}/{1}"
+msgstr "ps: {0}/{1}"
 
 #: script/world.js:330
 msgid "{0}:{1}"
@@ -1399,14 +1399,14 @@ msgstr "la sete diventa insopportabile"
 #: script/world.js:582
 msgid "the trees yield to dry grass. the yellowed brush rustles in the wind."
 msgstr ""
-"gli alberi cedono il posto all'erba secca. I ciuffi ingialliti frusciano nel "
+"gli alberi cedono il posto all'erba secca. i ciuffi ingialliti frusciano nel "
 "vento."
 
 #: script/world.js:585
 msgid ""
 "the trees are gone. parched earth and blowing dust are poor replacements."
 msgstr ""
-"gli alberi sono alle tue spalle. Terra riarsa e polvere smossa dal vento "
+"gli alberi sono alle tue spalle. terra riarsa e polvere smossa dal vento "
 "sono miseri sostituti."
 
 #: script/world.js:592
@@ -1414,12 +1414,12 @@ msgid ""
 "trees loom on the horizon. grasses gradually yield to a forest floor of dry "
 "branches and fallen leaves."
 msgstr ""
-"gli alberi si delineano all'orizzonte. L'erba diventa gradualmente un "
+"gli alberi si delineano all'orizzonte. l'erba diventa gradualmente un "
 "sottobosco di fronde secche e foglie cadute."
 
 #: script/world.js:595
 msgid "the grasses thin. soon, only dust remains."
-msgstr "l'erba si dirada. Presto, non rimane che sabbia."
+msgstr "l'erba si dirada. presto, non rimane che sabbia."
 
 #: script/world.js:602
 msgid "the barrens break at a sea of dying grass, swaying in the arid breeze."
@@ -1432,7 +1432,7 @@ msgid ""
 "a wall of gnarled trees rises from the dust. their branches twist into a "
 "skeletal canopy overhead."
 msgstr ""
-"un muro di alberi nodosi si innalza dalla sabbia. Le loro fronde si "
+"un muro di alberi nodosi si innalza dalla sabbia. le loro fronde si "
 "attorcigliano a formare una cortina scheletrica, in alto."
 
 #: script/world.js:812
@@ -1656,13 +1656,13 @@ msgstr "i paesani impiccano il ladro in alto, davanti al deposito provviste."
 msgid ""
 "the point is made. in the next few days, the missing supplies are returned."
 msgstr ""
-"il concetto è chiaro. Nei pochi giorni successivi, le scorte mancanti "
+"il concetto è chiaro. nei pochi giorni successivi, le scorte mancanti "
 "vengono restituite."
 
 #: script/events/global.js:49
 msgid "the man says he's grateful. says he won't come around any more."
 msgstr ""
-"l'uomo esprime la sua riconoscenza. Dice che non si farà vedere di nuovo in "
+"l'uomo esprime la sua riconoscenza. dice che non si farà vedere di nuovo in "
 "giro."
 
 #: script/events/global.js:50
@@ -1781,7 +1781,7 @@ msgstr "solo pochi muoiono."
 
 #: script/events/outside.js:151
 msgid "the rest bury them."
-msgstr "Gli altri li seppelliscono."
+msgstr "gli altri li seppelliscono."
 
 #: script/events/outside.js:166
 msgid "the plague rips through the village."
@@ -1823,7 +1823,7 @@ msgstr ""
 
 #: script/events/outside.js:226
 msgid "after a skirmish they are driven away, but not without losses."
-msgstr "Dopo una schermaglia questi vengono mandati via, ma non senza perdite."
+msgstr "dopo una schermaglia questi vengono mandati via, ma non senza perdite."
 
 #: script/events/room.js:6
 msgid "The Nomad"
@@ -1876,7 +1876,7 @@ msgstr "la vecchia bussola appare ammaccata e polverosa, ma sembra funzionare."
 #: script/events/room.js:568 script/events/room.js:584
 #: script/events/room.js:595
 msgid "say goodbye"
-msgstr "Digli buon viaggio."
+msgstr "digli buon viaggio."
 
 #: script/events/room.js:53 script/events/room.js:104
 msgid "Noises"
@@ -1920,7 +1920,7 @@ msgstr ""
 
 #: script/events/room.js:92
 msgid "the night is silent."
-msgstr "La notte tace."
+msgstr "la notte tace."
 
 #: script/events/room.js:111
 msgid "scratching noises can be heard from the store room."
@@ -2008,7 +2008,7 @@ msgid ""
 "a wanderer arrives with an empty cart. says if he leaves with wood, he'll be "
 "back with more."
 msgstr ""
-"un ramingo arriva con un carretto vuoto. Dice che se gli viene dato del "
+"un ramingo arriva con un carretto vuoto. dice che se gli viene dato del "
 "legname, tornerà con un quantitativo maggiore."
 
 #: script/events/room.js:270
@@ -2036,7 +2036,7 @@ msgid ""
 "a wanderer arrives with an empty cart. says if she leaves with furs, she'll "
 "be back with more."
 msgstr ""
-"una raminga arriva con un carretto vuoto. Dice che se gli viene dato del "
+"una raminga arriva con un carretto vuoto. dice che se gli viene dato del "
 "pellame, tornerà con un quantitativo maggiore."
 
 #: script/events/room.js:341
@@ -2394,7 +2394,7 @@ msgid ""
 "broken streetlights stand, rusting. light hasn't graced this place in a long "
 "time."
 msgstr ""
-"lampioni rotti si ergono rugginosi. A lungo questo posto non ha beneficiato "
+"lampioni rotti si ergono rugginosi. a lungo questo posto non ha beneficiato "
 "di alcuna luce."
 
 #: script/events/setpieces.js:528
@@ -2522,7 +2522,7 @@ msgstr "un saccheggiatore, spaventato, si lancia fuori dalla porta gridando."
 #: script/events/setpieces.js:1035
 msgid "a man stands over a dead wanderer. notices he's not alone."
 msgstr ""
-"un uomo è in piedi vicino al cadavere di un ramingo. Si accorge di non "
+"un uomo è in piedi vicino al cadavere di un ramingo. si accorge di non "
 "essere solo."
 
 #: script/events/setpieces.js:1051
