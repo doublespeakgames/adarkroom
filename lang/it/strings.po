@@ -857,17 +857,17 @@ msgstr "il rifugio da caccia si erge nella foresta, appena fuori dal villaggio"
 
 #: script/room.js:80
 msgid "trading post"
-msgstr "base commerciale"
+msgstr "mercato"
 
 #: script/room.js:83
 msgid "a trading post would make commerce easier"
-msgstr "una base commerciale renderebbe gli scambi più facili"
+msgstr "un mercato renderebbe gli scambi più facili"
 
 #: script/room.js:84
 msgid ""
 "now the nomads have a place to set up shop, they might stick around a while"
 msgstr ""
-"ora che i nomadi hanno un posto dove metter su il loro mercato, potrebbero "
+"ora che i nomadi hanno un posto dove esporre le loro merci, potrebbero "
 "fermarsi per un po'"
 
 #: script/room.js:94
