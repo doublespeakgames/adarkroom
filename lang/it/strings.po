@@ -845,7 +845,7 @@ msgstr "non c'è più spazio per altre capanne."
 
 #: script/room.js:65
 msgid "lodge"
-msgstr "capanno da caccia"
+msgstr "rifugio da caccia"
 
 #: script/room.js:68
 msgid "villagers could help hunt, given the means"
@@ -853,7 +853,7 @@ msgstr "i paesani potrebbero aiutare cacciando, se ne avessero i mezzi"
 
 #: script/room.js:69
 msgid "the hunting lodge stands in the forest, a ways out of town"
-msgstr "il capanno da caccia si erge nella foresta, appena fuori dal villaggio"
+msgstr "il rifugio da caccia si erge nella foresta, appena fuori dal villaggio"
 
 #: script/room.js:80
 msgid "trading post"
