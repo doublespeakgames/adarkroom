@@ -337,7 +337,7 @@ msgstr "accendi la luce."
 
 #: script/engine.js:572
 msgid "{0} per {1}s"
-msgstr "{0} ogni {1} secondi"
+msgstr "{0} ogni {1}″"
 
 #: script/events.js:142
 msgid "eat meat"
@@ -450,7 +450,7 @@ msgstr "cacciatore"
 
 #: script/localization.js:22 script/outside.js:28
 msgid "trapper"
-msgstr "fabbricante di trappole"
+msgstr "fabbr. di esche"
 
 #: script/localization.js:23 script/outside.js:36
 msgid "tanner"
@@ -506,7 +506,7 @@ msgstr "esca"
 
 #: script/localization.js:36 script/localization.js:43
 msgid "cured meat"
-msgstr "carne affumicata"
+msgstr "carne essicc."
 
 #: script/localization.js:37 script/localization.js:42
 msgid "scales"
@@ -618,7 +618,7 @@ msgstr "armi"
 
 #: script/localization.js:72
 msgid "build:"
-msgstr "edifica:"
+msgstr "costruisci:"
 
 #: script/localization.js:73
 msgid "craft:"
@@ -698,12 +698,12 @@ msgstr "una famiglia in difficoltà prende rifugio in una delle capanne."
 
 #: script/outside.js:191
 msgid "a small group arrives, all dust and bones."
-msgstr "arriva un piccolo gruppo di persone, macilento e impolverato."
+msgstr "arriva un piccolo gruppo, macilento e impolverato."
 
 #: script/outside.js:193
 msgid "a convoy lurches in, equal parts worry and hope."
 msgstr ""
-"una carovana arriva vacillando, colma di ansia e speranza in egual misura"
+"una carovana arriva incerta, colma di ansia e speranza in egual misura"
 
 #: script/outside.js:195
 msgid "the town's booming. word does get around."
@@ -751,7 +751,7 @@ msgstr "le trappole contengono "
 
 #: script/outside.js:598
 msgid " and "
-msgstr "e"
+msgstr " e "
 
 #: script/path.js:33 script/path.js:309
 msgid "A Dusty Path"
@@ -906,8 +906,8 @@ msgstr "officina"
 #: script/room.js:125
 msgid "builder says she could make finer things, if she had the tools"
 msgstr ""
-"la costruttrice dice che potrebbe produrre cose più sofisticate, se avesse "
-"gli strumenti."
+"la costruttrice dice che potrebbe produrre oggetti più sofisticati, se "
+"avesse gli strumenti."
 
 #: script/room.js:126
 msgid "workshop's finally ready. builder's excited to get to it"
@@ -1876,7 +1876,7 @@ msgstr "la vecchia bussola appare ammaccata e polverosa, ma sembra funzionare."
 #: script/events/room.js:568 script/events/room.js:584
 #: script/events/room.js:595
 msgid "say goodbye"
-msgstr "digli buon viaggio."
+msgstr "digli addio"
 
 #: script/events/room.js:53 script/events/room.js:104
 msgid "Noises"

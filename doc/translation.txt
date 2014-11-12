@@ -37,6 +37,9 @@ windows:
 - keep translating ...
 - finished ? sure ?
 - use the python script (/tools/po2js.py) to convert the po file to a js file
+  on windows it could be necessary to run the command prompt as Administrator 
+    Win Vista/7: start > right-click on command prompt > Run as Administrator
+    Win 8: File panel > mouse over Command prompt > click on Run command prompt as Administrator
 	python tools/po2js.py lang/{new_language}/strings.po
 
 - edit README.md and add the following string: [{new_language_name}](http://adarkroom.doublespeakgames.com/?lang={new_language_code})
