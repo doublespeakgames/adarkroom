@@ -1,5 +1,6 @@
 A Dark Room
 ===========
+[![Code Climate](https://codeclimate.com/github/Continuities/adarkroom/badges/gpa.svg)](https://codeclimate.com/github/Continuities/adarkroom)
 
 A Minimalist Text Adventure Game
 
