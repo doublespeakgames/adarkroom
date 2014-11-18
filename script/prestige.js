@@ -66,7 +66,7 @@ var Prestige = {
   
 	collectStores : function() {
 		var prevStores = $SM.get('previous.stores');
-		if(prevStores !== null) {
+		if(prevStores != null) {
 			var toAdd = {};
 			for(var i in this.storesMap) {
 				var s = this.storesMap[i];
