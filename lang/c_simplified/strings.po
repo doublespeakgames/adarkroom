@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: adarkroomlang\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2014-09-27 12:34+0200\n"
-"PO-Revision-Date: 2014-11-18 17:11-0800\n"
+"PO-Revision-Date: 2014-11-19 13:50-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -1749,64 +1749,64 @@ msgstr ""
 
 #: script/events/outside.js:194
 msgid "the villagers retreat to mourn the dead."
-msgstr ""
+msgstr "村民撤退悼念死难者"
 
 #: script/events/outside.js:217
 msgid "A Military Raid"
-msgstr ""
+msgstr "战争中的军事袭击"
 
 #: script/events/outside.js:224
 msgid "a gunshot rings through the trees."
-msgstr ""
+msgstr "穿过树林一声枪响环"
 
 #: script/events/outside.js:225
 msgid "well armed men charge out of the forest, firing into the crowd."
-msgstr ""
+msgstr "以及武装人员收取走出森林，向人群开枪"
 
 #: script/events/outside.js:226
 msgid "after a skirmish they are driven away, but not without losses."
-msgstr ""
+msgstr "一场遭遇战，他们被赶走后，但也不是没有损失"
 
 #: script/events/room.js:6
 msgid "The Nomad"
-msgstr ""
+msgstr "保荐人"
 
 #: script/events/room.js:13
 msgid ""
 "a nomad shuffles into view, laden with makeshift bags bound with rough twine."
-msgstr ""
+msgstr "游牧洗牌眼帘，充满了绑定粗糙的麻绳临时袋"
 
 #: script/events/room.js:14
 msgid "won't say from where he came, but it's clear that he's not staying."
-msgstr ""
+msgstr "会不会从他那里传来说，但很显然，他并没有停留"
 
 #: script/events/room.js:16
 msgid "a nomad arrives, looking to trade"
-msgstr ""
+msgstr "游牧到来，期待交易"
 
 #: script/events/room.js:20
 msgid "buy scales"
-msgstr ""
+msgstr "买秤"
 
 #: script/events/room.js:25
 msgid "buy teeth"
-msgstr ""
+msgstr "牙买"
 
 #: script/events/room.js:30
 msgid "buy bait"
-msgstr ""
+msgstr "买鱼饵"
 
 #: script/events/room.js:33
 msgid "traps are more effective with bait."
-msgstr ""
+msgstr "陷阱是更有效的诱饵"
 
 #: script/events/room.js:39
 msgid "buy compass"
-msgstr ""
+msgstr "购买指南针"
 
 #: script/events/room.js:42
 msgid "the old compass is dented and dusty, but it looks to work."
-msgstr ""
+msgstr "老罗盘凹陷，尘土飞扬，但它看起来工作"
 
 #: script/events/room.js:46 script/events/room.js:227
 #: script/events/room.js:240 script/events/room.js:253
@@ -1816,383 +1816,383 @@ msgstr ""
 #: script/events/room.js:568 script/events/room.js:584
 #: script/events/room.js:595
 msgid "say goodbye"
-msgstr ""
+msgstr "告别"
 
 #: script/events/room.js:53 script/events/room.js:104
 msgid "Noises"
-msgstr ""
+msgstr "噪音"
 
 #: script/events/room.js:60
 msgid "through the walls, shuffling noises can be heard."
-msgstr ""
+msgstr "穿过墙壁，洗牌的声音都能听到"
 
 #: script/events/room.js:61
 msgid "can't tell what they're up to."
-msgstr ""
+msgstr "不能告诉他们是怎么达到"
 
 #: script/events/room.js:63
 msgid "strange noises can be heard through the walls"
-msgstr ""
+msgstr "奇怪的噪音可以穿墙听到"
 
 #: script/events/room.js:67 script/events/room.js:118
 #: script/events/setpieces.js:1661
 msgid "investigate"
-msgstr ""
+msgstr "调查"
 
 #: script/events/room.js:78
 msgid "vague shapes move, just out of sight."
-msgstr ""
+msgstr "映着动，只是淡出人们的视线"
 
 #: script/events/room.js:79
 msgid "the sounds stop."
-msgstr ""
+msgstr "声音停止"
 
 #: script/events/room.js:83 script/events/room.js:96
 msgid "go back inside"
-msgstr ""
+msgstr "进去了"
 
 #: script/events/room.js:91
 msgid ""
 "a bundle of sticks lies just beyond the threshold, wrapped in coarse furs."
-msgstr ""
+msgstr "一捆柴在于刚刚超越的门槛，包裹在粗糙的毛皮"
 
 #: script/events/room.js:92
 msgid "the night is silent."
-msgstr ""
+msgstr "夜无声"
 
 #: script/events/room.js:111
 msgid "scratching noises can be heard from the store room."
-msgstr ""
+msgstr "搔抓噪声可以从储藏室被听到"
 
 #: script/events/room.js:112
 msgid "something's in there."
-msgstr ""
+msgstr "事情就在那里"
 
 #: script/events/room.js:114
 msgid "something's in the store room"
-msgstr ""
+msgstr "事情是在储藏室"
 
 #: script/events/room.js:129 script/events/room.js:149
 #: script/events/room.js:169
 msgid "some wood is missing."
-msgstr ""
+msgstr "一些木失踪"
 
 #: script/events/room.js:130
 msgid "the ground is littered with small scales"
-msgstr ""
+msgstr "地上散落着小尺度"
 
 #: script/events/room.js:150
 msgid "the ground is littered with small teeth"
-msgstr ""
+msgstr "地上散落着细小的牙齿"
 
 #: script/events/room.js:170
 msgid "the ground is littered with scraps of cloth"
-msgstr ""
+msgstr "地上散落着布下脚料"
 
 #: script/events/room.js:190
 msgid "The Beggar"
-msgstr ""
+msgstr "乞丐"
 
 #: script/events/room.js:197
 msgid "a beggar arrives."
-msgstr ""
+msgstr "一个乞丐来到"
 
 #: script/events/room.js:198
 msgid "asks for any spare furs to keep him warm at night."
-msgstr ""
+msgstr "要求任何备用皮草，让他温暖的夜晚"
 
 #: script/events/room.js:200
 msgid "a beggar arrives"
-msgstr ""
+msgstr "一个乞丐来到"
 
 #: script/events/room.js:204
 msgid "give 50"
-msgstr ""
+msgstr "给予50"
 
 #: script/events/room.js:209 script/events/room.js:276
 #: script/events/room.js:347
 msgid "give 100"
-msgstr ""
+msgstr "给100"
 
 #: script/events/room.js:214 script/events/room.js:286
 #: script/events/room.js:466
 msgid "turn him away"
-msgstr ""
+msgstr "把他带走"
 
 #: script/events/room.js:222 script/events/room.js:235
 #: script/events/room.js:248
 msgid "the beggar expresses his thanks."
-msgstr ""
+msgstr "乞丐表示感谢"
 
 #: script/events/room.js:223
 msgid "leaves a pile of small scales behind."
-msgstr ""
+msgstr "留下一堆小尺度"
 
 #: script/events/room.js:236
 msgid "leaves a pile of small teeth behind."
-msgstr ""
+msgstr "留下一堆小齿"
 
 #: script/events/room.js:249
 msgid "leaves some scraps of cloth behind."
-msgstr ""
+msgstr "叶布一些零散的背后"
 
 #: script/events/room.js:262 script/events/room.js:333
 msgid "The Mysterious Wanderer"
-msgstr ""
+msgstr "神秘流浪者"
 
 #: script/events/room.js:269
 msgid ""
 "a wanderer arrives with an empty cart. says if he leaves with wood, he'll be "
 "back with more."
-msgstr ""
+msgstr "一个流浪者到达一个空的购物车。说，如果他离开了木，他会带更多"
 
 #: script/events/room.js:270
 msgid "builder's not sure he's to be trusted."
-msgstr ""
+msgstr "建筑工地不知道他是值得信任"
 
 #: script/events/room.js:272 script/events/room.js:343
 msgid "a mysterious wanderer arrives"
-msgstr ""
+msgstr "一个神秘的流浪者到达"
 
 #: script/events/room.js:281 script/events/room.js:352
 msgid "give 500"
-msgstr ""
+msgstr "给500"
 
 #: script/events/room.js:293 script/events/room.js:312
 msgid "the wanderer leaves, cart loaded with wood"
-msgstr ""
+msgstr "流浪叶子，车满载木材"
 
 #: script/events/room.js:299 script/events/room.js:318
 msgid "the mysterious wanderer returns, cart piled high with wood."
-msgstr ""
+msgstr "神秘流浪者的回报，购物车堆满了木材"
 
 #: script/events/room.js:340
 msgid ""
 "a wanderer arrives with an empty cart. says if she leaves with furs, she'll "
 "be back with more."
-msgstr ""
+msgstr "一个流浪者到达一个空的购物车。说，如果她离开与皮草，她会带更多"
 
 #: script/events/room.js:341
 msgid "builder's not sure she's to be trusted."
-msgstr ""
+msgstr "建设者不知道她是被信任"
 
 #: script/events/room.js:357
 msgid "turn her away"
-msgstr ""
+msgstr "把她带走"
 
 #: script/events/room.js:364 script/events/room.js:383
 msgid "the wanderer leaves, cart loaded with furs"
-msgstr ""
+msgstr "流浪叶子，车满载皮草"
 
 #: script/events/room.js:370 script/events/room.js:389
 msgid "the mysterious wanderer returns, cart piled high with furs."
-msgstr ""
+msgstr "神秘流浪者的回报，车高堆积着皮草"
 
 #: script/events/room.js:404
 msgid "The Scout"
-msgstr ""
+msgstr "侦察员"
 
 #: script/events/room.js:411
 msgid "the scout says she's been all over."
-msgstr ""
+msgstr "侦察员说，她一直都在"
 
 #: script/events/room.js:412
 msgid "willing to talk about it, for a price."
-msgstr ""
+msgstr "愿意谈论它，以优惠的价格"
 
 #: script/events/room.js:414
 msgid "a scout stops for the night"
-msgstr ""
+msgstr "球探停了一夜"
 
 #: script/events/room.js:418
 msgid "buy map"
-msgstr ""
+msgstr "买地图"
 
 #: script/events/room.js:420
 msgid "the map uncovers a bit of the world"
-msgstr ""
+msgstr "地图揭示了一点世界"
 
 #: script/events/room.js:424
 msgid "learn scouting"
-msgstr ""
+msgstr "学习球探"
 
 #: script/events/room.js:443
 msgid "The Master"
-msgstr ""
+msgstr "主"
 
 #: script/events/room.js:450
 msgid "an old wanderer arrives."
-msgstr ""
+msgstr "一个老流浪汉到达"
 
 #: script/events/room.js:451
 msgid "he smiles warmly and asks for lodgings for the night."
-msgstr ""
+msgstr "他微笑着热情和要求住宿过夜"
 
 #: script/events/room.js:453
 msgid "an old wanderer arrives"
-msgstr ""
+msgstr "一个老流浪汉到达"
 
 #: script/events/room.js:457
 msgid "agree"
-msgstr ""
+msgstr "同意"
 
 #: script/events/room.js:473
 msgid "in exchange, the wanderer offers his wisdom."
-msgstr ""
+msgstr "在交流中，流浪者提供他的智慧"
 
 #: script/events/room.js:477
 msgid "evasion"
-msgstr ""
+msgstr "逃税"
 
 #: script/events/room.js:487
 msgid "precision"
-msgstr ""
+msgstr "精确"
 
 #: script/events/room.js:497
 msgid "force"
-msgstr ""
+msgstr "力"
 
 #: script/events/room.js:507
 msgid "nothing"
-msgstr ""
+msgstr "无"
 
 #: script/events/room.js:516
 msgid "The Sick Man"
-msgstr ""
+msgstr "病夫"
 
 #: script/events/room.js:523
 msgid "a man hobbles up, coughing."
-msgstr ""
+msgstr "一个人蹒跚起来，咳嗽"
 
 #: script/events/room.js:524
 msgid "he begs for medicine."
-msgstr ""
+msgstr "他乞求药"
 
 #: script/events/room.js:526
 msgid "a sick man hobbles up"
-msgstr ""
+msgstr "一个生病的人蹒跚起来"
 
 #: script/events/room.js:530
 msgid "give 1 medicine"
-msgstr ""
+msgstr "举个药"
 
 #: script/events/room.js:532
 msgid "the man swallows the medicine eagerly"
-msgstr ""
+msgstr "该男子急切地吞下药"
 
 #: script/events/room.js:536
 msgid "tell him to leave"
-msgstr ""
+msgstr "告诉他要离开"
 
 #: script/events/room.js:543 script/events/room.js:559
 #: script/events/room.js:575
 msgid "the man is thankful."
-msgstr ""
+msgstr "男人是感恩"
 
 #: script/events/room.js:544 script/events/room.js:560
 #: script/events/room.js:576
 msgid "he leaves a reward."
-msgstr ""
+msgstr "他离开的奖励"
 
 #: script/events/room.js:545
 msgid "some weird metal he picked up on his travels."
-msgstr ""
+msgstr "一些奇怪的金属，他拿起他的旅行"
 
 #: script/events/room.js:561
 msgid "some weird glowing boxes he picked up on his travels."
-msgstr ""
+msgstr "一些奇怪的发光的盒子，他拿起他的旅行"
 
 #: script/events/room.js:577
 msgid "all he has are some scales."
-msgstr ""
+msgstr "所有他有一定的尺度"
 
 #: script/events/room.js:591
 msgid "the man expresses his thanks and hobbles off."
-msgstr ""
+msgstr "该男子表示感谢，并蹒跚关闭"
 
 #: script/events/setpieces.js:6
 msgid "An Outpost"
-msgstr ""
+msgstr "前哨"
 
 #: script/events/setpieces.js:10 script/events/setpieces.js:12
 msgid "a safe place in the wilds."
-msgstr ""
+msgstr "在野外安全的地方"
 
 #: script/events/setpieces.js:34
 msgid "A Murky Swamp"
-msgstr ""
+msgstr "一个黑暗的沼泽"
 
 #: script/events/setpieces.js:38
 msgid "rotting reeds rise out of the swampy earth."
-msgstr ""
+msgstr "腐烂的芦苇上升了沼泽土"
 
 #: script/events/setpieces.js:39
 msgid "a lone frog sits in the muck, silently."
-msgstr ""
+msgstr "一个孤独的青蛙坐在渣土，默默地"
 
 #: script/events/setpieces.js:41
 msgid "a swamp festers in the stagnant air."
-msgstr ""
+msgstr "沼泽溃烂，在静止的空气"
 
 #: script/events/setpieces.js:44 script/events/setpieces.js:548
 #: script/events/setpieces.js:605 script/events/setpieces.js:887
 #: script/events/setpieces.js:1312 script/events/setpieces.js:1330
 #: script/events/setpieces.js:3529
 msgid "enter"
-msgstr ""
+msgstr "进入"
 
 #: script/events/setpieces.js:55
 msgid "deep in the swamp is a moss-covered cabin."
-msgstr ""
+msgstr "深的沼泽是苔藓覆盖的小屋"
 
 #: script/events/setpieces.js:56
 msgid "an old wanderer sits inside, in a seeming trance."
-msgstr ""
+msgstr "一个老流浪汉坐在里面，在一个看似精神恍惚"
 
 #: script/events/setpieces.js:61
 msgid "talk"
-msgstr ""
+msgstr "谈话"
 
 #: script/events/setpieces.js:72
 msgid "the wanderer takes the charm and nods slowly."
-msgstr ""
+msgstr "流浪采取的魅力和慢慢点头"
 
 #: script/events/setpieces.js:73
 msgid "he speaks of once leading the great fleets to fresh worlds."
-msgstr ""
+msgstr "他说，一旦领导的伟大舰队，以新鲜的世界"
 
 #: script/events/setpieces.js:74
 msgid "unfathomable destruction to fuel wanderer hungers."
-msgstr ""
+msgstr "深不可测的破坏加剧流浪挨饿"
 
 #: script/events/setpieces.js:75
 msgid "his time here, now, is his penance."
-msgstr ""
+msgstr "他在这里的时间，现在，是他的忏悔"
 
 #: script/events/setpieces.js:91
 msgid "A Damp Cave"
-msgstr ""
+msgstr "潮湿的洞穴"
 
 #: script/events/setpieces.js:95
 msgid "the mouth of the cave is wide and dark."
-msgstr ""
+msgstr "该洞口宽和深"
 
 #: script/events/setpieces.js:96
 msgid "can't see what's inside."
-msgstr ""
+msgstr "看不到里面有什么"
 
 #: script/events/setpieces.js:98
 msgid "the earth here is split, as if bearing an ancient wound"
-msgstr ""
+msgstr "这里的大地裂开，仿佛承载了古老的伤口"
 
 #: script/events/setpieces.js:101 script/events/setpieces.js:2939
 #: script/events/setpieces.js:3453
 msgid "go inside"
-msgstr ""
+msgstr "往里走"
 
 #: script/events/setpieces.js:120 script/events/setpieces.js:264
 msgid "a startled beast defends its home"
-msgstr ""
+msgstr "一个惊兽捍卫自己的家"
 
 #: script/events/setpieces.js:135 script/events/setpieces.js:186
 #: script/events/setpieces.js:227 script/events/setpieces.js:246
@@ -2225,7 +2225,7 @@ msgstr ""
 #: script/events/setpieces.js:3342 script/events/setpieces.js:3376
 #: script/events/setpieces.js:3415
 msgid "continue"
-msgstr ""
+msgstr "继续"
 
 #: script/events/setpieces.js:140 script/events/setpieces.js:157
 #: script/events/setpieces.js:191 script/events/setpieces.js:232
@@ -2234,71 +2234,71 @@ msgstr ""
 #: script/events/setpieces.js:386 script/events/setpieces.js:428
 #: script/events/setpieces.js:480 script/events/setpieces.js:512
 msgid "leave cave"
-msgstr ""
+msgstr "离开洞穴"
 
 #: script/events/setpieces.js:148
 msgid "the cave narrows a few feet in."
-msgstr ""
+msgstr "会变窄的洞数英尺的"
 
 #: script/events/setpieces.js:149
 msgid "the walls are moist and moss-covered"
-msgstr ""
+msgstr "墙壁潮湿,在植被覆盖"
 
 #: script/events/setpieces.js:153
 msgid "squeeze"
-msgstr ""
+msgstr "挤压"
 
 #: script/events/setpieces.js:164
 msgid "the remains of an old camp sits just inside the cave."
-msgstr ""
+msgstr "一个坐在隔壁房间旧营地在洞内"
 
 #: script/events/setpieces.js:165
 msgid "bedrolls, torn and blackened, lay beneath a thin layer of dust."
-msgstr ""
+msgstr "睡袋、破损和发黑处理,底下一层薄薄的灰尘"
 
 #: script/events/setpieces.js:199
 msgid "the body of a wanderer lies in a small cavern."
-msgstr ""
+msgstr "该机构的一个飘泊者是在一个小洞穴"
 
 #: script/events/setpieces.js:200
 msgid "rot's been to work on it, and some of the pieces are missing."
-msgstr ""
+msgstr "因为一些腐烂的部分缺失"
 
 #: script/events/setpieces.js:201
 msgid "can't tell what left it here."
-msgstr ""
+msgstr "不能说出在这里左"
 
 #: script/events/setpieces.js:240
 msgid "the torch sputters and dies in the damp air"
-msgstr ""
+msgstr "死亡的火炬在潮湿空气"
 
 #: script/events/setpieces.js:241
 msgid "the darkness is absolute"
-msgstr ""
+msgstr "是绝对的黑暗"
 
 #: script/events/setpieces.js:243
 msgid "the torch goes out"
-msgstr ""
+msgstr "火炬熄灭"
 
 #: script/events/setpieces.js:298
 msgid "a cave lizard attacks"
-msgstr ""
+msgstr "一个洞穴蜥蜴攻击"
 
 #: script/events/setpieces.js:332
 msgid "a large beast charges out of the dark"
-msgstr ""
+msgstr "一个大型的野兽收费的暗"
 
 #: script/events/setpieces.js:366
 msgid "a giant lizard shambles forward"
-msgstr ""
+msgstr "满目疮痍的巨型蜥蜴转发"
 
 #: script/events/setpieces.js:394
 msgid "the nest of a large animal lies at the back of the cave."
-msgstr ""
+msgstr "在嵌套的是一个大型动物的背面的洞穴的"
 
 #: script/events/setpieces.js:436
 msgid "a small supply cache is hidden at the back of the cave."
-msgstr ""
+msgstr "一个小设备高速缓存是隐藏在洞穴的后部"
 
 #: script/events/setpieces.js:488
 msgid "an old case is wedged behind a rock, covered in a thick layer of dust."
