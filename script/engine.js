@@ -669,8 +669,8 @@
 	
 		switchLanguage: function(dom){
 			var lang = $(dom).data("language");
-			if(document.location.href.search(/[\?\&]lang=[a-z]+/) != -1){
-				document.location.href = document.location.href.replace( /([\?\&]lang=)([a-z]+)/gi , "$1"+lang );
+			if(document.location.href.search(/[\?\&]lang=[a-z_]+/) != -1){
+				document.location.href = document.location.href.replace( /([\?\&]lang=)([a-z_]+)/gi , "$1"+lang );
 			}else{
 				document.location.href = document.location.href + ( (document.location.href.search(/\?/) != -1 )?"&":"?") + "lang="+lang;
 			}
