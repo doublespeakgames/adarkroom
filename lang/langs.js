@@ -4,7 +4,7 @@ var langs = {
 	'es':'español',
 	'fr':'français',
 	'it':'italiano',
-	'kr':'한국어',
+	'ko':'한국어',
 	'pl':'polski',
 	'ru':'русский',
 	'sv':'svenska',

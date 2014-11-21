@@ -10,7 +10,7 @@ A Minimalist Text Adventure Game
   [French](http://adarkroom.doublespeakgames.com/?lang=fr)      |
   [German](http://adarkroom.doublespeakgames.com/?lang=de)      |
   [Italian](http://adarkroom.doublespeakgames.com/?lang=it)     |
-  [Korean](http://adarkroom.doublespeakgames.com/?lang=kr)      |
+  [Korean](http://adarkroom.doublespeakgames.com/?lang=ko)      |
   [Polish](http://adarkroom.doublespeakgames.com/?lang=pl)      |
   [Russian](http://adarkroom.doublespeakgames.com/?lang=ru)     |
   [Spanish](http://adarkroom.doublespeakgames.com/?lang=es)     |
