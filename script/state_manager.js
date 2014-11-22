@@ -142,7 +142,7 @@ var StateManager = {
 		if($SM.get(parentName) == undefined) $SM.set(parentName, {}, true);
 		
 		for(var k in list){
-			if(!$SM.add(parentName+'["'+k+'"]', list[k], true)) err++;
+			if($SM.add(parentName+'["'+k+'"]', list[k], true)) err++;
 		}
 		
 		if(!noEvent) {
@@ -346,12 +346,16 @@ var StateManager = {
 
 					var cost = income.stores;
 					var ok = true;
-					for(var k in cost) {
-						var have = $SM.get('stores["'+k+'"]', true);
-						if(have + cost[k] < 0) {
-							if(source != 'thieves') ok = false;
-						}
+					if (source != 'thieves') {
+					    for (var k in cost) {
+					        var have = $SM.get('stores["' + k + '"]', true);
+					        if (have + cost[k] < 0) {
+					            ok = false;
+					            break;
+					        }
+					    }
 					}
+					
 					if(ok){
 						$SM.addM('stores', income.stores, true);
 					}
@@ -372,7 +376,7 @@ var StateManager = {
 	addStolen: function(stores) {
 		for(var k in stores) {
 			var old = $SM.get('stores["'+k+'"]', true);
-			var short = old - stores[k];
+			var short = old + stores[k];
 			//if they would steal more than actually owned
 			if(short < 0){
 				$SM.add('game.stolen["'+k+'"]', (stores[k] * -1) + short);
