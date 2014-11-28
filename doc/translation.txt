@@ -22,8 +22,12 @@ Required tools:
    	     apt-get install python
 
 	windows:
-   	     windows: http://poedit.net/
+   	     http://poedit.net/
    	     https://www.python.org/download/windows/
+
+	mac:
+	    http://poedit.net
+	    https://www.python.org/downloads/mac-osx/
 
 Steps:
 1) Create a new directory lang/{new_language_code}
@@ -33,8 +37,8 @@ Steps:
   ubuntu:
 	msginit --locale {locale for new language eg: en_US} -i lang/adarkroom.pot -o lang/{new_language}/strings.po
   windows:
-        open application interface > File > New... > [select language for translation] > Save as... > lang/{new_language_code}/strings.po
-        [update from POT file] > select lang/adarkroom.pot
+        - open application interface > File > New... > [select language for translation] > Save as... > lang/{new_language_code}/strings.po
+        - [update from POT file] > select lang/adarkroom.pot
 
 4) Copy lang/main.css to lang/{new_language}
 5) Open lang/{new_language}/strings.po with a software poedit
@@ -65,7 +69,7 @@ Required tools:
 	ubuntu:
  	     apt-get install python3-babel
 
-	windows:
+	windows & mac:
   	     poedit
 
 Steps:
@@ -84,7 +88,7 @@ Required tools:
 
 	ubuntu:
  	     * gettext
-	windows:
+	windows & mac:
   	     * poedit
 
 

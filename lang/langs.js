@@ -10,5 +10,6 @@ var langs = {
 	'ru':'русский',
 	'sv':'svenska',
 	'tr':'türkçe',
-	'uk':'українська'
+	'uk':'українська’,
+	‘pg’:’português’
 };
