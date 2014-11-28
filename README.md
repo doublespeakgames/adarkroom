@@ -17,7 +17,8 @@ A Minimalist Text Adventure Game
   [Swedish](http://adarkroom.doublespeakgames.com/?lang=sv)   |
   [Turkish](http://adarkroom.doublespeakgames.com/?lang=tr)   |
   [Ukrainian](http://adarkroom.doublespeakgames.com/?lang=uk) |
-  [Portuguese](http://adarkroom.doublespeakgames.com/?lang=pg)
+  [Portuguese](http://adarkroom.doublespeakgames.com/?lang=pg)|
+  [Japanese](http://adarkroom.doublespeakgames.com/?lang=jp)
 ]
 
 
