@@ -5,7 +5,6 @@ A Minimalist Text Adventure Game
 
 [Click to play](http://adarkroom.doublespeakgames.com/)
 
-[
   <ul>
   <li>[Chinese](http://adarkroom.doublespeakgames.com/?lang=cn)</li>
   <li>[French](http://adarkroom.doublespeakgames.com/?lang=fr)</li> 
@@ -21,7 +20,6 @@ A Minimalist Text Adventure Game
   <li>[Portuguese](http://adarkroom.doublespeakgames.com/?lang=pg)</li>
   <li>[Japanese](http://adarkroom.doublespeakgames.com/?lang=jp)</li>
   </ul>
-]
 
 
 [Play on GitHub](http://continuities.github.io/adarkroom)
