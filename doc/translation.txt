@@ -1,80 +1,98 @@
  
-  HOWTO TRANSLATE 
-===================
+HOW TO TRANSLATE 
+=====================================================================
 
-**NOTE TO DEVELOPERS**: 
-- all strings sent to the page must go through the javascript function _() which will translate it. so please, if you add new strings, wrap them with _('') function.
-- if you want to add some strings in the css (using content), please, edit /script/localization.js too 
-- thank you :)
+** NOTE TO DEVELOPERS **: 
 
-  ADD A NEW LANGUAGE 
-======================
+All strings sent to the page must go through the javascript function _() which will translate it. So please if you add new strings, wrap them with _('') function.
+
+If you want to add some strings in the css (using content), please edit /script/localization.js too.
+
+Thank you :)
+
+
+ADDING A NEW LANGUAGE 
+=====================================================================
+
 Required tools:
 
-ubuntu:
-   apt-get install gettext
-   apt-get install poedit
-   apt-get install python
+	ubuntu:
+   	     apt-get install gettext
+   	     apt-get install poedit
+   	     apt-get install python
 
+	windows:
+   	     http://poedit.net/
+   	     https://www.python.org/download/windows/
 
-windows:
-   windows: http://poedit.net/
-   https://www.python.org/download/windows/
+	mac:
+	    http://poedit.net
+	    https://www.python.org/downloads/mac-osx/
 
+Steps:
+1) Create a new directory lang/{new_language_code}
+2) Download the file adarkroom.pot in the lang folder as translation template
+3) Create the new po file:
 
-- create a new directory lang/{new_language_code}
-- download the file adarkroom.pot in the lang folder as translation template
-- create the new po file:
   ubuntu:
 	msginit --locale {locale for new language eg: en_US} -i lang/adarkroom.pot -o lang/{new_language}/strings.po
   windows:
-        open application interface > File > New... > [select language for translation] > Save as... > lang/{new_language_code}/strings.po
-        [update from POT file] > select lang/adarkroom.pot
+        - open application interface > File > New... > [select language for translation] > Save as... > lang/{new_language_code}/strings.po
+        - [update from POT file] > select lang/adarkroom.pot
 
-- copy lang/main.css to lang/{new_language}
-- open lang/{new_language}/strings.po with a software poedit
-- translate ...
-- keep translating ...
-- finished ? sure ?
-- use the python script (/tools/po2js.py) to convert the po file to a js file
-  on windows it could be necessary to run the command prompt as Administrator 
-    Win Vista/7: start > right-click on command prompt > Run as Administrator
-    Win 8: File panel > mouse over Command prompt > click on Run command prompt as Administrator
-	python tools/po2js.py lang/{new_language}/strings.po
+4) Copy lang/main.css to lang/{new_language}
+5) Open lang/{new_language}/strings.po with a software poedit
+6) Translate ...
+7) Keep translating ...
+8) Finished? Sure?
+9) Use the python script (/tools/po2js.py) to convert the po file to a js file
 
-- edit README.md and add the following string: [{new_language_name}](http://adarkroom.doublespeakgames.com/?lang={new_language_code})
-- edit lang/langs.js and add the new language
+  	run from command line/terminal:
+	     python tools/po2js.py lang/{new_language}/strings.po
+  	Note:
+	     make sure to have polib module installed or the command line/terminal will give you an error
+	     polib can be downloaded and installed via the command line/terminal from the python website
+       on windows it could be necessary to run the command prompt as Administrator 
+       Win Vista/7: start > right-click on command prompt > Run as Administrator
+       Win 8: File panel > mouse over Command prompt > click on Run command prompt as Administrator
 
-- if your sentence are too big and you need to update some css, overload it in /lang/{new_language}/main.css
+10) Edit README.md and add the following string: [{new_language_name}](http://adarkroom.doublespeakgames.com/?lang={new_language_code})
+11) Edit lang/langs.js and add the new language
+
+Note: If your sentence are too big and you need to update some css, overload it in /lang/{new_language}/main.css
 
 
-   UPDATE TEMPLATEFILE
-======================
-When new content or changes in the code introduce new strings the file lang/adarkroom.pot must be updated.
+UPDATE TEMPLATE FILE
+=====================================================================
+
+When new content or changes in the code introduce new strings, the file lang/adarkroom.pot must be updated.
 
 Required tools:
 
-ubuntu:
-  apt-get install python3-babel
+	ubuntu:
+ 	     apt-get install python3-babel
 
-windows:
-  poedit
+	windows & mac:
+  	     poedit
 
-- ubuntu:
+Steps:
+  ubuntu:
 	pybabel extract -F babel.cfg -c "TRANSLATORS" script > lang/adarkroom.pot
+  
   windows:
 	use poedit
 	Use menu "Cataloge"-> "New Catalog from POT file..."
 
 
-  UPDATE LANGUAGE AFTER UPDATE
-===============================
+UPDATE LANGUAGE AFTER UPDATE
+=====================================================================
+
 Required tools:
 
-ubuntu:
-  * gettext
-windows:
-  * poedit
+	ubuntu:
+ 	     * gettext
+	windows & mac:
+  	     * poedit
 
 
 - ubuntu:
@@ -92,8 +110,9 @@ windows:
 - Edit in poedit as in "ADD A NEW LANGUAGE"
 
 
-  SETUP POEDIT
-=================
+SETUP POEDIT
+=====================================================================
+
 To update from source without pot file need:
 
 - Create new parser:
