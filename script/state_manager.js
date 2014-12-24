@@ -35,7 +35,8 @@ var StateManager = {
 			'timers',
 			'game', 		//mostly location related: fire temp, workers, population, world map, etc
 			'playStats',	//anything play related: play time, loads, etc
-			'previous' 		// prestige, score, trophies (in future), achievements (again, not yet), etc
+			'previous',		// prestige, score, trophies (in future), achievements (again, not yet), etc
+			'outfit'			// used to temporarily store the items to be taken on the path
 		];
 		
 		for(var which in cats) {

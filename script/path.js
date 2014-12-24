@@ -46,7 +46,7 @@ var Path = {
 			cooldown: World.DEATH_COOLDOWN
 		}).appendTo(this.panel);
 		
-		Path.outfit = {};
+		Path.outfit = $SM.get('outfit');
 		
 		Engine.updateSlider();
 		
@@ -269,6 +269,7 @@ var Path = {
 			var maxExtraByStore  = $SM.get('stores["'+supply+'"]', true) - cur;
 			var maxExtraByBtn    = btn.data;
 			Path.outfit[supply] = cur + Math.min(maxExtraByBtn, Math.min(maxExtraByWeight, maxExtraByStore));
+			$SM.set('outfit['+supply+']', Path.outfit[supply])
 			Path.updateOutfitting();
 		}
 	},
@@ -280,6 +281,7 @@ var Path = {
 		cur = typeof cur == 'number' ? cur : 0;
 		if(cur > 0) {
 			Path.outfit[supply] = Math.max(0, cur - btn.data);
+			$SM.set('outfit['+supply+']', Path.outfit[supply])
 			Path.updateOutfitting();
 		}
 	},
@@ -288,6 +290,7 @@ var Path = {
 		Path.setTitle();
 		Path.updateOutfitting();
 		Path.updatePerks(true);
+		$SM.set('outfit', Path.outfit);
 
 		Engine.moveStoresView($('#perks'), transition_diff);
 	},
@@ -300,6 +303,7 @@ var Path = {
 		for(var k in Path.outfit) {
 			$SM.add('stores["'+k+'"]', -Path.outfit[k]);
 		}
+		$SM.remove('outfit');
 		World.onArrival();
 		$('#outerSlider').animate({left: '-700px'}, 300);
 		Engine.activeModule = World;
