@@ -132,9 +132,9 @@ Events.Room = [
 				onLoad: function() {
 					var numWood = $SM.get('stores.wood', true);
 					numWood = Math.floor(numWood * 0.1);
-					if(numWood == 0) numWood = 1;
+					if(numWood === 0) numWood = 1;
 					var numScales = Math.floor(numWood / 5);
-					if(numScales == 0) numScales = 1;
+					if(numScales === 0) numScales = 1;
 					$SM.addM('stores', {'wood': -numWood, 'scales': numScales});
 				},
 				buttons: {
@@ -152,9 +152,9 @@ Events.Room = [
 				onLoad: function() {
 					var numWood = $SM.get('stores.wood', true);
 					numWood = Math.floor(numWood * 0.1);
-					if(numWood == 0) numWood = 1;
+					if(numWood === 0) numWood = 1;
 					var numTeeth = Math.floor(numWood / 5);
-					if(numTeeth == 0) numTeeth = 1;
+					if(numTeeth === 0) numTeeth = 1;
 					$SM.addM('stores', {'wood': -numWood, 'teeth': numTeeth});
 				},
 				buttons: {
@@ -172,9 +172,9 @@ Events.Room = [
 				onLoad: function() {
 					var numWood = $SM.get('stores.wood', true);
 					numWood = Math.floor(numWood * 0.1);
-					if(numWood == 0) numWood = 1;
+					if(numWood === 0) numWood = 1;
 					var numCloth = Math.floor(numWood / 5);
-					if(numCloth == 0) numCloth = 1;
+					if(numCloth === 0) numCloth = 1;
 					$SM.addM('stores', {'wood': -numWood, 'cloth': numCloth});
 				},
 				buttons: {
