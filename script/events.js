@@ -19,7 +19,7 @@ var Events = {
 		);
 		
 		// Build the Event Pool
-		Events.EventPool = new Array().concat(
+		Events.EventPool = [].concat(
 			Events.Global,
 			Events.Room,
 			Events.Outside
@@ -35,9 +35,7 @@ var Events = {
 	
 	options: {}, // Nothing for now
     
-	activeEvent: null,
 	activeScene: null,
-	eventPanel: null,
     
 	loadScene: function(name) {
 		Engine.log('loading scene: ' + name);
@@ -88,7 +86,7 @@ var Events = {
 		for(var k in World.Weapons) {
 			var weapon = World.Weapons[k];
 			if(typeof Path.outfit[k] == 'number' && Path.outfit[k] > 0) {
-				if(typeof weapon.damage != 'number' || weapon.damage == 0) {
+				if(typeof weapon.damage != 'number' || weapon.damage === 0) {
 					// Weapons that deal no damage don't count
 					numWeapons--;
 				} else if(weapon.cost){
@@ -104,13 +102,13 @@ var Events = {
 				Events.createAttackButton(k).appendTo(btns);
 			}
 		}
-		if(numWeapons == 0) {
+		if(numWeapons === 0) {
 			// No weapons? You can punch stuff!
 			Events.createAttackButton('fists').prependTo(btns);
 		}
 		
 		Events.createEatMeatButton().appendTo(btns);
-		if((Path.outfit['medicine'] || 0) != 0) {
+		if((Path.outfit['medicine'] || 0) !== 0) {
 			Events.createUseMedsButton().appendTo(btns);
 		}
 		
@@ -131,7 +129,7 @@ var Events = {
 			cost: { 'cured meat': 1 }
 		});
 		
-		if(Path.outfit['cured meat'] == 0) {
+		if(Path.outfit['cured meat'] === 0) {
 			Button.setDisabled(btn, true);
 		}
 		
@@ -151,7 +149,7 @@ var Events = {
 			cost: { 'medicine': 1 }
 		});
 		
-		if((Path.outfit['medicine'] || 0) == 0) {
+		if((Path.outfit['medicine'] || 0) === 0) {
 			Button.setDisabled(btn, true);
 		}
 		
@@ -203,7 +201,7 @@ var Events = {
 		if(Path.outfit['cured meat'] > 0) {
 			Path.outfit['cured meat']--;
 			World.updateSupplies();
-			if(Path.outfit['cured meat'] == 0) {
+			if(Path.outfit['cured meat'] === 0) {
 				Button.setDisabled($('#eat'), true);
 			}
 			
@@ -225,7 +223,7 @@ var Events = {
 		if(Path.outfit['medicine'] > 0) {
 			Path.outfit['medicine']--;
 			World.updateSupplies();
-			if(Path.outfit['medicine'] == 0) {
+			if(Path.outfit['medicine'] === 0) {
 				Button.setDisabled($('#meds'), true);
 			}
 			
@@ -286,7 +284,7 @@ var Events = {
 					if(!validWeapons) {
 						// enable or create the punch button
 						var fists = $('#attack_fists');
-						if(fists.length == 0) {
+						if(fists.length === 0) {
 							Events.createAttackButton('fists').prependTo('#buttons', Events.eventPanel());
 						} else {
 							Button.setDisabled(fists, false);
@@ -477,7 +475,7 @@ var Events = {
 						}).appendTo(btns));
 						
 						Events.createEatMeatButton(0).appendTo(btns);
-						if((Path.outfit['medicine'] || 0) != 0) {
+						if((Path.outfit['medicine'] || 0) !== 0) {
 							Events.createUseMedsButton(0).appendTo(btns);
 						}
 					}
@@ -542,7 +540,7 @@ var Events = {
 				var num = btn.data('numLeft');
 				num--;
 				btn.data('numLeft', num);
-				if(num == 0) {
+				if(num === 0) {
 					Button.setDisabled(btn);
 					btn.animate({'opacity':0}, 300, 'linear', function() {
 						$(this).remove();
@@ -764,7 +762,7 @@ var Events = {
 				}
 			}
 
-			if(possibleEvents.length == 0) {
+			if(possibleEvents.length === 0) {
 				Events.scheduleNextEvent(0.5);
 				return;
 			} else {

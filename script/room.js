@@ -720,7 +720,7 @@ var Room = {
 	
 	updateBuilderState: function() {
 		var lBuilder = $SM.get('game.builder.level');
-		if(lBuilder == 0) {
+		if(lBuilder === 0) {
 			Notifications.notify(Room, _("a ragged stranger stumbles through the door and collapses in the corner"));
 			lBuilder = $SM.setget('game.builder.level', 1);
 			setTimeout(Room.unlockForest, Room._NEED_WOOD_DELAY);
@@ -750,13 +750,13 @@ var Room = {
 		var stores = $('div#stores');
 		var weapons = $('div#weapons');
 		var needsAppend = false, wNeedsAppend = false, newRow = false;
-		if(stores.length == 0) {
+		if(stores.length === 0) {
 			stores = $('<div>').attr({
 				id: 'stores'
 			}).css('opacity', 0);
 			needsAppend = true;
 		}
-		if(weapons.length == 0) {
+		if(weapons.length === 0) {
 			weapons = $('<div>').attr({
 				id: 'weapons'
 			}).css('opacity', 0);
@@ -803,7 +803,7 @@ var Room = {
 				$SM.startThieves();
 			}
 			
-			if(row.length == 0 && num > 0) {
+			if(row.length === 0 && num > 0) {
 				row = $('<div>').attr('id', id).addClass('storeRow');
 				$('<div>').addClass('row_key').text(_(k)).appendTo(row);
 				$('<div>').addClass('row_val').text(Math.floor(num)).appendTo(row);
@@ -848,7 +848,7 @@ var Room = {
 	
 	updateIncomeView: function() {
 		var stores = $('div#stores');
-		if(stores.length == 0 || typeof $SM.get('income') == 'undefined') return;
+		if(stores.length === 0 || typeof $SM.get('income') == 'undefined') return;
 		$('div.storeRow', stores).each(function(index, el) {
 			el = $(el);
 			$('div.tooltip', el).remove();
@@ -857,7 +857,7 @@ var Room = {
 			for(var incomeSource in $SM.get('income')) {
 				var income = $SM.get('income["'+incomeSource+'"]');
 				for(var store in income.stores) {
-					if(store == storeName && income.stores[store] != 0) {
+					if(store == storeName && income.stores[store] !== 0) {
 						$('<div>').addClass('row_key').text(_(incomeSource)).appendTo(tt);
 						$('<div>')
 							.addClass('row_val')
@@ -967,7 +967,7 @@ var Room = {
 		}
 		if($SM.get('game.builder.level') < 4) return false;
 		var craftable = Room.Craftables[thing];
-		if(Room.needsWorkshop(craftable.type) && $SM.get('game.buildings["'+'workshop'+'"]', true) == 0) return false;
+		if(Room.needsWorkshop(craftable.type) && $SM.get('game.buildings["'+'workshop'+'"]', true) === 0) return false;
 		var cost = craftable.cost();
 		
 		//show button if one has already been built
@@ -1008,21 +1008,21 @@ var Room = {
 	updateBuildButtons: function() {
 		var buildSection = $('#buildBtns');
 		var needsAppend = false;
-		if(buildSection.length == 0) {
+		if(buildSection.length === 0) {
 			buildSection = $('<div>').attr('id', 'buildBtns').css('opacity', 0);
 			needsAppend = true;
 		}
 		
 		var craftSection = $('#craftBtns');
 		var cNeedsAppend = false;
-		if(craftSection.length == 0 && $SM.get('game.buildings["workshop"]', true) > 0) {
+		if(craftSection.length === 0 && $SM.get('game.buildings["workshop"]', true) > 0) {
 			craftSection = $('<div>').attr('id', 'craftBtns').css('opacity', 0);
 			cNeedsAppend = true;
 		}
 		
 		var buySection = $('#buyBtns');
 		var bNeedsAppend = false;
-		if(buySection.length == 0 && $SM.get('game.buildings["trading post"]', true) > 0) {
+		if(buySection.length === 0 && $SM.get('game.buildings["trading post"]', true) > 0) {
 			buySection = $('<div>').attr('id', 'buyBtns').css('opacity', 0);
 			bNeedsAppend = true;
 		}
@@ -1113,7 +1113,7 @@ var Room = {
 		} else if(e.category == 'income'){
 			Room.updateStoresView();
 			Room.updateIncomeView();
-		} else if(e.stateName.indexOf('game.buildings') == 0){
+		} else if(e.stateName.indexOf('game.buildings') === 0){
 			Room.updateBuildButtons();
 		}
 	}

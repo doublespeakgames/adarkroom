@@ -120,11 +120,11 @@
 					.addClass('customSelect')
 					.addClass('menuBtn')
 					.appendTo(menu);
-				var options = $('<span>')
+				var selectOptions = $('<span>')
 					.addClass('customSelectOptions')
 					.appendTo(customSelect);
 				var optionsList = $('<ul>')
-					.appendTo(options);
+					.appendTo(selectOptions);
 				$('<li>')
 					.text("language.")
 					.appendTo(optionsList);
@@ -339,7 +339,7 @@
 					}
 				}
 			});
-			Engine.autoSelect('#description textarea')
+			Engine.autoSelect('#description textarea');
 		},
 
 		import64: function(string64) {
@@ -462,7 +462,6 @@
 			var darkCss = Engine.findStylesheet('darkenLights');
 			if (darkCss == null) {
 				$('head').append('<link rel="stylesheet" href="css/dark.css" type="text/css" title="darkenLights" />');
-				Engine.turnLightsOff;
 				$('.lightsOff').text(_('lights on.'));
 			} else if (darkCss.disabled) {
 				darkCss.disabled = false;
