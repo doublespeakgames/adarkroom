@@ -476,8 +476,8 @@ var Room = {
 		
 		// If this is the first time playing, the fire is dead and it's freezing. 
 		// Otherwise grab past save state temp and fire level.
-		$SM.set('game.temperature', $SM.get('game.temperature.value')==undefined?this.TempEnum.Freezing:$SM.get('game.temperature'));
-		$SM.set('game.fire', $SM.get('game.fire.value')==undefined?this.FireEnum.Dead:$SM.get('game.fire'));
+		$SM.set('game.temperature', $SM.get('game.temperature.value')===undefined?this.TempEnum.Freezing:$SM.get('game.temperature'));
+		$SM.set('game.fire', $SM.get('game.fire.value')===undefined?this.FireEnum.Dead:$SM.get('game.fire'));
 		
 		// Create the room tab
 		this.tab = Header.addLocation(_("A Dark Room"), "room", Room);

@@ -100,7 +100,7 @@ var StateManager = {
 		$SM.buildPath(parentName);
 		
 		//make sure the state exists to avoid errors,
-		if($SM.get(parentName) == undefined) $SM.set(parentName, {}, true);
+		if($SM.get(parentName) === undefined) $SM.set(parentName, {}, true);
 		
 		for(var k in list){
 			$SM.set(parentName+'["'+k+'"]', list[k], true);
@@ -140,7 +140,7 @@ var StateManager = {
 		var err = 0;
 		
 		//make sure the parent exists to avoid errors
-		if($SM.get(parentName) == undefined) $SM.set(parentName, {}, true);
+		if($SM.get(parentName) === undefined) $SM.set(parentName, {}, true);
 		
 		for(var k in list){
 			if($SM.add(parentName+'["'+k+'"]', list[k], true)) err++;
@@ -200,7 +200,7 @@ var StateManager = {
 	
 	fireUpdate: function(stateName, save){
 		var category = $SM.getCategory(stateName);
-		if(stateName == undefined) stateName = category = 'all'; //best if this doesn't happen as it will trigger more stuff
+		if(stateName === undefined) stateName = category = 'all'; //best if this doesn't happen as it will trigger more stuff
 		$.Dispatch('stateUpdate').publish({'category': category, 'stateName':stateName});
 		if(save) Engine.saveGame();
 	},
