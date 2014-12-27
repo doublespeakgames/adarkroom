@@ -905,7 +905,7 @@ var World = {
 		x = typeof x == 'number' ? x : World.curPos[0];
 		y = typeof y == 'number' ? y : World.curPos[1];
 		var used = World.usedOutposts[x + ',' + y];
-		return typeof used != 'undefined' && used == true;
+		return typeof used != 'undefined' && used === true;
 	},
 	
 	useOutpost: function() {
