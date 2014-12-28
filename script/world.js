@@ -410,11 +410,11 @@ var World = {
 	checkDanger: function() {
 		World.danger = typeof World.danger == 'undefined' ? false: World.danger;
 		if(!World.danger) {
-			if(!$SM.get('stores["i armour"]', true) > 0 && World.getDistance() >= 8) {
+			if($SM.get('stores["i armour"]', true) === 0 && World.getDistance() >= 8) {
 				World.danger = true;
 				return true;
 			} 
-			if(!$SM.get('stores["s armour"]', true) > 0 && World.getDistance() >= 18) {
+			if($SM.get('stores["s armour"]', true) === 0 && World.getDistance() >= 18) {
 				World.danger = true;
 				return true;
 			}
