@@ -133,6 +133,13 @@ Events.Outside = [
 				],
 				blink: true,
 				buttons: {
+					/* Because there is a serious need for medicine, the price is raised. */
+					'buyMedicine': {
+						text: _('buy medicine'),
+						cost: { 'scales': 70,
+								'teeth': 50 },
+						reward: { 'medicine': 1 }
+					},
 					'heal': {
 						text: _('5 medicine'),
 						cost: { 'medicine' : 5 },
