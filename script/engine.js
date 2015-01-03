@@ -1,12 +1,6 @@
 (function() {
 	var Engine = window.Engine = {
 		
-		/* TODO *** MICHAEL IS A LAZY BASTARD AND DOES NOT WANT TO REFACTOR ***
-		 * Here is what he should be doing:
-		 * 	- All updating values (store numbers, incomes, etc...) should be objects that can register listeners to
-		 * 	  value-change events. These events should be fired whenever a value (or group of values, I suppose) is updated.
-		 * 	  That would be so elegant and awesome.
-		 */
 		SITE_URL: encodeURIComponent("http://adarkroom.doublespeakgames.com"),
 		VERSION: 1.3,
 		MAX_STORE: 99999999999999,
