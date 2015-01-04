@@ -345,7 +345,7 @@ var Events = {
 					dmg = 0;
 				} else {
 					msg = '-' + dmg;
-					enemyHp -= dmg;
+					enemyHp = ((enemyHp - dmg) < 0) ? 0 : (enemyHp - dmg);
 					enemy.data('hp', enemyHp);
 					if(fighter.attr('id') == 'enemy') {
 						World.setHp(enemyHp);
@@ -390,7 +390,7 @@ var Events = {
 					dmg = 0;
 				} else {
 					msg = '-' + dmg;
-					enemyHp -= dmg;
+					enemyHp = ((enemyHp - dmg) < 0) ? 0 : (enemyHp - dmg);
 					enemy.data('hp', enemyHp);
 					if(fighter.attr('id') == 'enemy') {
 						World.setHp(enemyHp);
