@@ -345,6 +345,9 @@ var Events = {
 					dmg = 0;
 				} else {
 					msg = '-' + dmg;
+					if (dmg >= enemyHp) {
+						dmg = enemyHp;
+					}
 					enemyHp -= dmg;
 					enemy.data('hp', enemyHp);
 					if(fighter.attr('id') == 'enemy') {
