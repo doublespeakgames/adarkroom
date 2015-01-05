@@ -200,7 +200,7 @@ var StateManager = {
 	
 	fireUpdate: function(stateName, save){
 		var category = $SM.getCategory(stateName);
-		if(stateName === undefined) stateName = category = 'all'; //best if this doesn't happen as it will trigger more stuff
+		if(stateName == undefined) stateName = category = 'all'; //best if this doesn't happen as it will trigger more stuff
 		$.Dispatch('stateUpdate').publish({'category': category, 'stateName':stateName});
 		if(save) Engine.saveGame();
 	},
