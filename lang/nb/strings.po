@@ -2,18 +2,18 @@
 # This file is distributed under the same license as the PROJECT project.
 # Jan Gerhard Schøpp <jgschoepp@gmail.com>, 2015.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: adarkroom\n"
 "POT-Creation-Date: 2015-02-01 20:15+0100\n"
-"PO-Revision-Date: 2015-02-01 20:15+0100\n"
+"PO-Revision-Date: 2015-02-03 19:10+0100\n"
 "Last-Translator: Jan Gerhard Schøpp <jgschoepp@gmail.com>\n"
 "Language-Team: \n"
 "Language: no\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
 
 #: script/dropbox.js:64
 msgid "Dropbox connection"
@@ -357,19 +357,18 @@ msgid "stunned"
 msgstr "lamslått"
 
 #: script/events.js:494 script/events/global.js:42 script/events/global.js:59
-#: script/events/room.js:142 script/events/room.js:162
-#: script/events/room.js:182 script/events/setpieces.js:25
-#: script/events/setpieces.js:48 script/events/setpieces.js:65
-#: script/events/setpieces.js:83 script/events/setpieces.js:106
-#: script/events/setpieces.js:535 script/events/setpieces.js:1253
-#: script/events/setpieces.js:2943 script/events/setpieces.js:2977
-#: script/events/setpieces.js:3000 script/events/setpieces.js:3037
-#: script/events/setpieces.js:3090 script/events/setpieces.js:3119
-#: script/events/setpieces.js:3165 script/events/setpieces.js:3292
-#: script/events/setpieces.js:3314 script/events/setpieces.js:3434
-#: script/events/setpieces.js:3458 script/events/setpieces.js:3491
-#: script/events/setpieces.js:3510 script/events/setpieces.js:3533
-#: script/events/setpieces.js:3561
+#: script/events/room.js:142 script/events/room.js:162 script/events/room.js:182
+#: script/events/setpieces.js:25 script/events/setpieces.js:48
+#: script/events/setpieces.js:65 script/events/setpieces.js:83
+#: script/events/setpieces.js:106 script/events/setpieces.js:535
+#: script/events/setpieces.js:1253 script/events/setpieces.js:2943
+#: script/events/setpieces.js:2977 script/events/setpieces.js:3000
+#: script/events/setpieces.js:3037 script/events/setpieces.js:3090
+#: script/events/setpieces.js:3119 script/events/setpieces.js:3165
+#: script/events/setpieces.js:3292 script/events/setpieces.js:3314
+#: script/events/setpieces.js:3434 script/events/setpieces.js:3458
+#: script/events/setpieces.js:3491 script/events/setpieces.js:3510
+#: script/events/setpieces.js:3533 script/events/setpieces.js:3561
 msgid "leave"
 msgstr "forlat"
 
@@ -795,10 +794,11 @@ msgstr "felle"
 
 #: script/room.js:25
 msgid ""
-"builder says she can make traps to catch any creatures might still be "
-"alive out there"
-msgstr "byggeren sier hun kan lage feller til å fange skapningene som "
-"kanskje enda er der ute"
+"builder says she can make traps to catch any creatures might still be alive out "
+"there"
+msgstr ""
+"byggeren sier hun kan lage feller til å fange skapningene som kanskje enda er der "
+"ute"
 
 #: script/room.js:26
 msgid "more traps to catch more creatures"
@@ -830,8 +830,7 @@ msgstr "byggeren sier det er flere vandrere. sier de vil jobbe også."
 
 #: script/room.js:54
 msgid "builder puts up a hut, out in the forest. says word will get around."
-msgstr "byggeren setter opp en liten hytte ute i skogen. "
-"sier ryktet vil spre seg."
+msgstr "byggeren setter opp en liten hytte ute i skogen. sier ryktet vil spre seg."
 
 #: script/room.js:55
 msgid "no more room for huts."
@@ -858,9 +857,7 @@ msgid "a trading post would make commerce easier"
 msgstr "et handelsområde ville gjort handel lettere"
 
 #: script/room.js:84
-msgid ""
-"now the nomads have a place to set up shop, they might stick around a "
-"while"
+msgid "now the nomads have a place to set up shop, they might stick around a while"
 msgstr "nå som nomadene har en plass å sette opp butikk vil de kanskje bli"
 
 #: script/room.js:94
@@ -880,11 +877,9 @@ msgid "smokehouse"
 msgstr "røykeri"
 
 #: script/room.js:111
-msgid ""
-"should cure the meat, or it'll spoil. builder says she can fix something "
-"up."
-msgstr "burde kurere kjøttet, ellers vil det råtne. bygger sier "
-"hun kan fikse en løsning."
+msgid "should cure the meat, or it'll spoil. builder says she can fix something up."
+msgstr ""
+"burde kurere kjøttet, ellers vil det råtne. bygger sier hun kan fikse en løsning."
 
 #: script/room.js:112
 msgid "builder finishes the smokehouse. she looks hungry."
@@ -896,8 +891,8 @@ msgstr "verksted"
 
 #: script/room.js:125
 msgid "builder says she could make finer things, if she had the tools"
-msgstr "byggeren sier hun kan lage finere ting, om hun "
-"bare hadde hatt det rette utstyret"
+msgstr ""
+"byggeren sier hun kan lage finere ting, om hun bare hadde hatt det rette utstyret"
 
 #: script/room.js:126
 msgid "workshop's finally ready. builder's excited to get to it"
@@ -1061,10 +1056,11 @@ msgstr "bålet er {0}"
 
 #: script/room.js:578
 msgid ""
-"the stranger is standing by the fire. she says she can help. says she "
-"builds things."
-msgstr "den fremmede står ved bålet. hun sier hun kanskje kan hjelpe. "
-"sier hun kanskje kan bygge ting."
+"the stranger is standing by the fire. she says she can help. says she builds "
+"things."
+msgstr ""
+"den fremmede står ved bålet. hun sier hun kanskje kan hjelpe. sier hun kanskje "
+"kan bygge ting."
 
 #: script/room.js:593
 msgid "freezing"
@@ -1136,13 +1132,12 @@ msgstr "ikke mer ved igjen"
 
 #: script/room.js:739
 msgid "a ragged stranger stumbles through the door and collapses in the corner"
-msgstr "en tynnslig kledd fremmed snubler seg inn igjennom døra og "
-"kollapser i hjørnet"
+msgstr ""
+"en tynnslig kledd fremmed snubler seg inn igjennom døra og kollapser i hjørnet"
 
 #: script/room.js:747
 msgid "the stranger shivers, and mumbles quietly. her words are unintelligible."
-msgstr "den fremmede skjelver, og mumler for seg selv. det hun sier er "
-"uforståelig"
+msgstr "den fremmede skjelver, og mumler for seg selv. det hun sier er uforståelig"
 
 #: script/room.js:750
 msgid "the stranger in the corner stops shivering. her breathing calms."
@@ -1166,7 +1161,7 @@ msgstr "Et Gammelt Romskip"
 
 #: script/ship.js:41
 msgid "hull:"
-msgstr "Skrog:"
+msgstr "skrog:"
 
 #: script/ship.js:48
 msgid "engine:"
@@ -1186,10 +1181,11 @@ msgstr "ta av"
 
 #: script/ship.js:101
 msgid ""
-"somewhere above the debris cloud, the wanderer fleet hovers. been on this"
-" rock too long."
-msgstr "et eller annet sted over rusk skyen venter vandrerens flåte. har vært "
-"på denne steinen alt for lenge."
+"somewhere above the debris cloud, the wanderer fleet hovers. been on this rock "
+"too long."
+msgstr ""
+"et eller annet sted over rusk skyen venter vandrerens flåte. har vært på denne "
+"steinen alt for lenge."
 
 #: script/ship.js:116 script/ship.js:129
 msgid "not enough alien alloy"
@@ -1377,15 +1373,16 @@ msgstr "trærne reduseres til tørt gress. de gule bladene rasler i vinden."
 
 #: script/world.js:585
 msgid "the trees are gone. parched earth and blowing dust are poor replacements."
-msgstr "trærne er borte. den tørre jorden og støvete vinden er en dårlig "
-"ærstattning"
+msgstr ""
+"trærne er borte. den tørre jorden og støvete vinden er en dårlig ærstattning"
 
 #: script/world.js:592
 msgid ""
-"trees loom on the horizon. grasses gradually yield to a forest floor of "
-"dry branches and fallen leaves."
-msgstr "trærne synes på horisonten. gresset blir gradvis tildekket av "
-"tørre kvister og fallne blader."
+"trees loom on the horizon. grasses gradually yield to a forest floor of dry "
+"branches and fallen leaves."
+msgstr ""
+"trærne synes på horisonten. gresset blir gradvis tildekket av tørre kvister og "
+"fallne blader."
 
 #: script/world.js:595
 msgid "the grasses thin. soon, only dust remains."
@@ -1397,10 +1394,11 @@ msgstr "tundraen stopper ved et hav av dødt gress, svaiende in den kalde brisen
 
 #: script/world.js:605
 msgid ""
-"a wall of gnarled trees rises from the dust. their branches twist into a "
-"skeletal canopy overhead."
-msgstr "en vegg av knudrete trær stiger opp fra støvet. grenene vrir seg "
-"til et skjelett-lignende tak."
+"a wall of gnarled trees rises from the dust. their branches twist into a skeletal "
+"canopy overhead."
+msgstr ""
+"en vegg av knudrete trær stiger opp fra støvet. grenene vrir seg til et skjelett-"
+"lignende tak."
 
 #: script/world.js:812
 msgid "Wanderer"
@@ -1615,11 +1613,10 @@ msgid "the villagers hang the thief high in front of the store room."
 msgstr "innbyggerne henger tyven etter halsen foran lagerrommet."
 
 #: script/events/global.js:33
-msgid ""
-"the point is made. in the next few days, the missing supplies are "
-"returned."
-msgstr "et poeng har blitt gjort av mannen. innen de neste få dagene, blir"
-"de savnede forsyningene returnert."
+msgid "the point is made. in the next few days, the missing supplies are returned."
+msgstr ""
+"et poeng har blitt gjort av mannen. innen de neste få dagene, blirde savnede "
+"forsyningene returnert."
 
 #: script/events/global.js:49
 msgid "the man says he's grateful. says he won't come around any more."
@@ -1649,8 +1646,7 @@ msgstr "noen av fellene har blitt ødelagt"
 msgid "track them"
 msgstr "følg dem"
 
-#: script/events/outside.js:30 script/events/room.js:71
-#: script/events/room.js:122
+#: script/events/outside.js:30 script/events/room.js:71 script/events/room.js:122
 msgid "ignore them"
 msgstr "ignorer dem"
 
@@ -1671,8 +1667,8 @@ msgstr "gå hjem"
 
 #: script/events/outside.js:49
 msgid "not far from the village lies a large beast, its fur matted with blood."
-msgstr "ikke langt fra landsbyen ligger et stort beist, "
-"og pelsen er dekket av blod."
+msgstr ""
+"ikke langt fra landsbyen ligger et stort beist, og pelsen er dekket av blod."
 
 #: script/events/outside.js:50
 msgid "it puts up little resistance before the knife."
@@ -1728,7 +1724,7 @@ msgstr "5 medisiner"
 
 #: script/events/outside.js:142
 msgid "do nothing"
-msgstr "gjør ingenting"
+msgstr "ikke gjør noe"
 
 #: script/events/outside.js:149
 msgid "the plague is kept from spreading."
@@ -1788,15 +1784,15 @@ msgstr "Nomaden"
 
 #: script/events/room.js:13
 msgid ""
-"a nomad shuffles into view, laden with makeshift bags bound with rough "
-"twine."
-msgstr "en nomade sysler inn i synsvinkel, med hjemmelagde sekker på ryggen "
-"festet med hyssing"
+"a nomad shuffles into view, laden with makeshift bags bound with rough twine."
+msgstr ""
+"en nomade sysler inn i synsvinkel, med hjemmelagde sekker på ryggen festet med "
+"hyssing"
 
 #: script/events/room.js:14
 msgid "won't say from where he came, but it's clear that he's not staying."
-msgstr "vil ikke si hvor han kom fra, men det er klart at han ikke "
-"kommer til å bli."
+msgstr ""
+"vil ikke si hvor han kom fra, men det er klart at han ikke kommer til å bli."
 
 #: script/events/room.js:16
 msgid "a nomad arrives, looking to trade"
@@ -1824,15 +1820,15 @@ msgstr "kjøp kompass"
 
 #: script/events/room.js:42
 msgid "the old compass is dented and dusty, but it looks to work."
-msgstr "det gamle kompasset er bulkete og støvete, men "
-"den ser ut til å være i fungerende stand."
+msgstr ""
+"det gamle kompasset er bulkete og støvete, men den ser ut til å være i fungerende "
+"stand."
 
 #: script/events/room.js:46 script/events/room.js:227 script/events/room.js:240
-#: script/events/room.js:253 script/events/room.js:305
-#: script/events/room.js:324 script/events/room.js:376
-#: script/events/room.js:395 script/events/room.js:434
-#: script/events/room.js:552 script/events/room.js:568
-#: script/events/room.js:584 script/events/room.js:595
+#: script/events/room.js:253 script/events/room.js:305 script/events/room.js:324
+#: script/events/room.js:376 script/events/room.js:395 script/events/room.js:434
+#: script/events/room.js:552 script/events/room.js:568 script/events/room.js:584
+#: script/events/room.js:595
 msgid "say goodbye"
 msgstr "si hadet bra"
 
@@ -1871,8 +1867,8 @@ msgstr "gå tilbake"
 
 #: script/events/room.js:91
 msgid "a bundle of sticks lies just beyond the threshold, wrapped in coarse furs."
-msgstr "en liten samling pinner ligger rett utenfor døråpningen, innpakket i "
-" grov pels"
+msgstr ""
+"en liten samling pinner ligger rett utenfor døråpningen, innpakket i  grov pels"
 
 #: script/events/room.js:92
 msgid "the night is silent."
@@ -1890,8 +1886,7 @@ msgstr "det er noe der."
 msgid "something's in the store room"
 msgstr "noe er inne i lager-rommet"
 
-#: script/events/room.js:129 script/events/room.js:149
-#: script/events/room.js:169
+#: script/events/room.js:129 script/events/room.js:149 script/events/room.js:169
 msgid "some wood is missing."
 msgstr "noe ved mangler."
 
@@ -1927,18 +1922,15 @@ msgstr "en tigger ankommer"
 msgid "give 50"
 msgstr "gi 50"
 
-#: script/events/room.js:209 script/events/room.js:276
-#: script/events/room.js:347
+#: script/events/room.js:209 script/events/room.js:276 script/events/room.js:347
 msgid "give 100"
 msgstr "gi 100"
 
-#: script/events/room.js:214 script/events/room.js:286
-#: script/events/room.js:466
+#: script/events/room.js:214 script/events/room.js:286 script/events/room.js:466
 msgid "turn him away"
 msgstr "få ham til å snu"
 
-#: script/events/room.js:222 script/events/room.js:235
-#: script/events/room.js:248
+#: script/events/room.js:222 script/events/room.js:235 script/events/room.js:248
 msgid "the beggar expresses his thanks."
 msgstr "tiggeren utrykker sin takknemlighet."
 
@@ -1960,10 +1952,11 @@ msgstr "Den Mystiske Vandreren"
 
 #: script/events/room.js:269
 msgid ""
-"a wanderer arrives with an empty cart. says if he leaves with wood, he'll"
-" be back with more."
-msgstr "en vandrer ankommer med en tom vogn. sier at hvis han reiser bort med "
-"ved kommer han tilbake med mer."
+"a wanderer arrives with an empty cart. says if he leaves with wood, he'll be back "
+"with more."
+msgstr ""
+"en vandrer ankommer med en tom vogn. sier at hvis han reiser bort med ved kommer "
+"han tilbake med mer."
 
 #: script/events/room.js:270
 msgid "builder's not sure he's to be trusted."
@@ -1987,10 +1980,11 @@ msgstr "den mystiske vandreren returnerer, vognen stablet høyt med ved."
 
 #: script/events/room.js:340
 msgid ""
-"a wanderer arrives with an empty cart. says if she leaves with furs, "
-"she'll be back with more."
-msgstr "en vandrer ankommer med en tom vogn, sier at hvis han reiser bort med "
-"pels vil hun komme tilbake med mer."
+"a wanderer arrives with an empty cart. says if she leaves with furs, she'll be "
+"back with more."
+msgstr ""
+"en vandrer ankommer med en tom vogn, sier at hvis han reiser bort med pels vil "
+"hun komme tilbake med mer."
 
 #: script/events/room.js:341
 msgid "builder's not sure she's to be trusted."
@@ -2104,13 +2098,11 @@ msgstr "mannen svelger medisinen ivrig"
 msgid "tell him to leave"
 msgstr "snu ham ryggen"
 
-#: script/events/room.js:543 script/events/room.js:559
-#: script/events/room.js:575
+#: script/events/room.js:543 script/events/room.js:559 script/events/room.js:575
 msgid "the man is thankful."
 msgstr "mannen er takknemlig."
 
-#: script/events/room.js:544 script/events/room.js:560
-#: script/events/room.js:576
+#: script/events/room.js:544 script/events/room.js:560 script/events/room.js:576
 msgid "he leaves a reward."
 msgstr "han legger igjen en belønning."
 
@@ -2199,7 +2191,7 @@ msgstr "munningen av hulen er vid og mørk"
 
 #: script/events/setpieces.js:96
 msgid "can't see what's inside."
-msgstr "kan ikke se hva som er inni.
+msgstr "kan ikke se hva som er inni"
 
 #: script/events/setpieces.js:98
 msgid "the earth here is split, as if bearing an ancient wound"
@@ -2334,10 +2326,10 @@ msgstr "en liten forstad kommer til syne, tomme hus svidde og nedbrent."
 
 #: script/events/setpieces.js:526
 msgid ""
-"broken streetlights stand, rusting. light hasn't graced this place in a "
-"long time."
-msgstr "ødelagte gatelykter står og ruster. lys har ikke prydet denne plassen "
-"på veldig lenge."
+"broken streetlights stand, rusting. light hasn't graced this place in a long time."
+msgstr ""
+"ødelagte gatelykter står og ruster. lys har ikke prydet denne plassen på veldig "
+"lenge."
 
 #: script/events/setpieces.js:528
 msgid "the town lies abandoned, its citizens long dead"
@@ -2349,8 +2341,8 @@ msgstr "utforsk"
 
 #: script/events/setpieces.js:543
 msgid ""
-"where the windows of the schoolhouse aren't shattered, they're blackened "
-"with soot."
+"where the windows of the schoolhouse aren't shattered, they're blackened with "
+"soot."
 msgstr "hvor vinduene i skolehuset ikke er knust, er de dekket av sort sot."
 
 #: script/events/setpieces.js:544
@@ -2401,10 +2393,10 @@ msgstr "en veltet campingvogn ligger spredd utover gata."
 
 #: script/events/setpieces.js:730
 msgid ""
-"it's been picked over by scavengers, but there's still some things worth "
-"taking."
-msgstr "den har blitt fraplukket av hjemløse, men det er fremdeles noen ting "
-"av verdi som kan bli tatt."
+"it's been picked over by scavengers, but there's still some things worth taking."
+msgstr ""
+"den har blitt fraplukket av hjemløse, men det er fremdeles noen ting av verdi som "
+"kan bli tatt."
 
 #: script/events/setpieces.js:792
 msgid "a madman attacks, screeching."
@@ -2476,10 +2468,9 @@ msgstr "hadde vært en skam å la det han har funnet gå til spille."
 
 #: script/events/setpieces.js:1127
 msgid ""
-"beneath the wanderer's rags, clutched in one of its many hands, a glint "
-"of steel."
-msgstr "under vandrerens filler, klemt inn i en av dens mange henner, et "
-"glimp av stål."
+"beneath the wanderer's rags, clutched in one of its many hands, a glint of steel."
+msgstr ""
+"under vandrerens filler, klemt inn i en av dens mange henner, et glimp av stål."
 
 #: script/events/setpieces.js:1128
 msgid "worth killing for, it seems."
@@ -2515,17 +2506,17 @@ msgstr "En Ruinert By"
 
 #: script/events/setpieces.js:1242
 msgid ""
-"a battered highway sign stands guard at the entrance to this once-great "
-"city."
-msgstr "et ødelagt motorvei-skilt vakter over inngangen til denne en gang "
-"flotte byen."
+"a battered highway sign stands guard at the entrance to this once-great city."
+msgstr ""
+"et ødelagt motorvei-skilt vakter over inngangen til denne en gang flotte byen."
 
 #: script/events/setpieces.js:1243
 msgid ""
-"the towers that haven't crumbled jut from the landscape like the ribcage "
-"of some ancient beast."
-msgstr "tårnene som ikke har falt enda kan sees fra landskapet, som ribbeina "
-"fra et eldgammelt beist."
+"the towers that haven't crumbled jut from the landscape like the ribcage of some "
+"ancient beast."
+msgstr ""
+"tårnene som ikke har falt enda kan sees fra landskapet, som ribbeina fra et "
+"eldgammelt beist."
 
 #: script/events/setpieces.js:1244
 msgid "might be things worth having still inside."
@@ -2813,10 +2804,9 @@ msgstr "den lille militær leiren er godt provisjonert."
 
 #: script/events/setpieces.js:2446
 msgid ""
-"arms and munitions, relics from the war, are neatly arranged on the "
-"store-room floor."
-msgstr "våpen og kuler, minner fra krigen, er organisert på "
-"lager-rommets gulv."
+"arms and munitions, relics from the war, are neatly arranged on the store-room "
+"floor."
+msgstr "våpen og kuler, minner fra krigen, er organisert på lager-rommets gulv."
 
 #: script/events/setpieces.js:2447
 msgid "just as deadly now as they were then."
@@ -2839,11 +2829,8 @@ msgid "the small settlement has clearly been burning a while."
 msgstr "denne lille landsbyen har brent en stund."
 
 #: script/events/setpieces.js:2523
-msgid ""
-"the bodies of the wanderers that lived here are still visible in the "
-"flames."
-msgstr "likene til vandrere som har bodd her er fremdeles synlige "
-"i flammene."
+msgid "the bodies of the wanderers that lived here are still visible in the flames."
+msgstr "likene til vandrere som har bodd her er fremdeles synlige i flammene."
 
 #: script/events/setpieces.js:2524
 msgid "still time to rescue a few supplies."
@@ -2983,8 +2970,7 @@ msgstr "de tok det de kom for, og gikk."
 
 #: script/events/setpieces.js:3105
 msgid ""
-"castoff from the mammoth drills can still be found by the edges of the "
-"precipice."
+"castoff from the mammoth drills can still be found by the edges of the precipice."
 msgstr "biter fra mammut-drillen kan fremdeles bli sett på kanten av stupet."
 
 #: script/events/setpieces.js:3128
@@ -3099,8 +3085,8 @@ msgstr "en gammel jerngruve er her, utstyr forlatt og latt ruste."
 
 #: script/events/setpieces.js:3447
 msgid ""
-"bleached bones are strewn about the entrance. many, deeply scored with "
-"jagged grooves."
+"bleached bones are strewn about the entrance. many, deeply scored with jagged "
+"grooves."
 msgstr "kritthvite ben er strødd utover inngangen. mange med dype skraper."
 
 #: script/events/setpieces.js:3448
