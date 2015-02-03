@@ -6,7 +6,7 @@ var langs = {
 	'it':'italiano',
 	'ja':'日本語',
 	'ko':'한국어',
-	'nb':'norsk (bokmål)'
+	'nb':'norsk',
 	'pl':'polski',
 	'pt':'português',
 	'ru':'русский',
