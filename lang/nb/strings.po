@@ -471,27 +471,27 @@ msgstr "kjøttmaker"
 
 #: script/localization.js:27 script/outside.js:53
 msgid "iron miner"
-msgstr "jern gruvearbeider"
+msgstr "jerngruve-arbeider"
 
 #: script/localization.js:28
 msgid "iron mine"
-msgstr "jern gruve"
+msgstr "jerngruve"
 
 #: script/localization.js:29 script/outside.js:61
 msgid "coal miner"
-msgstr "kull gruvearbeider"
+msgstr "kullgruve-arbeider"
 
 #: script/localization.js:30
 msgid "coal mine"
-msgstr "kull gruve"
+msgstr "kullgruve"
 
 #: script/localization.js:31 script/outside.js:69
 msgid "sulphur miner"
-msgstr "svovel gruvearbeider"
+msgstr "svovelgruve-arbeider"
 
 #: script/localization.js:32
 msgid "sulphur mine"
-msgstr "svovel gruve"
+msgstr "svovelgruve"
 
 #: script/localization.js:33 script/outside.js:86
 msgid "armourer"
@@ -1285,15 +1285,15 @@ msgstr "En&nbsp;Utpost"
 
 #: script/world.js:125
 msgid "Iron&nbsp;Mine"
-msgstr "Jern&nbsp;Gruve"
+msgstr "Jerngruve"
 
 #: script/world.js:126
 msgid "Coal&nbsp;Mine"
-msgstr "Kull&nbsp;Gruve"
+msgstr "Kullgruve"
 
 #: script/world.js:127
 msgid "Sulphur&nbsp;Mine"
-msgstr "Svovel&nbsp;Gruve"
+msgstr "Svovelgruve"
 
 #: script/world.js:128
 msgid "An&nbsp;Old&nbsp;House"
@@ -2613,434 +2613,436 @@ msgstr "gå ned"
 
 #: script/events/setpieces.js:1379
 msgid "the shot echoes in the empty street."
-msgstr ""
+msgstr "skuddet ringer gjennom de tomme gatene."
 
 #: script/events/setpieces.js:1419
 msgid "the soldier steps out from between the buildings, rifle raised."
-msgstr ""
+msgstr "soldaten stiger frem fra mellom byggningene, med geværet hevet."
 
 #: script/events/setpieces.js:1459
 msgid "a frail man stands defiantly, blocking the path."
-msgstr ""
+msgstr "en spinkel mann står standhaftig, og blokkerer stien."
 
 #: script/events/setpieces.js:1504
 msgid "nothing but downcast eyes."
-msgstr ""
+msgstr "ingenting annet enn synkede blikk."
 
 #: script/events/setpieces.js:1505
 msgid "the people here were broken a long time ago."
-msgstr ""
+msgstr "folket her ble ødelagt for lenge siden."
 
 #: script/events/setpieces.js:1520
 msgid "empty corridors."
-msgstr ""
+msgstr "tomme korridorer."
 
 #: script/events/setpieces.js:1521
 msgid "the place has been swept clean by scavengers."
-msgstr ""
+msgstr "plassen har blitt ribbet for verdisaker av hjemløse."
 
 #: script/events/setpieces.js:1535
 msgid "an old man bursts through a door, wielding a scalpel."
-msgstr ""
+msgstr "en gammel mann braser ut av en dør, og holder en skalpell."
 
 #: script/events/setpieces.js:1574
 msgid "a thug is waiting on the other side of the wall."
-msgstr ""
+msgstr "en raner venter på andre siden av veggen."
 
 #: script/events/setpieces.js:1614
 msgid "a snarling beast jumps out from behind a car."
-msgstr ""
+msgstr "et snerrende beist hopper frem fra bak en bil."
 
 #: script/events/setpieces.js:1655
 msgid "street above the subway platform is blown away."
-msgstr ""
+msgstr "gatene over tog-stasjonen er sprengt bort."
 
 #: script/events/setpieces.js:1656
 msgid "lets some light down into the dusty haze."
-msgstr ""
+msgstr "la oss få litt lys ned i denne støvete disen."
 
 #: script/events/setpieces.js:1657
 msgid "a sound comes from the tunnel, just ahead."
-msgstr ""
+msgstr "en lyd kommer fra tunnelen, rett forran."
 
 #: script/events/setpieces.js:1674
 msgid "looks like a camp of sorts up ahead."
-msgstr ""
+msgstr "ser ut som det er en leir rett fremover."
 
 #: script/events/setpieces.js:1675
 msgid "rusted chainlink is pulled across an alleyway."
-msgstr ""
+msgstr "rustet kjetting er spredd over inngangen til et smug."
 
 #: script/events/setpieces.js:1676
 msgid "fires burn in the courtyard beyond."
-msgstr ""
+msgstr "bål brenner i tunene fremover."
 
 #: script/events/setpieces.js:1692
 msgid "more voices can be heard ahead."
-msgstr ""
+msgstr "flere stemmer kan bli hørt."
 
 #: script/events/setpieces.js:1693
 msgid "they must be here for a reason."
-msgstr ""
+msgstr "de må være her for en grunn."
 
 #: script/events/setpieces.js:1709
 msgid "the sound of gunfire carries on the wind."
-msgstr ""
+msgstr "lyden av skudd blir båret av vinden."
 
 #: script/events/setpieces.js:1710
 msgid "the street ahead glows with firelight."
-msgstr ""
+msgstr "gatene fremover lyser av fakkellys."
 
 #: script/events/setpieces.js:1726
 msgid "more squatters are crowding around now."
-msgstr ""
+msgstr "flere hjemløse samler seg rundt nå."
 
 #: script/events/setpieces.js:1727
 msgid "someone throws a stone."
-msgstr ""
+msgstr "noen kaster en stein."
 
 #: script/events/setpieces.js:1743
 msgid "an improvised shop is set up on the sidewalk."
-msgstr ""
+msgstr "en improvisert butikk er satt opp på fortauet."
 
 #: script/events/setpieces.js:1744
 msgid "the owner stands by, stoic."
-msgstr ""
+msgstr "eieren står vesiden av, uten en eneste bekymring."
 
 #: script/events/setpieces.js:1789
 msgid "strips of meat hang drying by the side of the street."
-msgstr ""
+msgstr "biter med kjøtt henger for å tørke i gatekanten."
 
 #: script/events/setpieces.js:1790
 msgid "the people back away, avoiding eye contact."
-msgstr ""
+msgstr "folk ser bort, unngår øyekontakt."
 
 #: script/events/setpieces.js:1815
 msgid "someone has locked and barricaded the door to this operating theatre."
-msgstr ""
+msgstr "noen har låst og barrikadert døren til dette operasjonsrommet."
 
 #: script/events/setpieces.js:1830
 msgid "a tribe of elderly squatters is camped out in this ward."
-msgstr ""
+msgstr "en stamme med eldre hjemløse har slått leir i denne seksjonen."
 
 #: script/events/setpieces.js:1871
 msgid "a pack of lizards rounds the corner."
-msgstr ""
+msgstr "en flokk med øgler vender hjørnet."
 
 #: script/events/setpieces.js:1913
 msgid "strips of meat are hung up to dry in this ward."
-msgstr ""
+msgstr "biter med kjøtt er hengt opp for å tørke i denne seksjonen."
 
 #: script/events/setpieces.js:1937
 msgid "a large bird nests at the top of the stairs."
-msgstr ""
+msgstr "en stor fugl har lagt et rede på toppen av trappene."
 
 #: script/events/setpieces.js:1968
 msgid "the debris is denser here."
-msgstr ""
+msgstr "rusket er tettere her."
 
 #: script/events/setpieces.js:1969
 msgid "maybe some useful stuff in the rubble."
-msgstr ""
+msgstr "kanskje det er noen nyttige ting i steinspruten"
 
 #: script/events/setpieces.js:2008
 msgid "a swarm of rats rushes up the tunnel."
-msgstr ""
+msgstr "en sverm med rotter løper opp tunnellen."
 
 #: script/events/setpieces.js:2044
 msgid "a large man attacks, waving a bayonet."
-msgstr ""
+msgstr "en stor mann angriper, viftene med en bajonett."
 
 #: script/events/setpieces.js:2079
 msgid "a second soldier opens fire."
-msgstr ""
+msgstr "en annen soldat åpner ild."
 
 #: script/events/setpieces.js:2120
 msgid "a masked soldier rounds the corner, gun drawn"
-msgstr ""
+msgstr "en maskert soldat runder hjørne, med pistolen klar"
 
 #: script/events/setpieces.js:2161
 msgid "the crowd surges forward."
-msgstr ""
+msgstr "folkemengden beveger seg fremover."
 
 #: script/events/setpieces.js:2197
 msgid "a youth lashes out with a tree branch."
-msgstr ""
+msgstr "en ungdom svinger rundt seg med en grein."
 
 #: script/events/setpieces.js:2232
 msgid "a squatter stands firmly in the doorway of a small hut."
-msgstr ""
+msgstr "en hjemløs står bestemt i døråpningen til en liten hytte."
 
 #: script/events/setpieces.js:2267
 msgid "behind the door, a deformed figure awakes and attacks."
-msgstr ""
+msgstr "fra bak døren, våkner og angriper en deformert figur."
 
 #: script/events/setpieces.js:2307
 msgid "as soon as the door is open a little bit, hundreds of tentacles erupt."
-msgstr ""
+msgstr "så snart døren er litt åpnet, flyr hundrevis av tentakler ut."
 
 #: script/events/setpieces.js:2334
 msgid "bird must have liked shiney things."
-msgstr ""
+msgstr "fuglen må ha likt skinnende ting."
 
 #: script/events/setpieces.js:2335
 msgid "some good stuff woven into its nest."
-msgstr ""
+msgstr "noen gode ting er innvevd i redet."
 
 #: script/events/setpieces.js:2369
 msgid "not much here."
-msgstr ""
+msgstr "ikke så mye her."
 
 #: script/events/setpieces.js:2370
 msgid "scavengers must have gotten to this place already."
-msgstr ""
+msgstr "hjemløse må ha vært her fra før."
 
 #: script/events/setpieces.js:2399
 msgid "the tunnel opens up at another platform."
-msgstr ""
+msgstr "tunnellen åpner opp på en annen platform."
 
 #: script/events/setpieces.js:2400
 msgid "the walls are scorched from an old battle."
-msgstr ""
+msgstr "veggene er svidde fra en gammel kamp."
 
 #: script/events/setpieces.js:2401
 msgid "bodies and supplies from both sides litter the ground."
-msgstr ""
+msgstr "kroppene og provisjonene fra begge sider er strødd på bakken."
 
 #: script/events/setpieces.js:2445
 msgid "the small military outpost is well supplied."
-msgstr ""
+msgstr "den lille militær leiren er godt provisjonert."
 
 #: script/events/setpieces.js:2446
 msgid ""
 "arms and munitions, relics from the war, are neatly arranged on the "
 "store-room floor."
-msgstr ""
+msgstr "våpen og kuler, minner fra krigen, er organisert på "
+"lager-rommets gulv."
 
 #: script/events/setpieces.js:2447
 msgid "just as deadly now as they were then."
-msgstr ""
+msgstr "like dødlig nå som de var da."
 
 #: script/events/setpieces.js:2481
 msgid "searching the bodies yields a few supplies."
-msgstr ""
+msgstr "å lete gjennom kroppene gir noen få provisjoner."
 
 #: script/events/setpieces.js:2482
 msgid "more soldiers will be on their way."
-msgstr ""
+msgstr "flere soldater er på vei."
 
 #: script/events/setpieces.js:2483
 msgid "time to move on."
-msgstr ""
+msgstr "på tide å gå videre."
 
 #: script/events/setpieces.js:2522
 msgid "the small settlement has clearly been burning a while."
-msgstr ""
+msgstr "denne lille landsbyen har brent en stund."
 
 #: script/events/setpieces.js:2523
 msgid ""
 "the bodies of the wanderers that lived here are still visible in the "
 "flames."
-msgstr ""
+msgstr "likene til vandrere som har bodd her er fremdeles synlige "
+"i flammene."
 
 #: script/events/setpieces.js:2524
 msgid "still time to rescue a few supplies."
-msgstr ""
+msgstr "det er fremdeles tid til å redde noen provisjoner."
 
 #: script/events/setpieces.js:2558
 msgid "the remaining settlers flee from the violence, their belongings forgotten."
-msgstr ""
+msgstr "de resterende innbyggerne rømmer fra volden, deres eiendeler glemt."
 
 #: script/events/setpieces.js:2559
 msgid "there's not much, but some useful things can still be found."
-msgstr ""
+msgstr "det er ikke mye, men det er noen nyttige ting som kan bli funnet."
 
 #: script/events/setpieces.js:2593
 msgid "the young settler was carrying a canvas sack."
-msgstr ""
+msgstr "den unge innbyggeren bar en stor sekk."
 
 #: script/events/setpieces.js:2594
 msgid "it contains travelling gear, and a few trinkets."
-msgstr ""
+msgstr "den inneholder overlevelses utstyr, og noen få småting."
 
 #: script/events/setpieces.js:2595 script/events/setpieces.js:2631
 msgid "there's nothing else here."
-msgstr ""
+msgstr "her er det ikke noe nytt."
 
 #: script/events/setpieces.js:2629
 msgid "inside the hut, a child cries."
-msgstr ""
+msgstr "inne i hytten, gråter et lite barn."
 
 #: script/events/setpieces.js:2630
 msgid "a few belongings rest against the walls."
-msgstr ""
+msgstr "noen få eiendeler er lent mot veggen."
 
 #: script/events/setpieces.js:2670
 msgid "the stench of rot and death fills the operating theatres."
-msgstr ""
+msgstr "stanken av rott og død fyller operasjonsrommene."
 
 #: script/events/setpieces.js:2671
 msgid "a few items are scattered on the ground."
-msgstr ""
+msgstr "noen få ting er spredd på bakken."
 
 #: script/events/setpieces.js:2672
 msgid "there is nothing else here."
-msgstr ""
+msgstr "her er det ikke noe nytt."
 
 #: script/events/setpieces.js:2711
 msgid "a pristine medicine cabinet at the end of a hallway."
-msgstr ""
+msgstr "et uberørt medisinskap står i enden av hallen."
 
 #: script/events/setpieces.js:2712
 msgid "the rest of the hospital is empty."
-msgstr ""
+msgstr "resten av sykehuset er tomt."
 
 #: script/events/setpieces.js:2746
 msgid "someone had been stockpiling loot here."
-msgstr ""
+msgstr "noen har samlet det de har funnet her."
 
 #: script/events/setpieces.js:2795
 msgid "the tentacular horror is defeated."
-msgstr ""
+msgstr "tentakkel-monsteret er beseiret."
 
 #: script/events/setpieces.js:2796
 msgid "inside, the remains of its victims are everywhere."
-msgstr ""
+msgstr "inni, restene av ofrene er over alt."
 
 #: script/events/setpieces.js:2840
 msgid "the warped man lies dead."
-msgstr ""
+msgstr "den vridde mannen er død."
 
 #: script/events/setpieces.js:2841
 msgid "the operating theatre has a lot of curious equipment."
-msgstr ""
+msgstr "operasjonsrommet har masse utstyr."
 
 #: script/events/setpieces.js:2885
 msgid "the old man had a small cache of interesting items."
-msgstr ""
+msgstr "den gamle mannen har en liten boks med interesante ting."
 
 #: script/events/setpieces.js:2929
 msgid "An Old House"
-msgstr ""
+msgstr "Et Gammelt Hus"
 
 #: script/events/setpieces.js:2933
 msgid "an old house remains here, once white siding yellowed and peeling."
-msgstr ""
+msgstr "et gammelt hus ligger her, de en gang hvite veggene gule og flassende."
 
 #: script/events/setpieces.js:2934
 msgid "the door hangs open."
-msgstr ""
+msgstr "døra henger åpen."
 
 #: script/events/setpieces.js:2936
 msgid "the remains of an old house stand as a monument to simpler times"
-msgstr ""
+msgstr "restene fra et gammelt hus står som et monument til en simplere tid"
 
 #: script/events/setpieces.js:2950
 msgid "the house is abandoned, but not yet picked over."
-msgstr ""
+msgstr "huset står forlatt, men ingen har ransakt det."
 
 #: script/events/setpieces.js:2951
 msgid "still a few drops of water in the old well."
-msgstr ""
+msgstr "fremdeles noen dråper vann i den gamle brønnen også."
 
 #: script/events/setpieces.js:2985
 msgid "the house has been ransacked."
-msgstr ""
+msgstr "det gamle huset har blitt ransakt."
 
 #: script/events/setpieces.js:2986
 msgid "but there is a cache of medicine under the floorboards."
-msgstr ""
+msgstr "men det er fremdeles en boks med medisiner under gulvplankene."
 
 #: script/events/setpieces.js:3014
 msgid "a man charges down the hall, a rusty blade in his hand"
-msgstr ""
+msgstr "en mann braser nedover gangen, med en rusten kniv i hånda"
 
 #: script/events/setpieces.js:3046
 msgid "A Forgotten Battlefield"
-msgstr ""
+msgstr "Et Glømt Stridsområde"
 
 #: script/events/setpieces.js:3050
 msgid "a battle was fought here, long ago."
-msgstr ""
+msgstr "en krig ble utkjempet her, for lenge siden."
 
 #: script/events/setpieces.js:3051
 msgid "battered technology from both sides lays dormant on the blasted landscape."
-msgstr ""
+msgstr "ødelagt teknologi fra begge sider ligger stille på det sprengte landskapet."
 
 #: script/events/setpieces.js:3099
 msgid "A Huge Borehole"
-msgstr ""
+msgstr "Et Digert Borehull"
 
 #: script/events/setpieces.js:3103
 msgid "a huge hole is cut deep into the earth, evidence of the past harvest."
-msgstr ""
+msgstr "et digert hull er borret dypt inn i jorda, som beviset på gammel høsting."
 
 #: script/events/setpieces.js:3104
 msgid "they took what they came for, and left."
-msgstr ""
+msgstr "de tok det de kom for, og gikk."
 
 #: script/events/setpieces.js:3105
 msgid ""
 "castoff from the mammoth drills can still be found by the edges of the "
 "precipice."
-msgstr ""
+msgstr "biter fra mammut-drillen kan fremdeles bli sett på kanten av stupet."
 
 #: script/events/setpieces.js:3128
 msgid "A Crashed Ship"
-msgstr ""
+msgstr "Et Krasjet Skip"
 
 #: script/events/setpieces.js:3137
 msgid "the familiar curves of a wanderer vessel rise up out of the dust and ash. "
-msgstr ""
+msgstr "de kjente linjene fra et vandrer-skip stiger frem fra støvet og asken."
 
 #: script/events/setpieces.js:3138
 msgid "lucky that the natives can't work the mechanisms."
-msgstr ""
+msgstr "heldigvis kan ikke de lokale bruke mekanismene."
 
 #: script/events/setpieces.js:3139
 msgid "with a little effort, it might fly again."
-msgstr ""
+msgstr "med litt innsats."
 
 #: script/events/setpieces.js:3143
 msgid "salvage"
-msgstr ""
+msgstr "berg deler"
 
 #: script/events/setpieces.js:3151
 msgid "The Sulphur Mine"
-msgstr ""
+msgstr "Svolelgruve"
 
 #: script/events/setpieces.js:3155
 msgid "the military is already set up at the mine's entrance."
-msgstr ""
+msgstr "militæret har allerede satt opp leir ved gruvens inngang."
 
 #: script/events/setpieces.js:3156
 msgid "soldiers patrol the perimeter, rifles slung over their shoulders."
-msgstr ""
+msgstr "soldater patruljerer området, med geværene slengt over skuldrene."
 
 #: script/events/setpieces.js:3158
 msgid "a military perimeter is set up around the mine."
-msgstr ""
+msgstr "en militært område er allerede satt opp rundt gruven."
 
 #: script/events/setpieces.js:3161 script/events/setpieces.js:3310
 msgid "attack"
-msgstr ""
+msgstr "angrip"
 
 #: script/events/setpieces.js:3196
 msgid "a soldier, alerted, opens fire."
-msgstr ""
+msgstr "en soldat, varslet, åpner ild."
 
 #: script/events/setpieces.js:3204 script/events/setpieces.js:3244
 #: script/events/setpieces.js:3347 script/events/setpieces.js:3381
 msgid "run"
-msgstr ""
+msgstr "løp"
 
 #: script/events/setpieces.js:3236
 msgid "a second soldier joins the fight."
-msgstr ""
+msgstr "en annen soldat blir med i kampen."
 
 #: script/events/setpieces.js:3270
 msgid "a grizzled soldier attacks, waving a bayonet."
-msgstr ""
+msgstr "en gråsprengt soldat angriper, veivende med en bajonett."
 
 #: script/events/setpieces.js:3281
 msgid "the military presence has been cleared."
@@ -3049,110 +3051,110 @@ msgstr ""
 #: script/events/setpieces.js:3282 script/events/setpieces.js:3424
 #: script/events/setpieces.js:3500
 msgid "the mine is now safe for workers."
-msgstr ""
+msgstr "gruven er tryggere for arbeiderne nå."
 
 #: script/events/setpieces.js:3284
 msgid "the sulphur mine is clear of dangers"
-msgstr ""
+msgstr "svovelgruven er fri for fare"
 
 #: script/events/setpieces.js:3300
 msgid "The Coal Mine"
-msgstr ""
+msgstr "Kullgruven"
 
 #: script/events/setpieces.js:3304
 msgid "camp fires burn by the entrance to the mine."
-msgstr ""
+msgstr "leir bålene brenner ved inngangen til gruven."
 
 #: script/events/setpieces.js:3305
 msgid "men mill about, weapons at the ready."
-msgstr ""
+msgstr "menn staver rundt, klar med våpnene."
 
 #: script/events/setpieces.js:3307
 msgid "this old mine is not abandoned"
-msgstr ""
+msgstr "denne gamle gruven er ikke forlatt"
 
 #: script/events/setpieces.js:3339 script/events/setpieces.js:3373
 msgid "a man joins the fight"
-msgstr ""
+msgstr "en mann blir med i kampen"
 
 #: script/events/setpieces.js:3412
 msgid "only the chief remains."
-msgstr ""
+msgstr "bare sjefen gjennstår."
 
 #: script/events/setpieces.js:3423
 msgid "the camp is still, save for the crackling of the fires."
-msgstr ""
+msgstr "hulen er rolig, bare lav knittring fra bålene."
 
 #: script/events/setpieces.js:3426
 msgid "the coal mine is clear of dangers"
-msgstr ""
+msgstr "kullgruven er fri for fare"
 
 #: script/events/setpieces.js:3442
 msgid "The Iron Mine"
-msgstr ""
+msgstr "Jerngruven"
 
 #: script/events/setpieces.js:3446
 msgid "an old iron mine sits here, tools abandoned and left to rust."
-msgstr ""
+msgstr "en gammel jerngruve er her, utstyr forlatt og latt ruste."
 
 #: script/events/setpieces.js:3447
 msgid ""
 "bleached bones are strewn about the entrance. many, deeply scored with "
 "jagged grooves."
-msgstr ""
+msgstr "kritthvite ben er strødd utover inngangen. mange med dype skraper."
 
 #: script/events/setpieces.js:3448
 msgid "feral howls echo out of the darkness."
-msgstr ""
+msgstr "vilde hyl ekkoer ut av mørket."
 
 #: script/events/setpieces.js:3450
 msgid "the path leads to an abandoned mine"
-msgstr ""
+msgstr "stien leder til en forlatt gruve"
 
 #: script/events/setpieces.js:3488
 msgid "a large creature lunges, muscles rippling in the torchlight"
-msgstr ""
+msgstr "et stort udyr bykser frem, musklene flerrende i fakkellyset"
 
 #: script/events/setpieces.js:3499
 msgid "the beast is dead."
-msgstr ""
+msgstr "beistet er dødt"
 
 #: script/events/setpieces.js:3502
 msgid "the iron mine is clear of dangers"
-msgstr ""
+msgstr "jerngruven er fri for fare"
 
 #: script/events/setpieces.js:3519
 msgid "A Destroyed Village"
-msgstr ""
+msgstr "En Ødelagt Landsby"
 
 #: script/events/setpieces.js:3523
 msgid "a destroyed village lies in the dust."
-msgstr ""
+msgstr "en ødelagt landsby ligger i støvet."
 
 #: script/events/setpieces.js:3524
 msgid "charred bodies litter the ground."
-msgstr ""
+msgstr "forkullede lik er spredd utover bakken."
 
 #: script/events/setpieces.js:3526
 msgid "the metallic tang of wanderer afterburner hangs in the air."
-msgstr ""
+msgstr "den metalliske lukten av vandrers etterbrennere henger i luften."
 
 #: script/events/setpieces.js:3540
 msgid "a shack stands at the center of the village."
-msgstr ""
+msgstr "en hytte står i midten av landsbyen."
 
 #: script/events/setpieces.js:3541
 msgid "there are still supplies inside."
-msgstr ""
+msgstr "det er enda provisjoner inni."
 
 #: script/events/setpieces.js:3545
 msgid "take"
-msgstr ""
+msgstr "ta dem"
 
 #: script/events/setpieces.js:3552
 msgid "all the work of a previous generation is here."
-msgstr ""
+msgstr "alt arbeidet fra en tidligere generasjon er her."
 
 #: script/events/setpieces.js:3553
 msgid "ripe for the picking."
-msgstr ""
+msgstr "det er bare å plukke."
