@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2014-09-27 12:34+0200\n"
-"PO-Revision-Date: 2015-02-05 23:40+0100\n"
+"PO-Revision-Date: 2015-02-06 00:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: vi\n"
@@ -710,7 +710,7 @@ msgstr "thành phố đang rung chuyển, tin tức đang loan nhanh."
 
 #: script/outside.js:425
 msgid "pop "
-msgstr "bốp"
+msgstr "dân số "
 
 #: script/outside.js:516
 msgid "check traps"
@@ -750,7 +750,7 @@ msgstr "bẫy chứa "
 
 #: script/outside.js:598
 msgid " and "
-msgstr "và"
+msgstr " và "
 
 #: script/path.js:33 script/path.js:309
 msgid "A Dusty Path"
@@ -841,7 +841,7 @@ msgstr "hết chỗ đặt lều rồi."
 
 #: script/room.js:65
 msgid "lodge"
-msgstr "túp lều"
+msgstr "trạm săn bắt"
 
 #: script/room.js:68
 msgid "villagers could help hunt, given the means"
@@ -849,7 +849,7 @@ msgstr "dân làng có thể giúp ta săn bắt, ý nghĩa hơn đó."
 
 #: script/room.js:69
 msgid "the hunting lodge stands in the forest, a ways out of town"
-msgstr "túp lều nằm sâu trong rừng, rất xa, rất xa thành phố"
+msgstr "trạm săn bắt nằm sâu trong rừng, rất xa, rất xa phố"
 
 #: script/room.js:80
 msgid "trading post"
@@ -1802,7 +1802,7 @@ msgstr ""
 
 #: script/events/room.js:14
 msgid "won't say from where he came, but it's clear that he's not staying."
-msgstr "sẽ không nói hắn từ đâu đến, nhưng hắn rõ ràng là không nán lại"
+msgstr "hắn sẽ không nói hắn từ đâu đến, nhưng hắn rõ ràng là không nán lại"
 
 #: script/events/room.js:16
 msgid "a nomad arrives, looking to trade"
