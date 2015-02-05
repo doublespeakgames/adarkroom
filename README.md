@@ -14,7 +14,7 @@ Available | Languages
 [Polish](http://adarkroom.doublespeakgames.com/?lang=pl) | [Portuguese](http://adarkroom.doublespeakgames.com/?lang=pt)
 [Russian](http://adarkroom.doublespeakgames.com/?lang=ru) | [Spanish](http://adarkroom.doublespeakgames.com/?lang=es)
 [Swedish](http://adarkroom.doublespeakgames.com/?lang=sv) | [Turkish](http://adarkroom.doublespeakgames.com/?lang=tr)
-[Ukrainian](http://adarkroom.doublespeakgames.com/?lang=uk) | 
+[Ukrainian](http://adarkroom.doublespeakgames.com/?lang=uk) | [Vietnamese] (http://adarkroom.doublespeakgames.com/?lang=vi)
 
 
 [Play on GitHub](http://continuities.github.io/adarkroom)

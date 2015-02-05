@@ -13,5 +13,6 @@ var langs = {
 	'sv':'svenska',
 	'tr':'türkçe',
 	'uk':'українська',
+	'vi':'tiếng việt',
 	'zh_cn':'简体中文'
 };
