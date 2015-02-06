@@ -49,7 +49,37 @@ Events.Room = [
 				}
 			}
 		}
-	}, { /* Noises Outside  --  gain wood/fur */
+	}, 
+	{
+		title: _('Fire'),
+		isAvailable: function() { 
+			return $SM.get('game.buildings["hut"]', true) > 0 && $SM.get('game.population', true) > 5;
+		},
+		scenes: {
+			'start': {
+				text: [
+					_('A fire rampages through one of your huts, destroying it.'),
+					_('Saddly, all residents in the hut perished in the fire.')
+				],
+				notification: _('A fire has started'),
+				blink: true,
+				onLoad: function() {
+                                        var population = $SM.get('game.population', true);
+					var huts = $SM.get('game.buildings["hut"]', true);
+					$SM.set('game.buildings["hut"]', (huts - 1));
+					$SM.set('game.population', (population - 4));
+                                },
+				buttons: {
+					'mourn': {
+						text: _('Mourn'),
+						notification: _('Some villagers have died'),
+						nextScene: 'end'
+					}
+				}
+			}
+		}
+	},
+	{ /* Noises Outside  --  gain wood/fur */
 		title: _('Noises'),
 		isAvailable: function() {
 			return Engine.activeModule == Room && $SM.get('stores.wood');
