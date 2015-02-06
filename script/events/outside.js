@@ -63,7 +63,35 @@ Events.Outside = [
 			}
 		}
 	},
-
+	{
+		title: _('Fire'),
+		isAvailable: function() {
+			return $SM.get('game.buildings["hut"]', true) > 0 && $SM.get('game.population', true) > 5;
+		},
+		scenes: {
+			'start': {
+				text: [
+					_('a fire rampages through one of the huts, destroying it.'),
+					_('all residents in the hut perished in the fire.')
+				],
+				notification: _('a fire has started'),
+				blink: true,
+				onLoad: function() {
+					var population = $SM.get('game.population', true);
+					var huts = $SM.get('game.buildings["hut"]', true);
+					$SM.set('game.buildings["hut"]', (huts - 1));
+					$SM.set('game.population', (population - 4));
+				},
+				buttons: {
+					'mourn': {
+						text: _('mourn'),
+						notification: _('some villagers have died'),
+						nextScene: 'end'
+					}
+				}
+			}
+		}
+	},
 	{ /* Sickness */
 		title: _('Sickness'),
 		isAvailable: function() {

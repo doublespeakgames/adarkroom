@@ -49,7 +49,8 @@ Events.Room = [
 				}
 			}
 		}
-	}, { /* Noises Outside  --  gain wood/fur */
+	}, 
+	{ /* Noises Outside  --  gain wood/fur */
 		title: _('Noises'),
 		isAvailable: function() {
 			return Engine.activeModule == Room && $SM.get('stores.wood');
