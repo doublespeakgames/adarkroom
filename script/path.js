@@ -1,7 +1,7 @@
 var Path = {
 		
 	DEFAULT_BAG_SPACE: 10,
-	
+	_STORES_OFFSET: 0,
 	// Everything not in this list weighs 1
 	Weight: {
 		'bone spear': 2,
@@ -116,7 +116,7 @@ var Path = {
 			}
 			
 			if(!ignoreStores && Engine.activeModule === Path) {
-				$('#storesContainer').css({top: perks.height() + 26 + 'px'});
+				$('#storesContainer').css({top: perks.height() + 26 + Path._STORES_OFFSET + 'px'});
 			}
 		}
 	},
@@ -313,5 +313,35 @@ var Path = {
 		if(e.category == 'character' && e.stateName.indexOf('character.perks') == 0 && Engine.activeModule == Path){
 			Path.updatePerks();
 		};
+	},
+
+	scrollSidebar: function(direction, reset){
+
+		if( typeof reset != "undefined" ){
+			$('#perks').css('top', '0px');
+			$('#storesContainer').css('top', '206px');
+			Path._STORES_OFFSET = 0;
+			return;
+		}
+		
+		var momentum = 10;
+
+		if( direction == 'up' )
+			momentum = momentum * -1
+
+		if( direction == 'down' && inView( direction, $('#perks') ) ){
+
+			return false;
+
+		}else if( direction == 'up' && inView( direction, $('#storesContainer') ) ){
+
+			return false;
+
+		}
+
+		scrollByX( $('#perks'), momentum );
+		scrollByX( $('#storesContainer'), momentum );
+		Path._STORES_OFFSET += momentum;
+
 	}
 };

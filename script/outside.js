@@ -631,13 +631,13 @@ var Outside = {
 
 		/* Let's stop scrolling if the top or bottom bound is in the viewport, based on direction */
 		if( direction == 'down' && inView( direction, $('#village') ) ){
-			console.log(direction);
-			console.log('IN VIEW');
+
 			return false;
+
 		}else if( direction == 'up' && inView( direction, $('#storesContainer') ) ){
-			console.log(direction);
-			console.log('IN VIEW');
+
 			return false;
+
 		}
 		
 		scrollByX( $('#village'), momentum );
@@ -646,28 +646,3 @@ var Outside = {
 
 	}
 };
-function inView(dir, elem){
-
-	var scTop = $('#main').offset().top;
-	var scBot = scTop + $('#main').height();
-	
-	var elTop = elem.offset().top;
-	var elBot = elTop + elem.height();
-
-	if( dir == 'up' ){
-		// STOP MOVING IF BOTTOM OF ELEMENT IS VISIBLE IN SCREEN
-		return ( elBot < scBot );
-	}else if( dir == 'down' ){
-		return ( elTop > scTop );
-	}else{
-		return ( ( elBot <= scBot ) && ( elTop >= scTop ) );
-	}
-
-}
-
-function scrollByX(elem, x){
-
-	var elTop = parseInt( elem.css('top'), 10 );
-	elem.css( 'top', ( elTop + x ) + "px" );
-
-}
