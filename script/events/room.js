@@ -71,7 +71,7 @@ Events.Room = [
                                 },
 				buttons: {
 					'mourn': {
-						text: _('Mourn'),
+						text: _('mourn'),
 						notification: _('some villagers have died'),
 						nextScene: 'end'
 					}
