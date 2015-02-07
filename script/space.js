@@ -166,7 +166,7 @@ var Space = {
 			}
 			
 			if(!Space.done) {
-				setTimeout(Space.createAsteroid, 1000 - (Space.altitude * 10));
+				Engine.setTimeout(Space.createAsteroid, 1000 - (Space.altitude * 10));
 			}
 		}
 	},
@@ -259,7 +259,7 @@ var Space = {
 			}
 		}, 1000);
 		
-		Space._panelTimeout = setTimeout(function() {
+		Space._panelTimeout = Engine.setTimeout(function() {
 			if (Engine.isLightsOff())
 				$('#spacePanel, .menu, select.menuBtn').animate({color: '#272823'}, 500, 'linear');
 			else
@@ -313,7 +313,7 @@ var Space = {
 			left: left
 		}).appendTo(el2);
 		if(num < Space.NUM_STARS) {
-			setTimeout(function() { Space.drawStarAsync(el, el2, num + 1); }, 100);
+			Engine.setTimeout(function() { Space.drawStarAsync(el, el2, num + 1); }, 100);
 		}
 	},
 	
@@ -382,7 +382,7 @@ var Space = {
 			top: '350px',
 			left: '240px'
 		}, 3000, 'linear', function() {
-			setTimeout(function() {
+			Engine.setTimeout(function() {
 				Space.ship.animate({
 					top: '-100px'
 				}, 200, 'linear', function() {
@@ -390,7 +390,7 @@ var Space = {
 					$('#outerSlider').css({'left': '0px', 'top': '0px'});
 					$('#locationSlider, #worldPanel, #spacePanel, #notifications').remove();
 					$('#header').empty();
-					setTimeout(function() {
+					Engine.setTimeout(function() {
 						$('body').stop();
 						if (Engine.isLightsOff())
 							var container_color = '#EEE';

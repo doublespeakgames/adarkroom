@@ -818,12 +818,12 @@ var World = {
 				Engine.activeModule = Room;
 				$('div.headerButton').removeClass('selected');
 				Room.tab.addClass('selected');
-				setTimeout(function(){ 
+				Engine.setTimeout(function(){ 
 					Room.onArrival(); 
 					$('#outerSlider').animate({opacity:'1'}, 600, 'linear');
 					Button.cooldown($('#embarkButton'));
 					Engine.keyLock = false;
-				}, 2000);
+				}, 2000, true);
 			});
 		}
 	},
