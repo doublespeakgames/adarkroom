@@ -593,10 +593,16 @@
 				switch(e.which) {
 					case 38: // Up
 					case 87:
+						if(Engine.activeModule == Outside){
+							Engine.activeModule.scrollSidebar('up');
+						}
 						Engine.log('up');
 						break;
 					case 40: // Down
 					case 83:
+						if(Engine.activeModule == Outside){
+							Engine.activeModule.scrollSidebar('down');
+						}
 						Engine.log('down');
 						break;
 					case 37: // Left
@@ -605,17 +611,20 @@
 							Engine.travelTo(Path);
 						else if(Engine.activeModule == Path && Outside.tab)
 							Engine.travelTo(Outside);
-						else if(Engine.activeModule == Outside && Room.tab)
+						else if(Engine.activeModule == Outside && Room.tab){
+							Engine.activeModule.scrollSidebar('left', true);
 							Engine.travelTo(Room);
+						}
 						Engine.log('left');
 						break;
 					case 39: // Right
 					case 68:
 						if(Engine.activeModule == Room && Outside.tab)
 							Engine.travelTo(Outside);
-						else if(Engine.activeModule == Outside && Path.tab)
+						else if(Engine.activeModule == Outside && Path.tab){
+							Engine.activeModule.scrollSidebar('right', true);
 							Engine.travelTo(Path);
-						else if(Engine.activeModule == Path && Ship.tab)
+						}else if(Engine.activeModule == Path && Ship.tab)
 							Engine.travelTo(Ship);
 						Engine.log('right');
 						break;
