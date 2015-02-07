@@ -220,7 +220,7 @@ var Outside = {
 	schedulePopIncrease: function() {
 		var nextIncrease = Math.floor(Math.random()*(Outside._POP_DELAY[1] - Outside._POP_DELAY[0])) + Outside._POP_DELAY[0];
 		Engine.log('next population increase scheduled in ' + nextIncrease + ' minutes');
-		Outside._popTimeout = setTimeout(Outside.increasePopulation, nextIncrease * 60 * 1000);
+		Outside._popTimeout = Engine.setTimeout(Outside.increasePopulation, nextIncrease * 60 * 1000);
 	},
 	
 	updateWorkersView: function() {
