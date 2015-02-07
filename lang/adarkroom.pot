@@ -3,19 +3,20 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2015-02-07 20:22+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2015-02-07 14:15-0500\n"
+"Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 1.3\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-Basepath: ../\n"
 
 #: script/dropbox.js:64
 msgid "Dropbox connection"
@@ -809,8 +810,8 @@ msgstr ""
 
 #: script/room.js:25
 msgid ""
-"builder says she can make traps to catch any creatures might still be "
-"alive out there"
+"builder says she can make traps to catch any creatures might still be alive "
+"out there"
 msgstr ""
 
 #: script/room.js:26
@@ -871,8 +872,7 @@ msgstr ""
 
 #: script/room.js:84
 msgid ""
-"now the nomads have a place to set up shop, they might stick around a "
-"while"
+"now the nomads have a place to set up shop, they might stick around a while"
 msgstr ""
 
 #: script/room.js:94
@@ -893,8 +893,7 @@ msgstr ""
 
 #: script/room.js:111
 msgid ""
-"should cure the meat, or it'll spoil. builder says she can fix something "
-"up."
+"should cure the meat, or it'll spoil. builder says she can fix something up."
 msgstr ""
 
 #: script/room.js:112
@@ -1071,8 +1070,8 @@ msgstr ""
 
 #: script/room.js:578
 msgid ""
-"the stranger is standing by the fire. she says she can help. says she "
-"builds things."
+"the stranger is standing by the fire. she says she can help. says she builds "
+"things."
 msgstr ""
 
 #: script/room.js:593
@@ -1148,7 +1147,8 @@ msgid "a ragged stranger stumbles through the door and collapses in the corner"
 msgstr ""
 
 #: script/room.js:747
-msgid "the stranger shivers, and mumbles quietly. her words are unintelligible."
+msgid ""
+"the stranger shivers, and mumbles quietly. her words are unintelligible."
 msgstr ""
 
 #: script/room.js:750
@@ -1193,8 +1193,8 @@ msgstr ""
 
 #: script/ship.js:101
 msgid ""
-"somewhere above the debris cloud, the wanderer fleet hovers. been on this"
-" rock too long."
+"somewhere above the debris cloud, the wanderer fleet hovers. been on this "
+"rock too long."
 msgstr ""
 
 #: script/ship.js:116 script/ship.js:129
@@ -1382,13 +1382,14 @@ msgid "the trees yield to dry grass. the yellowed brush rustles in the wind."
 msgstr ""
 
 #: script/world.js:585
-msgid "the trees are gone. parched earth and blowing dust are poor replacements."
+msgid ""
+"the trees are gone. parched earth and blowing dust are poor replacements."
 msgstr ""
 
 #: script/world.js:592
 msgid ""
-"trees loom on the horizon. grasses gradually yield to a forest floor of "
-"dry branches and fallen leaves."
+"trees loom on the horizon. grasses gradually yield to a forest floor of dry "
+"branches and fallen leaves."
 msgstr ""
 
 #: script/world.js:595
@@ -1619,8 +1620,7 @@ msgstr ""
 
 #: script/events/global.js:33
 msgid ""
-"the point is made. in the next few days, the missing supplies are "
-"returned."
+"the point is made. in the next few days, the missing supplies are returned."
 msgstr ""
 
 #: script/events/global.js:49
@@ -1793,8 +1793,7 @@ msgstr ""
 
 #: script/events/room.js:13
 msgid ""
-"a nomad shuffles into view, laden with makeshift bags bound with rough "
-"twine."
+"a nomad shuffles into view, laden with makeshift bags bound with rough twine."
 msgstr ""
 
 #: script/events/room.js:14
@@ -1829,12 +1828,13 @@ msgstr ""
 msgid "the old compass is dented and dusty, but it looks to work."
 msgstr ""
 
-#: script/events/room.js:46 script/events/room.js:227 script/events/room.js:240
-#: script/events/room.js:253 script/events/room.js:305
-#: script/events/room.js:324 script/events/room.js:376
-#: script/events/room.js:395 script/events/room.js:434
-#: script/events/room.js:552 script/events/room.js:568
-#: script/events/room.js:584 script/events/room.js:595
+#: script/events/room.js:46 script/events/room.js:227
+#: script/events/room.js:240 script/events/room.js:253
+#: script/events/room.js:305 script/events/room.js:324
+#: script/events/room.js:376 script/events/room.js:395
+#: script/events/room.js:434 script/events/room.js:552
+#: script/events/room.js:568 script/events/room.js:584
+#: script/events/room.js:595
 msgid "say goodbye"
 msgstr ""
 
@@ -1872,7 +1872,8 @@ msgid "go back inside"
 msgstr ""
 
 #: script/events/room.js:91
-msgid "a bundle of sticks lies just beyond the threshold, wrapped in coarse furs."
+msgid ""
+"a bundle of sticks lies just beyond the threshold, wrapped in coarse furs."
 msgstr ""
 
 #: script/events/room.js:92
@@ -1961,8 +1962,8 @@ msgstr ""
 
 #: script/events/room.js:269
 msgid ""
-"a wanderer arrives with an empty cart. says if he leaves with wood, he'll"
-" be back with more."
+"a wanderer arrives with an empty cart. says if he leaves with wood, he'll be "
+"back with more."
 msgstr ""
 
 #: script/events/room.js:270
@@ -1987,8 +1988,8 @@ msgstr ""
 
 #: script/events/room.js:340
 msgid ""
-"a wanderer arrives with an empty cart. says if she leaves with furs, "
-"she'll be back with more."
+"a wanderer arrives with an empty cart. says if she leaves with furs, she'll "
+"be back with more."
 msgstr ""
 
 #: script/events/room.js:341
@@ -2333,8 +2334,8 @@ msgstr ""
 
 #: script/events/setpieces.js:528
 msgid ""
-"broken streetlights stand, rusting. light hasn't graced this place in a "
-"long time."
+"broken streetlights stand, rusting. light hasn't graced this place in a long "
+"time."
 msgstr ""
 
 #: script/events/setpieces.js:530
@@ -2440,7 +2441,8 @@ msgid "a fight, maybe."
 msgstr ""
 
 #: script/events/setpieces.js:950
-msgid "a small basket of food is hidden under a park bench, with a note attached."
+msgid ""
+"a small basket of food is hidden under a park bench, with a note attached."
 msgstr ""
 
 #: script/events/setpieces.js:951
@@ -2473,8 +2475,8 @@ msgstr ""
 
 #: script/events/setpieces.js:1129
 msgid ""
-"beneath the wanderer's rags, clutched in one of its many hands, a glint "
-"of steel."
+"beneath the wanderer's rags, clutched in one of its many hands, a glint of "
+"steel."
 msgstr ""
 
 #: script/events/setpieces.js:1130
@@ -2511,14 +2513,13 @@ msgstr ""
 
 #: script/events/setpieces.js:1244
 msgid ""
-"a battered highway sign stands guard at the entrance to this once-great "
-"city."
+"a battered highway sign stands guard at the entrance to this once-great city."
 msgstr ""
 
 #: script/events/setpieces.js:1245
 msgid ""
-"the towers that haven't crumbled jut from the landscape like the ribcage "
-"of some ancient beast."
+"the towers that haven't crumbled jut from the landscape like the ribcage of "
+"some ancient beast."
 msgstr ""
 
 #: script/events/setpieces.js:1246
@@ -2807,8 +2808,8 @@ msgstr ""
 
 #: script/events/setpieces.js:2454
 msgid ""
-"arms and munitions, relics from the war, are neatly arranged on the "
-"store-room floor."
+"arms and munitions, relics from the war, are neatly arranged on the store-"
+"room floor."
 msgstr ""
 
 #: script/events/setpieces.js:2455
@@ -2833,8 +2834,7 @@ msgstr ""
 
 #: script/events/setpieces.js:2531
 msgid ""
-"the bodies of the wanderers that lived here are still visible in the "
-"flames."
+"the bodies of the wanderers that lived here are still visible in the flames."
 msgstr ""
 
 #: script/events/setpieces.js:2532
@@ -2842,7 +2842,8 @@ msgid "still time to rescue a few supplies."
 msgstr ""
 
 #: script/events/setpieces.js:2566
-msgid "the remaining settlers flee from the violence, their belongings forgotten."
+msgid ""
+"the remaining settlers flee from the violence, their belongings forgotten."
 msgstr ""
 
 #: script/events/setpieces.js:2567
@@ -2958,7 +2959,8 @@ msgid "a battle was fought here, long ago."
 msgstr ""
 
 #: script/events/setpieces.js:3061
-msgid "battered technology from both sides lays dormant on the blasted landscape."
+msgid ""
+"battered technology from both sides lays dormant on the blasted landscape."
 msgstr ""
 
 #: script/events/setpieces.js:3109
@@ -2984,7 +2986,8 @@ msgid "A Crashed Ship"
 msgstr ""
 
 #: script/events/setpieces.js:3147
-msgid "the familiar curves of a wanderer vessel rise up out of the dust and ash. "
+msgid ""
+"the familiar curves of a wanderer vessel rise up out of the dust and ash. "
 msgstr ""
 
 #: script/events/setpieces.js:3148
@@ -3150,4 +3153,3 @@ msgstr ""
 #: script/events/setpieces.js:3565
 msgid "ripe for the picking."
 msgstr ""
-
