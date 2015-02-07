@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2014-09-27 12:34+0200\n"
-"PO-Revision-Date: 2015-02-06 00:18+0100\n"
+"PO-Revision-Date: 2015-02-07 16:59+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: vi\n"
@@ -20,16 +20,16 @@ msgstr "Kết nối Dropbox"
 
 #: script/dropbox.js:67
 msgid "connect game to dropbox local storage"
-msgstr "Kết nối trò chơi đến lưu trữ cục bộ dropbox"
+msgstr "kết nối trò chơi đến lưu trữ cục bộ dropbox"
 
 #: script/dropbox.js:70
 msgid "connect"
-msgstr "Kết nối"
+msgstr "kết nối"
 
 #: script/dropbox.js:77 script/dropbox.js:109 script/dropbox.js:136
 #: script/dropbox.js:167 script/engine.js:266 script/engine.js:299
 msgid "cancel"
-msgstr "Hủy bỏ"
+msgstr "hủy bỏ"
 
 #: script/dropbox.js:88 script/dropbox.js:180
 msgid "Dropbox Export / Import"
@@ -81,7 +81,7 @@ msgstr "lỗi khi lưu tới vùng lưu dữ liệu dropbox"
 
 #: script/dropbox.js:187
 msgid "ok"
-msgstr "Đồng ý"
+msgstr "đồng ý"
 
 #: script/engine.js:22
 msgid "boxer"
@@ -281,7 +281,7 @@ msgstr "không "
 
 #: script/engine.js:290
 msgid "put the save code here."
-msgstr "để code lưu tại đây"
+msgstr "để code lưu tại đây."
 
 #: script/engine.js:322
 msgid "Export"
@@ -297,11 +297,11 @@ msgstr "hiểu"
 
 #: script/engine.js:359
 msgid "Restart?"
-msgstr "Khơi động lại?"
+msgstr "Khởi động lại?"
 
 #: script/engine.js:362
 msgid "restart the game?"
-msgstr "Chơi lại?"
+msgstr "chơi lại?"
 
 #: script/engine.js:393
 msgid "Share"
@@ -466,7 +466,7 @@ msgstr "bola"
 
 #: script/localization.js:26 script/outside.js:44
 msgid "charcutier"
-msgstr "thợ than"
+msgstr "đồ tể"
 
 #: script/localization.js:27 script/outside.js:53
 msgid "iron miner"
@@ -662,7 +662,7 @@ msgstr "mảnh da lông"
 
 #: script/outside.js:105
 msgid "bits of meat"
-msgstr "miếng thịt"
+msgstr "vài miếng thịt"
 
 #: script/outside.js:110
 msgid "strange scales"
@@ -682,7 +682,7 @@ msgstr "bùa nguyên thô"
 
 #: script/outside.js:142 script/outside.js:535
 msgid "A Silent Forest"
-msgstr "Rừng Yên Ắng"
+msgstr "Khu Rừng Yên Ắng"
 
 #: script/outside.js:170
 msgid "gather wood"
@@ -694,11 +694,11 @@ msgstr "một người khách lạ đến trong đêm"
 
 #: script/outside.js:189
 msgid "a weathered family takes up in one of the huts."
-msgstr "một gia đình đến trọ "
+msgstr "một gia đình đến trọ."
 
 #: script/outside.js:191
 msgid "a small group arrives, all dust and bones."
-msgstr "một nhóm nhỏ đến, ai cũng đầy bụi bặm và sợ hãi"
+msgstr "một nhóm nhỏ đến, ai cũng đầy bụi bặm và sợ hãi."
 
 #: script/outside.js:193
 msgid "a convoy lurches in, equal parts worry and hope."
@@ -845,7 +845,7 @@ msgstr "trạm săn bắt"
 
 #: script/room.js:68
 msgid "villagers could help hunt, given the means"
-msgstr "dân làng có thể giúp ta săn bắt, ý nghĩa hơn đó."
+msgstr "dân làng có thể giúp ta săn bắt, ý nghĩa hơn đó"
 
 #: script/room.js:69
 msgid "the hunting lodge stands in the forest, a ways out of town"
@@ -871,11 +871,11 @@ msgstr "xưởng thuộc da"
 
 #: script/room.js:97
 msgid "builder says leather could be useful. says the villagers could make it."
-msgstr "thợ xây nói da sẽ hữu ích. Dân làng có thể làm được chuyện đó."
+msgstr "thợ xây nói da sẽ hữu ích. dân làng có thể làm được chuyện đó."
 
 #: script/room.js:98
 msgid "tannery goes up quick, on the edge of the village"
-msgstr "Xưởng thuộc da phát triển nhanh chóng, nằm trong góc của ngôi làng"
+msgstr "xưởng thuộc da phát triển nhanh chóng, nằm trong góc của ngôi làng"
 
 #: script/room.js:108
 msgid "smokehouse"
@@ -885,42 +885,42 @@ msgstr "lò nướng thịt"
 msgid ""
 "should cure the meat, or it'll spoil. builder says she can fix something up."
 msgstr ""
-"phải chế biến thịt thôi, hoặc nó sẽ bị hư. Thợ xây nói cô ta có thể tìm ra "
+"phải chế biến thịt thôi, hoặc nó sẽ bị hư. thợ xây nói cô ta có thể tìm ra "
 "cách giải quyết."
 
 #: script/room.js:112
 msgid "builder finishes the smokehouse. she looks hungry."
-msgstr "Thợ xây đã hoàn thành lò nướng thịt. Cô ta có vẻ đói bụng."
+msgstr "thợ xây đã hoàn thành lò nướng thịt. cô ta có vẻ đói bụng."
 
 #: script/room.js:122
 msgid "workshop"
-msgstr "Lò rèn"
+msgstr "lò rèn"
 
 #: script/room.js:125
 msgid "builder says she could make finer things, if she had the tools"
-msgstr "Thợ xây nói cô ta có thể làm được nhiều thứ tốt hơn, nếu có đủ đồ nghề"
+msgstr "thợ xây nói cô ta có thể làm được nhiều thứ tốt hơn, nếu có đủ đồ nghề"
 
 #: script/room.js:126
 msgid "workshop's finally ready. builder's excited to get to it"
-msgstr "Lò rèn cuối cùng cũng xong. Thợ xây rất háo hức để ghé ngang đó."
+msgstr "lò rèn cuối cùng cũng xong. thợ xây rất háo hức để ghé ngang đó"
 
 #: script/room.js:137
 msgid "steelworks"
-msgstr "Lò luyện thép"
+msgstr "lò luyện thép"
 
 #: script/room.js:140
 msgid "builder says the villagers could make steel, given the tools"
-msgstr "thợ xây nói dân làng có thể làm được thép, đưa họ đồ nghề là được."
+msgstr "thợ xây nói dân làng có thể làm được thép, đưa họ đồ nghề là được"
 
 #: script/room.js:141
 msgid "a haze falls over the village as the steelworks fires up"
 msgstr ""
-"Khói mù tràn ngập ngôi làng vì lò luyện thép bắt đầu tôi những thanh thép "
-"đầu tiên."
+"khói mù tràn ngập ngôi làng vì lò luyện thép bắt đầu tôi những thanh thép "
+"đầu tiên"
 
 #: script/room.js:152
 msgid "armoury"
-msgstr "Xưởng vũ khí"
+msgstr "xưởng vũ khí"
 
 #: script/room.js:155
 msgid "builder says it'd be useful to have a steady source of bullets"
@@ -928,7 +928,7 @@ msgstr "thợ xây nói sẽ tốt hơn nếu ta có một nguồn đạn dượ
 
 #: script/room.js:156
 msgid "armoury's done, welcoming back the weapons of the past."
-msgstr "Xong xưởng vũ khí, chào mừng."
+msgstr "xong xưởng vũ khí, chào mừng."
 
 #: script/room.js:170
 msgid "a torch to keep the dark away"
@@ -948,7 +948,7 @@ msgstr "thùng nước"
 
 #: script/room.js:195
 msgid "the cask holds enough water for longer expeditions"
-msgstr "cái thùng chứa đủ nước cho những chuyến đi xa hơn."
+msgstr "cái thùng chứa đủ nước cho những chuyến đi xa hơn"
 
 #: script/room.js:204
 msgid "water tank"
@@ -965,7 +965,7 @@ msgstr "ngọn giáo xương"
 #: script/room.js:220
 msgid "this spear's not elegant, but it's pretty good at stabbing"
 msgstr ""
-"ngọn giáo này nhìn không được đẹp lắm, nhưng nó khá là tốt để đâm kẻ thù."
+"ngọn giáo này nhìn không được đẹp lắm, nhưng nó khá là tốt để đâm kẻ thù"
 
 #: script/room.js:229 script/world.js:300
 msgid "rucksack"
@@ -997,7 +997,7 @@ msgstr "giáp da"
 
 #: script/room.js:271
 msgid "leather's not strong. better than rags, though."
-msgstr "da không quá cứng. Dù gì cũng tốt hơn giẻ rách"
+msgstr "da không quá cứng. dù gì cũng tốt hơn giẻ rách."
 
 #: script/room.js:280
 msgid "i armour"
@@ -1021,7 +1021,7 @@ msgstr "kiếm sắt"
 
 #: script/room.js:307
 msgid "sword is sharp. good protection out in the wilds."
-msgstr "thanh kiếm bén này rất tốt để tự vệ ngoài kia"
+msgstr "thanh kiếm bén này rất tốt để tự vệ ngoài kia."
 
 #: script/room.js:317
 msgid "steel sword"
@@ -1029,7 +1029,7 @@ msgstr "kiếm thép"
 
 #: script/room.js:320
 msgid "the steel is strong, and the blade true."
-msgstr "thép cứng, đó là một thanh kiếm thực thụ"
+msgstr "thép cứng, đó là một thanh kiếm thực thụ."
 
 #: script/room.js:330
 msgid "rifle"
@@ -1037,7 +1037,7 @@ msgstr "súng"
 
 #: script/room.js:332
 msgid "black powder and bullets, like the old days."
-msgstr "thuốc súng và đạn dược, như những ngày xưa cổ"
+msgstr "thuốc súng và đạn dược, như những ngày xưa cổ."
 
 #: script/room.js:464
 msgid "Room"
@@ -1067,7 +1067,7 @@ msgstr "lửa {0}"
 msgid ""
 "the stranger is standing by the fire. she says she can help. says she builds "
 "things."
-msgstr "người lạ mặt đứng sưởi ấm. Cô ấy nói có thể giúp đỡ xây dựng các thứ."
+msgstr "người lạ mặt đứng sưởi ấm. cô ấy nói có thể giúp đỡ xây dựng các thứ."
 
 #: script/room.js:593
 msgid "freezing"
@@ -1111,7 +1111,7 @@ msgstr "bập bùng"
 
 #: script/room.js:617
 msgid "A Firelit Room"
-msgstr "Căn Phòng Được Thắp Sáng "
+msgstr "Căn Phòng Sáng Chan Hòa"
 
 #: script/room.js:655
 msgid "not enough wood to get the fire going"
@@ -1144,11 +1144,11 @@ msgstr "một kẻ lạ rách rưới vấp phải cánh cửa và co vào trong
 #: script/room.js:747
 msgid ""
 "the stranger shivers, and mumbles quietly. her words are unintelligible."
-msgstr "kẻ lạ mặt rùng mình và lầm bầm. Cô ấy nói gì cũng không rõ."
+msgstr "kẻ lạ mặt rùng mình và lầm bầm. cô ấy nói gì cũng không rõ."
 
 #: script/room.js:750
 msgid "the stranger in the corner stops shivering. her breathing calms."
-msgstr "kẻ lạ mặt trong góc ngừng run rẩy. Hơi thở cô ta trở nên dịu lại"
+msgstr "kẻ lạ mặt trong góc ngừng run rẩy. hơi thở cô ta trở nên dịu lại."
 
 #: script/room.js:908 script/room.js:956
 msgid "not enough "
@@ -1200,11 +1200,11 @@ msgstr "không đủ hợp kim ngoài hành tinh"
 
 #: script/ship.js:144
 msgid "Ready to Leave?"
-msgstr "Sẵn sàng ra đi?"
+msgstr "Sẵn sàng Ra đi?"
 
 #: script/ship.js:148
 msgid "time to get out of this place. won't be coming back."
-msgstr "đã tới lúc đi khỏi chốn này, chúng ta sẽ không quay trở lại"
+msgstr "đã tới lúc đi khỏi chốn này, chúng ta sẽ không quay trở lại."
 
 #: script/ship.js:160
 msgid "linger"
@@ -1216,19 +1216,19 @@ msgstr "vỏ:"
 
 #: script/space.js:81
 msgid "Troposphere"
-msgstr "tầng đối lưu"
+msgstr "Tầng Đối Lưu"
 
 #: script/space.js:83
 msgid "Stratosphere"
-msgstr "tầng bình lưu"
+msgstr "Tầng Bình Lưu"
 
 #: script/space.js:85
 msgid "Mesosphere"
-msgstr "tầng giữa"
+msgstr "Tầng Giữa"
 
 #: script/space.js:87
 msgid "Thermosphere"
-msgstr "thượng tầng khí quyền"
+msgstr "Thượng Tầng Khí Quyền"
 
 #: script/space.js:89
 msgid "Exosphere"
@@ -1236,7 +1236,7 @@ msgstr "Ngoại quyển"
 
 #: script/space.js:91
 msgid "Space"
-msgstr "Không gian"
+msgstr "Không Gian"
 
 #: script/space.js:432
 msgid "score for this game: {0}"
@@ -1284,7 +1284,7 @@ msgstr "xáo trộn"
 
 #: script/world.js:124
 msgid "An&nbsp;Outpost"
-msgstr "Một&nbsp;Đồn"
+msgstr "Một&nbsp;Đồn&nbsp;Điền"
 
 #: script/world.js:125
 msgid "Iron&nbsp;Mine"
@@ -1304,35 +1304,35 @@ msgstr "Một&nbsp;Ngôi&nbsp;Nhà&nbsp;Cũ"
 
 #: script/world.js:129
 msgid "A&nbsp;Damp&nbsp;Cave"
-msgstr "Một&nbsp;Hang&nbsp;Ẩm&nbsp;Ướt"
+msgstr "Hang&nbsp;Ẩm&nbsp;Ướt"
 
 #: script/world.js:130
 msgid "An&nbsp;Abandoned&nbsp;Town"
-msgstr "Một&nbsp;Thành&nbsp;Phố&nbsp;Bỏ&nbsp;Hoang"
+msgstr "Thành&nbsp;Phố&nbsp;Bỏ&nbsp;Hoang"
 
 #: script/world.js:131
 msgid "A&nbsp;Ruined&nbsp;City"
-msgstr "Một&nbsp;Thành&nbsp;Phố&nbsp;Bị&nbsp;Phá&nbsp;Hủy"
+msgstr "Thành&nbsp;Phố&nbsp;Bị&nbsp;Phá&nbsp;Hủy"
 
 #: script/world.js:132
 msgid "A&nbsp;Crashed&nbsp;Starship"
-msgstr "Một&nbsp;Đĩa&nbsp;Bay&nbsp;Gặp&nbsp;Nạn"
+msgstr "Đĩa&nbsp;Bay&nbsp;Gặp&nbsp;Nạn"
 
 #: script/world.js:133
 msgid "A&nbsp;Borehole"
-msgstr "Một&nbsp;Giếng&nbsp;Khoan"
+msgstr "Giếng&nbsp;Khoan"
 
 #: script/world.js:134
 msgid "A&nbsp;Battlefield"
-msgstr "Một&nbsp;Chiến&nbsp;Trường"
+msgstr "Chiến&nbsp;Trường"
 
 #: script/world.js:135
 msgid "A&nbsp;Murky&nbsp;Swamp"
-msgstr "Một&nbsp;Đầm&nbsp;Lầy&nbsp;Tối&nbsp;Tăm"
+msgstr "Đầm&nbsp;Lầy&nbsp;Tối&nbsp;Tăm"
 
 #: script/world.js:140
 msgid "A&nbsp;Destroyed&nbsp;Village"
-msgstr "Một&nbsp;Ngôi&nbsp;Làng&nbsp;Bị&nbsp;Hủy&nbsp;Diệt"
+msgstr "Ngôi&nbsp;Làng&nbsp;Bị&nbsp;Hủy&nbsp;Diệt"
 
 #: script/world.js:270
 msgid "water:{0}"
@@ -1364,7 +1364,7 @@ msgstr "đã hết thịt"
 
 #: script/world.js:479
 msgid "starvation sets in"
-msgstr "Chết đói tới nơi"
+msgstr "chết đói tới nơi"
 
 #: script/world.js:505
 msgid "there is no more water"
@@ -1376,24 +1376,24 @@ msgstr "cơn khát trở  nên không thể tránh được "
 
 #: script/world.js:582
 msgid "the trees yield to dry grass. the yellowed brush rustles in the wind."
-msgstr "Cây cối nhường lối cỏ khô. Bụi vàng xào xạt trong gió."
+msgstr "cây cối nhường lối cỏ khô. bụi vàng xào xạt trong gió."
 
 #: script/world.js:585
 msgid ""
 "the trees are gone. parched earth and blowing dust are poor replacements."
-msgstr "Cây cối nay còn đâu. Đất khô cằn thổi bụi bặm từ đâu bay tới"
+msgstr "cây cối nay còn đâu. đất khô cằn thổi bụi bặm từ đâu bay tới."
 
 #: script/world.js:592
 msgid ""
 "trees loom on the horizon. grasses gradually yield to a forest floor of dry "
 "branches and fallen leaves."
 msgstr ""
-"Cây cối lờ mờ ở chân trời. Cỏ xanh dần dần nhường chỗ cho một tầng rừng đầy "
+"cây cối lờ mờ ở chân trời. cỏ xanh dần dần nhường chỗ cho một tầng rừng đầy "
 "lá vàng và cành khô."
 
 #: script/world.js:595
 msgid "the grasses thin. soon, only dust remains."
-msgstr "cỏ lác đác. chẳng mấy lâu nữa sẽ chỉ còn lại cát và bụi"
+msgstr "cỏ lác đác. chẳng mấy lâu nữa sẽ chỉ còn lại cát và bụi."
 
 #: script/world.js:602
 msgid "the barrens break at a sea of dying grass, swaying in the arid breeze."
@@ -1575,7 +1575,7 @@ msgstr "tên lính bắn, từ bên kia sa mạc"
 
 #: script/events/encounters.js:358
 msgid "A Sniper"
-msgstr "Một tay súng bắn tỉa"
+msgstr "Một Tay Súng Bắn Tỉa"
 
 #: script/events/encounters.js:366
 msgid "sniper"
@@ -1591,19 +1591,19 @@ msgstr "một phát súng nổ lên, đâu đó từ trong bụi cỏ "
 
 #: script/events/global.js:6
 msgid "The Thief"
-msgstr "Tên trộm"
+msgstr "Tên Trộm"
 
 #: script/events/global.js:13
 msgid "the villagers haul a filthy man out of the store room."
-msgstr "dân làng kéo kẻ bẩn thỉu ra khỏi căn nhà kho"
+msgstr "dân làng kéo kẻ bẩn thỉu ra khỏi căn nhà kho."
 
 #: script/events/global.js:14
 msgid "say his folk have been skimming the supplies."
-msgstr "nói rằng đồng bọn của hắn đã hớt tay trên"
+msgstr "nói rằng đồng bọn của hắn đã hớt tay trên."
 
 #: script/events/global.js:15
 msgid "say he should be strung up as an example."
-msgstr "nói rằng phải dạy cho hắn một bài học"
+msgstr "nói rằng phải dạy cho hắn một bài học."
 
 #: script/events/global.js:17
 msgid "a thief is caught"
@@ -1629,11 +1629,11 @@ msgstr "đã quyết định. trong vài ngày tới, hàng sẽ được trả 
 #: script/events/global.js:49
 msgid "the man says he's grateful. says he won't come around any more."
 msgstr ""
-"người đàn ông rất cảm kích, nói anh ta sẽ không quấy rầy chúng ta về sau nữa"
+"người đàn ông rất cảm kích, nói anh ta sẽ không quấy rầy chúng ta về sau nữa."
 
 #: script/events/global.js:50
 msgid "shares what he knows about sneaking before he goes."
-msgstr "chia sẽ những gì anh ta biết về nghề ăn trộm trước khi ra đi"
+msgstr "chia sẽ những gì anh ta biết về nghề ăn trộm trước khi ra đi."
 
 #: script/events/outside.js:6
 msgid "A Ruined Trap"
@@ -1641,11 +1641,11 @@ msgstr "Bẫy Bị Phá"
 
 #: script/events/outside.js:13
 msgid "some of the traps have been torn apart."
-msgstr "một vài chiếc bẫy đã  bị phá toạc ra làm nhiều mảnh nhỏ"
+msgstr "một vài chiếc bẫy đã  bị phá toạc ra làm nhiều mảnh nhỏ."
 
 #: script/events/outside.js:14
 msgid "large prints lead away, into the forest."
-msgstr "nhiều dấu chân lớn còn sót lại, dẫn sâu vào rừng"
+msgstr "nhiều dấu chân lớn còn sót lại, dẫn sâu vào rừng."
 
 #: script/events/outside.js:22
 msgid "some traps have been destroyed"
@@ -1662,11 +1662,11 @@ msgstr "bỏ qua"
 
 #: script/events/outside.js:37
 msgid "the tracks disappear after just a few minutes."
-msgstr "mất dấu chỉ sau vài phút"
+msgstr "mất dấu chỉ sau vài phút."
 
 #: script/events/outside.js:38
 msgid "the forest is silent."
-msgstr "rừng yên ắng"
+msgstr "rừng yên ắng."
 
 #: script/events/outside.js:42 script/events/outside.js:59
 #: script/events/outside.js:98 script/events/outside.js:115
@@ -1677,11 +1677,11 @@ msgstr "về nhà"
 
 #: script/events/outside.js:49
 msgid "not far from the village lies a large beast, its fur matted with blood."
-msgstr "không xa ngôi làng, có một con quái thú to lớn, bộ lông dính đầy máu"
+msgstr "không xa ngôi làng, có một con quái thú to lớn, bộ lông dính đầy máu."
 
 #: script/events/outside.js:50
 msgid "it puts up little resistance before the knife."
-msgstr "nó có vẻ như là khỏe mạnh"
+msgstr "nó có vẻ như là khỏe mạnh."
 
 #: script/events/outside.js:68
 msgid "Sickness"
@@ -1689,11 +1689,11 @@ msgstr "Bệnh"
 
 #: script/events/outside.js:75
 msgid "a sickness is spreading through the village."
-msgstr "căn bệnh đang lan truyền khắp làng"
+msgstr "căn bệnh đang lan truyền khắp làng."
 
 #: script/events/outside.js:76 script/events/outside.js:132
 msgid "medicine is needed immediately."
-msgstr "cần phải có thuốc để chữa trị ngay lập tức"
+msgstr "cần phải có thuốc để chữa trị ngay lập tức."
 
 #: script/events/outside.js:82
 msgid "1 medicine"
@@ -1705,27 +1705,27 @@ msgstr "bỏ qua "
 
 #: script/events/outside.js:94
 msgid "the sickness is cured in time."
-msgstr "căn bênh được chống chọi kịp thời"
+msgstr "căn bênh được chống chọi kịp thời."
 
 #: script/events/outside.js:105
 msgid "the sickness spreads through the village."
-msgstr "căn bệnh lan truyền khắp làng"
+msgstr "căn bệnh lan truyền khắp làng."
 
 #: script/events/outside.js:106
 msgid "the days are spent with burials."
-msgstr "thời gian đầy tang tốc trôi qua"
+msgstr "thời gian đầy tang tốc trôi qua."
 
 #: script/events/outside.js:107 script/events/outside.js:167
 msgid "the nights are rent with screams."
-msgstr "đêm tối bao phủ bởi những tiếng la và khóc vì mất mát"
+msgstr "đêm tối bao phủ bởi những tiếng la và khóc vì mất mát."
 
 #: script/events/outside.js:124
 msgid "Plague"
-msgstr "Dịch bệnh"
+msgstr "Dịch Bệnh"
 
 #: script/events/outside.js:131
 msgid "a terrible plague is fast spreading through the village."
-msgstr "một dịch bệnh khủng khiếp đang truyền khắp ngôi làng"
+msgstr "một dịch bệnh khủng khiếp đang truyền khắp ngôi làng."
 
 #: script/events/outside.js:137
 msgid "5 medicine"
@@ -1737,11 +1737,11 @@ msgstr "không làm gì cả"
 
 #: script/events/outside.js:149
 msgid "the plague is kept from spreading."
-msgstr "dịch bệnh được chống chọi kịp thời"
+msgstr "dịch bệnh được chống chọi kịp thời."
 
 #: script/events/outside.js:150
 msgid "only a few die."
-msgstr "chỉ vài người chết"
+msgstr "chỉ vài người chết."
 
 #: script/events/outside.js:151
 msgid "the rest bury them."
@@ -1749,11 +1749,11 @@ msgstr "những người còn lại thì chôn cất họ"
 
 #: script/events/outside.js:166
 msgid "the plague rips through the village."
-msgstr "dịch bênh hoành hành cả ngôi làng"
+msgstr "dịch bênh hoành hành cả ngôi làng."
 
 #: script/events/outside.js:168
 msgid "the only hope is a quick death."
-msgstr "hy vọng duy nhất là một cái chết nhanh chóng"
+msgstr "hy vọng duy nhất là một cái chết nhanh chóng."
 
 #: script/events/outside.js:185
 msgid "A Beast Attack"
@@ -1761,15 +1761,15 @@ msgstr "Quái Thú Tấn Công"
 
 #: script/events/outside.js:192
 msgid "a pack of snarling beasts pours out of the trees."
-msgstr "một con thú gầm gừ bước ra từ gốc cây"
+msgstr "một con thú gầm gừ bước ra từ gốc cây."
 
 #: script/events/outside.js:193
 msgid "the fight is short and bloody, but the beasts are repelled."
-msgstr "Cuộc chiến ngắn ngủi nhưng đầy máu me, ít nhất con thú đã bị đánh bại"
+msgstr "Cuộc chiến ngắn ngủi nhưng đầy máu me, ít nhất con thú đã bị đánh bại."
 
 #: script/events/outside.js:194
 msgid "the villagers retreat to mourn the dead."
-msgstr "dân làng sơ tán để tránh cái chết"
+msgstr "dân làng sơ tán để tránh cái chết."
 
 #: script/events/outside.js:217
 msgid "A Military Raid"
@@ -1777,17 +1777,17 @@ msgstr "Cuộc Đột Kích Quân Sự"
 
 #: script/events/outside.js:224
 msgid "a gunshot rings through the trees."
-msgstr "một tiếng súng xuyên qua rừng cây"
+msgstr "một tiếng súng xuyên qua rừng cây."
 
 #: script/events/outside.js:225
 msgid "well armed men charge out of the forest, firing into the crowd."
 msgstr ""
 "một người đàn ông được trang bị đầy đủ súng ống nhảy sổ vào và bắn loạn xạ "
-"vào đám đông"
+"vào đám đông."
 
 #: script/events/outside.js:226
 msgid "after a skirmish they are driven away, but not without losses."
-msgstr "sau cuộc giao tranh, bọn họ bỏ đi, nhưng để lại mất mát cho dân làng"
+msgstr "sau cuộc giao tranh, bọn họ bỏ đi, nhưng để lại mất mát cho dân làng."
 
 #: script/events/room.js:6
 msgid "The Nomad"
@@ -1798,11 +1798,11 @@ msgid ""
 "a nomad shuffles into view, laden with makeshift bags bound with rough twine."
 msgstr ""
 "tên du mục lết vào, nhiều túi ba gang được chất đầy hàng, được cột bằng "
-"những sợi dây xù xì"
+"những sợi dây xù xì."
 
 #: script/events/room.js:14
 msgid "won't say from where he came, but it's clear that he's not staying."
-msgstr "hắn sẽ không nói hắn từ đâu đến, nhưng hắn rõ ràng là không nán lại"
+msgstr "hắn sẽ không nói hắn từ đâu đến, nhưng hắn rõ ràng là không nán lại."
 
 #: script/events/room.js:16
 msgid "a nomad arrives, looking to trade"
@@ -1822,7 +1822,7 @@ msgstr "mua mồi"
 
 #: script/events/room.js:33
 msgid "traps are more effective with bait."
-msgstr "bẫy hiệu quả hơn với mồi"
+msgstr "bẫy hiệu quả hơn với mồi."
 
 #: script/events/room.js:39
 msgid "buy compass"
@@ -1830,7 +1830,7 @@ msgstr "mua la bàn"
 
 #: script/events/room.js:42
 msgid "the old compass is dented and dusty, but it looks to work."
-msgstr "cái la bàn cũ đầy bụi bặm, nhưng nó có vẻ vẫn còn hoạt động"
+msgstr "cái la bàn cũ đầy bụi bặm, nhưng nó có vẻ vẫn còn hoạt động."
 
 #: script/events/room.js:46 script/events/room.js:227
 #: script/events/room.js:240 script/events/room.js:253
@@ -1844,15 +1844,15 @@ msgstr "nói tạm biệt"
 
 #: script/events/room.js:53 script/events/room.js:104
 msgid "Noises"
-msgstr "Tiếng ồn"
+msgstr "Tiếng Ồn"
 
 #: script/events/room.js:60
 msgid "through the walls, shuffling noises can be heard."
-msgstr "xuyên qua bức tường, có thể nghe thấy tiếng lết "
+msgstr "xuyên qua bức tường, có thể nghe thấy tiếng lết ."
 
 #: script/events/room.js:61
 msgid "can't tell what they're up to."
-msgstr "không thể nói được họ đang làm cái gì"
+msgstr "không thể nói được họ đang làm cái gì."
 
 #: script/events/room.js:63
 msgid "strange noises can be heard through the walls"
@@ -1865,11 +1865,11 @@ msgstr "điều tra"
 
 #: script/events/room.js:78
 msgid "vague shapes move, just out of sight."
-msgstr "bóng mờ di chuyển, ra khỏi tầm nhìn"
+msgstr "bóng mờ di chuyển, ra khỏi tầm nhìn."
 
 #: script/events/room.js:79
 msgid "the sounds stop."
-msgstr "tiếng động biến mất"
+msgstr "tiếng động biến mất."
 
 #: script/events/room.js:83 script/events/room.js:96
 msgid "go back inside"
@@ -1878,19 +1878,19 @@ msgstr "đi vào trong lại"
 #: script/events/room.js:91
 msgid ""
 "a bundle of sticks lies just beyond the threshold, wrapped in coarse furs."
-msgstr "Một bó gậy nằm ngoài ngưỡng cửa, bọc trong lông thú thô"
+msgstr "một bó gậy nằm ngoài ngưỡng cửa, bọc trong lông thú thô."
 
 #: script/events/room.js:92
 msgid "the night is silent."
-msgstr "đêm yên ắng"
+msgstr "đêm yên ắng."
 
 #: script/events/room.js:111
 msgid "scratching noises can be heard from the store room."
-msgstr "Tiếng ồn có thể nghe thấy từ nhà kho"
+msgstr "tiếng ồn có thể nghe thấy từ nhà kho."
 
 #: script/events/room.js:112
 msgid "something's in there."
-msgstr "có gì ở đấy"
+msgstr "có gì ở đấy."
 
 #: script/events/room.js:114
 msgid "something's in the store room"
@@ -1899,7 +1899,7 @@ msgstr "có thứ gì đấy trong nhà kho"
 #: script/events/room.js:129 script/events/room.js:149
 #: script/events/room.js:169
 msgid "some wood is missing."
-msgstr "một phần gỗ bị lấy mất"
+msgstr "một phần gỗ bị lấy mất."
 
 #: script/events/room.js:130
 msgid "the ground is littered with small scales"
@@ -1927,7 +1927,7 @@ msgstr "xin một vài bộ lông để giữ ấm đêm nay."
 
 #: script/events/room.js:200
 msgid "a beggar arrives"
-msgstr "một tên ăn xin đến."
+msgstr "một tên ăn xin đến"
 
 #: script/events/room.js:204
 msgid "give 50"
@@ -1946,19 +1946,19 @@ msgstr "đuổi hắn đi"
 #: script/events/room.js:222 script/events/room.js:235
 #: script/events/room.js:248
 msgid "the beggar expresses his thanks."
-msgstr "tên ăn xin muốn bày tỏ lòng thành"
+msgstr "tên ăn xin muốn bày tỏ lòng thành."
 
 #: script/events/room.js:223
 msgid "leaves a pile of small scales behind."
-msgstr "Để lại một đống vảy nhỏ phía sau."
+msgstr "để lại một đống vảy nhỏ phía sau."
 
 #: script/events/room.js:236
 msgid "leaves a pile of small teeth behind."
-msgstr "bỏ lại một vài chiếc răng"
+msgstr "bỏ lại một vài chiếc răng."
 
 #: script/events/room.js:249
 msgid "leaves some scraps of cloth behind."
-msgstr "Để lại một đống quần áo rách rưới."
+msgstr "để lại một đống quần áo rách rưới."
 
 #: script/events/room.js:262 script/events/room.js:333
 msgid "The Mysterious Wanderer"
@@ -1970,11 +1970,11 @@ msgid ""
 "back with more."
 msgstr ""
 "một kẻ lang thang đến, với một chiếc củi gỗ trống hộc, nói rằng cho hắn một "
-"ít gỗ, hắn sẽ quay lại với nhiều gỗ hơn"
+"ít gỗ, hắn sẽ quay lại với nhiều gỗ hơn."
 
 #: script/events/room.js:270
 msgid "builder's not sure he's to be trusted."
-msgstr "người thợ xây không tin hắn lắm"
+msgstr "người thợ xây không tin hắn lắm."
 
 #: script/events/room.js:272 script/events/room.js:343
 msgid "a mysterious wanderer arrives"
@@ -1990,7 +1990,7 @@ msgstr "tên lang thang bỏ đi, củi đầy gỗ"
 
 #: script/events/room.js:299 script/events/room.js:318
 msgid "the mysterious wanderer returns, cart piled high with wood."
-msgstr "tên lang thang quay lại, củi còn đầy gỗ hơn"
+msgstr "tên lang thang quay lại, củi còn đầy gỗ hơn."
 
 #: script/events/room.js:340
 msgid ""
@@ -1998,7 +1998,7 @@ msgid ""
 "be back with more."
 msgstr ""
 "một kẻ lang thang đến, với một chiếc củi gỗ trống hộc, nói rằng cho hắn một "
-"ít da, hắn sẽ quay lại với nhiều da hơn"
+"ít da, hắn sẽ quay lại với nhiều da hơn."
 
 #: script/events/room.js:341
 msgid "builder's not sure she's to be trusted."
@@ -2014,7 +2014,7 @@ msgstr "tên lang thang bỏ đi, củi đầy da"
 
 #: script/events/room.js:370 script/events/room.js:389
 msgid "the mysterious wanderer returns, cart piled high with furs."
-msgstr "tên lang thang quay lại, củi còn đầy da hơn"
+msgstr "tên lang thang quay lại, củi còn đầy da hơn."
 
 #: script/events/room.js:404
 msgid "The Scout"
@@ -2022,11 +2022,11 @@ msgstr "Do Thám"
 
 #: script/events/room.js:411
 msgid "the scout says she's been all over."
-msgstr "tên do thám nói cô ấy ở khắp nơi"
+msgstr "tên do thám nói cô ấy ở khắp nơi."
 
 #: script/events/room.js:412
 msgid "willing to talk about it, for a price."
-msgstr "muốn nói về việc đó, nhưng có một điều kiện"
+msgstr "muốn nói về việc đó, nhưng có một điều kiện."
 
 #: script/events/room.js:414
 msgid "a scout stops for the night"
@@ -2050,11 +2050,11 @@ msgstr "Sư Phụ"
 
 #: script/events/room.js:450
 msgid "an old wanderer arrives."
-msgstr "một kẻ lang thang già đến"
+msgstr "một ông già lang thang đến."
 
 #: script/events/room.js:451
 msgid "he smiles warmly and asks for lodgings for the night."
-msgstr "ông ấy cười hiền hậu và muốn xin trọ qua đêm nay"
+msgstr "ông ấy cười hiền hậu và muốn xin trọ qua đêm nay."
 
 #: script/events/room.js:453
 msgid "an old wanderer arrives"
@@ -2066,7 +2066,7 @@ msgstr "đồng ý"
 
 #: script/events/room.js:473
 msgid "in exchange, the wanderer offers his wisdom."
-msgstr "đổi lại, kẻ lang thang muốn hiến tặng sự thông thái của ông ấy"
+msgstr "đổi lại, kẻ lang thang muốn hiến tặng sự thông thái của ông ấy."
 
 #: script/events/room.js:477
 msgid "evasion"
@@ -2090,11 +2090,11 @@ msgstr "Kẻ Bệnh "
 
 #: script/events/room.js:523
 msgid "a man hobbles up, coughing."
-msgstr "một người đàn ông đi khập khiễng và miệng ho không ngừng"
+msgstr "một người đàn ông đi khập khiễng và miệng ho không ngừng."
 
 #: script/events/room.js:524
 msgid "he begs for medicine."
-msgstr "xin thuốc men"
+msgstr "xin thuốc men."
 
 #: script/events/room.js:526
 msgid "a sick man hobbles up"
@@ -2115,28 +2115,28 @@ msgstr "nói hắn hãy bỏ đi"
 #: script/events/room.js:543 script/events/room.js:559
 #: script/events/room.js:575
 msgid "the man is thankful."
-msgstr "người đàn ông rất cảm kích"
+msgstr "người đàn ông rất cảm kích."
 
 #: script/events/room.js:544 script/events/room.js:560
 #: script/events/room.js:576
 msgid "he leaves a reward."
-msgstr "anh ta bỏ lại một phần thưởng"
+msgstr "anh ta bỏ lại một phần thưởng."
 
 #: script/events/room.js:545
 msgid "some weird metal he picked up on his travels."
-msgstr "Một vài kim loại lạ ông nhặt về từ chuyến đi của mình"
+msgstr "một vài kim loại lạ ông nhặt về từ chuyến đi của mình."
 
 #: script/events/room.js:561
 msgid "some weird glowing boxes he picked up on his travels."
-msgstr "Một vài găng đánh bốc lạ ông nhặt về từ chuyến đi của mình"
+msgstr "một vài găng đánh bốc lạ ông nhặt về từ chuyến đi của mình"
 
 #: script/events/room.js:577
 msgid "all he has are some scales."
-msgstr "tất cả những gì ông ta có là vảy"
+msgstr "tất cả những gì ông ta có là vảy."
 
 #: script/events/room.js:591
 msgid "the man expresses his thanks and hobbles off."
-msgstr "người đàn ông bày tỏ lòng thành và khập khiễng bỏ đi"
+msgstr "người đàn ông bày tỏ lòng thành và khập khiễng bỏ đi."
 
 #: script/events/setpieces.js:6
 msgid "An Outpost"
@@ -2144,7 +2144,7 @@ msgstr "Một Đồn Quan Sát"
 
 #: script/events/setpieces.js:10 script/events/setpieces.js:12
 msgid "a safe place in the wilds."
-msgstr "một nơi an toàn trong hoang dã"
+msgstr "một nơi an toàn trong hoang dã."
 
 #: script/events/setpieces.js:34
 msgid "A Murky Swamp"
@@ -2152,15 +2152,15 @@ msgstr "Đầm Lầy Tăm Tối"
 
 #: script/events/setpieces.js:38
 msgid "rotting reeds rise out of the swampy earth."
-msgstr "Sậy thối rữa trồi lên khỏi mặt đất lầy lội"
+msgstr "sậy thối rữa trồi lên khỏi mặt đất lầy lội."
 
 #: script/events/setpieces.js:39
 msgid "a lone frog sits in the muck, silently."
-msgstr "Một con ếch ngồi âm thầm đơn độc "
+msgstr "một con ếch ngồi âm thầm đơn độc."
 
 #: script/events/setpieces.js:41
 msgid "a swamp festers in the stagnant air."
-msgstr "Một đầm lầy thối bởi không khí tù đọng"
+msgstr "một đầm lầy thối bởi không khí tù đọng."
 
 #: script/events/setpieces.js:44 script/events/setpieces.js:548
 #: script/events/setpieces.js:605 script/events/setpieces.js:887
@@ -2171,11 +2171,11 @@ msgstr "vào"
 
 #: script/events/setpieces.js:55
 msgid "deep in the swamp is a moss-covered cabin."
-msgstr "Sâu trong đầm lầy là một phòng rêu phủ"
+msgstr "sâu trong đầm lầy là một phòng rêu phủ."
 
 #: script/events/setpieces.js:56
 msgid "an old wanderer sits inside, in a seeming trance."
-msgstr "Một kẻ lang thang lớn tuổi ngồi bên trong, trong trạng thái hôn mê"
+msgstr "một kẻ lang thang lớn tuổi ngồi bên trong, trong trạng thái hôn mê."
 
 #: script/events/setpieces.js:61
 msgid "talk"
@@ -2183,19 +2183,19 @@ msgstr "nói chuyện"
 
 #: script/events/setpieces.js:72
 msgid "the wanderer takes the charm and nods slowly."
-msgstr "Kẻ lang thang lôi lá bùa ra và gật đầu từ từ"
+msgstr "kẻ lang thang lôi lá bùa ra và gật đầu từ từ."
 
 #: script/events/setpieces.js:73
 msgid "he speaks of once leading the great fleets to fresh worlds."
-msgstr "Ông nói về một lần dẫn đầu đội tàu lớn tìm thế giới mới"
+msgstr "ông nói về một lần dẫn đầu đội tàu lớn tìm thế giới mới."
 
 #: script/events/setpieces.js:74
 msgid "unfathomable destruction to fuel wanderer hungers."
-msgstr "Hư hại không thể phục hồi về nhiên liệu"
+msgstr "hư hại không thể phục hồi về nhiên liệu."
 
 #: script/events/setpieces.js:75
 msgid "his time here, now, is his penance."
-msgstr "Lần này hắn ở đây, bây giờ, là để đền tội"
+msgstr "lần này hắn ở đây, bây giờ, là để đền tội."
 
 #: script/events/setpieces.js:91
 msgid "A Damp Cave"
@@ -2203,11 +2203,11 @@ msgstr "Hang Động Ẩm"
 
 #: script/events/setpieces.js:95
 msgid "the mouth of the cave is wide and dark."
-msgstr "miệng hang rộng và tối "
+msgstr "miệng hang rộng và tối."
 
 #: script/events/setpieces.js:96
 msgid "can't see what's inside."
-msgstr "không thể thấy được gì bên trong"
+msgstr "không thể thấy được gì bên trong."
 
 #: script/events/setpieces.js:98
 msgid "the earth here is split, as if bearing an ancient wound"
@@ -2220,7 +2220,7 @@ msgstr "vào trong"
 
 #: script/events/setpieces.js:120 script/events/setpieces.js:264
 msgid "a startled beast defends its home"
-msgstr "Con thú bị giật mình bảo vệ nhà của mình"
+msgstr "con thú bị giật mình bảo vệ nhà của mình"
 
 #: script/events/setpieces.js:135 script/events/setpieces.js:186
 #: script/events/setpieces.js:227 script/events/setpieces.js:246
@@ -2266,11 +2266,11 @@ msgstr "ra khỏi hang"
 
 #: script/events/setpieces.js:148
 msgid "the cave narrows a few feet in."
-msgstr "hang chật dần"
+msgstr "hang chật dần."
 
 #: script/events/setpieces.js:149
 msgid "the walls are moist and moss-covered"
-msgstr "Các bức tường ẩm ướt và rêu phủ"
+msgstr "các bức tường ẩm ướt và rêu phủ"
 
 #: script/events/setpieces.js:153
 msgid "squeeze"
@@ -2278,20 +2278,20 @@ msgstr "ép"
 
 #: script/events/setpieces.js:164
 msgid "the remains of an old camp sits just inside the cave."
-msgstr "Những gì còn lại của một trại cũ nằm ngay bên trong hang động."
+msgstr "những gì còn lại của một trại cũ nằm ngay bên trong hang động."
 
 #: script/events/setpieces.js:165
 msgid "bedrolls, torn and blackened, lay beneath a thin layer of dust."
 msgstr ""
-"Những chiếc giường xếp bị rách và cháy đen, nằm bên dưới một lớp mỏng bụi."
+"những chiếc giường xếp bị rách và cháy đen, nằm bên dưới một lớp mỏng bụi."
 
 #: script/events/setpieces.js:199
 msgid "the body of a wanderer lies in a small cavern."
-msgstr "Cơ thể của một người lang thang nằm trong hang nhỏ"
+msgstr "cơ thể của một người lang thang nằm trong hang nhỏ."
 
 #: script/events/setpieces.js:200
 msgid "rot's been to work on it, and some of the pieces are missing."
-msgstr "thối rửa hẳn rồi, một vài bộ phận bị mất"
+msgstr "thối rửa hẳn rồi, một vài bộ phận bị mất."
 
 #: script/events/setpieces.js:201
 msgid "can't tell what left it here."
@@ -2339,13 +2339,13 @@ msgstr "Thành Phố Ma"
 
 #: script/events/setpieces.js:525
 msgid "a small suburb lays ahead, empty houses scorched and peeling."
-msgstr "một vùng ngoại ô nhỏ phía trước, nhiều nhà trống cháy xém và tróc nóc"
+msgstr "một vùng ngoại ô nhỏ phía trước, nhiều nhà trống cháy xém và tróc nóc."
 
 #: script/events/setpieces.js:526
 msgid ""
 "broken streetlights stand, rusting. light hasn't graced this place in a long "
 "time."
-msgstr "đèn đường bị hỏng gỉ. ánh sáng từ lâu đã không màng tới nơi đây"
+msgstr "đèn đường bị hỏng gỉ. ánh sáng từ lâu đã không màng tới nơi đây."
 
 #: script/events/setpieces.js:528
 msgid "the town lies abandoned, its citizens long dead"
@@ -2360,7 +2360,7 @@ msgid ""
 "where the windows of the schoolhouse aren't shattered, they're blackened "
 "with soot."
 msgstr ""
-"nơi các cửa sổ của ngôi trường chưa bị vỡ, họ đang tự bôi đen bằng nhọ nồi"
+"nơi các cửa sổ của ngôi trường chưa bị vỡ, họ đang tự bôi đen bằng nhọ nồi."
 
 #: script/events/setpieces.js:544
 msgid "the double doors creak endlessly in the wind."
@@ -2404,11 +2404,11 @@ msgstr "một kẻ ăn sát người đợi bên trong cánh cửa."
 
 #: script/events/setpieces.js:713
 msgid "a beast stands alone in an overgrown park."
-msgstr "một con thú đang đứng một mình trong một công viên to lớn"
+msgstr "một con thú đang đứng một mình trong một công viên to lớn."
 
 #: script/events/setpieces.js:729
 msgid "an overturned caravan is spread across the pockmarked street."
-msgstr "một đoàn caravan di chuyển trên các đường phố "
+msgstr "một đoàn caravan di chuyển trên các đường phố ."
 
 #: script/events/setpieces.js:730
 msgid ""
@@ -2416,7 +2416,7 @@ msgid ""
 "taking."
 msgstr ""
 "nó được chọn trong những người ăn sát, nhưng vẫn có một số thứ vẫn đáng để "
-"cướp"
+"cướp."
 
 #: script/events/setpieces.js:792
 msgid "a madman attacks, screeching."
@@ -2424,17 +2424,17 @@ msgstr "một cuộc tấn công điên, gào thét."
 
 #: script/events/setpieces.js:831
 msgid "a thug moves out of the shadows."
-msgstr "một tên cướp xuất hiện từ trong tối"
+msgstr "một tên cướp xuất hiện từ trong tối."
 
 #: script/events/setpieces.js:865
 msgid "a beast charges out of a ransacked classroom."
-msgstr "một con quái thú bước ra từ một lớp học"
+msgstr "một con quái thú bước ra từ một lớp học."
 
 #: script/events/setpieces.js:881
 msgid "through the large gymnasium doors, footsteps can be heard."
 msgstr ""
 "xuyên qua cánh cửa của phòng thể dục, tiếng bước chân có thể dễ dàng nghe "
-"thấy được "
+"thấy được."
 
 #: script/events/setpieces.js:882
 msgid "the torchlight casts a flickering glow down the hallway."
@@ -2442,7 +2442,7 @@ msgstr "ánh đèn pin nhấp nháy ánh sáng xuống hành lang."
 
 #: script/events/setpieces.js:883
 msgid "the footsteps stop."
-msgstr "tiếng bước chân ngừng lại"
+msgstr "tiếng bước chân ngừng lại."
 
 #: script/events/setpieces.js:916
 msgid "another beast, draw by the noise, leaps out of a copse of trees."
@@ -2454,17 +2454,18 @@ msgstr "một thứ gì đó vừa gây ra chấn động mạnh xuống con đ�
 
 #: script/events/setpieces.js:933
 msgid "a fight, maybe."
-msgstr "có thể là một cuộc chiến"
+msgstr "có thể là một cuộc chiến."
 
 #: script/events/setpieces.js:948
 msgid ""
 "a small basket of food is hidden under a park bench, with a note attached."
 msgstr ""
-"một giỏ thức ăn nhỏ được giấu dưới ghế đá công viên, với một ghi chú đính kèm"
+"một giỏ thức ăn nhỏ được giấu dưới ghế đá công viên, với một ghi chú đính "
+"kèm."
 
 #: script/events/setpieces.js:949
 msgid "can't read the words."
-msgstr "không thể đọc được dòng chữ"
+msgstr "không thể đọc được dòng chữ."
 
 #: script/events/setpieces.js:996
 msgid "a panicked scavenger bursts through the door, screaming."
@@ -2482,15 +2483,15 @@ msgstr "kẻ ăn xác người có một trại nhỏ ở trường."
 
 #: script/events/setpieces.js:1052
 msgid "collected scraps spread across the floor like they fell from heaven."
-msgstr "phế liệu nhặt được vãi trên sàn nhà như rơi từ trên trời xuống"
+msgstr "phế liệu nhặt được vãi trên sàn nhà như rơi từ trên trời xuống."
 
 #: script/events/setpieces.js:1094
 msgid "scavenger'd been looking for supplies in here, it seems."
-msgstr "có vẻ như bọn ăn xác người đang kiếm ăn ở đây"
+msgstr "có vẻ như bọn ăn xác người đang kiếm ăn ở đây."
 
 #: script/events/setpieces.js:1095
 msgid "a shame to let what he'd found go to waste."
-msgstr "thật xấu hổ khi lãng phí những gì anh đã tìm được"
+msgstr "thật xấu hổ khi lãng phí những gì anh đã tìm được."
 
 #: script/events/setpieces.js:1127
 msgid ""
@@ -2502,19 +2503,19 @@ msgstr ""
 
 #: script/events/setpieces.js:1128
 msgid "worth killing for, it seems."
-msgstr "có vẻ như nó đáng để giết"
+msgstr "có vẻ như nó cũng đáng để giết."
 
 #: script/events/setpieces.js:1155
 msgid "eye for an eye seems fair."
-msgstr "nợ máu trả bằng máu, vậy mới công bằng"
+msgstr "nợ máu trả bằng máu, vậy mới công bằng."
 
 #: script/events/setpieces.js:1156
 msgid "always worked before, at least."
-msgstr "ít nhất, luôn luôn làm việc"
+msgstr "ít nhất, luôn luôn làm việc."
 
 #: script/events/setpieces.js:1157
 msgid "picking the bones finds some useful trinkets."
-msgstr "nhặt trong đống xương, thấy vài thứ hữu dụng"
+msgstr "nhặt trong đống xương, thấy vài thứ hữu dụng."
 
 #: script/events/setpieces.js:1199
 msgid "some medicine abandoned in the drawers."
@@ -2530,21 +2531,21 @@ msgstr "chỉ cát và bụi còn sót lại."
 
 #: script/events/setpieces.js:1238
 msgid "A Ruined City"
-msgstr "Một Thành Phố bị phá"
+msgstr "Một Thành Phố Bị Phá"
 
 #: script/events/setpieces.js:1242
 msgid ""
 "a battered highway sign stands guard at the entrance to this once-great city."
 msgstr ""
 "một biển báo bị đập nát đứng canh ở lối vào thành phố đã từng rất tuyệt vời "
-"này"
+"này."
 
 #: script/events/setpieces.js:1243
 msgid ""
 "the towers that haven't crumbled jut from the landscape like the ribcage of "
 "some ancient beast."
 msgstr ""
-"các tháp canh chưa từng đổ sập như lồng ngực của một số con thú cổ đại (?)"
+"các tháp canh chưa từng đổ sập như lồng ngực của một số con thú cổ đại."
 
 #: script/events/setpieces.js:1244
 msgid "might be things worth having still inside."
@@ -2592,39 +2593,39 @@ msgstr "rời thành phố"
 
 #: script/events/setpieces.js:1276
 msgid "orange traffic cones are set across the street, faded and cracked."
-msgstr "biển báo giao thông nằm rải rác, phai nhạt và gãy gọng"
+msgstr "biển báo giao thông nằm rải rác, phai nhạt và gãy gọng."
 
 #: script/events/setpieces.js:1277
 msgid "lights flash through the alleys between buildings."
-msgstr "ánh sáng flash xuyên qua những con hẻm giữa các tòa nhà"
+msgstr "ánh sáng flash xuyên qua những con hẻm giữa các tòa nhà."
 
 #: script/events/setpieces.js:1292
 msgid "a large shanty town sprawls across the streets."
-msgstr "một cái chòi to nằm ườn ra giữa lộ"
+msgstr "một cái chòi to nằm ườn ra giữa lộ."
 
 #: script/events/setpieces.js:1293
 msgid "faces, darkened by soot and blood, stare out from crooked huts."
-msgstr "mặt tối xầm lại bởi máu và nhọ"
+msgstr "mặt tối xầm lại bởi máu và nhọ."
 
 #: script/events/setpieces.js:1308
 msgid "the shell of an abandoned hospital looms ahead."
-msgstr "vách tường của một bệnh viện hiện ra mờ mờ phía trước"
+msgstr "vách tường của một bệnh viện hiện ra mờ mờ phía trước."
 
 #: script/events/setpieces.js:1324
 msgid "the old tower seems mostly intact."
-msgstr "ngôi tháp cũ kỹ có vẻ gần như còn nguyên vẹn"
+msgstr "ngôi tháp cũ kỹ có vẻ gần như còn nguyên vẹn."
 
 #: script/events/setpieces.js:1325
 msgid "the shell of a burned out car blocks the entrance."
-msgstr "chiếc khung xe cháy cản hết lối vào"
+msgstr "chiếc khung xe cháy cản hết lối vào."
 
 #: script/events/setpieces.js:1326
 msgid "most of the windows at ground level are busted anyway."
-msgstr "hầu hết các cửa sổ ở tầng trệt đều bị vỡ"
+msgstr "hầu hết các cửa sổ ở tầng trệt đều bị vỡ."
 
 #: script/events/setpieces.js:1341
 msgid "a huge lizard scrambles up out of the darkness of an old metro station."
-msgstr "một con thằn lằn lớn xuất hiện từ trong bóng tối của một trạm xe ngầm"
+msgstr "một con thằn lằn lớn xuất hiện từ trong bóng tối của một trạm xe ngầm."
 
 #: script/events/setpieces.js:1367
 msgid "descend"
@@ -2632,11 +2633,11 @@ msgstr "xuống"
 
 #: script/events/setpieces.js:1379
 msgid "the shot echoes in the empty street."
-msgstr "phát bắn vang vọng trên con đường vắng"
+msgstr "phát bắn vang vọng trên con đường vắng."
 
 #: script/events/setpieces.js:1419
 msgid "the soldier steps out from between the buildings, rifle raised."
-msgstr "tên lính bước ra giữa các tòa nhà, nổ súng"
+msgstr "tên lính bước ra giữa các tòa nhà, nổ súng."
 
 #: script/events/setpieces.js:1459
 msgid "a frail man stands defiantly, blocking the path."
@@ -2648,7 +2649,7 @@ msgstr "không có gì trừ đôi mắt nhìn xuống."
 
 #: script/events/setpieces.js:1505
 msgid "the people here were broken a long time ago."
-msgstr "người dân nơi đây từng bị đánh bại một thời gian dài trước đây"
+msgstr "người dân nơi đây từng bị đánh bại một thời gian dài trước đây."
 
 #: script/events/setpieces.js:1520
 msgid "empty corridors."
@@ -2656,7 +2657,7 @@ msgstr "hành lang trống rỗng."
 
 #: script/events/setpieces.js:1521
 msgid "the place has been swept clean by scavengers."
-msgstr "nơi đã bị quét sạch bởi những kẻ ăn xác người"
+msgstr "nơi đã bị quét sạch bởi những kẻ ăn xác người."
 
 #: script/events/setpieces.js:1535
 msgid "an old man bursts through a door, wielding a scalpel."
@@ -2692,7 +2693,7 @@ msgstr "dây xích  gỉ được kéo qua một con hẻm."
 
 #: script/events/setpieces.js:1676
 msgid "fires burn in the courtyard beyond."
-msgstr "cháy bỏng trong sân ."
+msgstr "cháy bỏng trong sân."
 
 #: script/events/setpieces.js:1692
 msgid "more voices can be heard ahead."
@@ -2700,11 +2701,11 @@ msgstr "nhiều tiếng nói có thể được nghe thấy ở phía trước."
 
 #: script/events/setpieces.js:1693
 msgid "they must be here for a reason."
-msgstr "họ phải có mặt ở đây vì một lý do nào đó"
+msgstr "họ phải có mặt ở đây vì một lý do nào đó."
 
 #: script/events/setpieces.js:1709
 msgid "the sound of gunfire carries on the wind."
-msgstr "âm thanh của tiếng súng được gió mang theo"
+msgstr "âm thanh của tiếng súng được gió mang theo."
 
 #: script/events/setpieces.js:1710
 msgid "the street ahead glows with firelight."
@@ -2712,11 +2713,11 @@ msgstr "con đường phía trước phát sáng với ánh lửa."
 
 #: script/events/setpieces.js:1726
 msgid "more squatters are crowding around now."
-msgstr "nhiều người lấn chiếm đất tràn ngập xung quanh "
+msgstr "nhiều người lấn chiếm đất tràn ngập xung quanh."
 
 #: script/events/setpieces.js:1727
 msgid "someone throws a stone."
-msgstr "ai đó ném một hòn đá"
+msgstr "ai đó ném một hòn đá."
 
 #: script/events/setpieces.js:1743
 msgid "an improvised shop is set up on the sidewalk."
@@ -2724,7 +2725,7 @@ msgstr "một cửa hàng được dựng trên vỉa hè."
 
 #: script/events/setpieces.js:1744
 msgid "the owner stands by, stoic."
-msgstr "chủ sở hữu"
+msgstr "chủ sở hữu."
 
 #: script/events/setpieces.js:1789
 msgid "strips of meat hang drying by the side of the street."
@@ -2752,7 +2753,7 @@ msgstr "thịt được treo lên để khô nơi này."
 
 #: script/events/setpieces.js:1937
 msgid "a large bird nests at the top of the stairs."
-msgstr "một tổ chim lớn ở đầu cầu thang"
+msgstr "một tổ chim lớn ở đầu cầu thang."
 
 #: script/events/setpieces.js:1968
 msgid "the debris is denser here."
@@ -2772,7 +2773,7 @@ msgstr "một cuộc tấn công lớn, vẫy một lưỡi lê."
 
 #: script/events/setpieces.js:2079
 msgid "a second soldier opens fire."
-msgstr "tên lính thứ nhì nổ súng"
+msgstr "tên lính thứ nhì nổ súng."
 
 #: script/events/setpieces.js:2120
 msgid "a masked soldier rounds the corner, gun drawn"
@@ -2797,7 +2798,7 @@ msgstr "đằng sau cánh cửa, một hình thù biến dạng thức giấc v�
 
 #: script/events/setpieces.js:2307
 msgid "as soon as the door is open a little bit, hundreds of tentacles erupt."
-msgstr "ngay sau khi cánh cửa được mở ra một chút, hàng trăm xúc tu mọc lên"
+msgstr "ngay sau khi cánh cửa được mở ra một chút, hàng trăm xúc tu mọc lên."
 
 #: script/events/setpieces.js:2334
 msgid "bird must have liked shiney things."
@@ -2813,7 +2814,7 @@ msgstr "không có gì nhiều ở đây."
 
 #: script/events/setpieces.js:2370
 msgid "scavengers must have gotten to this place already."
-msgstr "những kẻ ăn xác hẳn phải qua nơi này rồi"
+msgstr "những kẻ ăn xác hẳn phải qua nơi này rồi."
 
 #: script/events/setpieces.js:2399
 msgid "the tunnel opens up at another platform."
@@ -2841,15 +2842,15 @@ msgstr ""
 
 #: script/events/setpieces.js:2447
 msgid "just as deadly now as they were then."
-msgstr "chết chóc y hệt như trước đây"
+msgstr "chết chóc y hệt như trước đây."
 
 #: script/events/setpieces.js:2481
 msgid "searching the bodies yields a few supplies."
-msgstr "tìm kiếm các thi thể mang lại một vài nguồn tiếp tế"
+msgstr "tìm kiếm các thi thể mang lại một vài nguồn tiếp tế."
 
 #: script/events/setpieces.js:2482
 msgid "more soldiers will be on their way."
-msgstr "nhiều lính khác đang tới"
+msgstr "nhiều lính khác đang tới."
 
 #: script/events/setpieces.js:2483
 msgid "time to move on."
@@ -2868,7 +2869,7 @@ msgstr ""
 
 #: script/events/setpieces.js:2524
 msgid "still time to rescue a few supplies."
-msgstr "Vẫn còn thời gian để cứu một vài nguồn tiếp tế"
+msgstr "vẫn còn thời gian để cứu một vài nguồn tiếp tế."
 
 #: script/events/setpieces.js:2558
 msgid ""
@@ -2891,7 +2892,7 @@ msgstr "nó chứa bánh răng, và một vài món nữ trang."
 
 #: script/events/setpieces.js:2595 script/events/setpieces.js:2631
 msgid "there's nothing else here."
-msgstr "chẳng còn gì ở đây nữa"
+msgstr "chẳng còn gì ở đây nữa."
 
 #: script/events/setpieces.js:2629
 msgid "inside the hut, a child cries."
@@ -2907,11 +2908,11 @@ msgstr "mùi hôi thối và mùi của cái chết lấp đầy các phòng m�
 
 #: script/events/setpieces.js:2671
 msgid "a few items are scattered on the ground."
-msgstr "một vài thứ nằm rải rác trên mặt đất .."
+msgstr "một vài thứ nằm rải rác trên mặt đất."
 
 #: script/events/setpieces.js:2672
 msgid "there is nothing else here."
-msgstr "chẳng còn gì ở đây nữa"
+msgstr "chẳng còn gì ở đây nữa."
 
 #: script/events/setpieces.js:2711
 msgid "a pristine medicine cabinet at the end of a hallway."
@@ -2919,11 +2920,11 @@ msgstr "một tủ thuốc còn nguyên vẹn ở cuối hành lang."
 
 #: script/events/setpieces.js:2712
 msgid "the rest of the hospital is empty."
-msgstr "phần còn lại của bệnh viện trống"
+msgstr "phần còn lại của bệnh viện trống."
 
 #: script/events/setpieces.js:2746
 msgid "someone had been stockpiling loot here."
-msgstr "một người nào đó đã cướp bóc sạch sẽ nơi này"
+msgstr "một người nào đó đã cướp bóc sạch sẽ nơi này."
 
 #: script/events/setpieces.js:2795
 msgid "the tentacular horror is defeated."
@@ -2939,11 +2940,11 @@ msgstr "người đàn ông bị biến dạng nằm chết."
 
 #: script/events/setpieces.js:2841
 msgid "the operating theatre has a lot of curious equipment."
-msgstr "nhà hát hoạt động có rất nhiều thiết bị lạ"
+msgstr "nhà hát hoạt động có rất nhiều thiết bị lạ."
 
 #: script/events/setpieces.js:2885
 msgid "the old man had a small cache of interesting items."
-msgstr "ông già có nhiều thứ thú vị"
+msgstr "ông già có nhiều thứ thú vị."
 
 #: script/events/setpieces.js:2929
 msgid "An Old House"
@@ -2955,7 +2956,7 @@ msgstr "một căn nhà cũ vẫn còn ở đây, vách trắng đã ố vàng v
 
 #: script/events/setpieces.js:2934
 msgid "the door hangs open."
-msgstr "cửa mở"
+msgstr "cửa mở."
 
 #: script/events/setpieces.js:2936
 msgid "the remains of an old house stand as a monument to simpler times"
@@ -2963,11 +2964,11 @@ msgstr "phần còn lại của một ngôi nhà cũ đứng sững như một t
 
 #: script/events/setpieces.js:2950
 msgid "the house is abandoned, but not yet picked over."
-msgstr "Ngôi nhà bị bỏ rơi, nhưng chưa bị sập"
+msgstr "ngôi nhà bị bỏ rơi, nhưng chưa bị sập."
 
 #: script/events/setpieces.js:2951
 msgid "still a few drops of water in the old well."
-msgstr "vẫn còn một vài giọt nước trong cái giếng cũ kỹ này"
+msgstr "vẫn còn một vài giọt nước trong cái giếng cũ kỹ này."
 
 #: script/events/setpieces.js:2985
 msgid "the house has been ransacked."
@@ -2994,7 +2995,7 @@ msgid ""
 "battered technology from both sides lays dormant on the blasted landscape."
 msgstr ""
 "cuộc chiến công nghệ từ cả hai bên đã kết thúc quan cảnh nơi đây bằng sự im "
-"lìm đầy chết chóc"
+"lìm đầy chết chóc."
 
 #: script/events/setpieces.js:3099
 msgid "A Huge Borehole"
@@ -3008,7 +3009,7 @@ msgstr ""
 
 #: script/events/setpieces.js:3104
 msgid "they took what they came for, and left."
-msgstr "họ lấy những gì họ cần, và bỏ đi"
+msgstr "họ lấy những gì họ cần, và bỏ đi."
 
 #: script/events/setpieces.js:3105
 msgid ""
@@ -3016,20 +3017,20 @@ msgid ""
 "precipice."
 msgstr ""
 "nhưng gì còn sót lại từ các cuộc tập trận khổng lồ vẫn có thể được tìm thấy "
-"bởi các cạnh của giếng"
+"bởi các cạnh của giếng."
 
 #: script/events/setpieces.js:3128
 msgid "A Crashed Ship"
-msgstr "Một chiếc tàu bị đắm"
+msgstr "Một Chiếc Tàu Bị Đắm"
 
 #: script/events/setpieces.js:3137
 msgid ""
 "the familiar curves of a wanderer vessel rise up out of the dust and ash. "
-msgstr "các đường cong quen thuộc của chiếc tàu lang thang mọc lên từ tro bụi "
+msgstr "các đường cong quen thuộc của chiếc tàu lang thang mọc lên từ tro bụi."
 
 #: script/events/setpieces.js:3138
 msgid "lucky that the natives can't work the mechanisms."
-msgstr "may mắn là người bản xứ không biết gì về cơ khí"
+msgstr "may mắn là người bản xứ không biết gì về cơ khí."
 
 #: script/events/setpieces.js:3139
 msgid "with a little effort, it might fly again."
@@ -3041,7 +3042,7 @@ msgstr "cứu hộ"
 
 #: script/events/setpieces.js:3151
 msgid "The Sulphur Mine"
-msgstr "Mỏ lưu huỳnh"
+msgstr "Mỏ Lưu Huỳnh"
 
 #: script/events/setpieces.js:3155
 msgid "the military is already set up at the mine's entrance."
@@ -3049,7 +3050,7 @@ msgstr "quân đội đã được thiết lập tại cửa hầm mỏ."
 
 #: script/events/setpieces.js:3156
 msgid "soldiers patrol the perimeter, rifles slung over their shoulders."
-msgstr "lính tuần tra, súng trường trên vai "
+msgstr "lính tuần tra, súng trường trên vai."
 
 #: script/events/setpieces.js:3158
 msgid "a military perimeter is set up around the mine."
@@ -3078,12 +3079,12 @@ msgstr "một cuộc tấn công quân tóc hoa râm, vẫy một lưỡi lê."
 
 #: script/events/setpieces.js:3281
 msgid "the military presence has been cleared."
-msgstr "sự có mặt của quân sự là rất rõ ràng"
+msgstr "sự có mặt của quân sự là rất rõ ràng."
 
 #: script/events/setpieces.js:3282 script/events/setpieces.js:3424
 #: script/events/setpieces.js:3500
 msgid "the mine is now safe for workers."
-msgstr "mỏ an toàn"
+msgstr "mỏ an toàn."
 
 #: script/events/setpieces.js:3284
 msgid "the sulphur mine is clear of dangers"
@@ -3095,11 +3096,11 @@ msgstr "Một Mỏ Than"
 
 #: script/events/setpieces.js:3304
 msgid "camp fires burn by the entrance to the mine."
-msgstr "lửa trại cháy lên, cạnh lối vào hầm mỏ"
+msgstr "lửa trại cháy lên, cạnh lối vào hầm mỏ."
 
 #: script/events/setpieces.js:3305
 msgid "men mill about, weapons at the ready."
-msgstr "thợ xưởng cầm vũ khí lên"
+msgstr "thợ xưởng cầm vũ khí lên."
 
 #: script/events/setpieces.js:3307
 msgid "this old mine is not abandoned"
@@ -3111,7 +3112,7 @@ msgstr "một người đàn ông tham gia trận chiến"
 
 #: script/events/setpieces.js:3412
 msgid "only the chief remains."
-msgstr "chỉ còn tay chỉ huy còn lại"
+msgstr "chỉ còn tay chỉ huy còn lại."
 
 #: script/events/setpieces.js:3423
 msgid "the camp is still, save for the crackling of the fires."
@@ -3123,7 +3124,7 @@ msgstr "mỏ than hết nguy hiểm"
 
 #: script/events/setpieces.js:3442
 msgid "The Iron Mine"
-msgstr "Mỏ sắt"
+msgstr "Mỏ Sắt"
 
 #: script/events/setpieces.js:3446
 msgid "an old iron mine sits here, tools abandoned and left to rust."
@@ -3133,7 +3134,7 @@ msgstr "một mỏ sắt cũ bị bỏ hoang, đồ đạc còn y nguyên."
 msgid ""
 "bleached bones are strewn about the entrance. many, deeply scored with "
 "jagged grooves."
-msgstr "xương tẩy trắng rải rác lối vào"
+msgstr "xương tẩy trắng rải rác lối vào."
 
 #: script/events/setpieces.js:3448
 msgid "feral howls echo out of the darkness."
@@ -3149,7 +3150,7 @@ msgstr "một sinh vật to lớn cơ bắp cuồn cuộn trong bước ra phía
 
 #: script/events/setpieces.js:3499
 msgid "the beast is dead."
-msgstr "con quái thú đã chết"
+msgstr "con quái thú đã chết."
 
 #: script/events/setpieces.js:3502
 msgid "the iron mine is clear of dangers"
@@ -3157,11 +3158,11 @@ msgstr "mỏ sắt hết nguy hiểm"
 
 #: script/events/setpieces.js:3519
 msgid "A Destroyed Village"
-msgstr "Một ngôi làng bị phá hủy"
+msgstr "Một Ngôi Làng Bị Phá Hủy"
 
 #: script/events/setpieces.js:3523
 msgid "a destroyed village lies in the dust."
-msgstr "một ngôi làng bị phá hủy năm trong cát bụi"
+msgstr "một ngôi làng bị phá hủy năm trong cát bụi."
 
 #: script/events/setpieces.js:3524
 msgid "charred bodies litter the ground."
@@ -3177,7 +3178,7 @@ msgstr "một chiếc xe ở trung tâm làng."
 
 #: script/events/setpieces.js:3541
 msgid "there are still supplies inside."
-msgstr "có nhiều đồ tiếp tế bên trong"
+msgstr "có nhiều đồ tiếp tế bên trong."
 
 #: script/events/setpieces.js:3545
 msgid "take"
@@ -3189,4 +3190,4 @@ msgstr "tất cả công việc của thế hệ trước là ở đây."
 
 #: script/events/setpieces.js:3553
 msgid "ripe for the picking."
-msgstr "lựa chọn đúng đắn"
+msgstr "lựa chọn đúng đắn."
