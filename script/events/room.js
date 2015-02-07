@@ -61,10 +61,10 @@ Events.Room = [
 					_('A fire rampages through one of your huts, destroying it.'),
 					_('Saddly, all residents in the hut perished in the fire.')
 				],
-				notification: _('A fire has started'),
+				notification: _('a fire has started'),
 				blink: true,
 				onLoad: function() {
-                                        var population = $SM.get('game.population', true);
+					var population = $SM.get('game.population', true);
 					var huts = $SM.get('game.buildings["hut"]', true);
 					$SM.set('game.buildings["hut"]', (huts - 1));
 					$SM.set('game.population', (population - 4));
@@ -72,7 +72,7 @@ Events.Room = [
 				buttons: {
 					'mourn': {
 						text: _('Mourn'),
-						notification: _('Some villagers have died'),
+						notification: _('some villagers have died'),
 						nextScene: 'end'
 					}
 				}
