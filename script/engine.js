@@ -74,7 +74,8 @@
 			state: null,
 			debug: false,
 			log: false,
-			dropbox: false
+			dropbox: false,
+			doubleTime: false
 		},
 			
 		init: function(options) {
@@ -137,7 +138,19 @@
 				.text(_('lights off.'))
 				.click(Engine.turnLightsOff)
 				.appendTo(menu);
-			
+
+			$('<span>')
+				.addClass('menuBtn')
+				.text(_('hyper.'))
+				.click(function(){
+					Engine.options.doubleTime = !Engine.options.doubleTime;
+					if(Engine.options.doubleTime)
+						$(this).text(_('classic.'));
+					else
+						$(this).text(_('hyper.'));
+				})
+				.appendTo(menu);
+
 			$('<span>')
 				.addClass('menuBtn')
 				.text(_('restart.'))
@@ -681,7 +694,19 @@
 			if(lang && typeof Storage != 'undefined' && localStorage) {
 				localStorage.lang = lang;
 			}
+		},
+
+		setTimeout: function(callback, timeout, skipDouble){
+
+			if( Engine.options.doubleTime && !skipDouble ){
+				Engine.log('Double time, cutting timeout in half');
+				timeout /= 2;
+			}
+
+			return setTimeout(callback, timeout);
+
 		}
+
 	};
 
 	function eventNullifier(e) {

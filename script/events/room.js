@@ -295,7 +295,7 @@ Events.Room = [
 				],
 				onLoad: function() {
 					if(Math.random() < 0.5) {
-						setTimeout(function() {
+						Engine.setTimeout(function() {
 							$SM.add('stores.wood', 300);
 							Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with wood.'));
 						}, 60 * 1000);
@@ -314,7 +314,7 @@ Events.Room = [
 				],
 				onLoad: function() {
 					if(Math.random() < 0.3) {
-						setTimeout(function() {
+						Engine.setTimeout(function() {
 							$SM.add('stores.wood', 1500);
 							Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with wood.'));
 						}, 60 * 1000);
@@ -366,7 +366,7 @@ Events.Room = [
 				],
 				onLoad: function() {
 					if(Math.random() < 0.5) {
-						setTimeout(function() {
+						Engine.setTimeout(function() {
 							$SM.add('stores.fur', 300);
 							Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with furs.'));
 						}, 60 * 1000);
@@ -385,7 +385,7 @@ Events.Room = [
 				],
 				onLoad: function() {
 					if(Math.random() < 0.3) {
-						setTimeout(function() {
+						Engine.setTimeout(function() {
 							$SM.add('stores.fur', 1500);
 							Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with furs.'));
 						}, 60 * 1000);
