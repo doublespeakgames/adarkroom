@@ -698,9 +698,9 @@
 
 		setTimeout: function(callback, timeout, skipDouble){
 
-			if( Engine.options.doubleTime && ( typeof skipDouble == "undefined" || skipDouble == false ) ){
+			if( Engine.options.doubleTime && !skipDouble ){
 				Engine.log('Double time, cutting timeout in half');
-				timeout = timeout / 2;
+				timeout /= 2;
 			}
 
 			return setTimeout(callback, timeout);
