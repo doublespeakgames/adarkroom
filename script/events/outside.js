@@ -71,7 +71,7 @@ Events.Outside = [
 		scenes: {
 			'start': {
 				text: [
-					_('a fire rampages through one of your huts, destroying it.'),
+					_('a fire rampages through one of the huts, destroying it.'),
 					_('all residents in the hut perished in the fire.')
 				],
 				notification: _('a fire has started'),
