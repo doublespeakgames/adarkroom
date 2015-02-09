@@ -66,7 +66,7 @@ Events.Outside = [
 	{
 		title: _('Fire'),
 		isAvailable: function() {
-			return $SM.get('game.buildings["hut"]', true) > 0 && $SM.get('game.population', true) > 5;
+			return Engine.activeModule == Outside && $SM.get('game.buildings["hut"]', true) > 0 && $SM.get('game.population', true) > 5;
 		},
 		scenes: {
 			'start': {
