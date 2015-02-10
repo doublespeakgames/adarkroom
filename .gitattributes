@@ -1,0 +1,8 @@
+# Default
+* text=auto
+
+# Binary files so don't modify
+*.ico binary
+*.png binary
+*.jpg binary
+*.xlsx binary
