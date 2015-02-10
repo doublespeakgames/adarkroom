@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: adarkroom\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2014-09-27 12:34+0200\n"
-"PO-Revision-Date: 2015-01-02 12:23+0900\n"
+"PO-Revision-Date: 2015-02-07 14:15-0500\n"
 "Last-Translator: satofumi <satofumi@hyakuren-soft.sakura.ne.jp>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -12,6 +12,7 @@ msgstr ""
 "Generated-By: Babel 1.3\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: script/dropbox.js:64
 msgid "Dropbox connection"
@@ -1201,7 +1202,8 @@ msgstr "発進！"
 msgid ""
 "somewhere above the debris cloud, the wanderer fleet hovers. been on this "
 "rock too long."
-msgstr "瓦礫の雲の上のどこかに、放浪者艦隊は浮かんでいる。この岩の上に長らくあった。"
+msgstr ""
+"瓦礫の雲の上のどこかに、放浪者艦隊は浮かんでいる。この岩の上に長らくあった。"
 
 #: script/ship.js:116 script/ship.js:129
 msgid "not enough alien alloy"
@@ -1410,7 +1412,9 @@ msgstr "やせ地は乾燥した風に揺れる瀕死の草の海で終わる。
 msgid ""
 "a wall of gnarled trees rises from the dust. their branches twist into a "
 "skeletal canopy overhead."
-msgstr "節くれだった木の壁が、埃から立ち上がる。枝は天蓋の骨組みのように頭上で絡み合っている。"
+msgstr ""
+"節くれだった木の壁が、埃から立ち上がる。枝は天蓋の骨組みのように頭上で絡み"
+"合っている。"
 
 #: script/world.js:812
 msgid "Wanderer"
@@ -1966,7 +1970,9 @@ msgstr "謎の放浪者"
 msgid ""
 "a wanderer arrives with an empty cart. says if he leaves with wood, he'll be "
 "back with more."
-msgstr "放浪者は空の荷車を持ってきた。木材を渡せば、彼はより多くを持って戻って来ると言う。"
+msgstr ""
+"放浪者は空の荷車を持ってきた。木材を渡せば、彼はより多くを持って戻って来ると"
+"言う。"
 
 #: script/events/room.js:270
 msgid "builder's not sure he's to be trusted."
@@ -1992,7 +1998,9 @@ msgstr "謎の放浪者が荷車に木材を高く積み上げて戻ってきた
 msgid ""
 "a wanderer arrives with an empty cart. says if she leaves with furs, she'll "
 "be back with more."
-msgstr "放浪者は空の荷車を持ってきた。毛皮を渡せば、彼女はより多くを持って戻って来ると言う。"
+msgstr ""
+"放浪者は空の荷車を持ってきた。毛皮を渡せば、彼女はより多くを持って戻って来る"
+"と言う。"
 
 #: script/events/room.js:341
 msgid "builder's not sure she's to be trusted."
@@ -2468,7 +2476,8 @@ msgstr "ゴミ漁りは学校に小さなキャンプを持っていた。"
 
 #: script/events/setpieces.js:1052
 msgid "collected scraps spread across the floor like they fell from heaven."
-msgstr "集めたスクラップは、まるで天から降ってきたかのように床に散らばっている。"
+msgstr ""
+"集めたスクラップは、まるで天から降ってきたかのように床に散らばっている。"
 
 #: script/events/setpieces.js:1094
 msgid "scavenger'd been looking for supplies in here, it seems."
@@ -2519,7 +2528,9 @@ msgstr "廃墟の街"
 #: script/events/setpieces.js:1242
 msgid ""
 "a battered highway sign stands guard at the entrance to this once-great city."
-msgstr "ぼろぼろの高速道路の看板が、このかつて偉大だった都市の入り口を守って立っている。"
+msgstr ""
+"ぼろぼろの高速道路の看板が、このかつて偉大だった都市の入り口を守って立ってい"
+"る。"
 
 #: script/events/setpieces.js:1243
 msgid ""
@@ -3101,7 +3112,9 @@ msgstr "古い鉄鉱山がある。道具類は放置されて錆びるに任さ
 msgid ""
 "bleached bones are strewn about the entrance. many, deeply scored with "
 "jagged grooves."
-msgstr "白い骨が入り口の辺りに散らばっている。深いギザギザの溝がたくさん刻まれている。"
+msgstr ""
+"白い骨が入り口の辺りに散らばっている。深いギザギザの溝がたくさん刻まれてい"
+"る。"
 
 #: script/events/setpieces.js:3448
 msgid "feral howls echo out of the darkness."
