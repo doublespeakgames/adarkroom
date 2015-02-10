@@ -113,7 +113,7 @@ var Events = {
 		}
 		
 		// Set up the enemy attack timer
-		Events._enemyAttackTimer = setTimeout(Events.enemyAttack, scene.attackDelay * 1000);
+		Events._enemyAttackTimer = Engine.setTimeout(Events.enemyAttack, scene.attackDelay * 1000);
 	},
 	
 	createEatMeatButton: function(cooldown) {
@@ -354,7 +354,7 @@ var Events = {
 				if(dmg == 'stun') {
 					msg = _('stunned');
 					enemy.data('stunned', true);
-					setTimeout(function() {
+					Engine.setTimeout(function() {
 						enemy.data('stunned', false);
 					}, Events.STUN_DURATION);
 				}
@@ -399,7 +399,7 @@ var Events = {
 				if(dmg == 'stun') {
 					msg = _('stunned');
 					enemy.data('stunned', true);
-					setTimeout(function() {
+					Engine.setTimeout(function() {
 						enemy.data('stunned', false);
 					}, Events.STUN_DURATION);
 				}
@@ -438,14 +438,14 @@ var Events = {
 			});
 		}
 		
-		Events._enemyAttackTimer = setTimeout(Events.enemyAttack, scene.attackDelay * 1000);
+		Events._enemyAttackTimer = Engine.setTimeout(Events.enemyAttack, scene.attackDelay * 1000);
 	},
 	
 	winFight: function() {
 		Events.won = true;
 		clearTimeout(Events._enemyAttackTimer);
 		$('#enemy').animate({opacity: 0}, 300, 'linear', function() {
-			setTimeout(function() {
+			Engine.setTimeout(function() {
 				try {
 					var scene = Events.activeEvent().scenes[Events.activeScene];
 					var desc = $('#description', Events.eventPanel());
@@ -482,7 +482,7 @@ var Events = {
 				} catch(e) {
 					// It is possible to die and win if the timing is perfect. Just let it fail.
 				}
-			}, 1000);
+			}, 1000, true);
 		});
 	},
 	
@@ -742,7 +742,7 @@ var Events = {
 		// every 3 seconds change title to '*** EVENT ***', then 1.5 seconds later, change it back to the original title.
 		Events.BLINK_INTERVAL = setInterval(function() {
 			document.title = _('*** EVENT ***');
-			setTimeout(function() {document.title = title;}, 1500); 
+			Engine.setTimeout(function() {document.title = title;}, 1500, true); 
 		}, 3000);
 	},
 
@@ -824,7 +824,7 @@ var Events = {
 		var nextEvent = Math.floor(Math.random()*(Events._EVENT_TIME_RANGE[1] - Events._EVENT_TIME_RANGE[0])) + Events._EVENT_TIME_RANGE[0];
 		if(scale > 0) { nextEvent *= scale; }
 		Engine.log('next event scheduled in ' + nextEvent + ' minutes');
-		Events._eventTimeout = setTimeout(Events.triggerEvent, nextEvent * 60 * 1000);
+		Events._eventTimeout = Engine.setTimeout(Events.triggerEvent, nextEvent * 60 * 1000);
 	},
 
 	endEvent: function() {
