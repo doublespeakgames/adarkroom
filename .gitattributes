@@ -1,0 +1,15 @@
+# Default
+* text=auto
+
+# Mandate conversion to LF (unix) line endings.
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+
+# Binary files so don't modify
+*.ico binary
+*.png binary
+*.jpg binary
+*.xlsx binary
