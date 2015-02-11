@@ -74,7 +74,8 @@
 			state: null,
 			debug: false,
 			log: false,
-			dropbox: false
+			dropbox: false,
+			doubleTime: false
 		},
 			
 		init: function(options) {
@@ -114,11 +115,11 @@
 					.addClass('customSelect')
 					.addClass('menuBtn')
 					.appendTo(menu);
-				var options = $('<span>')
+				var selectOptions = $('<span>')
 					.addClass('customSelectOptions')
 					.appendTo(customSelect);
 				var optionsList = $('<ul>')
-					.appendTo(options);
+					.appendTo(selectOptions);
 				$('<li>')
 					.text("language.")
 					.appendTo(optionsList);
@@ -137,7 +138,19 @@
 				.text(_('lights off.'))
 				.click(Engine.turnLightsOff)
 				.appendTo(menu);
-			
+
+			$('<span>')
+				.addClass('menuBtn')
+				.text(_('hyper.'))
+				.click(function(){
+					Engine.options.doubleTime = !Engine.options.doubleTime;
+					if(Engine.options.doubleTime)
+						$(this).text(_('classic.'));
+					else
+						$(this).text(_('hyper.'));
+				})
+				.appendTo(menu);
+
 			$('<span>')
 				.addClass('menuBtn')
 				.text(_('restart.'))
@@ -339,7 +352,7 @@
 					}
 				}
 			});
-			Engine.autoSelect('#description textarea')
+			Engine.autoSelect('#description textarea');
 		},
 
 		import64: function(string64) {
@@ -462,7 +475,6 @@
 			var darkCss = Engine.findStylesheet('darkenLights');
 			if (darkCss == null) {
 				$('head').append('<link rel="stylesheet" href="css/dark.css" type="text/css" title="darkenLights" />');
-				Engine.turnLightsOff;
 				$('.lightsOff').text(_('lights on.'));
 			} else if (darkCss.disabled) {
 				darkCss.disabled = false;
@@ -496,7 +508,7 @@
 				var diff = Math.abs(panelIndex - currentIndex);
 				slider.animate({left: -(panelIndex * 700) + 'px'}, 300 * diff);
 
-				if($SM.get('stores.wood') != undefined) {
+				if($SM.get('stores.wood') !== undefined) {
 				// FIXME Why does this work if there's an animation queue...?
 					stores.animate({right: -(panelIndex * 700) + 'px'}, 300 * diff);
 				}
@@ -681,7 +693,19 @@
 			if(lang && typeof Storage != 'undefined' && localStorage) {
 				localStorage.lang = lang;
 			}
+		},
+
+		setTimeout: function(callback, timeout, skipDouble){
+
+			if( Engine.options.doubleTime && !skipDouble ){
+				Engine.log('Double time, cutting timeout in half');
+				timeout /= 2;
+			}
+
+			return setTimeout(callback, timeout);
+
 		}
+
 	};
 
 	function eventNullifier(e) {

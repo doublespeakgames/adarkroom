@@ -243,7 +243,7 @@ var World = {
 		
 		// Add water
 		var water = $('div#supply_water');
-		if(World.water > 0 && water.length == 0) {
+		if(World.water > 0 && water.length === 0) {
 			water = World.createItemDiv('water', World.water);
 			water.prependTo(supplies);
 		} else if(World.water > 0) {
@@ -257,7 +257,7 @@ var World = {
 			var item = $('div#supply_' + k.replace(' ', '-'), supplies);
 			var num = Path.outfit[k];
 			total += num * Path.getWeight(k);
-			if(num > 0 && item.length == 0) {
+			if(num > 0 && item.length === 0) {
 				item = World.createItemDiv(k, num);
 				if(k == 'cured meat' && World.water > 0) {
 					item.insertAfter(water);
@@ -410,11 +410,11 @@ var World = {
 	checkDanger: function() {
 		World.danger = typeof World.danger == 'undefined' ? false: World.danger;
 		if(!World.danger) {
-			if(!$SM.get('stores["i armour"]', true) > 0 && World.getDistance() >= 8) {
+			if($SM.get('stores["i armour"]', true) === 0 && World.getDistance() >= 8) {
 				World.danger = true;
 				return true;
 			} 
-			if(!$SM.get('stores["s armour"]', true) > 0 && World.getDistance() >= 18) {
+			if($SM.get('stores["s armour"]', true) === 0 && World.getDistance() >= 18) {
 				World.danger = true;
 				return true;
 			}
@@ -441,7 +441,7 @@ var World = {
 			World.foodMove = 0;
 			var num = Path.outfit['cured meat'];
 			num--;
-			if(num == 0) {
+			if(num === 0) {
 				Notifications.notify(World, _('the meat has run out'));
 			} else if(num < 0) {
 				// Starvation! Hooray!
@@ -471,7 +471,7 @@ var World = {
 			World.waterMove = 0;
 			var water = World.water;
 			water--;
-			if(water == 0) {
+			if(water === 0) {
 				Notifications.notify(World, _('there is no more water'));
 			} else if(water < 0) {
 				water = 0;
@@ -754,7 +754,7 @@ var World = {
 	
 	drawMap: function() {
 		var map = $('#map');
-		if(map.length == 0) {
+		if(map.length === 0) {
 			map = new $('<div>').attr('id', 'map').appendTo('#worldOuter');
 			// register click handler
 			map.click(World.click);
@@ -818,12 +818,12 @@ var World = {
 				Engine.activeModule = Room;
 				$('div.headerButton').removeClass('selected');
 				Room.tab.addClass('selected');
-				setTimeout(function(){ 
+				Engine.setTimeout(function(){ 
 					Room.onArrival(); 
 					$('#outerSlider').animate({opacity:'1'}, 600, 'linear');
 					Button.cooldown($('#embarkButton'));
 					Engine.keyLock = false;
-				}, 2000);
+				}, 2000, true);
 			});
 		}
 	},
@@ -831,15 +831,15 @@ var World = {
 	goHome: function() {
 		// Home safe! Commit the changes.
 		$SM.setM('game.world', World.state);
-		if(World.state.sulphurmine && $SM.get('game.buildings["sulphur mine"]', true) == 0) {
+		if(World.state.sulphurmine && $SM.get('game.buildings["sulphur mine"]', true) === 0) {
 			$SM.add('game.buildings["sulphur mine"]', 1);
 			Engine.event('progress', 'sulphur mine');
 		}
-		if(World.state.ironmine && $SM.get('game.buildings["iron mine"]', true) == 0) {
+		if(World.state.ironmine && $SM.get('game.buildings["iron mine"]', true) === 0) {
 			$SM.add('game.buildings["iron mine"]', 1);
 			Engine.event('progress', 'iron mine');
 		}
-		if(World.state.coalmine && $SM.get('game.buildings["coal mine"]', true) == 0) {
+		if(World.state.coalmine && $SM.get('game.buildings["coal mine"]', true) === 0) {
 			$SM.add('game.buildings["coal mine"]', 1);
 			Engine.event('progress', 'coal mine');
 		}
@@ -868,8 +868,8 @@ var World = {
 	},
 	
 	leaveItAtHome: function(thing) {
-		 return thing != 'cured meat' && thing != 'bullets' && thing != 'energy cell'  && thing != 'charm' && thing != 'medicine'
-			 && typeof World.Weapons[thing] == 'undefined' && typeof Room.Craftables[thing] == 'undefined';
+		 return thing != 'cured meat' && thing != 'bullets' && thing != 'energy cell'  && thing != 'charm' && thing != 'medicine' &&
+		 typeof World.Weapons[thing] == 'undefined' && typeof Room.Craftables[thing] == 'undefined';
 	},
 	
 	getMaxHealth: function() {
@@ -905,7 +905,7 @@ var World = {
 		x = typeof x == 'number' ? x : World.curPos[0];
 		y = typeof y == 'number' ? y : World.curPos[1];
 		var used = World.usedOutposts[x + ',' + y];
-		return typeof used != 'undefined' && used == true;
+		return typeof used != 'undefined' && used === true;
 	},
 	
 	useOutpost: function() {
