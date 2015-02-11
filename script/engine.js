@@ -605,14 +605,14 @@
 				switch(e.which) {
 					case 38: // Up
 					case 87:
-						if(Engine.activeModule == Outside || Engine.activeModule == Path)
+						if(Engine.activeModule == Outside || Engine.activeModule == Path) {
 							Engine.activeModule.scrollSidebar('up');
-						
+						}
 						Engine.log('up');
 						break;
 					case 40: // Down
 					case 83:
-						if(Engine.activeModule == Outside || Engine.activeModule == Path){
+						if (Engine.activeModule == Outside || Engine.activeModule == Path) {
 							Engine.activeModule.scrollSidebar('down');
 						}
 						Engine.log('down');
