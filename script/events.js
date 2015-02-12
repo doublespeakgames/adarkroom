@@ -522,8 +522,9 @@ var Events = {
 				}
 
 				var weight = $(this).data('numLeft') * Path.getWeight($(this).attr('id').substring(5).replace('-', ' '));
-
-				$(this).click();
+				while( $(this).data('numLeft') > 0 && weight < Path.getFreeSpace() ){
+					$(this).click();
+				}
 
 				if(weight > Path.getFreeSpace()){
 					stoppedEarly = true;	
