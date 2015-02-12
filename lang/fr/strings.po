@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adarkroom\n"
-"POT-Creation-Date: 2015-02-07 14:14-0500\n"
-"PO-Revision-Date: 2015-02-07 14:15-0500\n"
+"POT-Creation-Date: 2015-02-12 13:35-0500\n"
+"PO-Revision-Date: 2015-02-12 13:35-0500\n"
 "Last-Translator: Vanadar <vanadar.univers@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -187,15 +187,15 @@ msgstr "poids"
 msgid "available"
 msgstr "disponible"
 
-#: ../../script/events.js:344 ../../script/events.js:389
+#: ../../script/events.js:342 ../../script/events.js:387
 msgid "miss"
 msgstr ""
 
-#: ../../script/events.js:357 ../../script/events.js:402
+#: ../../script/events.js:355 ../../script/events.js:400
 msgid "stunned"
 msgstr ""
 
-#: ../../script/events.js:746
+#: ../../script/events.js:778
 msgid "*** EVENT ***"
 msgstr ""
 
@@ -1101,7 +1101,7 @@ msgid "connect"
 msgstr ""
 
 #: ../../script/dropbox.js:75 ../../script/dropbox.js:107
-#: ../../script/engine.js:270 ../../script/engine.js:303
+#: ../../script/engine.js:283 ../../script/engine.js:316
 msgid "cancel"
 msgstr "annuler"
 
@@ -1288,131 +1288,139 @@ msgstr "récupérer plus de vie en mangeant"
 msgid "learned to make the most of food"
 msgstr "vous savez tirer partie un maximum de la nourriture"
 
-#: ../../script/engine.js:137 ../../script/engine.js:473
+#: ../../script/engine.js:138 ../../script/engine.js:485
 msgid "lights off."
 msgstr "lumières éteintes."
 
-#: ../../script/engine.js:143
+#: ../../script/engine.js:144 ../../script/engine.js:150
+msgid "hyper."
+msgstr ""
+
+#: ../../script/engine.js:148
+msgid "classic."
+msgstr ""
+
+#: ../../script/engine.js:156
 msgid "restart."
 msgstr "recommencer."
 
-#: ../../script/engine.js:149
+#: ../../script/engine.js:162
 msgid "share."
 msgstr "partager."
 
-#: ../../script/engine.js:155
+#: ../../script/engine.js:168
 msgid "save."
 msgstr "sauvegarder."
 
-#: ../../script/engine.js:164
+#: ../../script/engine.js:177
 msgid "dropbox."
 msgstr ""
 
-#: ../../script/engine.js:171
+#: ../../script/engine.js:184
 msgid "app store."
 msgstr "app store"
 
-#: ../../script/engine.js:177
+#: ../../script/engine.js:190
 msgid "github."
 msgstr ""
 
-#: ../../script/engine.js:253
+#: ../../script/engine.js:266
 msgid "Export / Import"
 msgstr "Exporter/Importer"
 
-#: ../../script/engine.js:257
+#: ../../script/engine.js:270
 msgid "export or import save data, for backing up"
 msgstr "exporter ou importer vos données de sauvegarde"
 
-#: ../../script/engine.js:258
+#: ../../script/engine.js:271
 msgid "or migrating computers"
 msgstr "pour sauver votre partie ou changer d'ordinateur"
 
-#: ../../script/engine.js:262
+#: ../../script/engine.js:275
 msgid "export"
 msgstr "exporter"
 
-#: ../../script/engine.js:266 ../../script/engine.js:298
+#: ../../script/engine.js:279 ../../script/engine.js:311
 msgid "import"
 msgstr "importer"
 
-#: ../../script/engine.js:277
+#: ../../script/engine.js:290
 msgid "are you sure?"
 msgstr "êtes vous sur ?"
 
-#: ../../script/engine.js:278
+#: ../../script/engine.js:291
 msgid "if the code is invalid, all data will be lost."
 msgstr "si le code est incorrect, toutes les données seront perdues."
 
-#: ../../script/engine.js:279
+#: ../../script/engine.js:292
 msgid "this is irreversible."
 msgstr "Il n'y a pas de retour en arrière possible."
 
-#: ../../script/engine.js:283 ../../script/engine.js:369
+#: ../../script/engine.js:296 ../../script/engine.js:382
 msgid "yes"
 msgstr "oui"
 
-#: ../../script/engine.js:288 ../../script/engine.js:374
+#: ../../script/engine.js:301 ../../script/engine.js:387
 msgid "no"
 msgstr "non"
 
-#: ../../script/engine.js:294
+#: ../../script/engine.js:307
 msgid "put the save code here."
 msgstr "copier le code ici."
 
-#: ../../script/engine.js:326
+#: ../../script/engine.js:339
 msgid "Export"
 msgstr "Exporter"
 
-#: ../../script/engine.js:329
+#: ../../script/engine.js:342
 msgid "save this."
 msgstr "sauvegarder."
 
-#: ../../script/engine.js:334
+#: ../../script/engine.js:347
 msgid "got it"
 msgstr "compris"
 
-#: ../../script/engine.js:363
+#: ../../script/engine.js:376
 msgid "Restart?"
 msgstr "Recommencer ?"
 
-#: ../../script/engine.js:366
+#: ../../script/engine.js:379
 msgid "restart the game?"
 msgstr "recommencer la partie ?"
 
-#: ../../script/engine.js:397
+#: ../../script/engine.js:410
 msgid "Share"
 msgstr "Partager"
 
-#: ../../script/engine.js:400
+#: ../../script/engine.js:413
 msgid "bring your friends."
 msgstr "Invitez vos amis."
 
-#: ../../script/engine.js:403
+#: ../../script/engine.js:416
 msgid "facebook"
 msgstr "facebook"
 
-#: ../../script/engine.js:410
+#: ../../script/engine.js:423
 msgid "google+"
 msgstr "google+"
 
-#: ../../script/engine.js:417
+#: ../../script/engine.js:430
 msgid "twitter"
 msgstr "twitter"
 
-#: ../../script/engine.js:424
+#: ../../script/engine.js:437
 msgid "reddit"
 msgstr "reddit"
 
-#: ../../script/engine.js:431
+#: ../../script/engine.js:444
 msgid "close"
 msgstr "fermer"
 
-#: ../../script/engine.js:466 ../../script/engine.js:469
+#: ../../script/engine.js:478 ../../script/engine.js:481
 msgid "lights on."
 msgstr "lumières allumées."
 
-#: ../../script/engine.js:571
+#: ../../script/engine.js:583
 msgid "{0} per {1}s"
 msgstr "{0} /{1}s"
 
@@ -1436,8 +1444,8 @@ msgstr "des pièges ont été détruits"
 msgid "track them"
 msgstr "les suivre"
 
-#: ../../script/events/outside.js:30 ../../script/events/room.js:101
-#: ../../script/events/room.js:152
+#: ../../script/events/outside.js:30 ../../script/events/room.js:72
+#: ../../script/events/room.js:123
 msgid "ignore them"
 msgstr "les ignorer"
 
@@ -1450,9 +1458,9 @@ msgid "the forest is silent."
 msgstr "la foret est silencieuse"
 
 #: ../../script/events/outside.js:42 ../../script/events/outside.js:59
-#: ../../script/events/outside.js:98 ../../script/events/outside.js:115
-#: ../../script/events/outside.js:166 ../../script/events/outside.js:183
-#: ../../script/events/outside.js:215 ../../script/events/outside.js:247
+#: ../../script/events/outside.js:126 ../../script/events/outside.js:143
+#: ../../script/events/outside.js:194 ../../script/events/outside.js:211
+#: ../../script/events/outside.js:243 ../../script/events/outside.js:275
 msgid "go home"
 msgstr "rentrer"
 
@@ -1465,113 +1473,138 @@ msgstr ""
 msgid "it puts up little resistance before the knife."
 msgstr "elle résiste faiblement face au couteau."
 
-#: ../../script/events/outside.js:68
+#: ../../script/events/outside.js:67
+msgid "Fire"
+msgstr ""
+
+#: ../../script/events/outside.js:74
+msgid "a fire rampages through one of the huts, destroying it."
+msgstr ""
+
+#: ../../script/events/outside.js:75
+msgid "all residents in the hut perished in the fire."
+msgstr ""
+
+#: ../../script/events/outside.js:77
+msgid "a fire has started"
+msgstr ""
+
+#: ../../script/events/outside.js:87
+#, fuzzy
+msgid "mourn"
+msgstr "armure"
+
+#: ../../script/events/outside.js:88
+msgid "some villagers have died"
+msgstr ""
+
+#: ../../script/events/outside.js:96
 msgid "Sickness"
 msgstr "Maladie"
 
-#: ../../script/events/outside.js:75
+#: ../../script/events/outside.js:103
 msgid "a sickness is spreading through the village."
 msgstr "le village est contaminé par une maladie"
 
-#: ../../script/events/outside.js:76 ../../script/events/outside.js:132
+#: ../../script/events/outside.js:104 ../../script/events/outside.js:160
 msgid "medicine is needed immediately."
 msgstr "des médicaments sont nécessaires immédiatement."
 
-#: ../../script/events/outside.js:82
+#: ../../script/events/outside.js:110
 msgid "1 medicine"
 msgstr "1 médicament"
 
-#: ../../script/events/outside.js:87
+#: ../../script/events/outside.js:115
 msgid "ignore it"
 msgstr "l'ignorer"
 
-#: ../../script/events/outside.js:94
+#: ../../script/events/outside.js:122
 msgid "the sickness is cured in time."
 msgstr "la maladie est soigné à temps."
 
-#: ../../script/events/outside.js:105
+#: ../../script/events/outside.js:133
 msgid "the sickness spreads through the village."
 msgstr "la maladie se repend dans le village."
 
-#: ../../script/events/outside.js:106
+#: ../../script/events/outside.js:134
 msgid "the days are spent with burials."
 msgstr "les enterrements s’enchaînent durant des jours."
 
-#: ../../script/events/outside.js:107 ../../script/events/outside.js:174
+#: ../../script/events/outside.js:135 ../../script/events/outside.js:202
 msgid "the nights are rent with screams."
 msgstr "les nuits sont remplies de cris."
 
-#: ../../script/events/outside.js:124
+#: ../../script/events/outside.js:152
 msgid "Plague"
 msgstr "La peste"
 
-#: ../../script/events/outside.js:131
+#: ../../script/events/outside.js:159
 msgid "a terrible plague is fast spreading through the village."
 msgstr "une terrible peste se propage rapidement dans le village."
 
-#: ../../script/events/outside.js:138
+#: ../../script/events/outside.js:166
 #, fuzzy
 msgid "buy medicine"
 msgstr "1 médicament"
 
-#: ../../script/events/outside.js:144
+#: ../../script/events/outside.js:172
 msgid "5 medicine"
 msgstr "5 médicaments"
 
-#: ../../script/events/outside.js:149
+#: ../../script/events/outside.js:177
 msgid "do nothing"
 msgstr "ne rien faire"
 
-#: ../../script/events/outside.js:156
+#: ../../script/events/outside.js:184
 msgid "the plague is kept from spreading."
 msgstr "La peste ne se propage plus."
 
-#: ../../script/events/outside.js:157
+#: ../../script/events/outside.js:185
 msgid "only a few die."
 msgstr "seuls quelques uns meurent."
 
-#: ../../script/events/outside.js:158
+#: ../../script/events/outside.js:186
 msgid "the rest bury them."
 msgstr "ils sont enterrés par les survivants."
 
-#: ../../script/events/outside.js:173
+#: ../../script/events/outside.js:201
 msgid "the plague rips through the village."
 msgstr "la peste décime tout le village"
 
-#: ../../script/events/outside.js:175
+#: ../../script/events/outside.js:203
 msgid "the only hope is a quick death."
 msgstr "le seul espoir est une mort rapide."
 
-#: ../../script/events/outside.js:192
+#: ../../script/events/outside.js:220
 msgid "A Beast Attack"
 msgstr "Une attaque de bête"
 
-#: ../../script/events/outside.js:199
+#: ../../script/events/outside.js:227
 msgid "a pack of snarling beasts pours out of the trees."
 msgstr "une meute de bêtes sort de la foret."
 
-#: ../../script/events/outside.js:200
+#: ../../script/events/outside.js:228
 msgid "the fight is short and bloody, but the beasts are repelled."
 msgstr "le combat est bref et sanglant, mais les bêtes sont repoussées."
 
-#: ../../script/events/outside.js:201
+#: ../../script/events/outside.js:229
 msgid "the villagers retreat to mourn the dead."
 msgstr "les villageois rentrent et vont pleurer leurs morts"
 
-#: ../../script/events/outside.js:224
+#: ../../script/events/outside.js:252
 msgid "A Military Raid"
 msgstr "Un raid militaire"
 
-#: ../../script/events/outside.js:231
+#: ../../script/events/outside.js:259
 msgid "a gunshot rings through the trees."
 msgstr "une détonation retenti dans la forêt."
 
-#: ../../script/events/outside.js:232
+#: ../../script/events/outside.js:260
 msgid "well armed men charge out of the forest, firing into the crowd."
 msgstr ""
 "des hommes armés surgissent hors de la foret et tirent sur tout ce qui bouge."
 
-#: ../../script/events/outside.js:233
+#: ../../script/events/outside.js:261
 msgid "after a skirmish they are driven away, but not without losses."
 msgstr "ils sont repoussés après une escarmouche, mais pas sans pertes."
 
@@ -1586,7 +1619,7 @@ msgstr "Un endroit sûr dans la nature."
 #: ../../script/events/setpieces.js:25 ../../script/events/setpieces.js:48
 #: ../../script/events/setpieces.js:65 ../../script/events/setpieces.js:83
 #: ../../script/events/setpieces.js:106 ../../script/events/setpieces.js:3539
-#: ../../script/events/setpieces.js:3567 ../../script/events/room.js:192
+#: ../../script/events/setpieces.js:3567 ../../script/events/room.js:163
 #: ../../script/events/global.js:42 ../../script/events/global.js:59
 msgid "leave"
 msgstr "partir"
@@ -1775,160 +1808,135 @@ msgstr ""
 "la vieille boussole est abîmée et rouillée, mais elle semble encore "
 "fonctionner"
 
-#: ../../script/events/room.js:46 ../../script/events/room.js:257
-#: ../../script/events/room.js:270 ../../script/events/room.js:283
-#: ../../script/events/room.js:335 ../../script/events/room.js:354
-#: ../../script/events/room.js:406 ../../script/events/room.js:425
-#: ../../script/events/room.js:464 ../../script/events/room.js:582
-#: ../../script/events/room.js:598 ../../script/events/room.js:614
-#: ../../script/events/room.js:625
+#: ../../script/events/room.js:46 ../../script/events/room.js:228
+#: ../../script/events/room.js:241 ../../script/events/room.js:254
+#: ../../script/events/room.js:306 ../../script/events/room.js:325
+#: ../../script/events/room.js:377 ../../script/events/room.js:396
+#: ../../script/events/room.js:435 ../../script/events/room.js:553
+#: ../../script/events/room.js:569 ../../script/events/room.js:585
+#: ../../script/events/room.js:596
 msgid "say goodbye"
 msgstr "dire au revoir"
 
-#: ../../script/events/room.js:54
-msgid "Fire"
-msgstr ""
-
-#: ../../script/events/room.js:61
-msgid "A fire rampages through one of your huts, destroying it."
-msgstr ""
-
-#: ../../script/events/room.js:62
-msgid "Saddly, all residents in the hut perished in the fire."
-msgstr ""
-
-#: ../../script/events/room.js:64
-msgid "a fire has started"
-msgstr ""
-
-#: ../../script/events/room.js:74
-#, fuzzy
-msgid "mourn"
-msgstr "armure"
-
-#: ../../script/events/room.js:75
-msgid "some villagers have died"
-msgstr ""
-
-#: ../../script/events/room.js:83 ../../script/events/room.js:134
+#: ../../script/events/room.js:54 ../../script/events/room.js:105
 msgid "Noises"
 msgstr "Bruits"
 
-#: ../../script/events/room.js:90
+#: ../../script/events/room.js:61
 msgid "through the walls, shuffling noises can be heard."
 msgstr "a travers le murs, on peut entendre quelques bruits étouffés "
 
-#: ../../script/events/room.js:91
+#: ../../script/events/room.js:62
 msgid "can't tell what they're up to."
 msgstr "impossible de comprendre ce qui se dit."
 
-#: ../../script/events/room.js:93
+#: ../../script/events/room.js:64
 msgid "strange noises can be heard through the walls"
 msgstr "de l'autre coté du mur s'échappent des bruits étranges "
 
-#: ../../script/events/room.js:97 ../../script/events/room.js:148
+#: ../../script/events/room.js:68 ../../script/events/room.js:119
 msgid "investigate"
 msgstr "enquêter"
 
-#: ../../script/events/room.js:108
+#: ../../script/events/room.js:79
 msgid "vague shapes move, just out of sight."
 msgstr "une forme indistincte s'éloigne dans l'ombre."
 
-#: ../../script/events/room.js:109
+#: ../../script/events/room.js:80
 msgid "the sounds stop."
 msgstr "le bruit s’arrête."
 
-#: ../../script/events/room.js:113 ../../script/events/room.js:126
+#: ../../script/events/room.js:84 ../../script/events/room.js:97
 msgid "go back inside"
 msgstr "rentrer à l’intérieur"
 
-#: ../../script/events/room.js:121
+#: ../../script/events/room.js:92
 msgid ""
 "a bundle of sticks lies just beyond the threshold, wrapped in coarse furs."
 msgstr ""
 "quelques brindilles enroulées d'une fourrure grossière sont posés sur le "
 "seuil de la porte."
 
-#: ../../script/events/room.js:122
+#: ../../script/events/room.js:93
 msgid "the night is silent."
 msgstr "la nuit est silencieuse."
 
-#: ../../script/events/room.js:141
+#: ../../script/events/room.js:112
 msgid "scratching noises can be heard from the store room."
 msgstr "des grattements semblent provenir de l'entrepôt."
 
-#: ../../script/events/room.js:142
+#: ../../script/events/room.js:113
 msgid "something's in there."
 msgstr "il y'a quelque chose à l’intérieur."
 
-#: ../../script/events/room.js:144
+#: ../../script/events/room.js:115
 msgid "something's in the store room"
 msgstr "il y'a quelque chose dans l'entrepôt"
 
-#: ../../script/events/room.js:159 ../../script/events/room.js:199
+#: ../../script/events/room.js:130 ../../script/events/room.js:170
 msgid "some wood is missing."
 msgstr "du bois a disparu."
 
-#: ../../script/events/room.js:160
+#: ../../script/events/room.js:131
 msgid "the ground is littered with small scales"
 msgstr "le sol est jonché de petites écailles"
 
-#: ../../script/events/room.js:200
+#: ../../script/events/room.js:171
 msgid "the ground is littered with scraps of cloth"
 msgstr "des chiffons sont éparpillés au sol"
 
-#: ../../script/events/room.js:220
+#: ../../script/events/room.js:191
 msgid "The Beggar"
 msgstr "Le mendiant"
 
-#: ../../script/events/room.js:227
+#: ../../script/events/room.js:198
 msgid "a beggar arrives."
 msgstr "un mendiant arrive."
 
-#: ../../script/events/room.js:228
+#: ../../script/events/room.js:199
 msgid "asks for any spare furs to keep him warm at night."
 msgstr "il demande quelques morceaux de fourrure pour lui tenir chaud la nuit."
 
-#: ../../script/events/room.js:230
+#: ../../script/events/room.js:201
 msgid "a beggar arrives"
 msgstr "un mendiant arrive"
 
-#: ../../script/events/room.js:234
+#: ../../script/events/room.js:205
 msgid "give 50"
 msgstr "donner 50"
 
-#: ../../script/events/room.js:239 ../../script/events/room.js:306
-#: ../../script/events/room.js:377
+#: ../../script/events/room.js:210 ../../script/events/room.js:277
+#: ../../script/events/room.js:348
 msgid "give 100"
 msgstr "donner 100"
 
-#: ../../script/events/room.js:244 ../../script/events/room.js:316
-#: ../../script/events/room.js:496
+#: ../../script/events/room.js:215 ../../script/events/room.js:287
+#: ../../script/events/room.js:467
 msgid "turn him away"
 msgstr "le renvoyer"
 
-#: ../../script/events/room.js:252 ../../script/events/room.js:265
-#: ../../script/events/room.js:278
+#: ../../script/events/room.js:223 ../../script/events/room.js:236
+#: ../../script/events/room.js:249
 msgid "the beggar expresses his thanks."
 msgstr "le mendiant vous remercie chaleureusement."
 
-#: ../../script/events/room.js:253
+#: ../../script/events/room.js:224
 msgid "leaves a pile of small scales behind."
 msgstr "il laisse une pile de petites écailles derrière lui."
 
-#: ../../script/events/room.js:266
+#: ../../script/events/room.js:237
 msgid "leaves a pile of small teeth behind."
 msgstr "il laisse une pile de petites dents derrière lui."
 
-#: ../../script/events/room.js:279
+#: ../../script/events/room.js:250
 msgid "leaves some scraps of cloth behind."
 msgstr "il laisse quelques vieux chiffons derrière lui."
 
-#: ../../script/events/room.js:292 ../../script/events/room.js:363
+#: ../../script/events/room.js:263 ../../script/events/room.js:334
 msgid "The Mysterious Wanderer"
 msgstr "Le mystérieux vagabond"
 
-#: ../../script/events/room.js:299
+#: ../../script/events/room.js:270
 msgid ""
 "a wanderer arrives with an empty cart. says if he leaves with wood, he'll be "
 "back with more."
@@ -1936,27 +1944,27 @@ msgstr ""
 "un vagabond arrive avec une charrette vide. il dit que s'il peut emmener du "
 "bois, il en ramènera encore plus."
 
-#: ../../script/events/room.js:300
+#: ../../script/events/room.js:271
 msgid "builder's not sure he's to be trusted."
 msgstr "l'ouvrière ne lui fait pas confiance."
 
-#: ../../script/events/room.js:302 ../../script/events/room.js:373
+#: ../../script/events/room.js:273 ../../script/events/room.js:344
 msgid "a mysterious wanderer arrives"
 msgstr "un mystérieux vagabond arrive"
 
-#: ../../script/events/room.js:311 ../../script/events/room.js:382
+#: ../../script/events/room.js:282 ../../script/events/room.js:353
 msgid "give 500"
 msgstr "en donner 500"
 
-#: ../../script/events/room.js:323 ../../script/events/room.js:342
+#: ../../script/events/room.js:294 ../../script/events/room.js:313
 msgid "the wanderer leaves, cart loaded with wood"
 msgstr "le vagabond s'en va, la charrette chargée de bois"
 
-#: ../../script/events/room.js:329 ../../script/events/room.js:348
+#: ../../script/events/room.js:300 ../../script/events/room.js:319
 msgid "the mysterious wanderer returns, cart piled high with wood."
 msgstr "le mystérieux vagabond reviens, la charrette débordante de bois."
 
-#: ../../script/events/room.js:370
+#: ../../script/events/room.js:341
 msgid ""
 "a wanderer arrives with an empty cart. says if she leaves with furs, she'll "
 "be back with more."
@@ -1964,142 +1972,142 @@ msgstr ""
 "une vagabonde arrive avec une charrette vide. elle dit que si elle peut "
 "emmener des fourrures, elle en ramènera encore plus."
 
-#: ../../script/events/room.js:371
+#: ../../script/events/room.js:342
 msgid "builder's not sure she's to be trusted."
 msgstr "l'ouvrière ne lui fait pas confiance."
 
-#: ../../script/events/room.js:387
+#: ../../script/events/room.js:358
 msgid "turn her away"
 msgstr "la renvoyer"
 
-#: ../../script/events/room.js:394 ../../script/events/room.js:413
+#: ../../script/events/room.js:365 ../../script/events/room.js:384
 msgid "the wanderer leaves, cart loaded with furs"
 msgstr "la vagabonde s'en va, la charrette chargée de fourrure"
 
-#: ../../script/events/room.js:400 ../../script/events/room.js:419
+#: ../../script/events/room.js:371 ../../script/events/room.js:390
 msgid "the mysterious wanderer returns, cart piled high with furs."
 msgstr ""
 "la mystérieuse vagabonde revient, la charrette débordante de fourrures."
 
-#: ../../script/events/room.js:434
+#: ../../script/events/room.js:405
 msgid "The Scout"
 msgstr "L'éclaireur"
 
-#: ../../script/events/room.js:441
+#: ../../script/events/room.js:412
 msgid "the scout says she's been all over."
 msgstr "l'éclaireuse dit qu'elle a été partout."
 
-#: ../../script/events/room.js:442
+#: ../../script/events/room.js:413
 msgid "willing to talk about it, for a price."
 msgstr "Elle veut bien en parler, mais ça a un prix."
 
-#: ../../script/events/room.js:444
+#: ../../script/events/room.js:415
 msgid "a scout stops for the night"
 msgstr "une éclaireuse s’arrête pour la nuit"
 
-#: ../../script/events/room.js:448
+#: ../../script/events/room.js:419
 msgid "buy map"
 msgstr "acheter une carte"
 
-#: ../../script/events/room.js:450
+#: ../../script/events/room.js:421
 msgid "the map uncovers a bit of the world"
 msgstr "la carte dévoile un petit morceau du monde"
 
-#: ../../script/events/room.js:454
+#: ../../script/events/room.js:425
 msgid "learn scouting"
 msgstr "apprendre la reconnaissance"
 
-#: ../../script/events/room.js:473
+#: ../../script/events/room.js:444
 msgid "The Master"
 msgstr "Le maître"
 
-#: ../../script/events/room.js:480
+#: ../../script/events/room.js:451
 msgid "an old wanderer arrives."
 msgstr "un vieux vagabond arrive."
 
-#: ../../script/events/room.js:481
+#: ../../script/events/room.js:452
 msgid "he smiles warmly and asks for lodgings for the night."
 msgstr "il souri chaleureusement et demande un abri pour la nuit."
 
-#: ../../script/events/room.js:483
+#: ../../script/events/room.js:454
 msgid "an old wanderer arrives"
 msgstr "un vieux vagabond arrive"
 
-#: ../../script/events/room.js:487
+#: ../../script/events/room.js:458
 msgid "agree"
 msgstr "accepter"
 
-#: ../../script/events/room.js:503
+#: ../../script/events/room.js:474
 msgid "in exchange, the wanderer offers his wisdom."
 msgstr "en échange, il offrira un peu de sa sagesse."
 
-#: ../../script/events/room.js:507
+#: ../../script/events/room.js:478
 msgid "evasion"
 msgstr "esquive"
 
-#: ../../script/events/room.js:517
+#: ../../script/events/room.js:488
 msgid "precision"
 msgstr "précision"
 
-#: ../../script/events/room.js:527
+#: ../../script/events/room.js:498
 msgid "force"
 msgstr "force"
 
-#: ../../script/events/room.js:537
+#: ../../script/events/room.js:508
 msgid "nothing"
 msgstr "rien"
 
-#: ../../script/events/room.js:546
+#: ../../script/events/room.js:517
 msgid "The Sick Man"
 msgstr "Le malade"
 
-#: ../../script/events/room.js:553
+#: ../../script/events/room.js:524
 msgid "a man hobbles up, coughing."
 msgstr "un homme arrive. boitillant et toussant."
 
-#: ../../script/events/room.js:554
+#: ../../script/events/room.js:525
 msgid "he begs for medicine."
 msgstr "il supplie pour quelques médicaments."
 
-#: ../../script/events/room.js:556
+#: ../../script/events/room.js:527
 msgid "a sick man hobbles up"
 msgstr "un homme arrive, boitillant"
 
-#: ../../script/events/room.js:560
+#: ../../script/events/room.js:531
 msgid "give 1 medicine"
 msgstr "donner 1 médicament"
 
-#: ../../script/events/room.js:562
+#: ../../script/events/room.js:533
 msgid "the man swallows the medicine eagerly"
 msgstr "l'homme avale le médicament avidement"
 
-#: ../../script/events/room.js:566
+#: ../../script/events/room.js:537
 msgid "tell him to leave"
 msgstr "lui dire de partir"
 
-#: ../../script/events/room.js:573 ../../script/events/room.js:589
-#: ../../script/events/room.js:605
+#: ../../script/events/room.js:544 ../../script/events/room.js:560
+#: ../../script/events/room.js:576
 msgid "the man is thankful."
 msgstr "l'homme est reconnaissant."
 
-#: ../../script/events/room.js:574 ../../script/events/room.js:590
-#: ../../script/events/room.js:606
+#: ../../script/events/room.js:545 ../../script/events/room.js:561
+#: ../../script/events/room.js:577
 msgid "he leaves a reward."
 msgstr "il laisse une récompense."
 
-#: ../../script/events/room.js:575
+#: ../../script/events/room.js:546
 msgid "some weird metal he picked up on his travels."
 msgstr "un métal étrange qu'il a ramassé durant ses voyages."
 
-#: ../../script/events/room.js:591
+#: ../../script/events/room.js:562
 msgid "some weird glowing boxes he picked up on his travels."
 msgstr "d'étrange boites lumineuses qu'il a ramassé durant ses voyages."
 
-#: ../../script/events/room.js:607
+#: ../../script/events/room.js:578
 msgid "all he has are some scales."
 msgstr "quelques écailles, toutes ses possessions."
 
-#: ../../script/events/room.js:621
+#: ../../script/events/room.js:592
 msgid "the man expresses his thanks and hobbles off."
 msgstr "l'homme vous remercie et repart, boitillant."
 
