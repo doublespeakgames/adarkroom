@@ -80,7 +80,7 @@ Events.Outside = [
 					var population = $SM.get('game.population', true);
 					var huts = $SM.get('game.buildings["hut"]', true);
 					$SM.set('game.buildings["hut"]', (huts - 1));
-					$SM.set('game.population', (population - 4));
+					Outside.killVillagers(4);
 				},
 				buttons: {
 					'mourn': {
