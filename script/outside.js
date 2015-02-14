@@ -4,6 +4,7 @@
 var Outside = {
 	name: _("Outside"),
 	
+	_STORES_OFFSET: 0,
 	_GATHER_DELAY: 60,
 	_TRAPS_DELAY: 90,
 	_POP_DELAY: [0.5, 3],
@@ -439,7 +440,7 @@ var Outside = {
 		this.setTitle();
 
 		if(!ignoreStores && Engine.activeModule === Outside && village.children().length > 1) {
-			$('#storesContainer').css({top: village.height() + 26 + 'px'});
+			$('#storesContainer').css({top: village.height() + 26 + Outside._STORES_OFFSET + 'px'});
 		}
 	},
 	
@@ -610,6 +611,38 @@ var Outside = {
 			Outside.updateVillage();
 			Outside.updateWorkersView();
 			Outside.updateVillageIncome();
+		};
+	},
+
+	scrollSidebar: function(direction, reset) {
+
+		if( typeof reset != "undefined" ){
+			$('#village').css('top', '0px');
+			$('#storesContainer').css('top', '224px');
+			Outside._STORES_OFFSET = 0;
+			return false;
 		}
+
+		var momentum = 10;
+		
+		// If they hit up, we scroll everything down
+		if( direction == 'up' )
+			momentum = momentum * -1;
+
+		/* Let's stop scrolling if the top or bottom bound is in the viewport, based on direction */
+		if( direction == 'down' && inView( direction, $('#village') ) ){
+
+			return false;
+
+		}else if( direction == 'up' && inView( direction, $('#storesContainer') ) ){
+
+			return false;
+
+		}
+		
+		scrollByX( $('#village'), momentum );
+		scrollByX( $('#storesContainer'), momentum );
+		Outside._STORES_OFFSET += momentum;
+
 	}
 };
