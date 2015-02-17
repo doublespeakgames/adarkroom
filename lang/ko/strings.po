@@ -407,7 +407,7 @@ msgstr "모피"
 
 #: script/localization.js:10
 msgid "alien alloy"
-msgstr "특이한 합금"
+msgstr "외계 합금"
 
 #: script/localization.js:11
 msgid "bullets"
@@ -699,11 +699,11 @@ msgstr "밤중에 이방인이 당도한다."
 
 #: script/outside.js:189
 msgid "a weathered family takes up in one of the huts."
-msgstr "치쳐보이는 가족이 한 오두막에 자리를 튼다."
+msgstr "지쳐보이는 가족이 한 오두막에 자리를 튼다."
 
 #: script/outside.js:191
 msgid "a small group arrives, all dust and bones."
-msgstr "작은 그룹이 당도한다. 꾀죄죄하다."
+msgstr "작은 그룹이 당도한다. 모두 꾀죄죄하다."
 
 #: script/outside.js:193
 msgid "a convoy lurches in, equal parts worry and hope."
@@ -1191,7 +1191,7 @@ msgstr ""
 
 #: script/ship.js:116 script/ship.js:129
 msgid "not enough alien alloy"
-msgstr "특이한 합금 부족"
+msgstr "외계 합금 부족"
 
 #: script/ship.js:144
 msgid "Ready to Leave?"
@@ -1520,7 +1520,7 @@ msgstr "큰 도마뱀"
 
 #: script/events/encounters.js:248
 msgid "lizard"
-msgstr "큰 도마뱀"
+msgstr "도마뱀"
 
 #: script/events/encounters.js:249
 msgid "the lizard is dead"
@@ -1532,15 +1532,15 @@ msgstr "수풀이 요동치더니 큰 도마뱀이 나타났다."
 
 #: script/events/encounters.js:278
 msgid "A Feral Terror"
-msgstr "야생 공포"
+msgstr "야성의 공포"
 
 #: script/events/encounters.js:286
 msgid "feral terror"
-msgstr "야생 공포"
+msgstr "야성의 공포"
 
 #: script/events/encounters.js:287
 msgid "the feral terror is dead"
-msgstr "야생 공포는 죽었다."
+msgstr "야성의 공포는 죽었다."
 
 #: script/events/encounters.js:310
 msgid "a beast, wilder than imagining, erupts out of the foliage"
@@ -2107,7 +2107,7 @@ msgstr "그는 대가를 지불한다."
 
 #: script/events/room.js:545
 msgid "some weird metal he picked up on his travels."
-msgstr "여행을 하며 얻은 이상한 금속."
+msgstr "여행을 하며 얻은 외계 금속."
 
 #: script/events/room.js:561
 msgid "some weird glowing boxes he picked up on his travels."
