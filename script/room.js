@@ -476,8 +476,8 @@ var Room = {
 		
 		// If this is the first time playing, the fire is dead and it's freezing. 
 		// Otherwise grab past save state temp and fire level.
-		$SM.set('game.temperature', $SM.get('game.temperature.value')==undefined?this.TempEnum.Freezing:$SM.get('game.temperature'));
-		$SM.set('game.fire', $SM.get('game.fire.value')==undefined?this.FireEnum.Dead:$SM.get('game.fire'));
+		$SM.set('game.temperature', $SM.get('game.temperature.value')===undefined?this.TempEnum.Freezing:$SM.get('game.temperature'));
+		$SM.set('game.fire', $SM.get('game.fire.value')===undefined?this.FireEnum.Dead:$SM.get('game.fire'));
 		
 		// Create the room tab
 		this.tab = Header.addLocation(_("A Dark Room"), "room", Room);
@@ -521,8 +521,8 @@ var Room = {
 		Room.updateIncomeView();
 		Room.updateBuildButtons();
 		
-		Room._fireTimer = setTimeout(Room.coolFire, Room._FIRE_COOL_DELAY);
-		Room._tempTimer = setTimeout(Room.adjustTemp, Room._ROOM_WARM_DELAY);
+		Room._fireTimer = Engine.setTimeout(Room.coolFire, Room._FIRE_COOL_DELAY);
+		Room._tempTimer = Engine.setTimeout(Room.adjustTemp, Room._ROOM_WARM_DELAY);
 		
 		/*
 		 * Builder states:
@@ -533,12 +533,12 @@ var Room = {
 		 * 4 - Helping
 		 */
 		if($SM.get('game.builder.level') >= 0 && $SM.get('game.builder.level') < 3) {
-			Room._builderTimer = setTimeout(Room.updateBuilderState, Room._BUILDER_STATE_DELAY);
+			Room._builderTimer = Engine.setTimeout(Room.updateBuilderState, Room._BUILDER_STATE_DELAY);
 		}
 		if($SM.get('game.builder.level') == 1 && $SM.get('stores.wood', true) < 0) {
-			setTimeout(Room.unlockForest, Room._NEED_WOOD_DELAY);
+			Engine.setTimeout(Room.unlockForest, Room._NEED_WOOD_DELAY);
 		}
-		setTimeout($SM.collectIncome, 1000);
+		Engine.setTimeout($SM.collectIncome, 1000);
 
 		Notifications.notify(Room, _("the room is {0}", Room.TempEnum.fromInt($SM.get('game.temperature.value')).text));
 		Notifications.notify(Room, _("the fire is {0}", Room.FireEnum.fromInt($SM.get('game.fire.value')).text));
@@ -671,10 +671,10 @@ var Room = {
 		if($SM.get('game.fire.value') > 1 && $SM.get('game.builder.level') < 0) {
 			$SM.set('game.builder.level', 0);
 			Notifications.notify(Room, _("the light from the fire spills from the windows, out into the dark"));
-			setTimeout(Room.updateBuilderState, Room._BUILDER_STATE_DELAY);
+			Engine.setTimeout(Room.updateBuilderState, Room._BUILDER_STATE_DELAY);
 		}	
 		window.clearTimeout(Room._fireTimer);
-		Room._fireTimer = setTimeout(Room.coolFire, Room._FIRE_COOL_DELAY);
+		Room._fireTimer = Engine.setTimeout(Room.coolFire, Room._FIRE_COOL_DELAY);
 		Room.updateButton();
 		Room.setTitle();
 	},
@@ -689,7 +689,7 @@ var Room = {
 		}
 		if($SM.get('game.fire.value') > 0) {
 			$SM.set('game.fire',Room.FireEnum.fromInt($SM.get('game.fire.value') - 1));
-			Room._fireTimer = setTimeout(Room.coolFire, Room._FIRE_COOL_DELAY);
+			Room._fireTimer = Engine.setTimeout(Room.coolFire, Room._FIRE_COOL_DELAY);
 			Room.onFireChange();
 		}
 	},
@@ -707,7 +707,7 @@ var Room = {
 		if($SM.get('game.temperature.value') != old) {
 			Room.changed = true;
 		}
-		Room._tempTimer = setTimeout(Room.adjustTemp, Room._ROOM_WARM_DELAY);
+		Room._tempTimer = Engine.setTimeout(Room.adjustTemp, Room._ROOM_WARM_DELAY);
 	},
 	
 	unlockForest: function() {
@@ -720,10 +720,10 @@ var Room = {
 	
 	updateBuilderState: function() {
 		var lBuilder = $SM.get('game.builder.level');
-		if(lBuilder == 0) {
+		if(lBuilder === 0) {
 			Notifications.notify(Room, _("a ragged stranger stumbles through the door and collapses in the corner"));
 			lBuilder = $SM.setget('game.builder.level', 1);
-			setTimeout(Room.unlockForest, Room._NEED_WOOD_DELAY);
+			Engine.setTimeout(Room.unlockForest, Room._NEED_WOOD_DELAY);
 		} 
 		else if(lBuilder < 3 && $SM.get('game.temperature.value') >= Room.TempEnum.Warm.value) {
 			var msg = "";
@@ -741,7 +741,7 @@ var Room = {
 			}
 		}
 		if(lBuilder < 3) {
-			setTimeout(Room.updateBuilderState, Room._BUILDER_STATE_DELAY);
+			Engine.setTimeout(Room.updateBuilderState, Room._BUILDER_STATE_DELAY);
 		}
 		Engine.saveGame();
 	},
@@ -750,13 +750,13 @@ var Room = {
 		var stores = $('div#stores');
 		var weapons = $('div#weapons');
 		var needsAppend = false, wNeedsAppend = false, newRow = false;
-		if(stores.length == 0) {
+		if(stores.length === 0) {
 			stores = $('<div>').attr({
 				id: 'stores'
 			}).css('opacity', 0);
 			needsAppend = true;
 		}
-		if(weapons.length == 0) {
+		if(weapons.length === 0) {
 			weapons = $('<div>').attr({
 				id: 'weapons'
 			}).css('opacity', 0);
@@ -803,7 +803,7 @@ var Room = {
 				$SM.startThieves();
 			}
 			
-			if(row.length == 0 && num > 0) {
+			if(row.length === 0 && num > 0) {
 				row = $('<div>').attr('id', id).addClass('storeRow');
 				$('<div>').addClass('row_key').text(_(k)).appendTo(row);
 				$('<div>').addClass('row_val').text(Math.floor(num)).appendTo(row);
@@ -848,7 +848,7 @@ var Room = {
 	
 	updateIncomeView: function() {
 		var stores = $('div#stores');
-		if(stores.length == 0 || typeof $SM.get('income') == 'undefined') return;
+		if(stores.length === 0 || typeof $SM.get('income') == 'undefined') return;
 		$('div.storeRow', stores).each(function(index, el) {
 			el = $(el);
 			$('div.tooltip', el).remove();
@@ -857,7 +857,7 @@ var Room = {
 			for(var incomeSource in $SM.get('income')) {
 				var income = $SM.get('income["'+incomeSource+'"]');
 				for(var store in income.stores) {
-					if(store == storeName && income.stores[store] != 0) {
+					if(store == storeName && income.stores[store] !== 0) {
 						$('<div>').addClass('row_key').text(_(incomeSource)).appendTo(tt);
 						$('<div>')
 							.addClass('row_val')
@@ -967,7 +967,7 @@ var Room = {
 		}
 		if($SM.get('game.builder.level') < 4) return false;
 		var craftable = Room.Craftables[thing];
-		if(Room.needsWorkshop(craftable.type) && $SM.get('game.buildings["'+'workshop'+'"]', true) == 0) return false;
+		if(Room.needsWorkshop(craftable.type) && $SM.get('game.buildings["'+'workshop'+'"]', true) === 0) return false;
 		var cost = craftable.cost();
 		
 		//show button if one has already been built
@@ -1008,21 +1008,21 @@ var Room = {
 	updateBuildButtons: function() {
 		var buildSection = $('#buildBtns');
 		var needsAppend = false;
-		if(buildSection.length == 0) {
+		if(buildSection.length === 0) {
 			buildSection = $('<div>').attr('id', 'buildBtns').css('opacity', 0);
 			needsAppend = true;
 		}
 		
 		var craftSection = $('#craftBtns');
 		var cNeedsAppend = false;
-		if(craftSection.length == 0 && $SM.get('game.buildings["workshop"]', true) > 0) {
+		if(craftSection.length === 0 && $SM.get('game.buildings["workshop"]', true) > 0) {
 			craftSection = $('<div>').attr('id', 'craftBtns').css('opacity', 0);
 			cNeedsAppend = true;
 		}
 		
 		var buySection = $('#buyBtns');
 		var bNeedsAppend = false;
-		if(buySection.length == 0 && $SM.get('game.buildings["trading post"]', true) > 0) {
+		if(buySection.length === 0 && $SM.get('game.buildings["trading post"]', true) > 0) {
 			buySection = $('<div>').attr('id', 'buyBtns').css('opacity', 0);
 			bNeedsAppend = true;
 		}
@@ -1113,7 +1113,7 @@ var Room = {
 		} else if(e.category == 'income'){
 			Room.updateStoresView();
 			Room.updateIncomeView();
-		} else if(e.stateName.indexOf('game.buildings') == 0){
+		} else if(e.stateName.indexOf('game.buildings') === 0){
 			Room.updateBuildButtons();
 		}
 	}

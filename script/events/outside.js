@@ -66,7 +66,7 @@ Events.Outside = [
 	{
 		title: _('Fire'),
 		isAvailable: function() {
-			return $SM.get('game.buildings["hut"]', true) > 0 && $SM.get('game.population', true) > 5;
+			return Engine.activeModule == Outside && $SM.get('game.buildings["hut"]', true) > 0 && $SM.get('game.population', true) > 5;
 		},
 		scenes: {
 			'start': {
@@ -80,7 +80,7 @@ Events.Outside = [
 					var population = $SM.get('game.population', true);
 					var huts = $SM.get('game.buildings["hut"]', true);
 					$SM.set('game.buildings["hut"]', (huts - 1));
-					$SM.set('game.population', (population - 4));
+					Outside.killVillagers(4);
 				},
 				buttons: {
 					'mourn': {
@@ -251,7 +251,7 @@ Events.Outside = [
 	{ /* Soldier attack */
 		title: _('A Military Raid'),
 		isAvailable: function() {
-			return Engine.activeModule == Outside && $SM.get('game.population', true) > 0 && $SM.get('game.cityCleared');;
+			return Engine.activeModule == Outside && $SM.get('game.population', true) > 0 && $SM.get('game.cityCleared');
 		},
 		scenes: {
 			'start': {

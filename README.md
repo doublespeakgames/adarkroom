@@ -1,9 +1,10 @@
 A Dark Room
 ===========
+> "awake. head throbbing. vision blurry. come light the fire."
 
-A Minimalist Text Adventure Game
+a minimalist text adventure game for your browser
 
-[Click to play](http://adarkroom.doublespeakgames.com/)
+[Click to play](http://adarkroom.doublespeakgames.com)
 
 Available | Languages
 --------- | ---------
@@ -16,5 +17,6 @@ Available | Languages
 [Swedish](http://adarkroom.doublespeakgames.com/?lang=sv) | [Turkish](http://adarkroom.doublespeakgames.com/?lang=tr)
 [Ukrainian](http://adarkroom.doublespeakgames.com/?lang=uk) | [Vietnamese] (http://adarkroom.doublespeakgames.com/?lang=vi)
 
+or play the latest on [GitHub](http://continuities.github.io/adarkroom)
 
-[Play on GitHub](http://continuities.github.io/adarkroom)
+[![app store](http://i.imgur.com/M6jlJQH.png)](https://itunes.apple.com/us/app/a-dark-room/id736683061)
