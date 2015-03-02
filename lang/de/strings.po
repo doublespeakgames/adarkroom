@@ -273,7 +273,7 @@ msgstr "bist du sicher?"
 
 #: script/engine.js:274
 msgid "if the code is invalid, all data will be lost."
-msgstr "wenn der code nicht stimmt, wird alle information verloren gehen."
+msgstr "wenn der code nicht stimmt, werden alle informationen verloren gehen."
 
 #: script/engine.js:275
 msgid "this is irreversible."
@@ -812,7 +812,7 @@ msgstr ""
 
 #: script/room.js:26
 msgid "more traps to catch more creatures"
-msgstr "mehr fallen um mehr kreauren zu fangen"
+msgstr "mehr fallen um mehr kreaturen zu fangen"
 
 #: script/room.js:27
 msgid "more traps won't help now"
