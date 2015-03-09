@@ -342,7 +342,7 @@ msgstr "밝게."
 
 #: script/engine.js:572
 msgid "{0} per {1}s"
-msgstr "{1}명 당 {0}개"
+msgstr "{1}초 당 {0}개"
 
 #: script/events.js:142
 msgid "eat meat"
