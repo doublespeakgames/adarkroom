@@ -98,7 +98,7 @@ msgstr "незнакомец пришёл ночью"
 
 #: ../../script/outside.js:185
 msgid "a weathered family takes up in one of the huts."
-msgstr "замёршая семья заняла одну из хижин."
+msgstr "замёрзшая семья заняла одну из хижин."
 
 #: ../../script/outside.js:187
 msgid "a small group arrives, all dust and bones."
