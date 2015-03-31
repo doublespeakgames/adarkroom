@@ -777,20 +777,20 @@ $.Dispatch = function( id ) {
 // APRIL FOOLS!
 var april = function() {
 
-	if(document.location.href.search(/[\?\&]april=1/) != -1){
+	if(document.location.href.search(/[\?\&]april=1/) == -1){
 		var april = Engine.findStylesheet('aprilFools');
 		if (april == null) {
 			
 			$('head').append('<link rel="stylesheet" href="css/april.css" type="text/css" title="aprilFools" />');
-			$('.lightsOff').text(_('april fools.')).on('click', function() { window.location = "./index.html"});
+			$('.lightsOff').text(_('april fools.')).on('click', function() { window.location = "./index.html?april=1"});
 			
 		}
-
-		$('body').append($('<div>').addClass('construction'));
-		$('body').append($('<div>').addClass('cute'));
+		
 		$('body').append($('<a>').addClass("counter")
 								 .attr('href','http://www.hitwebcounter.com/')
 								 .attr('target','_blank').append($('<img>').attr('src','http://hitwebcounter.com/counter/counter.php?page=6031127&style=0015&nbdigits=6&type=page&initCount=0')));
+		$('body').append($('<div>').addClass('construction'));
+		$('body').append($('<div>').addClass('cute'));
 
 		$('.cute').toggleClass("move");
 		setInterval(function() {
@@ -814,7 +814,7 @@ var april = function() {
 						buttons: {
 							'ok': {
 								text: _('check it out.'),
-								onChoose: function() { window.location = './index.html?april=1' }
+								onChoose: function() { window.location = './index.html' }
 							},
 							'no': {
 								text: _('no thanks.'),
