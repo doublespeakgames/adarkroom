@@ -1,5 +1,9 @@
 /***  dark.css + APRIL FOOLS!  ***/
 
+* {
+	cursor: wait!important;
+}
+
 body {
 	background-color: #272823;
 	color: #EEE;
@@ -238,7 +242,9 @@ body {
 
 .construction,
 .paws,
-.cute {
+.cute,
+.counter {
+	pointer-events: none;
 	position: fixed;
 }
 
@@ -264,7 +270,6 @@ iframe {
 }
 
 .counter {
-	position: fixed;
 	top: 0;
 	right: 0;
 }
