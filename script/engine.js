@@ -222,7 +222,7 @@
 			
 			Engine.saveLanguage();
 			Engine.travelTo(Room);
-	
+
 		},
 		
 		browserValid: function() {
@@ -774,6 +774,61 @@ $.Dispatch = function( id ) {
 	return topic;
 };
 
+// APRIL FOOLS!
+var april = function() {
+
+	if(document.location.href.search(/[\?\&]april=1/) != -1){
+		var april = Engine.findStylesheet('aprilFools');
+		if (april == null) {
+			
+			$('head').append('<link rel="stylesheet" href="css/april.css" type="text/css" title="aprilFools" />');
+			$('.lightsOff').text(_('april fools.')).on('click', function() { window.location = "./index.html"});
+			
+		}
+
+		$('body').append($('<div>').addClass('construction'));
+		$('body').append($('<div>').addClass('cute'));
+		$('body').append($('<a>').addClass("counter")
+								 .attr('href','http://www.hitwebcounter.com/')
+								 .attr('target','_blank').append($('<img>').attr('src','http://hitwebcounter.com/counter/counter.php?page=6031127&style=0015&nbdigits=6&type=page&initCount=0')));
+
+		$('.cute').toggleClass("move");
+		setInterval(function() {
+    		$('.cute').toggleClass("move");
+		}, 3030);
+
+		setTimeout(function() { 
+			alert('Welcome to the Web Site!'); 
+			setTimeout(function() { alert('Hope you enjoy your time!'); }, 2000);
+		}, 1000);
+	}
+
+	else {
+		Events.startEvent({
+				title: _('Update'),
+				scenes: {
+					start: {
+						text: [
+							_('there is a new layout, would you like to use it?')
+						],
+						buttons: {
+							'ok': {
+								text: _('check it out.'),
+								onChoose: function() { window.location = './index.html?april=1' }
+							},
+							'no': {
+								text: _('no thanks.'),
+								nextScene: 'end'
+							}
+						}
+					},
+				}
+			});
+	}
+}
+
 $(function() {
 	Engine.init();
+
+	april();
 });
