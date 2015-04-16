@@ -1,3 +1,6 @@
+
+**NOTE: THIS IS MICHAEL'S PERSONAL FORK OF ADR. THE OFFICIAL REPO CAN NOW BE FOUND AT https://github.com/doublespeakgames/adarkroom**
+
 A Dark Room
 ===========
 > "awake. head throbbing. vision blurry. come light the fire."
