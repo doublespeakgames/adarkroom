@@ -17,6 +17,6 @@ Available | Languages
 [Swedish](http://adarkroom.doublespeakgames.com/?lang=sv) | [Turkish](http://adarkroom.doublespeakgames.com/?lang=tr)
 [Ukrainian](http://adarkroom.doublespeakgames.com/?lang=uk) | [Vietnamese] (http://adarkroom.doublespeakgames.com/?lang=vi)
 
-or play the latest on [GitHub](http://continuities.github.io/adarkroom)
+or play the latest on [GitHub](http://doublespeakgames.github.io/adarkroom)
 
 [![app store](http://i.imgur.com/M6jlJQH.png)](https://itunes.apple.com/us/app/a-dark-room/id736683061)
