@@ -197,7 +197,7 @@ msgstr ""
 
 #: ../../script/events.js:746
 msgid "*** EVENT ***"
-msgstr ""
+msgstr "*** EVENEMENT ***"
 
 #: ../../script/world.js:46
 msgid "punch"
@@ -1126,7 +1126,7 @@ msgstr "sauvegarder."
 
 #: ../../script/dropbox.js:97
 msgid "load"
-msgstr ""
+msgstr "charger"
 
 #: ../../script/dropbox.js:102
 #, fuzzy
@@ -1795,7 +1795,7 @@ msgstr ""
 
 #: ../../script/events/room.js:62
 msgid "Saddly, all residents in the hut perished in the fire."
-msgstr ""
+msgstr "Malheureusment, tout les habitants de la cabanes ont péris dans l'incendie."
 
 #: ../../script/events/room.js:64
 msgid "a fire has started"
