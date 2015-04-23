@@ -37,6 +37,7 @@ var StateManager = {
 			'playStats',	//anything play related: play time, loads, etc
 			'previous',		// prestige, score, trophies (in future), achievements (again, not yet), etc
 			'outfit'			// used to temporarily store the items to be taken on the path
+			'config'
 		];
 		
 		for(var which in cats) {
