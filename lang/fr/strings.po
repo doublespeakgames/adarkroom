@@ -1787,7 +1787,7 @@ msgstr "dire au revoir"
 
 #: ../../script/events/room.js:54
 msgid "Fire"
-msgstr ""
+msgstr "Feu"
 
 #: ../../script/events/room.js:61
 msgid "A fire rampages through one of your huts, destroying it."
@@ -1795,7 +1795,7 @@ msgstr ""
 
 #: ../../script/events/room.js:62
 msgid "Saddly, all residents in the hut perished in the fire."
-msgstr ""
+msgstr "Malheureusement, tous les résidents de la cabane ont péri dans l'incendie."
 
 #: ../../script/events/room.js:64
 msgid "a fire has started"
@@ -1808,7 +1808,7 @@ msgstr "armure"
 
 #: ../../script/events/room.js:75
 msgid "some villagers have died"
-msgstr ""
+msgstr "certains villageois sont morts"
 
 #: ../../script/events/room.js:83 ../../script/events/room.js:134
 msgid "Noises"
