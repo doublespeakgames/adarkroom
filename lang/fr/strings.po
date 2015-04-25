@@ -736,7 +736,7 @@ msgstr "il n'y a plus de bois"
 #: ../../script/room.js:673
 msgid "the light from the fire spills from the windows, out into the dark"
 msgstr ""
-"la lumière du feu  se repend  à travers la a fenêtre, dehors dans la nuit"
+"la lumière du feu  se repend  à travers la fenêtre, dehors dans la nuit"
 
 #: ../../script/room.js:686
 msgid "builder stokes the fire"
