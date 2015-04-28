@@ -225,7 +225,7 @@ msgstr "tirer (fusil)"
 
 #: ../../script/world.js:83
 msgid "blast"
-msgstr "tirer (lazer)"
+msgstr "tirer (laser)"
 
 #: ../../script/world.js:90
 msgid "lob"
@@ -350,7 +350,7 @@ msgid ""
 "branches and fallen leaves."
 msgstr ""
 "des arbres se dessinent à l'horizon. l'herbe disparaît peu à peu au profit "
-"d'une foret dont le sol est recouvert de feuilles mortes."
+"d'une forêt dont le sol est recouvert de feuilles mortes."
 
 #: ../../script/world.js:565
 msgid "the grasses thin. soon, only dust remains."
@@ -432,7 +432,7 @@ msgstr ""
 #: ../../script/room.js:48
 msgid "builder puts up a hut, out in the forest. says word will get around."
 msgstr ""
-"l'ouvrière construit une cabane dans la foret. Elle dit que ça se saura."
+"l'ouvrière construit une cabane dans la forêt. Elle dit que ça se saura."
 
 #: ../../script/room.js:49
 msgid "no more room for huts."
@@ -736,7 +736,7 @@ msgstr "il n'y a plus de bois"
 #: ../../script/room.js:673
 msgid "the light from the fire spills from the windows, out into the dark"
 msgstr ""
-"la lumière du feu  se repend  à travers la a fenêtre, dehors dans la nuit"
+"la lumière du feu  se repend  à travers la fenêtre, dehors dans la nuit"
 
 #: ../../script/room.js:686
 msgid "builder stokes the fire"
@@ -909,7 +909,7 @@ msgstr ""
 
 #: ../../script/localization.js:26
 msgid "bayonet"
-msgstr ""
+msgstr "bayonette"
 
 #: ../../script/localization.js:29
 #, fuzzy
@@ -944,7 +944,7 @@ msgstr "boussole"
 
 #: ../../script/localization.js:40
 msgid "laser rifle"
-msgstr "fusil lazer"
+msgstr "fusil laser"
 
 #: ../../script/localization.js:42
 msgid "cloth"
@@ -1082,7 +1082,7 @@ msgstr ""
 
 #: ../../script/localization.js:81
 msgid "forest"
-msgstr "foret"
+msgstr "forêt"
 
 #: ../../script/localization.js:82
 msgid "village"
@@ -1164,7 +1164,7 @@ msgstr "les points font plus de dégats"
 
 #: ../../script/engine.js:18
 msgid "learned to throw punches with purpose"
-msgstr "appris à donner des coups de points avec un objectif"
+msgstr "appris à donner des coups de poings avec un objectif"
 
 #: ../../script/engine.js:21
 msgid "martial artist"
@@ -1172,7 +1172,7 @@ msgstr "maître d'un art martial"
 
 #: ../../script/engine.js:22
 msgid "punches do even more damage."
-msgstr "les coups de points font plus de dégats"
+msgstr "les coups de poings font plus de dégats"
 
 #: ../../script/engine.js:23
 msgid "learned to fight quite effectively without weapons"
@@ -1447,7 +1447,7 @@ msgstr "les empruntes disparaissent après quelques minutes."
 
 #: ../../script/events/outside.js:38
 msgid "the forest is silent."
-msgstr "la foret est silencieuse"
+msgstr "la forêt est silencieuse"
 
 #: ../../script/events/outside.js:42 ../../script/events/outside.js:59
 #: ../../script/events/outside.js:98 ../../script/events/outside.js:115
@@ -1512,7 +1512,7 @@ msgstr "une terrible peste se propage rapidement dans le village."
 #: ../../script/events/outside.js:138
 #, fuzzy
 msgid "buy medicine"
-msgstr "1 médicament"
+msgstr "acheter un médicament"
 
 #: ../../script/events/outside.js:144
 msgid "5 medicine"
@@ -1548,7 +1548,7 @@ msgstr "Une attaque de bête"
 
 #: ../../script/events/outside.js:199
 msgid "a pack of snarling beasts pours out of the trees."
-msgstr "une meute de bêtes sort de la foret."
+msgstr "une meute de bêtes sort de la forêt."
 
 #: ../../script/events/outside.js:200
 msgid "the fight is short and bloody, but the beasts are repelled."
@@ -1569,7 +1569,7 @@ msgstr "une détonation retenti dans la forêt."
 #: ../../script/events/outside.js:232
 msgid "well armed men charge out of the forest, firing into the crowd."
 msgstr ""
-"des hommes armés surgissent hors de la foret et tirent sur tout ce qui bouge."
+"des hommes armés surgissent hors de la forêt et tirent sur tout ce qui bouge."
 
 #: ../../script/events/outside.js:233
 msgid "after a skirmish they are driven away, but not without losses."
@@ -1787,7 +1787,7 @@ msgstr "dire au revoir"
 
 #: ../../script/events/room.js:54
 msgid "Fire"
-msgstr ""
+msgstr "Feu"
 
 #: ../../script/events/room.js:61
 msgid "A fire rampages through one of your huts, destroying it."
@@ -1795,7 +1795,7 @@ msgstr ""
 
 #: ../../script/events/room.js:62
 msgid "Saddly, all residents in the hut perished in the fire."
-msgstr ""
+msgstr "Malheureusement, tous les résidents de la cabane ont péri dans l'incendie."
 
 #: ../../script/events/room.js:64
 msgid "a fire has started"
@@ -1808,7 +1808,7 @@ msgstr "armure"
 
 #: ../../script/events/room.js:75
 msgid "some villagers have died"
-msgstr ""
+msgstr "certains villageois sont morts"
 
 #: ../../script/events/room.js:83 ../../script/events/room.js:134
 msgid "Noises"

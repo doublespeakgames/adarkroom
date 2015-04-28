@@ -134,7 +134,7 @@ msgstr "근거리 무기가 더 강해진다."
 
 #: script/engine.js:39
 msgid "learned to swing weapons with force"
-msgstr "무기에 힘을 실는 법을 배웠다."
+msgstr "무기에 힘을 싣는 법을 배웠다."
 
 #: script/engine.js:42
 msgid "slow metabolism"
@@ -342,7 +342,7 @@ msgstr "밝게."
 
 #: script/engine.js:572
 msgid "{0} per {1}s"
-msgstr "{1}명 당 {0}개"
+msgstr "{1}초 당 {0}개"
 
 #: script/events.js:142
 msgid "eat meat"
@@ -407,7 +407,7 @@ msgstr "모피"
 
 #: script/localization.js:10
 msgid "alien alloy"
-msgstr "특이한 합금"
+msgstr "외계 합금"
 
 #: script/localization.js:11
 msgid "bullets"
@@ -427,7 +427,7 @@ msgstr "철"
 
 #: script/localization.js:15 script/path.js:144
 msgid "steel"
-msgstr "쇠"
+msgstr "강철"
 
 #: script/localization.js:16
 msgid "coal"
@@ -515,7 +515,7 @@ msgstr "손질된 고기"
 
 #: script/localization.js:37 script/localization.js:42
 msgid "scales"
-msgstr "저울"
+msgstr "비늘"
 
 #: script/localization.js:38
 msgid "compass"
@@ -555,7 +555,7 @@ msgstr "철 부족"
 
 #: script/localization.js:49
 msgid "not enough steel"
-msgstr "쇠 부족"
+msgstr "강철 부족"
 
 #: script/localization.js:50
 msgid "baited trap"
@@ -563,7 +563,7 @@ msgstr "미끼덫"
 
 #: script/localization.js:51
 msgid "not enough scales"
-msgstr "저울 부족"
+msgstr "비늘 부족"
 
 #: script/localization.js:52
 msgid "not enough cloth"
@@ -583,35 +583,35 @@ msgstr "고기 부족"
 
 #: script/localization.js:56
 msgid "the compass points east"
-msgstr "나침반이 동쪽을 가르킨다."
+msgstr "나침반이 동쪽을 가리킨다."
 
 #: script/localization.js:57
 msgid "the compass points west"
-msgstr "나침반이 서쪽을 가르킨다."
+msgstr "나침반이 서쪽을 가리킨다."
 
 #: script/localization.js:58
 msgid "the compass points north"
-msgstr "나침반이 북쪽을 가르킨다."
+msgstr "나침반이 북쪽을 가리킨다."
 
 #: script/localization.js:59
 msgid "the compass points south"
-msgstr "나침반이 남쪽을 가르킨다."
+msgstr "나침반이 남쪽을 가리킨다."
 
 #: script/localization.js:60
 msgid "the compass points northeast"
-msgstr "나침반이 북동쪽을 가르킨다."
+msgstr "나침반이 북동쪽을 가리킨다."
 
 #: script/localization.js:61
 msgid "the compass points northwest"
-msgstr "나침반이 북서쪽을 가르킨다."
+msgstr "나침반이 북서쪽을 가리킨다."
 
 #: script/localization.js:62
 msgid "the compass points southeast"
-msgstr "나침반이 남동쪽을 가르킨다."
+msgstr "나침반이 남동쪽을 가리킨다."
 
 #: script/localization.js:63
 msgid "the compass points southwest"
-msgstr "나침반이 남서쪽을 가르킨다."
+msgstr "나침반이 남서쪽을 가리킨다."
 
 #: script/localization.js:70
 msgid "stores"
@@ -671,7 +671,7 @@ msgstr "고기 조각"
 
 #: script/outside.js:110
 msgid "strange scales"
-msgstr "이상한 저울"
+msgstr "이상한 비늘"
 
 #: script/outside.js:115
 msgid "scattered teeth"
@@ -699,7 +699,7 @@ msgstr "밤중에 이방인이 당도한다."
 
 #: script/outside.js:189
 msgid "a weathered family takes up in one of the huts."
-msgstr "치쳐보이는 가족이 한 오두막에 자리를 튼다."
+msgstr "지쳐보이는 가족이 한 오두막에 자리를 튼다."
 
 #: script/outside.js:191
 msgid "a small group arrives, all dust and bones."
@@ -767,7 +767,7 @@ msgstr "출발"
 
 #: script/path.js:68
 msgid "the compass points "
-msgstr "나침반이 가르킨다"
+msgstr "나침반이 가리킨다"
 
 #: script/path.js:142
 msgid "none"
@@ -984,7 +984,7 @@ msgstr "호송차"
 
 #: script/room.js:258
 msgid "the convoy can haul mostly everything"
-msgstr "호송차는 모든지 다 실을 수 있다."
+msgstr "호송차는 뭐든지 다 실을 수 있다."
 
 #: script/room.js:268
 msgid "l armour"
@@ -1004,11 +1004,11 @@ msgstr "철은 가죽보다는 더 강하다."
 
 #: script/room.js:292
 msgid "s armour"
-msgstr "쇠갑옷"
+msgstr "강철갑옷"
 
 #: script/room.js:295
 msgid "steel's stronger than iron"
-msgstr "쇠는 철보다 더 세다."
+msgstr "강철은 철보다 더 세다."
 
 #: script/room.js:304
 msgid "iron sword"
@@ -1020,11 +1020,11 @@ msgstr "날카로운 검이다. 호신용으로 좋을 것 같다."
 
 #: script/room.js:317
 msgid "steel sword"
-msgstr "쇠검"
+msgstr "강철검"
 
 #: script/room.js:320
 msgid "the steel is strong, and the blade true."
-msgstr "쇠는 단단하고 검은 날카롭다."
+msgstr "강철는 단단하고 검은 날카롭다."
 
 #: script/room.js:330
 msgid "rifle"
@@ -1122,7 +1122,7 @@ msgstr "불이 환하게 타오르며 창문 밖으로, 어둠속으로 퍼져�
 
 #: script/room.js:701
 msgid "builder stokes the fire"
-msgstr "일꾼이 불은 뗀다."
+msgstr "일꾼이 불을 뗀다."
 
 #: script/room.js:731
 msgid "the wind howls outside"
@@ -1191,7 +1191,7 @@ msgstr ""
 
 #: script/ship.js:116 script/ship.js:129
 msgid "not enough alien alloy"
-msgstr "특이한 합금 부족"
+msgstr "외계 합금 부족"
 
 #: script/ship.js:144
 msgid "Ready to Leave?"
@@ -1376,7 +1376,7 @@ msgstr "나뭇잎이 말라간다. 노란 잎들은 바람에 부스럭거린다
 #: script/world.js:585
 msgid ""
 "the trees are gone. parched earth and blowing dust are poor replacements."
-msgstr "나무들이 업성졌다. 이젠 매마른 땅과 날리는 먼지뿐.."
+msgstr "나무들이 없어졌다. 이젠 메마른 땅과 날리는 먼지뿐.."
 
 #: script/world.js:592
 msgid ""
@@ -1386,7 +1386,7 @@ msgstr "지평선 저쪽엔 나무들이다. 떨어진 나뭇잎과 마른 가�
 
 #: script/world.js:595
 msgid "the grasses thin. soon, only dust remains."
-msgstr "풀들이 사라져간다. 곧, 흙밖에 남아있지않다."
+msgstr "풀들이 사라져간다. 곧, 흙밖에 남아있지 않게 된다."
 
 #: script/world.js:602
 msgid "the barrens break at a sea of dying grass, swaying in the arid breeze."
@@ -1934,11 +1934,11 @@ msgstr "거지는 고마움을 표시한다."
 
 #: script/events/room.js:223
 msgid "leaves a pile of small scales behind."
-msgstr "작은 저울들을 놓고간다."
+msgstr "작은 비늘들을 놓고간다."
 
 #: script/events/room.js:236
 msgid "leaves a pile of small teeth behind."
-msgstr "작은 이빨들은 놓고간다."
+msgstr "작은 이빨들을 놓고간다."
 
 #: script/events/room.js:249
 msgid "leaves some scraps of cloth behind."
@@ -2115,7 +2115,7 @@ msgstr "여행을 하면서 얻게된 빛나는 상자들"
 
 #: script/events/room.js:577
 msgid "all he has are some scales."
-msgstr "그의 수중에는 저울 몇개 뿐이다."
+msgstr "그의 수중에는 비늘 몇개 뿐이다."
 
 #: script/events/room.js:591
 msgid "the man expresses his thanks and hobbles off."
@@ -2297,7 +2297,7 @@ msgstr "동굴 도마뱀이 공격한다"
 
 #: script/events/setpieces.js:332
 msgid "a large beast charges out of the dark"
-msgstr "큰 짐슴이 난데없이 나타난다"
+msgstr "큰 짐승이 난데없이 나타난다"
 
 #: script/events/setpieces.js:366
 msgid "a giant lizard shambles forward"
