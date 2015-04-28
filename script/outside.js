@@ -362,31 +362,33 @@ var Outside = {
 	},
 	
 	updateVillageRow: function(name, num, village) {
-		var id = 'building_row_' + name.replace(' ', '-');
+  var classid = 'building_row_';
+		var id = classid + name.replace(' ', '-');
+  name = _(name);
 		var row = $('div#' + id, village);
 		if(row.length === 0 && num > 0) {
 			row = $('<div>').attr('id', id).addClass('storeRow');
-			$('<div>').addClass('row_key').text(_(name)).appendTo(row);
+			$('<div>').addClass('row_key').text(name).appendTo(row);
 			$('<div>').addClass('row_val').text(num).appendTo(row);
 			$('<div>').addClass('clear').appendTo(row);
 			var curPrev = null;
 			village.children().each(function(i) {
 				var child = $(this);
 				if(child.attr('id') != 'population') {
-					var cName = child.attr('id').substring(13).replace('-', ' ');
-					if(cName < name && (curPrev == null || cName > curPrev)) {
-						curPrev = cName;
+					var cName = child.children('.row_key').text();
+					if(cName < name) {
+						curPrev = child.attr('id');
 					}
 				}
 			});
 			if(curPrev == null) {
 				row.prependTo(village);
 			} else {
-				row.insertAfter('#building_row_' + curPrev.replace(' ', '-'));
+				row.insertAfter('#' + curPrev);
 			}
 		} else if(num > 0) {
 			$('div#' + row.attr('id') + ' > div.row_val', village).text(num);
-		} else if(num === 0) {
+		} else {
 			row.remove();
 		}
 	},
