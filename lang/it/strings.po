@@ -700,7 +700,7 @@ msgstr "un gioiello rozzamente intagliato"
 
 #: script/outside.js:142 script/outside.js:536
 msgid "A Silent Forest"
-msgstr "Una Foresta Silente"
+msgstr "Una Foresta Silenziosa"
 
 #: script/outside.js:170
 msgid "gather wood"
