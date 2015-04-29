@@ -6,7 +6,7 @@ a minimalist text adventure game for your browser
 
 [Click to play](http://adarkroom.doublespeakgames.com)
 
-<table>
+<table> 
 <tr>
 <th colspan="2">Available Languages
 <tr>
