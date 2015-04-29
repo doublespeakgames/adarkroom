@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2015-02-07 20:22+0800\n"
-"PO-Revision-Date: 2015-04-27 16:48+0100\n"
+"PO-Revision-Date: 2015-04-28 16:48+0100\n"
 "Last-Translator: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3282,3 +3282,23 @@ msgstr "tutto il lavoro della generazione passata è ancora qui."
 #: script/events/setpieces.js:3565
 msgid "ripe for the picking."
 msgstr "pronto per essere raccolto."
+
+#: script/events/outside.js:74
+msgid "a fire rampages through one of the huts, destroying it."
+msgstr "un incendio divampa in una delle capanne, distruggendola."
+
+#: script/events/outside.js:75
+msgid "all residents in the hut perished in the fire."
+msgstr "tutti quelli che vivevano nella capanna sono morti nell'incendio"
+
+#: script/events/outside.js:77
+msgid "a fire has started"
+msgstr "è scoppiato un incendio"
+
+#: script/events/outside.js:87
+msgid "mourn"
+msgstr "piangi i defunti"
+
+#: script/events/outside.js:88
+msgid "some villagers have died"
+msgstr "alcuni paesani sono morti"
