@@ -364,7 +364,7 @@ var Outside = {
 	
 	updateVillageRow: function(name, num, village) {
 		var id = 'building_row_' + name.replace(' ', '-');
-		lname = _(name);
+		var lname = _(name);
 		var row = $('div#' + id, village);
 		if(row.length === 0 && num > 0) {
 			row = $('<div>').attr('id', id).addClass('storeRow');
