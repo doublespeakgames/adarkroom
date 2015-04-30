@@ -364,11 +364,11 @@ var Outside = {
 	
 	updateVillageRow: function(name, num, village) {
 		var id = 'building_row_' + name.replace(' ', '-');
-		name = _(name);
+		lname = _(name);
 		var row = $('div#' + id, village);
 		if(row.length === 0 && num > 0) {
 			row = $('<div>').attr('id', id).addClass('storeRow');
-			$('<div>').addClass('row_key').text(name).appendTo(row);
+			$('<div>').addClass('row_key').text(lname).appendTo(row);
 			$('<div>').addClass('row_val').text(num).appendTo(row);
 			$('<div>').addClass('clear').appendTo(row);
 			var curPrev = null;
@@ -376,7 +376,7 @@ var Outside = {
 				var child = $(this);
 				if(child.attr('id') != 'population') {
 					var cName = child.children('.row_key').text();
-					if(cName < name) {
+					if(cName < lname) {
 						curPrev = child.attr('id');
 					}
 				}
@@ -587,13 +587,13 @@ var Outside = {
 				}
 			}
 		}
-        /// TRANSLATORS : Mind the whitespace at the end.
+		/// TRANSLATORS : Mind the whitespace at the end.
 		var s = _('the traps contain ');
 		for(var i = 0, len = msg.length; i < len; i++) {
 			if(len > 1 && i > 0 && i < len - 1) {
 				s += ", ";
 			} else if(len > 1 && i == len - 1) {
-                /// TRANSLATORS : Mind the whitespaces at the beginning and end.
+				/// TRANSLATORS : Mind the whitespaces at the beginning and end.
 				s += _(" and ");
 			}
 			s += msg[i];
