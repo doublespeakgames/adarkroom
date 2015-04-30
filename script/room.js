@@ -797,7 +797,7 @@ var Room = {
 				$SM.set('stores["'+k+'"]', 0);
 			}
 			
-			lk = _(k);
+			var lk = _(k);
 			
 			// thieves?
 			if(typeof $SM.get('game.thieves') == 'undefined' && num > 5000 && $SM.get('features.location.world')) {
