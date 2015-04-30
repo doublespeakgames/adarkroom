@@ -158,6 +158,7 @@ var Outside = {
 		
 		this.updateVillage();
 		Outside.updateWorkersView();
+		Outside.updateVillageIncome();
 		
 		Engine.updateSlider();
 		
