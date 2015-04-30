@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2015-02-07 20:22+0800\n"
-"PO-Revision-Date: 2015-04-28 16:48+0100\n"
+"PO-Revision-Date: 2015-04-30 22:02+0100\n"
 "Last-Translator: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,11 +43,11 @@ msgstr "Esporta in/Importa da Dropbox"
 
 #: script/dropbox.js:91
 msgid "export or import save data to dropbox datastorage"
-msgstr "esporta/importa i dati di salvataggio dalla memoria dati di Dropbox"
+msgstr "esporta i dati di gioco su dropbox o carica i dati salvati"
 
 #: script/dropbox.js:92
 msgid "your are connected to dropbox with account / email "
-msgstr "sei connesso a Dropbox con l'account / indirizzo e-mail"
+msgstr "sei connesso a dropbox con l'account / indirizzo e-mail"
 
 #: script/dropbox.js:95
 msgid "save"
@@ -71,15 +71,15 @@ msgstr "salva in questa posizione"
 
 #: script/dropbox.js:144
 msgid "choose one slot to load from"
-msgstr "scegli un salvataggio da caricare"
+msgstr "scegli una posizione da cui caricare"
 
 #: script/dropbox.js:151
 msgid "load from slot"
-msgstr "carica dal salvataggio"
+msgstr "carica da questa posizione"
 
 #: script/dropbox.js:183
 msgid "successfully saved to dropbox datastorage"
-msgstr "salvato correttamente nella memoria dati in Dropbox"
+msgstr "salvato correttamente nella memoria dati dropbox"
 
 #: script/dropbox.js:184
 msgid "error while saving to dropbox datastorage"
@@ -99,7 +99,7 @@ msgstr "i pugni causano più danni"
 
 #: script/engine.js:20
 msgid "learned to throw punches with purpose"
-msgstr "hai appreso come tirare pugni in modo efficace"
+msgstr "si è appreso come tirare pugni con determinazione"
 
 #: script/engine.js:23
 msgid "martial artist"
@@ -111,7 +111,7 @@ msgstr "i pugni causano ancora più danni"
 
 #: script/engine.js:25
 msgid "learned to fight quite effectively without weapons"
-msgstr "puoi combattere in modo abbastanza efficace senza armi"
+msgstr "si è appreso come combattere in modo efficace senza armi"
 
 #: script/engine.js:30
 msgid "unarmed master"
@@ -123,7 +123,7 @@ msgstr "la velocità dei pugni raddoppia, e la forza aumenta ancora"
 
 #: script/engine.js:32
 msgid "learned to strike faster without weapons"
-msgstr "hai imparato a colpire più veloce senza armi"
+msgstr "si è appreso come colpire più veloce senza armi"
 
 #: script/engine.js:35
 msgid "barbarian"
@@ -135,7 +135,7 @@ msgstr "le armi bianche causano maggiori danni"
 
 #: script/engine.js:37
 msgid "learned to swing weapons with force"
-msgstr "hai imparato a brandire le armi con forza"
+msgstr "si è appreso come brandire le armi con forza"
 
 #: script/engine.js:40
 msgid "slow metabolism"
@@ -143,11 +143,11 @@ msgstr "metabolismo lento"
 
 #: script/engine.js:41
 msgid "go twice as far without eating"
-msgstr "percorri il doppio della distanza senza mangiare"
+msgstr " raddoppia la distanza percorsa senza mangiare"
 
 #: script/engine.js:42
 msgid "learned how to ignore the hunger"
-msgstr "hai imparato ad ignorare la fame"
+msgstr "si è appreso come ignorare la fame"
 
 #: script/engine.js:45
 msgid "desert rat"
@@ -155,11 +155,11 @@ msgstr "volpe del deserto"
 
 #: script/engine.js:46
 msgid "go twice as far without drinking"
-msgstr "percorri il doppio della distanza senza bere"
+msgstr "raddoppia la distanza percorsa senza bere"
 
 #: script/engine.js:47
 msgid "learned to love the dry air"
-msgstr "hai imparato ad apprezzare il clima arido"
+msgstr "si è imparato ad apprezzare il clima arido"
 
 #: script/engine.js:50
 msgid "evasive"
@@ -167,11 +167,11 @@ msgstr "elusivo"
 
 #: script/engine.js:51
 msgid "dodge attacks more effectively"
-msgstr "puoi schivare più facilmente gli attacchi"
+msgstr "gli attacchi vengono schivati più facilmente"
 
 #: script/engine.js:52
 msgid "learned to be where they're not"
-msgstr "hai imparato a non essere raggiunto"
+msgstr "si è appreso come non essere raggiunti"
 
 #: script/engine.js:55
 msgid "precise"
@@ -183,7 +183,7 @@ msgstr "i colpi vanno a segno più spesso"
 
 #: script/engine.js:57
 msgid "learned to predict their movement"
-msgstr "hai imparato a prevedere i loro movimenti"
+msgstr "si è appreso come prevedere i loro movimenti"
 
 #: script/engine.js:60
 msgid "scout"
@@ -191,11 +191,11 @@ msgstr "sentinella"
 
 #: script/engine.js:61
 msgid "see farther"
-msgstr "vedi più lontano"
+msgstr "il raggio visivo si estende"
 
 #: script/engine.js:62
 msgid "learned to look ahead"
-msgstr "hai imparato a guardare avanti"
+msgstr "si è imparato a guardare avanti"
 
 #: script/engine.js:65
 msgid "stealthy"
@@ -203,11 +203,11 @@ msgstr "furtivo"
 
 #: script/engine.js:66
 msgid "better avoid conflict in the wild"
-msgstr "puoi evitare i combattimenti durante le esplorazioni"
+msgstr "in esplorazione i combattimenti sono meno frequenti"
 
 #: script/engine.js:67
 msgid "learned how not to be seen"
-msgstr "hai imparato a non farti vedere"
+msgstr "si è appreso come non essere visti"
 
 #: script/engine.js:70
 msgid "gastronome"
@@ -215,11 +215,11 @@ msgstr "buongustaio"
 
 #: script/engine.js:71
 msgid "restore more health when eating"
-msgstr "ripristina più salute quando mangi"
+msgstr "si ripristina più salute mangiando"
 
 #: script/engine.js:72
 msgid "learned to make the most of food"
-msgstr "hai imparato a trarre il massimo dal cibo"
+msgstr "si è imparato a trarre il massimo dal cibo"
 
 #: script/engine.js:142 script/engine.js:481
 msgid "lights off."
@@ -291,7 +291,7 @@ msgstr "no"
 
 #: script/engine.js:302
 msgid "put the save code here."
-msgstr "inserisci qui il codice di salvataggio."
+msgstr "inserisci qui il codice del salvataggio."
 
 #: script/engine.js:334
 msgid "Export"
@@ -355,7 +355,7 @@ msgstr "mangia carne"
 
 #: script/events.js:162
 msgid "use meds"
-msgstr "usa medicine"
+msgstr "usa medicina"
 
 #: script/events.js:360 script/events.js:405
 msgid "miss"
@@ -472,7 +472,7 @@ msgstr "granata"
 
 #: script/localization.js:25
 msgid "bolas"
-msgstr "funi da cattura"
+msgstr "laccio da cattura"
 
 #: script/localization.js:26
 msgid "bayonet"
@@ -884,7 +884,7 @@ msgstr "un mercato renderebbe gli scambi più facili"
 msgid ""
 "now the nomads have a place to set up shop, they might stick around a while"
 msgstr ""
-"ora che i nomadi hanno un posto dove esporre le loro merci, potrebbero "
+"ora che i nomadi hanno un posto dove esporre le loro merci, potranno "
 "fermarsi per un po'"
 
 #: script/room.js:94
@@ -970,7 +970,7 @@ msgstr "otre"
 
 #: script/room.js:183
 msgid "this waterskin'll hold a bit of water, at least"
-msgstr "l'otre può trasportare un po' d'acqua, almeno"
+msgstr "l'otre basterà a trasportare un po' d'acqua"
 
 #: script/room.js:191
 msgid "cask"
@@ -986,7 +986,7 @@ msgstr "cisterna"
 
 #: script/room.js:208
 msgid "never go thirsty again"
-msgstr "non soffrirai mai più la sete"
+msgstr "non si soffrirà mai più la sete"
 
 #: script/room.js:217
 msgid "bone spear"
@@ -1123,7 +1123,7 @@ msgstr "calda"
 
 #: script/room.js:609
 msgid "dead"
-msgstr "è estinto"
+msgstr "è spento"
 
 #: script/room.js:610
 msgid "smoldering"
@@ -1156,7 +1156,7 @@ msgstr "il legname è finito"
 #: script/room.js:688
 msgid "the light from the fire spills from the windows, out into the dark"
 msgstr ""
-"la luce della fiamma si riversa dalla finestra, rischiarando l'oscurità "
+"la luce della fiamma si riversa dalla finestra, rischiarando il buio "
 "circostante"
 
 #: script/room.js:701
@@ -1246,7 +1246,7 @@ msgstr "è giunto il tempo di lasciare questo posto. non ci sarà ritorno."
 
 #: script/ship.js:160
 msgid "linger"
-msgstr "indugiare"
+msgstr "indugia"
 
 #: script/space.js:45
 msgid "hull: "
@@ -1310,7 +1310,7 @@ msgstr "spara"
 
 #: script/world.js:85
 msgid "blast"
-msgstr "laser"
+msgstr "disintegra"
 
 #: script/world.js:92
 msgid "lob"
@@ -1897,7 +1897,7 @@ msgstr "la vecchia bussola appare ammaccata e polverosa, ma sembra funzionare."
 #: script/events/room.js:568 script/events/room.js:584
 #: script/events/room.js:595
 msgid "say goodbye"
-msgstr "digli addio"
+msgstr "augura buon viaggio"
 
 #: script/events/room.js:53 script/events/room.js:104
 msgid "Noises"
@@ -1905,7 +1905,7 @@ msgstr "Rumori"
 
 #: script/events/room.js:60
 msgid "through the walls, shuffling noises can be heard."
-msgstr "oltre i muri, si sente il rumore di qualcosa che viene spostato."
+msgstr "oltre i muri, si sente rumore di qualcosa che viene spostato."
 
 #: script/events/room.js:61
 msgid "can't tell what they're up to."
@@ -1913,7 +1913,7 @@ msgstr "non si può dire a cosa sia dovuto."
 
 #: script/events/room.js:63
 msgid "strange noises can be heard through the walls"
-msgstr "strani rumori si possono sentire oltre i muri"
+msgstr "si sentono strani rumori oltre i muri"
 
 #: script/events/room.js:67 script/events/room.js:118
 #: script/events/setpieces.js:1663
@@ -2022,7 +2022,7 @@ msgstr "lascia in cambio alcuni scampoli di stoffa."
 
 #: script/events/room.js:262 script/events/room.js:333
 msgid "The Mysterious Wanderer"
-msgstr "Il Ramingo Misterioso"
+msgstr "Raminghi Misteriosi"
 
 #: script/events/room.js:269
 msgid ""
@@ -2038,7 +2038,7 @@ msgstr "la costruttrice non è sicura che costui sia degno di fiducia."
 
 #: script/events/room.js:272 script/events/room.js:343
 msgid "a mysterious wanderer arrives"
-msgstr "arriva un ramingo misterioso"
+msgstr "arrivano raminghi misteriosi"
 
 #: script/events/room.js:281 script/events/room.js:352
 msgid "give 500"
@@ -2078,11 +2078,11 @@ msgstr "la raminga misteriosa ritorna, il suo carretto trabocca di pellame."
 
 #: script/events/room.js:404
 msgid "The Scout"
-msgstr "La Sentinella"
+msgstr "L'Esploratrice"
 
 #: script/events/room.js:411
 msgid "the scout says she's been all over."
-msgstr "la sentinella dice di essere stata ovunque"
+msgstr "l'esploratrice dice di essere stata ovunque"
 
 #: script/events/room.js:412
 msgid "willing to talk about it, for a price."
@@ -2090,7 +2090,7 @@ msgstr "ha voglia di parlarne, per il giusto prezzo."
 
 #: script/events/room.js:414
 msgid "a scout stops for the night"
-msgstr "una sentinella si ferma per la notte"
+msgstr "un'esploratrice si ferma per la notte"
 
 #: script/events/room.js:418
 msgid "buy map"
@@ -2158,7 +2158,7 @@ msgstr "implora che gli si dia una medicina."
 
 #: script/events/room.js:526
 msgid "a sick man hobbles up"
-msgstr "un ammalato arriva zoppicando"
+msgstr "un uomo malato arriva zoppicando"
 
 #: script/events/room.js:530
 msgid "give 1 medicine"
