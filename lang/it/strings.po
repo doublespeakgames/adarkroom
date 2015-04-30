@@ -516,7 +516,7 @@ msgstr "oper. acciaieria"
 
 #: script/localization.js:36
 msgid "bait"
-msgstr "esca"
+msgstr "esche"
 
 #: script/localization.js:37 script/localization.js:44
 msgid "cured meat"
