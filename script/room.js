@@ -797,6 +797,7 @@ var Room = {
 				$SM.set('stores["'+k+'"]', 0);
 			}
 			
+			var lk = _(k);
 			
 			// thieves?
 			if(typeof $SM.get('game.thieves') == 'undefined' && num > 5000 && $SM.get('features.location.world')) {
@@ -805,21 +806,21 @@ var Room = {
 			
 			if(row.length === 0 && num > 0) {
 				row = $('<div>').attr('id', id).addClass('storeRow');
-				$('<div>').addClass('row_key').text(_(k)).appendTo(row);
+				$('<div>').addClass('row_key').text(lk).appendTo(row);
 				$('<div>').addClass('row_val').text(Math.floor(num)).appendTo(row);
 				$('<div>').addClass('clear').appendTo(row);
 				var curPrev = null;
 				location.children().each(function(i) {
 					var child = $(this);
-					var cName = child.attr('id').substring(4).replace('-', ' ');
-					if(cName < k && (curPrev == null || cName > curPrev)) {
-						curPrev = cName;
+					var cName = child.children('.row_key').text();
+					if(cName < lk) {
+						curPrev = child.attr('id');
 					}
 				});
 				if(curPrev == null) {
 					row.prependTo(location);
 				} else {
-					row.insertAfter(location.find('#row_' + curPrev.replace(' ', '-')));
+					row.insertAfter(location.find('#' + curPrev));
 				}
 				newRow = true;
 			} else if(num>= 0){
