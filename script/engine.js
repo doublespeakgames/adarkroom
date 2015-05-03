@@ -140,15 +140,9 @@
 				.appendTo(menu);
 
 			$('<span>')
-				.addClass('menuBtn')
+				.addClass('hyper menuBtn')
 				.text(_('hyper.'))
-				.click(function(){
-					Engine.options.doubleTime = !Engine.options.doubleTime;
-					if(Engine.options.doubleTime)
-						$(this).text(_('classic.'));
-					else
-						$(this).text(_('hyper.'));
-				})
+				.click(Engine.triggerHyperMode)
 				.appendTo(menu);
 
 			$('<span>')
@@ -219,7 +213,15 @@
 			if($SM.get('features.location.spaceShip')) {
 				Ship.init();
 			}
-			
+
+			if($SM.get('config.lightsOff', true)){
+					Engine.turnLightsOff();
+			}
+
+			if($SM.get('config.hyperMode', true)){
+					Engine.triggerHyperMode();
+			}
+
 			Engine.saveLanguage();
 			Engine.travelTo(Room);
 	
@@ -476,16 +478,29 @@
 			if (darkCss == null) {
 				$('head').append('<link rel="stylesheet" href="css/dark.css" type="text/css" title="darkenLights" />');
 				$('.lightsOff').text(_('lights on.'));
+                $SM.set('config.lightsOff', true, true);
 			} else if (darkCss.disabled) {
 				darkCss.disabled = false;
 				$('.lightsOff').text(_('lights on.'));
+    			$SM.set('config.lightsOff', true,true);
 			} else {
 				$("#darkenLights").attr("disabled", "disabled");
 				darkCss.disabled = true;
 				$('.lightsOff').text(_('lights off.'));
+                $SM.set('config.lightsOff', false, true);
 			}
 		},
-	
+
+		triggerHyperMode: function(){
+			Engine.options.doubleTime = !Engine.options.doubleTime;
+			if(Engine.options.doubleTime)
+				$('.hyper').text(_('classic.'));
+			else
+				$('.hyper').text(_('hyper.'));
+
+			$SM.set('config.hyperMode', Engine.options.doubleTime, false);
+		},
+
 		// Gets a guid
 		getGuid: function() {
 			return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
