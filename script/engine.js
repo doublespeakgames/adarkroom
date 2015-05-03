@@ -478,15 +478,17 @@
 			if (darkCss == null) {
 				$('head').append('<link rel="stylesheet" href="css/dark.css" type="text/css" title="darkenLights" />');
 				$('.lightsOff').text(_('lights on.'));
+                $SM.set('config.lightsOff', true, true);
 			} else if (darkCss.disabled) {
 				darkCss.disabled = false;
 				$('.lightsOff').text(_('lights on.'));
+    			$SM.set('config.lightsOff', true,true);
 			} else {
 				$("#darkenLights").attr("disabled", "disabled");
 				darkCss.disabled = true;
 				$('.lightsOff').text(_('lights off.'));
+                $SM.set('config.lightsOff', false, true);
 			}
-			$SM.set('config.lightsOff', Engine.isLightsOff(), false);
 		},
 
 		triggerHyperMode: function(){
