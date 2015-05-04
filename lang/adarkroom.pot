@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2015-02-07 20:22+0800\n"
-"PO-Revision-Date: 2015-02-07 14:15-0500\n"
+"PO-Revision-Date: 2015-05-01 00:21+0100\n"
 "Last-Translator: \n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 1.3\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.6\n"
 "X-Poedit-Basepath: ../\n"
+"Language-Team: \n"
 
 #: script/dropbox.js:64
 msgid "Dropbox connection"
@@ -26,10 +26,12 @@ msgstr ""
 msgid "connect game to dropbox local storage"
 msgstr ""
 
+# command
 #: script/dropbox.js:70
 msgid "connect"
 msgstr ""
 
+# command
 #: script/dropbox.js:77 script/dropbox.js:109 script/dropbox.js:136
 #: script/dropbox.js:167 script/engine.js:278 script/engine.js:311
 msgid "cancel"
@@ -47,14 +49,17 @@ msgstr ""
 msgid "your are connected to dropbox with account / email "
 msgstr ""
 
+# command
 #: script/dropbox.js:95
 msgid "save"
 msgstr ""
 
+# command
 #: script/dropbox.js:99
 msgid "load"
 msgstr ""
 
+# command
 #: script/dropbox.js:104
 msgid "signout"
 msgstr ""
@@ -251,18 +256,22 @@ msgstr ""
 msgid "Export / Import"
 msgstr ""
 
+# line 1
 #: script/engine.js:265
 msgid "export or import save data, for backing up"
 msgstr ""
 
+# line 2
 #: script/engine.js:266
 msgid "or migrating computers"
 msgstr ""
 
+# command
 #: script/engine.js:270
 msgid "export"
 msgstr ""
 
+# command
 #: script/engine.js:274 script/engine.js:306
 msgid "import"
 msgstr ""
@@ -279,10 +288,12 @@ msgstr ""
 msgid "this is irreversible."
 msgstr ""
 
+# command
 #: script/engine.js:291 script/engine.js:377
 msgid "yes"
 msgstr ""
 
+# command
 #: script/engine.js:296 script/engine.js:382
 msgid "no"
 msgstr ""
@@ -299,6 +310,7 @@ msgstr ""
 msgid "save this."
 msgstr ""
 
+# command
 #: script/engine.js:342
 msgid "got it"
 msgstr ""
@@ -343,14 +355,18 @@ msgstr ""
 msgid "lights on."
 msgstr ""
 
+# {0}: production/consumption unit
+# {1}: number of seconds
 #: script/engine.js:584
 msgid "{0} per {1}s"
 msgstr ""
 
+# command
 #: script/events.js:142
 msgid "eat meat"
 msgstr ""
 
+# command
 #: script/events.js:162
 msgid "use meds"
 msgstr ""
@@ -363,6 +379,7 @@ msgstr ""
 msgid "stunned"
 msgstr ""
 
+# command
 #: script/events.js:494 script/events/global.js:42 script/events/global.js:59
 #: script/events/room.js:142 script/events/room.js:162
 #: script/events/room.js:182 script/events/setpieces.js:25
@@ -512,6 +529,7 @@ msgstr ""
 msgid "steelworker"
 msgstr ""
 
+# use plural if your language admits it (like "teeth" and "scales")
 #: script/localization.js:36
 msgid "bait"
 msgstr ""
@@ -632,14 +650,17 @@ msgstr ""
 msgid "weapons"
 msgstr ""
 
+# introduces available buildings
 #: script/localization.js:74
 msgid "build:"
 msgstr ""
 
+# introduces items which can be crafted
 #: script/localization.js:75
 msgid "craft:"
 msgstr ""
 
+# introduces list of marketable items
 #: script/localization.js:76
 msgid "buy:"
 msgstr ""
@@ -700,6 +721,7 @@ msgstr ""
 msgid "A Silent Forest"
 msgstr ""
 
+# command
 #: script/outside.js:170
 msgid "gather wood"
 msgstr ""
@@ -724,10 +746,13 @@ msgstr ""
 msgid "the town's booming. word does get around."
 msgstr ""
 
+# short for population
+# mind the whitespace at the end!
 #: script/outside.js:426
 msgid "pop "
 msgstr ""
 
+# command
 #: script/outside.js:517
 msgid "check traps"
 msgstr ""
@@ -760,10 +785,13 @@ msgstr ""
 msgid "dry brush and dead branches litter the forest floor"
 msgstr ""
 
+# mind the whitespace at the end!
 #: script/outside.js:596
 msgid "the traps contain "
 msgstr ""
 
+# separates the last object found in traps.
+# mind the whitespaces at the beginning and end!
 #: script/outside.js:603
 msgid " and "
 msgstr ""
@@ -772,6 +800,7 @@ msgstr ""
 msgid "A Dusty Path"
 msgstr ""
 
+# command
 #: script/path.js:50
 msgid "embark"
 msgstr ""
@@ -792,6 +821,7 @@ msgstr ""
 msgid "water"
 msgstr ""
 
+# Legend for free space when embarking
 #: script/path.js:243 script/world.js:306
 msgid "free {0}/{1}"
 msgstr ""
@@ -996,6 +1026,7 @@ msgstr ""
 msgid "the convoy can haul mostly everything"
 msgstr ""
 
+# short for "leather armour"
 #: script/room.js:268
 msgid "l armour"
 msgstr ""
@@ -1004,6 +1035,7 @@ msgstr ""
 msgid "leather's not strong. better than rags, though."
 msgstr ""
 
+# short for "iron armour"
 #: script/room.js:280
 msgid "i armour"
 msgstr ""
@@ -1012,6 +1044,7 @@ msgstr ""
 msgid "iron's stronger than leather"
 msgstr ""
 
+# short for "steel armour"
 #: script/room.js:292
 msgid "s armour"
 msgstr ""
@@ -1052,18 +1085,22 @@ msgstr ""
 msgid "A Dark Room"
 msgstr ""
 
+# command
 #: script/room.js:507
 msgid "light fire"
 msgstr ""
 
+# command
 #: script/room.js:518
 msgid "stoke fire"
 msgstr ""
 
+# introduces "room state"
 #: script/room.js:557 script/room.js:568 script/room.js:716 script/room.js:720
 msgid "the room is {0}"
 msgstr ""
 
+# introduces "fire state"
 #: script/room.js:558 script/room.js:567 script/room.js:685
 msgid "the fire is {0}"
 msgstr ""
@@ -1074,42 +1111,52 @@ msgid ""
 "things."
 msgstr ""
 
+# room state
 #: script/room.js:593
 msgid "freezing"
 msgstr ""
 
+# room state
 #: script/room.js:594
 msgid "cold"
 msgstr ""
 
+# room state
 #: script/room.js:595
 msgid "mild"
 msgstr ""
 
+# room state
 #: script/room.js:596
 msgid "warm"
 msgstr ""
 
+# room state
 #: script/room.js:597
 msgid "hot"
 msgstr ""
 
+# fire state
 #: script/room.js:609
 msgid "dead"
 msgstr ""
 
+# fire state
 #: script/room.js:610
 msgid "smoldering"
 msgstr ""
 
+# fire state
 #: script/room.js:611
 msgid "flickering"
 msgstr ""
 
+# fire state
 #: script/room.js:612
 msgid "burning"
 msgstr ""
 
+# fire state
 #: script/room.js:613
 msgid "roaring"
 msgstr ""
@@ -1179,14 +1226,17 @@ msgstr ""
 msgid "engine:"
 msgstr ""
 
+# command
 #: script/ship.js:56
 msgid "reinforce hull"
 msgstr ""
 
+# command
 #: script/ship.js:66
 msgid "upgrade engine"
 msgstr ""
 
+# command
 #: script/ship.js:76 script/ship.js:152
 msgid "lift off"
 msgstr ""
@@ -1209,10 +1259,12 @@ msgstr ""
 msgid "time to get out of this place. won't be coming back."
 msgstr ""
 
+# command to cancel "lift off" action
 #: script/ship.js:160
 msgid "linger"
 msgstr ""
 
+# mind the whitespace at the end!
 #: script/space.js:45
 msgid "hull: "
 msgstr ""
@@ -1253,86 +1305,107 @@ msgstr ""
 msgid "punch"
 msgstr ""
 
+# command for bone spear attack
 #: script/world.js:54
 msgid "stab"
 msgstr ""
 
+# command for iron sword attack
 #: script/world.js:60
 msgid "swing"
 msgstr ""
 
+# command for steel sword attack
 #: script/world.js:66
 msgid "slash"
 msgstr ""
 
+# command for bayonet attack
 #: script/world.js:72
 msgid "thrust"
 msgstr ""
 
+# command for rifle attack
 #: script/world.js:78
 msgid "shoot"
 msgstr ""
 
+# command for laser rifle attack
 #: script/world.js:85
 msgid "blast"
 msgstr ""
 
+# command for grenade attack
 #: script/world.js:92
 msgid "lob"
 msgstr ""
 
+# command for bolas attack
 #: script/world.js:99
 msgid "tangle"
 msgstr ""
 
+# leave &nbsp; as whitespace
 #: script/world.js:124
 msgid "An&nbsp;Outpost"
 msgstr ""
 
+# leave &nbsp; as whitespace
 #: script/world.js:125
 msgid "Iron&nbsp;Mine"
 msgstr ""
 
+# leave &nbsp; as whitespace
 #: script/world.js:126
 msgid "Coal&nbsp;Mine"
 msgstr ""
 
+# leave &nbsp; as whitespace
 #: script/world.js:127
 msgid "Sulphur&nbsp;Mine"
 msgstr ""
 
+# leave &nbsp; as whitespace
 #: script/world.js:128
 msgid "An&nbsp;Old&nbsp;House"
 msgstr ""
 
+# leave &nbsp; as whitespace
 #: script/world.js:129
 msgid "A&nbsp;Damp&nbsp;Cave"
 msgstr ""
 
+# leave &nbsp; as whitespace
 #: script/world.js:130
 msgid "An&nbsp;Abandoned&nbsp;Town"
 msgstr ""
 
+# leave &nbsp; as whitespace
 #: script/world.js:131
 msgid "A&nbsp;Ruined&nbsp;City"
 msgstr ""
 
+# leave &nbsp; as whitespace
 #: script/world.js:132
 msgid "A&nbsp;Crashed&nbsp;Starship"
 msgstr ""
 
+# leave &nbsp; as whitespace
 #: script/world.js:133
 msgid "A&nbsp;Borehole"
 msgstr ""
 
+# leave &nbsp; as whitespace
 #: script/world.js:134
 msgid "A&nbsp;Battlefield"
 msgstr ""
 
+# leave &nbsp; as whitespace
 #: script/world.js:135
 msgid "A&nbsp;Murky&nbsp;Swamp"
 msgstr ""
 
+# leave &nbsp; as whitespace
 #: script/world.js:140
 msgid "A&nbsp;Destroyed&nbsp;Village"
 msgstr ""
@@ -1345,10 +1418,12 @@ msgstr ""
 msgid "pockets"
 msgstr ""
 
+# short for health points
 #: script/world.js:323
 msgid "hp: {0}/{1}"
 msgstr ""
 
+# item counter when finding supplies
 #: script/world.js:330
 msgid "{0}:{1}"
 msgstr ""
@@ -1606,10 +1681,12 @@ msgstr ""
 msgid "a thief is caught"
 msgstr ""
 
+# command
 #: script/events/global.js:21
 msgid "hang him"
 msgstr ""
 
+# command
 #: script/events/global.js:25
 msgid "spare him"
 msgstr ""
@@ -1647,10 +1724,12 @@ msgstr ""
 msgid "some traps have been destroyed"
 msgstr ""
 
+# command
 #: script/events/outside.js:26
 msgid "track them"
 msgstr ""
 
+# command
 #: script/events/outside.js:30 script/events/room.js:71
 #: script/events/room.js:122
 msgid "ignore them"
@@ -1664,6 +1743,7 @@ msgstr ""
 msgid "the forest is silent."
 msgstr ""
 
+# command
 #: script/events/outside.js:42 script/events/outside.js:59
 #: script/events/outside.js:98 script/events/outside.js:115
 #: script/events/outside.js:166 script/events/outside.js:183
@@ -1691,10 +1771,12 @@ msgstr ""
 msgid "medicine is needed immediately."
 msgstr ""
 
+# command
 #: script/events/outside.js:82
 msgid "1 medicine"
 msgstr ""
 
+# command
 #: script/events/outside.js:87
 msgid "ignore it"
 msgstr ""
@@ -1723,14 +1805,17 @@ msgstr ""
 msgid "a terrible plague is fast spreading through the village."
 msgstr ""
 
+# command
 #: script/events/outside.js:138
 msgid "buy medicine"
 msgstr ""
 
+# command
 #: script/events/outside.js:144
 msgid "5 medicine"
 msgstr ""
 
+# command
 #: script/events/outside.js:149
 msgid "do nothing"
 msgstr ""
@@ -1804,14 +1889,17 @@ msgstr ""
 msgid "a nomad arrives, looking to trade"
 msgstr ""
 
+# command
 #: script/events/room.js:20
 msgid "buy scales"
 msgstr ""
 
+# command
 #: script/events/room.js:25
 msgid "buy teeth"
 msgstr ""
 
+# command
 #: script/events/room.js:30
 msgid "buy bait"
 msgstr ""
@@ -1820,6 +1908,7 @@ msgstr ""
 msgid "traps are more effective with bait."
 msgstr ""
 
+# command
 #: script/events/room.js:39
 msgid "buy compass"
 msgstr ""
@@ -1828,6 +1917,7 @@ msgstr ""
 msgid "the old compass is dented and dusty, but it looks to work."
 msgstr ""
 
+# command
 #: script/events/room.js:46 script/events/room.js:227
 #: script/events/room.js:240 script/events/room.js:253
 #: script/events/room.js:305 script/events/room.js:324
@@ -1854,6 +1944,7 @@ msgstr ""
 msgid "strange noises can be heard through the walls"
 msgstr ""
 
+# command
 #: script/events/room.js:67 script/events/room.js:118
 #: script/events/setpieces.js:1663
 msgid "investigate"
@@ -1867,6 +1958,7 @@ msgstr ""
 msgid "the sounds stop."
 msgstr ""
 
+# command
 #: script/events/room.js:83 script/events/room.js:96
 msgid "go back inside"
 msgstr ""
@@ -1925,15 +2017,18 @@ msgstr ""
 msgid "a beggar arrives"
 msgstr ""
 
+# command
 #: script/events/room.js:204
 msgid "give 50"
 msgstr ""
 
+# command
 #: script/events/room.js:209 script/events/room.js:276
 #: script/events/room.js:347
 msgid "give 100"
 msgstr ""
 
+# command
 #: script/events/room.js:214 script/events/room.js:286
 #: script/events/room.js:466
 msgid "turn him away"
@@ -1956,6 +2051,7 @@ msgstr ""
 msgid "leaves some scraps of cloth behind."
 msgstr ""
 
+# this refers to both male and female wanderer events
 #: script/events/room.js:262 script/events/room.js:333
 msgid "The Mysterious Wanderer"
 msgstr ""
@@ -1970,10 +2066,12 @@ msgstr ""
 msgid "builder's not sure he's to be trusted."
 msgstr ""
 
+# this refers to both male and female wanderer events
 #: script/events/room.js:272 script/events/room.js:343
 msgid "a mysterious wanderer arrives"
 msgstr ""
 
+# command
 #: script/events/room.js:281 script/events/room.js:352
 msgid "give 500"
 msgstr ""
@@ -1996,6 +2094,7 @@ msgstr ""
 msgid "builder's not sure she's to be trusted."
 msgstr ""
 
+# command
 #: script/events/room.js:357
 msgid "turn her away"
 msgstr ""
@@ -2024,6 +2123,7 @@ msgstr ""
 msgid "a scout stops for the night"
 msgstr ""
 
+# command
 #: script/events/room.js:418
 msgid "buy map"
 msgstr ""
@@ -2032,6 +2132,7 @@ msgstr ""
 msgid "the map uncovers a bit of the world"
 msgstr ""
 
+# command
 #: script/events/room.js:424
 msgid "learn scouting"
 msgstr ""
@@ -2052,6 +2153,7 @@ msgstr ""
 msgid "an old wanderer arrives"
 msgstr ""
 
+# command
 #: script/events/room.js:457
 msgid "agree"
 msgstr ""
@@ -2092,6 +2194,7 @@ msgstr ""
 msgid "a sick man hobbles up"
 msgstr ""
 
+# command
 #: script/events/room.js:530
 msgid "give 1 medicine"
 msgstr ""
@@ -2100,6 +2203,7 @@ msgstr ""
 msgid "the man swallows the medicine eagerly"
 msgstr ""
 
+# command
 #: script/events/room.js:536
 msgid "tell him to leave"
 msgstr ""
@@ -2154,6 +2258,7 @@ msgstr ""
 msgid "a swamp festers in the stagnant air."
 msgstr ""
 
+# command
 #: script/events/setpieces.js:44 script/events/setpieces.js:550
 #: script/events/setpieces.js:607 script/events/setpieces.js:889
 #: script/events/setpieces.js:1314 script/events/setpieces.js:1332
@@ -2169,6 +2274,7 @@ msgstr ""
 msgid "an old wanderer sits inside, in a seeming trance."
 msgstr ""
 
+# command
 #: script/events/setpieces.js:61
 msgid "talk"
 msgstr ""
@@ -2205,6 +2311,7 @@ msgstr ""
 msgid "the earth here is split, as if bearing an ancient wound"
 msgstr ""
 
+# command
 #: script/events/setpieces.js:101 script/events/setpieces.js:2949
 #: script/events/setpieces.js:3463
 msgid "go inside"
@@ -2214,6 +2321,7 @@ msgstr ""
 msgid "a startled beast defends its home"
 msgstr ""
 
+# command
 #: script/events/setpieces.js:135 script/events/setpieces.js:186
 #: script/events/setpieces.js:229 script/events/setpieces.js:248
 #: script/events/setpieces.js:281 script/events/setpieces.js:315
@@ -2247,6 +2355,7 @@ msgstr ""
 msgid "continue"
 msgstr ""
 
+# command
 #: script/events/setpieces.js:140 script/events/setpieces.js:157
 #: script/events/setpieces.js:191 script/events/setpieces.js:234
 #: script/events/setpieces.js:253 script/events/setpieces.js:286
@@ -2264,6 +2373,7 @@ msgstr ""
 msgid "the walls are moist and moss-covered"
 msgstr ""
 
+# command
 #: script/events/setpieces.js:153
 msgid "squeeze"
 msgstr ""
@@ -2342,6 +2452,7 @@ msgstr ""
 msgid "the town lies abandoned, its citizens long dead"
 msgstr ""
 
+# command
 #: script/events/setpieces.js:533 script/events/setpieces.js:1251
 msgid "explore"
 msgstr ""
@@ -2356,6 +2467,7 @@ msgstr ""
 msgid "the double doors creak endlessly in the wind."
 msgstr ""
 
+# command
 #: script/events/setpieces.js:555 script/events/setpieces.js:594
 #: script/events/setpieces.js:612 script/events/setpieces.js:650
 #: script/events/setpieces.js:689 script/events/setpieces.js:723
@@ -2538,6 +2650,7 @@ msgstr ""
 msgid "the air is filled with dust, driven relentlessly by the hard winds."
 msgstr ""
 
+# command
 #: script/events/setpieces.js:1271 script/events/setpieces.js:1287
 #: script/events/setpieces.js:1303 script/events/setpieces.js:1319
 #: script/events/setpieces.js:1336 script/events/setpieces.js:1374
@@ -2602,6 +2715,7 @@ msgstr ""
 msgid "a huge lizard scrambles up out of the darkness of an old metro station."
 msgstr ""
 
+# command
 #: script/events/setpieces.js:1369
 msgid "descend"
 msgstr ""
@@ -2998,6 +3112,7 @@ msgstr ""
 msgid "with a little effort, it might fly again."
 msgstr ""
 
+# command
 #: script/events/setpieces.js:3153
 msgid "salvage"
 msgstr ""
@@ -3018,6 +3133,7 @@ msgstr ""
 msgid "a military perimeter is set up around the mine."
 msgstr ""
 
+# command
 #: script/events/setpieces.js:3171 script/events/setpieces.js:3320
 msgid "attack"
 msgstr ""
@@ -3026,6 +3142,7 @@ msgstr ""
 msgid "a soldier, alerted, opens fire."
 msgstr ""
 
+# command
 #: script/events/setpieces.js:3214 script/events/setpieces.js:3254
 #: script/events/setpieces.js:3357 script/events/setpieces.js:3391
 msgid "run"
@@ -3142,6 +3259,7 @@ msgstr ""
 msgid "there are still supplies inside."
 msgstr ""
 
+# command
 #: script/events/setpieces.js:3557
 msgid "take"
 msgstr ""
@@ -3166,6 +3284,7 @@ msgstr ""
 msgid "a fire has started"
 msgstr ""
 
+# command
 #: script/events/outside.js:87
 msgid "mourn"
 msgstr ""
