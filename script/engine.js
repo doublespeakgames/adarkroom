@@ -605,30 +605,42 @@
 				switch(e.which) {
 					case 38: // Up
 					case 87:
+						if(Engine.activeModule == Outside || Engine.activeModule == Path) {
+							Engine.activeModule.scrollSidebar('up');
+						}
 						Engine.log('up');
 						break;
 					case 40: // Down
 					case 83:
+						if (Engine.activeModule == Outside || Engine.activeModule == Path) {
+							Engine.activeModule.scrollSidebar('down');
+						}
 						Engine.log('down');
 						break;
 					case 37: // Left
 					case 65:
 						if(Engine.activeModule == Ship && Path.tab)
 							Engine.travelTo(Path);
-						else if(Engine.activeModule == Path && Outside.tab)
+						else if(Engine.activeModule == Path && Outside.tab){
+							Engine.activeModule.scrollSidebar('left', true);
 							Engine.travelTo(Outside);
-						else if(Engine.activeModule == Outside && Room.tab)
+						}else if(Engine.activeModule == Outside && Room.tab){
+							Engine.activeModule.scrollSidebar('left', true);
 							Engine.travelTo(Room);
+						}
 						Engine.log('left');
 						break;
 					case 39: // Right
 					case 68:
 						if(Engine.activeModule == Room && Outside.tab)
 							Engine.travelTo(Outside);
-						else if(Engine.activeModule == Outside && Path.tab)
+						else if(Engine.activeModule == Outside && Path.tab){
+							Engine.activeModule.scrollSidebar('right', true);
 							Engine.travelTo(Path);
-						else if(Engine.activeModule == Path && Ship.tab)
+						}else if(Engine.activeModule == Path && Ship.tab){
+							Engine.activeModule.scrollSidebar('right', true);
 							Engine.travelTo(Ship);
+						}
 						Engine.log('right');
 						break;
 				}
@@ -717,6 +729,33 @@
 	}
 
 })();
+
+function inView(dir, elem){
+
+        var scTop = $('#main').offset().top;
+        var scBot = scTop + $('#main').height();
+
+        var elTop = elem.offset().top;
+        var elBot = elTop + elem.height();
+
+        if( dir == 'up' ){
+                // STOP MOVING IF BOTTOM OF ELEMENT IS VISIBLE IN SCREEN
+                return ( elBot < scBot );
+        }else if( dir == 'down' ){
+                return ( elTop > scTop );
+        }else{
+                return ( ( elBot <= scBot ) && ( elTop >= scTop ) );
+        }
+
+}
+
+function scrollByX(elem, x){
+
+        var elTop = parseInt( elem.css('top'), 10 );
+        elem.css( 'top', ( elTop + x ) + "px" );
+
+}
+
 
 //create jQuery Callbacks() to handle object events 
 $.Dispatch = function( id ) {
