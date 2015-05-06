@@ -437,7 +437,7 @@ var Room = {
 			}
 		},
 		'compass': {
-			type: 'upgrade',
+			type: 'special',
 			maximum: 1,
 			cost: function() {
 				return { 
@@ -748,13 +748,27 @@ var Room = {
 	
 	updateStoresView: function() {
 		var stores = $('div#stores');
+	  var resources = $('div#resources');
+		var special = $('div#special');
 		var weapons = $('div#weapons');
-		var needsAppend = false, wNeedsAppend = false, newRow = false;
+		var needsAppend = false, sNeedsAppend = false, wNeedsAppend = false, newRow = false;
 		if(stores.length === 0) {
 			stores = $('<div>').attr({
 				id: 'stores'
 			}).css('opacity', 0);
 			needsAppend = true;
+		}
+		if(resources.length === 0) {
+			resources = $('<div>').attr({
+				id: 'resources'
+			}).css('opacity', 0);
+			rNeedsAppend = true;
+		}
+		if(special.length === 0) {
+			special = $('<div>').attr({
+				id: 'special'
+			}).css('opacity', 0);
+			sNeedsAppend = true;
 		}
 		if(weapons.length === 0) {
 			weapons = $('<div>').attr({
@@ -781,8 +795,11 @@ var Room = {
 			case 'weapon':
 				location = weapons;
 				break;
+			case 'special':
+				location = special;
+				break;
 			default:
-				location = stores;
+				location = resources;
 				break;
 			}
 			
@@ -823,12 +840,27 @@ var Room = {
 					row.insertAfter(location.find('#' + curPrev));
 				}
 				newRow = true;
+				if(k == 'compass'){
+					var tt = $('<div>').addClass('tooltip bottom right');
+					$('<div>').addClass('row_key').text(_('the compass points '+ World.dir)).appendTo(tt);
+					tt.appendTo(row);
+				}
 			} else if(num>= 0){
 				$('div#' + row.attr('id') + ' > div.row_val', location).text(Math.floor(num));
 			}
 		}
+				
+		if(rNeedsAppend && resources.children().length > 0) {
+			resources.prependTo(stores);
+			resources.animate({opacity: 1}, 300, 'linear');
+		}
 		
-		if(needsAppend && stores.children().length > 0) {
+		if(sNeedsAppend && special.children().length > 0) {
+			special.appendTo(stores);
+			special.animate({opacity: 1}, 300, 'linear');
+		}
+		
+		if(needsAppend && stores.find('div.storeRow').length > 0) {
 			stores.appendTo('div#storesContainer');
 			stores.animate({opacity: 1}, 300, 'linear');
 		}
@@ -848,7 +880,7 @@ var Room = {
 	},
 	
 	updateIncomeView: function() {
-		var stores = $('div#stores');
+		var stores = $('div#resources');
 		if(stores.length === 0 || typeof $SM.get('income') == 'undefined') return;
 		$('div.storeRow', stores).each(function(index, el) {
 			el = $(el);
