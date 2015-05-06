@@ -423,6 +423,7 @@ var StateManager = {
 		case 'tool':
 		case 'weapon':
 		case 'upgrade':
+		case 'special':
 			return $SM.get('stores["'+name+'"]', true);
 		case 'building':
 			return $SM.get('game.buildings["'+name+'"]', true);
