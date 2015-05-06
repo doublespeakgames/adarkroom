@@ -472,7 +472,7 @@ msgstr "granata"
 
 #: script/localization.js:25
 msgid "bolas"
-msgstr "laccio da cattura"
+msgstr "laccio da catt."
 
 #: script/localization.js:26
 msgid "bayonet"
@@ -862,7 +862,7 @@ msgstr "non c'è più spazio per altre capanne."
 
 #: script/room.js:65
 msgid "lodge"
-msgstr "rifugio da caccia"
+msgstr "rif. da caccia"
 
 #: script/room.js:68
 msgid "villagers could help hunt, given the means"
