@@ -266,7 +266,7 @@ div.button div.cooldown {
 }
 
 .upManyBtn, .dnManyBtn {
-	right: -11px;
+	right: -15px;
 }
 
 .upBtn.disabled, .dnBtn.disabled, .upManyBtn.disabled, .dnManyBtn.disabled {
@@ -274,11 +274,11 @@ div.button div.cooldown {
 }
 
 .upBtn {
-	top: -2px;
+	top: -3px;
 }
 
 .upManyBtn {
-	top: -2px;
+	top: -3px;
 }
 
 .upBtn:after, .upBtn:before, .upManyBtn:after, .upManyBtn:before {
@@ -320,22 +320,28 @@ div.button div.cooldown {
 	top: 4px;
 }
 
+/* Overall size of buttons controlled by this style 
+   border-width and margin-left should be the same. */
+.upBtn:before, .dnBtn:before, .upManyBtn:before, .dnManyBtn:before {
+	border-width: 6px;
+	left: 50%;
+	margin-left: -6px;
+}
+
+/* Thickness of up/down button lines controlled by this style.
+   border-width and margin-left should be the same.
+   Thickness = :before.border-width minus :after.border-width */
 .upBtn:after, .dnBtn:after {
+	border-width: 4px;
+	left: 50%;
+	margin-left: -4px;
+}
+
+/* See comment on .upBtn:after, .dnBtn:after */
+.upManyBtn:after, .dnManyBtn:after {
 	border-width: 3px;
 	left: 50%;
 	margin-left: -3px;
-}
-
-.upBtn:before, .dnBtn:before, .upManyBtn:before, .dnManyBtn:before {
-	border-width: 5px;
-	left: 50%;
-	margin-left: -5px;
-}
-
-.upManyBtn:after, .dnManyBtn:after {
-	border-width: 2px;
-	left: 50%;
-	margin-left: -2px;
 }
 
 .dnBtn:after, .dnManyBtn:after {

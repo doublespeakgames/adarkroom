@@ -158,6 +158,7 @@ var Outside = {
 		
 		this.updateVillage();
 		Outside.updateWorkersView();
+		Outside.updateVillageIncome();
 		
 		Engine.updateSlider();
 		
@@ -363,26 +364,27 @@ var Outside = {
 	
 	updateVillageRow: function(name, num, village) {
 		var id = 'building_row_' + name.replace(' ', '-');
+		var lname = _(name);
 		var row = $('div#' + id, village);
 		if(row.length === 0 && num > 0) {
 			row = $('<div>').attr('id', id).addClass('storeRow');
-			$('<div>').addClass('row_key').text(_(name)).appendTo(row);
+			$('<div>').addClass('row_key').text(lname).appendTo(row);
 			$('<div>').addClass('row_val').text(num).appendTo(row);
 			$('<div>').addClass('clear').appendTo(row);
 			var curPrev = null;
 			village.children().each(function(i) {
 				var child = $(this);
 				if(child.attr('id') != 'population') {
-					var cName = child.attr('id').substring(13).replace('-', ' ');
-					if(cName < name && (curPrev == null || cName > curPrev)) {
-						curPrev = cName;
+					var cName = child.children('.row_key').text();
+					if(cName < lname) {
+						curPrev = child.attr('id');
 					}
 				}
 			});
 			if(curPrev == null) {
 				row.prependTo(village);
 			} else {
-				row.insertAfter('#building_row_' + curPrev.replace(' ', '-'));
+				row.insertAfter('#' + curPrev);
 			}
 		} else if(num > 0) {
 			$('div#' + row.attr('id') + ' > div.row_val', village).text(num);
@@ -585,13 +587,13 @@ var Outside = {
 				}
 			}
 		}
-        /// TRANSLATORS : Mind the whitespace at the end.
+		/// TRANSLATORS : Mind the whitespace at the end.
 		var s = _('the traps contain ');
 		for(var i = 0, len = msg.length; i < len; i++) {
 			if(len > 1 && i > 0 && i < len - 1) {
 				s += ", ";
 			} else if(len > 1 && i == len - 1) {
-                /// TRANSLATORS : Mind the whitespaces at the beginning and end.
+				/// TRANSLATORS : Mind the whitespaces at the beginning and end.
 				s += _(" and ");
 			}
 			s += msg[i];
