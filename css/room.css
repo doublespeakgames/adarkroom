@@ -60,6 +60,12 @@ div#stores:before {
 	top: -13px;	
 }
 
+div + div#special {
+	border-top:1px solid #ccc;
+	margin-top:10px;
+	padding-top:10px;
+}
+
 div#weapons {
 	margin-top: 15px;
 	position: relative;
