@@ -142,6 +142,10 @@ var World = {
 			});
 		}
 		
+		World.dir = World.mapSearch('W',$SM.get('game.world.map'))[0].dir;
+		// compass tooltip text
+		$('#row_compass > .tooltip > .row_key').text(_('the compass points '+ World.dir));
+		
 		// Create the World panel
 		this.panel = $('<div>').attr('id', "worldPanel").addClass('location').appendTo('#outerSlider');
 		
@@ -651,22 +655,49 @@ var World = {
 			var landmark = World.LANDMARKS[k];
 			for(var i = 0; i < landmark.num; i++) {
 				var pos = World.placeLandmark(landmark.minRadius, landmark.maxRadius, k, map);
-				if(k == World.TILE.SHIP) {
-					var dx = pos[0] - World.RADIUS, dy = pos[1] - World.RADIUS;
-					var horz = dx < 0 ? 'west' : 'east';
-					var vert = dy < 0 ? 'north' : 'south';
-					if(Math.abs(dx) / 2 > Math.abs(dy)) {
-						World.dir = horz;
-					} else if(Math.abs(dy) / 2 > Math.abs(dx)){
-						World.dir = vert;
-					} else {
-						World.dir = vert + horz;
-					}
-				}
 			}
 		}
 		
 		return map;
+	},
+	
+	mapSearch: function(target,map){
+		var max = World.LANDMARKS[target].num;
+		if(!max){
+			// this restrict the research to numerable landmarks
+			return null;
+		}
+		var index = 0;
+		var targets = {};
+		search: // label for coordinate research
+		for(var i = 0; i <= World.RADIUS * 2; i++){
+			for(var j = 0; j <= World.RADIUS * 2; j++){
+				if(map[i][j] === target){
+					// search result is stored as an object;
+					// items are listed as they appear in the map, tl-br
+					// each item has relative coordinates and a compass-type direction
+					targets[index] = {
+						x : j - World.RADIUS, 
+						y : i - World.RADIUS,
+					}
+					var horz = targets[index].x < 0 ? 'west' : 'east';
+					var vert = targets[index].y < 0 ? 'north' : 'south';
+					if(Math.abs(targets[index].x) / 2 > Math.abs(targets[index].y)) {
+						targets[index].dir = horz;
+					} else if(Math.abs(targets[index].y) / 2 > Math.abs(targets[index].x)){
+						targets[index].dir = vert;
+					} else {
+						targets[index].dir = vert + horz;
+					}
+					index++;
+					if(index === max){
+						// optimisation: stop the research if maximum number of items has been reached
+						break search;
+					}
+				}
+			}
+		}
+		return targets || null;
 	},
 	
 	placeLandmark: function(minRadius, maxRadius, landmark, map) {
