@@ -1718,19 +1718,19 @@ msgstr "道别"
 
 #: ../../script/events/room.js:54
 msgid "Fire"
-msgstr ""
+msgstr "着火了"
 
 #: ../../script/events/room.js:61
 msgid "A fire rampages through one of your huts, destroying it."
-msgstr ""
+msgstr "你的小屋要起火了,扑灭它"
 
 #: ../../script/events/room.js:62
 msgid "Saddly, all residents in the hut perished in the fire."
-msgstr ""
+msgstr "不幸的是,屋内的所有人都死于火灾中"
 
 #: ../../script/events/room.js:64
 msgid "a fire has started"
-msgstr ""
+msgstr "火灾已经开始"
 
 #: ../../script/events/room.js:74
 #, fuzzy
@@ -1739,7 +1739,7 @@ msgstr "护甲"
 
 #: ../../script/events/room.js:75
 msgid "some villagers have died"
-msgstr ""
+msgstr "有一些村民死掉了"
 
 #: ../../script/events/room.js:83 ../../script/events/room.js:134
 msgid "Noises"
