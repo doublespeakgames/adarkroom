@@ -81,6 +81,9 @@ var Ship = {
 		
 		//subscribe to stateUpdates
 		$.Dispatch('stateUpdate').subscribe(Ship.handleStateUpdates);
+		
+		// remove compass tooltip
+		$('#row_compass > .tooltip').remove();
 	},
 	
 	options: {}, // Nothing for now
