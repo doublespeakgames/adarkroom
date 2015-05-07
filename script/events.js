@@ -36,7 +36,7 @@ var Events = {
 	options: {}, // Nothing for now
     
 	activeScene: null,
-    
+
 	loadScene: function(name) {
 		Engine.log('loading scene: ' + name);
 		Events.activeScene = name;
@@ -503,7 +503,42 @@ var Events = {
 		$('<div>').addClass('clear').appendTo(lootButtons);
 		if(lootButtons.children().length > 1) {
 			lootButtons.appendTo(desc);
+			var takeAll = new Button.Button({
+				id: 'loot_take_all',
+				text: _('Take All'),
+				click: Events.takeAllLoot
+			}).addClass('take-all-button').appendTo(lootButtons);
 		}
+	},
+
+	takeAllLoot: function(){
+
+		var stoppedEarly = false;
+		$('#lootButtons')
+			.children('.button')
+			.each(function(){
+				if( $(this).hasClass('take-all-button') ) {
+					return;
+				}
+
+				var weight = $(this).data('numLeft') * Path.getWeight($(this).attr('id').substring(5).replace('-', ' '));
+				while( $(this).data('numLeft') > 0 && weight < Path.getFreeSpace() ){
+					$(this).click();
+				}
+
+				if(weight > Path.getFreeSpace()){
+					stoppedEarly = true;	
+					return;
+				}
+			});
+
+		if( !stoppedEarly ){
+
+			$('#leave').click();
+			$('#leaveBtn').click();
+
+		}
+
 	},
 	
 	dropStuff: function(e) {
