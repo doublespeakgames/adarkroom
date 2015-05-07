@@ -380,7 +380,7 @@ msgstr "stordito"
 #: script/events/setpieces.js:3520 script/events/setpieces.js:3545
 #: script/events/setpieces.js:3573
 msgid "leave"
-msgstr "abbandona"
+msgstr "allontanati"
 
 #: script/events.js:780
 msgid "*** EVENT ***"
