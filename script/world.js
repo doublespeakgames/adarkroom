@@ -142,10 +142,6 @@ var World = {
 			});
 		}
 		
-		World.dir = World.mapSearch('W',$SM.get('game.world.map'))[0].dir;
-		// compass tooltip text
-		$('#row_compass > .tooltip > .row_key').text(_('the compass points '+ World.dir));
-		
 		// Create the World panel
 		this.panel = $('<div>').attr('id', "worldPanel").addClass('location').appendTo('#outerSlider');
 		
@@ -162,6 +158,13 @@ var World = {
 		
 		//subscribe to stateUpdates
 		$.Dispatch('stateUpdate').subscribe(World.handleStateUpdates);
+		
+		// the ship has not been found yet. Map it and show compass tooltip
+		if(!$SM.get('features.location.ship')){
+			World.dir = World.mapSearch('W',$SM.get('game.world.map'))[0].dir;
+			// compass tooltip text
+			$('#row_compass > .tooltip > .row_key').text(_('the compass points '+ World.dir));
+		}
 	},
 	
 	clearDungeon: function() {
