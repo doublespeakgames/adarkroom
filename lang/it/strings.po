@@ -3283,6 +3283,10 @@ msgstr "tutto il lavoro della generazione passata è ancora qui."
 msgid "ripe for the picking."
 msgstr "pronto per essere raccolto."
 
+#: script/events/outside.js:67
+msgid "Fire"
+msgstr "Incendio"
+
 #: script/events/outside.js:74
 msgid "a fire rampages through one of the huts, destroying it."
 msgstr "un incendio divampa in una delle capanne, distruggendola."
