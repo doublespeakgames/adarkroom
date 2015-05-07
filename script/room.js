@@ -842,7 +842,7 @@ var Room = {
 				newRow = true;
 				if(k == 'compass'){
 					var tt = $('<div>').addClass('tooltip bottom right');
-					$('<div>').addClass('row_key').text(_('the compass points '+ World.dir)).appendTo(tt);
+					$('<div>').addClass('row_key').appendTo(tt);
 					tt.appendTo(row);
 				}
 			} else if(num>= 0){
