@@ -43,7 +43,8 @@ var Path = {
 			text: _("embark"),
 			click: Path.embark,
 			width: '80px',
-			cooldown: World.DEATH_COOLDOWN
+			cooldown: World.DEATH_COOLDOWN,
+			state: true
 		}).appendTo(this.panel);
 		
 		Path.outfit = $SM.get('outfit');

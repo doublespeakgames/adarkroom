@@ -496,6 +496,7 @@ var Room = {
 			text: _('light fire'),
 			click: Room.lightFire,
 			cooldown: Room._STOKE_COOLDOWN,
+			state: true,
 			width: '80px',
 			cost: {'wood': 5}
 		}).appendTo('div#roomPanel');
@@ -506,6 +507,7 @@ var Room = {
 			text: _("stoke fire"),
 			click: Room.stokeFire,
 			cooldown: Room._STOKE_COOLDOWN,
+			state: true,
 			width: '80px',
 			cost: {'wood': 1}
 		}).appendTo('div#roomPanel');

@@ -20,9 +20,15 @@ var Button = {
 			})
 			.data("handler",  typeof options.click == 'function' ? options.click : function() { Engine.log("click"); })
 			.data("remaining", 0)
-			.data("cooldown", typeof options.cooldown == 'number' ? options.cooldown : 0);
+			.data("cooldown", typeof options.cooldown == 'number' ? options.cooldown : 0)
+			.data("state", options.state || false);
 		
 		el.append($("<div>").addClass('cooldown'));
+		
+		if(($SM.get('cooldown.'+ options.id) > 0) && (!el.hasClass('disabled'))){
+			// waiting for expiry of residual cooldown detected in state
+			Button.cooldown(el,$SM.get('cooldown.'+ options.id));
+		}
 		
 		if(options.cost) {
 			var ttPos = options.ttPos ? options.ttPos : "bottom right";
@@ -61,12 +67,24 @@ var Button = {
 		return false;
 	},
 	
-	cooldown: function(btn) {
-		var cd = btn.data("cooldown");
+	cooldown: function(btn,start) {
+		var cd = btn.data("cooldown") * 10;
 		if(cd > 0) {
-			$('div.cooldown', btn).stop(true, true).width("100%").animate({width: '0%'}, cd * 1000, 'linear', function() {
+			var id = btn.attr('id');
+			// param "start" takes value from cooldown time if not specified
+			var start = ((typeof start == 'number') && start <= cd) ? start : cd;
+			if(btn.data("state")){
+				$SM.set('cooldown.'+ id,start);
+				// residual value is measured as tenth of seconds and stored accordingly
+				// compromise between precision, cooldown string length and program overheat
+				var residual = window.setInterval(function(){
+					$SM.set('cooldown.'+ id,($SM.get('cooldown.'+ id) - 1));
+				},100);
+			}
+			$('div.cooldown', btn).stop(true, true).width(Math.floor((start / cd) * 100) +"%").animate({width: '0%'}, start * 100, 'linear', function() {
 				var b = $(this).closest('.button');
 				b.data('onCooldown', false);
+				window.clearInterval(residual);
 				if(!b.data('disabled')) {
 					b.removeClass('disabled');
 				}
