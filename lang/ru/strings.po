@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adarkroom\n"
 "POT-Creation-Date: 2015-02-07 14:15-0500\n"
-"PO-Revision-Date: 2015-05-08 05:32+0500\n"
+"PO-Revision-Date: 2015-05-09 01:38+0500\n"
 "Last-Translator: Dmitry Svechnikov <d.svechnikov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -743,7 +743,8 @@ msgstr "дрова скоро закончатся"
 
 #: ../../script/room.js:724
 msgid "a ragged stranger stumbles through the door and collapses in the corner"
-msgstr "оборванный незнакомец спотыкается о порог и падает в углу"
+msgstr ""
+"оборванный незнакомец неловко входит в дверь и падает в углу от изнеможения."
 
 #: ../../script/room.js:732
 msgid ""
@@ -1092,7 +1093,7 @@ msgstr "экспортируйте или импортируйте данные 
 #: ../../script/dropbox.js:90
 #, fuzzy
 msgid "your are connected to dropbox with account / email "
-msgstr "вы подключены к Dropbox под именем"
+msgstr "вы подключены к dropbox под именем "
 
 #: ../../script/dropbox.js:93
 msgid "save"
@@ -1157,7 +1158,7 @@ msgstr "безоружный мастер"
 
 #: ../../script/engine.js:28
 msgid "punch twice as fast, and with even more force"
-msgstr "удары вдвое быстрее и намного сильнее"
+msgstr "бить вдвое быстрее и намного сильнее"
 
 #: ../../script/engine.js:29
 msgid "learned to strike faster without weapons"
@@ -1396,7 +1397,7 @@ msgstr "Сломанная ловушка"
 
 #: ../../script/events/outside.js:13
 msgid "some of the traps have been torn apart."
-msgstr "некоторые ловушки оказались разгромлены."
+msgstr "некоторые ловушки оказались разодраны."
 
 #: ../../script/events/outside.js:14
 msgid "large prints lead away, into the forest."
@@ -1578,7 +1579,7 @@ msgstr "одинокая лягушка сидит в грязи и молчит
 #: ../../script/events/setpieces.js:41
 #, fuzzy
 msgid "a swamp festers in the stagnant air."
-msgstr "над болотом стоит гнилостный воздух"
+msgstr "над болотом стоит гнилостный воздух."
 
 #: ../../script/events/setpieces.js:44 ../../script/events/setpieces.js:3535
 msgid "enter"
@@ -1756,11 +1757,11 @@ msgstr "Пожар"
 
 #: ../../script/events/room.js:61
 msgid "A fire rampages through one of your huts, destroying it."
-msgstr "Пожар сжёг одну из хижин дотла"
+msgstr "Огонь охватывает одну из ваших хижин, сжигая её дотла."
 
 #: ../../script/events/room.js:62
 msgid "Saddly, all residents in the hut perished in the fire."
-msgstr "К сожалению, все жители хижины погибли"
+msgstr "К сожалению, все жители хижины погибли."
 
 #: ../../script/events/room.js:64
 msgid "a fire has started"
@@ -1917,7 +1918,7 @@ msgstr "странник уходит с дровами в тележке"
 #: ../../script/events/room.js:329 ../../script/events/room.js:348
 msgid "the mysterious wanderer returns, cart piled high with wood."
 msgstr ""
-"таинственный странник возвращается, тележка до верху наполнена древесиной."
+"таинственный странник возвращается, тележка доверху наполнена древесиной."
 
 #: ../../script/events/room.js:370
 msgid ""
@@ -1941,7 +1942,7 @@ msgstr "странница уходит с мехом в тележке"
 
 #: ../../script/events/room.js:400 ../../script/events/room.js:419
 msgid "the mysterious wanderer returns, cart piled high with furs."
-msgstr "таинственная странница возвращается, тележка до верху наполнена мехом."
+msgstr "таинственная странница возвращается, тележка доверху наполнена мехом."
 
 #: ../../script/events/room.js:434
 msgid "The Scout"
