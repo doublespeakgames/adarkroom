@@ -1751,27 +1751,27 @@ msgstr "старый компас помят и весь в пыли, но вы�
 msgid "say goodbye"
 msgstr "попрощаться"
 
-#: ../../script/events/room.js:54
+#: ../../script/events/outside.js:67
 msgid "Fire"
 msgstr "Пожар"
 
-#: ../../script/events/room.js:61
+#: ../../script/events/outside.js:74
 msgid "A fire rampages through one of your huts, destroying it."
 msgstr "Огонь охватывает одну из ваших хижин, сжигая её дотла."
 
-#: ../../script/events/room.js:62
+#: ../../script/events/outside.js:75
 msgid "Saddly, all residents in the hut perished in the fire."
 msgstr "К сожалению, все жители хижины погибли."
 
-#: ../../script/events/room.js:64
+#: ../../script/events/outside.js:77
 msgid "a fire has started"
 msgstr "начался пожар"
 
-#: ../../script/events/room.js:74
+#: ../../script/events/outside.js:87
 msgid "mourn"
 msgstr "оплакивать"
 
-#: ../../script/events/room.js:75
+#: ../../script/events/outside.js:88
 msgid "some villagers have died"
 msgstr "некоторые жители погибли"
 
