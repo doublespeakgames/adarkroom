@@ -380,7 +380,7 @@ msgstr "stordito"
 #: script/events/setpieces.js:3520 script/events/setpieces.js:3545
 #: script/events/setpieces.js:3573
 msgid "leave"
-msgstr "abbandona"
+msgstr "allontanati"
 
 #: script/events.js:780
 msgid "*** EVENT ***"
@@ -3282,6 +3282,10 @@ msgstr "tutto il lavoro della generazione passata è ancora qui."
 #: script/events/setpieces.js:3565
 msgid "ripe for the picking."
 msgstr "pronto per essere raccolto."
+
+#: script/events/outside.js:67
+msgid "Fire"
+msgstr "Incendio"
 
 #: script/events/outside.js:74
 msgid "a fire rampages through one of the huts, destroying it."
