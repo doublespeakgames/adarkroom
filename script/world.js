@@ -41,6 +41,8 @@ var World = {
 	WEST:  [-1,  0],
 	EAST:  [ 1,  0],
 	
+	dir: null;
+	
 	Weapons: {
 		'fists': {
 			verb: _('punch'),
