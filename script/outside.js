@@ -170,6 +170,8 @@ var Outside = {
 			cooldown: Outside._GATHER_DELAY,
 			width: '80px'
 		}).appendTo('div#outsidePanel');
+	
+		Outside.updateTrapButton();
 	},
 	
 	getMaxPopulation: function() {
