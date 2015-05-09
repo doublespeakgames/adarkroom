@@ -31,16 +31,27 @@ var Events = {
 
 		//subscribe to stateUpdates
 		$.Dispatch('stateUpdate').subscribe(Events.handleStateUpdates);
+
+		//check for stored delayed events
+		Events.initDelay();
 	},
 
 	options: {}, // Nothing for now
 
+	delayState: 'wait',
 	activeScene: null,
 
 	loadScene: function(name) {
 		Engine.log('loading scene: ' + name);
 		Events.activeScene = name;
 		var scene = Events.activeEvent().scenes[name];
+
+		// Scene reward
+		if(scene.reward) {
+			$SM.addM('stores', scene.reward);
+		}
+
+
 
 		// onLoad
 		if(scene.onLoad) {
@@ -50,11 +61,6 @@ var Events = {
 		// Notify the scene change
 		if(scene.notification) {
 			Notifications.notify(null, scene.notification);
-		}
-
-		// Scene reward
-		if(scene.reward) {
-			$SM.addM('stores', scene.reward);
 		}
 
 		$('#description', Events.eventPanel()).empty();
@@ -884,5 +890,49 @@ var Events = {
 		if((e.category == 'stores' || e.category == 'income') && Events.activeEvent() != null){
 			Events.updateButtons();
 		}
+	},
+
+	initDelay: function(){
+		if($SM.get(Events.delayState)){
+			Events.recallDelay(Events.delayState, Events);
+		}
+	},
+
+	recallDelay: function(stateName, target){
+		var state = $SM.get(stateName);
+		for(var i in state){
+			if(typeof(state[i]) == 'object'){
+				Events.recallDelay(stateName +'["'+ i +'"]', target[i]);
+			} else {
+				if(typeof target[i] == 'function'){
+					target[i]();
+				} else {
+					$SM.remove(stateName)
+				}
+			}
+		}
+		if($.isEmptyObject(state)){
+			$SM.remove(stateName);
+		}
+	},
+
+	saveDelay: function(action, stateName, delay){
+		var state = Events.delayState + '.' + stateName;
+		if(delay){
+			$SM.set(state, delay);
+		} else {
+			var delay = $SM.get(state, true)
+		}
+		var time = Engine.setInterval(function(){
+			// update state every half second
+			$SM.set(state, ($SM.get(state) - 0.5), true);
+		}, 500);
+		Engine.setTimeout(function(){
+			// outcome realizes. erase countdown
+			window.clearInterval(time);
+			$SM.remove(state);
+			$SM.removeBranch(Events.delayState);
+			action();
+		}, delay * 1000);
 	}
 };
