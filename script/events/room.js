@@ -293,11 +293,16 @@ Events.Room = [
 				text: [
 					_('the wanderer leaves, cart loaded with wood')
 				],
-				onLoad: function() {
-					if(Math.random() < 0.5) {
+				onLoad: function(delayed) {
+					var delayed = delayed || false;
+					if((!delayed && (Math.random() < 0.5)) || (delayed && ($SM.get('wait.wood') == 'l'))) {
+						if(!delayed) {
+							$SM.set('wait.wood', 'l');
+						}
 						Engine.setTimeout(function() {
 							$SM.add('stores.wood', 300);
 							Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with wood.'));
+							$SM.remove('wait.wood');
 						}, 60 * 1000);
 					}
 				},
@@ -312,11 +317,16 @@ Events.Room = [
 				text: [
 					_('the wanderer leaves, cart loaded with wood')
 				],
-				onLoad: function() {
-					if(Math.random() < 0.3) {
+				onLoad: function(delayed) {
+					var delayed = delayed || false;
+					if((!delayed && (Math.random() < 0.3)) || (delayed && ($SM.get('wait.wood') == 'h'))) {
+						if(!delayed) {
+							$SM.set('wait.wood', 'h');
+						}
 						Engine.setTimeout(function() {
 							$SM.add('stores.wood', 1500);
 							Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with wood.'));
+							$SM.remove('wait.wood');
 						}, 60 * 1000);
 					}
 				},
@@ -364,11 +374,16 @@ Events.Room = [
 				text: [
 					_('the wanderer leaves, cart loaded with furs')
 				],
-				onLoad: function() {
-					if(Math.random() < 0.5) {
+				onLoad: function(delayed) {
+					var delayed = delayed || false;
+					if((!delayed && (Math.random() < 0.5)) || (delayed && ($SM.get('wait.fur') == 'l'))) {
+						if(!delayed) {
+							$SM.set('wait.fur', 'l');
+						}
 						Engine.setTimeout(function() {
 							$SM.add('stores.fur', 300);
 							Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with furs.'));
+							$SM.remove('wait.fur');
 						}, 60 * 1000);
 					}
 				},
@@ -383,11 +398,16 @@ Events.Room = [
 				text: [
 					_('the wanderer leaves, cart loaded with furs')
 				],
-				onLoad: function() {
-					if(Math.random() < 0.3) {
+				onLoad: function(delayed) {
+					var delayed = delayed || false;
+					if((!delayed && (Math.random() < 0.3)) || (delayed && ($SM.get('wait.fur') == 'h'))) {
+						if(!delayed) {
+							$SM.set('wait.fur', 'h');
+						}
 						Engine.setTimeout(function() {
 							$SM.add('stores.fur', 1500);
 							Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with furs.'));
+							$SM.remove('wait.fur');
 						}, 60 * 1000);
 					}
 				},
