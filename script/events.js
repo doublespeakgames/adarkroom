@@ -31,6 +31,21 @@ var Events = {
 		
 		//subscribe to stateUpdates
 		$.Dispatch('stateUpdate').subscribe(Events.handleStateUpdates);
+		
+		//check for stored delayed events
+		Events.delayed = {
+			'Room' : {
+				4 : ['100wood','500wood'],
+				5 : ['100fur','500fur']
+			}
+		}
+		for(var i in Events.delayed){
+			for(var j in Events.delayed[i]){
+				for(var k = 0; k < Events.delayed[i][j].length; k++){
+					Events[i][j].scenes[Events.delayed[i][j][k]].onLoad(true);
+				}
+			}
+		}
 	},
 	
 	options: {}, // Nothing for now
@@ -42,6 +57,11 @@ var Events = {
 		Events.activeScene = name;
 		var scene = Events.activeEvent().scenes[name];
 		
+		// Notify the scene change
+		if(scene.notification) {
+			Notifications.notify(null, scene.notification);
+		}
+		
 		// Scene reward
 		if(scene.reward) {
 			$SM.addM('stores', scene.reward);
@@ -50,11 +70,6 @@ var Events = {
 		// onLoad
 		if(scene.onLoad) {
 			scene.onLoad();
-		}
-		
-		// Notify the scene change
-		if(scene.notification) {
-			Notifications.notify(null, scene.notification);
 		}
 		
 		$('#description', Events.eventPanel()).empty();
