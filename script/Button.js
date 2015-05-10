@@ -7,12 +7,12 @@ var Button = {
 		if(typeof options.click == 'function') {
 			this.data_handler = options.click;
 		}
-		
+
 		var el = $('<div>')
 			.attr('id', typeof(options.id) != 'undefined' ? options.id : "BTN_" + Engine.getGuid())
 			.addClass('button')
 			.text(typeof(options.text) != 'undefined' ? options.text : "button")
-			.click(function() { 
+			.click(function() {
 				if(!$(this).hasClass('disabled')) {
 					Button.cooldown($(this));
 					$(this).data("handler")($(this));
@@ -21,9 +21,9 @@ var Button = {
 			.data("handler",  typeof options.click == 'function' ? options.click : function() { Engine.log("click"); })
 			.data("remaining", 0)
 			.data("cooldown", typeof options.cooldown == 'number' ? options.cooldown : 0);
-		
+
 		el.append($("<div>").addClass('cooldown'));
-		
+
 		if(options.cost) {
 			var ttPos = options.ttPos ? options.ttPos : "bottom right";
 			var costTooltip = $('<div>').addClass('tooltip ' + ttPos);
@@ -35,14 +35,14 @@ var Button = {
 				costTooltip.appendTo(el);
 			}
 		}
-		
+
 		if(options.width) {
 			el.css('width', options.width);
 		}
-		
+
 		return el;
 	},
-	
+
 	setDisabled: function(btn, disabled) {
 		if(btn) {
 			if(!disabled && !btn.data('onCooldown')) {
@@ -53,18 +53,23 @@ var Button = {
 			btn.data('disabled', disabled);
 		}
 	},
-	
+
 	isDisabled: function(btn) {
 		if(btn) {
 			return btn.data('disabled') === true;
 		}
 		return false;
 	},
-	
+
 	cooldown: function(btn) {
 		var cd = btn.data("cooldown");
 		if(cd > 0) {
-			$('div.cooldown', btn).stop(true, true).width("100%").animate({width: '0%'}, cd * 1000, 'linear', function() {
+			milliseconds = cd * 1000;
+			if (Engine.options.doubleTime){
+				milliseconds /= 2;
+			}
+
+			$('div.cooldown', btn).stop(true, true).width("100%").animate({width: '0%'}, milliseconds, 'linear', function() {
 				var b = $(this).closest('.button');
 				b.data('onCooldown', false);
 				if(!b.data('disabled')) {
@@ -75,7 +80,7 @@ var Button = {
 			btn.data('onCooldown', true);
 		}
 	},
-	
+
 	clearCooldown: function(btn) {
 		$('div.cooldown', btn).stop(true, true);
 		btn.data('onCooldown', false);
