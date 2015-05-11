@@ -77,10 +77,7 @@ Events.Outside = [
 				notification: _('a fire has started'),
 				blink: true,
 				onLoad: function() {
-					var population = $SM.get('game.population', true);
-					var huts = $SM.get('game.buildings["hut"]', true);
-					$SM.set('game.buildings["hut"]', (huts - 1));
-					Outside.killVillagers(4);
+					Outside.destroyHuts(1);
 				},
 				buttons: {
 					'mourn': {
