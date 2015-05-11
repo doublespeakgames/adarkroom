@@ -28,16 +28,17 @@ var StateManager = {
 
 		//create categories
 		var cats = [
-			'features',     //big features like buildings, location availability, unlocks, etc
-			'stores',       //little stuff, items, weapons, etc
-			'character',    //this is for player's character stats such as perks
+			'features',     // big features like buildings, location availability, unlocks, etc
+			'stores',       // little stuff, items, weapons, etc
+			'character',    // this is for player's character stats such as perks
 			'income',
 			'timers',
-			'game',         //mostly location related: fire temp, workers, population, world map, etc
-			'playStats',    //anything play related: play time, loads, etc
+			'game',         // mostly location related: fire temp, workers, population, world map, etc
+			'playStats',    // anything play related: play time, loads, etc
 			'previous',     // prestige, score, trophies (in future), achievements (again, not yet), etc
-			'outfit',           // used to temporarily store the items to be taken on the path
-			'config'
+			'outfit',       // used to temporarily store the items to be taken on the path
+			'config',
+			'cooldown'      // residual values for cooldown buttons
 		];
 
 		for(var which in cats) {
