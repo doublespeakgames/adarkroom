@@ -20,8 +20,8 @@ var Button = {
 			})
 			.data("handler",  typeof options.click == 'function' ? options.click : function() { Engine.log("click"); })
 			.data("remaining", 0)
-			.data("cooldown", typeof options.cooldown == 'number' ? options.cooldown : 0);
-			.data("state", options.state || false;);
+			.data("cooldown", typeof options.cooldown == 'number' ? options.cooldown : 0)
+			.data("state", options.state || false);
 
 		el.append($("<div>").addClass('cooldown'));
 
