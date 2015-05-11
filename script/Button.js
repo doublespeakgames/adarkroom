@@ -80,7 +80,7 @@ var Button = {
 				// residual value is measured as tenth of seconds and stored accordingly
 				// compromise between precision, cooldown string length and program overheat
 				var residual = Engine.setInterval(function(){
-					$SM.set('cooldown.'+ id,($SM.get('cooldown.'+ id) - 1));
+					$SM.set(id,($SM.get(id) - 1));
 				},100);
 			}
 			var time = start;
