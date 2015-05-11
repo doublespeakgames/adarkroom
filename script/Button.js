@@ -8,8 +8,6 @@ var Button = {
 			this.data_handler = options.click;
 		}
 
-		var state = options.state || false;
-
 		var el = $('<div>')
 			.attr('id', typeof(options.id) != 'undefined' ? options.id : "BTN_" + Engine.getGuid())
 			.addClass('button')
@@ -23,13 +21,13 @@ var Button = {
 			.data("handler",  typeof options.click == 'function' ? options.click : function() { Engine.log("click"); })
 			.data("remaining", 0)
 			.data("cooldown", typeof options.cooldown == 'number' ? options.cooldown : 0);
-			.data("state", state);
+			.data("state", options.state || false;);
 
 		el.append($("<div>").addClass('cooldown'));
 
-		if(!el.hasClass('disabled')){
+		if((option.state) && (!el.hasClass('disabled'))){
 			// waiting for expiry of residual cooldown detected in state
-			Button.cooldown(el,state);
+			Button.cooldown(el, true);
 		}
 
 		if(options.cost) {
@@ -71,12 +69,16 @@ var Button = {
 
 	cooldown: function(btn,state) {
 		var cd = btn.data("cooldown") * 10;
-		if(cd > 0) {
+		var id = 'cooldown.'+ btn.attr('id');
+		if((cd > 0) && ((state && $SM.get(id)) || (!state))) {
 			// param "start" takes value from cooldown time if not specified
-			var start = cd;
-			if(state){
-				var id = 'cooldown.'+ btn.attr('id');
-				($SM.get(id)) ? start = $SM.get(id) : $SM.set(id,start);
+			if($SM.get(id)){
+				var start = $SM.get(id)
+			} else {
+				var start = cd;
+				$SM.set(id,start);
+			}
+			if(btn.data("state")){
 				// residual value is measured as tenth of seconds and stored accordingly
 				// compromise between precision, cooldown string length and program overheat
 				var residual = Engine.setInterval(function(){
