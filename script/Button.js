@@ -82,7 +82,7 @@ var Button = {
 				// residual value is measured as half seconds and stored accordingly
 				// saves program performance
 				var residual = Engine.setInterval(function(){
-					$SM.set(id,($SM.get(id) - 1));
+					$SM.set(id, $SM.get(id, true) - 1, true);
 				},500);
 			}
 			var time = start;
@@ -92,7 +92,10 @@ var Button = {
 			$('div.cooldown', btn).stop(true, true).width(Math.floor((start / cd) * 100) +"%").animate({width: '0%'}, time * 500, 'linear', function() {
 				var b = $(this).closest('.button');
 				b.data('onCooldown', false);
-				window.clearInterval(residual);
+				if(btn.data("state")){
+					$SM.remove(id, true);
+					window.clearInterval(residual);
+				}
 				if(!b.data('disabled')) {
 					b.removeClass('disabled');
 				}
