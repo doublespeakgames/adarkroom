@@ -168,8 +168,11 @@ var Outside = {
 			text: _("gather wood"),
 			click: Outside.gatherWood,
 			cooldown: Outside._GATHER_DELAY,
+			state: true,
 			width: '80px'
 		}).appendTo('div#outsidePanel');
+
+		Outside.updateTrapButton();
 	},
 	
 	getMaxPopulation: function() {
@@ -513,6 +516,7 @@ var Outside = {
 					text: _("check traps"),
 					click: Outside.checkTraps,
 					cooldown: Outside._TRAPS_DELAY,
+					state: true,
 					width: '80px'
 				}).appendTo('div#outsidePanel');
 			} else {
