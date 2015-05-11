@@ -264,6 +264,17 @@ Events.Room = [
 		isAvailable: function() {
 			return Engine.activeModule == Room && $SM.get('stores.wood');
 		},
+		sceneReward: function(name, reward, delay){
+			return Events.delay(function(){
+				$SM.add('stores.wood', reward);
+				Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with wood.'));
+			}, name, delay);
+		},
+		sceneAction: function(p, name, reward){
+			if(Math.random() < p) {
+				return this.sceneReward(name, reward, 60);
+			}
+		},
 		scenes: {
 			start: {
 				text: [
@@ -293,49 +304,31 @@ Events.Room = [
 				text: [
 					_('the wanderer leaves, cart loaded with wood')
 				],
-				onLoad: function(delayed) {
-					var delayed = delayed || false;
-					if((!delayed && (Math.random() < 0.5)) || (delayed && ($SM.get('wait.wood') == 'l'))) {
-						if(!delayed) {
-							$SM.set('wait.wood', 'l');
-						}
-						Engine.setTimeout(function() {
-							$SM.add('stores.wood', 300);
-							Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with wood.'));
-							$SM.remove('wait.wood');
-						}, 60 * 1000);
-					}
-				},
 				buttons: {
 					'leave': {
 						text: _('say goodbye'),
 						nextScene: 'end'
 					}
-				}
+				},
+				onLoad: function() {
+					return Events.Room[4].sceneAction(0.5, '100wood', 300);
+				},
+				get delayed(){return Events.Room[4].sceneReward('100wood', 300);}
 			},
 			'500wood': {
 				text: [
 					_('the wanderer leaves, cart loaded with wood')
 				],
-				onLoad: function(delayed) {
-					var delayed = delayed || false;
-					if((!delayed && (Math.random() < 0.3)) || (delayed && ($SM.get('wait.wood') == 'h'))) {
-						if(!delayed) {
-							$SM.set('wait.wood', 'h');
-						}
-						Engine.setTimeout(function() {
-							$SM.add('stores.wood', 1500);
-							Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with wood.'));
-							$SM.remove('wait.wood');
-						}, 60 * 1000);
-					}
-				},
 				buttons: {
 					'leave': {
 						text: _('say goodbye'),
 						nextScene: 'end'
 					}
-				}
+				},
+				onLoad: function() {
+					return Events.Room[4].sceneAction(0.3, '500wood', 1500);
+				},
+				get delayed(){return Events.Room[4].sceneReward('500wood', 1500);}
 			}
 		}
 	},
@@ -344,6 +337,17 @@ Events.Room = [
 		title: _('The Mysterious Wanderer'),
 		isAvailable: function() {
 			return Engine.activeModule == Room && $SM.get('stores.fur');
+		},
+		sceneReward: function(name, reward, delay){
+			return Events.delay(function(){
+				$SM.add('stores.fur', reward);
+				Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with furs.'));
+			}, name, delay);
+		},
+		sceneAction: function(p, name, reward){
+			if(Math.random() < p) {
+				return sceneReward(name, reward, 60);
+			}
 		},
 		scenes: {
 			start: {
@@ -374,49 +378,31 @@ Events.Room = [
 				text: [
 					_('the wanderer leaves, cart loaded with furs')
 				],
-				onLoad: function(delayed) {
-					var delayed = delayed || false;
-					if((!delayed && (Math.random() < 0.5)) || (delayed && ($SM.get('wait.fur') == 'l'))) {
-						if(!delayed) {
-							$SM.set('wait.fur', 'l');
-						}
-						Engine.setTimeout(function() {
-							$SM.add('stores.fur', 300);
-							Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with furs.'));
-							$SM.remove('wait.fur');
-						}, 60 * 1000);
-					}
-				},
 				buttons: {
 					'leave': {
 						text: _('say goodbye'),
 						nextScene: 'end'
 					}
-				}
+				},
+				onLoad: function() {
+					return Events.Room[5].sceneAction(0.5, '100fur', 300);
+				},
+				get delayed(){return Events.Room[5].sceneReward('100fur', 300);}
 			},
 			'500fur': {
 				text: [
 					_('the wanderer leaves, cart loaded with furs')
 				],
-				onLoad: function(delayed) {
-					var delayed = delayed || false;
-					if((!delayed && (Math.random() < 0.3)) || (delayed && ($SM.get('wait.fur') == 'h'))) {
-						if(!delayed) {
-							$SM.set('wait.fur', 'h');
-						}
-						Engine.setTimeout(function() {
-							$SM.add('stores.fur', 1500);
-							Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with furs.'));
-							$SM.remove('wait.fur');
-						}, 60 * 1000);
-					}
-				},
 				buttons: {
 					'leave': {
 						text: _('say goodbye'),
 						nextScene: 'end'
 					}
-				}
+				},
+				onLoad: function() {
+					return Events.Room[5].sceneAction('500fur', 1500);
+				},
+				get delayed(){return Events.Room[5].sceneReward('500fur', 1500);}
 			}
 		}
 	},
