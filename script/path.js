@@ -43,6 +43,7 @@ var Path = {
 			text: _("embark"),
 			click: Path.embark,
 			width: '80px',
+			state: true,
 			cooldown: World.DEATH_COOLDOWN
 		}).appendTo(this.panel);
 		
