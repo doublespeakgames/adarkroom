@@ -68,7 +68,7 @@ var Button = {
 	},
 
 	cooldown: function(btn,state) {
-		var cd = btn.data("cooldown") * 10;
+		var cd = btn.data("cooldown") * 2;
 		var id = 'cooldown.'+ btn.attr('id');
 		if((cd > 0) && ((state && $SM.get(id)) || (!state))) {
 			// param "start" takes value from cooldown time if not specified
@@ -79,17 +79,17 @@ var Button = {
 				$SM.set(id,start);
 			}
 			if(btn.data("state")){
-				// residual value is measured as tenth of seconds and stored accordingly
-				// compromise between precision, cooldown string length and program overheat
+				// residual value is measured as half seconds and stored accordingly
+				// saves program performance
 				var residual = Engine.setInterval(function(){
 					$SM.set(id,($SM.get(id) - 1));
-				},100);
+				},500);
 			}
 			var time = start;
 			if (Engine.options.doubleTime){
 				time /= 2;
 			}
-			$('div.cooldown', btn).stop(true, true).width(Math.floor((start / cd) * 100) +"%").animate({width: '0%'}, time * 100, 'linear', function() {
+			$('div.cooldown', btn).stop(true, true).width(Math.floor((start / cd) * 100) +"%").animate({width: '0%'}, time * 500, 'linear', function() {
 				var b = $(this).closest('.button');
 				b.data('onCooldown', false);
 				window.clearInterval(residual);
