@@ -97,6 +97,7 @@ span.customSelectOptions {
 	bottom: 0;
 	position: absolute;
 	right: 0;
+	background-color: white;
 }
 
 .customSelectOptions > ul:hover {
@@ -320,7 +321,7 @@ div.button div.cooldown {
 	top: 4px;
 }
 
-/* Overall size of buttons controlled by this style 
+/* Overall size of buttons controlled by this style
    border-width and margin-left should be the same. */
 .upBtn:before, .dnBtn:before, .upManyBtn:before, .dnManyBtn:before {
 	border-width: 6px;
