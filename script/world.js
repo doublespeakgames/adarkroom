@@ -801,6 +801,12 @@ var World = {
 		map.html(mapString);
 	},
 	
+	restoreNavigation: function(){
+		setTimeout(function(){
+			Engine.tabNavigation = true;
+		},100);
+	},
+	
 	die: function() {
 		if(!World.dead) {
 			World.dead = true;
@@ -823,6 +829,7 @@ var World = {
 					$('#outerSlider').animate({opacity:'1'}, 600, 'linear');
 					Button.cooldown($('#embarkButton'));
 					Engine.keyLock = false;
+					Engine.restoreNavigation();
 				}, 2000, true);
 			});
 		}
@@ -865,6 +872,7 @@ var World = {
 		$('#outerSlider').animate({left: '0px'}, 300);
 		Engine.activeModule = Path;
 		Path.onArrival();
+		Engine.restoreNavigation();
 	},
 	
 	leaveItAtHome: function(thing) {
