@@ -8,6 +8,7 @@ var Outside = {
 	_GATHER_DELAY: 60,
 	_TRAPS_DELAY: 90,
 	_POP_DELAY: [0.5, 3],
+	_HUT_ROOM: 4,
 	
 	_INCOME: {
 		'gatherer': {
@@ -173,7 +174,7 @@ var Outside = {
 	},
 	
 	getMaxPopulation: function() {
-		return $SM.get('game.buildings["hut"]', true) * 4;
+		return $SM.get('game.buildings["hut"]', true) * Outside._HUT_ROOM;
 	},
 	
 	increasePopulation: function() {
@@ -217,6 +218,36 @@ var Outside = {
 				}
 			}
 		}
+	},
+	
+	destroyHuts: function(num, allowEmpty) {
+		var dead = 0;
+		for(var i = 0; i < num; i++){
+			var population = $SM.get('game.population', true);
+			var rate = population / Outside._HUT_ROOM;
+			var full = Math.floor(rate);
+			// by default this is used to destroy full or half-full huts
+			// pass allowEmpty to include empty huts in the armageddon
+			var huts = (allowEmpty) ? $SM.get('game.buildings["hut"]', true) : Math.ceil(rate);
+			if(!huts) {
+				break;
+			}
+			// random can be 0 but not 1; however, 0 as a target is useless
+			var target = Math.floor(Math.random() * huts) + 1;
+			var inhabitants = 0;
+			if(target <= full){
+				inhabitants = Outside._HUT_ROOM;
+			} else if(target == full + 1){
+				inhabitants = population % Outside._HUT_ROOM;
+			}
+			$SM.set('game.buildings["hut"]', ($SM.get('game.buildings["hut"]') - 1));
+			if(inhabitants){
+				Outside.killVillagers(inhabitants);
+				dead += inhabitants;
+			}
+		}
+		// this method returns the total number of victims, for further actions
+		return dead;
 	},
 	
 	schedulePopIncrease: function() {
