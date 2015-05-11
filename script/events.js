@@ -56,14 +56,14 @@ var Events = {
 			$SM.addM('stores', scene.reward);
 		}
 		
-		// Notify the scene change
-		if(scene.notification) {
-			Notifications.notify(null, scene.notification);
-		}
-		
 		// onLoad
 		if(scene.onLoad) {
 			scene.onLoad();
+		}
+		
+		// Notify the scene change
+		if(scene.notification) {
+			Notifications.notify(null, scene.notification);
 		}
 		
 		$('#description', Events.eventPanel()).empty();
