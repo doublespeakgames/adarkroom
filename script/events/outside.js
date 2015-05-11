@@ -249,7 +249,7 @@ Events.Outside = [
 				buttons: {
 					'end': {
 						text: _('go home'),
-						notification: _('predators become prey, but price\'s unfair'),
+						notification: _('predators become prey. price\'s unfair'),
 						nextScene: 'end'
 					}
 				}
