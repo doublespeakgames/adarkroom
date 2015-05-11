@@ -859,7 +859,7 @@ var Events = {
 			}
 			var time = Engine.setInterval(function(){
 				// update state every tenth of second
-				$SM.set(state, $SM.get(state) - 1, true);
+				$SM.set(state, $SM.get(state, true) - 1, true);
 			},500);
 			var action = Engine.setTimeout(function(){
 				// outcome realizes. erase countdown
