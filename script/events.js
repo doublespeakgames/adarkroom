@@ -855,7 +855,7 @@ var Events = {
 		if(residual){
 			if(timeout){
 				// action triggered by in-game event. Set first-time state
-				$SM.set(state, residual, true);
+				$SM.set(state, residual);
 			}
 			var time = Engine.setInterval(function(){
 				// update state every tenth of second
@@ -864,7 +864,7 @@ var Events = {
 			var action = Engine.setTimeout(function(){
 				// outcome realizes. erase countdown
 				window.clearInterval(time);
-				$SM.remove(state, true);
+				$SM.remove(state);
 				return event;
 			}, residual * 500);			
 		}
