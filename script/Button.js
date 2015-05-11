@@ -76,7 +76,7 @@ var Button = {
 				var start = $SM.get(id)
 			} else {
 				var start = cd;
-				$SM.set(id,start);
+				$SM.set(id, start);
 			}
 			if(btn.data("state")){
 				// residual value is measured as half seconds and stored accordingly
@@ -93,7 +93,7 @@ var Button = {
 				var b = $(this).closest('.button');
 				b.data('onCooldown', false);
 				if(btn.data("state")){
-					$SM.remove(id, true);
+					$SM.remove(id);
 					window.clearInterval(residual);
 				}
 				if(!b.data('disabled')) {
