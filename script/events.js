@@ -33,12 +33,6 @@ var Events = {
 		$.Dispatch('stateUpdate').subscribe(Events.handleStateUpdates);
 		
 		//check for stored delayed events
-		Events.delayed = {
-			'Room' : {
-				4 : ['100wood','500wood'],
-				5 : ['100fur','500fur']
-			}
-		}
 		for(var i in Events.delayed){
 			for(var j in Events.delayed[i]){
 				for(var k = 0; k < Events.delayed[i][j].length; k++){
@@ -57,14 +51,14 @@ var Events = {
 		Events.activeScene = name;
 		var scene = Events.activeEvent().scenes[name];
 		
-		// Notify the scene change
-		if(scene.notification) {
-			Notifications.notify(null, scene.notification);
-		}
-		
 		// Scene reward
 		if(scene.reward) {
 			$SM.addM('stores', scene.reward);
+		}
+		
+		// Notify the scene change
+		if(scene.notification) {
+			Notifications.notify(null, scene.notification);
 		}
 		
 		// onLoad
@@ -860,6 +854,28 @@ var Events = {
 	handleStateUpdates: function(e){
 		if((e.category == 'stores' || e.category == 'income') && Events.activeEvent() != null){
 			Events.updateButtons();
+		}
+	},
+
+	delay: function(event, stateName, timeout){
+		var state = 'wait.'+ stateName;
+		// pass timeout in seconds, or take it from state.
+		var residual = (timeout * 10) || $SM.get(saved) || false;
+		if(residual){
+			if(timeout){
+				// action triggered by in-game event. Set first-time state
+				$SM.set(state, residual, true);
+			}
+			var time = Engine.setInterval(function(){
+				// update state every tenth of second
+				$SM.set(state, $SM.get(state) - 1, true);
+			},100);
+			var action = Engine.setTimeout(function(){
+				// outcome realizes. erase countdown
+				window.clearInterval(time);
+				$SM.remove(state, true);
+				return event;
+			}, residual * 100);			
 		}
 	}
 };
