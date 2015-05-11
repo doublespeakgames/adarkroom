@@ -8,6 +8,8 @@ var Button = {
 			this.data_handler = options.click;
 		}
 
+		var state = options.state || false;
+
 		var el = $('<div>')
 			.attr('id', typeof(options.id) != 'undefined' ? options.id : "BTN_" + Engine.getGuid())
 			.addClass('button')
@@ -21,8 +23,14 @@ var Button = {
 			.data("handler",  typeof options.click == 'function' ? options.click : function() { Engine.log("click"); })
 			.data("remaining", 0)
 			.data("cooldown", typeof options.cooldown == 'number' ? options.cooldown : 0);
+			.data("state", state);
 
 		el.append($("<div>").addClass('cooldown'));
+
+		if(!el.hasClass('disabled')){
+			// waiting for expiry of residual cooldown detected in state
+			Button.cooldown(el,state);
+		}
 
 		if(options.cost) {
 			var ttPos = options.ttPos ? options.ttPos : "bottom right";
@@ -61,17 +69,28 @@ var Button = {
 		return false;
 	},
 
-	cooldown: function(btn) {
-		var cd = btn.data("cooldown");
+	cooldown: function(btn,state) {
+		var cd = btn.data("cooldown") * 10;
 		if(cd > 0) {
-			milliseconds = cd * 1000;
-			if (Engine.options.doubleTime){
-				milliseconds /= 2;
+			// param "start" takes value from cooldown time if not specified
+			var start = cd;
+			if(state){
+				var id = 'cooldown.'+ btn.attr('id');
+				($SM.get(id)) ? start = $SM.get(id) : $SM.set(id,start);
+				// residual value is measured as tenth of seconds and stored accordingly
+				// compromise between precision, cooldown string length and program overheat
+				var residual = Engine.setInterval(function(){
+					$SM.set('cooldown.'+ id,($SM.get('cooldown.'+ id) - 1));
+				},100);
 			}
-
-			$('div.cooldown', btn).stop(true, true).width("100%").animate({width: '0%'}, milliseconds, 'linear', function() {
+			var time = start;
+			if (Engine.options.doubleTime){
+				time /= 2;
+			}
+			$('div.cooldown', btn).stop(true, true).width(Math.floor((start / cd) * 100) +"%").animate({width: '0%'}, time * 100, 'linear', function() {
 				var b = $(this).closest('.button');
 				b.data('onCooldown', false);
+				window.clearInterval(residual);
 				if(!b.data('disabled')) {
 					b.removeClass('disabled');
 				}
