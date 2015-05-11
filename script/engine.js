@@ -6,7 +6,6 @@
 		MAX_STORE: 99999999999999,
 		SAVE_DISPLAY: 30 * 1000,
 		GAME_OVER: false,
-		tabNavigation: true,
 
 		//object event types
 		topics: {},
@@ -600,6 +599,14 @@
 			//return (num > 0 ? "+" : "") + num + " per " + delay + "s";
 		},
 
+		tabNavigation: true,
+
+		restoreNavigation: function(){
+			setTimeout(function(){
+				Engine.tabNavigation = true;
+			},100);
+		},
+	
 		keyDown: function(e) {
 			e = e || window.event;
 			if(!Engine.keyPressed && !Engine.keyLock) {
