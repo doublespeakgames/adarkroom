@@ -42,6 +42,11 @@ var Events = {
 		Events.activeScene = name;
 		var scene = Events.activeEvent().scenes[name];
 
+		// onLoad
+		if(scene.onLoad) {
+			scene.onLoad();
+		}
+
 		// Notify the scene change
 		if(scene.notification) {
 			Notifications.notify(null, scene.notification);
@@ -50,11 +55,6 @@ var Events = {
 		// Scene reward
 		if(scene.reward) {
 			$SM.addM('stores', scene.reward);
-		}
-
-		// onLoad
-		if(scene.onLoad) {
-			scene.onLoad();
 		}
 
 		$('#description', Events.eventPanel()).empty();
