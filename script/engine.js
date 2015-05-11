@@ -593,6 +593,14 @@
 			//return (num > 0 ? "+" : "") + num + " per " + delay + "s";
 		},
 
+		tabNavigation: true,
+
+		restoreNavigation: function(){
+			setTimeout(function(){
+				Engine.tabNavigation = true;
+			},100);
+		},
+	
 		keyDown: function(e) {
 			e = e || window.event;
 			if(!Engine.keyPressed && !Engine.keyLock) {
@@ -628,27 +636,31 @@
 						break;
 					case 37: // Left
 					case 65:
-						if(Engine.activeModule == Ship && Path.tab)
-							Engine.travelTo(Path);
-						else if(Engine.activeModule == Path && Outside.tab){
-							Engine.activeModule.scrollSidebar('left', true);
-							Engine.travelTo(Outside);
-						}else if(Engine.activeModule == Outside && Room.tab){
-							Engine.activeModule.scrollSidebar('left', true);
-							Engine.travelTo(Room);
+						if(Engine.tabNavigation){
+							if(Engine.activeModule == Ship && Path.tab)
+								Engine.travelTo(Path);
+							else if(Engine.activeModule == Path && Outside.tab){
+								Engine.activeModule.scrollSidebar('left', true);
+								Engine.travelTo(Outside);
+							}else if(Engine.activeModule == Outside && Room.tab){
+								Engine.activeModule.scrollSidebar('left', true);
+								Engine.travelTo(Room);
+							}
 						}
 						Engine.log('left');
 						break;
 					case 39: // Right
 					case 68:
-						if(Engine.activeModule == Room && Outside.tab)
-							Engine.travelTo(Outside);
-						else if(Engine.activeModule == Outside && Path.tab){
-							Engine.activeModule.scrollSidebar('right', true);
-							Engine.travelTo(Path);
-						}else if(Engine.activeModule == Path && Ship.tab){
-							Engine.activeModule.scrollSidebar('right', true);
-							Engine.travelTo(Ship);
+						if(Engine.tabNavigation){
+							if(Engine.activeModule == Room && Outside.tab)
+								Engine.travelTo(Outside);
+							else if(Engine.activeModule == Outside && Path.tab){
+								Engine.activeModule.scrollSidebar('right', true);
+								Engine.travelTo(Path);
+							}else if(Engine.activeModule == Path && Ship.tab){
+								Engine.activeModule.scrollSidebar('right', true);
+								Engine.travelTo(Ship);
+							}
 						}
 						Engine.log('right');
 						break;
