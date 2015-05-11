@@ -801,12 +801,6 @@ var World = {
 		map.html(mapString);
 	},
 	
-	restoreNavigation: function(){
-		setTimeout(function(){
-			Engine.tabNavigation = true;
-		},100);
-	},
-	
 	die: function() {
 		if(!World.dead) {
 			World.dead = true;
