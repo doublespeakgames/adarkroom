@@ -123,8 +123,8 @@ Events.Encounters = [
 		scenes: {
 			'start': {
 				combat: true,
-				enemy: 'shivering man', 
-				enemyName: _('shivering man'), 
+				enemy: 'shivering man',
+				enemyName: _('shivering man'),
 				deathMessage: _('the shivering man is dead'),
 				chara: 'E',
 				damage: 5,
@@ -165,8 +165,8 @@ Events.Encounters = [
 		scenes: {
 			'start': {
 				combat: true,
-				enemy: 'man-eater', 
-				enemyName: _('man-eater'), 
+				enemy: 'man-eater',
+				enemyName: _('man-eater'),
 				deathMessage: _('the man-eater is dead'),
 				chara: 'T',
 				damage: 3,
@@ -202,8 +202,8 @@ Events.Encounters = [
 		scenes: {
 			'start': {
 				combat: true,
-				enemy: 'scavenger', 
-				enemyName: _('scavenger'), 
+				enemy: 'scavenger',
+				enemyName: _('scavenger'),
 				deathMessage: _('the scavenger is dead'),
 				chara: 'E',
 				damage: 4,
@@ -244,8 +244,8 @@ Events.Encounters = [
 		scenes: {
 			'start': {
 				combat: true,
-				enemy: 'lizard', 
-				enemyName: _('lizard'), 
+				enemy: 'lizard',
+				enemyName: _('lizard'),
 				deathMessage: _('the lizard is dead'),
 				chara: 'T',
 				damage: 5,
@@ -282,8 +282,8 @@ Events.Encounters = [
 		scenes: {
 			'start': {
 				combat: true,
-				enemy: 'feral terror', 
-				enemyName: _('feral terror'), 
+				enemy: 'feral terror',
+				enemyName: _('feral terror'),
 				deathMessage: _('the feral terror is dead'),
 				chara: 'T',
 				damage: 6,
@@ -319,11 +319,11 @@ Events.Encounters = [
 		scenes: {
 			'start': {
 				combat: true,
-				enemy: 'soldier', 
-				enemyName: _('soldier'), 
+				enemy: 'soldier',
+				enemyName: _('soldier'),
 				deathMessage: _('the soldier is dead'),
 				ranged: true,
-				chara: 'D',
+				chara: 'Sol',
 				damage: 8,
 				hit: 0.8,
 				attackDelay: 2,
@@ -362,8 +362,8 @@ Events.Encounters = [
 		scenes: {
 			'start': {
 				combat: true,
-				enemy: 'sniper', 
-				enemyName: _('sniper'), 
+				enemy: 'sniper',
+				enemyName: _('sniper'),
 				deathMessage: _('the sniper is dead'),
 				chara: 'D',
 				damage: 15,
