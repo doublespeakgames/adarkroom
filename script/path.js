@@ -112,7 +112,7 @@ var Path = {
 			}
 			
 			if(needsAppend && perks.children().length > 0) {
-				perks.appendTo(Path.panel);
+				perks.prependTo(Path.panel);
 			}
 			
 			if(!ignoreStores && Engine.activeModule === Path) {
