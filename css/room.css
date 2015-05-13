@@ -42,6 +42,7 @@ div#storesContainer {
 
 div#stores {
 	position: relative;
+	z-index:10;
 	border: 1px solid black;
 	cursor: default;
 	padding: 5px 10px;
