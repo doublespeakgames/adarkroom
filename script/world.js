@@ -162,8 +162,9 @@ var World = {
 		$.Dispatch('stateUpdate').subscribe(World.handleStateUpdates);
 		
 		// the ship has not been found yet. Map it and show compass tooltip
-		if(!$SM.get('features.location.spaceShip')){
-			World.dir = World.mapSearch('W',$SM.get('game.world.map'))[0].dir;
+		World.ship = World.mapSearch('W',$SM.get('game.world.map'),1);
+		if(World.ship.length > 0){
+			World.dir = World.compassDir(World.ship[0]);
 			// compass tooltip text
 			$('#row_compass > .tooltip > .row_key').text(_('the compass points '+ World.dir));
 		}
@@ -666,14 +667,16 @@ var World = {
 		return map;
 	},
 	
-	mapSearch: function(target,map){
+	mapSearch: function(target,map,required){
 		var max = World.LANDMARKS[target].num;
 		if(!max){
 			// this restrict the research to numerable landmarks
 			return null;
 		}
+		// restrict research if only a fixed number (usually 1) is required
+		max = (required) ? Math.min(required,max) : max;
 		var index = 0;
-		var targets = {};
+		var targets = [];
 		search: // label for coordinate research
 		for(var i = 0; i <= World.RADIUS * 2; i++){
 			for(var j = 0; j <= World.RADIUS * 2; j++){
@@ -685,15 +688,6 @@ var World = {
 						x : j - World.RADIUS, 
 						y : i - World.RADIUS,
 					}
-					var horz = targets[index].x < 0 ? 'west' : 'east';
-					var vert = targets[index].y < 0 ? 'north' : 'south';
-					if(Math.abs(targets[index].x) / 2 > Math.abs(targets[index].y)) {
-						targets[index].dir = horz;
-					} else if(Math.abs(targets[index].y) / 2 > Math.abs(targets[index].x)){
-						targets[index].dir = vert;
-					} else {
-						targets[index].dir = vert + horz;
-					}
 					index++;
 					if(index === max){
 						// optimisation: stop the research if maximum number of items has been reached
@@ -702,7 +696,21 @@ var World = {
 				}
 			}
 		}
-		return targets || null;
+		return targets;
+	},
+	
+	compassDir: function(pos){
+		var dir = '';
+		var horz = pos.x < 0 ? 'west' : 'east';
+		var vert = pos.y < 0 ? 'north' : 'south';
+		if(Math.abs(pos.x) / 2 > Math.abs(pos.y)) {
+			dir = horz;
+		} else if(Math.abs(pos.y) / 2 > Math.abs(pos.x)){
+			dir = vert;
+		} else {
+			dir = vert + horz;
+		}
+		return dir;
 	},
 	
 	placeLandmark: function(minRadius, maxRadius, landmark, map) {
