@@ -193,6 +193,21 @@ var StateManager = {
 		}
 	},
 
+	removeBranch(stateName, noEvent) {
+		for(var i in $SM.get(stateName)){
+			if(typeof $SM.get(stateName)[i] == 'object'){
+				$SM.removeBranch(stateName +'["'+ i +'"]');
+			}
+		}
+		if($.isEmptyObject($SM.get(stateName))){
+			$SM.remove(stateName);
+		}
+		if(!noEvent){
+			Engine.saveGame();
+			$SM.fireUpdate(stateName);
+		}
+	},
+
 	//creates full reference from input
 	//hopefully this won't ever need to be more complicated
 	buildPath: function(input){
