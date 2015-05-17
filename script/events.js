@@ -881,5 +881,27 @@ var Events = {
 		if((e.category == 'stores' || e.category == 'income') && Events.activeEvent() != null){
 			Events.updateButtons();
 		}
+	},
+
+	delay: function(event, stateName, timeout){
+		var state = 'wait.'+ stateName;
+		// pass timeout in seconds, or take it from state.
+		var residual = (timeout * 2) || $SM.get(saved) || false;
+		if(residual){
+			if(timeout){
+				// action triggered by in-game event. Set first-time state
+				$SM.set(state, residual);
+			}
+			var time = Engine.setInterval(function(){
+				// update state every tenth of second
+				$SM.set(state, $SM.get(state, true) - 1, true);
+			},500);
+			var action = Engine.setTimeout(function(){
+				// outcome realizes. erase countdown
+				window.clearInterval(time);
+				$SM.remove(state);
+				return event;
+			}, residual * 500);			
+		}
 	}
 };
