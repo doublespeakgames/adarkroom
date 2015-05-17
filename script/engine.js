@@ -290,6 +290,11 @@
 					'inputExport': {
 						text: [_('save this.')],
 						textarea: Engine.export64(),
+						onLoad: function(){
+							setTimeout(function(){
+								Engine.autoSelect('#description textarea');
+							},20);
+						},
 						readonly: true,
 						buttons: {
 							'done': {
@@ -348,7 +353,6 @@
 		export64: function() {
 			Engine.saveGame();
 			Engine.enableSelection();
-			Engine.autoSelect('#description textarea');
 			return Engine.generateExport64();
 		},
 
