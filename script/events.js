@@ -31,9 +31,14 @@ var Events = {
 		
 		//subscribe to stateUpdates
 		$.Dispatch('stateUpdate').subscribe(Events.handleStateUpdates);
+		
+		//check for stored delayed events
+		Events.initDelay();
 	},
 	
 	options: {}, // Nothing for now
+
+	delayState: 'wait',
     
 	activeScene: null,
     
@@ -848,25 +853,48 @@ var Events = {
 		}
 	},
 
-	delay: function(event, stateName, timeout){
-		var state = 'wait.'+ stateName;
-		// pass timeout in seconds, or take it from state.
-		var residual = (timeout * 2) || $SM.get(saved) || false;
-		if(residual){
-			if(timeout){
-				// action triggered by in-game event. Set first-time state
-				$SM.set(state, residual);
-			}
-			var time = Engine.setInterval(function(){
-				// update state every tenth of second
-				$SM.set(state, $SM.get(state, true) - 1, true);
-			},500);
-			var action = Engine.setTimeout(function(){
-				// outcome realizes. erase countdown
-				window.clearInterval(time);
-				$SM.remove(state);
-				return event;
-			}, residual * 500);			
+	initDelay: function(){
+		if($SM.get(Events.delayState)){
+			Events.recallDelay(Events.delayState, Events);
 		}
+	},
+
+	recallDelay: function(stateName, target){
+		var state = $SM.get(stateName);
+		for(var i in state){
+			if(typeof(state[i]) == 'object'){
+				Events.recallDelay(stateName +'["'+ i +'"]', target[i]);
+			} else {
+				if(typeof target[i] == 'function'){
+					target[i]();
+				} else {
+					$SM.remove(stateName)
+				}
+			}
+		}
+		if($.isEmptyObject(state)){
+			$SM.remove(stateName);
+		}
+	},
+
+	saveDelay: function(action, stateName, delay){
+		var state = Events.delayState + '.' + stateName;
+		if(delay){
+			delay *= 2;
+			$SM.set(state, delay);
+		} else {
+			var delay = $SM.get(state, true)
+		}
+		var time = Engine.setInterval(function(){
+			// update state every half second
+			$SM.set(state, ($SM.get(state) - 1), true);
+		}, 500);
+		Engine.setTimeout(function(){
+			// outcome realizes. erase countdown
+			window.clearInterval(time);
+			$SM.remove(state);
+			$SM.removeBranch(Events.delayState);
+			action();
+		}, delay * 500);
 	}
 };
