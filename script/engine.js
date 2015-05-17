@@ -325,6 +325,11 @@
 					'inputImport': {
 						text: [_('put the save code here.')],
 						textarea: '',
+						onLoad: function(){
+							setTimeout(function(){
+								Engine.autoSelect('#description textarea');
+							},20);
+						},
 						buttons: {
 							'okay': {
 								text: _('import'),
