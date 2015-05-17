@@ -40,9 +40,7 @@ var World = {
 	SOUTH: [ 0,  1],
 	WEST:  [-1,  0],
 	EAST:  [ 1,  0],
-	
-	dir: null;
-	
+
 	Weapons: {
 		'fists': {
 			verb: _('punch'),
@@ -166,7 +164,9 @@ var World = {
 		if(World.ship.length > 0){
 			World.dir = World.compassDir(World.ship[0]);
 			// compass tooltip text
-			$('#row_compass > .tooltip > .row_key').text(_('the compass points '+ World.dir));
+			Room.compassTooltip(World.dir);
+		} else {
+			World.dir = null;
 		}
 	},
 	
@@ -890,6 +890,8 @@ var World = {
 		if(World.state.ship && !$SM.get('features.location.spaceShip')) {
 			Ship.init();
 			Engine.event('progress', 'ship');
+			World.dir = null;
+			Room.compassTooltip();
 		}
 		World.state = null;
 		
