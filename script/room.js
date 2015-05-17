@@ -840,11 +840,6 @@ var Room = {
 					row.insertAfter(location.find('#' + curPrev));
 				}
 				newRow = true;
-				if(k == 'compass'){
-					var tt = $('<div>').addClass('tooltip bottom right');
-					$('<div>').addClass('row_key').appendTo(tt);
-					tt.appendTo(row);
-				}
 			} else if(num>= 0){
 				$('div#' + row.attr('id') + ' > div.row_val', location).text(Math.floor(num));
 			}
@@ -1136,6 +1131,17 @@ var Room = {
 		}
 		if(bNeedsAppend && buildSection.children().length > 0) {
 			buySection.appendTo('div#roomPanel').animate({opacity: 1}, 300, 'linear');
+		}
+	},
+	
+	compassTooltip: function(direction){
+		var direction = direction || false;
+		if(direction){
+			var tt = $('<div>').addClass('tooltip bottom right');
+			$('<div>').addClass('row_key').text(_('the compass points '+ direction)).appendTo(tt);
+			tt.appendTo($('#row_compass'));
+		} else {
+			$('#row_compass > .tooltip').remove();
 		}
 	},
 	
