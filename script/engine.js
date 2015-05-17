@@ -275,7 +275,7 @@
 						buttons: {
 							'export': {
 								text: _('export'),
-								onChoose: Engine.export64
+								nextScene: {1: 'inputExport'}
 							},
 							'import': {
 								text: _('import'),
@@ -284,6 +284,18 @@
 							'cancel': {
 								text: _('cancel'),
 								nextScene: 'end'
+							}
+						}
+					},
+					'inputExport': {
+						text: [_('save this.')],
+						textarea: Engine.export64(),
+						readonly: true,
+						buttons: {
+							'done': {
+								text: _('got it'),
+								nextScene: 'end',
+								onChoose: Engine.disableSelection
 							}
 						}
 					},
@@ -301,7 +313,7 @@
 							},
 							'no': {
 								text: _('no'),
-								nextScene: 'end'
+								nextScene: {1: 'start'}
 							}
 						}
 					},
@@ -335,26 +347,8 @@
 
 		export64: function() {
 			Engine.saveGame();
-			var string64 = Engine.generateExport64();
 			Engine.enableSelection();
-			Events.startEvent({
-				title: _('Export'),
-				scenes: {
-					start: {
-						text: [_('save this.')],
-						textarea: string64,
-						readonly: true,
-						buttons: {
-							'done': {
-								text: _('got it'),
-								nextScene: 'end',
-								onChoose: Engine.disableSelection
-							}
-						}
-					}
-				}
-			});
-			Engine.autoSelect('#description textarea');
+			return Engine.generateExport64();
 		},
 
 		import64: function(string64) {

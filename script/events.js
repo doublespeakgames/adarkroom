@@ -651,6 +651,7 @@ var Events = {
 			if(scene.readonly) {
 				ta.attr('readonly', true);
 			}
+			Engine.autoSelect('#description textarea');
 		}
 
 		// Draw any loot
