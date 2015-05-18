@@ -242,6 +242,7 @@ var Outside = {
 		var gatherer = $('div#workers_row_gatherer', workers);
 		
 		for(var k in $SM.get('game.workers')) {
+			var lk = _(k);
 			var workerCount = $SM.get('game.workers["'+k+'"]');
 			var row = $('div#workers_row_' + k.replace(' ', '-'), workers);
 			if(row.length === 0) {
@@ -250,23 +251,19 @@ var Outside = {
 				var curPrev = null;
 				workers.children().each(function(i) {
 					var child = $(this);
-					var cName = child.attr('id').substring(12).replace('-', ' ');
+					var cName = child.children('.row_key').text();
 					if(cName != 'gatherer') {
-						if(cName < k && (curPrev == null || cName > curPrev)) {
-							curPrev = cName;
+						if(cName < lk) {
+							curPrev = child.attr('id');
 						}
 					}
 				});
 				if(curPrev == null && gatherer.length === 0) {
 					row.prependTo(workers);
-				} 
-				else if(curPrev == null)
-				{
+				} else if(curPrev == null) {
 					row.insertAfter(gatherer);
-				} 
-				else 
-				{
-					row.insertAfter(workers.find('#workers_row_' + curPrev.replace(' ', '-')));
+				} else {
+					row.insertAfter(workers.find('#'+ curPrev));
 				}
 				
 			} else {
