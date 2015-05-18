@@ -462,6 +462,8 @@ var Room = {
 			options
 		);
 		
+		Room.pathDiscovery = Boolean($SM.get('stores["compass"]'));
+
 		if(Engine._debug) {
 			this._ROOM_WARM_DELAY = 5000;
 			this._BUILDER_STATE_DELAY = 5000;
@@ -853,6 +855,10 @@ var Room = {
 		if(sNeedsAppend && special.children().length > 0) {
 			special.appendTo(stores);
 			special.animate({opacity: 1}, 300, 'linear');
+			if(!Room.pathDiscovery){
+				Room.pathDiscovery = true;
+				Path.openPath();
+			}
 		}
 		
 		if(needsAppend && stores.find('div.storeRow').length > 0) {
