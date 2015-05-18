@@ -258,7 +258,6 @@ var Outside = {
 						}
 					}
 				});
-				console.log(lk +', '+ curPrev);
 				if(curPrev == null && gatherer.length === 0) {
 					row.prependTo(workers);
 				} else if(curPrev == null) {
