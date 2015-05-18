@@ -424,10 +424,10 @@ var Outside = {
 		var hasPeeps;
 		if($SM.get('game.buildings["hut"]', true) === 0) {
 			hasPeeps = false;
-			village.addClass('noHuts');
+			village.attr('data-legend', _('forest'));
 		} else {
 			hasPeeps = true;
-			village.removeClass('noHuts');
+			village.attr('data-legend', _('village'));
 		}
 		
 		if(needsAppend && village.children().length > 1) {
