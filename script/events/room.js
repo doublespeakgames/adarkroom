@@ -39,10 +39,7 @@ Events.Room = [
 						text: _('buy compass'),
 						cost: { fur: 300, scales: 15, teeth: 5 },
 						reward: { 'compass': 1 },
-						notification: _('the old compass is dented and dusty, but it looks to work.'),
-						onChoose: function(){
-							setTimeout(function(){Path.openPath()},100);
-						}
+						notification: _('the old compass is dented and dusty, but it looks to work.')
 					}, 
 					'goodbye': {
 						text: _('say goodbye'),
