@@ -931,10 +931,6 @@ var Room = {
 		Notifications.notify(Room, good.buildMsg);
 		
 		$SM.add('stores["'+thing+'"]', 1);
-		
-		if(thing == 'compass') {
-			Path.openPath();
-		}
 	},
 	
 	build: function(buildBtn) {
