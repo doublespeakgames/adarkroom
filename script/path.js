@@ -34,7 +34,7 @@ var Path = {
 			.appendTo('div#locationSlider');
 		
 		// Add the outfitting area
-		var outfitting = $('<div>').attr('id', 'outfitting').appendTo(this.panel);
+		var outfitting = $('<div>').attr({'id': 'outfitting', 'data-legend': _('supplies:')}).appendTo(this.panel);
 		$('<div>').attr('id', 'bagspace').appendTo(outfitting);
 		
 		// Add the embark button
@@ -99,7 +99,7 @@ var Path = {
 			var needsAppend = false;
 			if(perks.length === 0) {
 				needsAppend = true;
-				perks = $('<div>').attr('id', 'perks');
+				perks = $('<div>').attr({'id': 'perks', 'data-legend': _('perks:')});
 			}
 			for(var k in $SM.get('character.perks')) {
 				var id = 'perk_' + k.replace(' ', '-');
