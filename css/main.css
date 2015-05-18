@@ -508,6 +508,10 @@ body.noMask #description {
 	padding-bottom: 20px;
 }
 
+.take-all-button {
+	float: none;
+}
+
 #buttons > .button {
 	margin: 0 5px 5px;
 	margin-right: 15px;

@@ -511,7 +511,7 @@ var Room = {
 		}).appendTo('div#roomPanel');
 		
 		// Create the stores container
-		$('<div>').attr('id', 'storesContainer').appendTo('div#roomPanel');
+		$('<div>').attr('id', 'storesContainer').prependTo('div#roomPanel');
 		
 		//subscribe to stateUpdates
 		$.Dispatch('stateUpdate').subscribe(Room.handleStateUpdates);

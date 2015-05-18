@@ -431,7 +431,7 @@ var Outside = {
 		}
 		
 		if(needsAppend && village.children().length > 1) {
-			village.appendTo('#outsidePanel');
+			village.prependTo('#outsidePanel');
 			village.animate({opacity:1}, 300, 'linear');
 		}
 		
