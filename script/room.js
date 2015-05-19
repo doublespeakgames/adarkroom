@@ -855,10 +855,6 @@ var Room = {
 		if(sNeedsAppend && special.children().length > 0) {
 			special.appendTo(stores);
 			special.animate({opacity: 1}, 300, 'linear');
-			if(!Room.pathDiscovery){
-				Room.pathDiscovery = true;
-				Path.openPath();
-			}
 		}
 		
 		if(needsAppend && stores.find('div.storeRow').length > 0) {
@@ -877,6 +873,11 @@ var Room = {
 
 		if($("div#outsidePanel").length) {
 			Outside.updateVillage();
+		}
+
+		if($SM.get('stores.compass') && !Room.pathDiscovery){
+			Room.pathDiscovery = true;
+			Path.openPath();
 		}
 	},
 	
