@@ -753,7 +753,7 @@ var Room = {
 	  var resources = $('div#resources');
 		var special = $('div#special');
 		var weapons = $('div#weapons');
-		var needsAppend = false, sNeedsAppend = false, wNeedsAppend = false, newRow = false;
+		var needsAppend = false, rNeedsAppend = false, sNeedsAppend = false, wNeedsAppend = false, newRow = false;
 		if(stores.length === 0) {
 			stores = $('<div>').attr({
 				id: 'stores'
