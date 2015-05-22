@@ -323,7 +323,7 @@ Events.Encounters = [
 				enemyName: _('soldier'),
 				deathMessage: _('the soldier is dead'),
 				ranged: true,
-				chara: 'Sol',
+				chara: 'D',
 				damage: 8,
 				hit: 0.8,
 				attackDelay: 2,
