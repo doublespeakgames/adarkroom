@@ -247,7 +247,7 @@ Events.Encounters = [
 				enemy: 'lizard', 
 				enemyName: _('lizard'), 
 				deathMessage: _('the lizard is dead'),
-				chara: 'B',
+				chara: 'F',
 				damage: 5,
 				hit: 0.8,
 				attackDelay: 2,
