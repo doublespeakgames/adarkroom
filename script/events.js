@@ -215,7 +215,8 @@ var Events = {
 				w.data('hp', hp);
 				Events.updateFighterDiv(w);
 				Events.drawFloatText('+' + World.meatHeal(), '#wanderer .hp');
-				Events.setTakeAll();
+				var takeETbutton = Events.setTakeAll();
+				Events.canLeave(takeETbutton);
 			}
 		}
 	},
@@ -238,7 +239,8 @@ var Events = {
 				w.data('hp', hp);
 				Events.updateFighterDiv(w);
 				Events.drawFloatText('+' + World.medsHeal(), '#wanderer .hp');
-				Events.setTakeAll();
+				var takeETbutton = Events.setTakeAll();
+				Events.canLeave(takeETbutton);
 			}
 		}
 	},
@@ -456,9 +458,9 @@ var Events = {
 					desc.empty();
 					btns.empty();
 					$('<div>').text(scene.deathMessage).appendTo(desc);
-
+					
 					var takeETbtn = Events.drawLoot(scene.loot);
-
+					
 					if(scene.buttons) {
 						// Draw the buttons
 						leaveBtn = Events.drawButtons(scene);
@@ -617,6 +619,7 @@ var Events = {
 			takeETbutton.addClass('disabled');
 		}
 		takeETbutton.data('canTakeEverything', (free >= 0) ? true : false);
+		return takeETbutton;
 	},
 	
 	allowLeave: function(takeETbtn, leaveBtn){
@@ -661,8 +664,7 @@ var Events = {
 			lootRow.insertBefore($('.takeETrow', lootButtons));
 		}
 		Path.outfit[thing] -= num;
-		Events.getLoot(target, true);
-		Events.setTakeAll();
+		Events.getLoot(target);
 		World.updateSupplies();
 	},
 	
@@ -692,12 +694,12 @@ var Events = {
 				curNum++;
 				Path.outfit[name] = curNum;
 				World.updateSupplies();
-
+				
 				if(!skipButtonSet){
 					Events.setTakeAll();
-					Events.drawDrop(btn);
 				}
-			} else {
+			}
+			if(!skipButtonSet){
 				Events.drawDrop(btn);
 			}
 		} 
@@ -756,7 +758,7 @@ var Events = {
 		
 		// Draw the buttons
 		leaveBtn = Events.drawButtons(scene);
-
+		
 		Events.allowLeave(takeETbtn, leaveBtn);
 	},
 	
@@ -870,18 +872,18 @@ var Events = {
 			}
 		}
 	},
-
+	
 	// blinks the browser window title
 	blinkTitle: function() {
 		var title = document.title;
-
+		
 		// every 3 seconds change title to '*** EVENT ***', then 1.5 seconds later, change it back to the original title.
 		Events.BLINK_INTERVAL = setInterval(function() {
 			document.title = _('*** EVENT ***');
 			Engine.setTimeout(function() {document.title = title;}, 1500, true); 
 		}, 3000);
 	},
-
+	
 	stopTitleBlink: function() {
 		clearInterval(Events.BLINK_INTERVAL);
 		Events.BLINK_INTERVAL = false;
@@ -897,7 +899,7 @@ var Events = {
 					possibleEvents.push(event);
 				}
 			}
-
+			
 			if(possibleEvents.length === 0) {
 				Events.scheduleNextEvent(0.5);
 				return;
@@ -906,10 +908,10 @@ var Events = {
 				Events.startEvent(possibleEvents[r]);
 			}
 		}
-
+		
 		Events.scheduleNextEvent();
 	},
-
+	
 	triggerFight: function() {
 		var possibleFights = [];
 		for(var i in Events.Encounters) {
@@ -918,7 +920,7 @@ var Events = {
 				possibleFights.push(fight);
 			}
 		}
-
+		
 		var r = Math.floor(Math.random()*(possibleFights.length));
 		Events.startEvent(possibleFights[r]);
 	},
@@ -933,7 +935,7 @@ var Events = {
 	eventPanel: function() {
 		return Events.activeEvent().eventPanel;
 	},
-
+	
 	startEvent: function(event, options) {
 		if(event) {
 			Engine.event('game event', 'event');
@@ -955,14 +957,14 @@ var Events = {
 			}
 		}
 	},
-
+	
 	scheduleNextEvent: function(scale) {
 		var nextEvent = Math.floor(Math.random()*(Events._EVENT_TIME_RANGE[1] - Events._EVENT_TIME_RANGE[0])) + Events._EVENT_TIME_RANGE[0];
 		if(scale > 0) { nextEvent *= scale; }
 		Engine.log('next event scheduled in ' + nextEvent + ' minutes');
 		Events._eventTimeout = Engine.setTimeout(Events.triggerEvent, nextEvent * 60 * 1000);
 	},
-
+	
 	endEvent: function() {
 		Events.eventPanel().animate({opacity:0}, Events._PANEL_FADE, 'linear', function() {
 			Events.eventPanel().remove();
@@ -977,10 +979,10 @@ var Events = {
 			$('body').focus();
 		});
 	},
-
+	
 	handleStateUpdates: function(e){
 		if((e.category == 'stores' || e.category == 'income') && Events.activeEvent() != null){
 			Events.updateButtons();
 		}
-	}
+	},
 };
