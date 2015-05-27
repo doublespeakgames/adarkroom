@@ -528,6 +528,16 @@ var Events = {
 					}
 				}
 			}
+			$('<div>').attr('id','no_drop')
+				.text(_('nothing'))
+				.mouseenter(function(e){
+					e.stopPropagation();
+				})
+				.click(function(e){
+					e.stopPropagation();
+					dropMenu.remove();
+				})
+				.appendTo(dropMenu);
 			if(needsAppend){
 				dropMenu.appendTo(btn);
 			}
