@@ -849,10 +849,8 @@ var World = {
 		}
 		World.state = null;
 		
-		// Clear the embark cooldown
-		var btn = Button.clearCooldown($('#embarkButton'));
 		if(Path.outfit['cured meat'] > 0) {
-			Button.setDisabled(btn, false);
+			Button.setDisabled($('#embarkButton'), false);
 		}
 		
 		for(var k in Path.outfit) {
@@ -916,6 +914,8 @@ var World = {
 	},
 	
 	onArrival: function() {
+		// Clear the embark cooldown
+		Button.clearCooldown($('#embarkButton'));
 		Engine.keyLock = false;
 		// Explore in a temporary world-state. We'll commit the changes if you return home safe.
 		World.state = $.extend(true, {}, $SM.get('game.world'));
