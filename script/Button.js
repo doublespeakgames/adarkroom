@@ -68,46 +68,47 @@ var Button = {
 	},
 
 	cooldown: function(btn,state) {
-		var cd = btn.data("cooldown") * 2;
+		var cd = btn.data("cooldown");
 		var id = 'cooldown.'+ btn.attr('id');
 		if((cd > 0) && ((state && $SM.get(id)) || (!state))) {
+			var residual = false;
 			// param "start" takes value from cooldown time if not specified
-			if($SM.get(id)){
-				var start = $SM.get(id)
+			if($SM.get(id) && btn.data("state")){
+				var start = Math.min($SM.get(id), cd);
 			} else {
 				var start = cd;
-				$SM.set(id, start);
 			}
 			if(btn.data("state")){
-				// residual value is measured as half seconds and stored accordingly
+				$SM.set(id,start);
+				// residual value is measured in seconds
 				// saves program performance
-				var residual = Engine.setInterval(function(){
-					$SM.set(id, $SM.get(id, true) - 1, true);
-				},500);
+				btn.data('countdown', Engine.setInterval(function(){
+					$SM.set(id, $SM.get(id, true) - 0.5, true);
+				},500));
 			}
 			var time = start;
 			if (Engine.options.doubleTime){
 				time /= 2;
 			}
-			$('div.cooldown', btn).stop(true, true).width(Math.floor((start / cd) * 100) +"%").animate({width: '0%'}, time * 500, 'linear', function() {
-				var b = $(this).closest('.button');
-				b.data('onCooldown', false);
-				if(btn.data("state")){
-					$SM.remove(id);
-					window.clearInterval(residual);
-				}
-				if(!b.data('disabled')) {
-					b.removeClass('disabled');
-				}
+			$('div.cooldown', btn).stop(true, true).width(Math.floor((start / cd) * 100) +"%").animate({width: '0%'}, time * 1000, 'linear', function() {
+				Button.clearCooldown(btn, true);
 			});
 			btn.addClass('disabled');
 			btn.data('onCooldown', true);
 		}
 	},
 
-	clearCooldown: function(btn) {
-		$('div.cooldown', btn).stop(true, true);
+	clearCooldown: function(btn, ended) {
+		var ended = ended || false;
+		if(!ended){
+			$('div.cooldown', btn).stop(true, true);
+		}
 		btn.data('onCooldown', false);
+		if(btn.data("state")){
+			$SM.remove('cooldown.'+ btn.attr('id'));
+			window.clearInterval(btn.data('countdown'));
+			btn.removeData('countdown');
+		}
 		if(!btn.data('disabled')) {
 			btn.removeClass('disabled');
 		}
