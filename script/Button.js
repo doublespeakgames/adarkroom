@@ -71,9 +71,10 @@ var Button = {
 		var cd = btn.data("cooldown");
 		var id = 'cooldown.'+ btn.attr('id');
 		if((cd > 0) && ((state && $SM.get(id)) || (!state))) {
+			Button.clearCooldown(btn);
 			var residual = false;
 			// param "start" takes value from cooldown time if not specified
-			if($SM.get(id) && btn.data("state")){
+			if(state && btn.data("state")){
 				var start = Math.min($SM.get(id), cd);
 			} else {
 				var start = cd;
@@ -105,8 +106,8 @@ var Button = {
 		}
 		btn.data('onCooldown', false);
 		if(btn.data("state")){
-			$SM.remove('cooldown.'+ btn.attr('id'));
 			window.clearInterval(btn.data('countdown'));
+			$SM.remove('cooldown.'+ btn.attr('id'));
 			btn.removeData('countdown');
 		}
 		if(!btn.data('disabled')) {
