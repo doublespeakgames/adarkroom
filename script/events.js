@@ -880,14 +880,13 @@ var Events = {
 	saveDelay: function(action, stateName, delay){
 		var state = Events.delayState + '.' + stateName;
 		if(delay){
-			delay *= 2;
 			$SM.set(state, delay);
 		} else {
 			var delay = $SM.get(state, true)
 		}
 		var time = Engine.setInterval(function(){
 			// update state every half second
-			$SM.set(state, ($SM.get(state) - 1), true);
+			$SM.set(state, ($SM.get(state) - 0.5), true);
 		}, 500);
 		Engine.setTimeout(function(){
 			// outcome realizes. erase countdown
@@ -895,6 +894,6 @@ var Events = {
 			$SM.remove(state);
 			$SM.removeBranch(Events.delayState);
 			action();
-		}, delay * 500);
+		}, delay * 1000);
 	}
 };
