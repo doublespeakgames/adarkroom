@@ -97,7 +97,7 @@ var Ship = {
 	
 	setTitle: function() {
 		if(Engine.activeModule == this) {
-			document.title = "An Old Starship";
+			document.title = _("An Old Starship");
 		}
 	},
 	
