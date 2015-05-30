@@ -74,11 +74,7 @@ var Button = {
 			Button.clearCooldown(btn);
 			var residual = false;
 			// param "start" takes value from cooldown time if not specified
-			if(state && btn.data("state")){
-				var start = Math.min($SM.get(id), cd);
-			} else {
-				var start = cd;
-			}
+			var start = (state && btn.data("state")) ? Math.min($SM.get(id), cd) : cd;
 			if(btn.data("state")){
 				$SM.set(id,start);
 				// residual value is measured in seconds
