@@ -223,14 +223,15 @@ var Outside = {
 	destroyHuts: function(num, allowEmpty) {
 		var dead = 0;
 		for(var i = 0; i < num; i++){
-			var full = Math.floor(population / 4);
+			var population = $SM.get('game.population', true);
+			var rate = population / Outside._HUT_ROOM;
+			var full = Math.floor(rate);
 			// by default this is used to destroy full or half-full huts
 			// pass allowEmpty to include empty huts in the armageddon
-			var huts = (allowEmpty) ? $SM.get('game.buildings["hut"]', true) : Math.ceil(population / Outside._HUT_ROOM);
+			var huts = (allowEmpty) ? $SM.get('game.buildings["hut"]', true) : Math.ceil(rate);
 			if(!huts) {
 				break;
 			}
-			var population = $SM.get('game.population', true);
 			// random can be 0 but not 1; however, 0 as a target is useless
 			var target = Math.floor(Math.random() * huts) + 1;
 			var inhabitants = 0;
