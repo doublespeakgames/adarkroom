@@ -240,7 +240,7 @@ var Outside = {
 			} else if(target == full + 1){
 				inhabitants = population % Outside._HUT_ROOM;
 			}
-			$SM.set('game.buildings["hut"]', (huts - 1));
+			$SM.set('game.buildings["hut"]', ($SM.get('game.buildings["hut"]') - 1));
 			if(inhabitants){
 				Outside.killVillagers(inhabitants);
 				dead += inhabitants;
