@@ -123,7 +123,7 @@ Events.Outside = [
 				text: [
 					_('the sickness is cured in time.')
 				],
-				notification: _('they are healed'),
+				notification: _('sufferers are healed'),
 				buttons: {
 					'end': {
 						text: _('go home'),
@@ -137,7 +137,7 @@ Events.Outside = [
 					_('the days are spent with burials.'),
 					_('the nights are rent with screams.')
 				],
-				notification: _('they are left to die'),
+				notification: _('sufferers are left to die'),
 				onLoad: function() {
 					var numKilled = Math.floor(Math.random() * 20) + 1;
 					Outside.killVillagers(numKilled);
@@ -190,7 +190,7 @@ Events.Outside = [
 					_('only a few die.'),
 					_('the rest bury them.')
 				],
-				notification: _('it is eradicated eventually'),
+				notification: _('epidemic is eradicated eventually'),
 				onLoad: function() {
 					var numKilled = Math.floor(Math.random() * 5) + 2;
 					Outside.killVillagers(numKilled);
