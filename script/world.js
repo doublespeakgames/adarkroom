@@ -918,6 +918,7 @@ var World = {
 	},
 	
 	onArrival: function() {
+		Engine.tabNavigation = false;
 		Engine.keyLock = false;
 		// Explore in a temporary world-state. We'll commit the changes if you return home safe.
 		World.state = $.extend(true, {}, $SM.get('game.world'));
