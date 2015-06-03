@@ -1138,14 +1138,9 @@ var Room = {
 	},
 	
 	compassTooltip: function(direction){
-		var direction = direction || false;
-		if(direction){
-			var tt = $('<div>').addClass('tooltip bottom right');
-			$('<div>').addClass('row_key').text(_('the compass points '+ direction)).appendTo(tt);
-			tt.appendTo($('#row_compass'));
-		} else {
-			$('#row_compass > .tooltip').remove();
-		}
+		var tt = $('<div>').addClass('tooltip bottom right');
+		$('<div>').addClass('row_key').text(_('the compass points '+ direction)).appendTo(tt);
+		tt.appendTo($('#row_compass'));
 	},
 	
 	handleStateUpdates: function(e){
