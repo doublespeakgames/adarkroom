@@ -159,15 +159,11 @@ var World = {
 		//subscribe to stateUpdates
 		$.Dispatch('stateUpdate').subscribe(World.handleStateUpdates);
 		
-		// the ship has not been found yet. Map it and show compass tooltip
+		// Map the ship and show compass tooltip
 		World.ship = World.mapSearch(World.TILE.SHIP,$SM.get('game.world.map'),1);
-		if(World.ship.length > 0){
-			World.dir = World.compassDir(World.ship[0]);
-			// compass tooltip text
-			Room.compassTooltip(World.dir);
-		} else {
-			World.dir = null;
-		}
+		World.dir = World.compassDir(World.ship[0]);
+		// compass tooltip text
+		Room.compassTooltip(World.dir);
 	},
 	
 	clearDungeon: function() {
