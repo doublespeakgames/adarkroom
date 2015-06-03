@@ -680,7 +680,7 @@ var World = {
 		search: // label for coordinate research
 		for(var i = 0; i <= World.RADIUS * 2; i++){
 			for(var j = 0; j <= World.RADIUS * 2; j++){
-				if(map[i][j] === target){
+				if(map[i][j].charAt(0) === target){
 					// search result is stored as an object;
 					// items are listed as they appear in the map, tl-br
 					// each item has relative coordinates and a compass-type direction
@@ -890,8 +890,6 @@ var World = {
 		if(World.state.ship && !$SM.get('features.location.spaceShip')) {
 			Ship.init();
 			Engine.event('progress', 'ship');
-			World.dir = null;
-			Room.compassTooltip();
 		}
 		World.state = null;
 		
