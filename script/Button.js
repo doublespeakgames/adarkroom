@@ -20,15 +20,12 @@ var Button = {
 			})
 			.data("handler",  typeof options.click == 'function' ? options.click : function() { Engine.log("click"); })
 			.data("remaining", 0)
-			.data("cooldown", typeof options.cooldown == 'number' ? options.cooldown : 0)
-			.data("state", options.state || false);
+			.data("cooldown", typeof options.cooldown == 'number' ? options.cooldown : 0);
 
 		el.append($("<div>").addClass('cooldown'));
 
-		if((options.state) && (!el.hasClass('disabled'))){
-			// waiting for expiry of residual cooldown detected in state
-			Button.cooldown(el, true);
-		}
+		// waiting for expiry of residual cooldown detected in state
+		Button.cooldown(el, true);
 
 		if(options.cost) {
 			var ttPos = options.ttPos ? options.ttPos : "bottom right";
@@ -49,6 +46,8 @@ var Button = {
 		return el;
 	},
 
+	saveCooldown: true,
+
 	setDisabled: function(btn, disabled) {
 		if(btn) {
 			if(!disabled && !btn.data('onCooldown')) {
@@ -67,15 +66,27 @@ var Button = {
 		return false;
 	},
 
-	cooldown: function(btn,state) {
+	cooldown: function(btn, option) {
 		var cd = btn.data("cooldown");
 		var id = 'cooldown.'+ btn.attr('id');
-		if((cd > 0) && ((state && $SM.get(id)) || (!state))) {
-			Button.clearCooldown(btn);
-			var residual = false;
+		if(cd > 0) {
 			// param "start" takes value from cooldown time if not specified
-			var start = (state && btn.data("state")) ? Math.min($SM.get(id), cd) : cd;
-			if(btn.data("state")){
+			var start, left;
+			switch(option){
+				// a switch will allow for several uses of cooldown function
+				case 'state':
+					if(!$SM.get(id)){
+						return;
+					}
+					start = Math.min($SM.get(id), cd);
+					left = (start / cd).toFixed(4);
+					break;
+				default:
+					start = cd;
+					left = 1;
+			}
+			Button.clearCooldown(btn);
+			if(Button.saveCooldown){
 				$SM.set(id,start);
 				// residual value is measured in seconds
 				// saves program performance
@@ -87,7 +98,7 @@ var Button = {
 			if (Engine.options.doubleTime){
 				time /= 2;
 			}
-			$('div.cooldown', btn).stop(true, true).width(Math.floor((start / cd) * 100) +"%").animate({width: '0%'}, time * 1000, 'linear', function() {
+			$('div.cooldown', btn).width(left * 100 +"%").animate({width: '0%'}, time * 1000, 'linear', function() {
 				Button.clearCooldown(btn, true);
 			});
 			btn.addClass('disabled');
@@ -101,7 +112,7 @@ var Button = {
 			$('div.cooldown', btn).stop(true, true);
 		}
 		btn.data('onCooldown', false);
-		if(btn.data("state")){
+		if(btn.data('countdown')){
 			window.clearInterval(btn.data('countdown'));
 			$SM.remove('cooldown.'+ btn.attr('id'));
 			btn.removeData('countdown');
