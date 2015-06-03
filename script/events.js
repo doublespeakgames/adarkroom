@@ -2,7 +2,7 @@
  * Module that handles the random event system
  */
 var Events = {
-		
+
 	_EVENT_TIME_RANGE: [3, 6], // range, in minutes
 	_PANEL_FADE: 200,
 	_FIGHT_SPEED: 100,
@@ -11,52 +11,52 @@ var Events = {
 	_LEAVE_COOLDOWN: 1,
 	STUN_DURATION: 4000,
 	BLINK_INTERVAL: false,
-	
+
 	init: function(options) {
 		this.options = $.extend(
 			this.options,
 			options
 		);
-		
+
 		// Build the Event Pool
 		Events.EventPool = [].concat(
 			Events.Global,
 			Events.Room,
 			Events.Outside
 		);
-		
+
 		Events.eventStack = [];
-		
+
 		Events.scheduleNextEvent();
-		
+
 		//subscribe to stateUpdates
 		$.Dispatch('stateUpdate').subscribe(Events.handleStateUpdates);
 	},
-	
+
 	options: {}, // Nothing for now
-    
+
 	activeScene: null,
-    
+
 	loadScene: function(name) {
 		Engine.log('loading scene: ' + name);
 		Events.activeScene = name;
 		var scene = Events.activeEvent().scenes[name];
-		
-		// Notify the scene change
-		if(scene.notification) {
-			Notifications.notify(null, scene.notification);
-		}
-		
-		// Scene reward
-		if(scene.reward) {
-			$SM.addM('stores', scene.reward);
-		}
-		
+
 		// onLoad
 		if(scene.onLoad) {
 			scene.onLoad();
 		}
-		
+
+		// Notify the scene change
+		if(scene.notification) {
+			Notifications.notify(null, scene.notification);
+		}
+
+		// Scene reward
+		if(scene.reward) {
+			$SM.addM('stores', scene.reward);
+		}
+
 		$('#description', Events.eventPanel()).empty();
 		$('#buttons', Events.eventPanel()).empty();
 		if(scene.combat) {
@@ -65,23 +65,23 @@ var Events = {
 			Events.startStory(scene);
 		}
 	},
-	
+
 	startCombat: function(scene) {
 		Engine.event('game event', 'combat');
 		Events.won = false;
 		var desc = $('#description', Events.eventPanel());
-		
+
 		$('<div>').text(scene.notification).appendTo(desc);
-		
+
 		// Draw the wanderer
 		Events.createFighterDiv('@', World.health, World.getMaxHealth()).attr('id', 'wanderer').appendTo(desc);
-		
+
 		// Draw the enemy
 		Events.createFighterDiv(scene.chara, scene.health, scene.health).attr('id', 'enemy').appendTo(desc);
-		
+
 		// Draw the action buttons
 		var btns = $('#buttons', Events.eventPanel());
-		
+
 		var numWeapons = 0;
 		for(var k in World.Weapons) {
 			var weapon = World.Weapons[k];
@@ -106,21 +106,21 @@ var Events = {
 			// No weapons? You can punch stuff!
 			Events.createAttackButton('fists').prependTo(btns);
 		}
-		
+
 		Events.createEatMeatButton().appendTo(btns);
 		if((Path.outfit['medicine'] || 0) !== 0) {
 			Events.createUseMedsButton().appendTo(btns);
 		}
-		
+
 		// Set up the enemy attack timer
 		Events._enemyAttackTimer = Engine.setTimeout(Events.enemyAttack, scene.attackDelay * 1000);
 	},
-	
+
 	createEatMeatButton: function(cooldown) {
 		if (cooldown == null) {
 			cooldown = Events._EAT_COOLDOWN;
 		}
-		
+
 		var btn = new Button.Button({
 			id: 'eat',
 			text: _('eat meat'),
@@ -128,19 +128,19 @@ var Events = {
 			click: Events.eatMeat,
 			cost: { 'cured meat': 1 }
 		});
-		
+
 		if(Path.outfit['cured meat'] === 0) {
 			Button.setDisabled(btn, true);
 		}
-		
+
 		return btn;
 	},
-	
+
 	createUseMedsButton: function(cooldown) {
 		if (cooldown == null) {
 			cooldown = Events._MEDS_COOLDOWN;
 		}
-		
+
 		var btn = new Button.Button({
 			id: 'meds',
 			text: _('use meds'),
@@ -148,14 +148,14 @@ var Events = {
 			click: Events.useMeds,
 			cost: { 'medicine': 1 }
 		});
-		
+
 		if((Path.outfit['medicine'] || 0) === 0) {
 			Button.setDisabled(btn, true);
 		}
-		
+
 		return btn;
 	},
-	
+
 	createAttackButton: function(weaponName) {
 		var weapon = World.Weapons[weaponName];
 		var cd = weapon.cooldown;
@@ -174,17 +174,17 @@ var Events = {
 		if(typeof weapon.damage == 'number' && weapon.damage > 0) {
 			btn.addClass('weaponButton');
 		}
-		
+
 		for(var k in weapon.cost) {
 			if(typeof Path.outfit[k] != 'number' || Path.outfit[k] < weapon.cost[k]) {
 				Button.setDisabled(btn, true);
 				break;
 			}
 		}
-		
+
 		return btn;
 	},
-	
+
 	drawFloatText: function(text, parent) {
 		$('<div>').text(text).addClass('damageText').appendTo(parent).animate({
 			'bottom': '50px',
@@ -196,7 +196,7 @@ var Events = {
 			$(this).remove();
 		});
 	},
-	
+
 	eatMeat: function() {
 		if(Path.outfit['cured meat'] > 0) {
 			Path.outfit['cured meat']--;
@@ -204,12 +204,12 @@ var Events = {
 			if(Path.outfit['cured meat'] === 0) {
 				Button.setDisabled($('#eat'), true);
 			}
-			
+
 			var hp = World.health;
 			hp += World.meatHeal();
 			hp = hp > World.getMaxHealth() ? World.getMaxHealth() : hp;
 			World.setHp(hp);
-			
+
 			if(Events.activeEvent()) {
 				var w = $('#wanderer');
 				w.data('hp', hp);
@@ -218,7 +218,7 @@ var Events = {
 			}
 		}
 	},
-	
+
 	useMeds: function() {
 		if(Path.outfit['medicine'] > 0) {
 			Path.outfit['medicine']--;
@@ -226,12 +226,12 @@ var Events = {
 			if(Path.outfit['medicine'] === 0) {
 				Button.setDisabled($('#meds'), true);
 			}
-			
+
 			var hp = World.health;
 			hp += World.medsHeal();
 			hp = hp > World.getMaxHealth() ? World.getMaxHealth() : hp;
 			World.setHp(hp);
-			
+
 			if(Events.activeEvent()) {
 				var w = $('#wanderer');
 				w.data('hp', hp);
@@ -240,7 +240,7 @@ var Events = {
 			}
 		}
 	},
-	
+
 	useWeapon: function(btn) {
 		if(Events.activeEvent()) {
 			var weaponName = btn.attr('id').substring(7).replace('-', ' ');
@@ -255,7 +255,7 @@ var Events = {
 				} else if($SM.get('character.punches') == 300 && !$SM.hasPerk('unarmed master')) {
 					$SM.addPerk('unarmed master');
 				}
-				
+
 			}
 			if(weapon.cost) {
 				var mod = {};
@@ -311,7 +311,7 @@ var Events = {
 					}
 				}
 			}
-			
+
 			var attackFn = weapon.type == 'ranged' ? Events.animateRanged : Events.animateMelee;
 			attackFn($('#wanderer'), dmg, function() {
 				if($('#enemy').data('hp') <= 0 && !Events.won) {
@@ -321,7 +321,7 @@ var Events = {
 			});
 		}
 	},
-	
+
 	animateMelee: function(fighter, dmg, callback) {
 		var start, end, enemy;
 		if(fighter.attr('id') == 'wanderer') {
@@ -333,7 +333,7 @@ var Events = {
 			end = {'right': '25%'};
 			enemy = $('#wanderer');
 		}
-		
+
 		fighter.stop(true, true).animate(start, Events._FIGHT_SPEED, function() {
 			var enemyHp = enemy.data('hp');
 			var msg = "";
@@ -359,13 +359,13 @@ var Events = {
 					}, Events.STUN_DURATION);
 				}
 			}
-			
+
 			Events.drawFloatText(msg, $('.hp', enemy));
-			
+
 			$(this).animate(end, Events._FIGHT_SPEED, callback);
 		});
 	},
-	
+
 	animateRanged: function(fighter, dmg, callback) {
 		var start, end, enemy;
 		if(fighter.attr('id') == 'wanderer') {
@@ -377,7 +377,7 @@ var Events = {
 			end = {'right': '50%'};
 			enemy = $('#wanderer');
 		}
-		
+
 		$('<div>').css(start).addClass('bullet').text('o').appendTo('#description')
 				.animate(end, Events._FIGHT_SPEED * 2, 'linear', function() {
 			var enemyHp = enemy.data('hp');
@@ -404,20 +404,20 @@ var Events = {
 					}, Events.STUN_DURATION);
 				}
 			}
-			
+
 			Events.drawFloatText(msg, $('.hp', enemy));
-			
+
 			$(this).remove();
 			if(typeof callback == 'function') {
 				callback();
 			}
 		});
 	},
-	
+
 	enemyAttack: function() {
-		
+
 		var scene = Events.activeEvent().scenes[Events.activeScene];
-		
+
 		if(!$('#enemy').data('stunned')) {
 			var toHit = scene.hit;
 			toHit *= $SM.hasPerk('evasive') ? 0.8 : 1;
@@ -425,9 +425,9 @@ var Events = {
 			if(Math.random() <= toHit) {
 				dmg = scene.damage;
 			}
-			
+
 			var attackFn = scene.ranged ? Events.animateRanged : Events.animateMelee;
-			
+
 			attackFn($('#enemy'), dmg, function() {
 					if($('#wanderer').data('hp') <= 0) {
 						// Failure!
@@ -437,10 +437,10 @@ var Events = {
 					}
 			});
 		}
-		
+
 		Events._enemyAttackTimer = Engine.setTimeout(Events.enemyAttack, scene.attackDelay * 1000);
 	},
-	
+
 	winFight: function() {
 		Events.won = true;
 		clearTimeout(Events._enemyAttackTimer);
@@ -453,9 +453,9 @@ var Events = {
 					desc.empty();
 					btns.empty();
 					$('<div>').text(scene.deathMessage).appendTo(desc);
-					
+
 					Events.drawLoot(scene.loot);
-					
+
 					if(scene.buttons) {
 						// Draw the buttons
 						Events.drawButtons(scene);
@@ -468,12 +468,12 @@ var Events = {
 								if(scene.nextScene && scene.nextScene != 'end') {
 									Events.loadScene(scene.nextScene);
 								} else {
-									Events.endEvent(); 
+									Events.endEvent();
 								}
 							},
 							text: _('leave')
 						}).appendTo(btns));
-						
+
 						Events.createEatMeatButton(0).appendTo(btns);
 						if((Path.outfit['medicine'] || 0) !== 0) {
 							Events.createUseMedsButton(0).appendTo(btns);
@@ -485,7 +485,7 @@ var Events = {
 			}, 1000, true);
 		});
 	},
-	
+
 	drawLoot: function(lootList) {
 		var desc = $('#description', Events.eventPanel());
 		var lootButtons = $('<div>').attr('id', 'lootButtons');
@@ -503,9 +503,44 @@ var Events = {
 		$('<div>').addClass('clear').appendTo(lootButtons);
 		if(lootButtons.children().length > 1) {
 			lootButtons.appendTo(desc);
+			var takeAll = new Button.Button({
+				id: 'loot_take_all',
+				text: _('take all'),
+				click: Events.takeAllLoot
+			}).addClass('take-all-button').appendTo(lootButtons);
 		}
 	},
-	
+
+	takeAllLoot: function(){
+
+		var stoppedEarly = false;
+		$('#lootButtons')
+			.children('.button')
+			.each(function(){
+				if( $(this).hasClass('take-all-button') ) {
+					return;
+				}
+
+				var weight = $(this).data('numLeft') * Path.getWeight($(this).attr('id').substring(5).replace('-', ' '));
+				while( $(this).data('numLeft') > 0 && weight < Path.getFreeSpace() ){
+					$(this).click();
+				}
+
+				if(weight > Path.getFreeSpace()){
+					stoppedEarly = true;
+					return;
+				}
+			});
+
+		if( !stoppedEarly ){
+
+			$('#leave').click();
+			$('#leaveBtn').click();
+
+		}
+
+	},
+
 	dropStuff: function(e) {
 		e.stopPropagation();
 		var btn = $(this);
@@ -513,7 +548,7 @@ var Events = {
 		var num = btn.data('num');
 		var lootButtons = $('#lootButtons');
 		Engine.log('dropping ' + num + ' ' + thing);
-		
+
 		var lootBtn = $('#loot_' + thing.replace(' ', '-'), lootButtons);
 		if(lootBtn.length > 0) {
 			var curNum = lootBtn.data('numLeft');
@@ -530,7 +565,7 @@ var Events = {
 		Events.getLoot(btn.closest('.button'));
 		World.updateSupplies();
 	},
-	
+
 	getLoot: function(btn) {
 		var name = btn.attr('id').substring(5).replace('-', ' ');
 		if(btn.data('numLeft') > 0) {
@@ -591,42 +626,42 @@ var Events = {
 					$('#dropMenu').remove();
 				});
 			}
-		} 
+		}
 	},
-	
+
 	createFighterDiv: function(chara, hp, maxhp) {
 		var fighter = $('<div>').addClass('fighter').text(_(chara)).data('hp', hp).data('maxHp', maxhp).data('refname',chara);
 		$('<div>').addClass('hp').text(hp+'/'+maxhp).appendTo(fighter);
 		return fighter;
 	},
-	
+
 	updateFighterDiv: function(fighter) {
 		$('.hp', fighter).text(fighter.data('hp') + '/' + fighter.data('maxHp'));
 	},
-	
+
 	startStory: function(scene) {
 		// Write the text
 		var desc = $('#description', Events.eventPanel());
 		for(var i in scene.text) {
 			$('<div>').text(scene.text[i]).appendTo(desc);
 		}
-		
+
 		if(scene.textarea != null) {
 			var ta = $('<textarea>').val(scene.textarea).appendTo(desc);
 			if(scene.readonly) {
 				ta.attr('readonly', true);
 			}
 		}
-		
+
 		// Draw any loot
 		if(scene.loot) {
 			Events.drawLoot(scene.loot);
 		}
-		
+
 		// Draw the buttons
 		Events.drawButtons(scene);
 	},
-	
+
 	drawButtons: function(scene) {
 		var btns = $('#buttons', Events.eventPanel());
 		for(var id in scene.buttons) {
@@ -645,10 +680,10 @@ var Events = {
 				Button.cooldown(b);
 			}
 		}
-		
+
 		Events.updateButtons();
 	},
-	
+
 	updateButtons: function() {
 		var btns = Events.activeEvent().scenes[Events.activeScene].buttons;
 		for(var bId in btns) {
@@ -671,7 +706,7 @@ var Events = {
 			}
 		}
 	},
-	
+
 	buttonClick: function(btn) {
 		var info = Events.activeEvent().scenes[Events.activeScene].buttons[btn.attr('id')];
 		// Cost
@@ -695,24 +730,24 @@ var Events = {
 				$SM.addM('stores', costMod);
 			}
 		}
-		
+
 		if(typeof info.onChoose == 'function') {
 			var textarea = Events.eventPanel().find('textarea');
 			info.onChoose(textarea.length > 0 ? textarea.val() : null);
 		}
-		
+
 		// Reward
 		if(info.reward) {
 			$SM.addM('stores', info.reward);
 		}
-		
+
 		Events.updateButtons();
-		
+
 		// Notification
 		if(info.notification) {
 			Notifications.notify(null, info.notification);
 		}
-		
+
 		// Next Scene
 		if(info.nextScene) {
 			if(info.nextScene == 'end') {
@@ -742,7 +777,7 @@ var Events = {
 		// every 3 seconds change title to '*** EVENT ***', then 1.5 seconds later, change it back to the original title.
 		Events.BLINK_INTERVAL = setInterval(function() {
 			document.title = _('*** EVENT ***');
-			Engine.setTimeout(function() {document.title = title;}, 1500, true); 
+			Engine.setTimeout(function() {document.title = title;}, 1500, true);
 		}, 3000);
 	},
 
@@ -750,7 +785,7 @@ var Events = {
 		clearInterval(Events.BLINK_INTERVAL);
 		Events.BLINK_INTERVAL = false;
 	},
-	
+
 	// Makes an event happen!
 	triggerEvent: function() {
 		if(Events.activeEvent() == null) {
@@ -786,14 +821,14 @@ var Events = {
 		var r = Math.floor(Math.random()*(possibleFights.length));
 		Events.startEvent(possibleFights[r]);
 	},
-	
+
 	activeEvent: function() {
 		if(Events.eventStack && Events.eventStack.length > 0) {
 			return Events.eventStack[0];
 		}
 		return null;
 	},
-	
+
 	eventPanel: function() {
 		return Events.activeEvent().eventPanel;
 	},
@@ -802,6 +837,7 @@ var Events = {
 		if(event) {
 			Engine.event('game event', 'event');
 			Engine.keyLock = true;
+			Engine.tabNavigation = false;
 			Events.eventStack.unshift(event);
 			event.eventPanel = $('<div>').attr('id', 'event').addClass('eventPanel').css('opacity', '0');
 			if(options != null && options.width != null) {
@@ -834,6 +870,7 @@ var Events = {
 			Events.eventStack.shift();
 			Engine.log(Events.eventStack.length + ' events remaining');
 			Engine.keyLock = false;
+			Engine.tabNavigation = true;
 			if (Events.BLINK_INTERVAL) {
 				Events.stopTitleBlink();
 			}
