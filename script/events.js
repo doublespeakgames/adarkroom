@@ -837,6 +837,7 @@ var Events = {
 		if(event) {
 			Engine.event('game event', 'event');
 			Engine.keyLock = true;
+			Engine.tabNavigation = false;
 			Events.eventStack.unshift(event);
 			event.eventPanel = $('<div>').attr('id', 'event').addClass('eventPanel').css('opacity', '0');
 			if(options != null && options.width != null) {
@@ -869,6 +870,7 @@ var Events = {
 			Events.eventStack.shift();
 			Engine.log(Events.eventStack.length + ' events remaining');
 			Engine.keyLock = false;
+			Engine.tabNavigation = true;
 			if (Events.BLINK_INTERVAL) {
 				Events.stopTitleBlink();
 			}
