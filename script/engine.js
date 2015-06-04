@@ -599,6 +599,8 @@
 			//return (num > 0 ? "+" : "") + num + " per " + delay + "s";
 		},
 
+		keyLock: false,
+
 		keyDown: function(e) {
 			e = e || window.event;
 			if(!Engine.keyLock) {
