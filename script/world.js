@@ -829,6 +829,7 @@ var World = {
 	},
 	
 	goHome: function() {
+		Engine.keyLock = true;
 		// Home safe! Commit the changes.
 		$SM.setM('game.world', World.state);
 		if(World.state.sulphurmine && $SM.get('game.buildings["sulphur mine"]', true) === 0) {
