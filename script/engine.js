@@ -600,6 +600,7 @@
 		},
 
 		keyLock: false,
+		keyRestore: false,
 
 		keyDown: function(e) {
 			e = e || window.event;
@@ -661,8 +662,9 @@
 					}
 				}
 			} else {
-				if(Engine.pressed){
+				if(Engine.keyRestore){
 					Engine.keyLock = false;
+					Engine.keyRestore = false;
 				}
 			}
 			Engine.pressed = false;
