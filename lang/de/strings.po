@@ -872,7 +872,7 @@ msgstr "ein handelsposten würde tauschgeschäfte fördern"
 msgid ""
 "now the nomads have a place to set up shop, they might stick around a while"
 msgstr ""
-"jetzt haben die nomaden einen ort zum handeln, sie bleiben villeicht eine "
+"jetzt haben die nomaden einen ort zum handeln, sie bleiben vielleicht eine "
 "weile"
 
 #: script/room.js:94
