@@ -9,6 +9,7 @@ var langs = {
 	'nb':'norsk',
 	'pl':'polski',
 	'pt':'português',
+	'pt_br':'português (brasil)',
 	'ru':'русский',
 	'sv':'svenska',
 	'tr':'türkçe',
