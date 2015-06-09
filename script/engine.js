@@ -599,9 +599,12 @@
 			//return (num > 0 ? "+" : "") + num + " per " + delay + "s";
 		},
 
+		keyLock: false,
+		keyRestore: false,
+
 		keyDown: function(e) {
 			e = e || window.event;
-			if(!Engine.keyPressed && !Engine.keyLock) {
+			if(!Engine.keyLock) {
 				Engine.pressed = true;
 				if(Engine.activeModule.keyDown) {
 					Engine.activeModule.keyDown(e);
@@ -611,56 +614,60 @@
 		},
 
 		keyUp: function(e) {
-			Engine.pressed = false;
-			if(Engine.activeModule.keyUp) {
-				Engine.activeModule.keyUp(e);
-			}
-			else
-			{
-				switch(e.which) {
-					case 38: // Up
-					case 87:
-						if(Engine.activeModule == Outside || Engine.activeModule == Path) {
-							Engine.activeModule.scrollSidebar('up');
-						}
-						Engine.log('up');
-						break;
-					case 40: // Down
-					case 83:
-						if (Engine.activeModule == Outside || Engine.activeModule == Path) {
-							Engine.activeModule.scrollSidebar('down');
-						}
-						Engine.log('down');
-						break;
-					case 37: // Left
-					case 65:
-						if(Engine.activeModule == Ship && Path.tab)
-							Engine.travelTo(Path);
-						else if(Engine.activeModule == Path && Outside.tab){
-							Engine.activeModule.scrollSidebar('left', true);
-							Engine.travelTo(Outside);
-						}else if(Engine.activeModule == Outside && Room.tab){
-							Engine.activeModule.scrollSidebar('left', true);
-							Engine.travelTo(Room);
-						}
-						Engine.log('left');
-						break;
-					case 39: // Right
-					case 68:
-						if(Engine.activeModule == Room && Outside.tab)
-							Engine.travelTo(Outside);
-						else if(Engine.activeModule == Outside && Path.tab){
-							Engine.activeModule.scrollSidebar('right', true);
-							Engine.travelTo(Path);
-						}else if(Engine.activeModule == Path && Ship.tab){
-							Engine.activeModule.scrollSidebar('right', true);
-							Engine.travelTo(Ship);
-						}
-						Engine.log('right');
-						break;
+			if(!Engine.keyLock) {
+				if(Engine.activeModule.keyUp) {
+					Engine.activeModule.keyUp(e);
+				} else {
+					switch(e.which) {
+						case 38: // Up
+						case 87:
+							if(Engine.activeModule == Outside || Engine.activeModule == Path) {
+								Engine.activeModule.scrollSidebar('up');
+							}
+							Engine.log('up');
+							break;
+						case 40: // Down
+						case 83:
+							if (Engine.activeModule == Outside || Engine.activeModule == Path) {
+								Engine.activeModule.scrollSidebar('down');
+							}
+							Engine.log('down');
+							break;
+						case 37: // Left
+						case 65:
+							if(Engine.activeModule == Ship && Path.tab)
+								Engine.travelTo(Path);
+							else if(Engine.activeModule == Path && Outside.tab){
+								Engine.activeModule.scrollSidebar('left', true);
+								Engine.travelTo(Outside);
+							}else if(Engine.activeModule == Outside && Room.tab){
+								Engine.activeModule.scrollSidebar('left', true);
+								Engine.travelTo(Room);
+							}
+							Engine.log('left');
+							break;
+						case 39: // Right
+						case 68:
+							if(Engine.activeModule == Room && Outside.tab)
+								Engine.travelTo(Outside);
+							else if(Engine.activeModule == Outside && Path.tab){
+								Engine.activeModule.scrollSidebar('right', true);
+								Engine.travelTo(Path);
+							}else if(Engine.activeModule == Path && Ship.tab){
+								Engine.activeModule.scrollSidebar('right', true);
+								Engine.travelTo(Ship);
+							}
+							Engine.log('right');
+							break;
+					}
+				}
+			} else {
+				if(Engine.keyRestore){
+					Engine.keyLock = false;
+					Engine.keyRestore = false;
 				}
 			}
-
+			Engine.pressed = false;
 			return false;
 		},
 
