@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2014-09-27 12:34+0200\n"
-"PO-Revision-Date: 2015-02-07 14:15-0500\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2015-06-09 14:33-0500\n"
+"Last-Translator: Luan Haddad \n"
 "Language-Team: \n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
@@ -2916,7 +2916,7 @@ msgstr "dentro da cabana, uma criança chora."
 
 #: script/events/setpieces.js:2630
 msgid "a few belongings rest against the walls."
-msgstr "alguns pertences descansar contra as paredes."
+msgstr "alguns pertences descansam contra as paredes."
 
 #: script/events/setpieces.js:2670
 msgid "the stench of rot and death fills the operating theatres."
@@ -3050,7 +3050,7 @@ msgstr ""
 
 #: script/events/setpieces.js:3138
 msgid "lucky that the natives can't work the mechanisms."
-msgstr "de sorte que os nativos não podem trabalhar os mecanismos."
+msgstr "sorte que os nativos não podem trabalhar com os mecanismos."
 
 #: script/events/setpieces.js:3139
 msgid "with a little effort, it might fly again."
@@ -3202,7 +3202,7 @@ msgstr "um barraco está no centro da vila."
 
 #: script/events/setpieces.js:3541
 msgid "there are still supplies inside."
-msgstr "há ainda abastece dentro."
+msgstr "ainda há suplementos."
 
 #: script/events/setpieces.js:3545
 msgid "take"
