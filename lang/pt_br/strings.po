@@ -3215,5 +3215,3 @@ msgstr "todo o trabalho de uma geração anterior está aqui."
 #: script/events/setpieces.js:3553
 msgid "ripe for the picking."
 msgstr "maduro para a colheita."
-Status API Training Shop Blog About
-© 2015 GitHub, Inc. Terms Privacy Security Contact
