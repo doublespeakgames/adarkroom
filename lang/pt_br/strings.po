@@ -1,20 +1,3 @@
-Skip to content
-This repository  
-Explore
-Gist
-Blog
-Help
-@luhad luhad
- 
- Unwatch 1
-  Star 0
-  Fork 527
-luhad/adarkroom
-forked from doublespeakgames/adarkroom
- branch: master  adarkroom/lang/pt_br/strings.po
-@luhadluhad 2 minutes ago Update strings.po
-1 contributor
-RawBlameHistory    3218 lines (2474 sloc)  90.46 kB
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
