@@ -599,14 +599,10 @@
 			//return (num > 0 ? "+" : "") + num + " per " + delay + "s";
 		},
 
+		keyLock: false,
 		tabNavigation: true,
+		restoreNavigation: false,
 
-		restoreNavigation: function(){
-			setTimeout(function(){
-				Engine.tabNavigation = true;
-			},100);
-		},
-	
 		keyDown: function(e) {
 			e = e || window.event;
 			if(!Engine.keyPressed && !Engine.keyLock) {
@@ -622,9 +618,7 @@
 			Engine.pressed = false;
 			if(Engine.activeModule.keyUp) {
 				Engine.activeModule.keyUp(e);
-			}
-			else
-			{
+			} else {
 				switch(e.which) {
 					case 38: // Up
 					case 87:
@@ -672,7 +666,10 @@
 						break;
 				}
 			}
-
+			if(Engine.restoreNavigation){
+				Engine.tabNavigation = true;
+				Engine.restoreNavigation = false;
+			}
 			return false;
 		},
 
