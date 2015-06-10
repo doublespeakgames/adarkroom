@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2014-09-27 12:34+0200\n"
-"PO-Revision-Date: 2015-06-09 14:33-0500\n"
+"PO-Revision-Date: 2015-06-10 13:54-0500\n"
 "Last-Translator: Luan Haddad \n"
 "Language-Team: \n"
 "Language: pt\n"
@@ -16,11 +16,11 @@ msgstr ""
 
 #: script/dropbox.js:64
 msgid "Dropbox connection"
-msgstr "Dropbox conexão"
+msgstr "Dropbox"
 
 #: script/dropbox.js:67
 msgid "connect game to dropbox local storage"
-msgstr "conectar jogo dropbox armazenamento local"
+msgstr "conecte o jogo ao armazenamento dropbox"
 
 #: script/dropbox.js:70
 msgid "connect"
@@ -101,7 +101,7 @@ msgstr "artista marcial"
 
 #: script/engine.js:28
 msgid "punches do even more damage."
-msgstr "socos fazer ainda mais danos."
+msgstr "socos fazem ainda mais danos."
 
 #: script/engine.js:29
 msgid "learned to fight quite effectively without weapons"
@@ -470,7 +470,7 @@ msgstr "açougue de porcos"
 
 #: script/localization.js:27 script/outside.js:53
 msgid "iron miner"
-msgstr "mineiro de ferro"
+msgstr "minerador de ferro"
 
 #: script/localization.js:28
 msgid "iron mine"
