@@ -823,7 +823,7 @@ var World = {
 					$('#outerSlider').animate({opacity:'1'}, 600, 'linear');
 					Button.cooldown($('#embarkButton'));
 					Engine.keyLock = false;
-					Engine.restoreNavigation();
+					Engine.tabNavigation = true;
 				}, 2000, true);
 			});
 		}
@@ -866,7 +866,7 @@ var World = {
 		$('#outerSlider').animate({left: '0px'}, 300);
 		Engine.activeModule = Path;
 		Path.onArrival();
-		Engine.restoreNavigation();
+		Engine.restoreNavigation = true;
 	},
 	
 	leaveItAtHome: function(thing) {
