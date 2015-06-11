@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2014-09-27 12:34+0200\n"
-"PO-Revision-Date: 2015-06-10 13:54-0500\n"
+"PO-Revision-Date: 2015-06-10 21:54-0500\n"
 "Last-Translator: Luan Haddad \n"
 "Language-Team: \n"
-"Language: pt\n"
+"Language: pt br\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -3095,7 +3095,7 @@ msgstr "um segundo soldado se junta à luta."
 
 #: script/events/setpieces.js:3270
 msgid "a grizzled soldier attacks, waving a bayonet."
-msgstr "um grisalhos ataques soldado, acenando com uma baioneta."
+msgstr "um soldado ataca, acenando com uma baioneta."
 
 #: script/events/setpieces.js:3281
 msgid "the military presence has been cleared."
@@ -3104,7 +3104,7 @@ msgstr "a presença militar tenha sido apagado."
 #: script/events/setpieces.js:3282 script/events/setpieces.js:3424
 #: script/events/setpieces.js:3500
 msgid "the mine is now safe for workers."
-msgstr "o meu é agora seguro para os trabalhadores."
+msgstr "a mina está segura para os trabalhadores."
 
 #: script/events/setpieces.js:3284
 msgid "the sulphur mine is clear of dangers"
