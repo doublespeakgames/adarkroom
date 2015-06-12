@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2014-09-27 12:34+0200\n"
-"PO-Revision-Date: 2015-06-10 21:54-0500\n"
+"PO-Revision-Date: 2015-06-12 10:20-0500\n"
 "Last-Translator: Luan Haddad \n"
 "Language-Team: \n"
 "Language: pt br\n"
@@ -642,7 +642,7 @@ msgstr "tomar:"
 
 #: script/localization.js:78
 msgid "drop:"
-msgstr "cair:"
+msgstr "largar:"
 
 #: script/localization.js:79
 msgid "forest"
@@ -694,7 +694,7 @@ msgstr "um estranho chega no meio da noite"
 
 #: script/outside.js:189
 msgid "a weathered family takes up in one of the huts."
-msgstr "uma família resistiu ocupa em uma das cabanas."
+msgstr "uma família ocupa em uma das cabanas."
 
 #: script/outside.js:191
 msgid "a small group arrives, all dust and bones."
@@ -847,7 +847,7 @@ msgstr "aldeões poderia ajudar a caçar, dados os meios"
 
 #: script/room.js:69
 msgid "the hunting lodge stands in the forest, a ways out of town"
-msgstr "o pavilhão de caça está na floresta, maneiras para fora da cidade"
+msgstr "o pavilhão de caça está na floresta, fora da cidade"
 
 #: script/room.js:80
 msgid "trading post"
@@ -898,14 +898,11 @@ msgstr "oficina"
 
 #: script/room.js:125
 msgid "builder says she could make finer things, if she had the tools"
-msgstr ""
-"construtor diz que ela poderia tornar as coisas mais finas, se ela tinha as "
-"ferramentas"
+msgstr "construtor diz que ela poderia tornar as coisas mais finas, se ele tivese as ferramentas"
 
 #: script/room.js:126
 msgid "workshop's finally ready. builder's excited to get to it"
-msgstr ""
-"oficina está finalmente pronto. construtor está animado para chegar a ele"
+msgstr "oficina está finalmente pronto. construtor está animado para chegar a ele"
 
 #: script/room.js:137
 msgid "steelworks"
@@ -913,8 +910,7 @@ msgstr "siderurgia"
 
 #: script/room.js:140
 msgid "builder says the villagers could make steel, given the tools"
-msgstr ""
-"construtor diz que os moradores poderiam fazer aço, dadas as ferramentas"
+msgstr "construtor diz que os moradores poderiam fazer aço, dadas as ferramentas"
 
 #: script/room.js:141
 msgid "a haze falls over the village as the steelworks fires up"
@@ -1068,9 +1064,7 @@ msgstr "o fogo é {0}"
 msgid ""
 "the stranger is standing by the fire. she says she can help. says she builds "
 "things."
-msgstr ""
-"o estranho está de pé perto do fogo. ela diz que pode ajudar. diz que ela "
-"constrói coisas."
+msgstr "o estranho está de pé perto do fogo. ela diz que pode ajudar. diz que ela constrói coisas."
 
 #: script/room.js:593
 msgid "freezing"
