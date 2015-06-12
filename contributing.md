@@ -1,7 +1,7 @@
 Contributing to A Dark Room
 ===========
 
-Hello and welcome, contributoars both new, and old.
+Hello and welcome, contributors both new, and old.
 
 Like most projects on GitHub, A Dark Room is open source, and thrives off contributions from members of the community. We appreciate any pull requests or issues that you may open in the project, no matter the size.
 <br><hr>
