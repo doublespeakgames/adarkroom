@@ -642,7 +642,7 @@ msgstr "tomar:"
 
 #: script/localization.js:78
 msgid "drop:"
-msgstr "cair:"
+msgstr "largar:"
 
 #: script/localization.js:79
 msgid "forest"
