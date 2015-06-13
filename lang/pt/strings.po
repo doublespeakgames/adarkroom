@@ -3,24 +3,24 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2014-09-27 12:34+0200\n"
-"PO-Revision-Date: 2015-02-07 14:15-0500\n"
+"PO-Revision-Date: 2015-06-02 15:56-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.1\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: script/dropbox.js:64
 msgid "Dropbox connection"
-msgstr "Dropbox conexão"
+msgstr "Conexão do Dropbox"
 
 #: script/dropbox.js:67
 msgid "connect game to dropbox local storage"
-msgstr "conectar jogo dropbox armazenamento local"
+msgstr "conectar o jogo para armazenamento local de dropbox"
 
 #: script/dropbox.js:70
 msgid "connect"
@@ -33,11 +33,11 @@ msgstr "cancelar"
 
 #: script/dropbox.js:88 script/dropbox.js:180
 msgid "Dropbox Export / Import"
-msgstr "Dropbox Exportação / Importação"
+msgstr "Exportação / Importação no Dropbox"
 
 #: script/dropbox.js:91
 msgid "export or import save data to dropbox datastorage"
-msgstr "exportação ou importação Armazenar dados dropbox datastorage"
+msgstr "exportar ou importar dados salvos para o dropbox"
 
 #: script/dropbox.js:92
 msgid "your are connected to dropbox with account / email "
@@ -57,27 +57,27 @@ msgstr "sair"
 
 #: script/dropbox.js:115
 msgid "choose one slot to save to"
-msgstr "escolher um slot para salvar a"
+msgstr "escolher um slot para salvar"
 
 #: script/dropbox.js:121
 msgid "save to slot"
-msgstr "salvar a ranhura"
+msgstr "salvar a um slot"
 
 #: script/dropbox.js:144
 msgid "choose one slot to load from"
-msgstr "escolher um slot para carregar a partir"
+msgstr "escolher um slot para carregar"
 
 #: script/dropbox.js:151
 msgid "load from slot"
-msgstr "carga do slot"
+msgstr "carregar do slot"
 
 #: script/dropbox.js:183
 msgid "successfully saved to dropbox datastorage"
-msgstr "salvo com sucesso dropbox datastorage"
+msgstr "salvo com sucesso ao dropbox "
 
 #: script/dropbox.js:184
 msgid "error while saving to dropbox datastorage"
-msgstr "erro ao salvar a dropbox datastorage"
+msgstr "erro ao salvar ao dropbox"
 
 #: script/dropbox.js:187
 msgid "ok"
@@ -89,11 +89,11 @@ msgstr "boxer"
 
 #: script/engine.js:23
 msgid "punches do more damage"
-msgstr "socos fazer mais danos"
+msgstr "socos dão mais dano"
 
 #: script/engine.js:24
 msgid "learned to throw punches with purpose"
-msgstr "aprendido a dar socos com finalidade"
+msgstr "aprendeu a dar socos com finalidade"
 
 #: script/engine.js:27
 msgid "martial artist"
@@ -101,7 +101,7 @@ msgstr "artista marcial"
 
 #: script/engine.js:28
 msgid "punches do even more damage."
-msgstr "socos fazer ainda mais danos."
+msgstr "socos dão ainda mais danos."
 
 #: script/engine.js:29
 msgid "learned to fight quite effectively without weapons"
@@ -117,7 +117,7 @@ msgstr "soco duas vezes mais rápido, e com ainda mais força"
 
 #: script/engine.js:34
 msgid "learned to strike faster without weapons"
-msgstr "aprenderam a atacar mais rápido sem armas"
+msgstr "aprendeu a atacar mais rápido sem armas"
 
 #: script/engine.js:37
 msgid "barbarian"
@@ -125,7 +125,7 @@ msgstr "bárbaro"
 
 #: script/engine.js:38
 msgid "melee weapons deal more damage"
-msgstr "armas brancas mais dano"
+msgstr "armas brancas dão mais dano"
 
 #: script/engine.js:39
 msgid "learned to swing weapons with force"
@@ -137,11 +137,11 @@ msgstr "metabolismo lento"
 
 #: script/engine.js:43
 msgid "go twice as far without eating"
-msgstr "ir duas vezes até sem comer"
+msgstr "ir duas vezes mais sem comer"
 
 #: script/engine.js:44
 msgid "learned how to ignore the hunger"
-msgstr "Aprendi a ignorar a fome"
+msgstr "aprendeu a ignorar a fome"
 
 #: script/engine.js:47
 msgid "desert rat"
@@ -149,11 +149,11 @@ msgstr "deserto rato"
 
 #: script/engine.js:48
 msgid "go twice as far without drinking"
-msgstr "ir duas vezes até sem beber"
+msgstr "ir duas vezes mais sem beber"
 
 #: script/engine.js:49
 msgid "learned to love the dry air"
-msgstr "Aprendi a amar o ar seco"
+msgstr "aprendeu a amar o ar seco"
 
 #: script/engine.js:52
 msgid "evasive"
@@ -165,7 +165,7 @@ msgstr "esquivar de ataques de forma mais eficaz"
 
 #: script/engine.js:54
 msgid "learned to be where they're not"
-msgstr "Aprendi a ser o lugar onde eles não são"
+msgstr "aprendeu a estar onde eles não estão"
 
 #: script/engine.js:57
 msgid "precise"
@@ -173,11 +173,11 @@ msgstr "preciso"
 
 #: script/engine.js:58
 msgid "land blows more often"
-msgstr "terra sopra com mais freqüência"
+msgstr "terra sopra com mais frequência"
 
 #: script/engine.js:59
 msgid "learned to predict their movement"
-msgstr "aprendeu a prever seu movimento"
+msgstr "aprendeu a prever os movimentos deles"
 
 #: script/engine.js:62
 msgid "scout"
@@ -189,7 +189,7 @@ msgstr "veja mais"
 
 #: script/engine.js:64
 msgid "learned to look ahead"
-msgstr "Aprendi a olhar para frente"
+msgstr "aprendeu a olhar para frente"
 
 #: script/engine.js:67
 msgid "stealthy"
@@ -201,7 +201,7 @@ msgstr "melhor evitar o conflito em estado selvagem"
 
 #: script/engine.js:69
 msgid "learned how not to be seen"
-msgstr "aprendi como não ser visto"
+msgstr "aprendeu como não ser visto"
 
 #: script/engine.js:72
 msgid "gastronome"
@@ -225,7 +225,7 @@ msgstr "reiniciar."
 
 #: script/engine.js:148
 msgid "share."
-msgstr "ação."
+msgstr "compartilhar."
 
 #: script/engine.js:154
 msgid "save."
@@ -237,19 +237,19 @@ msgstr "dropbox."
 
 #: script/engine.js:170
 msgid "app store."
-msgstr "app loja."
+msgstr "app store."
 
 #: script/engine.js:249
 msgid "Export / Import"
-msgstr "Exportação / Importação"
+msgstr "Exportar / Importar"
 
 #: script/engine.js:253
 msgid "export or import save data, for backing up"
-msgstr "exportação ou importação de poupança de dados, para fazer backup"
+msgstr "exportar ou importar dados salvos, para back up"
 
 #: script/engine.js:254
 msgid "or migrating computers"
-msgstr "ou computadores migrando"
+msgstr "ou migração de computadores"
 
 #: script/engine.js:258
 msgid "export"
@@ -265,11 +265,11 @@ msgstr "você tem certeza?"
 
 #: script/engine.js:274
 msgid "if the code is invalid, all data will be lost."
-msgstr "Se o código for inválido, todos os dados serão perdidos."
+msgstr "se o código for inválido, todos os dados serão perdidos."
 
 #: script/engine.js:275
 msgid "this is irreversible."
-msgstr "esta é irreversível."
+msgstr "isso é irreversível."
 
 #: script/engine.js:279 script/engine.js:365
 msgid "yes"
@@ -281,11 +281,11 @@ msgstr "não"
 
 #: script/engine.js:290
 msgid "put the save code here."
-msgstr "colocar o código de economia aqui."
+msgstr "colocar o código de save aqui."
 
 #: script/engine.js:322
 msgid "Export"
-msgstr "Exportação"
+msgstr "Exportar"
 
 #: script/engine.js:325
 msgid "save this."
@@ -345,15 +345,15 @@ msgstr "comer carne"
 
 #: script/events.js:162
 msgid "use meds"
-msgstr "uso de medicamentos"
+msgstr "usar medicamentos"
 
 #: script/events.js:360 script/events.js:405
 msgid "miss"
-msgstr "perder"
+msgstr "errou"
 
 #: script/events.js:373 script/events.js:418
 msgid "stunned"
-msgstr "aturdido"
+msgstr "atordoado"
 
 #: script/events.js:494 script/events/global.js:42 script/events/global.js:59
 #: script/events/room.js:142 script/events/room.js:162
@@ -370,7 +370,7 @@ msgstr "aturdido"
 #: script/events/setpieces.js:3510 script/events/setpieces.js:3533
 #: script/events/setpieces.js:3561
 msgid "leave"
-msgstr "deixar"
+msgstr "sair"
 
 #: script/events.js:780
 msgid "*** EVENT ***"
@@ -378,7 +378,7 @@ msgstr "*** EVENTO ***"
 
 #: script/localization.js:4
 msgid "saved."
-msgstr "salvos."
+msgstr "salvo."
 
 #: script/localization.js:5
 msgid "wood"
@@ -386,7 +386,7 @@ msgstr "madeira"
 
 #: script/localization.js:6
 msgid "builder"
-msgstr "construtor"
+msgstr "construtora"
 
 #: script/localization.js:7
 msgid "teeth"
@@ -454,7 +454,7 @@ msgstr "caçador"
 
 #: script/localization.js:23 script/outside.js:36
 msgid "tanner"
-msgstr "curtidor"
+msgstr "coureiro"
 
 #: script/localization.js:24
 msgid "grenade"
@@ -534,79 +534,80 @@ msgstr "thieves"
 
 #: script/localization.js:45
 msgid "not enough fur"
-msgstr "Não pele suficiente"
+msgstr "pele insuficiente"
 
 #: script/localization.js:46
 msgid "not enough wood"
-msgstr "not enough wood"
+msgstr "madeira insuficiente"
 
 #: script/localization.js:47
 msgid "not enough coal"
-msgstr "não o suficiente carvão"
+msgstr "carvão insuficiente"
 
 #: script/localization.js:48
 msgid "not enough iron"
-msgstr "Não ferro suficiente"
+msgstr "ferro insuficiente"
 
 #: script/localization.js:49
 msgid "not enough steel"
-msgstr "não de aço suficiente"
+msgstr "aço insuficiente"
 
 #: script/localization.js:50
 msgid "baited trap"
-msgstr "baited trap"
+msgstr "armadilha com isca"
 
 #: script/localization.js:51
+#, fuzzy
 msgid "not enough scales"
-msgstr "escalas não suficientes"
+msgstr "escamas insuficiente"
 
 #: script/localization.js:52
 msgid "not enough cloth"
-msgstr "Não pano suficiente"
+msgstr "pano insuficiente"
 
 #: script/localization.js:53
 msgid "not enough teeth"
-msgstr "dentes não é suficiente"
+msgstr "dentes insuficentes"
 
 #: script/localization.js:54
 msgid "not enough leather"
-msgstr "Não couro suficiente"
+msgstr "couro insuficiente"
 
 #: script/localization.js:55
 msgid "not enough meat"
-msgstr "não carne suficiente"
+msgstr "carne insuficiente"
 
 #: script/localization.js:56
 msgid "the compass points east"
-msgstr "os pontos cardeais leste"
+msgstr "a bússola aponta para o leste"
 
 #: script/localization.js:57
 msgid "the compass points west"
-msgstr "os pontos cardeais oeste"
+msgstr "a bússola aponta para o oeste"
 
 #: script/localization.js:58
 msgid "the compass points north"
-msgstr "os pontos cardeais norte"
+msgstr "a bússola aponta para o norte"
 
 #: script/localization.js:59
 msgid "the compass points south"
-msgstr "os pontos cardeais sul"
+msgstr "a bússola aponta para o sul"
 
 #: script/localization.js:60
 msgid "the compass points northeast"
-msgstr "os pontos cardeais nordeste"
+msgstr "a bússola aponta para o nordeste"
 
 #: script/localization.js:61
 msgid "the compass points northwest"
-msgstr "os pontos cardeais noroeste"
+msgstr "a bússola aponta para o noroeste"
 
 #: script/localization.js:62
 msgid "the compass points southeast"
-msgstr "os pontos cardeais sudeste"
+msgstr "a bússola aponta para o sudeste"
 
 #: script/localization.js:63
 msgid "the compass points southwest"
-msgstr "os pontos cardeais sudoeste"
+msgstr "a bússola aponta para o sudoeste"
 
 #: script/localization.js:70
 msgid "stores"
@@ -630,7 +631,7 @@ msgstr "comprar:"
 
 #: script/localization.js:75
 msgid "supplies:"
-msgstr "abastecimento:"
+msgstr "suprimentos:"
 
 #: script/localization.js:76
 msgid "perks:"
@@ -666,7 +667,7 @@ msgstr "pedaços de carne"
 
 #: script/outside.js:110
 msgid "strange scales"
-msgstr "escalas estranhas"
+msgstr "escamas estranhas"
 
 #: script/outside.js:115
 msgid "scattered teeth"
@@ -674,11 +675,11 @@ msgstr "dentes dispersos"
 
 #: script/outside.js:120
 msgid "tattered cloth"
-msgstr "tattered cloth"
+msgstr "pano rasgado"
 
 #: script/outside.js:125
 msgid "a crudely made charm"
-msgstr "um encanto crua feita"
+msgstr "um amuleto feito grosseiramente"
 
 #: script/outside.js:142 script/outside.js:535
 msgid "A Silent Forest"
@@ -694,19 +695,19 @@ msgstr "um estranho chega no meio da noite"
 
 #: script/outside.js:189
 msgid "a weathered family takes up in one of the huts."
-msgstr "uma família resistiu ocupa em uma das cabanas."
+msgstr "uma família desgastada descansa em uma das cabanas."
 
 #: script/outside.js:191
 msgid "a small group arrives, all dust and bones."
-msgstr "a small group arrives, all dust and bones."
+msgstr "um pequeno grupo chega, todos acabados."
 
 #: script/outside.js:193
 msgid "a convoy lurches in, equal parts worry and hope."
-msgstr "um comboio guinadas em, partes iguais preocupação e esperança."
+msgstr "um comboio chega à balanços, partes iguais de preocupação e esperança."
 
 #: script/outside.js:195
 msgid "the town's booming. word does get around."
-msgstr "da expansão da cidade. palavra não se locomover."
+msgstr "a cidade está expandindo. a palavra se espalha"
 
 #: script/outside.js:425
 msgid "pop "
@@ -734,15 +735,15 @@ msgstr "Uma Grande Aldeia"
 
 #: script/outside.js:545
 msgid "A Raucous Village"
-msgstr "Um Rouco Aldeia"
+msgstr "Uma Aldeia Vibrante"
 
 #: script/outside.js:557
 msgid "the sky is grey and the wind blows relentlessly"
-msgstr "o céu é cinza eo vento sopra sem parar"
+msgstr "o céu está cinza e o vento sopra sem parar"
 
 #: script/outside.js:567
 msgid "dry brush and dead branches litter the forest floor"
-msgstr "pincel seco e lixo galhos mortos no chão da floresta"
+msgstr "folhas secas e galhos mortos espalhados no chão da floresta"
 
 #: script/outside.js:593
 msgid "the traps contain "
@@ -754,7 +755,7 @@ msgstr "e"
 
 #: script/path.js:33 script/path.js:309
 msgid "A Dusty Path"
-msgstr "Um caminho empoeirad"
+msgstr "Um caminho empoeirado"
 
 #: script/path.js:50
 msgid "embark"
@@ -762,7 +763,7 @@ msgstr "embarcar"
 
 #: script/path.js:68
 msgid "the compass points "
-msgstr "os pontos cardeais"
+msgstr "à bussola aponta"
 
 #: script/path.js:142
 msgid "none"
@@ -797,8 +798,8 @@ msgid ""
 "builder says she can make traps to catch any creatures might still be alive "
 "out there"
 msgstr ""
-"construtor diz que ela pode fazer armadilhas para pegar todas as criaturas "
-"que ainda poderia estar vivo lá fora"
+"construtora diz que ela pode fazer armadilhas para pegar todas as criaturas "
+"que ainda poderiam vivas lá fora"
 
 #: script/room.js:26
 msgid "more traps to catch more creatures"
@@ -814,7 +815,8 @@ msgstr "carrinho"
 
 #: script/room.js:40
 msgid "builder says she can make a cart for carrying wood"
-msgstr "construtor diz que ela pode fazer um carrinho para transportar madeira"
+msgstr ""
+"construtora diz que ela pode fazer um carrinho para transportar madeira"
 
 #: script/room.js:41
 msgid "the rickety cart will carry more wood from the forest"
@@ -826,12 +828,13 @@ msgstr "cabana"
 
 #: script/room.js:53
 msgid "builder says there are more wanderers. says they'll work, too."
-msgstr "construtor diz que há mais errantes. diz que vai trabalhar também."
+msgstr "construtora diz que há mais errantes. diz que vão trabalhar também."
 
 #: script/room.js:54
 msgid "builder puts up a hut, out in the forest. says word will get around."
 msgstr ""
-"construtor coloca-se uma cabana, na floresta. diz a palavra vai se locomover."
+"construtora constrói uma cabana, na floresta. diz que a palavra vai se "
+"espalhar."
 
 #: script/room.js:55
 msgid "no more room for huts."
@@ -843,15 +846,15 @@ msgstr "alojamento"
 
 #: script/room.js:68
 msgid "villagers could help hunt, given the means"
-msgstr "aldeões poderia ajudar a caçar, dados os meios"
+msgstr "aldeões poderiam ajudar a caçar, dados os meios"
 
 #: script/room.js:69
 msgid "the hunting lodge stands in the forest, a ways out of town"
-msgstr "o pavilhão de caça está na floresta, maneiras para fora da cidade"
+msgstr "o pavilhão de caça está na floresta,  fora da cidade"
 
 #: script/room.js:80
 msgid "trading post"
-msgstr "feitoria"
+msgstr "posto de troca"
 
 #: script/room.js:83
 msgid "a trading post would make commerce easier"
@@ -871,26 +874,27 @@ msgstr "curtume"
 #: script/room.js:97
 msgid "builder says leather could be useful. says the villagers could make it."
 msgstr ""
-"construtor diz couro poderia ser útil. diz que os moradores poderiam fazê-lo."
+"construtora diz que couro poderia ser útil. diz que os moradores poderiam "
+"fazê-lo."
 
 #: script/room.js:98
 msgid "tannery goes up quick, on the edge of the village"
-msgstr "curtume sobe rápido, na orla da aldeia"
+msgstr "curtume cresce rápido, na orla da aldeia"
 
 #: script/room.js:108
 msgid "smokehouse"
-msgstr "defumadouro"
+msgstr "fumeiro"
 
 #: script/room.js:111
 msgid ""
 "should cure the meat, or it'll spoil. builder says she can fix something up."
 msgstr ""
-"eve curar a carne, ou ele vai estragar. construtor diz que pode corrigir "
+"deve curar a carne, ou vai estragar. construtora diz que pode consertar "
 "alguma coisa."
 
 #: script/room.js:112
 msgid "builder finishes the smokehouse. she looks hungry."
-msgstr "construtor termina o fumeiro. ela se parece com fome."
+msgstr "construtora termina o fumeiro. ela parece com fome."
 
 #: script/room.js:122
 msgid "workshop"
@@ -905,7 +909,7 @@ msgstr ""
 #: script/room.js:126
 msgid "workshop's finally ready. builder's excited to get to it"
 msgstr ""
-"oficina está finalmente pronto. construtor está animado para chegar a ele"
+"oficina está finalmente pronta. construtora está animada para chegar dele"
 
 #: script/room.js:137
 msgid "steelworks"
@@ -914,11 +918,11 @@ msgstr "siderurgia"
 #: script/room.js:140
 msgid "builder says the villagers could make steel, given the tools"
 msgstr ""
-"construtor diz que os moradores poderiam fazer aço, dadas as ferramentas"
+"construtora diz que os moradores poderiam fazer aço, dadas as ferramentas"
 
 #: script/room.js:141
 msgid "a haze falls over the village as the steelworks fires up"
-msgstr "uma neblina cai sobre a aldeia como as siderúrgicas despede-se"
+msgstr "uma neblina cai sobre a aldeia como as siderúrgicas"
 
 #: script/room.js:152
 msgid "armoury"
@@ -926,7 +930,7 @@ msgstr "arsenal"
 
 #: script/room.js:155
 msgid "builder says it'd be useful to have a steady source of bullets"
-msgstr "construtor diz que seria útil ter uma fonte constante de balas"
+msgstr "construtora diz que seria útil ter uma fonte constante de munição"
 
 #: script/room.js:156
 msgid "armoury's done, welcoming back the weapons of the past."
