@@ -258,7 +258,7 @@ div.button div.cooldown {
 .upBtn, .dnBtn, .upManyBtn, .dnManyBtn {
 	position: absolute;
 	width: 14px;
-	height: 15px;
+	height: 10px;
 	cursor: pointer;
 }
 
@@ -275,11 +275,11 @@ div.button div.cooldown {
 }
 
 .upBtn {
-	top: -3px;
+	top: -1px;
 }
 
 .upManyBtn {
-	top: -3px;
+	top: -1px;
 }
 
 .upBtn:after, .upBtn:before, .upManyBtn:after, .upManyBtn:before {
@@ -288,7 +288,7 @@ div.button div.cooldown {
 	content: " ";
 	height: 0;
 	width: 0;
-	bottom: 4px;
+	bottom: 2px;
 }
 
 .upBtn:after, .upManyBtn:after {
@@ -305,11 +305,11 @@ div.button div.cooldown {
 
 
 .dnBtn {
-	bottom: -3px;
+	bottom: -1px;
 }
 
 .dnManyBtn {
-	bottom: -3px;
+	bottom: -1px;
 }
 
 .dnBtn:after, .dnBtn:before, .dnManyBtn:after, .dnManyBtn:before {
@@ -318,7 +318,7 @@ div.button div.cooldown {
 	content: " ";
 	height: 0;
 	width: 0;
-	top: 4px;
+	top: 2px;
 }
 
 /* Overall size of buttons controlled by this style
