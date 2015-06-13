@@ -258,7 +258,7 @@ div.button div.cooldown {
 .upBtn, .dnBtn, .upManyBtn, .dnManyBtn {
 	position: absolute;
 	width: 14px;
-	height: 10px;
+	height: 12px;
 	cursor: pointer;
 }
 
@@ -275,11 +275,11 @@ div.button div.cooldown {
 }
 
 .upBtn {
-	top: -1px;
+	top: -3px;
 }
 
 .upManyBtn {
-	top: -1px;
+	top: -3px;
 }
 
 .upBtn:after, .upBtn:before, .upManyBtn:after, .upManyBtn:before {
@@ -305,11 +305,11 @@ div.button div.cooldown {
 
 
 .dnBtn {
-	bottom: -1px;
+	bottom: -3px;
 }
 
 .dnManyBtn {
-	bottom: -1px;
+	bottom: -3px;
 }
 
 .dnBtn:after, .dnBtn:before, .dnManyBtn:after, .dnManyBtn:before {
