@@ -135,7 +135,7 @@ Events.Outside = [
 					_('the nights are rent with screams.')
 				],
 				onLoad: function() {
-					var numKilled = Math.floor(Math.random() * 20) + 1;
+					var numKilled = Math.floor(Math.random() * Math.floor($SM.get('game.population', true)/2)) + 1;
 					Outside.killVillagers(numKilled);
 				},
 				buttons: {
