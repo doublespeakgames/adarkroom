@@ -389,7 +389,7 @@ div.tooltip {
 	bottom: 20px;
 }
 
-*:hover > div.tooltip {
+*:hover > div.tooltip, *:focus > div.tooltip {
 	display: block;
 }
 
