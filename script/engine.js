@@ -722,6 +722,16 @@
 			}
 		},
 
+		setInterval: function(callback, interval, skipDouble){
+			if( Engine.options.doubleTime && !skipDouble ){
+				Engine.log('Double time, cutting interval in half');
+				interval /= 2;
+			}
+
+			return setInterval(callback, interval);
+
+		},
+
 		setTimeout: function(callback, timeout, skipDouble){
 
 			if( Engine.options.doubleTime && !skipDouble ){

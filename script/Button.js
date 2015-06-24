@@ -24,6 +24,9 @@ var Button = {
 
 		el.append($("<div>").addClass('cooldown'));
 
+		// waiting for expiry of residual cooldown detected in state
+		Button.cooldown(el, true);
+
 		if(options.cost) {
 			var ttPos = options.ttPos ? options.ttPos : "bottom right";
 			var costTooltip = $('<div>').addClass('tooltip ' + ttPos);
@@ -43,6 +46,8 @@ var Button = {
 		return el;
 	},
 
+	saveCooldown: true,
+
 	setDisabled: function(btn, disabled) {
 		if(btn) {
 			if(!disabled && !btn.data('onCooldown')) {
@@ -61,29 +66,57 @@ var Button = {
 		return false;
 	},
 
-	cooldown: function(btn) {
+	cooldown: function(btn, option) {
 		var cd = btn.data("cooldown");
+		var id = 'cooldown.'+ btn.attr('id');
 		if(cd > 0) {
-			milliseconds = cd * 1000;
-			if (Engine.options.doubleTime){
-				milliseconds /= 2;
+			// param "start" takes value from cooldown time if not specified
+			var start, left;
+			switch(option){
+				// a switch will allow for several uses of cooldown function
+				case 'state':
+					if(!$SM.get(id)){
+						return;
+					}
+					start = Math.min($SM.get(id), cd);
+					left = (start / cd).toFixed(4);
+					break;
+				default:
+					start = cd;
+					left = 1;
 			}
-
-			$('div.cooldown', btn).stop(true, true).width("100%").animate({width: '0%'}, milliseconds, 'linear', function() {
-				var b = $(this).closest('.button');
-				b.data('onCooldown', false);
-				if(!b.data('disabled')) {
-					b.removeClass('disabled');
-				}
+			Button.clearCooldown(btn);
+			if(Button.saveCooldown){
+				$SM.set(id,start);
+				// residual value is measured in seconds
+				// saves program performance
+				btn.data('countdown', Engine.setInterval(function(){
+					$SM.set(id, $SM.get(id, true) - 0.5, true);
+				},500));
+			}
+			var time = start;
+			if (Engine.options.doubleTime){
+				time /= 2;
+			}
+			$('div.cooldown', btn).width(left * 100 +"%").animate({width: '0%'}, time * 1000, 'linear', function() {
+				Button.clearCooldown(btn, true);
 			});
 			btn.addClass('disabled');
 			btn.data('onCooldown', true);
 		}
 	},
 
-	clearCooldown: function(btn) {
-		$('div.cooldown', btn).stop(true, true);
+	clearCooldown: function(btn, ended) {
+		var ended = ended || false;
+		if(!ended){
+			$('div.cooldown', btn).stop(true, true);
+		}
 		btn.data('onCooldown', false);
+		if(btn.data('countdown')){
+			window.clearInterval(btn.data('countdown'));
+			$SM.remove('cooldown.'+ btn.attr('id'));
+			btn.removeData('countdown');
+		}
 		if(!btn.data('disabled')) {
 			btn.removeClass('disabled');
 		}
