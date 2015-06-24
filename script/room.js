@@ -437,7 +437,7 @@ var Room = {
 			}
 		},
 		'compass': {
-			type: 'upgrade',
+			type: 'special',
 			maximum: 1,
 			cost: function() {
 				return { 
@@ -462,6 +462,8 @@ var Room = {
 			options
 		);
 		
+		Room.pathDiscovery = Boolean($SM.get('stores["compass"]'));
+
 		if(Engine._debug) {
 			this._ROOM_WARM_DELAY = 5000;
 			this._BUILDER_STATE_DELAY = 5000;
@@ -748,13 +750,27 @@ var Room = {
 	
 	updateStoresView: function() {
 		var stores = $('div#stores');
+	  var resources = $('div#resources');
+		var special = $('div#special');
 		var weapons = $('div#weapons');
-		var needsAppend = false, wNeedsAppend = false, newRow = false;
+		var needsAppend = false, rNeedsAppend = false, sNeedsAppend = false, wNeedsAppend = false, newRow = false;
 		if(stores.length === 0) {
 			stores = $('<div>').attr({
 				id: 'stores'
 			}).css('opacity', 0);
 			needsAppend = true;
+		}
+		if(resources.length === 0) {
+			resources = $('<div>').attr({
+				id: 'resources'
+			}).css('opacity', 0);
+			rNeedsAppend = true;
+		}
+		if(special.length === 0) {
+			special = $('<div>').attr({
+				id: 'special'
+			}).css('opacity', 0);
+			sNeedsAppend = true;
 		}
 		if(weapons.length === 0) {
 			weapons = $('<div>').attr({
@@ -781,8 +797,11 @@ var Room = {
 			case 'weapon':
 				location = weapons;
 				break;
+			case 'special':
+				location = special;
+				break;
 			default:
-				location = stores;
+				location = resources;
 				break;
 			}
 			
@@ -827,8 +846,18 @@ var Room = {
 				$('div#' + row.attr('id') + ' > div.row_val', location).text(Math.floor(num));
 			}
 		}
+				
+		if(rNeedsAppend && resources.children().length > 0) {
+			resources.prependTo(stores);
+			resources.animate({opacity: 1}, 300, 'linear');
+		}
 		
-		if(needsAppend && stores.children().length > 0) {
+		if(sNeedsAppend && special.children().length > 0) {
+			special.appendTo(stores);
+			special.animate({opacity: 1}, 300, 'linear');
+		}
+		
+		if(needsAppend && stores.find('div.storeRow').length > 0) {
 			stores.appendTo('div#storesContainer');
 			stores.animate({opacity: 1}, 300, 'linear');
 		}
@@ -845,10 +874,15 @@ var Room = {
 		if($("div#outsidePanel").length) {
 			Outside.updateVillage();
 		}
+
+		if($SM.get('stores.compass') && !Room.pathDiscovery){
+			Room.pathDiscovery = true;
+			Path.openPath();
+		}
 	},
 	
 	updateIncomeView: function() {
-		var stores = $('div#stores');
+		var stores = $('div#resources');
 		if(stores.length === 0 || typeof $SM.get('income') == 'undefined') return;
 		$('div.storeRow', stores).each(function(index, el) {
 			el = $(el);
@@ -898,10 +932,6 @@ var Room = {
 		Notifications.notify(Room, good.buildMsg);
 		
 		$SM.add('stores["'+thing+'"]', 1);
-		
-		if(thing == 'compass') {
-			Path.openPath();
-		}
 	},
 	
 	build: function(buildBtn) {
@@ -1105,6 +1135,12 @@ var Room = {
 		if(bNeedsAppend && buildSection.children().length > 0) {
 			buySection.appendTo('div#roomPanel').animate({opacity: 1}, 300, 'linear');
 		}
+	},
+	
+	compassTooltip: function(direction){
+		var tt = $('<div>').addClass('tooltip bottom right');
+		$('<div>').addClass('row_key').text(_('the compass points '+ direction)).appendTo(tt);
+		tt.appendTo($('#row_compass'));
 	},
 	
 	handleStateUpdates: function(e){

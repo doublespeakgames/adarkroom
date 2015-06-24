@@ -40,7 +40,7 @@ var World = {
 	SOUTH: [ 0,  1],
 	WEST:  [-1,  0],
 	EAST:  [ 1,  0],
-	
+
 	Weapons: {
 		'fists': {
 			verb: _('punch'),
@@ -158,6 +158,12 @@ var World = {
 		
 		//subscribe to stateUpdates
 		$.Dispatch('stateUpdate').subscribe(World.handleStateUpdates);
+		
+		// Map the ship and show compass tooltip
+		World.ship = World.mapSearch(World.TILE.SHIP,$SM.get('game.world.map'),1);
+		World.dir = World.compassDir(World.ship[0]);
+		// compass tooltip text
+		Room.compassTooltip(World.dir);
 	},
 	
 	clearDungeon: function() {
@@ -651,22 +657,56 @@ var World = {
 			var landmark = World.LANDMARKS[k];
 			for(var i = 0; i < landmark.num; i++) {
 				var pos = World.placeLandmark(landmark.minRadius, landmark.maxRadius, k, map);
-				if(k == World.TILE.SHIP) {
-					var dx = pos[0] - World.RADIUS, dy = pos[1] - World.RADIUS;
-					var horz = dx < 0 ? 'west' : 'east';
-					var vert = dy < 0 ? 'north' : 'south';
-					if(Math.abs(dx) / 2 > Math.abs(dy)) {
-						World.dir = horz;
-					} else if(Math.abs(dy) / 2 > Math.abs(dx)){
-						World.dir = vert;
-					} else {
-						World.dir = vert + horz;
-					}
-				}
 			}
 		}
 		
 		return map;
+	},
+	
+	mapSearch: function(target,map,required){
+		var max = World.LANDMARKS[target].num;
+		if(!max){
+			// this restrict the research to numerable landmarks
+			return null;
+		}
+		// restrict research if only a fixed number (usually 1) is required
+		max = (required) ? Math.min(required,max) : max;
+		var index = 0;
+		var targets = [];
+		search: // label for coordinate research
+		for(var i = 0; i <= World.RADIUS * 2; i++){
+			for(var j = 0; j <= World.RADIUS * 2; j++){
+				if(map[i][j].charAt(0) === target){
+					// search result is stored as an object;
+					// items are listed as they appear in the map, tl-br
+					// each item has relative coordinates and a compass-type direction
+					targets[index] = {
+						x : j - World.RADIUS, 
+						y : i - World.RADIUS,
+					}
+					index++;
+					if(index === max){
+						// optimisation: stop the research if maximum number of items has been reached
+						break search;
+					}
+				}
+			}
+		}
+		return targets;
+	},
+	
+	compassDir: function(pos){
+		var dir = '';
+		var horz = pos.x < 0 ? 'west' : 'east';
+		var vert = pos.y < 0 ? 'north' : 'south';
+		if(Math.abs(pos.x) / 2 > Math.abs(pos.y)) {
+			dir = horz;
+		} else if(Math.abs(pos.y) / 2 > Math.abs(pos.x)){
+			dir = vert;
+		} else {
+			dir = vert + horz;
+		}
+		return dir;
 	},
 	
 	placeLandmark: function(minRadius, maxRadius, landmark, map) {
