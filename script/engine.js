@@ -275,7 +275,7 @@
 						buttons: {
 							'export': {
 								text: _('export'),
-								onChoose: Engine.export64
+								nextScene: {1: 'inputExport'}
 							},
 							'import': {
 								text: _('import'),
@@ -284,6 +284,18 @@
 							'cancel': {
 								text: _('cancel'),
 								nextScene: 'end'
+							}
+						}
+					},
+					'inputExport': {
+						text: [_('save this.')],
+						textarea: Engine.export64(),
+						readonly: true,
+						buttons: {
+							'done': {
+								text: _('got it'),
+								nextScene: 'end',
+								onChoose: Engine.disableSelection
 							}
 						}
 					},
@@ -301,7 +313,7 @@
 							},
 							'no': {
 								text: _('no'),
-								nextScene: 'end'
+								nextScene: {1: 'start'}
 							}
 						}
 					},
@@ -335,26 +347,8 @@
 
 		export64: function() {
 			Engine.saveGame();
-			var string64 = Engine.generateExport64();
 			Engine.enableSelection();
-			Events.startEvent({
-				title: _('Export'),
-				scenes: {
-					start: {
-						text: [_('save this.')],
-						textarea: string64,
-						readonly: true,
-						buttons: {
-							'done': {
-								text: _('got it'),
-								nextScene: 'end',
-								onChoose: Engine.disableSelection
-							}
-						}
-					}
-				}
-			});
-			Engine.autoSelect('#description textarea');
+			return Engine.generateExport64();
 		},
 
 		import64: function(string64) {
@@ -599,6 +593,10 @@
 			//return (num > 0 ? "+" : "") + num + " per " + delay + "s";
 		},
 
+		keyLock: false,
+		tabNavigation: true,
+		restoreNavigation: false,
+
 		keyDown: function(e) {
 			e = e || window.event;
 			if(!Engine.keyPressed && !Engine.keyLock) {
@@ -614,9 +612,7 @@
 			Engine.pressed = false;
 			if(Engine.activeModule.keyUp) {
 				Engine.activeModule.keyUp(e);
-			}
-			else
-			{
+			} else {
 				switch(e.which) {
 					case 38: // Up
 					case 87:
@@ -634,33 +630,40 @@
 						break;
 					case 37: // Left
 					case 65:
-						if(Engine.activeModule == Ship && Path.tab)
-							Engine.travelTo(Path);
-						else if(Engine.activeModule == Path && Outside.tab){
-							Engine.activeModule.scrollSidebar('left', true);
-							Engine.travelTo(Outside);
-						}else if(Engine.activeModule == Outside && Room.tab){
-							Engine.activeModule.scrollSidebar('left', true);
-							Engine.travelTo(Room);
+						if(Engine.tabNavigation){
+							if(Engine.activeModule == Ship && Path.tab)
+								Engine.travelTo(Path);
+							else if(Engine.activeModule == Path && Outside.tab){
+								Engine.activeModule.scrollSidebar('left', true);
+								Engine.travelTo(Outside);
+							}else if(Engine.activeModule == Outside && Room.tab){
+								Engine.activeModule.scrollSidebar('left', true);
+								Engine.travelTo(Room);
+							}
 						}
 						Engine.log('left');
 						break;
 					case 39: // Right
 					case 68:
-						if(Engine.activeModule == Room && Outside.tab)
-							Engine.travelTo(Outside);
-						else if(Engine.activeModule == Outside && Path.tab){
-							Engine.activeModule.scrollSidebar('right', true);
-							Engine.travelTo(Path);
-						}else if(Engine.activeModule == Path && Ship.tab){
-							Engine.activeModule.scrollSidebar('right', true);
-							Engine.travelTo(Ship);
+						if(Engine.tabNavigation){
+							if(Engine.activeModule == Room && Outside.tab)
+								Engine.travelTo(Outside);
+							else if(Engine.activeModule == Outside && Path.tab){
+								Engine.activeModule.scrollSidebar('right', true);
+								Engine.travelTo(Path);
+							}else if(Engine.activeModule == Path && Ship.tab){
+								Engine.activeModule.scrollSidebar('right', true);
+								Engine.travelTo(Ship);
+							}
 						}
 						Engine.log('right');
 						break;
 				}
 			}
-
+			if(Engine.restoreNavigation){
+				Engine.tabNavigation = true;
+				Engine.restoreNavigation = false;
+			}
 			return false;
 		},
 
@@ -720,6 +723,16 @@
 			if(lang && typeof Storage != 'undefined' && localStorage) {
 				localStorage.lang = lang;
 			}
+		},
+
+		setInterval: function(callback, interval, skipDouble){
+			if( Engine.options.doubleTime && !skipDouble ){
+				Engine.log('Double time, cutting interval in half');
+				interval /= 2;
+			}
+
+			return setInterval(callback, interval);
+
 		},
 
 		setTimeout: function(callback, timeout, skipDouble){

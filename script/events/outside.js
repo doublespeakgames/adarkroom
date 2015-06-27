@@ -37,6 +37,7 @@ Events.Outside = [
 					_('the tracks disappear after just a few minutes.'),
 					_('the forest is silent.')
 				],
+				notification: _('nothing was found'),
 				buttons: {
 					'end': {
 						text: _('go home'),
@@ -49,6 +50,7 @@ Events.Outside = [
 					_('not far from the village lies a large beast, its fur matted with blood.'),
 					_('it puts up little resistance before the knife.')
 				],
+				notification: _('there was a beast. it\'s dead now'),
 				reward: {
 					fur: 100,
 					meat: 100,
@@ -63,7 +65,7 @@ Events.Outside = [
 			}
 		}
 	},
-	{
+	{ /* Hut fire */
 		title: _('Fire'),
 		isAvailable: function() {
 			return Engine.activeModule == Outside && $SM.get('game.buildings["hut"]', true) > 0 && $SM.get('game.population', true) > 5;
@@ -77,10 +79,7 @@ Events.Outside = [
 				notification: _('a fire has started'),
 				blink: true,
 				onLoad: function() {
-					var population = $SM.get('game.population', true);
-					var huts = $SM.get('game.buildings["hut"]', true);
-					$SM.set('game.buildings["hut"]', (huts - 1));
-					Outside.killVillagers(4);
+					Outside.destroyHuts(1);
 				},
 				buttons: {
 					'mourn': {
@@ -103,7 +102,7 @@ Events.Outside = [
 					_('a sickness is spreading through the village.'),
 					_('medicine is needed immediately.')
 				],
-
+				notification: _('some villagers are ill'),
 				blink: true,
 				buttons: {
 					'heal': {
@@ -121,6 +120,7 @@ Events.Outside = [
 				text: [
 					_('the sickness is cured in time.')
 				],
+				notification: _('sufferers are healed'),
 				buttons: {
 					'end': {
 						text: _('go home'),
@@ -134,8 +134,9 @@ Events.Outside = [
 					_('the days are spent with burials.'),
 					_('the nights are rent with screams.')
 				],
+				notification: _('sufferers are left to die'),
 				onLoad: function() {
-					var numKilled = Math.floor(Math.random() * 20) + 1;
+					var numKilled = Math.floor(Math.random() * Math.floor($SM.get('game.population', true)/2)) + 1;
 					Outside.killVillagers(numKilled);
 				},
 				buttons: {
@@ -159,6 +160,7 @@ Events.Outside = [
 					_('a terrible plague is fast spreading through the village.'),
 					_('medicine is needed immediately.')
 				],
+				notification: _('a plague afflicts the village'),
 				blink: true,
 				buttons: {
 					/* Because there is a serious need for medicine, the price is raised. */
@@ -185,6 +187,7 @@ Events.Outside = [
 					_('only a few die.'),
 					_('the rest bury them.')
 				],
+				notification: _('epidemic is eradicated eventually'),
 				onLoad: function() {
 					var numKilled = Math.floor(Math.random() * 5) + 2;
 					Outside.killVillagers(numKilled);
@@ -202,6 +205,7 @@ Events.Outside = [
 					_('the nights are rent with screams.'),
 					_('the only hope is a quick death.')
 				],
+				notification: _('population is almost exterminated'),
 				onLoad: function() {
 					var numKilled = Math.floor(Math.random() * 80) + 10;
 					Outside.killVillagers(numKilled);
@@ -228,6 +232,7 @@ Events.Outside = [
 					 _('the fight is short and bloody, but the beasts are repelled.'),
 					 _('the villagers retreat to mourn the dead.')
 				],
+				notification: _('wild beasts attack the villagers'),
 				onLoad: function() {
 					var numKilled = Math.floor(Math.random() * 10) + 1;
 					Outside.killVillagers(numKilled);
@@ -241,6 +246,7 @@ Events.Outside = [
 				buttons: {
 					'end': {
 						text: _('go home'),
+						notification: _('predators become prey. price is unfair'),
 						nextScene: 'end'
 					}
 				}
@@ -260,6 +266,7 @@ Events.Outside = [
 					_('well armed men charge out of the forest, firing into the crowd.'),
 					_('after a skirmish they are driven away, but not without losses.')
 				],
+				notification: _('troops storm the village'),
 				onLoad: function() {
 					var numKilled = Math.floor(Math.random() * 40) + 1;
 					Outside.killVillagers(numKilled);
@@ -273,6 +280,7 @@ Events.Outside = [
 				buttons: {
 					'end': {
 						text: _('go home'),
+						notification: _('warfare is bloodthirsty'),
 						nextScene: 'end'
 					}
 				}

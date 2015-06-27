@@ -823,6 +823,7 @@ var World = {
 					$('#outerSlider').animate({opacity:'1'}, 600, 'linear');
 					Button.cooldown($('#embarkButton'));
 					Engine.keyLock = false;
+					Engine.tabNavigation = true;
 				}, 2000, true);
 			});
 		}
@@ -865,6 +866,7 @@ var World = {
 		$('#outerSlider').animate({left: '0px'}, 300);
 		Engine.activeModule = Path;
 		Path.onArrival();
+		Engine.restoreNavigation = true;
 	},
 	
 	leaveItAtHome: function(thing) {
@@ -916,6 +918,7 @@ var World = {
 	},
 	
 	onArrival: function() {
+		Engine.tabNavigation = false;
 		Engine.keyLock = false;
 		// Explore in a temporary world-state. We'll commit the changes if you return home safe.
 		World.state = $.extend(true, {}, $SM.get('game.world'));

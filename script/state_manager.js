@@ -37,7 +37,8 @@ var StateManager = {
 			'playStats',    //anything play related: play time, loads, etc
 			'previous',     // prestige, score, trophies (in future), achievements (again, not yet), etc
 			'outfit',           // used to temporarily store the items to be taken on the path
-			'config'
+			'config',
+			'wait'          // mysterious wanderers are coming back
 		];
 
 		for(var which in cats) {
@@ -185,6 +186,21 @@ var StateManager = {
 		} catch (e) {
 			//it didn't exist in the first place
 			Engine.log('WARNING: Tried to remove non-existant state \''+stateName+'\'.');
+		}
+		if(!noEvent){
+			Engine.saveGame();
+			$SM.fireUpdate(stateName);
+		}
+	},
+
+	removeBranch(stateName, noEvent) {
+		for(var i in $SM.get(stateName)){
+			if(typeof $SM.get(stateName)[i] == 'object'){
+				$SM.removeBranch(stateName +'["'+ i +'"]');
+			}
+		}
+		if($.isEmptyObject($SM.get(stateName))){
+			$SM.remove(stateName);
 		}
 		if(!noEvent){
 			Engine.saveGame();
