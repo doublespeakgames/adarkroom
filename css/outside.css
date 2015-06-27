@@ -22,13 +22,9 @@ div#population {
 div#village:before {
 	position: absolute;
 	background: white;
-	content: "village";
+	content: attr(data-legend);
 	left: 8px;
 	top: -13px;
-}
-
-div#village.noHuts:before {
-	content: "forest";
 }
 
 div#workers {
