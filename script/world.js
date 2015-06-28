@@ -156,14 +156,14 @@ var World = {
 		
 		Engine.updateOuterSlider();
 		
-		//subscribe to stateUpdates
-		$.Dispatch('stateUpdate').subscribe(World.handleStateUpdates);
-		
 		// Map the ship and show compass tooltip
 		World.ship = World.mapSearch(World.TILE.SHIP,$SM.get('game.world.map'),1);
 		World.dir = World.compassDir(World.ship[0]);
 		// compass tooltip text
 		Room.compassTooltip(World.dir);
+		
+		//subscribe to stateUpdates
+		$.Dispatch('stateUpdate').subscribe(World.handleStateUpdates);
 	},
 	
 	clearDungeon: function() {
@@ -681,8 +681,8 @@ var World = {
 					// items are listed as they appear in the map, tl-br
 					// each item has relative coordinates and a compass-type direction
 					targets[index] = {
-						x : j - World.RADIUS, 
-						y : i - World.RADIUS,
+						x : i - World.RADIUS, 
+						y : j - World.RADIUS,
 					}
 					index++;
 					if(index === max){
