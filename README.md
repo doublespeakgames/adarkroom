@@ -33,6 +33,12 @@ a minimalist text adventure game for your browser
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=uk">Ukrainian</a></td>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=vi">Vietnamese</a></td>
 </tr>
+<tr>
+	<td><a href="http://adarkroom.doublespeakgames.com/?lang=el">Greek</a></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
 </table>
 
 or play the latest on [GitHub](http://doublespeakgames.github.io/adarkroom)
