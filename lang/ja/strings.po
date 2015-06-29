@@ -1824,7 +1824,7 @@ msgstr "餌を買う"
 
 #: script/events/room.js:33
 msgid "traps are more effective with bait."
-msgstr "罠は餌があるとより効果的だ。"
+msgstr "罠は餌があるとより効果的だ"
 
 #: script/events/room.js:39
 msgid "buy compass"
