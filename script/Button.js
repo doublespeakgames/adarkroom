@@ -25,7 +25,7 @@ var Button = {
 		el.append($("<div>").addClass('cooldown'));
 
 		// waiting for expiry of residual cooldown detected in state
-		Button.cooldown(el, true);
+		Button.cooldown(el, 'state');
 
 		if(options.cost) {
 			var ttPos = options.ttPos ? options.ttPos : "bottom right";
