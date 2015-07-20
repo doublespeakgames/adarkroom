@@ -9,22 +9,22 @@ a minimalist text adventure game for your browser
 <table>
 <tr><th colspan=4>Available Languages</tr>
 <tr>
-	<td><a href="http://adarkroom.doublespeakgames.com/?lang=zh_cn">Chinese</a></td>
+	<td><a href="http://adarkroom.doublespeakgames.com/?lang=zh_cn">Chinese (Simplified)</a></td>
+	<td><a href="http://adarkroom.doublespeakgames.com/?lang=zh_cn">Chinese (Traditional)</a></td>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=en">English</a></td>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=fr">French</a></td>
 </tr><tr>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=de">German</a></td>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=el">Greek</a></td>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=it">Italian</a></td>
-</tr><tr>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=ja">Japanese</a></td>
+</tr><tr>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=ko">Korean</a></td>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=nb">Norwegian</a></td>
-</tr><tr>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=pl">Polish</a></td>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=pt">Portuguese</a></td>
-	<td><a href="http://adarkroom.doublespeakgames.com/?lang=pt_br">Portuguese (Brazil)</a></td>
 </tr><tr>
+	<td><a href="http://adarkroom.doublespeakgames.com/?lang=pt_br">Portuguese (Brazil)</a></td>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=ru">Russian</a></td>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=es">Spanish</a></td>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=sv">Swedish</a></td>

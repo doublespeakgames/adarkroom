@@ -1,0 +1,2336 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: adarkroom\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2015-02-07 14:15-0500\n"
+"PO-Revision-Date: 2015-02-07 14:15-0500\n"
+"Last-Translator: Yuki Usagi <karst124@gmail.com>\n"
+"Language: zh_tw\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _\n"
+"X-Poedit-Basepath: .\n"
+"X-POOTLE-MTIME: 1421483365.000000\n"
+"X-Poedit-SearchPath-0: ./../../script\n"
+
+#: ../../script/outside.js:5
+msgid "Outside"
+msgstr "野外"
+
+#: ../../script/outside.js:13 ../../script/localization.js:41
+msgid "gatherer"
+msgstr "採集者"
+
+#: ../../script/outside.js:20 ../../script/localization.js:21
+msgid "hunter"
+msgstr "獵人"
+
+#: ../../script/outside.js:28 ../../script/localization.js:22
+msgid "trapper"
+msgstr "陷阱師"
+
+#: ../../script/outside.js:36 ../../script/localization.js:23
+msgid "tanner"
+msgstr "皮革師"
+
+#: ../../script/outside.js:44 ../../script/localization.js:27
+msgid "charcutier"
+msgstr "熏肉師"
+
+#: ../../script/outside.js:53 ../../script/localization.js:28
+msgid "iron miner"
+msgstr "鐵礦工人"
+
+#: ../../script/outside.js:61 ../../script/localization.js:30
+msgid "coal miner"
+msgstr "煤礦工人"
+
+#: ../../script/outside.js:69 ../../script/localization.js:32
+msgid "sulphur miner"
+msgstr "硫磺礦工"
+
+#: ../../script/outside.js:77 ../../script/localization.js:35
+msgid "steelworker"
+msgstr "煉鋼工人"
+
+#: ../../script/outside.js:86 ../../script/localization.js:34
+msgid "armourer"
+msgstr "軍械工人"
+
+#: ../../script/outside.js:100
+msgid "scraps of fur"
+msgstr "皮毛碎片"
+
+#: ../../script/outside.js:105
+msgid "bits of meat"
+msgstr "小片肉"
+
+#: ../../script/outside.js:110
+msgid "strange scales"
+msgstr "古怪鱗片"
+
+#: ../../script/outside.js:115
+msgid "scattered teeth"
+msgstr "殘缺牙齒"
+
+#: ../../script/outside.js:120
+msgid "tattered cloth"
+msgstr "破爛布料"
+
+#: ../../script/outside.js:125
+msgid "a crudely made charm"
+msgstr "做工粗糙的符咒"
+
+#: ../../script/outside.js:141 ../../script/outside.js:529
+msgid "A Silent Forest"
+msgstr "靜謐森林"
+
+#: ../../script/outside.js:166
+msgid "gather wood"
+msgstr "伐木"
+
+#: ../../script/outside.js:183
+msgid "a stranger arrives in the night"
+msgstr "陌生人在夜裡抵達"
+
+#: ../../script/outside.js:185
+msgid "a weathered family takes up in one of the huts."
+msgstr "一戶飽經風雨的人家住進一棟小屋"
+
+#: ../../script/outside.js:187
+msgid "a small group arrives, all dust and bones."
+msgstr "一群瘦骨嶙峋，風塵僕僕的人抵達了"
+
+#: ../../script/outside.js:189
+msgid "a convoy lurches in, equal parts worry and hope."
+msgstr "車隊歷經磨難來到了小鎮，懷著和擔憂同等的希望"
+
+#: ../../script/outside.js:191
+msgid "the town's booming. word does get around."
+msgstr "鎮子繁榮熱鬧，消息不脛而走"
+
+#: ../../script/outside.js:510
+msgid "check traps"
+msgstr "查看陷阱"
+
+#: ../../script/outside.js:531
+msgid "A Lonely Hut"
+msgstr "孤獨小屋"
+
+#: ../../script/outside.js:533
+msgid "A Tiny Village"
+msgstr "小型村落"
+
+#: ../../script/outside.js:535
+msgid "A Modest Village"
+msgstr "中型村落"
+
+#: ../../script/outside.js:537
+msgid "A Large Village"
+msgstr "大型村落"
+
+#: ../../script/outside.js:539
+msgid "A Raucous Village"
+msgstr "喧囂小鎮"
+
+#: ../../script/outside.js:551
+msgid "the sky is grey and the wind blows relentlessly"
+msgstr "天色陰沉，風無情地刮著"
+
+#: ../../script/outside.js:561
+msgid "dry brush and dead branches litter the forest floor"
+msgstr "林地上散落著枯枝敗葉"
+
+#: ../../script/path.js:43
+msgid "embark"
+msgstr "出發"
+
+#: ../../script/path.js:60
+msgid "the compass points "
+msgstr "羅盤指向:"
+
+#: ../../script/path.js:132
+msgid "none"
+msgstr "空"
+
+#: ../../script/path.js:134 ../../script/localization.js:15
+msgid "steel"
+msgstr "鋼"
+
+#: ../../script/path.js:136 ../../script/localization.js:14
+msgid "iron"
+msgstr "鐵"
+
+#: ../../script/path.js:138 ../../script/localization.js:13
+msgid "leather"
+msgstr "皮革"
+
+#: ../../script/path.js:142
+msgid "armour"
+msgstr "護甲"
+
+#: ../../script/path.js:153
+msgid "water"
+msgstr "水"
+
+#: ../../script/path.js:230 ../../script/world.js:284
+msgid "free {0}/{1}"
+msgstr "背包剩餘空間: {0}/{1}"
+
+#: ../../script/path.js:254
+msgid "weight"
+msgstr "負重"
+
+#: ../../script/path.js:256
+msgid "available"
+msgstr "可用"
+
+#: ../../script/events.js:344 ../../script/events.js:389
+msgid "miss"
+msgstr "失手"
+
+#: ../../script/events.js:357 ../../script/events.js:402
+msgid "stunned"
+msgstr "驚嚇"
+
+#: ../../script/events.js:746
+msgid "*** EVENT ***"
+msgstr "*** 消息 ***"
+
+#: ../../script/world.js:46
+msgid "punch"
+msgstr "揮拳"
+
+#: ../../script/world.js:52
+msgid "stab"
+msgstr "戳刺"
+
+#: ../../script/world.js:58
+msgid "swing"
+msgstr "揮斬"
+
+#: ../../script/world.js:64
+msgid "slash"
+msgstr "劈砍"
+
+#: ../../script/world.js:70
+msgid "thrust"
+msgstr "扎刺"
+
+#: ../../script/world.js:76
+msgid "shoot"
+msgstr "開火"
+
+#: ../../script/world.js:83
+msgid "blast"
+msgstr "引爆"
+
+#: ../../script/world.js:90
+msgid "lob"
+msgstr "投擲"
+
+#: ../../script/world.js:97
+msgid "tangle"
+msgstr "牽絆"
+
+#: ../../script/world.js:119
+msgid "An&nbsp;Outpost"
+msgstr "前哨"
+
+#: ../../script/world.js:120
+msgid "Iron&nbsp;Mine"
+msgstr "鐵礦"
+
+#: ../../script/world.js:121
+msgid "Coal&nbsp;Mine"
+msgstr "煤礦"
+
+#: ../../script/world.js:122
+msgid "Sulphur&nbsp;Mine"
+msgstr "硫磺礦"
+
+#: ../../script/world.js:123
+msgid "An&nbsp;Old&nbsp;House"
+msgstr "廢棄小屋"
+
+#: ../../script/world.js:124
+msgid "A&nbsp;Damp&nbsp;Cave"
+msgstr "洞穴"
+
+#: ../../script/world.js:125
+msgid "An&nbsp;Abandoned&nbsp;Town"
+msgstr "小鎮"
+
+#: ../../script/world.js:126
+msgid "A&nbsp;Ruined&nbsp;City"
+msgstr "城市"
+
+#: ../../script/world.js:127
+msgid "A&nbsp;Crashed&nbsp;Starship"
+msgstr "墜毀星艦"
+
+#: ../../script/world.js:128
+msgid "A&nbsp;Borehole"
+msgstr "巨坑"
+
+#: ../../script/world.js:129
+msgid "A&nbsp;Battlefield"
+msgstr "戰場"
+
+#: ../../script/world.js:130
+msgid "A&nbsp;Murky&nbsp;Swamp"
+msgstr "沼澤"
+
+#: ../../script/world.js:134
+msgid "A&nbsp;Destroyed&nbsp;Village"
+msgstr "村莊"
+
+#: ../../script/world.js:250
+msgid "water:{0}"
+msgstr "水:{0}"
+
+#: ../../script/world.js:277
+msgid "pockets"
+msgstr "背包"
+
+#: ../../script/world.js:279 ../../script/room.js:223
+msgid "rucksack"
+msgstr "雙肩包"
+
+#: ../../script/world.js:301
+msgid "hp: {0}/{1}"
+msgstr "生命: {0}/{1}"
+
+#: ../../script/world.js:308
+msgid "{0}:{1}"
+msgstr "{0}:{1}"
+
+#: ../../script/world.js:343
+msgid "dangerous to be this far from the village without proper protection"
+msgstr "沒有妥善防護離開村子這麼遠很危險"
+
+#: ../../script/world.js:345
+msgid "safer here"
+msgstr "這裡可算安全了"
+
+#: ../../script/world.js:445
+msgid "the meat has run out"
+msgstr "肉已經吃完了"
+
+#: ../../script/world.js:450
+msgid "starvation sets in"
+msgstr "飢餓襲來"
+
+#: ../../script/world.js:475
+msgid "there is no more water"
+msgstr "水已耗盡"
+
+#: ../../script/world.js:479
+msgid "the thirst becomes unbearable"
+msgstr "口渴難耐"
+
+#: ../../script/world.js:552
+msgid "the trees yield to dry grass. the yellowed brush rustles in the wind."
+msgstr "樹木歪倒在乾草叢中，枯黃的灌木在風中沙沙作響"
+
+#: ../../script/world.js:555
+msgid ""
+"the trees are gone. parched earth and blowing dust are poor replacements."
+msgstr "樹木都消失了，唯留下乾裂的大地和飛揚的塵土"
+
+#: ../../script/world.js:562
+msgid ""
+"trees loom on the horizo​​n. grasses gradually yield to a forest floor of dry "
+"branches and fallen leaves."
+msgstr "地平線上隱約瞧見樹林.草地漸漸稀疏，替代以鋪著枯枝敗葉的森林"
+
+#: ../../script/world.js:565
+msgid "the grasses thin. soon, only dust remains."
+msgstr "草地很快稀疏了起來，唯留下漫天揚塵"
+
+#: ../../script/world.js:572
+msgid "the barrens break at a sea of​​ dying grass, swaying in the arid breeze."
+msgstr "荒草如海，在燥熱的風中搖曳著，中間現出了一片荒地"
+
+#: ../../script/world.js:575
+msgid ""
+"a wall of gnarled trees rises from the dust. their branches twist into a "
+"skeletal canopy overhead."
+msgstr "塵土中長出了結瘤的樹牆，枝幹在頭頂纏繞成骨骼般的穹頂"
+
+#: ../../script/world.js:777
+msgid "Wanderer"
+msgstr "漫遊者"
+
+#: ../../script/world.js:782
+msgid "The&nbsp;Village"
+msgstr "村莊"
+
+#: ../../script/world.js:811
+msgid "the world fades"
+msgstr "眼前的世界煙消雲散"
+
+#: ../../script/world.js:939
+msgid "A Barren World"
+msgstr "荒蕪世界"
+
+#: ../../script/room.js:16
+msgid "trap"
+msgstr "陷阱"
+
+#: ../../script/room.js:19
+msgid ""
+"builder says she can make traps to catch any creatures might still be alive "
+"out there"
+msgstr "建造者說她能夠製做陷阱來捕捉那些仍在野外活動的野獸"
+
+#: ../../script/room.js:20
+msgid "more traps to catch more creatures"
+msgstr "陷阱越多，抓到的獵物就越多"
+
+#: ../../script/room.js:21
+msgid "more traps won't help now"
+msgstr "再增加陷阱已毫無裨益"
+
+#: ../../script/room.js:31
+msgid "cart"
+msgstr "貨車"
+
+#: ../../script/room.js:34
+msgid "builder says she can make a cart for carrying wood"
+msgstr "建造者說她能夠製造出貨車，用來運載木頭"
+
+#: ../../script/room.js:35
+msgid "the rickety cart will carry more wood from the forest"
+msgstr "搖搖晃晃的貨車滿載從森林運出的木頭"
+
+#: ../../script/room.js:44
+msgid "hut"
+msgstr "小屋"
+
+#: ../../script/room.js:47
+msgid "builder says there are more wanderers. says they'll work, too."
+msgstr "建造者說這裡有許多流浪者，他們也會來工作"
+
+#: ../../script/room.js:48
+msgid "builder puts up a hut, out in the forest. says word will get around."
+msgstr "建造者在林中建起一棟小屋，她說消息很快就會流傳出去"
+
+#: ../../script/room.js:49
+msgid "no more room for huts."
+msgstr "再沒有可以建小屋的空地了"
+
+#: ../../script/room.js:59
+msgid "lodge"
+msgstr "旅館"
+
+#: ../../script/room.js:62
+msgid "villagers could help hunt, given the means"
+msgstr "假如工具齊備，村民也能幫忙狩獵"
+
+#: ../../script/room.js:63
+msgid "the hunting lodge stands in the forest, a ways out of town"
+msgstr "供獵人居住的旅館已經矗立在林中，距離村子不遠"
+
+#: ../../script/room.js:74
+msgid "trading post"
+msgstr "貿易站"
+
+#: ../../script/room.js:77
+msgid "a trading post would make commerce easier"
+msgstr "貿易站讓貿易變得更加便捷"
+
+#: ../../script/room.js:78
+msgid ""
+"now the nomads have a place to set up shop, they might stick around a while"
+msgstr "現在游牧部落有地方安營扎寨設立商舖了，他們也許會多逗留一段時間"
+
+#: ../../script/room.js:88
+msgid "tannery"
+msgstr "制革屋"
+
+#: ../../script/room.js:91
+msgid "builder says leather could be useful. says the villagers could make it."
+msgstr "建造者說皮革會很有用，而且村民也會做"
+
+#: ../../script/room.js:92
+msgid "tannery goes up quick, on the edge of the village"
+msgstr "制革屋很快在村子一角建立了起來"
+
+#: ../../script/room.js:102
+msgid "smokehouse"
+msgstr "熏肉房"
+
+#: ../../script/room.js:105
+msgid ""
+"should cure the meat, or it'll spoil. builder says she can fix something up."
+msgstr "應該把肉熏一下，否則會腐壞掉.建造者說她能幫忙搞定這個"
+
+#: ../../script/room.js:106
+msgid "builder finishes the smokehouse. she looks hungry."
+msgstr "建造者造好了熏肉房，她看起來飢腸轆轆"
+
+#: ../../script/room.js:116
+msgid "workshop"
+msgstr "工坊"
+
+#: ../../script/room.js:119
+msgid "builder says she could make finer things, if she had the tools"
+msgstr "建造者說如果她有工具的話能做出一些更精良的東西"
+
+#: ../../script/room.js:120
+msgid "workshop's finally ready. builder's excited to get to it"
+msgstr "工坊終於建好了.建造者激動不已"
+
+#: ../../script/room.js:131
+msgid "steelworks"
+msgstr "煉鋼坊"
+
+#: ../../script/room.js:134
+msgid "builder says the villagers could make steel, given the tools"
+msgstr "建造者說給村民工具的話他們就能幫忙煉鋼"
+
+#: ../../script/room.js:135
+msgid "a haze falls over the village as the steelworks fires up"
+msgstr "煉鋼坊開工後，一縷黑煙飄向村莊上空"
+
+#: ../../script/room.js:146
+msgid "armoury"
+msgstr "軍械坊"
+
+#: ../../script/room.js:149
+msgid "builder says it'd be useful to have a steady source of bullets"
+msgstr "建造者說擁有穩定的彈藥來源很有必要"
+
+#: ../../script/room.js:150
+msgid "armoury's done, welcoming back the weapons of the past."
+msgstr "軍械坊建好了，歡迎使用這些過時的武器"
+
+#: ../../script/room.js:161 ../../script/localization.js:19
+msgid "torch"
+msgstr "火把"
+
+#: ../../script/room.js:164
+msgid "a torch to keep the dark away"
+msgstr "驅散黑暗的火把"
+
+#: ../../script/room.js:173
+msgid "waterskin"
+msgstr "水壺"
+
+#: ../../script/room.js:177
+msgid "this waterskin'll hold a bit of water, at least"
+msgstr "起碼能裝那麼點兒水"
+
+#: ../../script/room.js:185
+msgid "cask"
+msgstr "水桶"
+
+#: ../../script/room.js:189
+msgid "the cask holds enough water for longer expeditions"
+msgstr "為更長的探索之旅提供充足的水源"
+
+#: ../../script/room.js:198
+msgid "water tank"
+msgstr "水罐"
+
+#: ../../script/room.js:202
+msgid "never go thirsty again"
+msgstr "再也不擔心口渴"
+
+#: ../../script/room.js:211
+msgid "bone spear"
+msgstr "骨槍"
+
+#: ../../script/room.js:214
+msgid "this spear's not elegant, but it's pretty good at stabbing"
+msgstr "這柄標槍不怎麼精緻，但用來戳刺手感不錯"
+
+#: ../../script/room.js:227
+msgid "carrying more means longer expeditions to the wilds"
+msgstr "荒野旅行時攜帶更多物資"
+
+#: ../../script/room.js:235
+msgid "wagon"
+msgstr "篷車"
+
+#: ../../script/room.js:239
+msgid "the wagon can carry a lot of supplies"
+msgstr "篷車能夠攜帶許多物資"
+
+#: ../../script/room.js:248
+msgid "convoy"
+msgstr "車隊"
+
+#: ../../script/room.js:252
+msgid "the convoy can haul mostly everything"
+msgstr "車隊幾乎能把所有東西都裝下"
+
+#: ../../script/room.js:262
+msgid "l armour"
+msgstr "皮甲"
+
+#: ../../script/room.js:265
+msgid "leather's not strong. better than rags, though."
+msgstr "皮革不算結實，但總比披塊破布強吧"
+
+#: ../../script/room.js:274
+msgid "i armour"
+msgstr "鐵甲"
+
+#: ../../script/room.js:277
+msgid "iron's stronger than leather"
+msgstr "鐵可比皮結實"
+
+#: ../../script/room.js:286
+msgid "s armour"
+msgstr "鋼甲"
+
+#: ../../script/room.js:289
+msgid "steel's stronger than iron"
+msgstr "鋼的總比鐵的強"
+
+#: ../../script/room.js:298
+msgid "iron sword"
+msgstr "鐵劍"
+
+#: ../../script/room.js:301
+msgid "sword is sharp. good protection out in the wilds."
+msgstr "劍很鋒利，能夠在野外提供不錯的防護"
+
+#: ../../script/room.js:311
+msgid "steel sword"
+msgstr "鋼劍"
+
+#: ../../script/room.js:314
+msgid "the steel is strong, and the blade true."
+msgstr "好鋼出利刃"
+
+#: ../../script/room.js:324
+msgid "rifle"
+msgstr "步槍"
+
+#: ../../script/room.js:326
+msgid "black powder and bullets, like the old days."
+msgstr "黑火藥和子彈，就像過去那樣"
+
+#: ../../script/room.js:458
+msgid "Room"
+msgstr "房間"
+
+#: ../../script/room.js:496
+msgid "light fire"
+msgstr "生火"
+
+#: ../../script/room.js:506
+msgid "stoke fire"
+msgstr "添柴"
+
+#: ../../script/room.js:543 ../../script/room.js:553 ../../script/room.js:701
+#: ../../script/room.js:705
+msgid "the room is {0}"
+msgstr "房間{0}"
+
+#: ../../script/room.js:544 ../../script/room.js:552 ../../script/room.js:670
+msgid "the fire is {0}"
+msgstr "火堆{0}"
+
+#: ../../script/room.js:563
+msgid ""
+"the stranger is standing by the fire. she says she can help. says she builds "
+"things."
+msgstr "那名陌生人出現在火堆前.她說她可以幫忙建些東西"
+
+#: ../../script/room.js:578
+msgid "freezing"
+msgstr "寒冷刺骨"
+
+#: ../../script/room.js:579
+msgid "cold"
+msgstr "很冷"
+
+#: ../../script/room.js:580
+msgid "mild"
+msgstr "很宜人"
+
+#: ../../script/room.js:581
+msgid "warm"
+msgstr "暖和"
+
+#: ../../script/room.js:582
+msgid "hot"
+msgstr "很熱"
+
+#: ../../script/room.js:594
+msgid "dead"
+msgstr "熄滅了"
+
+#: ../../script/room.js:595
+msgid "smoldering"
+msgstr "開始冒煙"
+
+#: ../../script/room.js:596
+msgid "flickering"
+msgstr "冒出火苗"
+
+#: ../../script/room.js:597
+msgid "burning"
+msgstr "燃燒著"
+
+#: ../../script/room.js:598
+msgid "roaring"
+msgstr "熊熊燃燒"
+
+#: ../../script/room.js:602
+msgid "A Dark Room"
+msgstr "小黑屋"
+
+#: ../../script/room.js:602
+msgid "A Firelit Room"
+msgstr "生火間"
+
+#: ../../script/room.js:640
+msgid "not enough wood to get the fire going"
+msgstr "生火的木頭不夠了"
+
+#: ../../script/room.js:653
+msgid "the wood has run out"
+msgstr "木頭用光了"
+
+#: ../../script/room.js:673
+msgid "the light from the fire spills from the windows, out into the dark"
+msgstr "火光映出窗外，投入黑暗之中"
+
+#: ../../script/room.js:686
+msgid "builder stokes the fire"
+msgstr "建造者添了柴火"
+
+#: ../../script/room.js:716
+msgid "the wind howls outside"
+msgstr "屋外寒風呼嘯"
+
+#: ../../script/room.js:717
+msgid "the wood is running out"
+msgstr "木頭就快燒完了"
+
+#: ../../script/room.js:724
+msgid "a ragged stranger stumbles through the door and collapses in the corner"
+msgstr "衣衫襤褸的陌生人步履蹣跚地步入門來，癱倒在角落裡"
+
+#: ../../script/room.js:732
+msgid ""
+"the stranger shivers, and mumbles quietly. her words are unintelligible."
+msgstr "陌生人瑟瑟發抖，呢喃不已，聽不清在說些什麼"
+
+#: ../../script/room.js:735
+msgid "the stranger in the corner stops shivering. her breathing calms."
+msgstr "角落裡的陌生人不再顫抖了，她的呼吸平靜了下來"
+
+#: ../../script/space.js:42
+msgid "hull: "
+msgstr "船身:"
+
+#: ../../script/space.js:76
+msgid "Troposphere"
+msgstr "對流層"
+
+#: ../../script/space.js:78
+msgid "Stratosphere"
+msgstr "平流層"
+
+#: ../../script/space.js:80
+msgid "Mesosphere"
+msgstr "中氣層"
+
+#: ../../script/space.js:82
+msgid "Thermosphere"
+msgstr "增溫層"
+
+#: ../../script/space.js:84
+msgid "Exosphere"
+msgstr "外逸層"
+
+#: ../../script/space.js:86
+msgid "Space"
+msgstr "太空"
+
+#: ../../script/ship.js:11
+msgid "Ship"
+msgstr "飛船"
+
+#: ../../script/ship.js:27
+msgid "An Old Starship"
+msgstr "破舊星艦"
+
+#: ../../script/ship.js:38
+msgid "hull:"
+msgstr "外殼:"
+
+#: ../../script/ship.js:44
+msgid "engine:"
+msgstr "引擎:"
+
+#: ../../script/ship.js:51
+msgid "reinforce hull"
+msgstr "加固船身"
+
+#: ../../script/ship.js:60
+msgid "upgrade engine"
+msgstr "升級引擎"
+
+#: ../../script/ship.js:69 ../../script/ship.js:142
+msgid "lift off"
+msgstr "點火起飛"
+
+#: ../../script/ship.js:91
+msgid ""
+"somewhere above the debris cloud, the wanderer fleet hovers. been on this "
+"rock too long."
+msgstr "碎雲之上不知處，流浪者的艦隊正盤旋.已經在這塊大岩石上待得太久了"
+
+#: ../../script/ship.js:106 ../../script/ship.js:119
+msgid "not enough alien alloy"
+msgstr "外星合金不足"
+
+#: ../../script/ship.js:134
+msgid "Ready to Leave?"
+msgstr "準備好要離開了嗎?"
+
+#: ../../script/ship.js:138
+msgid "time to get out of this place. won't be coming back."
+msgstr "是時候離開這裡了.再也不會回頭"
+
+#: ../../script/ship.js:150
+msgid "linger"
+msgstr "裹足徘徊"
+
+#: ../../script/localization.js:4
+msgid "saved."
+msgstr "已保存"
+
+#: ../../script/localization.js:5
+msgid "wood"
+msgstr "木頭"
+
+#: ../../script/localization.js:6
+msgid "builder"
+msgstr "建造者"
+
+#: ../../script/localization.js:7
+msgid "teeth"
+msgstr "牙齒"
+
+#: ../../script/localization.js:8
+msgid "meat"
+msgstr "肉"
+
+#: ../../script/localization.js:9
+msgid "fur"
+msgstr "毛皮"
+
+#: ../../script/localization.js:10
+msgid "alien alloy"
+msgstr "外星合金"
+
+#: ../../script/localization.js:11
+msgid "bullets"
+msgstr "子彈"
+
+#: ../../script/localization.js:12
+msgid "charm"
+msgstr "符咒"
+
+#: ../../script/localization.js:16
+msgid "coal"
+msgstr "煤"
+
+#: ../../script/localization.js:17
+msgid "sulphur"
+msgstr "硫磺"
+
+#: ../../script/localization.js:18
+msgid "energy cell"
+msgstr "能量元件"
+
+#: ../../script/localization.js:20
+msgid "medicine"
+msgstr "藥劑"
+
+#: ../../script/localization.js:24
+msgid "grenade"
+msgstr "手雷"
+
+#: ../../script/localization.js:25
+msgid "bolas"
+msgstr "套索"
+
+#: ../../script/localization.js:26
+msgid "bayonet"
+msgstr "刺刀"
+
+#: ../../script/localization.js:29
+msgid "iron mine"
+msgstr "鐵礦"
+
+#: ../../script/localization.js:31
+msgid "coal mine"
+msgstr "煤礦"
+
+#: ../../script/localization.js:33
+msgid "sulphur mine"
+msgstr "硫磺礦"
+
+#: ../../script/localization.js:36
+msgid "bait"
+msgstr "誘餌"
+
+#: ../../script/localization.js:37 ../../script/localization.js:44
+msgid "cured meat"
+msgstr "熏肉"
+
+#: ../../script/localization.js:38 ../../script/localization.js:43
+msgid "scales"
+msgstr "鱗片"
+
+#: ../../script/localization.js:39
+msgid "compass"
+msgstr "羅盤"
+
+#: ../../script/localization.js:40
+msgid "laser rifle"
+msgstr "激光步槍"
+
+#: ../../script/localization.js:42
+msgid "cloth"
+msgstr "布料"
+
+#: ../../script/localization.js:45
+msgid "thieves"
+msgstr "小偷"
+
+#: ../../script/localization.js:46
+msgid "not enough fur"
+msgstr "皮毛不夠了"
+
+#: ../../script/localization.js:47
+msgid "not enough wood"
+msgstr "木頭不夠了"
+
+#: ../../script/localization.js:48
+msgid "not enough coal"
+msgstr "煤炭不夠了"
+
+#: ../../script/localization.js:49
+msgid "not enough iron"
+msgstr "鐵不夠了"
+
+#: ../../script/localization.js:50
+msgid "not enough steel"
+msgstr "鋼不夠了"
+
+#: ../../script/localization.js:51
+msgid "not enough sulphur"
+msgstr "硫磺不夠了"
+
+#: ../../script/localization.js:52
+msgid "baited trap"
+msgstr "上餌陷阱"
+
+#: ../../script/localization.js:53
+msgid "not enough scales"
+msgstr "鱗片不夠了"
+
+#: ../../script/localization.js:54
+msgid "not enough cloth"
+msgstr "布料不夠了"
+
+#: ../../script/localization.js:55
+msgid "not enough teeth"
+msgstr "牙齒不夠了"
+
+#: ../../script/localization.js:56
+msgid "not enough leather"
+msgstr "皮革不夠了"
+
+#: ../../script/localization.js:57
+msgid "not enough meat"
+msgstr "肉不夠了"
+
+#: ../../script/localization.js:58
+msgid "the compass points east"
+msgstr "羅盤指向東方"
+
+#: ../../script/localization.js:59
+msgid "the compass points west"
+msgstr "羅盤指向西方"
+
+#: ../../script/localization.js:60
+msgid "the compass points north"
+msgstr "羅盤指向北方"
+
+#: ../../script/localization.js:61
+msgid "the compass points south"
+msgstr "羅盤指向南方"
+
+#: ../../script/localization.js:62
+msgid "the compass points northeast"
+msgstr "羅盤指向東北"
+
+#: ../../script/localization.js:63
+msgid "the compass points northwest"
+msgstr "羅盤指向西北"
+
+#: ../../script/localization.js:64
+msgid "the compass points southeast"
+msgstr "羅盤指向東南"
+
+#: ../../script/localization.js:65
+msgid "the compass points southwest"
+msgstr "羅盤指向西南"
+
+#: ../../script/localization.js:72
+msgid "stores"
+msgstr "庫存"
+
+#: ../../script/localization.js:73
+msgid "weapons"
+msgstr "武器"
+
+#: ../../script/localization.js:74
+msgid "build:"
+msgstr "建築物:"
+
+#: ../../script/localization.js:75
+msgid "craft:"
+msgstr "製造:"
+
+#: ../../script/localization.js:76
+msgid "buy:"
+msgstr "購買:"
+
+#: ../../script/localization.js:77
+msgid "supplies:"
+msgstr "供應:"
+
+#: ../../script/localization.js:78
+msgid "perks:"
+msgstr "能力:"
+
+#: ../../script/localization.js:79
+msgid "take:"
+msgstr "獲得:"
+
+#: ../../script/localization.js:80
+msgid "drop:"
+msgstr "丟棄:"
+
+#: ../../script/localization.js:81
+msgid "forest"
+msgstr "樹林"
+
+#: ../../script/localization.js:82
+msgid "village"
+msgstr "村落"
+
+#: ../../script/dropbox.js:62
+msgid "Dropbox connection"
+msgstr "dropbox連接"
+
+#: ../../script/dropbox.js:65
+msgid "connect game to dropbox local storage"
+msgstr "連接到dropbox雲存儲"
+
+#: ../../script/dropbox.js:68
+msgid "connect"
+msgstr "連接"
+
+#: ../../script/dropbox.js:75 ../../script/dropbox.js:107
+#: ../../script/engine.js:270 ../../script/engine.js:303
+msgid "cancel"
+msgstr "取消"
+
+#: ../../script/dropbox.js:86
+msgid "Dropbox Export / Import"
+msgstr "dropbox導出/導入"
+
+#: ../../script/dropbox.js:89
+msgid "export or import save data to dropbox datastorage"
+msgstr "導出或導入存檔文件到dropbox"
+
+#: ../../script/dropbox.js:90
+msgid "your are connected to dropbox with account / email "
+msgstr "您已用此賬戶/電子郵件連接到dropbox: "
+
+#: ../../script/dropbox.js:93
+msgid "save"
+msgstr "保存"
+
+#: ../../script/dropbox.js:97
+msgid "load"
+msgstr "加載"
+
+#: ../../script/dropbox.js:102
+msgid "signout"
+msgstr "登出"
+
+#: ../../script/dropbox.js:113
+msgid "choose one slot to save to"
+msgstr "選擇保存位置"
+
+#: ../../script/dropbox.js:119
+msgid "save to slot"
+msgstr "保存到位置"
+
+#: ../../script/dropbox.js:179
+msgid "successfully saved to dropbox datastorage"
+msgstr "成功保存到dropbox"
+
+#: ../../script/dropbox.js:180
+msgid "error while saving to dropbox datastorage"
+msgstr "保存到dropbox出錯"
+
+#: ../../script/dropbox.js:183
+msgid "ok"
+msgstr "確認"
+
+#: ../../script/engine.js:15
+msgid "boxer"
+msgstr "拳擊手"
+
+#: ../../script/engine.js:16
+msgid "punches do more damage"
+msgstr "徒手造成更多傷害"
+
+#: ../../script/engine.js:18
+msgid "learned to throw punches with purpose"
+msgstr "學會了有意識地出拳"
+
+#: ../../script/engine.js:21
+msgid "martial artist"
+msgstr "武鬥家"
+
+#: ../../script/engine.js:22
+msgid "punches do even more damage."
+msgstr "徒手造成更多更多的傷害"
+
+#: ../../script/engine.js:23
+msgid "learned to fight quite effectively without weapons"
+msgstr "學會了高效率的徒手搏擊"
+
+#: ../../script/engine.js:27
+msgid "unarmed master"
+msgstr "徒手宗師"
+
+#: ../../script/engine.js:28
+msgid "punch twice as fast, and with even more force"
+msgstr "出拳速度翻倍，力道也更大"
+
+#: ../../script/engine.js:29
+msgid "learned to strike faster without weapons"
+msgstr "學會瞭如何更快速地出拳"
+
+#: ../../script/engine.js:32
+msgid "barbarian"
+msgstr "野蠻人"
+
+#: ../../script/engine.js:33
+msgid "melee weapons deal more damage"
+msgstr "近戰武器造成更高傷害"
+
+#: ../../script/engine.js:34
+msgid "learned to swing weapons with force"
+msgstr "學會瞭如何發揮勁力，揮舞武器"
+
+# contexte ?
+#: ../../script/engine.js:37
+msgid "slow metabolism"
+msgstr "減緩代謝"
+
+#: ../../script/engine.js:38
+msgid "go twice as far without eating"
+msgstr "不吃東西能堅持走的距離翻倍"
+
+#: ../../script/engine.js:39
+msgid "learned how to ignore the hunger"
+msgstr "學會如何忍飢挨餓"
+
+#: ../../script/engine.js:42
+msgid "desert rat"
+msgstr "荒漠跳鼠"
+
+#: ../../script/engine.js:43
+msgid "go twice as far without drinking"
+msgstr "不喝水能堅持走的距離翻倍"
+
+#: ../../script/engine.js:44
+msgid "learned to love the dry air"
+msgstr "學會去愛這乾燥的空氣"
+
+#: ../../script/engine.js:47
+msgid "evasive"
+msgstr "避實就虛"
+
+#: ../../script/engine.js:48
+msgid "dodge attacks more effectively"
+msgstr "更高效地閃避襲擊"
+
+#: ../../script/engine.js:49
+msgid "learned to be where they're not"
+msgstr "學會了閃到對手打不著的地方"
+
+#: ../../script/engine.js:52
+msgid "precise"
+msgstr "精密"
+
+# description pour la précision ...
+#: ../../script/engine.js:53
+msgid "land blows more often"
+msgstr "命中率提高"
+
+#: ../../script/engine.js:54
+msgid "learned to predict their movement"
+msgstr "學會預判他人的動作"
+
+#: ../../script/engine.js:57
+msgid "scout"
+msgstr "偵查術"
+
+#: ../../script/engine.js:58
+msgid "see farther"
+msgstr "看得更遠"
+
+#: ../../script/engine.js:59
+msgid "learned to look ahead"
+msgstr "學會往前看"
+
+#: ../../script/engine.js:62
+msgid "stealthy"
+msgstr "潛行"
+
+#: ../../script/engine.js:63
+msgid "better avoid conflict in the wild"
+msgstr "更好地迴避荒野中的衝突"
+
+#: ../../script/engine.js:64
+msgid "learned how not to be seen"
+msgstr "學會了隱匿身形"
+
+#: ../../script/engine.js:67
+msgid "gastronome"
+msgstr "美食家"
+
+#: ../../script/engine.js:68
+msgid "restore more health when eating"
+msgstr "進食恢復更多生命"
+
+#: ../../script/engine.js:69
+msgid "learned to make the most of food"
+msgstr "學會充分消化食物"
+
+#: ../../script/engine.js:137 ../../script/engine.js:473
+msgid "lights off."
+msgstr "熄燈."
+
+#: ../../script/engine.js:143
+msgid "restart."
+msgstr "重啟."
+
+#: ../../script/engine.js:149
+msgid "share."
+msgstr "分享."
+
+#: ../../script/engine.js:155
+msgid "save."
+msgstr "保存."
+
+#: ../../script/engine.js:164
+msgid "dropbox."
+msgstr "dropbox."
+
+#: ../../script/engine.js:171
+msgid "app store."
+msgstr "應用商店."
+
+#: ../../script/engine.js:177
+msgid "github."
+msgstr "github."
+
+#: ../../script/engine.js:253
+msgid "Export / Import"
+msgstr "導出/導入"
+
+#: ../../script/engine.js:257
+msgid "export or import save data, for backing up"
+msgstr "導出或導入存檔文件，用於備份"
+
+#: ../../script/engine.js:258
+msgid "or migrating computers"
+msgstr "或別處的電腦"
+
+#: ../../script/engine.js:262
+msgid "export"
+msgstr "導出"
+
+#: ../../script/engine.js:266 ../../script/engine.js:298
+msgid "import"
+msgstr "導入"
+
+#: ../../script/engine.js:277
+msgid "are you sure?"
+msgstr "您確定嗎？"
+
+#: ../../script/engine.js:278
+msgid "if the code is invalid, all data will be lost."
+msgstr "如果存檔代碼無效，所有數據均會丟失。"
+
+#: ../../script/engine.js:279
+msgid "this is irreversible."
+msgstr "此操作不可撤銷。"
+
+#: ../../script/engine.js:283 ../../script/engine.js:369
+msgid "yes"
+msgstr "是"
+
+#: ../../script/engine.js:288 ../../script/engine.js:374
+msgid "no"
+msgstr "否"
+
+#: ../../script/engine.js:294
+msgid "put the save code here."
+msgstr "此處可填入存檔代碼"
+
+#: ../../script/engine.js:326
+msgid "Export"
+msgstr "導出"
+
+#: ../../script/engine.js:329
+msgid "save this."
+msgstr "保存此代碼"
+
+#: ../../script/engine.js:334
+msgid "got it"
+msgstr "已完成"
+
+#: ../../script/engine.js:363
+msgid "Restart?"
+msgstr "重開?"
+
+#: ../../script/engine.js:366
+msgid "restart the game?"
+msgstr "重開遊戲?"
+
+#: ../../script/engine.js:397
+msgid "Share"
+msgstr "分享"
+
+#: ../../script/engine.js:400
+msgid "bring your friends."
+msgstr "分享給你的好友"
+
+#: ../../script/engine.js:403
+msgid "facebook"
+msgstr "臉書"
+
+#: ../../script/engine.js:410
+msgid "google+"
+msgstr "環聊"
+
+#: ../../script/engine.js:417
+msgid "twitter"
+msgstr "推特"
+
+#: ../../script/engine.js:424
+msgid "reddit"
+msgstr "紅迪"
+
+#: ../../script/engine.js:431
+msgid "close"
+msgstr "關閉"
+
+#: ../../script/engine.js:466 ../../script/engine.js:469
+msgid "lights on."
+msgstr "開燈"
+
+#: ../../script/engine.js:571
+msgid "{0} per {1}s"
+msgstr "{0}/{1}秒"
+
+#: ../../script/events/outside.js:6
+msgid "A Ruined Trap"
+msgstr "損毀的陷阱"
+
+#: ../../script/events/outside.js:13
+msgid "some of the traps have been torn apart."
+msgstr "一些陷阱損毀了"
+
+#: ../../script/events/outside.js:14
+msgid "large prints lead away, into the forest."
+msgstr "巨大的足印延伸至森林"
+
+#: ../../script/events/outside.js:22
+msgid "some traps have been destroyed"
+msgstr "一些陷阱損毀了"
+
+#: ../../script/events/outside.js:26
+msgid "track them"
+msgstr "追踪"
+
+#: ../../script/events/outside.js:30 ../../script/events/room.js:101
+#: ../../script/events/room.js:152
+msgid "ignore them"
+msgstr "忽略"
+
+#: ../../script/events/outside.js:37
+msgid "the tracks disappear after just a few minutes."
+msgstr "數分鐘後足印消失了"
+
+#: ../../script/events/outside.js:38
+msgid "the forest is silent."
+msgstr "森林歸於靜謐"
+
+#: ../../script/events/outside.js:42 ../../script/events/outside.js:59
+#: ../../script/events/outside.js:98 ../../script/events/outside.js:115
+#: ../../script/events/outside.js:166 ../../script/events/outside.js:183
+#: ../../script/events/outside.js:215 ../../script/events/outside.js:247
+msgid "go home"
+msgstr "返回"
+
+#: ../../script/events/outside.js:49
+msgid "not far from the village lies a large beast, its fur matted with blood."
+msgstr "村外不遠處躺著一隻巨獸，它的毛皮上染滿了鮮血"
+
+#: ../../script/events/outside.js:50
+msgid "it puts up little resistance before the knife."
+msgstr "它無力掙扎任人宰割"
+
+#: ../../script/events/outside.js:68
+msgid "Sickness"
+msgstr "瘟疫"
+
+#: ../../script/events/outside.js:75
+msgid "a sickness is spreading through the village."
+msgstr "瘟疫在村子中蔓延"
+
+#: ../../script/events/outside.js:76 ../../script/events/outside.js:132
+msgid "medicine is needed immediately."
+msgstr "亟需藥劑"
+
+#: ../../script/events/outside.js:82
+msgid "1 medicine"
+msgstr "1支藥劑"
+
+#: ../../script/events/outside.js:87
+msgid "ignore it"
+msgstr "放任不管"
+
+#: ../../script/events/outside.js:94
+msgid "the sickness is cured in time."
+msgstr "疫病及時得到了控制"
+
+#: ../../script/events/outside.js:105
+msgid "the sickness spreads through the village."
+msgstr "瘟疫在村子中蔓延"
+
+#: ../../script/events/outside.js:106
+msgid "the days are spent with burials."
+msgstr "葬禮接著葬禮"
+
+#: ../../script/events/outside.js:107 ../../script/events/outside.js:174
+msgid "the nights are rent with screams."
+msgstr "尖叫響徹黑夜"
+
+#: ../../script/events/outside.js:124
+msgid "Plague"
+msgstr "黑死病"
+
+#: ../../script/events/outside.js:131
+msgid "a terrible plague is fast spreading through the village."
+msgstr "可怕的黑死病迅速地在村子里傳播開來"
+
+#: ../../script/events/outside.js:138
+msgid "buy medicine"
+msgstr "購買藥劑"
+
+#: ../../script/events/outside.js:144
+msgid "5 medicine"
+msgstr "5支藥劑"
+
+#: ../../script/events/outside.js:149
+msgid "do nothing"
+msgstr "置之不理"
+
+#: ../../script/events/outside.js:156
+msgid "the plague is kept from spreading."
+msgstr "黑死病得到了控制"
+
+#: ../../script/events/outside.js:157
+msgid "only a few die."
+msgstr "只有少數人死去"
+
+#: ../../script/events/outside.js:158
+msgid "the rest bury them."
+msgstr "剩下的人埋葬了他們"
+
+#: ../../script/events/outside.js:173
+msgid "the plague rips through the village."
+msgstr "黑死病席捲村落"
+
+#: ../../script/events/outside.js:175
+msgid "the only hope is a quick death."
+msgstr "人們只求速死"
+
+#: ../../script/events/outside.js:192
+msgid "A Beast Attack"
+msgstr "野獸來襲"
+
+#: ../../script/events/outside.js:199
+msgid "a pack of snarling beasts pours out of the trees."
+msgstr "一群咆哮的野獸衝出叢林"
+
+#: ../../script/events/outside.js:200
+msgid "the fight is short and bloody, but the beasts are repelled."
+msgstr "戰鬥短暫而血腥，但獸群潰退了"
+
+#: ../../script/events/outside.js:201
+msgid "the villagers retreat to mourn the dead."
+msgstr "村民撤了回來，悼念那些死去的人"
+
+#: ../../script/events/outside.js:224
+msgid "A Military Raid"
+msgstr "軍事突襲"
+
+#: ../../script/events/outside.js:231
+msgid "a gunshot rings through the trees."
+msgstr "槍聲嘯過樹林"
+
+#: ../../script/events/outside.js:232
+msgid "well armed men charge out of the forest, firing into the crowd."
+msgstr "裝備精良的人衝出樹林，向人群射擊"
+
+#: ../../script/events/outside.js:233
+msgid "after a skirmish they are driven away, but not without losses."
+msgstr "雖然他們撤走了，但我們好些人犧牲了"
+
+#: ../../script/events/setpieces.js:6
+msgid "An Outpost"
+msgstr "前哨"
+
+#: ../../script/events/setpieces.js:10 ../../script/events/setpieces.js:12
+msgid "a safe place in the wilds."
+msgstr "荒野中安全的地方"
+
+#: ../../script/events/setpieces.js:25 ../../script/events/setpieces.js:48
+#: ../../script/events/setpieces.js:65 ../../script/events/setpieces.js:83
+#: ../../script/events/setpieces.js:106 ../../script/events/setpieces.js:3539
+#: ../../script/events/setpieces.js:3567 ../../script/events/room.js:192
+#: ../../script/events/global.js:42 ../../script/events/global.js:59
+msgid "leave"
+msgstr "離開"
+
+#: ../../script/events/setpieces.js:34
+msgid "A Murky Swamp"
+msgstr "迷霧沼澤"
+
+#: ../../script/events/setpieces.js:38
+msgid "rotting reeds rise out of the swampy earth."
+msgstr "腐爛的蘆草冒出沼澤"
+
+#: ../../script/events/setpieces.js:39
+msgid "a lone frog sits in the muck, silently."
+msgstr "一隻孤獨的蛙蹲坐在淤泥中，一言不發"
+
+# dur dur dur
+#: ../../script/events/setpieces.js:41
+msgid "a swamp festers in the stagnant air."
+msgstr "凝滯的空氣中，沼澤正在潰爛"
+
+#: ../../script/events/setpieces.js:44 ../../script/events/setpieces.js:3535
+msgid "enter"
+msgstr "進入"
+
+#: ../../script/events/setpieces.js:55
+msgid "deep in the swamp is a moss-covered cabin."
+msgstr "沼澤深處現出一棟覆滿苔蘚的小屋"
+
+#: ../../script/events/setpieces.js:56
+msgid "an old wanderer sits inside, in a seeming trance."
+msgstr "一名年邁的流浪者坐在裡頭，看起來正在發呆"
+
+#: ../../script/events/setpieces.js:61
+msgid "talk"
+msgstr "對話"
+
+#: ../../script/events/setpieces.js:72
+msgid "the wanderer takes the charm and nods slowly."
+msgstr "流浪者接過符咒，緩緩點了點頭"
+
+#: ../../script/events/setpieces.js:73
+msgid "he speaks of once leading the great fleets to fresh worlds."
+msgstr "他談起曾率領一支偉大的艦隊前往新世界"
+
+#: ../../script/events/setpieces.js:74
+msgid "unfathomable destruction to fuel wanderer hungers."
+msgstr "以莫測的毀滅之力填補流浪者心中的慾壑"
+
+#: ../../script/events/setpieces.js:75
+msgid "his time here, now, is his penance."
+msgstr "而如今，他待在這裡的時光都在為此贖罪"
+
+#: ../../script/events/setpieces.js:91
+msgid "A Damp Cave"
+msgstr "潮濕洞穴"
+
+#: ../../script/events/setpieces.js:95
+msgid "the mouth of the cave is wide and dark."
+msgstr "洞口寬敞而黑暗"
+
+#: ../../script/events/setpieces.js:96
+msgid "can't see what's inside."
+msgstr "看不清裡面有什麼"
+
+#: ../../script/events/setpieces.js:98
+msgid "the earth here is split, as if bearing an ancient wound"
+msgstr "大地裂開，宛如古老的傷痕"
+
+#: ../../script/events/setpieces.js:101
+msgid "go inside"
+msgstr "進入"
+
+#: ../../script/events/setpieces.js:120
+msgid "a startled beast defends its home"
+msgstr "受到驚嚇的野獸正要捍衛它的巢穴"
+
+#: ../../script/events/setpieces.js:135 ../../script/events/setpieces.js:186
+msgid "continue"
+msgstr "繼續深入"
+
+#: ../../script/events/setpieces.js:140 ../../script/events/setpieces.js:157
+#: ../../script/events/setpieces.js:191
+msgid "leave cave"
+msgstr "離開洞穴"
+
+#: ../../script/events/setpieces.js:148
+msgid "the cave narrows a few feet in."
+msgstr "洞穴狹窄，幾無立足之地"
+
+#: ../../script/events/setpieces.js:149
+msgid "the walls are moist and moss-covered"
+msgstr "岩壁潮濕，覆蓋著苔蘚"
+
+#: ../../script/events/setpieces.js:153
+msgid "squeeze"
+msgstr "擠入深處"
+
+#: ../../script/events/setpieces.js:164
+msgid "the remains of an old camp sits just inside the cave."
+msgstr "洞穴內出現一處老舊營地的遺跡"
+
+#: ../../script/events/setpieces.js:165
+msgid "bedrolls, torn and blackened, lay beneath a thin layer of dust."
+msgstr "污損的睡袋平躺著，佈滿了薄薄的灰塵"
+
+#: ../../script/events/setpieces.js:199
+msgid "the body of a wanderer lies in a small cavern."
+msgstr "流浪者的屍體躺在狹小的洞穴裡"
+
+#: ../../script/events/setpieces.js:200
+msgid "rot's been to work on it, and some of the pieces are missing."
+msgstr "它已經開始腐爛，且遺失了一些肢體"
+
+#: ../../script/events/setpieces.js:3532
+msgid "the metallic tang of wanderer afterburner hangs in the air."
+msgstr "流浪者助燃器的金屬架伸了出來，懸在空中"
+
+#: ../../script/events/setpieces.js:3546
+msgid "a shack stands at the center of the village."
+msgstr "一棟小棚子矗立在村子中央"
+
+#: ../../script/events/setpieces.js:3547
+msgid "there are still supplies inside."
+msgstr "裡頭似乎還有些物資"
+
+#: ../../script/events/setpieces.js:3551
+msgid "take"
+msgstr "帶走"
+
+#: ../../script/events/setpieces.js:3558
+msgid "all the work of a previous generation is here."
+msgstr "這裡留存著前代人的所有勞動果實"
+
+#: ../../script/events/setpieces.js:3559
+msgid "ripe for the picking."
+msgstr "是時候採摘它們了"
+
+#: ../../script/events/room.js:6
+msgid "The Nomad"
+msgstr "游牧部落"
+
+#: ../../script/events/room.js:13
+msgid ""
+"a nomad shuffles into view, laden with makeshift bags bound with rough twine."
+msgstr "游牧部落慢吞吞地出現在視野中，帶著許多用粗麻線紮起來的臨時口袋"
+
+#: ../../script/events/room.js:14
+msgid "won't say from where he came, but it's clear that he's not staying."
+msgstr "他們沒有提及來處，但顯然不會逗留很久"
+
+#: ../../script/events/room.js:16
+msgid "a nomad arrives, looking to trade"
+msgstr "游牧部落抵達，想要進行貿易"
+
+#: ../../script/events/room.js:20
+msgid "buy scales"
+msgstr "購買鱗片"
+
+#: ../../script/events/room.js:25
+msgid "buy teeth"
+msgstr "購買牙齒"
+
+#: ../../script/events/room.js:30
+msgid "buy bait"
+msgstr "購買誘餌"
+
+#: ../../script/events/room.js:33
+msgid "traps are more effective with bait."
+msgstr "上餌陷阱更有效率"
+
+#: ../../script/events/room.js:39
+msgid "buy compass"
+msgstr "購買羅盤"
+
+#: ../../script/events/room.js:42
+msgid "the old compass is dented and dusty, but it looks to work."
+msgstr "這塊舊羅盤破損蒙塵，但看起來還能用"
+
+#: ../../script/events/room.js:46 ../../script/events/room.js:257
+#: ../../script/events/room.js:270 ../../script/events/room.js:283
+#: ../../script/events/room.js:335 ../../script/events/room.js:354
+#: ../../script/events/room.js:406 ../../script/events/room.js:425
+#: ../../script/events/room.js:464 ../../script/events/room.js:582
+#: ../../script/events/room.js:598 ../../script/events/room.js:614
+#: ../../script/events/room.js:625
+msgid "say goodbye"
+msgstr "道別"
+
+#: ../../script/events/room.js:54
+msgid "Fire"
+msgstr "著火了"
+
+#: ../../script/events/room.js:61
+msgid "A fire rampages through one of your huts, destroying it."
+msgstr "你的小屋要起火了,撲滅它"
+
+#: ../../script/events/room.js:62
+msgid "Saddly, all residents in the hut perished in the fire."
+msgstr "不幸的是,屋內的所有人都死於火災中"
+
+#: ../../script/events/room.js:64
+msgid "a fire has started"
+msgstr "火災已經開始"
+
+#: ../../script/events/room.js:74
+#, fuzzy
+msgid "mourn"
+msgstr "護甲"
+
+#: ../../script/events/room.js:75
+msgid "some villagers have died"
+msgstr "有一些村民死掉了"
+
+#: ../../script/events/room.js:83 ../../script/events/room.js:134
+msgid "Noises"
+msgstr "嘈雜"
+
+#: ../../script/events/room.js:90
+msgid "through the walls, shuffling noises can be heard."
+msgstr "嘈雜聲透牆傳來"
+
+#: ../../script/events/room.js:91
+msgid "can't tell what they're up to."
+msgstr "難以分辨來源"
+
+#: ../../script/events/room.js:93
+msgid "strange noises can be heard through the walls"
+msgstr "古怪的聲響透過牆壁傳來"
+
+#: ../../script/events/room.js:97 ../../script/events/room.js:148
+msgid "investigate"
+msgstr "調查"
+
+#: ../../script/events/room.js:108
+msgid "vague shapes move, just out of sight."
+msgstr "模糊的身影掠過，消失在視野外"
+
+#: ../../script/events/room.js:109
+msgid "the sounds stop."
+msgstr "安靜下來了"
+
+#: ../../script/events/room.js:113 ../../script/events/room.js:126
+msgid "go back inside"
+msgstr "回屋"
+
+#: ../../script/events/room.js:121
+msgid ""
+"a bundle of sticks lies just beyond the threshold, wrapped in coarse furs."
+msgstr "一捆用粗糙的毛皮紮起來的柴火斜倚在門檻上"
+
+#: ../../script/events/room.js:122
+msgid "the night is silent."
+msgstr "黑夜重歸靜謐"
+
+#: ../../script/events/room.js:141
+msgid "scratching noises can be heard from the store room."
+msgstr "倉庫里傳出悉悉索索的聲音"
+
+#: ../../script/events/room.js:142
+msgid "something's in there."
+msgstr "有什麼在那裡"
+
+#: ../../script/events/room.js:144
+msgid "something's in the store room"
+msgstr "不速之客闖入了倉庫"
+
+#: ../../script/events/room.js:159 ../../script/events/room.js:199
+msgid "some wood is missing."
+msgstr "有些木頭不見了"
+
+#: ../../script/events/room.js:160
+msgid "the ground is littered with small scales"
+msgstr "地上散落著小鱗片"
+
+#: ../../script/events/room.js:200
+msgid "the ground is littered with scraps of cloth"
+msgstr "地上散落著布片"
+
+#: ../../script/events/room.js:220
+msgid "The Beggar"
+msgstr "乞丐"
+
+#: ../../script/events/room.js:227
+msgid "a beggar arrives."
+msgstr "乞丐徘徊在門前"
+
+#: ../../script/events/room.js:228
+msgid "asks for any spare furs to keep him warm at night."
+msgstr "祈求能施捨給他一些多餘的毛皮，好讓他不在夜裡受凍"
+
+#: ../../script/events/room.js:230
+msgid "a beggar arrives"
+msgstr "乞丐來了"
+
+#: ../../script/events/room.js:234
+msgid "give 50"
+msgstr "給50"
+
+#: ../../script/events/room.js:239 ../../script/events/room.js:306
+#: ../../script/events/room.js:377
+msgid "give 100"
+msgstr "給100"
+
+#: ../../script/events/room.js:244 ../../script/events/room.js:316
+#: ../../script/events/room.js:496
+msgid "turn him away"
+msgstr "攆走他"
+
+#: ../../script/events/room.js:252 ../../script/events/room.js:265
+#: ../../script/events/room.js:278
+msgid "the beggar expresses his thanks."
+msgstr "乞丐感激涕零"
+
+#: ../../script/events/room.js:253
+msgid "leaves a pile of small scales behind."
+msgstr "留給我們一堆小鱗片"
+
+#: ../../script/events/room.js:266
+msgid "leaves a pile of small teeth behind."
+msgstr "留給我們一堆小牙齒"
+
+#: ../../script/events/room.js:279
+msgid "leaves some scraps of cloth behind."
+msgstr "留給我們一些布料"
+
+#: ../../script/events/room.js:292 ../../script/events/room.js:363
+msgid "The Mysterious Wanderer"
+msgstr "神秘流浪者"
+
+#: ../../script/events/room.js:299
+msgid ""
+"a wanderer arrives with an empty cart. says if he leaves with wood, he'll be "
+"back with more."
+msgstr "一名流浪者推著貨車來到村子，聲稱如果讓他帶著木頭離開，他會帶回更多木頭"
+
+#: ../../script/events/room.js:300
+msgid "builder's not sure he's to be trusted."
+msgstr "建造者不確定能否信任他"
+
+#: ../../script/events/room.js:302 ../../script/events/room.js:373
+msgid "a mysterious wanderer arrives"
+msgstr "神秘流浪者來了"
+
+#: ../../script/events/room.js:311 ../../script/events/room.js:382
+msgid "give 500"
+msgstr "給500"
+
+#: ../../script/events/room.js:323 ../../script/events/room.js:342
+msgid "the wanderer leaves, cart loaded with wood"
+msgstr "流浪者帶著滿載木頭的貨車離開了"
+
+#: ../../script/events/room.js:329 ../../script/events/room.js:348
+msgid "the mysterious wanderer returns, cart piled high with wood."
+msgstr "神秘的流浪者回來了，貨車上木頭堆得更高了"
+
+#: ../../script/events/room.js:370
+msgid ""
+"a wanderer arrives with an empty cart. says if she leaves with furs, she'll "
+"be back with more."
+msgstr "一名流浪者推著貨車來到村子，聲稱如果讓她帶著毛皮離開，她會帶回更多毛皮"
+
+#: ../../script/events/room.js:371
+msgid "builder's not sure she's to be trusted."
+msgstr "建造者不確定能否信任她"
+
+#: ../../script/events/room.js:387
+msgid "turn her away"
+msgstr "攆走她"
+
+#: ../../script/events/room.js:394 ../../script/events/room.js:413
+msgid "the wanderer leaves, cart loaded with furs"
+msgstr "流浪者帶著滿載毛皮的貨車離開了"
+
+#: ../../script/events/room.js:400 ../../script/events/room.js:419
+msgid "the mysterious wanderer returns, cart piled high with furs."
+msgstr "神秘的流浪者回來了，貨車上毛皮堆得更高了"
+
+#: ../../script/events/room.js:434
+msgid "The Scout"
+msgstr "偵察兵"
+
+#: ../../script/events/room.js:441
+msgid "the scout says she's been all over."
+msgstr "偵察兵說她曾環遊世界"
+
+#: ../../script/events/room.js:442
+msgid "willing to talk about it, for a price."
+msgstr "她願意為我們分享她的經歷，只需提供一些報酬"
+
+#: ../../script/events/room.js:444
+msgid "a scout stops for the night"
+msgstr "偵察兵夜宿於此"
+
+#: ../../script/events/room.js:448
+msgid "buy map"
+msgstr "購買地圖"
+
+#: ../../script/events/room.js:450
+msgid "the map uncovers a bit of the world"
+msgstr "地圖上已探知的地方擴大了一點"
+
+#: ../../script/events/room.js:454
+msgid "learn scouting"
+msgstr "學習偵察"
+
+#: ../../script/events/room.js:473
+msgid "The Master"
+msgstr "宗師"
+
+#: ../../script/events/room.js:480
+msgid "an old wanderer arrives."
+msgstr "一名年邁的流浪者抵達了"
+
+#: ../../script/events/room.js:481
+msgid "he smiles warmly and asks for lodgings for the night."
+msgstr "他面帶和煦的微笑，請求留宿一晚"
+
+#: ../../script/events/room.js:483
+msgid "an old wanderer arrives"
+msgstr "年邁的流浪者出現了"
+
+#: ../../script/events/room.js:487
+msgid "agree"
+msgstr "同意老人的請求"
+
+#: ../../script/events/room.js:503
+msgid "in exchange, the wanderer offers his wisdom."
+msgstr "作為回報，流浪者為我們分享了他的智慧"
+
+#: ../../script/events/room.js:507
+msgid "evasion"
+msgstr "避實就虛"
+
+#: ../../script/events/room.js:517
+msgid "precision"
+msgstr "精密"
+
+#: ../../script/events/room.js:527
+msgid "force"
+msgstr "野蠻人"
+
+#: ../../script/events/room.js:537
+msgid "nothing"
+msgstr "一無所獲"
+
+#: ../../script/events/room.js:546
+msgid "The Sick Man"
+msgstr "患病男子"
+
+#: ../../script/events/room.js:553
+msgid "a man hobbles up, coughing."
+msgstr "男子咳嗽著，一瘸一拐地走了過來"
+
+#: ../../script/events/room.js:554
+msgid "he begs for medicine."
+msgstr "他祈求分給他一支藥劑"
+
+#: ../../script/events/room.js:556
+msgid "a sick man hobbles up"
+msgstr "患病男子一瘸一拐地走了過來"
+
+#: ../../script/events/room.js:560
+msgid "give 1 medicine"
+msgstr "分給他一支藥劑"
+
+#: ../../script/events/room.js:562
+msgid "the man swallows the medicine eagerly"
+msgstr "男子迫不及待嚥下了藥劑"
+
+#: ../../script/events/room.js:566
+msgid "tell him to leave"
+msgstr "請他離開"
+
+#: ../../script/events/room.js:573 ../../script/events/room.js:589
+#: ../../script/events/room.js:605
+msgid "the man is thankful."
+msgstr "男子感激涕零"
+
+#: ../../script/events/room.js:574 ../../script/events/room.js:590
+#: ../../script/events/room.js:606
+msgid "he leaves a reward."
+msgstr "他留下報酬走了"
+
+#: ../../script/events/room.js:575
+msgid "some weird metal he picked up on his travels."
+msgstr "那是他在旅途中撿到的一些古怪的金屬"
+
+#: ../../script/events/room.js:591
+msgid "some weird glowing boxes he picked up on his travels."
+msgstr "那是他在旅途中撿到的一些古怪的發光盒子"
+
+#: ../../script/events/room.js:607
+msgid "all he has are some scales."
+msgstr "全是些鱗片"
+
+#: ../../script/events/room.js:621
+msgid "the man expresses his thanks and hobbles off."
+msgstr "男子表達了他的謝意，一瘸一拐地離開了"
+
+#: ../../script/events/global.js:6
+msgid "The Thief"
+msgstr "小偷"
+
+#: ../../script/events/global.js:13
+msgid "the villagers haul a filthy man out of the store room."
+msgstr "村民們從倉庫裡拽出來一個臟兮兮的傢伙"
+
+#: ../../script/events/global.js:14
+msgid "say his folk have been skimming the supplies."
+msgstr "據說他的同夥們早已經順走許多貨物"
+
+#: ../../script/events/global.js:15
+msgid "say he should be strung up as an example."
+msgstr "他們說應該絞死他以儆效尤"
+
+#: ../../script/events/global.js:17
+msgid "a thief is caught"
+msgstr "抓到一名小偷"
+
+#: ../../script/events/global.js:21
+msgid "hang him"
+msgstr "絞死他"
+
+#: ../../script/events/global.js:25
+msgid "spare him"
+msgstr "釋放他"
+
+#: ../../script/events/global.js:32
+msgid "the villagers hang the thief high in front of the store room."
+msgstr "村民們將盜賊絞死，高掛在倉庫門前"
+
+#: ../../script/events/global.js:33
+msgid ""
+"the point is made. in the next few days, the missing supplies are returned."
+msgstr "此舉卓有成效.數日後，遺失的物資都被還了回來"
+
+#: ../../script/events/global.js:49
+msgid "the man says he's grateful. says he won't come around any more."
+msgstr "這傢伙感激涕零，說他再也不會來行竊了"
+
+#: ../../script/events/global.js:50
+msgid "shares what he knows about sneaking before he goes."
+msgstr "在離開前他分享了有關潛行的心得"
+
+#: ../../script/events/encounters.js:7
+msgid "A Snarling Beast"
+msgstr "咆哮的野獸"
+
+#: ../../script/events/encounters.js:15
+msgid "snarling beast"
+msgstr "咆哮的野獸"
+
+#: ../../script/events/encounters.js:16
+msgid "the snarling beast is dead"
+msgstr "咆哮的野獸倒下了"
+
+#: ../../script/events/encounters.js:39
+msgid "a snarling beast leaps out of the underbrush"
+msgstr "一隻咆哮的野獸從灌木叢裡躥了出來"
+
+#: ../../script/events/encounters.js:44
+msgid "A Gaunt Man"
+msgstr "憔悴的男子"
+
+#: ../../script/events/encounters.js:52
+msgid "gaunt man"
+msgstr "憔悴的男子"
+
+#: ../../script/events/encounters.js:53
+msgid "the gaunt man is dead"
+msgstr "憔悴的男子倒下了"
+
+#: ../../script/events/encounters.js:76
+msgid "a gaunt man approaches, a crazed look in his eye"
+msgstr "一名憔悴的男子靠了過來，眼底流露出瘋狂"
+
+#: ../../script/events/encounters.js:81
+msgid "A Strange Bird"
+msgstr "怪鳥"
+
+#: ../../script/events/encounters.js:89
+msgid "strange bird"
+msgstr "怪鳥"
+
+#: ../../script/events/encounters.js:90
+msgid "the strange bird is dead"
+msgstr "怪鳥倒下了"
+
+#: ../../script/events/encounters.js:113
+msgid "a strange looking bird speeds across the plains"
+msgstr "一隻模樣古怪的鳥快速掠過平原"
+
+#: ../../script/events/encounters.js:119
+msgid "A Shivering Man"
+msgstr "顫抖的男子"
+
+#: ../../script/events/encounters.js:127
+msgid "shivering man"
+msgstr "顫抖的男子"
+
+#: ../../script/events/encounters.js:128
+msgid "the shivering man is dead"
+msgstr "顫抖的男子倒下了"
+
+#: ../../script/events/encounters.js:156
+msgid "a shivering man approaches and attacks with surprising strength"
+msgstr "一名顫抖的男子靠了過來，以令人吃驚的怪力發起襲擊"
+
+#: ../../script/events/encounters.js:161
+msgid "A Man-Eater"
+msgstr "食人怪"
+
+#: ../../script/events/encounters.js:169
+msgid "man-eater"
+msgstr "食人怪"
+
+#: ../../script/events/encounters.js:170
+msgid "the man-eater is dead"
+msgstr "食人怪倒下了"
+
+#: ../../script/events/encounters.js:193
+msgid "a large creature attacks, claws freshly bloodied"
+msgstr "一隻巨大的生物襲來，爪子上鮮血淋漓"
+
+#: ../../script/events/encounters.js:198
+msgid "A Scavenger"
+msgstr "拾荒者"
+
+#: ../../script/events/encounters.js:206
+msgid "scavenger"
+msgstr "拾荒者"
+
+#: ../../script/events/encounters.js:207
+msgid "the scavenger is dead"
+msgstr "拾荒者被消滅了"
+
+#: ../../script/events/encounters.js:235
+msgid "a scavenger draws close, hoping for an easy score"
+msgstr "一名拾荒者貼了過來，想要發起偷襲"
+
+#: ../../script/events/encounters.js:240
+msgid "A Huge Lizard"
+msgstr "巨蜥"
+
+#: ../../script/events/encounters.js:248
+msgid "lizard"
+msgstr "巨蜥"
+
+#: ../../script/events/encounters.js:249
+msgid "the lizard is dead"
+msgstr "巨蜥倒下了"
+
+#: ../../script/events/encounters.js:272
+msgid "the grass thrashes wildly as a huge lizard pushes through"
+msgstr "草叢瘋搖，一隻巨蜥撲了出來"
+
+#: ../../script/events/encounters.js:278
+msgid "A Feral Terror"
+msgstr "兇怪"
+
+#: ../../script/events/encounters.js:286
+msgid "feral terror"
+msgstr "兇怪"
+
+#: ../../script/events/encounters.js:287
+msgid "the feral terror is dead"
+msgstr "兇怪倒下了"
+
+#: ../../script/events/encounters.js:310
+msgid "a beast, wilder than imagining, erupts out of the foliage"
+msgstr "一隻兇怪超乎想像的狂野，從林中撲將出來"
+
+#: ../../script/events/encounters.js:315
+msgid "A Soldier"
+msgstr "士兵"
+
+#: ../../script/events/encounters.js:323
+msgid "soldier"
+msgstr "士兵"
+
+#: ../../script/events/encounters.js:324
+msgid "the soldier is dead"
+msgstr "士兵倒下了"
+
+#: ../../script/events/encounters.js:353
+msgid "a soldier opens fire from across the desert"
+msgstr "士兵從沙漠那邊開火"
+
+#: ../../script/events/encounters.js:358
+msgid "A Sniper"
+msgstr "狙擊手"
+
+#: ../../script/events/encounters.js:366
+msgid "sniper"
+msgstr "狙擊手"
+
+#: ../../script/events/encounters.js:367
+msgid "the sniper is dead"
+msgstr "狙擊手被滅"
+
+#: ../../script/events/encounters.js:396
+msgid "a shot rings out, from somewhere in the long grass"
+msgstr "深草叢的某處射出了一發子彈"
+
+#~ msgid "choose one slot to load from"
+#~ msgstr "選擇加載位置"
+
+#~ msgid "load from slot"
+#~ msgstr "加載"
+
+#~ msgid "eat meat"
+#~ msgstr "吃肉"
+
+#~ msgid "use meds"
+#~ msgstr "服藥"
+
+#~ msgid "pop "
+#~ msgstr "人口 "
+
+#~ msgid "the traps contain "
+#~ msgstr "陷阱捕獲到"
+
+#~ msgid " and "
+#~ msgstr "以及"
+
+#~ msgid "A Dusty Path"
+#~ msgstr "漫漫塵途"
+
+#~ msgid "not enough "
+#~ msgstr "不夠了"
+
+#~ msgid "builder just shivers"
+#~ msgstr "建造者還在瑟瑟發抖"
+
+#~ msgid "score for this game: {0}"
+#~ msgstr "遊戲得分: {0}"
+
+#~ msgid "total score: {0}"
+#~ msgstr "總分: {0}"
+
+#~ msgid "water replenished"
+#~ msgstr "水補充好了"
+
+#~ msgid "the ground is littered with small teeth"
+#~ msgstr "地上散落著小牙齒"
+
+#~ msgid "can't tell what left it here."
+#~ msgstr "難說這裡還留下了什麼"
+
+#~ msgid "the torch sputters and dies in the damp air"
+#~ msgstr "火把劈啪作響，熄滅在了潮濕的空氣中"
+
+#~ msgid "the darkness is absolute"
+#~ msgstr "漆黑一片"
+
+#~ msgid "the torch goes out"
+#~ msgstr "火把燃盡了"
+
+#~ msgid "a cave lizard attacks"
+#~ msgstr "一頭洞穴蜥蜴襲來"
+
+#~ msgid "a large beast charges out of the dark"
+#~ msgstr "一頭巨獸衝出黑暗"
+
+#~ msgid "a giant lizard shambles forward"
+#~ msgstr "一頭洞穴蜥蜴跌跌撞撞地襲來"
+
+#~ msgid "the nest of a large animal lies at the back of the cave."
+#~ msgstr "巨獸的巢穴就位於洞穴後方"
+
+#~ msgid "a small supply cache is hidden at the back of the cave."
+#~ msgstr "一個小型供給點藏在洞穴後方"
+
+#~ msgid ""
+#~ "an old case is wedged behind a rock, covered in a thick layer of dust."
+#~ msgstr "岩石下嵌著一個舊盒子，上面覆滿一層薄灰"
+
+#~ msgid "A Deserted Town"
+#~ msgstr "沙漠小鎮"
+
+#~ msgid "a small suburb lays ahead, empty houses scorched and peeling."
+#~ msgstr "前面是一小片住宅區，空無一人，徒留燒焦的殘垣斷壁"
+
+#~ msgid ""
+#~ "broken streetlights stand, rusting. light hasn't graced this place in a "
+#~ "long time."
+#~ msgstr "早就損壞的街燈屹立著，鏽跡斑斑.光明已經很久沒有眷顧這裡"
+
+#~ msgid "the town lies abandoned, its citizens long dead"
+#~ msgstr "這裡的小鎮早就被遺棄，鎮上的居民已經死去多時"
+
+#~ msgid "explore"
+#~ msgstr "探索小鎮"
+
+#~ msgid ""
+#~ "where the windows of the schoolhouse aren't shattered, they're blackened "
+#~ "with soot."
+#~ msgstr "校舍的窗玻璃並沒有碎掉，但卻被煙熏黑了"
+
+#~ msgid "the double doors creak endlessly in the wind."
+#~ msgstr "雙開門在風中不停地咯吱作響"
+
+#~ msgid "leave town"
+#~ msgstr "離開小鎮"
+
+#~ msgid "ambushed on the street."
+#~ msgstr "街頭有埋伏"
