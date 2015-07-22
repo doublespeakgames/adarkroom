@@ -137,7 +137,7 @@ msgstr "Un village bruyant"
 
 #: ../../script/outside.js:551
 msgid "the sky is grey and the wind blows relentlessly"
-msgstr "le ciel est gris et le vents souffle implacablement"
+msgstr "le ciel est gris et le vent souffle implacablement"
 
 #: ../../script/outside.js:561
 msgid "dry brush and dead branches litter the forest floor"
@@ -516,7 +516,7 @@ msgstr "aciérie"
 #: ../../script/room.js:134
 msgid "builder says the villagers could make steel, given the tools"
 msgstr ""
-"l'ouvrière dit qu'avec les bon outils, les villageois pourraient fabriquer "
+"l'ouvrière dit qu'avec les bons outils, les villageois pourraient fabriquer "
 "de l'acier"
 
 #: ../../script/room.js:135
