@@ -4,6 +4,7 @@ var langs = {
 	'en':'english',
 	'es':'español',
 	'fr':'français',
+	'id':'bahasa indonesia',
 	'it':'italiano',
 	'ja':'日本語',
 	'ko':'한국어',

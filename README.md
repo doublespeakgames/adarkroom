@@ -34,6 +34,7 @@ a minimalist text adventure game for your browser
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=vi">Vietnamese</a></td>
 </tr>
 </table>
+[{Indonesian}](http://adarkroom.doublespeakgames.com/?lang={id})
 
 or play the latest on [GitHub](http://doublespeakgames.github.io/adarkroom)
 
