@@ -194,7 +194,7 @@ var StateManager = {
 		}
 	},
 
-	removeBranch(stateName, noEvent) {
+	removeBranch: function(stateName, noEvent) {
 		for(var i in $SM.get(stateName)){
 			if(typeof $SM.get(stateName)[i] == 'object'){
 				$SM.removeBranch(stateName +'["'+ i +'"]');
