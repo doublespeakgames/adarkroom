@@ -885,6 +885,7 @@ var Room = {
 	
 	updateIncomeView: function() {
 		var stores = $('div#resources');
+		var totalIncome = {};
 		if(stores.length === 0 || typeof $SM.get('income') == 'undefined') return;
 		$('div.storeRow', stores).each(function(index, el) {
 			el = $(el);
@@ -900,10 +901,18 @@ var Room = {
 							.addClass('row_val')
 							.text(Engine.getIncomeMsg(income.stores[store], income.delay))
 							.appendTo(tt);
+						totalIncome[store] = Number(totalIncome[store]) || 0;
+						totalIncome[store] += Number(income.stores[store]); 
 					}
 				}
 			}
 			if(tt.children().length > 0) {
+				var total = totalIncome[storeName];
+				if (total > 0) {
+					total = '+'+total;
+				}
+				$('<div>').addClass('total row_key').text(_('total')).appendTo(tt);
+				$('<div>').addClass('total row_val').text(''+total).appendTo(tt);
 				tt.appendTo(el);
 			}
 		});
