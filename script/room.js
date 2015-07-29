@@ -901,18 +901,19 @@ var Room = {
 							.addClass('row_val')
 							.text(Engine.getIncomeMsg(income.stores[store], income.delay))
 							.appendTo(tt);
-						totalIncome[store] = Number(totalIncome[store]) || 0;
-						totalIncome[store] += Number(income.stores[store]); 
+						if (totalIncome[store] === undefined || totalIncome[store]['income'] === undefined) {
+							totalIncome[store] = {};
+							totalIncome[store]['income'] = 0;
+						}
+						totalIncome[store]['income'] += Number(income.stores[store]);
+						totalIncome[store]['delay'] = income.delay;
 					}
 				}
 			}
 			if(tt.children().length > 0) {
-				var total = totalIncome[storeName];
-				if (total > 0) {
-					total = '+'+total;
-				}
+				var total = totalIncome[storeName]['income'];
 				$('<div>').addClass('total row_key').text(_('total')).appendTo(tt);
-				$('<div>').addClass('total row_val').text(''+total).appendTo(tt);
+				$('<div>').addClass('total row_val').text(Engine.getIncomeMsg(total, totalIncome[storeName]['delay'])).appendTo(tt);
 				tt.appendTo(el);
 			}
 		});
