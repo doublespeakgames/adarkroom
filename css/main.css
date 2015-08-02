@@ -182,6 +182,10 @@ div.row_val {
 	float: right;
 }
 
+div.total {
+	font-weight: bold;
+}
+
 /* Notifications */
 
 div#notifications {
