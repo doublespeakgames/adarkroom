@@ -121,7 +121,7 @@
                   onChoose: function () {
                     DropboxConnector.log('Save to slot ' + n + ' initiated');
                     // timeout prevents error due to fade out animation of the previous event
-                    window.setTimeout(function () {
+                    Engine.setTimeout(function () {
                       DropboxConnector.log('Save to slot ' + n);
                       DropboxConnector.saveGameToDropbox(n, DropboxConnector.savedtoDropboxEvent);
                     }, 1000);
@@ -150,7 +150,7 @@
                     onChoose: function () {
                       DropboxConnector.log('Load from slot ' + n + ' initiated');
                       // timeout prevents error due to fade out animation of the previous event
-                      window.setTimeout(function () {
+                      Engine.setTimeout(function () {
                         DropboxConnector.log('Load from slot ' + n);
                         DropboxConnector.loadGameFromDropbox(n);
                       }, 1000);

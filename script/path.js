@@ -1,7 +1,7 @@
 var Path = {
 		
 	DEFAULT_BAG_SPACE: 10,
-	
+	_STORES_OFFSET: 0,
 	// Everything not in this list weighs 1
 	Weight: {
 		'bone spear': 2,
@@ -34,7 +34,7 @@ var Path = {
 			.appendTo('div#locationSlider');
 		
 		// Add the outfitting area
-		var outfitting = $('<div>').attr('id', 'outfitting').appendTo(this.panel);
+		var outfitting = $('<div>').attr({'id': 'outfitting', 'data-legend': _('supplies:')}).appendTo(this.panel);
 		$('<div>').attr('id', 'bagspace').appendTo(outfitting);
 		
 		// Add the embark button
@@ -46,7 +46,7 @@ var Path = {
 			cooldown: World.DEATH_COOLDOWN
 		}).appendTo(this.panel);
 		
-		Path.outfit = {};
+		Path.outfit = $SM.get('outfit');
 		
 		Engine.updateSlider();
 		
@@ -97,14 +97,14 @@ var Path = {
 		if($SM.get('character.perks')) {
 			var perks = $('#perks');
 			var needsAppend = false;
-			if(perks.length == 0) {
+			if(perks.length === 0) {
 				needsAppend = true;
-				perks = $('<div>').attr('id', 'perks');
+				perks = $('<div>').attr({'id': 'perks', 'data-legend': _('perks:')});
 			}
 			for(var k in $SM.get('character.perks')) {
 				var id = 'perk_' + k.replace(' ', '-');
 				var r = $('#' + id);
-				if($SM.get('character.perks["'+k+'"]') && r.length == 0) {
+				if($SM.get('character.perks["'+k+'"]') && r.length === 0) {
 					r = $('<div>').attr('id', id).addClass('perkRow').appendTo(perks);
 					$('<div>').addClass('row_key').text(_(k)).appendTo(r);
 					$('<div>').addClass('tooltip bottom right').text(Engine.Perks[k].desc).appendTo(r);
@@ -112,11 +112,11 @@ var Path = {
 			}
 			
 			if(needsAppend && perks.children().length > 0) {
-				perks.appendTo(Path.panel);
+				perks.prependTo(Path.panel);
 			}
 			
 			if(!ignoreStores && Engine.activeModule === Path) {
-				$('#storesContainer').css({top: perks.height() + 26 + 'px'});
+				$('#storesContainer').css({top: perks.height() + 26 + Path._STORES_OFFSET + 'px'});
 			}
 		}
 	},
@@ -137,7 +137,7 @@ var Path = {
 		else if($SM.get('stores["l armour"]', true) > 0)
 			armour = _("leather");
 		var aRow = $('#armourRow');
-		if(aRow.length == 0) {
+		if(aRow.length === 0) {
 			aRow = $('<div>').attr('id', 'armourRow').addClass('outfitRow').prependTo(outfit);
 			$('<div>').addClass('row_key').text(_('armour')).appendTo(aRow);
 			$('<div>').addClass('row_val').text(armour).appendTo(aRow);
@@ -148,7 +148,7 @@ var Path = {
 		
 		// Add the water row
 		var wRow = $('#waterRow');
-		if(wRow.length == 0) {
+		if(wRow.length === 0) {
 			wRow = $('<div>').attr('id', 'waterRow').addClass('outfitRow').insertAfter(aRow);
 			$('<div>').addClass('row_key').text(_('water')).appendTo(wRow);
 			$('<div>').addClass('row_val').text(World.getMaxWater()).appendTo(wRow);
@@ -174,6 +174,7 @@ var Path = {
 		}, Room.Craftables);
 		
 		for(var k in carryable) {
+			var lk = _(k);
 			var store = carryable[k];
 			var have = $SM.get('stores["'+k+'"]');
 			var num = Path.outfit[k];
@@ -183,31 +184,29 @@ var Path = {
 			var row = $('div#outfit_row_' + k.replace(' ', '-'), outfit);
 			if((store.type == 'tool' || store.type == 'weapon') && have > 0) {
 				total += num * Path.getWeight(k);
-				if(row.length == 0) {
+				if(row.length === 0) {
 					row = Path.createOutfittingRow(k, num, store.name);
 					
 					var curPrev = null;
 					outfit.children().each(function(i) {
 						var child = $(this);
-						if(child.attr('id').indexOf('outfit_row_') == 0) {
-							var cName = child.attr('id').substring(11).replace('-', ' ');
-							if(cName < k && (curPrev == null || cName > curPrev)) {
-								curPrev = cName;
+						if(child.attr('id').indexOf('outfit_row_') === 0) {
+							var cName = child.children('.row_key').text();
+							if(cName < lk) {
+								curPrev = child.attr('id');
 							}
 						}
 					});
 					if(curPrev == null) {
 						row.insertAfter(wRow);
-					} 
-					else 
-					{
-						row.insertAfter(outfit.find('#outfit_row_' + curPrev.replace(' ', '-')));
+					} else {
+						row.insertAfter(outfit.find('#' + curPrev));
 					}
 				} else {
 					$('div#' + row.attr('id') + ' > div.row_val > span', outfit).text(num);
 					$('div#' + row.attr('id') + ' .tooltip .numAvailable', outfit).text(numAvailable - num);
 				}
-				if(num == 0) {
+				if(num === 0) {
 					$('.dnBtn', row).addClass('disabled');
 					$('.dnManyBtn', row).addClass('disabled');
 				} else {
@@ -221,7 +220,7 @@ var Path = {
 					$('.upBtn', row).removeClass('disabled');
 					$('.upManyBtn', row).removeClass('disabled');
 				}
-			} else if(have == 0 && row.length > 0) {
+			} else if(have === 0 && row.length > 0) {
 				row.remove();
 			}
 		}
@@ -269,6 +268,7 @@ var Path = {
 			var maxExtraByStore  = $SM.get('stores["'+supply+'"]', true) - cur;
 			var maxExtraByBtn    = btn.data;
 			Path.outfit[supply] = cur + Math.min(maxExtraByBtn, Math.min(maxExtraByWeight, maxExtraByStore));
+			$SM.set('outfit['+supply+']', Path.outfit[supply]);
 			Path.updateOutfitting();
 		}
 	},
@@ -280,6 +280,7 @@ var Path = {
 		cur = typeof cur == 'number' ? cur : 0;
 		if(cur > 0) {
 			Path.outfit[supply] = Math.max(0, cur - btn.data);
+			$SM.set('outfit['+supply+']', Path.outfit[supply]);
 			Path.updateOutfitting();
 		}
 	},
@@ -288,6 +289,7 @@ var Path = {
 		Path.setTitle();
 		Path.updateOutfitting();
 		Path.updatePerks(true);
+		$SM.set('outfit', Path.outfit);
 
 		Engine.moveStoresView($('#perks'), transition_diff);
 	},
@@ -300,14 +302,45 @@ var Path = {
 		for(var k in Path.outfit) {
 			$SM.add('stores["'+k+'"]', -Path.outfit[k]);
 		}
+		$SM.remove('outfit');
 		World.onArrival();
 		$('#outerSlider').animate({left: '-700px'}, 300);
 		Engine.activeModule = World;
 	},
 	
 	handleStateUpdates: function(e){
-		if(e.category == 'character' && e.stateName.indexOf('character.perks') == 0 && Engine.activeModule == Path){
+		if(e.category == 'character' && e.stateName.indexOf('character.perks') === 0 && Engine.activeModule == Path){
 			Path.updatePerks();
 		};
+	},
+
+	scrollSidebar: function(direction, reset){
+
+		if( typeof reset != "undefined" ){
+			$('#perks').css('top', '0px');
+			$('#storesContainer').css('top', '206px');
+			Path._STORES_OFFSET = 0;
+			return;
+		}
+		
+		var momentum = 10;
+
+		if( direction == 'up' )
+			momentum = momentum * -1
+
+		if( direction == 'down' && inView( direction, $('#perks') ) ){
+
+			return false;
+
+		}else if( direction == 'up' && inView( direction, $('#storesContainer') ) ){
+
+			return false;
+
+		}
+
+		scrollByX( $('#perks'), momentum );
+		scrollByX( $('#storesContainer'), momentum );
+		Path._STORES_OFFSET += momentum;
+
 	}
 };

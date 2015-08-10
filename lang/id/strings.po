@@ -1,0 +1,3468 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2015-07-24 14:18+0700\n"
+"PO-Revision-Date: 2015-07-24 22:58+0700\n"
+"Last-Translator: Ricky Chandra <tricky.chandra@gmail.com>\n"
+"Language-Team: \n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: script/dropbox.js:64
+msgid "Dropbox connection"
+msgstr "Koneksi Dropbox"
+
+#: script/dropbox.js:67
+msgid "connect game to dropbox local storage"
+msgstr "menghubungkan game ke penyimpanan lokal Dropbox"
+
+# command
+#: script/dropbox.js:70
+msgid "connect"
+msgstr "sambung"
+
+# command
+#: script/dropbox.js:77 script/dropbox.js:109 script/dropbox.js:136
+#: script/dropbox.js:167 script/engine.js:278 script/engine.js:311
+msgid "cancel"
+msgstr "batal"
+
+#: script/dropbox.js:88 script/dropbox.js:180
+msgid "Dropbox Export / Import"
+msgstr "Dropbox Ekspor / Impor"
+
+#: script/dropbox.js:91
+msgid "export or import save data to dropbox datastorage"
+msgstr "ekspor atau impor data simpanan ke penyimpanan data dropbox"
+
+#: script/dropbox.js:92
+msgid "your are connected to dropbox with account / email "
+msgstr "anda terhubung ke dropbox dengan akun / email"
+
+# command
+#: script/dropbox.js:95
+msgid "save"
+msgstr "simpan"
+
+# command
+#: script/dropbox.js:99
+msgid "load"
+msgstr "muat"
+
+# command
+#: script/dropbox.js:104
+msgid "signout"
+msgstr "keluar"
+
+#: script/dropbox.js:115
+msgid "choose one slot to save to"
+msgstr "pilih satu tempat untuk menyimpan ke"
+
+#: script/dropbox.js:121
+msgid "save to slot"
+msgstr "simpan ke tempat"
+
+#: script/dropbox.js:144
+msgid "choose one slot to load from"
+msgstr "pilih satu tempat untuk memuat dari"
+
+#: script/dropbox.js:151
+msgid "load from slot"
+msgstr "muat dari tempat"
+
+#: script/dropbox.js:183
+msgid "successfully saved to dropbox datastorage"
+msgstr "berhasil disimpan ke penyimpanan data dropbox"
+
+#: script/dropbox.js:184
+msgid "error while saving to dropbox datastorage"
+msgstr "error saat menyimpan ke penyimpanan data dropbox"
+
+#: script/dropbox.js:187
+msgid "ok"
+msgstr "oke"
+
+#: script/engine.js:16
+msgid "boxer"
+msgstr "petinju"
+
+#: script/engine.js:17
+msgid "punches do more damage"
+msgstr "tinjuan menyakiti"
+
+#: script/engine.js:20
+msgid "learned to throw punches with purpose"
+msgstr "telah bisa meninju dengan sengaja"
+
+#: script/engine.js:23
+msgid "martial artist"
+msgstr "ahli bela diri"
+
+#: script/engine.js:24
+msgid "punches do even more damage."
+msgstr "tinjuan menyakiti lebih banyak"
+
+#: script/engine.js:25
+msgid "learned to fight quite effectively without weapons"
+msgstr "telah bisa bertarung secara efektif tanpa senjata"
+
+#: script/engine.js:30
+msgid "unarmed master"
+msgstr "tuan tak bersenjata"
+
+#: script/engine.js:31
+msgid "punch twice as fast, and with even more force"
+msgstr "meninju dua kali lebih cepat, dan dengan lebih kuat"
+
+#: script/engine.js:32
+msgid "learned to strike faster without weapons"
+msgstr "telah bisa memukul lebih cepat tanpa senjata"
+
+#: script/engine.js:35
+msgid "barbarian"
+msgstr "barbar"
+
+#: script/engine.js:36
+msgid "melee weapons deal more damage"
+msgstr "senjata jarak dekat menyakiti lebih banyak"
+
+#: script/engine.js:37
+msgid "learned to swing weapons with force"
+msgstr "telah bisa mengayunkan senjata dengan kekuatan"
+
+#: script/engine.js:40
+msgid "slow metabolism"
+msgstr "metabolisme lambat"
+
+#: script/engine.js:41
+msgid "go twice as far without eating"
+msgstr "bepergian dua kali lebih jauh tanpa makan"
+
+#: script/engine.js:42
+msgid "learned how to ignore the hunger"
+msgstr "telah bisa mengabaikan kelaparan"
+
+#: script/engine.js:45
+msgid "desert rat"
+msgstr "tikus gurun"
+
+#: script/engine.js:46
+msgid "go twice as far without drinking"
+msgstr "bepergian dua kali lebih jauh tanpa minum"
+
+#: script/engine.js:47
+msgid "learned to love the dry air"
+msgstr "telah bisa menyukai udara kering"
+
+#: script/engine.js:50
+msgid "evasive"
+msgstr "elakan"
+
+#: script/engine.js:51
+msgid "dodge attacks more effectively"
+msgstr "mengelak serangan dengan lebih efektif"
+
+#: script/engine.js:52
+#, fuzzy
+msgid "learned to be where they're not"
+msgstr "telah bisa berada di tempat mereka tidak ada"
+
+#: script/engine.js:55
+msgid "precise"
+msgstr "tepat"
+
+#: script/engine.js:56
+msgid "land blows more often"
+msgstr "mendaratkan pukulan lebih sering"
+
+#: script/engine.js:57
+msgid "learned to predict their movement"
+msgstr "telah bisa memprediksi gerakan mereka"
+
+#: script/engine.js:60
+msgid "scout"
+msgstr "intai"
+
+#: script/engine.js:61
+msgid "see farther"
+msgstr "melihat lebih jauh"
+
+#: script/engine.js:62
+msgid "learned to look ahead"
+msgstr "telah bisa melihat ke depan"
+
+#: script/engine.js:65
+msgid "stealthy"
+msgstr "sembunyi"
+
+#: script/engine.js:66
+msgid "better avoid conflict in the wild"
+msgstr "lebih baik menghindari konflik di alam liar"
+
+#: script/engine.js:67
+msgid "learned how not to be seen"
+msgstr "telah bisa bersembunyi"
+
+#: script/engine.js:70
+msgid "gastronome"
+msgstr "pencicip makanan"
+
+#: script/engine.js:71
+msgid "restore more health when eating"
+msgstr "memulihkan kesehatan ketika makan"
+
+#: script/engine.js:72
+msgid "learned to make the most of food"
+msgstr "telah bisa membuat sebagian besar makanan"
+
+#: script/engine.js:142 script/engine.js:481
+msgid "lights off."
+msgstr "lampu mati."
+
+#: script/engine.js:148 script/space.js:450
+msgid "restart."
+msgstr "ulang kembali."
+
+#: script/engine.js:154
+msgid "share."
+msgstr "bagi."
+
+#: script/engine.js:160
+msgid "save."
+msgstr "simpan."
+
+#: script/engine.js:169
+msgid "dropbox."
+msgstr "dropbox."
+
+#: script/engine.js:176
+msgid "app store."
+msgstr "app store."
+
+#: script/engine.js:182
+msgid "github."
+msgstr "github."
+
+#: script/engine.js:261
+msgid "Export / Import"
+msgstr "Ekspor / Impor"
+
+# line 1
+#: script/engine.js:265
+msgid "export or import save data, for backing up"
+msgstr "ekspor atau impor data simpanan, untuk back up"
+
+# line 2
+#: script/engine.js:266
+msgid "or migrating computers"
+msgstr "atau memindahkan komputer"
+
+# command
+#: script/engine.js:270
+msgid "export"
+msgstr "ekspor"
+
+# command
+#: script/engine.js:274 script/engine.js:306
+msgid "import"
+msgstr "impor"
+
+#: script/engine.js:285
+msgid "are you sure?"
+msgstr "apakah anda yakin?"
+
+#: script/engine.js:286
+msgid "if the code is invalid, all data will be lost."
+msgstr "jika kode tidak valid, seluruh data akan hilang"
+
+#: script/engine.js:287
+msgid "this is irreversible."
+msgstr "ini tidak dapat diubah"
+
+# command
+#: script/engine.js:291 script/engine.js:377
+msgid "yes"
+msgstr "ya"
+
+# command
+#: script/engine.js:296 script/engine.js:382
+msgid "no"
+msgstr "tidak"
+
+#: script/engine.js:302
+msgid "put the save code here."
+msgstr "letakkan kode simpanan di sini"
+
+#: script/engine.js:334
+msgid "Export"
+msgstr "Ekspor"
+
+#: script/engine.js:337
+msgid "save this."
+msgstr "simpan ini."
+
+# command
+#: script/engine.js:342
+msgid "got it"
+msgstr "baiklah"
+
+#: script/engine.js:371
+msgid "Restart?"
+msgstr "Ulang kembali?"
+
+#: script/engine.js:374
+msgid "restart the game?"
+msgstr "ulang kembali permainan?"
+
+#: script/engine.js:405
+msgid "Share"
+msgstr "Bagi"
+
+#: script/engine.js:408
+msgid "bring your friends."
+msgstr "ajak teman-teman anda."
+
+#: script/engine.js:411
+msgid "facebook"
+msgstr "facebook"
+
+#: script/engine.js:418
+msgid "google+"
+msgstr "google+"
+
+#: script/engine.js:425
+msgid "twitter"
+msgstr "twitter"
+
+#: script/engine.js:432
+msgid "reddit"
+msgstr "reddit"
+
+#: script/engine.js:439
+msgid "close"
+msgstr "tutup"
+
+#: script/engine.js:474 script/engine.js:477
+msgid "lights on."
+msgstr "lampu nyala."
+
+# {0}: production/consumption unit
+# {1}: number of seconds
+#: script/engine.js:584
+msgid "{0} per {1}s"
+msgstr "{0} per {1}"
+
+# command
+#: script/events.js:142
+msgid "eat meat"
+msgstr "makan daging"
+
+# command
+#: script/events.js:162
+msgid "use meds"
+msgstr "pakai peralatan medis"
+
+#: script/events.js:360 script/events.js:405
+msgid "miss"
+msgstr "meleset"
+
+#: script/events.js:373 script/events.js:418
+msgid "stunned"
+msgstr "dikagetkan"
+
+# command
+#: script/events.js:494 script/events/global.js:42 script/events/global.js:59
+#: script/events/room.js:142 script/events/room.js:162
+#: script/events/room.js:182 script/events/setpieces.js:25
+#: script/events/setpieces.js:48 script/events/setpieces.js:65
+#: script/events/setpieces.js:83 script/events/setpieces.js:106
+#: script/events/setpieces.js:537 script/events/setpieces.js:1255
+#: script/events/setpieces.js:2953 script/events/setpieces.js:2987
+#: script/events/setpieces.js:3010 script/events/setpieces.js:3047
+#: script/events/setpieces.js:3100 script/events/setpieces.js:3129
+#: script/events/setpieces.js:3175 script/events/setpieces.js:3302
+#: script/events/setpieces.js:3324 script/events/setpieces.js:3444
+#: script/events/setpieces.js:3468 script/events/setpieces.js:3501
+#: script/events/setpieces.js:3520 script/events/setpieces.js:3545
+#: script/events/setpieces.js:3573
+msgid "leave"
+msgstr "tinggalkan"
+
+#: script/events.js:780
+msgid "*** EVENT ***"
+msgstr "*** PERISTIWA ***"
+
+#: script/localization.js:4
+msgid "saved."
+msgstr "tersimpan."
+
+#: script/localization.js:5
+msgid "wood"
+msgstr "hutan"
+
+#: script/localization.js:6
+msgid "builder"
+msgstr "pembangun"
+
+#: script/localization.js:7
+#, fuzzy
+msgid "teeth"
+msgstr "gigi"
+
+#: script/localization.js:8
+msgid "meat"
+msgstr "daging"
+
+#: script/localization.js:9
+msgid "fur"
+msgstr "bulu"
+
+#: script/localization.js:10
+#, fuzzy
+msgid "alien alloy"
+msgstr "campuran asing"
+
+#: script/localization.js:11
+msgid "bullets"
+msgstr "peluru"
+
+#: script/localization.js:12
+msgid "charm"
+msgstr "jimat"
+
+#: script/localization.js:13 script/path.js:148
+msgid "leather"
+msgstr "kulit"
+
+#: script/localization.js:14 script/path.js:146
+msgid "iron"
+msgstr "besi"
+
+#: script/localization.js:15 script/path.js:144
+msgid "steel"
+msgstr "baja"
+
+#: script/localization.js:16
+msgid "coal"
+msgstr "batu bara"
+
+#: script/localization.js:17
+msgid "sulphur"
+msgstr "sulfur"
+
+#: script/localization.js:18
+msgid "energy cell"
+msgstr "sel energi"
+
+#: script/localization.js:19 script/room.js:167
+msgid "torch"
+msgstr "obor"
+
+#: script/localization.js:20
+msgid "medicine"
+msgstr "obat"
+
+#: script/localization.js:21 script/outside.js:20
+msgid "hunter"
+msgstr "pemburu"
+
+#: script/localization.js:22 script/outside.js:28
+msgid "trapper"
+msgstr "penjebak"
+
+#: script/localization.js:23 script/outside.js:36
+msgid "tanner"
+msgstr "penyamak"
+
+#: script/localization.js:24
+msgid "grenade"
+msgstr "granat"
+
+#: script/localization.js:25
+msgid "bolas"
+msgstr "bola"
+
+#: script/localization.js:26
+msgid "bayonet"
+msgstr "bayonet"
+
+#: script/localization.js:27 script/outside.js:44
+msgid "charcutier"
+msgstr "penjual daging babi"
+
+#: script/localization.js:28 script/outside.js:53
+msgid "iron miner"
+msgstr "penambang besi"
+
+#: script/localization.js:29
+msgid "iron mine"
+msgstr "tambang besi"
+
+#: script/localization.js:30 script/outside.js:61
+msgid "coal miner"
+msgstr "penambang batu bara"
+
+#: script/localization.js:31
+msgid "coal mine"
+msgstr "tambang batu bara"
+
+#: script/localization.js:32 script/outside.js:69
+msgid "sulphur miner"
+msgstr "penambang sulfur"
+
+#: script/localization.js:33
+msgid "sulphur mine"
+msgstr "tambang sulfur"
+
+#: script/localization.js:34 script/outside.js:86
+msgid "armourer"
+msgstr "pembuat senjata"
+
+#: script/localization.js:35 script/outside.js:77
+msgid "steelworker"
+msgstr "pekerja pabrik baja"
+
+# use plural if your language admits it (like "teeth" and "scales")
+#: script/localization.js:36
+msgid "bait"
+msgstr "umpan"
+
+#: script/localization.js:37 script/localization.js:44
+msgid "cured meat"
+msgstr "daging asap"
+
+#: script/localization.js:38 script/localization.js:43
+#, fuzzy
+msgid "scales"
+msgstr "sisik"
+
+#: script/localization.js:39
+msgid "compass"
+msgstr "kompas"
+
+#: script/localization.js:40
+msgid "laser rifle"
+msgstr "senapan laser"
+
+#: script/localization.js:41 script/outside.js:13
+msgid "gatherer"
+msgstr "pengumpul"
+
+#: script/localization.js:42
+msgid "cloth"
+msgstr "kain"
+
+#: script/localization.js:45
+msgid "thieves"
+msgstr "pencuri"
+
+#: script/localization.js:46
+msgid "not enough fur"
+msgstr "tidak cukup bulu"
+
+#: script/localization.js:47
+msgid "not enough wood"
+msgstr "tidak cukup kayu"
+
+#: script/localization.js:48
+msgid "not enough coal"
+msgstr "tidak cukup batu bara"
+
+#: script/localization.js:49
+msgid "not enough iron"
+msgstr "tidak cukup besi"
+
+#: script/localization.js:50
+msgid "not enough steel"
+msgstr "tidak cukup baja"
+
+#: script/localization.js:51
+msgid "not enough sulphur"
+msgstr "tidak cukup sulfur"
+
+#: script/localization.js:52
+msgid "baited trap"
+msgstr "jebakan berumpan"
+
+#: script/localization.js:53
+msgid "not enough scales"
+msgstr "tidak cukup sisik"
+
+#: script/localization.js:54
+msgid "not enough cloth"
+msgstr "tidak cukup kain"
+
+#: script/localization.js:55
+msgid "not enough teeth"
+msgstr "tidak cukup gigi"
+
+#: script/localization.js:56
+msgid "not enough leather"
+msgstr "tidak cukup kulit"
+
+#: script/localization.js:57
+msgid "not enough meat"
+msgstr "tidak cukup daging"
+
+#: script/localization.js:58
+msgid "the compass points east"
+msgstr "kompas menunjuk ke timur"
+
+#: script/localization.js:59
+msgid "the compass points west"
+msgstr "kompas menunjuk ke barat"
+
+#: script/localization.js:60
+msgid "the compass points north"
+msgstr "kompas menunjuk ke utara"
+
+#: script/localization.js:61
+msgid "the compass points south"
+msgstr "kompas menunjuk ke selatan"
+
+#: script/localization.js:62
+msgid "the compass points northeast"
+msgstr "kompas menunjuk ke timur laut"
+
+#: script/localization.js:63
+msgid "the compass points northwest"
+msgstr "kompas menunjuk ke barat laut"
+
+#: script/localization.js:64
+msgid "the compass points southeast"
+msgstr "kompas menunjuk ke tenggara"
+
+#: script/localization.js:65
+msgid "the compass points southwest"
+msgstr "kompas menunjuk ke barat daya"
+
+#: script/localization.js:72
+msgid "stores"
+msgstr "toko"
+
+#: script/localization.js:73
+msgid "weapons"
+msgstr "senjata"
+
+# introduces available buildings
+#: script/localization.js:74
+msgid "build:"
+msgstr "bangun:"
+
+# introduces items which can be crafted
+#: script/localization.js:75
+msgid "craft:"
+msgstr "rakit:"
+
+# introduces list of marketable items
+#: script/localization.js:76
+msgid "buy:"
+msgstr "beli:"
+
+#: script/localization.js:77
+msgid "supplies:"
+msgstr "persediaan:"
+
+#: script/localization.js:78
+msgid "perks:"
+msgstr "tunjangan:"
+
+#: script/localization.js:79
+msgid "take:"
+msgstr "mengambil:"
+
+#: script/localization.js:80
+msgid "drop:"
+msgstr "menjatuhkan:"
+
+#: script/localization.js:81
+msgid "forest"
+msgstr "hutan"
+
+#: script/localization.js:82
+msgid "village"
+msgstr "desa"
+
+#: script/outside.js:5
+msgid "Outside"
+msgstr "Luar"
+
+#: script/outside.js:100
+msgid "scraps of fur"
+msgstr "potongan bulu"
+
+#: script/outside.js:105
+msgid "bits of meat"
+msgstr "sedikit daging"
+
+#: script/outside.js:110
+msgid "strange scales"
+msgstr "sisik-sisik aneh"
+
+#: script/outside.js:115
+msgid "scattered teeth"
+msgstr "gigi-gigi bertaburan"
+
+#: script/outside.js:120
+msgid "tattered cloth"
+msgstr "kain compang-camping"
+
+#: script/outside.js:125
+msgid "a crudely made charm"
+msgstr "jimat yang dibuat dengan kasar"
+
+#: script/outside.js:142 script/outside.js:536
+msgid "A Silent Forest"
+msgstr "Hutan Sunyi"
+
+# command
+#: script/outside.js:170
+msgid "gather wood"
+msgstr "kumpulkan kayu"
+
+#: script/outside.js:187
+msgid "a stranger arrives in the night"
+msgstr "seorang asing tiba di malam hari"
+
+#: script/outside.js:189
+msgid "a weathered family takes up in one of the huts."
+msgstr "sebuah keluarga menempati salah satu gubuk."
+
+#: script/outside.js:191
+msgid "a small group arrives, all dust and bones."
+msgstr "sekumpulan kecil orang tiba, sangat kotor."
+
+#: script/outside.js:193
+msgid "a convoy lurches in, equal parts worry and hope."
+msgstr "sebuah konvoi tiba, mengkhawatirkan sekaligus melegakan."
+
+#: script/outside.js:195
+msgid "the town's booming. word does get around."
+msgstr "kota menjadi heboh, kabar-kabar tersebar."
+
+# short for population
+# mind the whitespace at the end!
+#: script/outside.js:426
+msgid "pop "
+msgstr "jumlah "
+
+# command
+#: script/outside.js:517
+msgid "check traps"
+msgstr "periksa jebakan"
+
+#: script/outside.js:538
+msgid "A Lonely Hut"
+msgstr "Gubuk Kecil"
+
+#: script/outside.js:540
+msgid "A Tiny Village"
+msgstr "Desa Kecil"
+
+#: script/outside.js:542
+msgid "A Modest Village"
+msgstr "Desa Sederhana"
+
+#: script/outside.js:544
+msgid "A Large Village"
+msgstr "Desa Besar"
+
+#: script/outside.js:546
+msgid "A Raucous Village"
+msgstr "Desa Ramai"
+
+#: script/outside.js:558
+msgid "the sky is grey and the wind blows relentlessly"
+msgstr "langit berwarna abu dan angin bertiup terus-menerus"
+
+#: script/outside.js:568
+msgid "dry brush and dead branches litter the forest floor"
+msgstr "semak kering dan patahan ranting di hutan"
+
+# mind the whitespace at the end!
+#: script/outside.js:596
+msgid "the traps contain "
+msgstr "di dalam jebakan terdapat "
+
+# separates the last object found in traps.
+# mind the whitespaces at the beginning and end!
+#: script/outside.js:603
+msgid " and "
+msgstr " dan "
+
+#: script/path.js:33 script/path.js:312
+msgid "A Dusty Path"
+msgstr "Jalur Berdebu"
+
+# command
+#: script/path.js:50
+msgid "embark"
+msgstr "mulai"
+
+#: script/path.js:68
+msgid "the compass points "
+msgstr "kompas mengarah ke "
+
+#: script/path.js:142
+msgid "none"
+msgstr "tidak ada"
+
+#: script/path.js:152
+msgid "armour"
+msgstr "baju jirah"
+
+#: script/path.js:164
+msgid "water"
+msgstr "air minum"
+
+# Legend for free space when embarking
+#: script/path.js:243 script/world.js:306
+msgid "free {0}/{1}"
+msgstr "kosong {0}/{1}"
+
+#: script/path.js:267
+msgid "weight"
+msgstr "berat"
+
+#: script/path.js:269
+msgid "available"
+msgstr "tersedia"
+
+#: script/room.js:22
+msgid "trap"
+msgstr "jebakan"
+
+#: script/room.js:25
+msgid ""
+"builder says she can make traps to catch any creatures might still be alive "
+"out there"
+msgstr ""
+"pembangun mengatakan dia dapat membuat jebakan untuk menangkap makhluk-"
+"makhluk di luar"
+
+#: script/room.js:26
+msgid "more traps to catch more creatures"
+msgstr "lebih banyak jebakan untuk lebih banyak makhluk"
+
+#: script/room.js:27
+msgid "more traps won't help now"
+msgstr "menambah jebakan tidak berarti lagi"
+
+#: script/room.js:37
+msgid "cart"
+msgstr "gerobak"
+
+#: script/room.js:40
+msgid "builder says she can make a cart for carrying wood"
+msgstr "pembangun mengatakan dia dapat membuat gerobak untuk menampung kayu"
+
+#: script/room.js:41
+msgid "the rickety cart will carry more wood from the forest"
+msgstr "gerobak sederhana dapat mengangkut lebih banyak kayu dari hutan"
+
+#: script/room.js:50
+msgid "hut"
+msgstr "gubuk"
+
+#: script/room.js:53
+msgid "builder says there are more wanderers. says they'll work, too."
+msgstr ""
+"pembangun mengatakan ada lebih banyak pengembara. mereka akan bekerja juga."
+
+#: script/room.js:54
+msgid "builder puts up a hut, out in the forest. says word will get around."
+msgstr "pembangun membangun sebuah pondok, di dalam hutan. kabar akan tersebar"
+
+#: script/room.js:55
+msgid "no more room for huts."
+msgstr "tidak ada ruang untuk pondok lagi."
+
+#: script/room.js:65
+msgid "lodge"
+msgstr "pondok"
+
+#: script/room.js:68
+msgid "villagers could help hunt, given the means"
+msgstr "penduduk desa dapat bantu berburu, jika dicukupi kebutuhan"
+
+#: script/room.js:69
+msgid "the hunting lodge stands in the forest, a ways out of town"
+msgstr "pondok berburu dibangun di dalam hutan, dapat keluar dari kota"
+
+#: script/room.js:80
+msgid "trading post"
+msgstr "pos perdagangan"
+
+#: script/room.js:83
+msgid "a trading post would make commerce easier"
+msgstr "pos perdagangan memudahkan perdagangan"
+
+#: script/room.js:84
+msgid ""
+"now the nomads have a place to set up shop, they might stick around a while"
+msgstr ""
+"para pengembara dapat membuka toko sekarang, mereka akan menetap untuk "
+"sementara"
+
+#: script/room.js:94
+msgid "tannery"
+msgstr "penyamakan"
+
+#: script/room.js:97
+msgid "builder says leather could be useful. says the villagers could make it."
+msgstr ""
+"pembangun mengatakan kulit dapat berguna. penduduk desa dapat membuatnya"
+
+#: script/room.js:98
+#, fuzzy
+msgid "tannery goes up quick, on the edge of the village"
+msgstr "penyamakan menjadi terkenal di desa"
+
+#: script/room.js:108
+msgid "smokehouse"
+msgstr "rumah asap"
+
+#: script/room.js:111
+msgid ""
+"should cure the meat, or it'll spoil. builder says she can fix something up."
+msgstr ""
+"asapi daging, atau ia akan membusuk. pembangun mengatakan dia dapat "
+"melakukannya."
+
+#: script/room.js:112
+msgid "builder finishes the smokehouse. she looks hungry."
+msgstr "pembangun telah selesai membangun rumah asap. dia kelihatan lapar."
+
+#: script/room.js:122
+msgid "workshop"
+msgstr "bengkel"
+
+#: script/room.js:125
+msgid "builder says she could make finer things, if she had the tools"
+msgstr ""
+"pembangun mengatakan dia dapat membuat barang lebih bagus, jika punya "
+"peralatan"
+
+#: script/room.js:126
+msgid "workshop's finally ready. builder's excited to get to it"
+msgstr "bengkel telah siap. pembangun senang mendapatkannya"
+
+#: script/room.js:137
+msgid "steelworks"
+msgstr "pabrik baja"
+
+#: script/room.js:140
+msgid "builder says the villagers could make steel, given the tools"
+msgstr ""
+"pembangun mengatakan penduduk desa dapat membuat baja, jika punya peralatan"
+
+#: script/room.js:141
+msgid "a haze falls over the village as the steelworks fires up"
+msgstr "disebabkan pabrik baja, asap memenuhi desa"
+
+#: script/room.js:152
+msgid "armoury"
+msgstr "gudang senjata"
+
+#: script/room.js:155
+msgid "builder says it'd be useful to have a steady source of bullets"
+msgstr "pembangun mengatakan lebih baik memiliki persediaan peluru yang cukup"
+
+#: script/room.js:156
+msgid "armoury's done, welcoming back the weapons of the past."
+msgstr "gudang senjata telah siap, senjata-senjata dapat dibangun."
+
+#: script/room.js:170
+msgid "a torch to keep the dark away"
+msgstr "obor untuk penerangan"
+
+#: script/room.js:179
+msgid "waterskin"
+msgstr "kantong air"
+
+#: script/room.js:183
+msgid "this waterskin'll hold a bit of water, at least"
+msgstr "kantong air dapat menampung sedikit air"
+
+#: script/room.js:191
+msgid "cask"
+msgstr "tong kecil"
+
+#: script/room.js:195
+msgid "the cask holds enough water for longer expeditions"
+msgstr "tong kecil dapat menampung cukup air untuk perjalanan panjang"
+
+#: script/room.js:204
+msgid "water tank"
+msgstr "tangki air"
+
+#: script/room.js:208
+msgid "never go thirsty again"
+msgstr "tidak akan haus lagi"
+
+#: script/room.js:217
+msgid "bone spear"
+msgstr "tombak tulang"
+
+#: script/room.js:220
+msgid "this spear's not elegant, but it's pretty good at stabbing"
+msgstr "tombak ini tidak elegan, tapi cukup untuk menusuk"
+
+#: script/room.js:229 script/world.js:300
+msgid "rucksack"
+msgstr "rangsel"
+
+#: script/room.js:233
+msgid "carrying more means longer expeditions to the wilds"
+msgstr "menampung lebih banyak sarana untuk perjalanan panjang"
+
+#: script/room.js:241
+msgid "wagon"
+msgstr "kereta"
+
+#: script/room.js:245
+msgid "the wagon can carry a lot of supplies"
+msgstr "kereta dapat menampung persediaan yang banyak"
+
+#: script/room.js:254
+msgid "convoy"
+msgstr "konvoi"
+
+#: script/room.js:258
+msgid "the convoy can haul mostly everything"
+msgstr "konvoi dapat menampung hampir segalanya"
+
+# short for "leather armour"
+#: script/room.js:268
+msgid "l armour"
+msgstr "jirah kulit"
+
+#: script/room.js:271
+msgid "leather's not strong. better than rags, though."
+msgstr "kulit tidak cukup kuat. lebih baik dari kain tua."
+
+# short for "iron armour"
+#: script/room.js:280
+msgid "i armour"
+msgstr "jirah besi"
+
+#: script/room.js:283
+msgid "iron's stronger than leather"
+msgstr "besi lebih kuat dari kulit"
+
+# short for "steel armour"
+#: script/room.js:292
+msgid "s armour"
+msgstr "jirah baja"
+
+#: script/room.js:295
+msgid "steel's stronger than iron"
+msgstr "baja lebih kuat dari besi"
+
+#: script/room.js:304
+msgid "iron sword"
+msgstr "pedang besi"
+
+#: script/room.js:307
+msgid "sword is sharp. good protection out in the wilds."
+msgstr "pedang bagus untuk perlindungan di alam liar."
+
+#: script/room.js:317
+msgid "steel sword"
+msgstr "pedang baja"
+
+#: script/room.js:320
+#, fuzzy
+msgid "the steel is strong, and the blade true."
+msgstr "pedang baja lebih kuat dari besi"
+
+#: script/room.js:330
+msgid "rifle"
+msgstr "senapan"
+
+#: script/room.js:332
+msgid "black powder and bullets, like the old days."
+msgstr "mesiu dan peluru, seperti zaman dahulu."
+
+#: script/room.js:464
+msgid "Room"
+msgstr "Ruang"
+
+#: script/room.js:492 script/room.js:617
+msgid "A Dark Room"
+msgstr "Ruang Gelap"
+
+# command
+#: script/room.js:507
+msgid "light fire"
+msgstr "nyalakan api"
+
+# command
+#: script/room.js:518
+#, fuzzy
+msgid "stoke fire"
+msgstr "perbesar api"
+
+# introduces "room state"
+#: script/room.js:557 script/room.js:568 script/room.js:716 script/room.js:720
+#, fuzzy
+msgid "the room is {0}"
+msgstr "ruangan {0}"
+
+# introduces "fire state"
+#: script/room.js:558 script/room.js:567 script/room.js:685
+#, fuzzy
+msgid "the fire is {0}"
+msgstr "api {0}"
+
+#: script/room.js:578
+msgid ""
+"the stranger is standing by the fire. she says she can help. says she builds "
+"things."
+msgstr ""
+"orang asing ini berdiri di dekat perapian. dia mengatakan dapat bantu "
+"membangun sesuatu."
+
+# room state
+#: script/room.js:593
+msgid "freezing"
+msgstr "membeku"
+
+# room state
+#: script/room.js:594
+msgid "cold"
+msgstr "mendingin"
+
+# room state
+#: script/room.js:595
+#, fuzzy
+msgid "mild"
+msgstr "menjadi normal"
+
+# room state
+#: script/room.js:596
+msgid "warm"
+msgstr "menghangat"
+
+# room state
+#: script/room.js:597
+msgid "hot"
+msgstr "memanas"
+
+# fire state
+#: script/room.js:609
+#, fuzzy
+msgid "dead"
+msgstr "menjadi mati"
+
+# fire state
+#: script/room.js:610
+msgid "smoldering"
+msgstr "menyala kecil"
+
+# fire state
+#: script/room.js:611
+#, fuzzy
+msgid "flickering"
+msgstr "berkelap-kelip"
+
+# fire state
+#: script/room.js:612
+msgid "burning"
+msgstr "menyala"
+
+# fire state
+#: script/room.js:613
+#, fuzzy
+msgid "roaring"
+msgstr "menyala besar"
+
+#: script/room.js:617
+#, fuzzy
+msgid "A Firelit Room"
+msgstr "Ruangan Berapi"
+
+#: script/room.js:655
+msgid "not enough wood to get the fire going"
+msgstr "tidak cukup kayu untuk perapian"
+
+#: script/room.js:668
+msgid "the wood has run out"
+msgstr "kayu telah habis"
+
+#: script/room.js:688
+msgid "the light from the fire spills from the windows, out into the dark"
+msgstr "cahaya api kelihatan dari luar yang gelap"
+
+#: script/room.js:701
+#, fuzzy
+msgid "builder stokes the fire"
+msgstr "pembangun menyalakan api"
+
+#: script/room.js:731
+#, fuzzy
+msgid "the wind howls outside"
+msgstr "angin berhembus di luar"
+
+#: script/room.js:732
+msgid "the wood is running out"
+msgstr "kayu hampir habis"
+
+#: script/room.js:739
+#, fuzzy
+msgid "a ragged stranger stumbles through the door and collapses in the corner"
+msgstr "seorang asing yang lemah tersandung pintu dan jatuh"
+
+#: script/room.js:747
+#, fuzzy
+msgid ""
+"the stranger shivers, and mumbles quietly. her words are unintelligible."
+msgstr "orang asing gemetaran dan meracau dengan pelan."
+
+#: script/room.js:750
+msgid "the stranger in the corner stops shivering. her breathing calms."
+msgstr "orang asing berhenti gemetaran. nafasnya menjadi tenang."
+
+#: script/room.js:908 script/room.js:956
+msgid "not enough "
+msgstr "tidak cukup "
+
+#: script/room.js:928
+msgid "builder just shivers"
+msgstr "pembangun gemetaran"
+
+#: script/ship.js:11
+msgid "Ship"
+msgstr "Kapal"
+
+#: script/ship.js:28
+#, fuzzy
+msgid "An Old Starship"
+msgstr "Pesawat Tua"
+
+#: script/ship.js:41
+#, fuzzy
+msgid "hull:"
+msgstr "lambung kapal:"
+
+#: script/ship.js:48
+msgid "engine:"
+msgstr "mesin:"
+
+# command
+#: script/ship.js:56
+#, fuzzy
+msgid "reinforce hull"
+msgstr "menyokong lambung kapal"
+
+# command
+#: script/ship.js:66
+#, fuzzy
+msgid "upgrade engine"
+msgstr "meningkatkan mesin"
+
+# command
+#: script/ship.js:76 script/ship.js:152
+#, fuzzy
+msgid "lift off"
+msgstr "berangkat"
+
+#: script/ship.js:101
+#, fuzzy
+msgid ""
+"somewhere above the debris cloud, the wanderer fleet hovers. been on this "
+"rock too long."
+msgstr ""
+"di atas awan-awan, pesawat pengembara melaju. ia telah berada di atas batu "
+"ini cukup lama."
+
+#: script/ship.js:116 script/ship.js:129
+#, fuzzy
+msgid "not enough alien alloy"
+msgstr "tidak cukup logam paduan alien"
+
+#: script/ship.js:144
+msgid "Ready to Leave?"
+msgstr "Siap untuk Berangkat?"
+
+#: script/ship.js:148
+msgid "time to get out of this place. won't be coming back."
+msgstr "waktunya keluar dari tempat ini. tidak akan kembali lagi."
+
+# command to cancel "lift off" action
+#: script/ship.js:160
+#, fuzzy
+msgid "linger"
+msgstr "tinggal"
+
+# mind the whitespace at the end!
+#: script/space.js:45
+#, fuzzy
+msgid "hull: "
+msgstr "lambung kapal: "
+
+#: script/space.js:81
+msgid "Troposphere"
+msgstr "Troposfer"
+
+#: script/space.js:83
+msgid "Stratosphere"
+msgstr "Stratosfer"
+
+#: script/space.js:85
+msgid "Mesosphere"
+msgstr "Mesosfer"
+
+#: script/space.js:87
+msgid "Thermosphere"
+msgstr "Termosfer"
+
+#: script/space.js:89
+msgid "Exosphere"
+msgstr "Eksosfer"
+
+#: script/space.js:91
+msgid "Space"
+msgstr "Ruang Angkasa"
+
+#: script/space.js:432
+msgid "score for this game: {0}"
+msgstr "skor untuk permainan ini: {0}"
+
+#: script/space.js:439
+msgid "total score: {0}"
+msgstr "skor total: {0}"
+
+#: script/world.js:48
+msgid "punch"
+msgstr "tinju"
+
+# command for bone spear attack
+#: script/world.js:54
+msgid "stab"
+msgstr "tusuk"
+
+# command for iron sword attack
+#: script/world.js:60
+#, fuzzy
+msgid "swing"
+msgstr "ayun"
+
+# command for steel sword attack
+#: script/world.js:66
+#, fuzzy
+msgid "slash"
+msgstr "ayun"
+
+# command for bayonet attack
+#: script/world.js:72
+msgid "thrust"
+msgstr "tusuk"
+
+# command for rifle attack
+#: script/world.js:78
+msgid "shoot"
+msgstr "tembak"
+
+# command for laser rifle attack
+#: script/world.js:85
+msgid "blast"
+msgstr "tembak"
+
+# command for grenade attack
+#: script/world.js:92
+#, fuzzy
+msgid "lob"
+msgstr "lempar"
+
+# command for bolas attack
+#: script/world.js:99
+#, fuzzy
+msgid "tangle"
+msgstr "jerat"
+
+# leave &nbsp; as whitespace
+#: script/world.js:124
+msgid "An&nbsp;Outpost"
+msgstr "Sebuah&nbsp;Pos"
+
+# leave &nbsp; as whitespace
+#: script/world.js:125
+msgid "Iron&nbsp;Mine"
+msgstr "Tambang&nbsp;Besi"
+
+# leave &nbsp; as whitespace
+#: script/world.js:126
+msgid "Coal&nbsp;Mine"
+msgstr "Tambang&nbsp;Batu&nbsp;Bara"
+
+# leave &nbsp; as whitespace
+#: script/world.js:127
+msgid "Sulphur&nbsp;Mine"
+msgstr "Tambang&nbsp;Sulfur"
+
+# leave &nbsp; as whitespace
+#: script/world.js:128
+msgid "An&nbsp;Old&nbsp;House"
+msgstr "Sebuah&nbsp;Rumah&nbsp;Tua"
+
+# leave &nbsp; as whitespace
+#: script/world.js:129
+msgid "A&nbsp;Damp&nbsp;Cave"
+msgstr "Sebuah&nbsp;Gua&nbsp;Lembab"
+
+# leave &nbsp; as whitespace
+#: script/world.js:130
+msgid "An&nbsp;Abandoned&nbsp;Town"
+msgstr "Sebuah&nbsp;Kota&nbsp;Mati"
+
+# leave &nbsp; as whitespace
+#: script/world.js:131
+msgid "A&nbsp;Ruined&nbsp;City"
+msgstr "Sebuah&nbsp;Kota&nbsp;Hancur"
+
+# leave &nbsp; as whitespace
+#: script/world.js:132
+#, fuzzy
+msgid "A&nbsp;Crashed&nbsp;Starship"
+msgstr "Sebuah&nbsp;Pesawat&nbsp;Jatuh"
+
+# leave &nbsp; as whitespace
+#: script/world.js:133
+msgid "A&nbsp;Borehole"
+msgstr "Sebuah&nbsp;Lubang&nbsp;Bor"
+
+# leave &nbsp; as whitespace
+#: script/world.js:134
+msgid "A&nbsp;Battlefield"
+msgstr "Sebuah&nbsp;Medan&nbsp;Perang"
+
+# leave &nbsp; as whitespace
+#: script/world.js:135
+msgid "A&nbsp;Murky&nbsp;Swamp"
+msgstr "Sebuah&nbsp;Rawa&nbsp;Gelap"
+
+# leave &nbsp; as whitespace
+#: script/world.js:140
+msgid "A&nbsp;Destroyed&nbsp;Village"
+msgstr "Sebuah&nbsp;Desa&nbsp;Hancur"
+
+#: script/world.js:270
+msgid "water:{0}"
+msgstr "air minum:{0}"
+
+#: script/world.js:298
+msgid "pockets"
+msgstr "saku"
+
+# short for health points
+#: script/world.js:323
+#, fuzzy
+msgid "hp: {0}/{1}"
+msgstr "hp: {0}/{1}"
+
+# item counter when finding supplies
+#: script/world.js:330
+msgid "{0}:{1}"
+msgstr "{0}:{1}"
+
+#: script/world.js:365
+msgid "dangerous to be this far from the village without proper protection"
+msgstr "bahaya berada sejauh ini dari desa tanpa perlindungan memadai"
+
+#: script/world.js:367
+msgid "safer here"
+msgstr "lebih aman di sini"
+
+#: script/world.js:473
+msgid "the meat has run out"
+msgstr "daging telah habis"
+
+#: script/world.js:479
+msgid "starvation sets in"
+msgstr "terjadi kelaparan"
+
+#: script/world.js:505
+msgid "there is no more water"
+msgstr "air minum telah habis"
+
+#: script/world.js:509
+msgid "the thirst becomes unbearable"
+msgstr "terjadi kehausan"
+
+#: script/world.js:582
+#, fuzzy
+msgid "the trees yield to dry grass. the yellowed brush rustles in the wind."
+msgstr ""
+"pohon-pohon menjadi rumput-rumput kering. semak-semak kekuningan dihembus "
+"angin."
+
+#: script/world.js:585
+#, fuzzy
+msgid ""
+"the trees are gone. parched earth and blowing dust are poor replacements."
+msgstr "tidak ada pepohonan lagi. hanya ada tanah kering dan debu."
+
+#: script/world.js:592
+#, fuzzy
+msgid ""
+"trees loom on the horizon. grasses gradually yield to a forest floor of dry "
+"branches and fallen leaves."
+msgstr ""
+"pohon-pohon terlihat di kaki langit. rerumputan perlahan-lahan ditutupi "
+"ranting-ranting kering dan dedaunan yang jatuh."
+
+#: script/world.js:595
+#, fuzzy
+msgid "the grasses thin. soon, only dust remains."
+msgstr "rerumputan tinggal sedikit."
+
+#: script/world.js:602
+#, fuzzy
+msgid "the barrens break at a sea of dying grass, swaying in the arid breeze."
+msgstr ""
+"hanya terdapat rumput-rumput mati di atas tanah tandus, melambai-lambai "
+"ditiup angin gersang."
+
+#: script/world.js:605
+#, fuzzy
+msgid ""
+"a wall of gnarled trees rises from the dust. their branches twist into a "
+"skeletal canopy overhead."
+msgstr ""
+"terdapat sebaris pohon-pohon keriput. cabang-cabang kurus mereka membentuk "
+"kanopi."
+
+#: script/world.js:812
+msgid "Wanderer"
+msgstr "Pengembara"
+
+#: script/world.js:817
+msgid "The&nbsp;Village"
+msgstr "Desa"
+
+#: script/world.js:847
+#, fuzzy
+msgid "the world fades"
+msgstr "dunia mengabur"
+
+#: script/world.js:950 script/events/setpieces.js:2966
+msgid "water replenished"
+msgstr "air telah diisi kembali"
+
+#: script/world.js:979
+msgid "A Barren World"
+msgstr "Dunia Tandus"
+
+#: script/events/encounters.js:7
+msgid "A Snarling Beast"
+msgstr "Binatang Menggeram"
+
+#: script/events/encounters.js:15
+msgid "snarling beast"
+msgstr "binatang menggeram"
+
+#: script/events/encounters.js:16
+msgid "the snarling beast is dead"
+msgstr "binatang menggeram itu telah mati"
+
+#: script/events/encounters.js:39
+msgid "a snarling beast leaps out of the underbrush"
+msgstr "seekor binatang menggeram melompat keluar dari semak"
+
+#: script/events/encounters.js:44
+#, fuzzy
+msgid "A Gaunt Man"
+msgstr "Pria Suram"
+
+#: script/events/encounters.js:52
+#, fuzzy
+msgid "gaunt man"
+msgstr "pria suram"
+
+#: script/events/encounters.js:53
+#, fuzzy
+msgid "the gaunt man is dead"
+msgstr "pria suram itu telah mati"
+
+#: script/events/encounters.js:76
+msgid "a gaunt man approaches, a crazed look in his eye"
+msgstr "seorang pria suram mendekat, matanya terlihat mengerikan"
+
+#: script/events/encounters.js:81
+msgid "A Strange Bird"
+msgstr "Burung Aneh"
+
+#: script/events/encounters.js:89
+msgid "strange bird"
+msgstr "burung aneh"
+
+#: script/events/encounters.js:90
+msgid "the strange bird is dead"
+msgstr "burung aneh itu telah mati"
+
+#: script/events/encounters.js:113
+msgid "a strange looking bird speeds across the plains"
+msgstr "seekor burung aneh terbang dengan cepat"
+
+#: script/events/encounters.js:119
+msgid "A Shivering Man"
+msgstr "Pria Gemetaran"
+
+#: script/events/encounters.js:127
+msgid "shivering man"
+msgstr "pria gemetaran"
+
+#: script/events/encounters.js:128
+msgid "the shivering man is dead"
+msgstr "pria gemetaran itu telah mati"
+
+#: script/events/encounters.js:156
+msgid "a shivering man approaches and attacks with surprising strength"
+msgstr "pria gemetaran mendekat dan menyerang dengan kekuatan besar"
+
+#: script/events/encounters.js:161
+msgid "A Man-Eater"
+msgstr "Pemakan Manusia"
+
+#: script/events/encounters.js:169
+msgid "man-eater"
+msgstr "pemakan manusia"
+
+#: script/events/encounters.js:170
+msgid "the man-eater is dead"
+msgstr "pemakan manusia itu telah mati"
+
+#: script/events/encounters.js:193
+msgid "a large creature attacks, claws freshly bloodied"
+msgstr "seekor makhluk besar menyerang, cakarnya penuh darah"
+
+#: script/events/encounters.js:198
+#, fuzzy
+msgid "A Scavenger"
+msgstr "Pemulung"
+
+#: script/events/encounters.js:206
+#, fuzzy
+msgid "scavenger"
+msgstr "pemulung"
+
+#: script/events/encounters.js:207
+#, fuzzy
+msgid "the scavenger is dead"
+msgstr "pemulung itu telah mati"
+
+#: script/events/encounters.js:235
+msgid "a scavenger draws close, hoping for an easy score"
+msgstr "Seorang pemulung mendekat, berharap mendapat keuntungan"
+
+#: script/events/encounters.js:240
+msgid "A Huge Lizard"
+msgstr "Kadal Besar"
+
+#: script/events/encounters.js:248
+msgid "lizard"
+msgstr "kadal"
+
+#: script/events/encounters.js:249
+msgid "the lizard is dead"
+msgstr "kadal itu telah mati"
+
+#: script/events/encounters.js:272
+#, fuzzy
+msgid "the grass thrashes wildly as a huge lizard pushes through"
+msgstr "seekor kadal besar merayap di antara rerumputan"
+
+#: script/events/encounters.js:278
+msgid "A Feral Terror"
+msgstr "Peneror Liar"
+
+#: script/events/encounters.js:286
+msgid "feral terror"
+msgstr "peneror liar"
+
+#: script/events/encounters.js:287
+msgid "the feral terror is dead"
+msgstr "peneror liar itu telah mati"
+
+#: script/events/encounters.js:310
+#, fuzzy
+msgid "a beast, wilder than imagining, erupts out of the foliage"
+msgstr "seekor binatang, sangat buas, menerjang dari dedaunan"
+
+#: script/events/encounters.js:315
+msgid "A Soldier"
+msgstr "Tentara"
+
+#: script/events/encounters.js:323
+msgid "soldier"
+msgstr "tentara"
+
+#: script/events/encounters.js:324
+msgid "the soldier is dead"
+msgstr "tentara itu telah mati"
+
+#: script/events/encounters.js:353
+msgid "a soldier opens fire from across the desert"
+msgstr "seorang Tentara menembak dari gurun"
+
+#: script/events/encounters.js:358
+msgid "A Sniper"
+msgstr "Penembak Jitu"
+
+#: script/events/encounters.js:366
+msgid "sniper"
+msgstr "penembak jitu"
+
+#: script/events/encounters.js:367
+msgid "the sniper is dead"
+msgstr "penembak jitu itu telah mati"
+
+#: script/events/encounters.js:396
+#, fuzzy
+msgid "a shot rings out, from somewhere in the long grass"
+msgstr "sebuah tembakan meletus dari antara rerumputan tinggi"
+
+#: script/events/global.js:6
+msgid "The Thief"
+msgstr "Pencuri"
+
+#: script/events/global.js:13
+msgid "the villagers haul a filthy man out of the store room."
+msgstr "penduduk desa menangkap seorang kotor dari gudang."
+
+#: script/events/global.js:14
+#, fuzzy
+msgid "say his folk have been skimming the supplies."
+msgstr "mengatakan rekannya telah mencuri persediaan."
+
+#: script/events/global.js:15
+msgid "say he should be strung up as an example."
+msgstr "mengatakan dia seharusnya digantung sebagai contoh."
+
+#: script/events/global.js:17
+msgid "a thief is caught"
+msgstr "seorang pencuri telah ditangkap"
+
+# command
+#: script/events/global.js:21
+msgid "hang him"
+msgstr "gantung"
+
+# command
+#: script/events/global.js:25
+msgid "spare him"
+msgstr "ampuni"
+
+#: script/events/global.js:32
+msgid "the villagers hang the thief high in front of the store room."
+msgstr "penduduk desa menggantung pencuri itu di depan gudang."
+
+#: script/events/global.js:33
+#, fuzzy
+msgid ""
+"the point is made. in the next few days, the missing supplies are returned."
+msgstr ""
+"janji telah dibuat. dalam beberapa hari kemudian, persediaan yang hilang "
+"akan dikembalikan."
+
+#: script/events/global.js:49
+msgid "the man says he's grateful. says he won't come around any more."
+msgstr "pria itu bersyukur. dia mengatakan tidak akan kembali lagi."
+
+#: script/events/global.js:50
+#, fuzzy
+msgid "shares what he knows about sneaking before he goes."
+msgstr "berbagi apa yang dia ketahui tentang menyelinap sebelum dia pergi."
+
+#: script/events/outside.js:6
+msgid "A Ruined Trap"
+msgstr "Jebakan Hancur"
+
+#: script/events/outside.js:13
+msgid "some of the traps have been torn apart."
+msgstr "beberapa jebakan telah dihancurkan."
+
+#: script/events/outside.js:14
+msgid "large prints lead away, into the forest."
+msgstr "jejak-jejak kaki besar mengarah menuju hutan."
+
+#: script/events/outside.js:22
+msgid "some traps have been destroyed"
+msgstr "beberapa jebakan telah dirusak"
+
+# command
+#: script/events/outside.js:26
+msgid "track them"
+msgstr "telusuri"
+
+# command
+#: script/events/outside.js:30 script/events/room.js:71
+#: script/events/room.js:122
+msgid "ignore them"
+msgstr "abaikan"
+
+#: script/events/outside.js:37
+msgid "the tracks disappear after just a few minutes."
+msgstr "jejak-jejak telah hilang setelah beberapa menit."
+
+#: script/events/outside.js:38
+msgid "the forest is silent."
+msgstr "hutan itu sunyi."
+
+# command
+#: script/events/outside.js:42 script/events/outside.js:59
+#: script/events/outside.js:98 script/events/outside.js:115
+#: script/events/outside.js:166 script/events/outside.js:183
+#: script/events/outside.js:215 script/events/outside.js:247
+msgid "go home"
+msgstr "pulang"
+
+#: script/events/outside.js:49
+msgid "not far from the village lies a large beast, its fur matted with blood."
+msgstr ""
+"tidak jauh dari desa terdapat seekor binatang besar, bulunya penuh darah."
+
+#: script/events/outside.js:50
+msgid "it puts up little resistance before the knife."
+msgstr "tidak banyak perlawanan dari dia."
+
+#: script/events/outside.js:68
+msgid "Sickness"
+msgstr "Penyakit"
+
+#: script/events/outside.js:75
+msgid "a sickness is spreading through the village."
+msgstr "sebuah penyakit menyebar di seluruh desa."
+
+#: script/events/outside.js:76 script/events/outside.js:132
+msgid "medicine is needed immediately."
+msgstr "obat-obatan diperlukan segera."
+
+# command
+#: script/events/outside.js:82
+msgid "1 medicine"
+msgstr "1 obat"
+
+# command
+#: script/events/outside.js:87
+msgid "ignore it"
+msgstr "abaikan"
+
+#: script/events/outside.js:94
+msgid "the sickness is cured in time."
+msgstr "penyakit telah disembuhkan tepat waktu."
+
+#: script/events/outside.js:105
+msgid "the sickness spreads through the village."
+msgstr "penyakit menyebar di seluruh desa."
+
+#: script/events/outside.js:106
+msgid "the days are spent with burials."
+msgstr "setiap hari terdapat korban-korban."
+
+#: script/events/outside.js:107 script/events/outside.js:174
+msgid "the nights are rent with screams."
+msgstr "setiap malam terdapat jeritan-jeritan."
+
+#: script/events/outside.js:124
+msgid "Plague"
+msgstr "Wabah"
+
+#: script/events/outside.js:131
+msgid "a terrible plague is fast spreading through the village."
+msgstr "sebuah wabah menyebar dengan cepat di desa."
+
+# command
+#: script/events/outside.js:138
+msgid "buy medicine"
+msgstr "beli obat"
+
+# command
+#: script/events/outside.js:144
+msgid "5 medicine"
+msgstr "5 obat"
+
+# command
+#: script/events/outside.js:149
+msgid "do nothing"
+msgstr "diam saja"
+
+#: script/events/outside.js:156
+msgid "the plague is kept from spreading."
+msgstr "wabah terus menyebar"
+
+#: script/events/outside.js:157
+msgid "only a few die."
+msgstr "hanya sedikit yang mati."
+
+#: script/events/outside.js:158
+#, fuzzy
+msgid "the rest bury them."
+msgstr "penduduk desa mengubur mereka."
+
+#: script/events/outside.js:173
+#, fuzzy
+msgid "the plague rips through the village."
+msgstr "wabah menghancurkan desa."
+
+#: script/events/outside.js:175
+msgid "the only hope is a quick death."
+msgstr "satu-satunya harapan adalah cepat mati."
+
+#: script/events/outside.js:192
+msgid "A Beast Attack"
+msgstr "Serangan Binatang"
+
+#: script/events/outside.js:199
+msgid "a pack of snarling beasts pours out of the trees."
+msgstr "segerombolan binatang keluar dari pepohonan."
+
+#: script/events/outside.js:200
+#, fuzzy
+msgid "the fight is short and bloody, but the beasts are repelled."
+msgstr ""
+"pertarungan singkat dan berdarah, tetapi binatang-binatang dapat dihalau."
+
+#: script/events/outside.js:201
+msgid "the villagers retreat to mourn the dead."
+msgstr "penduduk desa pulang untuk berkabung."
+
+#: script/events/outside.js:224
+msgid "A Military Raid"
+msgstr "Serangan Militer"
+
+#: script/events/outside.js:231
+msgid "a gunshot rings through the trees."
+msgstr "sebuah tembakan terdengar dari pepohonan."
+
+#: script/events/outside.js:232
+#, fuzzy
+msgid "well armed men charge out of the forest, firing into the crowd."
+msgstr "orang-orang bersenjata menyerbu dari hutan, menembak keramaian."
+
+#: script/events/outside.js:233
+#, fuzzy
+msgid "after a skirmish they are driven away, but not without losses."
+msgstr ""
+"setelah mendapat perlawanan kecil, mereka mundur, tetapi dengan kehilangan."
+
+#: script/events/room.js:6
+msgid "The Nomad"
+msgstr "Pengembara"
+
+#: script/events/room.js:13
+msgid ""
+"a nomad shuffles into view, laden with makeshift bags bound with rough twine."
+msgstr ""
+"seorang pengembara berjalan dengan kaki terseret, sambil membawa kantung-"
+"kantung yang diikat dengan benang kasar."
+
+#: script/events/room.js:14
+msgid "won't say from where he came, but it's clear that he's not staying."
+msgstr "dia tidak mengatakan asalnya, tetapi dia tidak menetap."
+
+#: script/events/room.js:16
+msgid "a nomad arrives, looking to trade"
+msgstr "seorang pengembara tiba, ingin berdagang"
+
+# command
+#: script/events/room.js:20
+#, fuzzy
+msgid "buy scales"
+msgstr "beli sisik"
+
+# command
+#: script/events/room.js:25
+#, fuzzy
+msgid "buy teeth"
+msgstr "beli gigi"
+
+# command
+#: script/events/room.js:30
+#, fuzzy
+msgid "buy bait"
+msgstr "beli umpan"
+
+#: script/events/room.js:33
+msgid "traps are more effective with bait."
+msgstr "jebakan lebih efektif dari umpan."
+
+# command
+#: script/events/room.js:39
+msgid "buy compass"
+msgstr "beli kompas"
+
+#: script/events/room.js:42
+#, fuzzy
+msgid "the old compass is dented and dusty, but it looks to work."
+msgstr "kompas tua itu sudah peot dan berdebu, tapi masih bisa dipakai."
+
+# command
+#: script/events/room.js:46 script/events/room.js:227 script/events/room.js:240
+#: script/events/room.js:253 script/events/room.js:305
+#: script/events/room.js:324 script/events/room.js:376
+#: script/events/room.js:395 script/events/room.js:434
+#: script/events/room.js:552 script/events/room.js:568
+#: script/events/room.js:584 script/events/room.js:595
+#, fuzzy
+msgid "say goodbye"
+msgstr "biarkan pergi"
+
+#: script/events/room.js:53 script/events/room.js:104
+#, fuzzy
+msgid "Noises"
+msgstr "Suara-suara"
+
+#: script/events/room.js:60
+msgid "through the walls, shuffling noises can be heard."
+msgstr "di balik dinding, terdengan suara-suara."
+
+#: script/events/room.js:61
+msgid "can't tell what they're up to."
+msgstr "tidak tahu apa yang mereka incar."
+
+#: script/events/room.js:63
+msgid "strange noises can be heard through the walls"
+msgstr "suara-suara aneh terdengar dari balik dinding"
+
+# command
+#: script/events/room.js:67 script/events/room.js:118
+#: script/events/setpieces.js:1663
+msgid "investigate"
+msgstr "selidiki"
+
+#: script/events/room.js:78
+#, fuzzy
+msgid "vague shapes move, just out of sight."
+msgstr "terlihat ada yang bergerak."
+
+#: script/events/room.js:79
+msgid "the sounds stop."
+msgstr "suara-suara telah berhenti."
+
+# command
+#: script/events/room.js:83 script/events/room.js:96
+msgid "go back inside"
+msgstr "masuk ke dalam"
+
+#: script/events/room.js:91
+msgid ""
+"a bundle of sticks lies just beyond the threshold, wrapped in coarse furs."
+msgstr "seikat tongkat berada di ambang pintu, terbungkus bulu-bulu kasar."
+
+#: script/events/room.js:92
+#, fuzzy
+msgid "the night is silent."
+msgstr "malam ini sunyi"
+
+#: script/events/room.js:111
+msgid "scratching noises can be heard from the store room."
+msgstr "suara cakaran dapat terdengar dari gudang."
+
+#: script/events/room.js:112
+msgid "something's in there."
+msgstr "ada sesuatu di dalamnya."
+
+#: script/events/room.js:114
+msgid "something's in the store room"
+msgstr "ada sesuatu di dalam gudang"
+
+#: script/events/room.js:129 script/events/room.js:149
+#: script/events/room.js:169
+msgid "some wood is missing."
+msgstr "beberapa kayu menghilang."
+
+#: script/events/room.js:130
+#, fuzzy
+msgid "the ground is littered with small scales"
+msgstr "terdapat sisik-sisik kecil di atas lantai."
+
+#: script/events/room.js:150
+#, fuzzy
+msgid "the ground is littered with small teeth"
+msgstr "terdapat gigi-gigi kecil di atas lantai."
+
+#: script/events/room.js:170
+#, fuzzy
+msgid "the ground is littered with scraps of cloth"
+msgstr "terdapat beberapa potong kain di atas lantai."
+
+#: script/events/room.js:190
+msgid "The Beggar"
+msgstr "Pengemis"
+
+#: script/events/room.js:197
+msgid "a beggar arrives."
+msgstr "seorang pengemis tiba."
+
+#: script/events/room.js:198
+msgid "asks for any spare furs to keep him warm at night."
+msgstr "meminta beberapa bulu untuk menghangatkan dirinya di malam hari."
+
+#: script/events/room.js:200
+msgid "a beggar arrives"
+msgstr "seorang pengemis tiba"
+
+# command
+#: script/events/room.js:204
+msgid "give 50"
+msgstr "beri 50"
+
+# command
+#: script/events/room.js:209 script/events/room.js:276
+#: script/events/room.js:347
+msgid "give 100"
+msgstr "beri 100"
+
+# command
+#: script/events/room.js:214 script/events/room.js:286
+#: script/events/room.js:466
+msgid "turn him away"
+msgstr "usir"
+
+#: script/events/room.js:222 script/events/room.js:235
+#: script/events/room.js:248
+msgid "the beggar expresses his thanks."
+msgstr "pengemis itu berterimakasih"
+
+#: script/events/room.js:223
+#, fuzzy
+msgid "leaves a pile of small scales behind."
+msgstr "meninggalkan setumpuk sisik-sisik."
+
+#: script/events/room.js:236
+#, fuzzy
+msgid "leaves a pile of small teeth behind."
+msgstr "meninggalkan setumpuk gigi-gigi kecil."
+
+#: script/events/room.js:249
+#, fuzzy
+msgid "leaves some scraps of cloth behind."
+msgstr "meninggalkan beberapa potong kain."
+
+# this refers to both male and female wanderer events
+#: script/events/room.js:262 script/events/room.js:333
+msgid "The Mysterious Wanderer"
+msgstr "Pengembara Misterius"
+
+#: script/events/room.js:269
+msgid ""
+"a wanderer arrives with an empty cart. says if he leaves with wood, he'll be "
+"back with more."
+msgstr ""
+"seorang pengembara tiba dengan sebuah gerobak kosong. dia mengatakan jika "
+"diberikan kayu, dia akan mengembalikan lebih banyak."
+
+#: script/events/room.js:270
+msgid "builder's not sure he's to be trusted."
+msgstr "pembangun tidak yakin dia dapat dipercaya."
+
+# this refers to both male and female wanderer events
+#: script/events/room.js:272 script/events/room.js:343
+msgid "a mysterious wanderer arrives"
+msgstr "seorang pengembara misterius tiba"
+
+# command
+#: script/events/room.js:281 script/events/room.js:352
+msgid "give 500"
+msgstr "beri 500"
+
+#: script/events/room.js:293 script/events/room.js:312
+msgid "the wanderer leaves, cart loaded with wood"
+msgstr "pengembara itu pergi, dengan gerobak berisi kayu"
+
+#: script/events/room.js:299 script/events/room.js:318
+msgid "the mysterious wanderer returns, cart piled high with wood."
+msgstr "pengembara misterius itu kembali, dengan segerobak penuh kayu."
+
+#: script/events/room.js:340
+msgid ""
+"a wanderer arrives with an empty cart. says if she leaves with furs, she'll "
+"be back with more."
+msgstr ""
+"seorang pengembara tiba dengan sebuah gerobak kosong. dia mengatakan jika "
+"diberikan bulu, dia akan mengembalikan lebih banyak."
+
+#: script/events/room.js:341
+msgid "builder's not sure she's to be trusted."
+msgstr "pembangun tidak yakin dia dapat dipercaya."
+
+# command
+#: script/events/room.js:357
+msgid "turn her away"
+msgstr "usir"
+
+#: script/events/room.js:364 script/events/room.js:383
+msgid "the wanderer leaves, cart loaded with furs"
+msgstr "pengembara itu pergi, dengan gerobak berisi bulu"
+
+#: script/events/room.js:370 script/events/room.js:389
+msgid "the mysterious wanderer returns, cart piled high with furs."
+msgstr "pengembara misterius itu kembali, dengan segerobak penuh bulu."
+
+#: script/events/room.js:404
+msgid "The Scout"
+msgstr "Pengintai"
+
+#: script/events/room.js:411
+msgid "the scout says she's been all over."
+msgstr "pengintai itu mengatakan dia telah berada di banyak tempat."
+
+#: script/events/room.js:412
+msgid "willing to talk about it, for a price."
+msgstr "akan membicarakannya, dengan bayaran."
+
+#: script/events/room.js:414
+msgid "a scout stops for the night"
+msgstr "seorang pengembara ingin menginap semalam"
+
+# command
+#: script/events/room.js:418
+msgid "buy map"
+msgstr "beli peta"
+
+#: script/events/room.js:420
+#, fuzzy
+msgid "the map uncovers a bit of the world"
+msgstr "peta menggambarkan sedikit daerah di dunia"
+
+# command
+#: script/events/room.js:424
+msgid "learn scouting"
+msgstr "belajar mengintai"
+
+#: script/events/room.js:443
+#, fuzzy
+msgid "The Master"
+msgstr "Tuan"
+
+#: script/events/room.js:450
+msgid "an old wanderer arrives."
+msgstr "seorang pengembara tua tiba."
+
+#: script/events/room.js:451
+msgid "he smiles warmly and asks for lodgings for the night."
+msgstr "dia tersenyum dan ingin menginap semalam."
+
+#: script/events/room.js:453
+msgid "an old wanderer arrives"
+msgstr "seorang pengembara tua tiba"
+
+# command
+#: script/events/room.js:457
+msgid "agree"
+msgstr "setuju"
+
+#: script/events/room.js:473
+msgid "in exchange, the wanderer offers his wisdom."
+msgstr "sebagai gantinya, pengembara memberikan ceramah"
+
+#: script/events/room.js:477
+#, fuzzy
+msgid "evasion"
+msgstr "pengelakan"
+
+#: script/events/room.js:487
+#, fuzzy
+msgid "precision"
+msgstr "ketelitian"
+
+#: script/events/room.js:497
+#, fuzzy
+msgid "force"
+msgstr "paksaan"
+
+#: script/events/room.js:507
+#, fuzzy
+msgid "nothing"
+msgstr "tidak ada apa-apa"
+
+#: script/events/room.js:516
+msgid "The Sick Man"
+msgstr "Orang Sakit"
+
+#: script/events/room.js:523
+msgid "a man hobbles up, coughing."
+msgstr "seorang pria berjalan terpincang-pincang, sambil batuk."
+
+#: script/events/room.js:524
+msgid "he begs for medicine."
+msgstr "dia meminta obat."
+
+#: script/events/room.js:526
+msgid "a sick man hobbles up"
+msgstr "seorang pria lemah datang"
+
+# command
+#: script/events/room.js:530
+msgid "give 1 medicine"
+msgstr "beri 1 obat"
+
+#: script/events/room.js:532
+#, fuzzy
+msgid "the man swallows the medicine eagerly"
+msgstr "pria itu meminum obat dengan tidak sabar"
+
+# command
+#: script/events/room.js:536
+msgid "tell him to leave"
+msgstr "meminta dia pergi"
+
+#: script/events/room.js:543 script/events/room.js:559
+#: script/events/room.js:575
+msgid "the man is thankful."
+msgstr "pria itu bersyukur"
+
+#: script/events/room.js:544 script/events/room.js:560
+#: script/events/room.js:576
+msgid "he leaves a reward."
+msgstr "dia memberikan hadiah"
+
+#: script/events/room.js:545
+msgid "some weird metal he picked up on his travels."
+msgstr "logam aneh yang dipungut selama perjalanannya"
+
+#: script/events/room.js:561
+msgid "some weird glowing boxes he picked up on his travels."
+msgstr "beberapa kotak berpijar yang dipungut selama perjalanannya."
+
+#: script/events/room.js:577
+#, fuzzy
+msgid "all he has are some scales."
+msgstr "dia hanya punya beberapa sisik."
+
+#: script/events/room.js:591
+msgid "the man expresses his thanks and hobbles off."
+msgstr "pria itu berterima kasih dan pergi."
+
+#: script/events/setpieces.js:6
+#, fuzzy
+msgid "An Outpost"
+msgstr "Pos"
+
+#: script/events/setpieces.js:10 script/events/setpieces.js:12
+msgid "a safe place in the wilds."
+msgstr "tempat aman di alam liar"
+
+#: script/events/setpieces.js:34
+#, fuzzy
+msgid "A Murky Swamp"
+msgstr "Rawa Gelap"
+
+#: script/events/setpieces.js:38
+#, fuzzy
+msgid "rotting reeds rise out of the swampy earth."
+msgstr "alang-alang busuk mengapung di atas tanah berawa."
+
+#: script/events/setpieces.js:39
+msgid "a lone frog sits in the muck, silently."
+msgstr "seekor kodok duduk diam di atas kotoran."
+
+#: script/events/setpieces.js:41
+#, fuzzy
+msgid "a swamp festers in the stagnant air."
+msgstr "sebuah rawa membusuk dengan udara kotor."
+
+# command
+#: script/events/setpieces.js:44 script/events/setpieces.js:550
+#: script/events/setpieces.js:607 script/events/setpieces.js:889
+#: script/events/setpieces.js:1314 script/events/setpieces.js:1332
+#: script/events/setpieces.js:3541
+msgid "enter"
+msgstr "masuk"
+
+#: script/events/setpieces.js:55
+msgid "deep in the swamp is a moss-covered cabin."
+msgstr "di dalam rawa terdapat sebuah pondok berlumut."
+
+#: script/events/setpieces.js:56
+msgid "an old wanderer sits inside, in a seeming trance."
+msgstr "seorang pengembara tua duduk di dalam, sepertinya kesurupan."
+
+# command
+#: script/events/setpieces.js:61
+msgid "talk"
+msgstr "berbicara"
+
+#: script/events/setpieces.js:72
+msgid "the wanderer takes the charm and nods slowly."
+msgstr "pengembara mengambil jimat dan mengangguk pelan."
+
+#: script/events/setpieces.js:73
+#, fuzzy
+msgid "he speaks of once leading the great fleets to fresh worlds."
+msgstr "dia mengatakan pernah memimpin armada-armada kapal menuju dunia segar."
+
+#: script/events/setpieces.js:74
+#, fuzzy
+msgid "unfathomable destruction to fuel wanderer hungers."
+msgstr "kerusakan tak terduga menyebabkan kelaparan pengembara"
+
+#: script/events/setpieces.js:75
+#, fuzzy
+msgid "his time here, now, is his penance."
+msgstr "waktunya di sini, sekarang, untuk penebusan dosanya."
+
+#: script/events/setpieces.js:91
+msgid "A Damp Cave"
+msgstr "Gua Lembab"
+
+#: script/events/setpieces.js:95
+msgid "the mouth of the cave is wide and dark."
+msgstr "mulut gua lebar dan gelap"
+
+#: script/events/setpieces.js:96
+msgid "can't see what's inside."
+msgstr "tidak bisa melihat ke dalam."
+
+#: script/events/setpieces.js:98
+#, fuzzy
+msgid "the earth here is split, as if bearing an ancient wound"
+msgstr "tanah di sini terbelah, sepertinya disebabkan luka lama."
+
+# command
+#: script/events/setpieces.js:101 script/events/setpieces.js:2949
+#: script/events/setpieces.js:3463
+msgid "go inside"
+msgstr "masuk"
+
+#: script/events/setpieces.js:120 script/events/setpieces.js:266
+msgid "a startled beast defends its home"
+msgstr "seekor binatang yang kaget mempertahankan sarangnya"
+
+# command
+#: script/events/setpieces.js:135 script/events/setpieces.js:186
+#: script/events/setpieces.js:229 script/events/setpieces.js:248
+#: script/events/setpieces.js:281 script/events/setpieces.js:315
+#: script/events/setpieces.js:349 script/events/setpieces.js:383
+#: script/events/setpieces.js:589 script/events/setpieces.js:645
+#: script/events/setpieces.js:684 script/events/setpieces.js:718
+#: script/events/setpieces.js:758 script/events/setpieces.js:797
+#: script/events/setpieces.js:836 script/events/setpieces.js:870
+#: script/events/setpieces.js:921 script/events/setpieces.js:939
+#: script/events/setpieces.js:962 script/events/setpieces.js:1001
+#: script/events/setpieces.js:1040 script/events/setpieces.js:1267
+#: script/events/setpieces.js:1283 script/events/setpieces.js:1299
+#: script/events/setpieces.js:1409 script/events/setpieces.js:1449
+#: script/events/setpieces.js:1493 script/events/setpieces.js:1511
+#: script/events/setpieces.js:1527 script/events/setpieces.js:1564
+#: script/events/setpieces.js:1603 script/events/setpieces.js:1643
+#: script/events/setpieces.js:1684 script/events/setpieces.js:1701
+#: script/events/setpieces.js:1718 script/events/setpieces.js:1737
+#: script/events/setpieces.js:1781 script/events/setpieces.js:1807
+#: script/events/setpieces.js:1825 script/events/setpieces.js:1864
+#: script/events/setpieces.js:1905 script/events/setpieces.js:1930
+#: script/events/setpieces.js:1960 script/events/setpieces.js:2001
+#: script/events/setpieces.js:2037 script/events/setpieces.js:2072
+#: script/events/setpieces.js:2113 script/events/setpieces.js:2154
+#: script/events/setpieces.js:2190 script/events/setpieces.js:2225
+#: script/events/setpieces.js:2260 script/events/setpieces.js:2305
+#: script/events/setpieces.js:2331 script/events/setpieces.js:3209
+#: script/events/setpieces.js:3249 script/events/setpieces.js:3283
+#: script/events/setpieces.js:3352 script/events/setpieces.js:3386
+#: script/events/setpieces.js:3425
+msgid "continue"
+msgstr "lanjutkan"
+
+# command
+#: script/events/setpieces.js:140 script/events/setpieces.js:157
+#: script/events/setpieces.js:191 script/events/setpieces.js:234
+#: script/events/setpieces.js:253 script/events/setpieces.js:286
+#: script/events/setpieces.js:320 script/events/setpieces.js:354
+#: script/events/setpieces.js:388 script/events/setpieces.js:430
+#: script/events/setpieces.js:482 script/events/setpieces.js:514
+msgid "leave cave"
+msgstr "keluar"
+
+#: script/events/setpieces.js:148
+msgid "the cave narrows a few feet in."
+msgstr "gua menyempit beberapa kaki ke dalam."
+
+#: script/events/setpieces.js:149
+msgid "the walls are moist and moss-covered"
+msgstr "dinding-dinding lembab dan berlumut"
+
+# command
+#: script/events/setpieces.js:153
+msgid "squeeze"
+msgstr "pencet"
+
+#: script/events/setpieces.js:164
+msgid "the remains of an old camp sits just inside the cave."
+msgstr "terdapat sisa-sisa perkemahan di dalam gua."
+
+#: script/events/setpieces.js:165
+msgid "bedrolls, torn and blackened, lay beneath a thin layer of dust."
+msgstr "terdapat kasur gulung yang sobek dan hitam tertutup debu."
+
+#: script/events/setpieces.js:199
+msgid "the body of a wanderer lies in a small cavern."
+msgstr "terdapat mayat seorang pengembara di dalam sebuah gua kecil."
+
+#: script/events/setpieces.js:200
+#, fuzzy
+msgid "rot's been to work on it, and some of the pieces are missing."
+msgstr "sudah mulai membusuk, dan beberapa potongan menghilang"
+
+#: script/events/setpieces.js:203
+#, fuzzy
+msgid "can't tell what left it here."
+msgstr "tidak diketahui apa yang membiarkannya di sini."
+
+#: script/events/setpieces.js:242
+msgid "the torch sputters and dies in the damp air"
+msgstr "obor mati disebabkan udara lembab"
+
+#: script/events/setpieces.js:243
+msgid "the darkness is absolute"
+msgstr "sangat gelap"
+
+#: script/events/setpieces.js:245
+msgid "the torch goes out"
+msgstr "obor telah mati"
+
+#: script/events/setpieces.js:300
+msgid "a cave lizard attacks"
+msgstr "sebuah kadal gua menyerang"
+
+#: script/events/setpieces.js:334
+msgid "a large beast charges out of the dark"
+msgstr "seekor binatang besar menyerang dari kegelapan"
+
+#: script/events/setpieces.js:368
+#, fuzzy
+msgid "a giant lizard shambles forward"
+msgstr "seekor kadal raksasa merayap ke depan"
+
+#: script/events/setpieces.js:396
+#, fuzzy
+msgid "the nest of a large animal lies at the back of the cave."
+msgstr "terdapat sarang seekor binatang besar di dalam gua."
+
+#: script/events/setpieces.js:438
+msgid "a small supply cache is hidden at the back of the cave."
+msgstr "terdapat sekumpulan persediaan tersembunyi di belakang gua."
+
+#: script/events/setpieces.js:490
+msgid "an old case is wedged behind a rock, covered in a thick layer of dust."
+msgstr "terdapat sebuah peti tua di belakang batu, dan diselimuti debu tebal."
+
+#: script/events/setpieces.js:523
+msgid "A Deserted Town"
+msgstr "Kota Mati"
+
+#: script/events/setpieces.js:527
+msgid "a small suburb lays ahead, empty houses scorched and peeling."
+msgstr ""
+"sebuah kota kecil di depan, terdapat rumah-rumah kosong yang hangus terbakar"
+
+#: script/events/setpieces.js:528
+msgid ""
+"broken streetlights stand, rusting. light hasn't graced this place in a long "
+"time."
+msgstr ""
+"lampu-lampu jalanan rusak, berkarat. tempat ini belum mendapat penerangan "
+"untuk waktu lama."
+
+#: script/events/setpieces.js:530
+msgid "the town lies abandoned, its citizens long dead"
+msgstr "kota diabaikan dan para penduduk telah lama mati"
+
+# command
+#: script/events/setpieces.js:533 script/events/setpieces.js:1251
+msgid "explore"
+msgstr "jelajahi"
+
+#: script/events/setpieces.js:545
+msgid ""
+"where the windows of the schoolhouse aren't shattered, they're blackened "
+"with soot."
+msgstr "jendela-jendela sekolah yang tidak pecah dilapisi jelaga."
+
+#: script/events/setpieces.js:546
+msgid "the double doors creak endlessly in the wind."
+msgstr "pintu ganda berderik terus-menerus."
+
+# command
+#: script/events/setpieces.js:555 script/events/setpieces.js:594
+#: script/events/setpieces.js:612 script/events/setpieces.js:650
+#: script/events/setpieces.js:689 script/events/setpieces.js:723
+#: script/events/setpieces.js:763 script/events/setpieces.js:802
+#: script/events/setpieces.js:841 script/events/setpieces.js:875
+#: script/events/setpieces.js:893 script/events/setpieces.js:926
+#: script/events/setpieces.js:943 script/events/setpieces.js:967
+#: script/events/setpieces.js:1006 script/events/setpieces.js:1045
+#: script/events/setpieces.js:1088 script/events/setpieces.js:1121
+#: script/events/setpieces.js:1149 script/events/setpieces.js:1193
+#: script/events/setpieces.js:1215 script/events/setpieces.js:1231
+msgid "leave town"
+msgstr "tinggalkan"
+
+#: script/events/setpieces.js:586
+msgid "ambushed on the street."
+msgstr "disergap di jalan."
+
+#: script/events/setpieces.js:602
+#, fuzzy
+msgid "a squat building up ahead."
+msgstr "sekelompok penghuni sedang membangun di depan."
+
+#: script/events/setpieces.js:603
+msgid "a green cross barely visible behind grimy windows."
+msgstr ""
+"sebuah salib hijau terlihat samar-samar di balik jendela-jendela kotor."
+
+#: script/events/setpieces.js:619
+msgid "a small cache of supplies is tucked inside a rusting locker."
+msgstr "terdapat sekumpulan persediaan di dalam loker berkarat."
+
+#: script/events/setpieces.js:681
+msgid "a scavenger waits just inside the door."
+msgstr "seorang pemulung menunggu di balik pintu."
+
+#: script/events/setpieces.js:715
+msgid "a beast stands alone in an overgrown park."
+msgstr "terdapat seekor binatang di taman tak terawat."
+
+#: script/events/setpieces.js:731
+msgid "an overturned caravan is spread across the pockmarked street."
+msgstr "terdapat sebuah karavan terbalik di atas jalanan rusak."
+
+#: script/events/setpieces.js:732
+msgid ""
+"it's been picked over by scavengers, but there's still some things worth "
+"taking."
+msgstr ""
+"isinya telah dijarah pemulung, tetapi masih ada beberapa barang berharga."
+
+#: script/events/setpieces.js:794
+msgid "a madman attacks, screeching."
+msgstr "seorang gila menyerang, dengan suara melengking."
+
+#: script/events/setpieces.js:833
+msgid "a thug moves out of the shadows."
+msgstr "seorang bandit keluar dari kegelapan."
+
+#: script/events/setpieces.js:867
+#, fuzzy
+msgid "a beast charges out of a ransacked classroom."
+msgstr "seekor binatang menyerbu keluar dari ruang kelas luluh lantak."
+
+#: script/events/setpieces.js:883
+msgid "through the large gymnasium doors, footsteps can be heard."
+msgstr "melalui pintu besar ruang olahraga, terdengar suara langkah kaki."
+
+#: script/events/setpieces.js:884
+msgid "the torchlight casts a flickering glow down the hallway."
+msgstr "cahaya obor menerangi lorong."
+
+#: script/events/setpieces.js:885
+msgid "the footsteps stop."
+msgstr "langkah kaki berhenti."
+
+#: script/events/setpieces.js:918
+msgid "another beast, draw by the noise, leaps out of a copse of trees."
+msgstr ""
+"binatang lain, terpancing oleh keributan, melompat keluar dari pepohonan "
+"mati."
+
+#: script/events/setpieces.js:934
+msgid "something's causing a commotion a ways down the road."
+msgstr "ada yang menyebabkan keributan di jalan."
+
+#: script/events/setpieces.js:935
+msgid "a fight, maybe."
+msgstr "mungkin sebuah pertarungan."
+
+#: script/events/setpieces.js:950
+msgid ""
+"a small basket of food is hidden under a park bench, with a note attached."
+msgstr ""
+"terdapat sekeranjang makanan tersembunyi di bawah bangku taman, dengan "
+"sebuah catatan."
+
+#: script/events/setpieces.js:951
+msgid "can't read the words."
+msgstr "tulisan tidak terbaca."
+
+#: script/events/setpieces.js:998
+msgid "a panicked scavenger bursts through the door, screaming."
+msgstr "seorang pemulung panik menyerbu keluar pintu, sambil berteriak."
+
+#: script/events/setpieces.js:1037
+msgid "a man stands over a dead wanderer. notices he's not alone."
+msgstr ""
+"seorang pria berdiri di atas seorang pengembara mati. dia menyadari ada "
+"orang lain."
+
+#: script/events/setpieces.js:1053
+msgid "scavenger had a small camp in the school."
+msgstr "pemulung membuat perkemahan di dalam sekolah."
+
+#: script/events/setpieces.js:1054
+msgid "collected scraps spread across the floor like they fell from heaven."
+msgstr ""
+"barang-barang bekas kumpulan tersebar di atas lantai seolah-olah terjatuh "
+"dari surga."
+
+#: script/events/setpieces.js:1096
+msgid "scavenger'd been looking for supplies in here, it seems."
+msgstr "pemulung telah mencari-cari persediaan di sini, sepertinya."
+
+#: script/events/setpieces.js:1097
+msgid "a shame to let what he'd found go to waste."
+msgstr "sayang sekali membiarkan temuannya tersia-sia."
+
+#: script/events/setpieces.js:1129
+#, fuzzy
+msgid ""
+"beneath the wanderer's rags, clutched in one of its many hands, a glint of "
+"steel."
+msgstr ""
+"di bawah kain si pengembara, di dalam genggaman salah satu tangannya, "
+"terdapat baja yang berkilau."
+
+#: script/events/setpieces.js:1130
+msgid "worth killing for, it seems."
+msgstr "pantas dibunuh, sepertinya."
+
+#: script/events/setpieces.js:1157
+msgid "eye for an eye seems fair."
+msgstr "mata untuk mata sepertinya adil."
+
+#: script/events/setpieces.js:1158
+msgid "always worked before, at least."
+msgstr "selalu berhasil sebelumnya, setidaknya."
+
+#: script/events/setpieces.js:1159
+#, fuzzy
+msgid "picking the bones finds some useful trinkets."
+msgstr "mendapat beberapa pernak-pernik berguna di antara tulang-belulang."
+
+#: script/events/setpieces.js:1201
+msgid "some medicine abandoned in the drawers."
+msgstr "beberapa obat ditinggalkan di dalam laci."
+
+#: script/events/setpieces.js:1223
+msgid "the clinic has been ransacked."
+msgstr "klinik telah diobrak-abrik."
+
+#: script/events/setpieces.js:1224
+msgid "only dust and stains remain."
+msgstr "hanya debu dan noda yang tersisa."
+
+#: script/events/setpieces.js:1240
+msgid "A Ruined City"
+msgstr "Kota Hancur"
+
+#: script/events/setpieces.js:1244
+msgid ""
+"a battered highway sign stands guard at the entrance to this once-great city."
+msgstr ""
+"terdapat sebuah tanda jalan raya rusak di pintu masuk kota yang pernah jaya "
+"ini."
+
+#: script/events/setpieces.js:1245
+msgid ""
+"the towers that haven't crumbled jut from the landscape like the ribcage of "
+"some ancient beast."
+msgstr ""
+"masih ada menara-menara yang berdiri di antara bangunan tinggi seperti rusuk "
+"binatang raksasa."
+
+#: script/events/setpieces.js:1246
+msgid "might be things worth having still inside."
+msgstr "mungkin masih ada barang-barang berharga di dalamnya."
+
+#: script/events/setpieces.js:1248
+msgid "the towers of a decaying city dominate the skyline"
+msgstr "menara-menara di kota tua mendominasi kaki langit"
+
+#: script/events/setpieces.js:1262
+msgid "the streets are empty."
+msgstr "jalan-jalan kosong."
+
+#: script/events/setpieces.js:1263
+msgid "the air is filled with dust, driven relentlessly by the hard winds."
+msgstr "udara dipenuhi debu, diputar-putar oleh angin kencang."
+
+# command
+#: script/events/setpieces.js:1271 script/events/setpieces.js:1287
+#: script/events/setpieces.js:1303 script/events/setpieces.js:1319
+#: script/events/setpieces.js:1336 script/events/setpieces.js:1374
+#: script/events/setpieces.js:1414 script/events/setpieces.js:1454
+#: script/events/setpieces.js:1498 script/events/setpieces.js:1515
+#: script/events/setpieces.js:1531 script/events/setpieces.js:1569
+#: script/events/setpieces.js:1608 script/events/setpieces.js:1648
+#: script/events/setpieces.js:1668 script/events/setpieces.js:1688
+#: script/events/setpieces.js:1705 script/events/setpieces.js:1722
+#: script/events/setpieces.js:1741 script/events/setpieces.js:1786
+#: script/events/setpieces.js:1812 script/events/setpieces.js:1829
+#: script/events/setpieces.js:1869 script/events/setpieces.js:1910
+#: script/events/setpieces.js:1935 script/events/setpieces.js:1965
+#: script/events/setpieces.js:2006 script/events/setpieces.js:2042
+#: script/events/setpieces.js:2077 script/events/setpieces.js:2118
+#: script/events/setpieces.js:2159 script/events/setpieces.js:2195
+#: script/events/setpieces.js:2230 script/events/setpieces.js:2265
+#: script/events/setpieces.js:2366 script/events/setpieces.js:2396
+#: script/events/setpieces.js:2444 script/events/setpieces.js:2480
+#: script/events/setpieces.js:2521 script/events/setpieces.js:2557
+#: script/events/setpieces.js:2592 script/events/setpieces.js:2628
+#: script/events/setpieces.js:2669 script/events/setpieces.js:2710
+#: script/events/setpieces.js:2745 script/events/setpieces.js:2794
+#: script/events/setpieces.js:2839 script/events/setpieces.js:2886
+#: script/events/setpieces.js:2930
+msgid "leave city"
+msgstr "tinggalkan"
+
+#: script/events/setpieces.js:1278
+msgid "orange traffic cones are set across the street, faded and cracked."
+msgstr "kerucut-kerucut lalu lintas berada di jalan, luntur dan retak."
+
+#: script/events/setpieces.js:1279
+msgid "lights flash through the alleys between buildings."
+msgstr "cahaya menyinari gang-gang di antara bangunan-bangunan."
+
+#: script/events/setpieces.js:1294
+#, fuzzy
+msgid "a large shanty town sprawls across the streets."
+msgstr "terdapat sebuah kota gubuk besar di ujung jalan."
+
+#: script/events/setpieces.js:1295
+msgid "faces, darkened by soot and blood, stare out from crooked huts."
+msgstr ""
+"muka-muka, yang ditutupi jelaga dan darah, menatap keluar dari gubuk-gubuk "
+"lusuh."
+
+#: script/events/setpieces.js:1310
+msgid "the shell of an abandoned hospital looms ahead."
+msgstr "terdapat sebuah rumah sakit yang ditinggalkan di seberang."
+
+#: script/events/setpieces.js:1326
+msgid "the old tower seems mostly intact."
+msgstr "menara tua itu kelihatannya masih utuh sebagian besar."
+
+#: script/events/setpieces.js:1327
+msgid "the shell of a burned out car blocks the entrance."
+msgstr "bangkai sebuah mobil yang terbakar menghalangi jalan masuk."
+
+#: script/events/setpieces.js:1328
+msgid "most of the windows at ground level are busted anyway."
+msgstr "sebagian besar jendela di lantai dasar telah dihancurkan."
+
+#: script/events/setpieces.js:1343
+msgid "a huge lizard scrambles up out of the darkness of an old metro station."
+msgstr "seekor kadal besar merayap keluar dari kegelapan sebuah stasiun metro."
+
+# command
+#: script/events/setpieces.js:1369
+msgid "descend"
+msgstr "turun"
+
+#: script/events/setpieces.js:1381
+msgid "the shot echoes in the empty street."
+msgstr "tembakan terdengar di jalan kosong."
+
+#: script/events/setpieces.js:1421
+msgid "the soldier steps out from between the buildings, rifle raised."
+msgstr ""
+"tentara keluar dari antara bangunan-bangunan, sambil menodongkan senapan."
+
+#: script/events/setpieces.js:1461
+msgid "a frail man stands defiantly, blocking the path."
+msgstr "seorang pria lemah berdiri menantang menghalangi jalan."
+
+#: script/events/setpieces.js:1506
+msgid "nothing but downcast eyes."
+msgstr "hanya ada mata-mata murung."
+
+#: script/events/setpieces.js:1507
+msgid "the people here were broken a long time ago."
+msgstr "orang-orang di sini telah kehilangan harapan sejak lama."
+
+#: script/events/setpieces.js:1522
+msgid "empty corridors."
+msgstr "koridor-koridor kosong."
+
+#: script/events/setpieces.js:1523
+msgid "the place has been swept clean by scavengers."
+msgstr "tempat ini telah dijarah habis oleh para pemulung."
+
+#: script/events/setpieces.js:1537
+msgid "an old man bursts through a door, wielding a scalpel."
+msgstr ""
+"seorang pria tua mendobrak masuk pintu, sambil membawa sebuah pisau bedah."
+
+#: script/events/setpieces.js:1576
+msgid "a thug is waiting on the other side of the wall."
+msgstr "seorang bandit sedang menunggu di balik dinding."
+
+#: script/events/setpieces.js:1616
+msgid "a snarling beast jumps out from behind a car."
+msgstr "seekor binatang melompat keluar dari balik sebuah mobil."
+
+#: script/events/setpieces.js:1657
+msgid "street above the subway platform is blown away."
+msgstr "jalan di atas platform kereta bawah tanah telah dihancurkan."
+
+#: script/events/setpieces.js:1658
+msgid "lets some light down into the dusty haze."
+msgstr "biarkan cahaya meninari embun."
+
+#: script/events/setpieces.js:1659
+msgid "a sound comes from the tunnel, just ahead."
+msgstr "terdengar suara dari terowongan di depan."
+
+#: script/events/setpieces.js:1676
+msgid "looks like a camp of sorts up ahead."
+msgstr "kelihatan seperti perkemahan di depan."
+
+#: script/events/setpieces.js:1679
+#, fuzzy
+msgid "rusted chainlink is pulled across an alleyway."
+msgstr "rantai berkarat menghalangi sebuah lorong."
+
+#: script/events/setpieces.js:1680
+msgid "fires burn in the courtyard beyond."
+msgstr "api membakar di halaman di depan."
+
+#: script/events/setpieces.js:1696
+msgid "more voices can be heard ahead."
+msgstr "lebih banyak suara terdengar di depan."
+
+#: script/events/setpieces.js:1697
+msgid "they must be here for a reason."
+msgstr "pasti ada alasan kenapa mereka di sini."
+
+#: script/events/setpieces.js:1713
+msgid "the sound of gunfire carries on the wind."
+msgstr "suara tembakan pistol dapat didengar."
+
+#: script/events/setpieces.js:1714
+msgid "the street ahead glows with firelight."
+msgstr "jalanan di depan disinari cahaya api."
+
+#: script/events/setpieces.js:1732
+#, fuzzy
+msgid "more squatters are crowding around now."
+msgstr "lebih banyak penduduk liar kelihatan sekarang."
+
+#: script/events/setpieces.js:1733
+msgid "someone throws a stone."
+msgstr "seseorang melempar batu."
+
+#: script/events/setpieces.js:1749
+msgid "an improvised shop is set up on the sidewalk."
+msgstr "terdapat sebuah toko seadanya di trotoar."
+
+#: script/events/setpieces.js:1750
+msgid "the owner stands by, stoic."
+msgstr "pemiliknya tetap berjaga, sangat tabah."
+
+#: script/events/setpieces.js:1795
+msgid "strips of meat hang drying by the side of the street."
+msgstr "potongan-potongan daging digantung untuk dikeringkan di sisi jalan."
+
+#: script/events/setpieces.js:1796
+msgid "the people back away, avoiding eye contact."
+msgstr "orang-orang mundur, menghindari kontak mata."
+
+#: script/events/setpieces.js:1821
+msgid "someone has locked and barricaded the door to this operating theatre."
+msgstr "seseorang telah mengunci dan memblokir pintu menuju kamar bedah ini."
+
+#: script/events/setpieces.js:1836
+msgid "a tribe of elderly squatters is camped out in this ward."
+msgstr "sekelompok yang terdiri dari orang-orang tua menghuni bangsal ini."
+
+#: script/events/setpieces.js:1877
+msgid "a pack of lizards rounds the corner."
+msgstr "sekelompok kadal bersiap menyerang."
+
+#: script/events/setpieces.js:1919
+msgid "strips of meat are hung up to dry in this ward."
+msgstr "potongan-potongan daging digantung untuk dikeringkan di bangsal ini."
+
+#: script/events/setpieces.js:1943
+msgid "a large bird nests at the top of the stairs."
+msgstr "seekor burung besar bersarang di lantai teratas tangga."
+
+#: script/events/setpieces.js:1974
+msgid "the debris is denser here."
+msgstr "reruntuhan di sini lebih padat."
+
+#: script/events/setpieces.js:1975
+msgid "maybe some useful stuff in the rubble."
+msgstr "mungkin ada beberapa barang berharga di antara reruntuhan."
+
+#: script/events/setpieces.js:2014
+msgid "a swarm of rats rushes up the tunnel."
+msgstr "segerombolan tikus menyerbu ke dalam terowongan."
+
+#: script/events/setpieces.js:2050
+msgid "a large man attacks, waving a bayonet."
+msgstr "seorang besar menyerang, dengan mengayunkan sebuah bayonet."
+
+#: script/events/setpieces.js:2085
+msgid "a second soldier opens fire."
+msgstr "tentara kedua mulai menembak."
+
+#: script/events/setpieces.js:2126
+msgid "a masked soldier rounds the corner, gun drawn"
+msgstr "seorang tentara bertopeng mengambil posisi, mengangkat senapan."
+
+#: script/events/setpieces.js:2167
+msgid "the crowd surges forward."
+msgstr "gerombolan itu mulai bergerak."
+
+#: script/events/setpieces.js:2203
+msgid "a youth lashes out with a tree branch."
+msgstr "seorang pemuda mengamuk dengan cabang pohon."
+
+#: script/events/setpieces.js:2238
+msgid "a squatter stands firmly in the doorway of a small hut."
+msgstr "seorang penghuni liar berdiri tegak di pintu masuk sebuah gubuk kecil."
+
+#: script/events/setpieces.js:2273
+msgid "behind the door, a deformed figure awakes and attacks."
+msgstr "di belakang pintu, sebuah makhluk terbangun dan menyerang."
+
+#: script/events/setpieces.js:2313
+msgid "as soon as the door is open a little bit, hundreds of tentacles erupt."
+msgstr "sesegera setelah pintu terbuka sedikit, ratusan tentakel keluar."
+
+#: script/events/setpieces.js:2340
+msgid "bird must have liked shiney things."
+msgstr "burung mungkin menyukai benda-benda bersinar."
+
+#: script/events/setpieces.js:2341
+msgid "some good stuff woven into its nest."
+msgstr "beberapa benda berharga ditemukan di sarangnya."
+
+#: script/events/setpieces.js:2375
+msgid "not much here."
+msgstr "tidak banyak barang di sini."
+
+#: script/events/setpieces.js:2376
+msgid "scavengers must have gotten to this place already."
+msgstr "para pemulung pasti telah tiba di tempat ini."
+
+#: script/events/setpieces.js:2407
+msgid "the tunnel opens up at another platform."
+msgstr "terowongan terhubung ke platform lain."
+
+#: script/events/setpieces.js:2408
+msgid "the walls are scorched from an old battle."
+msgstr "dinding-dinding menggosong dari pertempuran lama."
+
+#: script/events/setpieces.js:2409
+msgid "bodies and supplies from both sides litter the ground."
+msgstr "terdapat mayat-mayat dan persediaan dari kedua sisi di atas tanah."
+
+#: script/events/setpieces.js:2453
+msgid "the small military outpost is well supplied."
+msgstr "pos militer kecil memiliki persediaan memadai."
+
+#: script/events/setpieces.js:2454
+msgid ""
+"arms and munitions, relics from the war, are neatly arranged on the store-"
+"room floor."
+msgstr ""
+"senjata dan peluru, peninggalan-peninggalan lainnya dari pertempuran "
+"tersusun rapi di lantai gudang."
+
+#: script/events/setpieces.js:2455
+msgid "just as deadly now as they were then."
+msgstr "mematikan sejak awal."
+
+#: script/events/setpieces.js:2489
+#, fuzzy
+msgid "searching the bodies yields a few supplies."
+msgstr "terdapat beberapa persediaan di tubuh-tubuh mayat."
+
+#: script/events/setpieces.js:2490
+msgid "more soldiers will be on their way."
+msgstr "lebih banyak tentara akan tiba."
+
+#: script/events/setpieces.js:2491
+msgid "time to move on."
+msgstr "waktunya pergi."
+
+#: script/events/setpieces.js:2530
+msgid "the small settlement has clearly been burning a while."
+msgstr "pemukiman kecil telah terbakar cukup lama."
+
+#: script/events/setpieces.js:2531
+msgid ""
+"the bodies of the wanderers that lived here are still visible in the flames."
+msgstr ""
+"mayat-mayat pengembara yang tinggal di sini masih terlihat jelas di dalam "
+"nyala api."
+
+#: script/events/setpieces.js:2532
+msgid "still time to rescue a few supplies."
+msgstr "masih ada waktu mengumpulkan sedikit persediaan."
+
+#: script/events/setpieces.js:2566
+msgid ""
+"the remaining settlers flee from the violence, their belongings forgotten."
+msgstr ""
+"sisa-sisa penghuni kabur dari kekacauan, barang-barang berharga ditinggalkan."
+
+#: script/events/setpieces.js:2567
+msgid "there's not much, but some useful things can still be found."
+msgstr "beberapa barang berharga masih dapat ditemukan, meskipun tidak banyak."
+
+#: script/events/setpieces.js:2601
+msgid "the young settler was carrying a canvas sack."
+msgstr "penghuni muda itu membawa karung kanvas."
+
+#: script/events/setpieces.js:2602
+msgid "it contains travelling gear, and a few trinkets."
+msgstr "terdapat peralatan bepergian dan pernak-pernik di dalamnya."
+
+#: script/events/setpieces.js:2603 script/events/setpieces.js:2639
+msgid "there's nothing else here."
+msgstr "tidak ada apa-apa lagi di sini."
+
+#: script/events/setpieces.js:2637
+msgid "inside the hut, a child cries."
+msgstr "di dalam gubuk, seorang anak menangis."
+
+#: script/events/setpieces.js:2638
+msgid "a few belongings rest against the walls."
+msgstr "beberapa barang bersandar di dinding-dinding."
+
+#: script/events/setpieces.js:2678
+msgid "the stench of rot and death fills the operating theatres."
+msgstr "bau busuk mengisi ruang operasi."
+
+#: script/events/setpieces.js:2679
+msgid "a few items are scattered on the ground."
+msgstr "beberapa barang tersebar di atas lantai."
+
+#: script/events/setpieces.js:2680
+msgid "there is nothing else here."
+msgstr "tidak ada apa-apa lagi di sini."
+
+#: script/events/setpieces.js:2719
+msgid "a pristine medicine cabinet at the end of a hallway."
+msgstr "terdapat sebuah lemari obat di ujung lorong."
+
+#: script/events/setpieces.js:2720
+msgid "the rest of the hospital is empty."
+msgstr "ruang-ruang lain di rumah sakit kosong."
+
+#: script/events/setpieces.js:2754
+msgid "someone had been stockpiling loot here."
+msgstr "seseorang telah menimbun hasil jarahan di sini."
+
+#: script/events/setpieces.js:2803
+#, fuzzy
+msgid "the tentacular horror is defeated."
+msgstr "rasa takut telah hilang."
+
+#: script/events/setpieces.js:2804
+msgid "inside, the remains of its victims are everywhere."
+msgstr "di dalamnya, sisa-sisa dari korban ada di mana-mana."
+
+#: script/events/setpieces.js:2850
+#, fuzzy
+msgid "the warped man lies dead."
+msgstr "pria itu tergeletak mati."
+
+#: script/events/setpieces.js:2851
+msgid "the operating theatre has a lot of curious equipment."
+msgstr "ruang operasi terdapat banyak peralatan-peralatan aneh."
+
+#: script/events/setpieces.js:2895
+msgid "the old man had a small cache of interesting items."
+msgstr "orang tua itu mempunyai sekumpulan kecil barang-barang menarik."
+
+#: script/events/setpieces.js:2939
+msgid "An Old House"
+msgstr "Rumah Tua"
+
+#: script/events/setpieces.js:2943
+msgid "an old house remains here, once white siding yellowed and peeling."
+msgstr ""
+"terdapat sebuah rumah tua di sini, dulunya berwarna putih sekarang menguning "
+"dan mengelupas."
+
+#: script/events/setpieces.js:2944
+msgid "the door hangs open."
+msgstr "pintu terbuka."
+
+#: script/events/setpieces.js:2946
+#, fuzzy
+msgid "the remains of an old house stand as a monument to simpler times"
+msgstr "sisa-sisa dari sebuah rumah tua seperti monumen di waktu singkat"
+
+#: script/events/setpieces.js:2960
+msgid "the house is abandoned, but not yet picked over."
+msgstr "rumah diabaikan, tapi belum dijarah."
+
+#: script/events/setpieces.js:2961
+msgid "still a few drops of water in the old well."
+msgstr "masih terdapat beberapa tetes air di sumur tua."
+
+#: script/events/setpieces.js:2995
+msgid "the house has been ransacked."
+msgstr "rumah itu telah digeledah."
+
+#: script/events/setpieces.js:2996
+msgid "but there is a cache of medicine under the floorboards."
+msgstr "tetapi masih ada sekumpulan obat di bawah papan lantai."
+
+#: script/events/setpieces.js:3024
+msgid "a man charges down the hall, a rusty blade in his hand"
+msgstr "seorang pria menyerbu di aula, dengan pedang berkarat di tangannya"
+
+#: script/events/setpieces.js:3056
+msgid "A Forgotten Battlefield"
+msgstr "Medan Perang Terlupakan"
+
+#: script/events/setpieces.js:3060
+msgid "a battle was fought here, long ago."
+msgstr "sebuah pertempuran terjadi di sini, dahulu kala."
+
+#: script/events/setpieces.js:3061
+msgid ""
+"battered technology from both sides lays dormant on the blasted landscape."
+msgstr ""
+"peralatana-peralatan perang kedua pihak tergeletak di atas tanah rusak."
+
+#: script/events/setpieces.js:3109
+msgid "A Huge Borehole"
+msgstr "Lubang Bor Besar"
+
+#: script/events/setpieces.js:3113
+msgid "a huge hole is cut deep into the earth, evidence of the past harvest."
+msgstr "terdapat sebuah lubang besar di tanah, bukti dari panen yang lalu."
+
+#: script/events/setpieces.js:3114
+msgid "they took what they came for, and left."
+msgstr "mereka mengambil apa yang diincar, kemudian pergi."
+
+#: script/events/setpieces.js:3115
+msgid ""
+"castoff from the mammoth drills can still be found by the edges of the "
+"precipice."
+msgstr "bangkai-bangkai dari bor raksasa dapat ditemukan di ujung jurang."
+
+#: script/events/setpieces.js:3138
+msgid "A Crashed Ship"
+msgstr "Kapal Karam"
+
+#: script/events/setpieces.js:3147
+#, fuzzy
+msgid ""
+"the familiar curves of a wanderer vessel rise up out of the dust and ash. "
+msgstr ""
+"sebuah pesawat pengembara yang telah dikenal bangkit dari debu dan abu. "
+
+#: script/events/setpieces.js:3148
+msgid "lucky that the natives can't work the mechanisms."
+msgstr "beruntung penduduk asli tidak mengerti mekanismenya."
+
+#: script/events/setpieces.js:3149
+msgid "with a little effort, it might fly again."
+msgstr "dengan sedikit usaha, mungkin ia dapat terbang kembali."
+
+# command
+#: script/events/setpieces.js:3153
+msgid "salvage"
+msgstr "selamatkan"
+
+#: script/events/setpieces.js:3161
+msgid "The Sulphur Mine"
+msgstr "Tambang Sulfur"
+
+#: script/events/setpieces.js:3165
+msgid "the military is already set up at the mine's entrance."
+msgstr "telah terdapat daerah militer di pintu masuk tambang."
+
+#: script/events/setpieces.js:3166
+msgid "soldiers patrol the perimeter, rifles slung over their shoulders."
+msgstr ""
+"tentara-tentara berpatroli di garis pertahanan, dengan senapan-senapan di "
+"bahu mereka."
+
+#: script/events/setpieces.js:3168
+msgid "a military perimeter is set up around the mine."
+msgstr "terdapat sebuah daerah militer di sekitar tambang."
+
+# command
+#: script/events/setpieces.js:3171 script/events/setpieces.js:3320
+msgid "attack"
+msgstr "serang"
+
+#: script/events/setpieces.js:3206
+msgid "a soldier, alerted, opens fire."
+msgstr "seorang tentara, yang tersiaga mulai menembak."
+
+# command
+#: script/events/setpieces.js:3214 script/events/setpieces.js:3254
+#: script/events/setpieces.js:3357 script/events/setpieces.js:3391
+msgid "run"
+msgstr "lari"
+
+#: script/events/setpieces.js:3246
+msgid "a second soldier joins the fight."
+msgstr "seorang tentara kedua ikut bertarung."
+
+#: script/events/setpieces.js:3280
+msgid "a grizzled soldier attacks, waving a bayonet."
+msgstr "seorang tentara beruban menyerang, dengan sebuah bayonet."
+
+#: script/events/setpieces.js:3291
+msgid "the military presence has been cleared."
+msgstr "tidak ada lagi tentara."
+
+#: script/events/setpieces.js:3292 script/events/setpieces.js:3434
+#: script/events/setpieces.js:3510
+msgid "the mine is now safe for workers."
+msgstr "tambang telah aman bagi pekerja."
+
+#: script/events/setpieces.js:3294
+msgid "the sulphur mine is clear of dangers"
+msgstr "tambang sulfur telah aman"
+
+#: script/events/setpieces.js:3310
+msgid "The Coal Mine"
+msgstr "Tambang Batu Bara"
+
+#: script/events/setpieces.js:3314
+msgid "camp fires burn by the entrance to the mine."
+msgstr "terdapat api perkemahan di pintu masuk tambang."
+
+#: script/events/setpieces.js:3315
+msgid "men mill about, weapons at the ready."
+msgstr "orang-orang berdesak-desakan, dengan membawa senjata."
+
+#: script/events/setpieces.js:3317
+msgid "this old mine is not abandoned"
+msgstr "tambang tua ini tidak terabaikan"
+
+#: script/events/setpieces.js:3349 script/events/setpieces.js:3383
+msgid "a man joins the fight"
+msgstr "seorang pria ikut bertarung."
+
+#: script/events/setpieces.js:3422
+msgid "only the chief remains."
+msgstr "hanya terdapat kepala desa."
+
+#: script/events/setpieces.js:3433
+msgid "the camp is still, save for the crackling of the fires."
+msgstr "perkemahan masih aman dari amukan api."
+
+#: script/events/setpieces.js:3436
+msgid "the coal mine is clear of dangers"
+msgstr "tambang batu bara telah aman."
+
+#: script/events/setpieces.js:3452
+msgid "The Iron Mine"
+msgstr "Tambang Besi"
+
+#: script/events/setpieces.js:3456
+msgid "an old iron mine sits here, tools abandoned and left to rust."
+msgstr ""
+"terdapat sebuah tambang besi tua, peralatan-peralatan diabaikan dan berkarat."
+
+#: script/events/setpieces.js:3457
+msgid ""
+"bleached bones are strewn about the entrance. many, deeply scored with "
+"jagged grooves."
+msgstr ""
+"tualng-tulang terkelantang berhamburan di pintu masuk. banyak di antaranya "
+"terdapat alur bergerigi."
+
+#: script/events/setpieces.js:3458
+msgid "feral howls echo out of the darkness."
+msgstr "lolongan liar terdengar di kegelapan."
+
+#: script/events/setpieces.js:3460
+msgid "the path leads to an abandoned mine"
+msgstr "jalan ini menuju ke sebuah tambang yang ditinggalkan."
+
+#: script/events/setpieces.js:3498
+msgid "a large creature lunges, muscles rippling in the torchlight"
+msgstr "seekor makhluk besar menerjang, otot-ototnya jelas disinari obor."
+
+#: script/events/setpieces.js:3509
+msgid "the beast is dead."
+msgstr "binatang telah mati."
+
+#: script/events/setpieces.js:3512
+msgid "the iron mine is clear of dangers"
+msgstr "tambang besi telah aman."
+
+#: script/events/setpieces.js:3529
+msgid "A Destroyed Village"
+msgstr "Desa Hancur"
+
+#: script/events/setpieces.js:3533
+#, fuzzy
+msgid "a destroyed village lies in the dust."
+msgstr "sebuah desa telah hancur menjadi debu."
+
+#: script/events/setpieces.js:3534
+msgid "charred bodies litter the ground."
+msgstr "terdapat mayat-mayat gosong di atas tanah."
+
+#: script/events/setpieces.js:3538
+msgid "the metallic tang of wanderer afterburner hangs in the air."
+msgstr "bau logam dari pembakar lanjut pengembara dapat tercium di udara."
+
+#: script/events/setpieces.js:3552
+msgid "a shack stands at the center of the village."
+msgstr "terdapat sebuah pondok di tengah desa ini."
+
+#: script/events/setpieces.js:3553
+msgid "there are still supplies inside."
+msgstr "masih terdapat persediaan di dalam."
+
+# command
+#: script/events/setpieces.js:3557
+msgid "take"
+msgstr "ambil"
+
+#: script/events/setpieces.js:3564
+msgid "all the work of a previous generation is here."
+msgstr "seluruh hasil pekerjaan generasi sebelumnya ada di sini."
+
+#: script/events/setpieces.js:3565
+msgid "ripe for the picking."
+msgstr "telah siap dipanen."
+
+#: script/events/outside.js:67
+msgid "Fire"
+msgstr "Api"
+
+#: script/events/outside.js:74
+msgid "a fire rampages through one of the huts, destroying it."
+msgstr "api membakar salah satu gubuk, dan menghancurkannya."
+
+#: script/events/outside.js:75
+msgid "all residents in the hut perished in the fire."
+msgstr "semua penduduk di dalam gubuk terbakar oleh api."
+
+#: script/events/outside.js:77
+msgid "a fire has started"
+msgstr "api mulai membakar"
+
+# command
+#: script/events/outside.js:87
+msgid "mourn"
+msgstr "berkabung"
+
+#: script/events/outside.js:88
+msgid "some villagers have died"
+msgstr "beberapa penghuni desa telah mati"

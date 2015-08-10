@@ -14,7 +14,7 @@ Events.Encounters = [
 				enemy: 'snarling beast',
 				enemyName: _('snarling beast'),
 				deathMessage: _('the snarling beast is dead'),
-				chara: 'B',
+				chara: 'R',
 				damage: 1,
 				hit: 0.8,
 				attackDelay: 1,
@@ -51,7 +51,7 @@ Events.Encounters = [
 				enemy: 'gaunt man',
 				enemyName: _('gaunt man'),
 				deathMessage: _('the gaunt man is dead'),
-				chara: 'G',
+				chara: 'E',
 				damage: 2,
 				hit: 0.8,
 				attackDelay: 2,
@@ -88,7 +88,7 @@ Events.Encounters = [
 				enemy: 'strange bird',
 				enemyName: _('strange bird'),
 				deathMessage: _('the strange bird is dead'),
-				chara: 'B',
+				chara: 'R',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 2,
@@ -123,10 +123,10 @@ Events.Encounters = [
 		scenes: {
 			'start': {
 				combat: true,
-				enemy: 'shivering man', 
-				enemyName: _('shivering man'), 
+				enemy: 'shivering man',
+				enemyName: _('shivering man'),
 				deathMessage: _('the shivering man is dead'),
-				chara: 'S',
+				chara: 'E',
 				damage: 5,
 				hit: 0.5,
 				attackDelay: 1,
@@ -165,10 +165,10 @@ Events.Encounters = [
 		scenes: {
 			'start': {
 				combat: true,
-				enemy: 'man-eater', 
-				enemyName: _('man-eater'), 
+				enemy: 'man-eater',
+				enemyName: _('man-eater'),
 				deathMessage: _('the man-eater is dead'),
-				chara: 'E',
+				chara: 'T',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 1,
@@ -202,10 +202,10 @@ Events.Encounters = [
 		scenes: {
 			'start': {
 				combat: true,
-				enemy: 'scavenger', 
-				enemyName: _('scavenger'), 
+				enemy: 'scavenger',
+				enemyName: _('scavenger'),
 				deathMessage: _('the scavenger is dead'),
-				chara: 'S',
+				chara: 'E',
 				damage: 4,
 				hit: 0.8,
 				attackDelay: 2,
@@ -244,10 +244,10 @@ Events.Encounters = [
 		scenes: {
 			'start': {
 				combat: true,
-				enemy: 'lizard', 
-				enemyName: _('lizard'), 
+				enemy: 'lizard',
+				enemyName: _('lizard'),
 				deathMessage: _('the lizard is dead'),
-				chara: 'L',
+				chara: 'T',
 				damage: 5,
 				hit: 0.8,
 				attackDelay: 2,
@@ -282,10 +282,10 @@ Events.Encounters = [
 		scenes: {
 			'start': {
 				combat: true,
-				enemy: 'feral terror', 
-				enemyName: _('feral terror'), 
+				enemy: 'feral terror',
+				enemyName: _('feral terror'),
 				deathMessage: _('the feral terror is dead'),
-				chara: 'F',
+				chara: 'T',
 				damage: 6,
 				hit: 0.8,
 				attackDelay: 1,
@@ -319,8 +319,8 @@ Events.Encounters = [
 		scenes: {
 			'start': {
 				combat: true,
-				enemy: 'soldier', 
-				enemyName: _('soldier'), 
+				enemy: 'soldier',
+				enemyName: _('soldier'),
 				deathMessage: _('the soldier is dead'),
 				ranged: true,
 				chara: 'D',
@@ -362,10 +362,10 @@ Events.Encounters = [
 		scenes: {
 			'start': {
 				combat: true,
-				enemy: 'sniper', 
-				enemyName: _('sniper'), 
+				enemy: 'sniper',
+				enemyName: _('sniper'),
 				deathMessage: _('the sniper is dead'),
-				chara: 'S',
+				chara: 'D',
 				damage: 15,
 				hit: 0.8,
 				attackDelay: 4,

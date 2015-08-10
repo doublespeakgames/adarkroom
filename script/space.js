@@ -136,7 +136,7 @@ var Space = {
 						t.remove();
 						Space.hull--;
 						Space.updateHull();
-						if(Space.hull == 0) {
+						if(Space.hull === 0) {
 							Space.crash();
 						}
 					}
@@ -166,7 +166,7 @@ var Space = {
 			}
 			
 			if(!Space.done) {
-				setTimeout(Space.createAsteroid, 1000 - (Space.altitude * 10));
+				Engine.setTimeout(Space.createAsteroid, 1000 - (Space.altitude * 10));
 			}
 		}
 	},
@@ -190,7 +190,7 @@ var Space = {
 			dx += Space.getSpeed();
 		}
 		
-		if(dx != 0 && dy != 0) {
+		if(dx !== 0 && dy !== 0) {
 			dx = dx / Math.sqrt(2);
 			dy = dy / Math.sqrt(2);
 		}
@@ -226,13 +226,15 @@ var Space = {
 	},
 	
 	startAscent: function() {
+		var body_color;
+		var to_color;
 		if (Engine.isLightsOff()) {
-			var body_color = '#272823';
-			var to_color = '#EEEEEE';
+			body_color = '#272823';
+			to_color = '#EEEEEE';
 		}
 		else {
-			var body_color = '#FFFFFF';
-			var to_color = '#000000';
+			body_color = '#FFFFFF';
+			to_color = '#000000';
 		}
 
 		$('body').addClass('noMask').css({backgroundColor: body_color}).animate({
@@ -251,7 +253,7 @@ var Space = {
 		Space.drawStars();
 		Space._timer = setInterval(function() {
 			Space.altitude += 1;
-			if(Space.altitude % 10 == 0) {
+			if(Space.altitude % 10 === 0) {
 				Space.setTitle();
 			}
 			if(Space.altitude > 60) {
@@ -259,7 +261,7 @@ var Space = {
 			}
 		}, 1000);
 		
-		Space._panelTimeout = setTimeout(function() {
+		Space._panelTimeout = Engine.setTimeout(function() {
 			if (Engine.isLightsOff())
 				$('#spacePanel, .menu, select.menuBtn').animate({color: '#272823'}, 500, 'linear');
 			else
@@ -313,7 +315,7 @@ var Space = {
 			left: left
 		}).appendTo(el2);
 		if(num < Space.NUM_STARS) {
-			setTimeout(function() { Space.drawStarAsync(el, el2, num + 1); }, 100);
+			Engine.setTimeout(function() { Space.drawStarAsync(el, el2, num + 1); }, 100);
 		}
 	},
 	
@@ -324,10 +326,11 @@ var Space = {
 		clearInterval(Space._timer);
 		clearInterval(Space._shipTimer);
 		clearTimeout(Space._panelTimeout);
+		var body_color;
 		if (Engine.isLightsOff())
-			var body_color = '#272823';
+			body_color = '#272823';
 		else
-			var body_color = '#FFFFFF';
+			body_color = '#FFFFFF';
 		// Craaaaash!
 		$('body').removeClass('noMask').stop().animate({
 			backgroundColor: body_color
@@ -382,7 +385,7 @@ var Space = {
 			top: '350px',
 			left: '240px'
 		}, 3000, 'linear', function() {
-			setTimeout(function() {
+			Engine.setTimeout(function() {
 				Space.ship.animate({
 					top: '-100px'
 				}, 200, 'linear', function() {
@@ -390,12 +393,13 @@ var Space = {
 					$('#outerSlider').css({'left': '0px', 'top': '0px'});
 					$('#locationSlider, #worldPanel, #spacePanel, #notifications').remove();
 					$('#header').empty();
-					setTimeout(function() {
+					Engine.setTimeout(function() {
 						$('body').stop();
+						var container_color;
 						if (Engine.isLightsOff())
-							var container_color = '#EEE';
+							container_color = '#EEE';
 						else
-							var container_color = '#000';
+							container_color = '#000';
 						$('#starsContainer').animate({
 							opacity: 0,
 							'background-color': container_color
