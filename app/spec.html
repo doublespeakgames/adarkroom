@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jasmine Spec Runner</title>
+
+    <link rel="stylesheet" type="text/css" href="vendor/jasmine/jasmine.css">
+
+    <script src="vendor/jasmine/jasmine.js"></script>
+    <script src="vendor/jasmine/jasmine-html.js"></script>
+    <script src="vendor/jasmine/boot.js"></script>
+    <script>
+        // Overwrite defaul behaviour of boot.js
+        // We can't start with onload, need to wait until all specs are loaded.
+        var startJasmine = window.onload;
+        window.onload = null;
+    </script>
+    <script src="vendor/require.js"></script>
+
+    <script>
+
+        // This is automatic spec loader.
+        // All files with extension ".spec.js", will be loaded and executed
+        // as specs, so you don't have to declare them here in any way.
+
+        var jetpack = require('fs-jetpack');
+
+        var specPaths = jetpack.cwd(__dirname).find('.', {
+            matching: [
+                '*.spec.js',
+                '!node_modules/**',
+                '!bower_components/**',
+            ]
+        }, 'relativePath');
+
+        requirejs.config({ baseUrl: '.' });
+        requirejs(specPaths, function () {
+            // All modules has been loaded, we can start now.
+            startJasmine();
+        });
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>
