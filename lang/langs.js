@@ -4,6 +4,7 @@ var langs = {
 	'en':'english',
 	'es':'español',
 	'fr':'français',
+	'id':'bahasa indonesia',
 	'it':'italiano',
 	'ja':'日本語',
 	'ko':'한국어',
@@ -16,5 +17,6 @@ var langs = {
 	'tr':'türkçe',
 	'uk':'українська',
 	'vi':'tiếng việt',
-	'zh_cn':'简体中文'
+	'zh_cn':'简体中文',
+	'zh_tw':'繁體中文'
 };

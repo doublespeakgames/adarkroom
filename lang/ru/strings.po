@@ -50,7 +50,7 @@ msgstr "добыватель угля"
 
 #: ../../script/outside.js:69 ../../script/localization.js:32
 msgid "sulphur miner"
-msgstr "добыватель серы"
+msgstr "спелеолог"
 
 #: ../../script/outside.js:77 ../../script/localization.js:35
 msgid "steelworker"
