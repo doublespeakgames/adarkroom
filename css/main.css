@@ -100,7 +100,7 @@ span.customSelectOptions {
 }
 
 .customSelectOptions > ul:hover {
-	max-height: 450px;
+	max-height: 600px;
 }
 
 .customSelectOptions > ul > li {
