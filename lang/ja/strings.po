@@ -1498,7 +1498,7 @@ msgstr "震える男は死んだ"
 
 #: script/events/encounters.js:156
 msgid "a shivering man approaches and attacks with surprising strength"
-msgstr "震える男が近づいてくると、以外な力強さで殴りかかってきた"
+msgstr "震える男が近づいてくると、意外な力強さで殴りかかってきた"
 
 #: script/events/encounters.js:161
 msgid "A Man-Eater"
