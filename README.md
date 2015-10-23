@@ -10,7 +10,7 @@ a minimalist text adventure game for your browser
 <tr><th colspan=4>Available Languages</tr>
 <tr>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=zh_cn">Chinese (Simplified)</a></td>
-	<td><a href="http://adarkroom.doublespeakgames.com/?lang=zh_cn">Chinese (Traditional)</a></td>
+	<td><a href="http://adarkroom.doublespeakgames.com/?lang=zh_tw">Chinese (Traditional)</a></td>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=en">English</a></td>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=fr">French</a></td>
 </tr><tr>
