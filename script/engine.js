@@ -290,6 +290,7 @@
 					'inputExport': {
 						text: [_('save this.')],
 						textarea: Engine.export64(),
+						onLoad: function() { Engine.event('progress', 'export'); },
 						readonly: true,
 						buttons: {
 							'done': {
@@ -352,6 +353,7 @@
 		},
 
 		import64: function(string64) {
+			Engine.event('progress', 'import');
 			Engine.disableSelection();
 			string64 = string64.replace(/\s/g, '');
 			string64 = string64.replace(/\./g, '');
