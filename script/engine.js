@@ -134,6 +134,12 @@
 			}
 
 			$('<span>')
+				.addClass('appStore menuBtn')
+				.text(_('app store.'))
+				.click(function() { window.open('https://itunes.apple.com/app/apple-store/id736683061?pt=2073437&ct=adrproper&mt=8'); })
+				.appendTo(menu);
+
+			$('<span>')
 				.addClass('lightsOff menuBtn')
 				.text(_('lights off.'))
 				.click(Engine.turnLightsOff)
@@ -172,12 +178,6 @@
 					.click(Engine.Dropbox.startDropbox)
 					.appendTo(menu);
 			}
-
-			$('<span>')
-				.addClass('menuBtn')
-				.text(_('app store.'))
-				.click(function() { window.open('https://itunes.apple.com/us/app/a-dark-room/id736683061'); })
-				.appendTo(menu);
 
 			$('<span>')
 				.addClass('menuBtn')
@@ -290,6 +290,7 @@
 					'inputExport': {
 						text: [_('save this.')],
 						textarea: Engine.export64(),
+						onLoad: function() { Engine.event('progress', 'export'); },
 						readonly: true,
 						buttons: {
 							'done': {
@@ -352,6 +353,7 @@
 		},
 
 		import64: function(string64) {
+			Engine.event('progress', 'import');
 			Engine.disableSelection();
 			string64 = string64.replace(/\s/g, '');
 			string64 = string64.replace(/\./g, '');

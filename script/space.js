@@ -438,9 +438,17 @@ var Space = {
 								$('#starsContainer').remove();
 								$('#content, #notifications').remove();
 								$('<span>')
-									.addClass('endGame endGameRestart')
+									.addClass('endGame endGameOption')
 									.text(_('restart.'))
 									.click(Engine.confirmDelete)
+									.appendTo('.centerCont')
+									.animate({opacity:1},1500);
+								$('<br />')
+									.appendTo('.centerCont');
+								$('<span>')
+									.addClass('endGame endGameOption')
+									.text(_('app store.'))
+									.click(function() { window.open('https://itunes.apple.com/app/apple-store/id736683061?pt=2073437&ct=gameover&mt=8'); })
 									.appendTo('.centerCont')
 									.animate({opacity:1},1500);
 								Engine.options = {};
