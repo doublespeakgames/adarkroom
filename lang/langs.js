@@ -14,6 +14,7 @@ var langs = {
 	'pt_br':'português (brasil)',
 	'ru':'русский',
 	'sv':'svenska',
+	'th':'ไทย',
 	'tr':'türkçe',
 	'uk':'українська',
 	'vi':'tiếng việt',
