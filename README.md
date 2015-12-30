@@ -30,8 +30,10 @@ a minimalist text adventure game for your browser
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=es">Spanish</a></td>
 </tr><tr>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=sv">Swedish</a></td>
+	<td><a href="http://adarkroom.doublespeakgames.com/?lang=th">Thai</a></td>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=tr">Turkish</a></td>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=uk">Ukrainian</a></td>
+</tr><tr>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=vi">Vietnamese</a></td>
 </tr>
 </table>

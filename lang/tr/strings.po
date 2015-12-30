@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adarkroom\n"
 "POT-Creation-Date: 2015-02-07 14:15-0500\n"
-"PO-Revision-Date: 2015-02-07 14:15-0500\n"
+"PO-Revision-Date: 2015-12-20 14:14+0200\n"
 "Last-Translator: Vanadar <vanadar.univers@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.6\n"
 "X-Poedit-KeywordsList: _\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: s;\n"
@@ -190,15 +190,15 @@ msgstr "müsait"
 
 #: ../../script/events.js:344 ../../script/events.js:389
 msgid "miss"
-msgstr ""
+msgstr "kaçırdı"
 
 #: ../../script/events.js:357 ../../script/events.js:402
 msgid "stunned"
-msgstr ""
+msgstr "sersemledi"
 
 #: ../../script/events.js:746
 msgid "*** EVENT ***"
-msgstr ""
+msgstr "*** OLAY ***"
 
 #: ../../script/world.js:46
 msgid "punch"
@@ -543,7 +543,7 @@ msgstr "meşale"
 
 #: ../../script/room.js:164
 msgid "a torch to keep the dark away"
-msgstr "meşale.. karanlığı uzak tutmak için"
+msgstr "karanlığı uzak tutmak için bir meşale"
 
 #: ../../script/room.js:173
 msgid "waterskin"
@@ -882,14 +882,12 @@ msgid "coal"
 msgstr "kömür"
 
 #: ../../script/localization.js:17
-#, fuzzy
 msgid "sulphur"
-msgstr "sülfür madencisi"
+msgstr "sülfür"
 
 #: ../../script/localization.js:18
-#, fuzzy
 msgid "energy cell"
-msgstr "enerji üreteci"
+msgstr "enerji hücresi"
 
 #: ../../script/localization.js:20
 msgid "medicine"
@@ -897,30 +895,27 @@ msgstr "ilaç"
 
 #: ../../script/localization.js:24
 msgid "grenade"
-msgstr ""
+msgstr "el bombası"
 
 #: ../../script/localization.js:25
 msgid "bolas"
-msgstr ""
+msgstr "toplar"
 
 #: ../../script/localization.js:26
 msgid "bayonet"
-msgstr ""
+msgstr "süngü"
 
 #: ../../script/localization.js:29
-#, fuzzy
 msgid "iron mine"
-msgstr "demir madencisi"
+msgstr "demir madeni"
 
 #: ../../script/localization.js:31
-#, fuzzy
 msgid "coal mine"
-msgstr "kömür madencisi"
+msgstr "kömür madeni"
 
 #: ../../script/localization.js:33
-#, fuzzy
 msgid "sulphur mine"
-msgstr "sülfür madencisi"
+msgstr "sülfür madeni"
 
 #: ../../script/localization.js:36
 msgid "bait"
@@ -971,9 +966,8 @@ msgid "not enough steel"
 msgstr "çelik yetmiyor"
 
 #: ../../script/localization.js:51
-#, fuzzy
 msgid "not enough sulphur"
-msgstr "kürk yetmiyor"
+msgstr "yetersiz sülfür"
 
 #: ../../script/localization.js:52
 msgid "baited trap"
@@ -996,47 +990,38 @@ msgid "not enough leather"
 msgstr "deri yetmiyor"
 
 #: ../../script/localization.js:57
-#, fuzzy
 msgid "not enough meat"
-msgstr "deri yetmiyor"
+msgstr "yetersiz et"
 
 #: ../../script/localization.js:58
-#, fuzzy
 msgid "the compass points east"
 msgstr "pusula doğuyu gösteriyor."
 
 #: ../../script/localization.js:59
-#, fuzzy
 msgid "the compass points west"
 msgstr "pusula batıyı gösteriyor."
 
 #: ../../script/localization.js:60
-#, fuzzy
 msgid "the compass points north"
 msgstr "pusula kuzeyi gösteriyor."
 
 #: ../../script/localization.js:61
-#, fuzzy
 msgid "the compass points south"
 msgstr "pusula güneyi gösteriyor"
 
 #: ../../script/localization.js:62
-#, fuzzy
 msgid "the compass points northeast"
 msgstr "pusula kuzeydoğuyu gösteriyor"
 
 #: ../../script/localization.js:63
-#, fuzzy
 msgid "the compass points northwest"
 msgstr "pusula kuzeybatıyı gösteriyor"
 
 #: ../../script/localization.js:64
-#, fuzzy
 msgid "the compass points southeast"
 msgstr "pusula güneydoğuyu gösteriyor"
 
 #: ../../script/localization.js:65
-#, fuzzy
 msgid "the compass points southwest"
 msgstr "pusula güneybatıyı gösteriyor"
 
@@ -1074,7 +1059,7 @@ msgstr "al:"
 
 #: ../../script/localization.js:80
 msgid "drop:"
-msgstr ""
+msgstr "bırak:"
 
 #: ../../script/localization.js:81
 msgid "forest"
@@ -1082,19 +1067,19 @@ msgstr "orman"
 
 #: ../../script/localization.js:82
 msgid "village"
-msgstr ""
+msgstr "köy"
 
 #: ../../script/dropbox.js:62
 msgid "Dropbox connection"
-msgstr ""
+msgstr "Dropbox bağlantısı"
 
 #: ../../script/dropbox.js:65
 msgid "connect game to dropbox local storage"
-msgstr ""
+msgstr "oyunu dropbox yerel deposuna bağla"
 
 #: ../../script/dropbox.js:68
 msgid "connect"
-msgstr ""
+msgstr "bağla"
 
 #: ../../script/dropbox.js:75 ../../script/dropbox.js:107
 #: ../../script/engine.js:270 ../../script/engine.js:303
@@ -1102,53 +1087,48 @@ msgid "cancel"
 msgstr "iptal"
 
 #: ../../script/dropbox.js:86
-#, fuzzy
 msgid "Dropbox Export / Import"
-msgstr "Export/Import"
+msgstr "Dropbox’dan Export/Import"
 
 #: ../../script/dropbox.js:89
-#, fuzzy
 msgid "export or import save data to dropbox datastorage"
-msgstr "datayı yedeklemek için export veya import edin"
+msgstr "oyun kaydını dropbox’a kaydet ya da ger al"
 
 #: ../../script/dropbox.js:90
 msgid "your are connected to dropbox with account / email "
-msgstr ""
+msgstr "dropbox’a şu hesap / email ile bağlandın "
 
 #: ../../script/dropbox.js:93
-#, fuzzy
 msgid "save"
 msgstr "kaydet"
 
 #: ../../script/dropbox.js:97
 msgid "load"
-msgstr ""
+msgstr "yükle"
 
 #: ../../script/dropbox.js:102
-#, fuzzy
 msgid "signout"
-msgstr "görmezden gel"
+msgstr "çıkış yap"
 
 #: ../../script/dropbox.js:113
 msgid "choose one slot to save to"
-msgstr ""
+msgstr "kaydetmek için bir slot seç"
 
 #: ../../script/dropbox.js:119
-#, fuzzy
 msgid "save to slot"
-msgstr "bunu kaydet."
+msgstr "slota kaydet"
 
 #: ../../script/dropbox.js:179
 msgid "successfully saved to dropbox datastorage"
-msgstr ""
+msgstr "başarılı bir şekilde dropbox deposuna kaydedildi"
 
 #: ../../script/dropbox.js:180
 msgid "error while saving to dropbox datastorage"
-msgstr ""
+msgstr "dropbox deposuna kaydedilirken sorun oluştu"
 
 #: ../../script/dropbox.js:183
 msgid "ok"
-msgstr ""
+msgstr "tamam"
 
 #: ../../script/engine.js:15
 msgid "boxer"
@@ -1242,7 +1222,7 @@ msgstr "kusursuz saldırı"
 # description pour la précision ...
 #: ../../script/engine.js:53
 msgid "land blows more often"
-msgstr "yerden daha sık darbe vuruyorsun"
+msgstr "bu alan daha fazla rüzgarlı"
 
 #: ../../script/engine.js:54
 msgid "learned to predict their movement"
@@ -1318,7 +1298,7 @@ msgstr "Export/Import"
 
 #: ../../script/engine.js:257
 msgid "export or import save data, for backing up"
-msgstr "datayı yedeklemek için export veya import edin"
+msgstr "yedek almak için kayıt verisini içe ya da dışarı aktarın"
 
 #: ../../script/engine.js:258
 msgid "or migrating computers"
@@ -1464,7 +1444,7 @@ msgstr "bıçaklanmadan önce biraz karşı koydu."
 
 #: ../../script/events/outside.js:68
 msgid "Sickness"
-msgstr "Salgın Hastalık"
+msgstr "Hastalık"
 
 #: ../../script/events/outside.js:75
 msgid "a sickness is spreading through the village."
@@ -1507,9 +1487,8 @@ msgid "a terrible plague is fast spreading through the village."
 msgstr "korkunç bir veba çok hızlı bir şekilde köye yayılıyor."
 
 #: ../../script/events/outside.js:138
-#, fuzzy
 msgid "buy medicine"
-msgstr "1 tane ilaç"
+msgstr "ilaç satın al"
 
 #: ../../script/events/outside.js:144
 msgid "5 medicine"
@@ -1779,28 +1758,27 @@ msgstr "veda et"
 
 #: ../../script/events/room.js:54
 msgid "Fire"
-msgstr ""
+msgstr "Ateş"
 
 #: ../../script/events/room.js:61
 msgid "A fire rampages through one of your huts, destroying it."
-msgstr ""
+msgstr "Bir ateş kulübelerinden birine öfkesini kustu ve onu yok etti."
 
 #: ../../script/events/room.js:62
 msgid "Saddly, all residents in the hut perished in the fire."
-msgstr ""
+msgstr "Malesef, kulübedeki herkes alevler içinde can verdi."
 
 #: ../../script/events/room.js:64
 msgid "a fire has started"
-msgstr ""
+msgstr "bir yangın başladı"
 
 #: ../../script/events/room.js:74
-#, fuzzy
 msgid "mourn"
-msgstr "zırh"
+msgstr "ağlamak"
 
 #: ../../script/events/room.js:75
 msgid "some villagers have died"
-msgstr ""
+msgstr "bazı köylüler öldü"
 
 #: ../../script/events/room.js:83 ../../script/events/room.js:134
 msgid "Noises"

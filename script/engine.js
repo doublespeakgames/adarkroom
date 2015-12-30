@@ -148,7 +148,7 @@
 			$('<span>')
 				.addClass('hyper menuBtn')
 				.text(_('hyper.'))
-				.click(Engine.triggerHyperMode)
+				.click(Engine.confirmHyperMode)
 				.appendTo(menu);
 
 			$('<span>')
@@ -487,7 +487,33 @@
 			}
 		},
 
-		triggerHyperMode: function(){
+		confirmHyperMode: function(){
+			if (!Engine.options.doubleTime) {
+				Events.startEvent({
+					title: _('Go Hyper?'),
+					scenes: {
+						start: {
+							text: [_('turning hyper mode speeds up the game to x2 speed. do you want to do that?')],
+							buttons: {
+								'yes': {
+									text: _('yes'),
+									nextScene: 'end',
+									onChoose: Engine.triggerHyperMode
+								},
+								'no': {
+									text: _('no'),
+									nextScene: 'end'
+								}
+							}
+						}
+					}
+				});
+			} else {
+				Engine.triggerHyperMode();
+			}
+		},
+
+		triggerHyperMode: function() {
 			Engine.options.doubleTime = !Engine.options.doubleTime;
 			if(Engine.options.doubleTime)
 				$('.hyper').text(_('classic.'));
