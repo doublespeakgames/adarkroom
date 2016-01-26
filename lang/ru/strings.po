@@ -30,7 +30,7 @@ msgstr "охотник"
 
 #: ../../script/outside.js:28 ../../script/localization.js:22
 msgid "trapper"
-msgstr "ловушечник"
+msgstr "траппер"
 
 #: ../../script/outside.js:36 ../../script/localization.js:23
 msgid "tanner"
@@ -107,7 +107,7 @@ msgstr "прибыла небольшая группа, покрытая пыл�
 #: ../../script/outside.js:189
 #, fuzzy
 msgid "a convoy lurches in, equal parts worry and hope."
-msgstr "пришёл обоз, поровну опасений и надежд"
+msgstr "пришёл обоз, полный опасений и надежд"
 
 #: ../../script/outside.js:191
 msgid "the town's booming. word does get around."
@@ -311,7 +311,7 @@ msgstr "{0}:{1}"
 
 #: ../../script/world.js:343
 msgid "dangerous to be this far from the village without proper protection"
-msgstr "опасно находится так далеко от деревни без должной защиты"
+msgstr "опасно находиться так далеко от деревни без должной защиты"
 
 #: ../../script/world.js:345
 msgid "safer here"
@@ -435,7 +435,7 @@ msgstr "нет места для новых хижин."
 
 #: ../../script/room.js:59
 msgid "lodge"
-msgstr "домик"
+msgstr "сторожка"
 
 #: ../../script/room.js:62
 #, fuzzy
@@ -452,7 +452,7 @@ msgstr "рынок"
 
 #: ../../script/room.js:77
 msgid "a trading post would make commerce easier"
-msgstr "с рынком торговля будет идти легче"
+msgstr "с рынком торговля пойдёт быстрее"
 
 #: ../../script/room.js:78
 msgid ""
@@ -473,7 +473,7 @@ msgstr ""
 
 #: ../../script/room.js:92
 msgid "tannery goes up quick, on the edge of the village"
-msgstr "на краю деревни довольно быстро построилась дубильня"
+msgstr "на краю деревни довольно быстро появилась дубильня"
 
 #: ../../script/room.js:102
 msgid "smokehouse"
@@ -528,7 +528,7 @@ msgstr ""
 
 #: ../../script/room.js:150
 msgid "armoury's done, welcoming back the weapons of the past."
-msgstr "оруженый завод готов, поприветствуем оружие прошлого."
+msgstr "оружейный завод готов, поприветствуем оружие прошлого."
 
 #: ../../script/room.js:161 ../../script/localization.js:19
 msgid "torch"
@@ -536,7 +536,7 @@ msgstr "факел"
 
 #: ../../script/room.js:164
 msgid "a torch to keep the dark away"
-msgstr "факел для отгона темноты"
+msgstr "факел чтобы прогонять темноту"
 
 #: ../../script/room.js:173
 msgid "waterskin"
@@ -596,7 +596,7 @@ msgstr "кож. доспехи"
 
 #: ../../script/room.js:265
 msgid "leather's not strong. better than rags, though."
-msgstr "хоть кожа и не прочна, но лучше она, чем тряпки."
+msgstr "хоть кожа и не прочна, но она лучше, чем тряпьё."
 
 #: ../../script/room.js:274
 msgid "i armour"
@@ -820,7 +820,7 @@ msgstr "где-то над облаками из мусора летит стр�
 
 #: ../../script/ship.js:106 ../../script/ship.js:119
 msgid "not enough alien alloy"
-msgstr "недостаточно инопланетной жидкости"
+msgstr "недостаточно инопланетного сплава"
 
 #: ../../script/ship.js:134
 msgid "Ready to Leave?"
@@ -860,7 +860,7 @@ msgstr "мех"
 
 #: ../../script/localization.js:10
 msgid "alien alloy"
-msgstr "инопланетная жидкость"
+msgstr "инопланетный сплав"
 
 #: ../../script/localization.js:11
 msgid "bullets"
@@ -1183,7 +1183,7 @@ msgstr "замедленный обмен веществ"
 
 #: ../../script/engine.js:38
 msgid "go twice as far without eating"
-msgstr "оставайтесь вдвое дольше без еды"
+msgstr "обходись вдвое дольше без еды"
 
 #: ../../script/engine.js:39
 msgid "learned how to ignore the hunger"
@@ -1195,7 +1195,7 @@ msgstr "пустынная крыса"
 
 #: ../../script/engine.js:43
 msgid "go twice as far without drinking"
-msgstr "оставайтесь вдвое дольше без воды"
+msgstr "обходись вдвое дольше без воды"
 
 #: ../../script/engine.js:44
 msgid "learned to love the dry air"
@@ -1232,7 +1232,7 @@ msgstr "разведчик"
 
 #: ../../script/engine.js:58
 msgid "see farther"
-msgstr "смотрите дальше"
+msgstr "видит дальше"
 
 #: ../../script/engine.js:59
 msgid "learned to look ahead"
@@ -1245,7 +1245,7 @@ msgstr "скрытный"
 #: ../../script/engine.js:63
 #, fuzzy
 msgid "better avoid conflict in the wild"
-msgstr "лучше избегать конфликтов"
+msgstr "лучше избегает конфликты"
 
 #: ../../script/engine.js:64
 msgid "learned how not to be seen"
