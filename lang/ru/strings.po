@@ -1232,7 +1232,7 @@ msgstr "разведчик"
 
 #: ../../script/engine.js:58
 msgid "see farther"
-msgstr "видит дальше"
+msgstr "смотри дальше"
 
 #: ../../script/engine.js:59
 msgid "learned to look ahead"
@@ -1245,7 +1245,7 @@ msgstr "скрытный"
 #: ../../script/engine.js:63
 #, fuzzy
 msgid "better avoid conflict in the wild"
-msgstr "лучше избегает конфликты"
+msgstr "лучше избегай столкновения в лесу"
 
 #: ../../script/engine.js:64
 msgid "learned how not to be seen"
