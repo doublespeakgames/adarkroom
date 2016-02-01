@@ -2232,106 +2232,153 @@ msgstr "狙击手被灭"
 msgid "a shot rings out, from somewhere in the long grass"
 msgstr "深草丛的某处射出了一发子弹"
 
-#~ msgid "choose one slot to load from"
-#~ msgstr "选择加载位置"
+#: ../../script/dropbox.js:141
+msgid "choose one slot to load from"
+msgstr "选择加载位置"
 
-#~ msgid "load from slot"
-#~ msgstr "加载"
+#: ../../script/dropbox.js:148
+msgid "load from slot"
+msgstr "加载"
 
-#~ msgid "eat meat"
-#~ msgstr "吃肉"
+#: ../../script/events.js:130
+msgid "eat meat"
+msgstr "吃肉"
 
-#~ msgid "use meds"
-#~ msgstr "服药"
+#: ../../script/events.js:150
+msgid "use meds"
+msgstr "服药"
 
-#~ msgid "pop "
-#~ msgstr "人口 "
+#: ../../script/outside.js:452
+msgid "pop "
+msgstr "人口 "
 
-#~ msgid "the traps contain "
-#~ msgstr "陷阱捕获到"
+#: ../../script/outside.js:621
+msgid "the traps contain "
+msgstr "陷阱捕获到"
 
-#~ msgid " and "
-#~ msgstr "以及"
+#: ../../script/events.js:653
+msgid " and "
+msgstr "以及"
 
-#~ msgid "A Dusty Path"
-#~ msgstr "漫漫尘途"
+#: ../../script/path.js:298
+msgid "A Dusty Path"
+msgstr "漫漫尘途"
 
-#~ msgid "not enough "
-#~ msgstr "不够了"
+#: ../../script/room.js:935 ../../script/room.js:979
+msgid "not enough "
+msgstr "不够了"
 
-#~ msgid "builder just shivers"
-#~ msgstr "建造者还在瑟瑟发抖"
+#: ../../script/room.js:951
+msgid "builder just shivers"
+msgstr "建造者还在瑟瑟发抖"
 
-#~ msgid "score for this game: {0}"
-#~ msgstr "游戏得分: {0}"
+#: ../../script/space.js:424
+msgid "score for this game: {0}"
+msgstr "游戏得分: {0}"
 
-#~ msgid "total score: {0}"
-#~ msgstr "总分: {0}"
+#: ../../script/space.js:431
+msgid "total score: {0}"
+msgstr "总分: {0}"
 
-#~ msgid "water replenished"
-#~ msgstr "水补充好了"
+#: ../../script/world.js:952 ../../script/events/setpieces.js:2961
+msgid "water replenished"
+msgstr "水补充好了"
 
-#~ msgid "the ground is littered with small teeth"
-#~ msgstr "地上散落着小牙齿"
+#: ../../script/room.js:150
+msgid "the ground is littered with small teeth"
+msgstr "地上散落着小牙齿"
 
-#~ msgid "can't tell what left it here."
-#~ msgstr "难说这里还留下了什么"
+#: ../../script/events/setpieces.js:202
+msgid "can't tell what left it here."
+msgstr "难说这里还留下了什么"
 
-#~ msgid "the torch sputters and dies in the damp air"
-#~ msgstr "火把劈啪作响，熄灭在了潮湿的空气中"
+#: ../../script/events/setpieces.js:241
+msgid "the torch sputters and dies in the damp air"
+msgstr "火把劈啪作响，熄灭在了潮湿的空气中"
 
-#~ msgid "the darkness is absolute"
-#~ msgstr "漆黑一片"
+#: ../../script/events/setpieces.js:242
+msgid "the darkness is absolute"
+msgstr "漆黑一片"
 
-#~ msgid "the torch goes out"
-#~ msgstr "火把燃尽了"
+#: ../../script/events/setpieces.js:244
+msgid "the torch goes out"
+msgstr "火把燃尽了"
 
-#~ msgid "a cave lizard attacks"
-#~ msgstr "一头洞穴蜥蜴袭来"
+#: ../../script/events/setpieces.js:299
+msgid "a cave lizard attacks"
+msgstr "一头洞穴蜥蜴袭来"
 
-#~ msgid "a large beast charges out of the dark"
-#~ msgstr "一头巨兽冲出黑暗"
+#: ../../script/events/setpieces.js:333
+msgid "a large beast charges out of the dark"
+msgstr "一头巨兽冲出黑暗"
 
-#~ msgid "a giant lizard shambles forward"
-#~ msgstr "一头洞穴蜥蜴跌跌撞撞地袭来"
+#: ../../script/events/setpieces.js:367
+msgid "a giant lizard shambles forward"
+msgstr "一头洞穴蜥蜴跌跌撞撞地袭来"
 
-#~ msgid "the nest of a large animal lies at the back of the cave."
-#~ msgstr "巨兽的巢穴就位于洞穴后方"
+#: ../../script/events/setpieces.js:395
+msgid "the nest of a large animal lies at the back of the cave."
+msgstr "巨兽的巢穴就位于洞穴后方"
 
-#~ msgid "a small supply cache is hidden at the back of the cave."
-#~ msgstr "一个小型供给点藏在洞穴后方"
+#: ../../script/events/setpieces.js:437
+msgid "a small supply cache is hidden at the back of the cave."
+msgstr "一个小型供给点藏在洞穴后方"
 
-#~ msgid ""
-#~ "an old case is wedged behind a rock, covered in a thick layer of dust."
-#~ msgstr "岩石下嵌着一个旧盒子，上面覆满一层薄灰"
+#: ../../script/events/setpieces.js:489
+msgid ""
+"an old case is wedged behind a rock, covered in a thick layer of dust."
+msgstr "岩石下嵌着一个旧盒子，上面覆满一层薄灰"
 
-#~ msgid "A Deserted Town"
-#~ msgstr "沙漠小镇"
+#: ../../script/events/setpieces.js:522
+msgid "A Deserted Town"
+msgstr "沙漠小镇"
 
-#~ msgid "a small suburb lays ahead, empty houses scorched and peeling."
-#~ msgstr "前面是一小片住宅区，空无一人，徒留烧焦的残垣断壁"
+#: ../../script/events/setpieces.js:526
+msgid "a small suburb lays ahead, empty houses scorched and peeling."
+msgstr "前面是一小片住宅区，空无一人，徒留烧焦的残垣断壁"
 
-#~ msgid ""
-#~ "broken streetlights stand, rusting. light hasn't graced this place in a "
-#~ "long time."
-#~ msgstr "早就损坏的街灯屹立着，锈迹斑斑.光明已经很久没有眷顾这里"
+#: ../../script/events/setpieces.js:527
+msgid ""
+"broken streetlights stand, rusting. light hasn't graced this place in a "
+"long time."
+msgstr "早就损坏的街灯屹立着，锈迹斑斑.光明已经很久没有眷顾这里"
 
-#~ msgid "the town lies abandoned, its citizens long dead"
-#~ msgstr "这里的小镇早就被遗弃，镇上的居民已经死去多时"
+#: ../../script/events/setpieces.js:529
+msgid "the town lies abandoned, its citizens long dead"
+msgstr "这里的小镇早就被遗弃，镇上的居民已经死去多时"
 
-#~ msgid "explore"
-#~ msgstr "探索小镇"
+#: ../../script/events/setpieces.js:532 ../../script/events/setpieces.js:1250
+msgid "explore"
+msgstr "探索小镇"
 
-#~ msgid ""
-#~ "where the windows of the schoolhouse aren't shattered, they're blackened "
-#~ "with soot."
-#~ msgstr "校舍的窗玻璃并没有碎掉，但却被烟熏黑了"
+#: ../../script/events/setpieces.js:544
+msgid ""
+"where the windows of the schoolhouse aren't shattered, they're blackened "
+"with soot."
+msgstr "校舍的窗玻璃并没有碎掉，但却被烟熏黑了"
 
-#~ msgid "the double doors creak endlessly in the wind."
-#~ msgstr "双开门在风中不停地咯吱作响"
+#: ../../script/events/setpieces.js:545
+msgid "the double doors creak endlessly in the wind."
+msgstr "双开门在风中不停地咯吱作响"
 
-#~ msgid "leave town"
-#~ msgstr "离开小镇"
+#: ../../script/events/setpieces.js:554 ../../script/events/setpieces.js:593
+#: ../../script/events/setpieces.js:611 ../../script/events/setpieces.js:649
+#: ../../script/events/setpieces.js:688 ../../script/events/setpieces.js:722
+#: ../../script/events/setpieces.js:762 ../../script/events/setpieces.js:801
+#: ../../script/events/setpieces.js:840 ../../script/events/setpieces.js:874
+#: ../../script/events/setpieces.js:892 ../../script/events/setpieces.js:925
+#: ../../script/events/setpieces.js:942 ../../script/events/setpieces.js:966
+#: ../../script/events/setpieces.js:1005
+#: ../../script/events/setpieces.js:1044
+#: ../../script/events/setpieces.js:1087
+#: ../../script/events/setpieces.js:1120
+#: ../../script/events/setpieces.js:1148
+#: ../../script/events/setpieces.js:1192
+#: ../../script/events/setpieces.js:1214
+#: ../../script/events/setpieces.js:1230
+msgid "leave town"
+msgstr "离开小镇"
 
-#~ msgid "ambushed on the street."
-#~ msgstr "街头有埋伏"
+#: ../../script/events/setpieces.js:585
+msgid "ambushed on the street."
+msgstr "街头有埋伏"
