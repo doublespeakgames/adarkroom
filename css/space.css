@@ -144,11 +144,11 @@
 	position:relative;
 }
 
-.endGameRestart {
+.endGameOption {
 	font-size: 32px;
 	cursor: pointer;
 }
 
-.endGameRestart:hover {
+.endGameOption:hover {
 	text-decoration: underline;
 }

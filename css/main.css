@@ -69,6 +69,7 @@ div#header {
 	right: 10px;
 	bottom: 10px;
 	color: #666;
+	z-index: 10;
 }
 
 .menu span {
@@ -97,11 +98,10 @@ span.customSelectOptions {
 	bottom: 0;
 	position: absolute;
 	right: 0;
-	background-color: white;
 }
 
 .customSelectOptions > ul:hover {
-	max-height: 450px;
+	max-height: 600px;
 }
 
 .customSelectOptions > ul > li {
@@ -125,6 +125,10 @@ span.customSelectOptions {
 
 .menu span:hover {
 	text-decoration: underline;
+}
+
+.menu .appStore {
+	font-weight: bold;
 }
 
 div.headerButton {
