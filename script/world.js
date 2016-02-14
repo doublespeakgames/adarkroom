@@ -618,7 +618,6 @@ var World = {
 				}
 			}
 		}
-		World.seenAll = World.testMap();
 	},
 
 	testMap: function() {
@@ -898,6 +897,8 @@ var World = {
 	goHome: function() {
 		// Home safe! Commit the changes.
 		$SM.setM('game.world', World.state);
+		World.seenAll = World.testMap();
+
 		if(World.state.sulphurmine && $SM.get('game.buildings["sulphur mine"]', true) === 0) {
 			$SM.add('game.buildings["sulphur mine"]', 1);
 			Engine.event('progress', 'sulphur mine');
