@@ -750,7 +750,7 @@ var Room = {
 	
 	updateStoresView: function() {
 		var stores = $('div#stores');
-	  var resources = $('div#resources');
+		var resources = $('div#resources');
 		var special = $('div#special');
 		var weapons = $('div#weapons');
 		var needsAppend = false, rNeedsAppend = false, sNeedsAppend = false, wNeedsAppend = false, newRow = false;
@@ -825,7 +825,7 @@ var Room = {
 				$SM.startThieves();
 			}
 			
-			if(row.length === 0 && num > 0) {
+			if(row.length === 0) {
 				row = $('<div>').attr('id', id).addClass('storeRow');
 				$('<div>').addClass('row_key').text(lk).appendTo(row);
 				$('<div>').addClass('row_val').text(Math.floor(num)).appendTo(row);
@@ -844,7 +844,7 @@ var Room = {
 					row.insertAfter(location.find('#' + curPrev));
 				}
 				newRow = true;
-			} else if(num>= 0){
+			} else {
 				$('div#' + row.attr('id') + ' > div.row_val', location).text(Math.floor(num));
 			}
 		}
