@@ -750,7 +750,7 @@ var Room = {
 	
 	updateStoresView: function() {
 		var stores = $('div#stores');
-	  var resources = $('div#resources');
+		var resources = $('div#resources');
 		var special = $('div#special');
 		var weapons = $('div#weapons');
 		var needsAppend = false, rNeedsAppend = false, sNeedsAppend = false, wNeedsAppend = false, newRow = false;
