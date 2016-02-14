@@ -851,6 +851,7 @@ var World = {
 			Notifications.notify(World, _('the world fades'));
 			World.state = null;
 			Path.outfit = {};
+			$SM.remove('outfit');
 			$('#outerSlider').animate({opacity: '0'}, 600, 'linear', function() {
 				$('#outerSlider').css('left', '0px');
 				$('#locationSlider').css('left', '0px');
