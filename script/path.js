@@ -302,7 +302,6 @@ var Path = {
 		for(var k in Path.outfit) {
 			$SM.add('stores["'+k+'"]', -Path.outfit[k]);
 		}
-		$SM.remove('outfit');
 		World.onArrival();
 		$('#outerSlider').animate({left: '-700px'}, 300);
 		Engine.activeModule = World;
