@@ -433,6 +433,20 @@ Events.Room = [
 					'buyMap': {
 						text: _('buy map'),
 						cost: { 'fur': 200, 'scales': 10 },
+						available: function() {
+							var mask = $SM.get('game.world.mask');
+							var dark = false;
+							loop:
+							for(var i = 0; i < mask.length; i++) {
+								for(var j = 0; j < mask[i].length; j++) {
+									if(!mask[i][j]) {
+										dark = true;
+										break loop;
+									}
+								}
+							}
+							return dark;
+						},
 						notification: _('the map uncovers a bit of the world'),
 						onChoose: World.applyMap
 					},
