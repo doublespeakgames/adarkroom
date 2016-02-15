@@ -214,10 +214,10 @@ var Path = {
 					$('.dnBtn', row).removeClass('disabled');
 					$('.dnManyBtn', row).removeClass('disabled');
 				}
-				if(num >= have || space < Path.getWeight(k)) {
+				if(num == have || space < Path.getWeight(k)) {
 					$('.upBtn', row).addClass('disabled');
 					$('.upManyBtn', row).addClass('disabled');
-				} else if(space >= Path.getWeight(k)) {
+				} else {
 					$('.upBtn', row).removeClass('disabled');
 					$('.upManyBtn', row).removeClass('disabled');
 				}
@@ -267,8 +267,7 @@ var Path = {
 		if(Path.getFreeSpace() >= Path.getWeight(supply) && cur < $SM.get('stores["'+supply+'"]', true)) {
 			var maxExtraByWeight = Math.floor(Path.getFreeSpace() / Path.getWeight(supply));
 			var maxExtraByStore  = $SM.get('stores["'+supply+'"]', true) - cur;
-			var maxExtraByBtn    = btn.data;
-			Path.outfit[supply] = cur + Math.min(maxExtraByBtn, Math.min(maxExtraByWeight, maxExtraByStore));
+			Path.outfit[supply] = cur + Math.min(btn.data, maxExtraByWeight, maxExtraByStore);
 			$SM.set('outfit['+supply+']', Path.outfit[supply]);
 			Path.updateOutfitting();
 		}
