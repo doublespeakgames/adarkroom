@@ -13,7 +13,7 @@ var Button = {
 			.addClass('button')
 			.text(typeof(options.text) != 'undefined' ? options.text : "button")
 			.click(function() {
-				if(!$(this).hasClass('disabled')) {
+				if(!$(this).hasClass('disabled') && (!Events.paused || $(this).data("handler") == Events.togglePause)) {
 					Button.cooldown($(this));
 					$(this).data("handler")($(this));
 				}
@@ -73,13 +73,16 @@ var Button = {
 			// param "start" takes value from cooldown time if not specified
 			var start, left;
 			switch(option){
-				// a switch will allow for several uses of cooldown function
 				case 'state':
 					if(!$SM.get(id)){
 						return;
 					}
 					start = Math.min($SM.get(id), cd);
-					left = (start / cd).toFixed(4);
+					left = (start / cd).toFixed(3);
+					break;
+				case 'pause':
+					left = (btn.children('div.cooldown').width() / btn.width()).toFixed(3);
+					start = cd * left;
 					break;
 				default:
 					start = cd;
@@ -98,7 +101,7 @@ var Button = {
 			if (Engine.options.doubleTime){
 				time /= 2;
 			}
-			$('div.cooldown', btn).width(left * 100 +"%").animate({width: '0%'}, time * 1000, 'linear', function() {
+			$('div.cooldown', btn).width(Math.floor(left * 100) +"%").animate({width: '0%'}, time * 1000, 'linear', function() {
 				Button.clearCooldown(btn, true);
 			});
 			btn.addClass('disabled');
@@ -107,7 +110,6 @@ var Button = {
 	},
 
 	clearCooldown: function(btn, ended) {
-		var ended = ended || false;
 		if(!ended){
 			$('div.cooldown', btn).stop(true, true);
 		}

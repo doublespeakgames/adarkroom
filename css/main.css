@@ -245,7 +245,7 @@ div.button:hover {
 	text-decoration: underline;
 }
 
-div.button.disabled, div.button.disabled:hover {
+div.button.disabled, div.button.disabled:hover, #event.paused  > #buttons .button {
 	cursor: default;
 	border-color: #b2b2b2;
 	color: #b2b2b2;
@@ -413,6 +413,16 @@ div.tooltip:hover {
 	display: block;
 }
 
+#pauseButton {
+	text-align:center;
+	margin: 0 0 1.2em;
+}
+
+#pauseButton > .button {
+	float: none;
+	margin: 0 auto;
+}
+
 /* Events */
 
 .eventPanel {
@@ -520,8 +530,11 @@ body.noMask #description {
 	float: none;
 }
 
-#buttons > .button {
+#buttons .button {
 	margin: 0 5px 5px;
+}
+
+#buttons .button, #pauseButton {
 	margin-right: 15px;
 }
 

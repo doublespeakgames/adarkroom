@@ -9,6 +9,7 @@ var Events = {
 	_EAT_COOLDOWN: 5,
 	_MEDS_COOLDOWN: 7,
 	_LEAVE_COOLDOWN: 1,
+	_PAUSE_COOLDOWN: 0.4,
 	STUN_DURATION: 4000,
 	BLINK_INTERVAL: false,
 
@@ -77,15 +78,29 @@ var Events = {
 
 		$('<div>').text(scene.notification).appendTo(desc);
 
-		// Draw the wanderer
-		Events.createFighterDiv('@', World.health, World.getMaxHealth()).attr('id', 'wanderer').appendTo(desc);
+		// Draw pause button
+		Events.paused = true;
+		var pauseBox = $('<div>').attr('id', 'pauseButton').appendTo(desc);
+		var pause = new Button.Button({
+			id: 'pause',
+			text: '',
+			cooldown: Events._PAUSE_COOLDOWN,
+			click: Events.togglePause
+		}).appendTo(pauseBox);
+		$('<span>').addClass('text').insertBefore(pause.children('.cooldown'));
+		$('<div>').addClass('clear').appendTo(pauseBox);
+		Events.togglePause(pause);
 
+		var fightBox = $('<div>').attr('id', 'fight').appendTo(desc);
+		// Draw the wanderer
+		Events.createFighterDiv('@', World.health, World.getMaxHealth()).attr('id', 'wanderer').appendTo(fightBox);
 		// Draw the enemy
-		Events.createFighterDiv(scene.chara, scene.health, scene.health).attr('id', 'enemy').appendTo(desc);
+		Events.createFighterDiv(scene.chara, scene.health, scene.health).attr('id', 'enemy').appendTo(fightBox);
 
 		// Draw the action buttons
 		var btns = $('#buttons', Events.eventPanel());
 
+		var attackBtns = $('<div>').appendTo(btns).attr('id','attackButtons');
 		var numWeapons = 0;
 		for(var k in World.Weapons) {
 			var weapon = World.Weapons[k];
@@ -103,21 +118,81 @@ var Events = {
 					}
 				}
 				numWeapons++;
-				Events.createAttackButton(k).appendTo(btns);
+				Events.createAttackButton(k).appendTo(attackBtns);
 			}
 		}
 		if(numWeapons === 0) {
 			// No weapons? You can punch stuff!
-			Events.createAttackButton('fists').prependTo(btns);
+			Events.createAttackButton('fists').prependTo(attackBtns);
 		}
+		$('<div>').addClass('clear').appendTo(attackBtns);
 
-		Events.createEatMeatButton().appendTo(btns);
+		var healBtns = $('<div>').appendTo(btns).attr('id','healButtons');
+		Events.createEatMeatButton().appendTo(healBtns);
 		if((Path.outfit['medicine'] || 0) !== 0) {
-			Events.createUseMedsButton().appendTo(btns);
+			Events.createUseMedsButton().appendTo(healBtns);
 		}
+		$('<div>').addClass('clear').appendTo(healBtns);
 
 		// Set up the enemy attack timer
-		Events._enemyAttackTimer = Engine.setTimeout(Events.enemyAttack, scene.attackDelay * 1000);
+		Events._enemyAttackTimer = Engine.setInterval(Events.enemyAttack, scene.attackDelay * 1000);
+	},
+
+	setPause: function(btn){
+		Events.paused = true;
+		$('#event').addClass('paused');
+		Button.clearCooldown(btn);
+		var active = 0;
+		$('#buttons').find('.button').each(function(i){
+			if($(this).data('onCooldown')){
+				$(this).children('.cooldown').stop(true,false);
+				active++;
+			}
+		});
+		Engine.log('fight paused. stopped '+ active +' buttons');
+	},
+
+	removePause: function(state){
+		var log, time, target;
+		switch(state){
+			case 'set':
+				log = 'started';
+				time = 0;
+				target = $();
+				break;
+			case 'end':
+				$('#pause').addClass('disabled');
+				log = 'ended';
+				time = Events._FIGHT_SPEED;
+				target = $();
+				break;
+			default:
+				log = 'resumed';
+				time = Events._PAUSE_COOLDOWN * 1000;
+				target = $('#buttons').find('.button');
+				break;
+		}
+		Engine.setTimeout(function(){
+			Events.paused = false;
+			$('#event').removeClass('paused');
+			target.each(function(i){
+				if($(this).data('onCooldown')){
+					Button.cooldown($(this), 'pause');
+				}
+			});
+			Engine.log('Event '+ log);
+		}, time);
+	},
+
+	togglePause: function(btn){
+		var text = btn.children('.text').first();
+		if(Events.paused) {
+			Events.removePause()
+			text.text( _('pause.') );
+		} else {
+			Events.setPause(btn);
+			text.text( _('resume.') )
+		}
 	},
 
 	createEatMeatButton: function(cooldown) {
@@ -201,52 +276,35 @@ var Events = {
 		});
 	},
 
-	eatMeat: function() {
-		if(Path.outfit['cured meat'] > 0) {
-			Path.outfit['cured meat']--;
+	doHeal: function(healing, cured, btn){
+		if(Path.outfit[healing] > 0) {
+			Path.outfit[healing]--;
 			World.updateSupplies();
-			if(Path.outfit['cured meat'] === 0) {
-				Button.setDisabled($('#eat'), true);
+			if(Path.outfit[healing] === 0) {
+				Button.setDisabled(btn, true);
 			}
 
-			var hp = World.health;
-			hp += World.meatHeal();
-			hp = hp > World.getMaxHealth() ? World.getMaxHealth() : hp;
+			var hp = World.health + cured;
+			hp = Math.min(World.getMaxHealth(),hp);
 			World.setHp(hp);
 
 			if(Events.activeEvent()) {
 				var w = $('#wanderer');
 				w.data('hp', hp);
 				Events.updateFighterDiv(w);
-				Events.drawFloatText('+' + World.meatHeal(), '#wanderer .hp');
+				Events.drawFloatText('+' + cured, '#wanderer .hp');
 				var takeETbutton = Events.setTakeAll();
 				Events.canLeave(takeETbutton);
 			}
 		}
 	},
 
-	useMeds: function() {
-		if(Path.outfit['medicine'] > 0) {
-			Path.outfit['medicine']--;
-			World.updateSupplies();
-			if(Path.outfit['medicine'] === 0) {
-				Button.setDisabled($('#meds'), true);
-			}
+	eatMeat: function(btn) {
+		Events.doHeal('cured meat', World.meatHeal(), btn);
+	},
 
-			var hp = World.health;
-			hp += World.medsHeal();
-			hp = hp > World.getMaxHealth() ? World.getMaxHealth() : hp;
-			World.setHp(hp);
-
-			if(Events.activeEvent()) {
-				var w = $('#wanderer');
-				w.data('hp', hp);
-				Events.updateFighterDiv(w);
-				Events.drawFloatText('+' + World.medsHeal(), '#wanderer .hp');
-				var takeETbutton = Events.setTakeAll();
-				Events.canLeave(takeETbutton);
-			}
-		}
+	useMeds: function(btn) {
+		Events.doHeal('medicine', World.medsHeal(), btn);
 	},
 
 	useWeapon: function(btn) {
@@ -424,6 +482,10 @@ var Events = {
 
 	enemyAttack: function() {
 
+		if(Events.paused){
+			return;
+		}
+
 		var scene = Events.activeEvent().scenes[Events.activeScene];
 
 		if(!$('#enemy').data('stunned')) {
@@ -445,12 +507,11 @@ var Events = {
 					}
 			});
 		}
-
-		Events._enemyAttackTimer = Engine.setTimeout(Events.enemyAttack, scene.attackDelay * 1000);
 	},
 
 	winFight: function() {
 		Events.won = true;
+		Events.removePause('end');
 		clearTimeout(Events._enemyAttackTimer);
 		$('#enemy').animate({opacity: 0}, 300, 'linear', function() {
 			Engine.setTimeout(function() {
@@ -465,6 +526,7 @@ var Events = {
 
 					var takeETbtn = Events.drawLoot(scene.loot);
 
+					var exitBtns = $('<div>').appendTo(btns).attr('id','exitButtons');
 					if(scene.buttons) {
 						// Draw the buttons
 						leaveBtn = Events.drawButtons(scene);
@@ -483,11 +545,15 @@ var Events = {
 						});
 						Button.cooldown(leaveBtn.appendTo(btns));
 
+						var healBtns = $('<div>').appendTo(btns).attr('id','healButtons');
 						Events.createEatMeatButton(0).appendTo(btns);
 						if((Path.outfit['medicine'] || 0) !== 0) {
 							Events.createUseMedsButton(0).appendTo(btns);
 						}
+						$('<div>').addClass('clear').appendTo(healBtns);
 					}
+					$('<div>').addClass('clear').appendTo(exitBtns);
+
 					Events.allowLeave(takeETbtn, leaveBtn);
 				} catch(e) {
 					// It is possible to die and win if the timing is perfect. Just let it fail.
@@ -983,6 +1049,7 @@ var Events = {
 
 	endEvent: function() {
 		Events.eventPanel().animate({opacity:0}, Events._PANEL_FADE, 'linear', function() {
+			Events.removePause('end');
 			Events.eventPanel().remove();
 			Events.activeEvent().eventPanel = null;
 			Events.eventStack.shift();
