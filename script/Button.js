@@ -78,10 +78,10 @@ var Button = {
 						return;
 					}
 					start = Math.min($SM.get(id), cd);
-					left = (start / cd).toFixed(3);
+					left = (start / cd).toFixed(4);
 					break;
 				case 'pause':
-					left = (btn.children('div.cooldown').width() / btn.width()).toFixed(3);
+					left = (btn.children('div.cooldown').width() / btn.innerWidth()).toFixed(4);
 					start = cd * left;
 					break;
 				default:
@@ -101,7 +101,7 @@ var Button = {
 			if (Engine.options.doubleTime){
 				time /= 2;
 			}
-			$('div.cooldown', btn).width(Math.floor(left * 100) +"%").animate({width: '0%'}, time * 1000, 'linear', function() {
+			$('div.cooldown', btn).width(left * 100 +"%").animate({width: '0%'}, time * 1000, 'linear', function() {
 				Button.clearCooldown(btn, true);
 			});
 			btn.addClass('disabled');
