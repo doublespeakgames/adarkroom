@@ -10,7 +10,7 @@ var Events = {
 	_MEDS_COOLDOWN: 7,
 	_LEAVE_COOLDOWN: 1,
 	_PAUSE_COOLDOWN: 0.4,
-	STUN_DURATION: 4000,
+	STUN_DURATION: 4,
 	BLINK_INTERVAL: false,
 
 	init: function(options) {
@@ -73,7 +73,7 @@ var Events = {
 
 	startCombat: function(scene) {
 		Engine.event('game event', 'combat');
-		Events.won = false;
+		Events.lost = false;
 		var desc = $('#description', Events.eventPanel());
 
 		$('<div>').text(scene.notification).appendTo(desc);
@@ -138,10 +138,10 @@ var Events = {
 		Events._enemyAttackTimer = Engine.setInterval(Events.enemyAttack, scene.attackDelay * 1000);
 	},
 
-	setPause: function(btn){
+	setPause: function(){
 		Events.paused = true;
 		$('#event').addClass('paused');
-		Button.clearCooldown(btn);
+		Button.clearCooldown($('#pause'));
 		var active = 0;
 		$('#buttons').find('.button').each(function(i){
 			if($(this).data('onCooldown')){
@@ -190,7 +190,7 @@ var Events = {
 			Events.removePause()
 			text.text( _('pause.') );
 		} else {
-			Events.setPause(btn);
+			Events.setPause();
 			text.text( _('resume.') )
 		}
 	},
@@ -380,12 +380,38 @@ var Events = {
 
 			var attackFn = weapon.type == 'ranged' ? Events.animateRanged : Events.animateMelee;
 			attackFn($('#wanderer'), dmg, function() {
-				if($('#enemy').data('hp') <= 0 && !Events.won) {
+				if($('#enemy').data('hp') <= 0) {
 					// Success!
 					Events.winFight();
 				}
 			});
 		}
+	},
+
+	damage: function(fighter, enemy, dmg) {
+		var enemyHp = enemy.data('hp');
+		var msg = "";
+		if(typeof dmg == 'number') {
+			if(dmg < 0) {
+				msg = _('miss');
+				dmg = 0;
+			} else {
+				msg = '-' + dmg;
+				enemyHp = ((enemyHp - dmg) < 0) ? 0 : (enemyHp - dmg);
+				enemy.data('hp', enemyHp);
+				if(fighter.attr('id') == 'enemy') {
+					World.setHp(enemyHp);
+				}
+				Events.updateFighterDiv(enemy);
+			}
+		} else {
+			if(dmg == 'stun') {
+				msg = _('stunned');
+				enemy.data('stunned', Events.STUN_DURATION);
+			}
+		}
+
+		Events.drawFloatText(msg, $('.hp', enemy));
 	},
 
 	animateMelee: function(fighter, dmg, callback) {
@@ -401,32 +427,8 @@ var Events = {
 		}
 
 		fighter.stop(true, true).animate(start, Events._FIGHT_SPEED, function() {
-			var enemyHp = enemy.data('hp');
-			var msg = "";
-			if(typeof dmg == 'number') {
-				if(dmg < 0) {
-					msg = _('miss');
-					dmg = 0;
-				} else {
-					msg = '-' + dmg;
-					enemyHp = ((enemyHp - dmg) < 0) ? 0 : (enemyHp - dmg);
-					enemy.data('hp', enemyHp);
-					if(fighter.attr('id') == 'enemy') {
-						World.setHp(enemyHp);
-					}
-					Events.updateFighterDiv(enemy);
-				}
-			} else {
-				if(dmg == 'stun') {
-					msg = _('stunned');
-					enemy.data('stunned', true);
-					Engine.setTimeout(function() {
-						enemy.data('stunned', false);
-					}, Events.STUN_DURATION);
-				}
-			}
 
-			Events.drawFloatText(msg, $('.hp', enemy));
+			Events.damage(fighter, enemy, dmg);
 
 			$(this).animate(end, Events._FIGHT_SPEED, callback);
 		});
@@ -445,33 +447,9 @@ var Events = {
 		}
 
 		$('<div>').css(start).addClass('bullet').text('o').appendTo('#description')
-				.animate(end, Events._FIGHT_SPEED * 2, 'linear', function() {
-			var enemyHp = enemy.data('hp');
-			var msg = "";
-			if(typeof dmg == 'number') {
-				if(dmg < 0) {
-					msg = _('miss');
-					dmg = 0;
-				} else {
-					msg = '-' + dmg;
-					enemyHp = ((enemyHp - dmg) < 0) ? 0 : (enemyHp - dmg);
-					enemy.data('hp', enemyHp);
-					if(fighter.attr('id') == 'enemy') {
-						World.setHp(enemyHp);
-					}
-					Events.updateFighterDiv(enemy);
-				}
-			} else {
-				if(dmg == 'stun') {
-					msg = _('stunned');
-					enemy.data('stunned', true);
-					Engine.setTimeout(function() {
-						enemy.data('stunned', false);
-					}, Events.STUN_DURATION);
-				}
-			}
+			.animate(end, Events._FIGHT_SPEED * 2, 'linear', function() {
 
-			Events.drawFloatText(msg, $('.hp', enemy));
+			Events.damage(fighter, enemy, dmg);
 
 			$(this).remove();
 			if(typeof callback == 'function') {
@@ -488,7 +466,13 @@ var Events = {
 
 		var scene = Events.activeEvent().scenes[Events.activeScene];
 
-		if(!$('#enemy').data('stunned')) {
+		var enemy = $('#enemy');
+		var stunning = enemy.data('stunned');
+
+		if(stunning) {
+			stunning -= scene.attackDelay;
+			enemy.data('stunned', Math.max(stunning, 0));
+		} else {
 			var toHit = scene.hit;
 			toHit *= $SM.hasPerk('evasive') ? 0.8 : 1;
 			var dmg = -1;
@@ -499,23 +483,24 @@ var Events = {
 			var attackFn = scene.ranged ? Events.animateRanged : Events.animateMelee;
 
 			attackFn($('#enemy'), dmg, function() {
-					if($('#wanderer').data('hp') <= 0) {
-						// Failure!
-						clearTimeout(Events._enemyAttackTimer);
-						Events.endEvent();
-						World.die();
-					}
+				if($('#wanderer').data('hp') <= 0) {
+					// Failure!
+					Events.loseFight();
+				}
 			});
 		}
 	},
 
-	winFight: function() {
-		Events.won = true;
-		Events.removePause('end');
+	endFight: function() {
 		clearTimeout(Events._enemyAttackTimer);
-		$('#enemy').animate({opacity: 0}, 300, 'linear', function() {
-			Engine.setTimeout(function() {
-				try {
+		Events.removePause('end');
+	},
+
+	winFight: function() {
+		if(!Events.lost) {
+			Events.endFight();
+			$('#enemy').animate({opacity: 0}, 300, 'linear', function() {
+				Engine.setTimeout(function() {
 					var scene = Events.activeEvent().scenes[Events.activeScene];
 					var leaveBtn = false;
 					var desc = $('#description', Events.eventPanel());
@@ -555,14 +540,19 @@ var Events = {
 					$('<div>').addClass('clear').appendTo(exitBtns);
 
 					Events.allowLeave(takeETbtn, leaveBtn);
-				} catch(e) {
-					// It is possible to die and win if the timing is perfect. Just let it fail.
-				}
-			}, 1000, true);
-		});
+				}, 1000, true);
+			});
+		}
 	},
 
-	drawDrop:function(btn) {
+	loseFight: function(){
+		Events.lost = true;
+		Events.endFight();
+		Events.endEvent();
+		World.die();
+	},
+
+	drawDrop: function(btn) {
 		var name = btn.attr('id').substring(5).replace('-', ' ');
 		var needsAppend = false;
 		var weight = Path.getWeight(name);
@@ -1049,7 +1039,6 @@ var Events = {
 
 	endEvent: function() {
 		Events.eventPanel().animate({opacity:0}, Events._PANEL_FADE, 'linear', function() {
-			Events.removePause('end');
 			Events.eventPanel().remove();
 			Events.activeEvent().eventPanel = null;
 			Events.eventStack.shift();
