@@ -512,7 +512,11 @@ var Events = {
 	},
 
 	winFight: function() {
-		if(!Events.lost) {
+		Engine.setTimeout(function() {
+			// Check after animation time, to see if the player has died before winning
+			if(Events.lost) {
+				return;
+			}
 			Events.endFight();
 			$('#enemy').animate({opacity: 0}, 300, 'linear', function() {
 				Engine.setTimeout(function() {
@@ -551,14 +555,14 @@ var Events = {
 							Events.createUseMedsButton(0).appendTo(healBtns);
 						}
 						$('<div>').addClass('clear').appendTo(healBtns);
-						Events.setHeal();
+						Events.setHeal(healBtns);
 					}
 					$('<div>').addClass('clear').appendTo(exitBtns);
 
 					Events.allowLeave(takeETbtn, leaveBtn);
 				}, 1000, true);
 			});
-		}
+		}, Events._FIGHT_SPEED);
 	},
 
 	loseFight: function(){
