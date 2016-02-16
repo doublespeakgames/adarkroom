@@ -528,7 +528,7 @@ var Events = {
 							},
 							text: _('leave')
 						});
-						Button.cooldown(leaveBtn.appendTo(btns));
+						Button.cooldown(leaveBtn.appendTo(exitBtns));
 
 						var healBtns = $('<div>').appendTo(btns).attr('id','healButtons');
 						Events.createEatMeatButton(0).appendTo(btns);
@@ -827,13 +827,15 @@ var Events = {
 		}
 
 		// Draw the buttons
+		var exitBtns = $('<div>').attr('id','exitButtons').appendTo($('#buttons', Events.eventPanel()));
 		leaveBtn = Events.drawButtons(scene);
+		$('<div>').addClass('clear').appendTo(exitBtns);
 
 		Events.allowLeave(takeETbtn, leaveBtn);
 	},
 
 	drawButtons: function(scene) {
-		var btns = $('#buttons', Events.eventPanel());
+		var btns = $('#exitButtons', Events.eventPanel());
 		var btnsList = [];
 		for(var id in scene.buttons) {
 			var info = scene.buttons[id];
