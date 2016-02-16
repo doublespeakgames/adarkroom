@@ -531,9 +531,9 @@ var Events = {
 						Button.cooldown(leaveBtn.appendTo(exitBtns));
 
 						var healBtns = $('<div>').appendTo(btns).attr('id','healButtons');
-						Events.createEatMeatButton(0).appendTo(btns);
+						Events.createEatMeatButton(0).appendTo(healBtns);
 						if((Path.outfit['medicine'] || 0) !== 0) {
-							Events.createUseMedsButton(0).appendTo(btns);
+							Events.createUseMedsButton(0).appendTo(healBtns);
 						}
 						$('<div>').addClass('clear').appendTo(healBtns);
 					}
