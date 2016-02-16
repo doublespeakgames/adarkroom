@@ -133,6 +133,7 @@ var Events = {
 			Events.createUseMedsButton().appendTo(healBtns);
 		}
 		$('<div>').addClass('clear').appendTo(healBtns);
+		Events.setHeal(healBtns);
 
 		// Set up the enemy attack timer
 		Events._enemyAttackTimer = Engine.setInterval(Events.enemyAttack, scene.attackDelay * 1000);
@@ -276,6 +277,18 @@ var Events = {
 		});
 	},
 
+	setHeal: function(healBtns){
+		if(!healBtns){
+			healBtns = $('#healButtons');
+		}
+		healBtns = healBtns.children('.button');
+		var canHeal = (World.health < World.getMaxHealth());
+		healBtns.each(function(i){
+			Button.setDisabled($(this), !canHeal);
+		});
+		return canHeal;
+	},
+
 	doHeal: function(healing, cured, btn){
 		if(Path.outfit[healing] > 0) {
 			Path.outfit[healing]--;
@@ -287,6 +300,7 @@ var Events = {
 			var hp = World.health + cured;
 			hp = Math.min(World.getMaxHealth(),hp);
 			World.setHp(hp);
+			Events.setHeal();
 
 			if(Events.activeEvent()) {
 				var w = $('#wanderer');
@@ -401,6 +415,7 @@ var Events = {
 				enemy.data('hp', enemyHp);
 				if(fighter.attr('id') == 'enemy') {
 					World.setHp(enemyHp);
+					Events.setHeal();
 				}
 				Events.updateFighterDiv(enemy);
 			}
@@ -536,6 +551,7 @@ var Events = {
 							Events.createUseMedsButton(0).appendTo(healBtns);
 						}
 						$('<div>').addClass('clear').appendTo(healBtns);
+						Events.setHeal();
 					}
 					$('<div>').addClass('clear').appendTo(exitBtns);
 
