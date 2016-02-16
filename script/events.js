@@ -497,7 +497,11 @@ var Events = {
 	},
 
 	winFight: function() {
-		if(!Events.lost) {
+		Engine.setTimeout(function() {
+			// Check after animation time, to see if the player has died before winning
+			if(Events.lost) {
+				return;
+			}
 			Events.endFight();
 			$('#enemy').animate({opacity: 0}, 300, 'linear', function() {
 				Engine.setTimeout(function() {
@@ -542,7 +546,7 @@ var Events = {
 					Events.allowLeave(takeETbtn, leaveBtn);
 				}, 1000, true);
 			});
-		}
+		}, Events._FIGHT_SPEED);
 	},
 
 	loseFight: function(){
