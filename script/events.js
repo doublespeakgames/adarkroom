@@ -77,15 +77,16 @@ var Events = {
 
 		$('<div>').text(scene.notification).appendTo(desc);
 
+		var fightBox = $('<div>').attr('id', 'fight').appendTo(desc);
 		// Draw the wanderer
-		Events.createFighterDiv('@', World.health, World.getMaxHealth()).attr('id', 'wanderer').appendTo(desc);
-
+		Events.createFighterDiv('@', World.health, World.getMaxHealth()).attr('id', 'wanderer').appendTo(fightBox);
 		// Draw the enemy
-		Events.createFighterDiv(scene.chara, scene.health, scene.health).attr('id', 'enemy').appendTo(desc);
+		Events.createFighterDiv(scene.chara, scene.health, scene.health).attr('id', 'enemy').appendTo(fightBox);
 
 		// Draw the action buttons
 		var btns = $('#buttons', Events.eventPanel());
 
+		var attackBtns = $('<div>').appendTo(btns).attr('id','attackButtons');
 		var numWeapons = 0;
 		for(var k in World.Weapons) {
 			var weapon = World.Weapons[k];
@@ -103,18 +104,22 @@ var Events = {
 					}
 				}
 				numWeapons++;
-				Events.createAttackButton(k).appendTo(btns);
+				Events.createAttackButton(k).appendTo(attackBtns);
 			}
 		}
 		if(numWeapons === 0) {
 			// No weapons? You can punch stuff!
-			Events.createAttackButton('fists').prependTo(btns);
+			Events.createAttackButton('fists').prependTo(attackBtns);
 		}
+		$('<div>').addClass('clear').appendTo(attackBtns);
 
-		Events.createEatMeatButton().appendTo(btns);
+		var healBtns = $('<div>').appendTo(btns).attr('id','healButtons');
+		Events.createEatMeatButton().appendTo(healBtns);
 		if((Path.outfit['medicine'] || 0) !== 0) {
-			Events.createUseMedsButton().appendTo(btns);
+			Events.createUseMedsButton().appendTo(healBtns);
 		}
+		$('<div>').addClass('clear').appendTo(healBtns);
+		Events.setHeal(healBtns);
 
 		// Set up the enemy attack timer
 		Events._enemyAttackTimer = Engine.setTimeout(Events.enemyAttack, scene.attackDelay * 1000);
@@ -201,52 +206,48 @@ var Events = {
 		});
 	},
 
-	eatMeat: function() {
-		if(Path.outfit['cured meat'] > 0) {
-			Path.outfit['cured meat']--;
+	setHeal: function(healBtns) {
+		if(!healBtns){
+			healBtns = $('#healButtons');
+		}
+		healBtns = healBtns.children('.button');
+		var canHeal = (World.health < World.getMaxHealth());
+		healBtns.each(function(i){
+			Button.setDisabled($(this), !canHeal);
+		});
+		return canHeal;
+	},
+
+	doHeal: function(healing, cured, btn) {
+		if(Path.outfit[healing] > 0) {
+			Path.outfit[healing]--;
 			World.updateSupplies();
-			if(Path.outfit['cured meat'] === 0) {
-				Button.setDisabled($('#eat'), true);
+			if(Path.outfit[healing] === 0) {
+				Button.setDisabled(btn, true);
 			}
 
-			var hp = World.health;
-			hp += World.meatHeal();
-			hp = hp > World.getMaxHealth() ? World.getMaxHealth() : hp;
+			var hp = World.health + cured;
+			hp = Math.min(World.getMaxHealth(),hp);
 			World.setHp(hp);
+			Events.setHeal();
 
 			if(Events.activeEvent()) {
 				var w = $('#wanderer');
 				w.data('hp', hp);
 				Events.updateFighterDiv(w);
-				Events.drawFloatText('+' + World.meatHeal(), '#wanderer .hp');
+				Events.drawFloatText('+' + cured, '#wanderer .hp');
 				var takeETbutton = Events.setTakeAll();
 				Events.canLeave(takeETbutton);
 			}
 		}
 	},
 
-	useMeds: function() {
-		if(Path.outfit['medicine'] > 0) {
-			Path.outfit['medicine']--;
-			World.updateSupplies();
-			if(Path.outfit['medicine'] === 0) {
-				Button.setDisabled($('#meds'), true);
-			}
+	eatMeat: function(btn) {
+		Events.doHeal('cured meat', World.meatHeal(), btn);
+	},
 
-			var hp = World.health;
-			hp += World.medsHeal();
-			hp = hp > World.getMaxHealth() ? World.getMaxHealth() : hp;
-			World.setHp(hp);
-
-			if(Events.activeEvent()) {
-				var w = $('#wanderer');
-				w.data('hp', hp);
-				Events.updateFighterDiv(w);
-				Events.drawFloatText('+' + World.medsHeal(), '#wanderer .hp');
-				var takeETbutton = Events.setTakeAll();
-				Events.canLeave(takeETbutton);
-			}
-		}
+	useMeds: function(btn) {
+		Events.doHeal('medicine', World.medsHeal(), btn);
 	},
 
 	useWeapon: function(btn) {
@@ -330,6 +331,33 @@ var Events = {
 		}
 	},
 
+	damage: function(fighter, enemy, dmg) {
+		var enemyHp = enemy.data('hp');
+		var msg = "";
+		if(typeof dmg == 'number') {
+			if(dmg < 0) {
+				msg = _('miss');
+				dmg = 0;
+			} else {
+				msg = '-' + dmg;
+				enemyHp = ((enemyHp - dmg) < 0) ? 0 : (enemyHp - dmg);
+				enemy.data('hp', enemyHp);
+				if(fighter.attr('id') == 'enemy') {
+					World.setHp(enemyHp);
+					Events.setHeal();
+				}
+				Events.updateFighterDiv(enemy);
+			}
+		} else {
+			if(dmg == 'stun') {
+				msg = _('stunned');
+				enemy.data('stunned', Events.STUN_DURATION);
+			}
+		}
+
+		Events.drawFloatText(msg, $('.hp', enemy));
+	},
+
 	animateMelee: function(fighter, dmg, callback) {
 		var start, end, enemy;
 		if(fighter.attr('id') == 'wanderer') {
@@ -343,32 +371,8 @@ var Events = {
 		}
 
 		fighter.stop(true, true).animate(start, Events._FIGHT_SPEED, function() {
-			var enemyHp = enemy.data('hp');
-			var msg = "";
-			if(typeof dmg == 'number') {
-				if(dmg < 0) {
-					msg = _('miss');
-					dmg = 0;
-				} else {
-					msg = '-' + dmg;
-					enemyHp = ((enemyHp - dmg) < 0) ? 0 : (enemyHp - dmg);
-					enemy.data('hp', enemyHp);
-					if(fighter.attr('id') == 'enemy') {
-						World.setHp(enemyHp);
-					}
-					Events.updateFighterDiv(enemy);
-				}
-			} else {
-				if(dmg == 'stun') {
-					msg = _('stunned');
-					enemy.data('stunned', true);
-					Engine.setTimeout(function() {
-						enemy.data('stunned', false);
-					}, Events.STUN_DURATION);
-				}
-			}
 
-			Events.drawFloatText(msg, $('.hp', enemy));
+			Events.damage(fighter, enemy, dmg);
 
 			$(this).animate(end, Events._FIGHT_SPEED, callback);
 		});
@@ -387,33 +391,9 @@ var Events = {
 		}
 
 		$('<div>').css(start).addClass('bullet').text('o').appendTo('#description')
-				.animate(end, Events._FIGHT_SPEED * 2, 'linear', function() {
-			var enemyHp = enemy.data('hp');
-			var msg = "";
-			if(typeof dmg == 'number') {
-				if(dmg < 0) {
-					msg = _('miss');
-					dmg = 0;
-				} else {
-					msg = '-' + dmg;
-					enemyHp = ((enemyHp - dmg) < 0) ? 0 : (enemyHp - dmg);
-					enemy.data('hp', enemyHp);
-					if(fighter.attr('id') == 'enemy') {
-						World.setHp(enemyHp);
-					}
-					Events.updateFighterDiv(enemy);
-				}
-			} else {
-				if(dmg == 'stun') {
-					msg = _('stunned');
-					enemy.data('stunned', true);
-					Engine.setTimeout(function() {
-						enemy.data('stunned', false);
-					}, Events.STUN_DURATION);
-				}
-			}
+			.animate(end, Events._FIGHT_SPEED * 2, 'linear', function() {
 
-			Events.drawFloatText(msg, $('.hp', enemy));
+			Events.damage(fighter, enemy, dmg);
 
 			$(this).remove();
 			if(typeof callback == 'function') {
@@ -465,6 +445,7 @@ var Events = {
 
 					var takeETbtn = Events.drawLoot(scene.loot);
 
+					var exitBtns = $('<div>').appendTo(btns).attr('id','exitButtons');
 					if(scene.buttons) {
 						// Draw the buttons
 						leaveBtn = Events.drawButtons(scene);
@@ -481,13 +462,18 @@ var Events = {
 							},
 							text: _('leave')
 						});
-						Button.cooldown(leaveBtn.appendTo(btns));
+						Button.cooldown(leaveBtn.appendTo(exitBtns));
 
-						Events.createEatMeatButton(0).appendTo(btns);
+						var healBtns = $('<div>').appendTo(btns).attr('id','healButtons');
+						Events.createEatMeatButton(0).appendTo(healBtns);
 						if((Path.outfit['medicine'] || 0) !== 0) {
-							Events.createUseMedsButton(0).appendTo(btns);
+							Events.createUseMedsButton(0).appendTo(healBtns);
 						}
+						$('<div>').addClass('clear').appendTo(healBtns);
+						Events.setHeal(healBtns);
 					}
+					$('<div>').addClass('clear').appendTo(exitBtns);
+
 					Events.allowLeave(takeETbtn, leaveBtn);
 				} catch(e) {
 					// It is possible to die and win if the timing is perfect. Just let it fail.
@@ -771,13 +757,16 @@ var Events = {
 		}
 
 		// Draw the buttons
+		var exitBtns = $('<div>').attr('id','exitButtons').appendTo($('#buttons', Events.eventPanel()));
 		leaveBtn = Events.drawButtons(scene);
+		$('<div>').addClass('clear').appendTo(exitBtns);
+
 
 		Events.allowLeave(takeETbtn, leaveBtn);
 	},
 
 	drawButtons: function(scene) {
-		var btns = $('#buttons', Events.eventPanel());
+		var btns = $('#exitButtons', Events.eventPanel());
 		var btnsList = [];
 		for(var id in scene.buttons) {
 			var info = scene.buttons[id];
