@@ -83,7 +83,7 @@ var Events = {
 		var pause = new Button.Button({
 			id: 'pause',
 			text: '',
-			cooldown: Events._LEAVE_COOLDOWN,
+			cooldown: Events._PAUSE_COOLDOWN,
 			click: Events.togglePause
 		}).appendTo(pauseBox);
 		$('<span>').addClass('text').insertBefore(pause.children('.cooldown'));
@@ -175,11 +175,10 @@ var Events = {
 		}
 		switch(state){
 			case 'set':
+				Button.cooldown(btn, Events._LEAVE_COOLDOWN);
 				log = 'started';
-				time = btn.data('cooldown') * 1000;
+				time = Events._LEAVE_COOLDOWN * 1000;
 				target = $();
-				Button.cooldown(btn);
-				btn.data('cooldown',Events._PAUSE_COOLDOWN);
 				break;
 			case 'end':
 				Button.setDisabled(btn, true);
