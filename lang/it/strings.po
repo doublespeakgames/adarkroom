@@ -186,7 +186,7 @@ msgstr "sentinella"
 
 #: script/engine.js:58
 msgid "see farther"
-msgstr "il raggio visivo si estende"
+msgstr "la visuale si estende"
 
 #: script/engine.js:59
 msgid "learned to look ahead"
