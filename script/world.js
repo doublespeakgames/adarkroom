@@ -163,7 +163,7 @@ var World = {
 		Room.compassTooltip(World.dir);
 
 		// Check if everything has been seen
-		World.seenAll = World.testMap();
+		World.testMap();
 
 		//subscribe to stateUpdates
 		$.Dispatch('stateUpdate').subscribe(World.handleStateUpdates);
@@ -621,8 +621,8 @@ var World = {
 	},
 
 	testMap: function() {
-		var dark; 
 		if(!World.seenAll) {
+			var dark; 
 			var mask = $SM.get('game.world.mask');
 			loop:
 			for(var i = 0; i < mask.length; i++) {
@@ -633,8 +633,8 @@ var World = {
 					}
 				}
 			}
+			World.seenAll = !dark;
 		}
-		return !dark;
 	},
 
 	applyMap: function() {
@@ -646,6 +646,7 @@ var World = {
 			} while (mask[x][y]);
 			World.uncoverMap(x, y, 5, mask);
 		}
+		World.testMap();
 	},
 
 	generateMap: function() {
@@ -897,7 +898,7 @@ var World = {
 	goHome: function() {
 		// Home safe! Commit the changes.
 		$SM.setM('game.world', World.state);
-		World.seenAll = World.testMap();
+		World.testMap();
 
 		if(World.state.sulphurmine && $SM.get('game.buildings["sulphur mine"]', true) === 0) {
 			$SM.add('game.buildings["sulphur mine"]', 1);
