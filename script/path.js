@@ -161,15 +161,15 @@ var Path = {
 		var currentBagCapacity = 0;
 		// Add the non-craftables to the craftables
 		var carryable = $.extend({
-			'cured meat': { type: 'tool' },
-			'bullets': { type: 'tool' },
+			'cured meat': { type: 'tool', desc: 'healing: '+ World.MEAT_HEAL },
+			'bullets': { type: 'tool', desc: 'used with rifle' },
 			'grenade': {type: 'weapon' },
 			'bolas': {type: 'weapon' },
 			'laser rifle': {type: 'weapon' },
-			'energy cell': {type: 'tool' },
+			'energy cell': {type: 'tool', desc: 'used with laser rifle' },
 			'bayonet': {type: 'weapon' },
 			'charm': {type: 'tool'},
-			'medicine': {type: 'tool'}
+			'medicine': {type: 'tool', desc: 'healing: ' + World.MEDS_HEAL}
 		}, Room.Craftables);
 		
 		for(var k in carryable) {
@@ -259,6 +259,8 @@ var Path = {
 		if(store.type == 'weapon') {
 			$('<div>').addClass('row_key').text(_('damage')).appendTo(tt);
 			$('<div>').addClass('row_val').text(World.getDamage(key)).appendTo(tt);
+		} else if(store.type == 'tool' && store.desc != "undefined") {
+			$('<div>').addClass('row_key').text(store.desc).appendTo(tt);
 		}
 
 		$('<div>').addClass('row_key').text(_('weight')).appendTo(tt);
