@@ -157,9 +157,8 @@ var Path = {
 			$('.row_val', wRow).text(World.getMaxWater());
 		}
 		
-		
 		var space = Path.getFreeSpace();
-		var total = 0;
+		var currentBagCapacity = 0;
 		// Add the non-craftables to the craftables
 		var carryable = $.extend({
 			'cured meat': { type: 'tool' },
@@ -183,7 +182,7 @@ var Path = {
 			var numAvailable = $SM.get('stores["'+k+'"]', true);
 			var row = $('div#outfit_row_' + k.replace(' ', '-'), outfit);
 			if((store.type == 'tool' || store.type == 'weapon') && have > 0) {
-				total += num * Path.getWeight(k);
+				currentBagCapacity += num * Path.getWeight(k);
 				if(row.length === 0) {
 					row = Path.createOutfittingRow(k, num, store, store.name);
 					
@@ -224,15 +223,21 @@ var Path = {
 				row.remove();
 			}
 		}
-		
+
+		Path.updateBagSpace(currentBagCapacity);
+
+	},
+
+	updateBagSpace: function(currentBagCapacity) {
 		// Update bagspace
-		$('#bagspace').text(_('free {0}/{1}', Math.floor(Path.getCapacity() - total) , Path.getCapacity()));
-		
+		$('#bagspace').text(_('free {0}/{1}', Math.floor(Path.getCapacity() - currentBagCapacity) , Path.getCapacity()));
+
 		if(Path.outfit['cured meat'] > 0) {
 			Button.setDisabled($('#embarkButton'), false);
 		} else {
 			Button.setDisabled($('#embarkButton'), true);
 		}
+
 	},
 	
 	createOutfittingRow: function(key, num, store) {
