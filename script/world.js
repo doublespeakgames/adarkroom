@@ -549,6 +549,10 @@ var World = {
 		return World.state.map[World.curPos[0]][World.curPos[1]];
 	},
 
+	getDamage: function(thing) {
+		return World.Weapons[thing].damage;
+	},
+
 	narrateMove: function(oldTile, newTile) {
 		var msg = null;
 		switch(oldTile) {

@@ -185,7 +185,7 @@ var Path = {
 			if((store.type == 'tool' || store.type == 'weapon') && have > 0) {
 				total += num * Path.getWeight(k);
 				if(row.length === 0) {
-					row = Path.createOutfittingRow(k, num, store.name);
+					row = Path.createOutfittingRow(k, num, store, store.name);
 					
 					var curPrev = null;
 					outfit.children().each(function(i) {
@@ -235,10 +235,10 @@ var Path = {
 		}
 	},
 	
-	createOutfittingRow: function(key, num, name) {
-		if(!name) name = _(key);
+	createOutfittingRow: function(key, num, store) {
+		if(!store.name) store.name = _(key);
 		var row = $('<div>').attr('id', 'outfit_row_' + key.replace(' ', '-')).addClass('outfitRow').attr('key',key);
-		$('<div>').addClass('row_key').text(name).appendTo(row);
+		$('<div>').addClass('row_key').text(store.name).appendTo(row);
 		var val = $('<div>').addClass('row_val').appendTo(row);
 		
 		$('<span>').text(num).appendTo(val);
@@ -250,6 +250,12 @@ var Path = {
 		
 		var numAvailable = $SM.get('stores["'+key+'"]', true);
 		var tt = $('<div>').addClass('tooltip bottom right').appendTo(row);
+
+		if(store.type == 'weapon') {
+			$('<div>').addClass('row_key').text(_('damage')).appendTo(tt);
+			$('<div>').addClass('row_val').text(World.getDamage(key)).appendTo(tt);
+		}
+
 		$('<div>').addClass('row_key').text(_('weight')).appendTo(tt);
 		$('<div>').addClass('row_val').text(Path.getWeight(key)).appendTo(tt);
 		$('<div>').addClass('row_key').text(_('available')).appendTo(tt);
