@@ -13,6 +13,7 @@
 	letter-spacing: 1px;
 	color: #999;
 	cursor: default;
+	white-space: nowrap;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;

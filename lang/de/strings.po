@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-08-18 21:53+0200\n"
-"PO-Revision-Date: 2015-08-18 22:09+0200\n"
+"POT-Creation-Date: 2016-02-15 02:03+0100\n"
+"PO-Revision-Date: 2016-02-15 02:03+0100\n"
 "Last-Translator: Bernd Dorer <bdorer@mailbox.org>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 1.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.7.6\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -35,7 +35,7 @@ msgid "connect"
 msgstr "verbinden"
 
 #: script/dropbox.js:75 script/dropbox.js:107 script/dropbox.js:133
-#: script/dropbox.js:163 script/engine.js:285 script/engine.js:330
+#: script/dropbox.js:163 script/engine.js:285 script/engine.js:331
 msgid "cancel"
 msgstr "abbrechen"
 
@@ -100,7 +100,6 @@ msgid "punches do more damage"
 msgstr "faustschläge verursachen mehr schaden"
 
 # more force
-#. TRANSLATORS : means with more force.
 #: script/engine.js:18
 msgid "learned to throw punches with purpose"
 msgstr "gelernt kraftvolle schläge auszuteilen"
@@ -118,7 +117,6 @@ msgid "learned to fight quite effectively without weapons"
 msgstr "gelernt effizienter ohne Waffen zu kämpfen"
 
 # unarmed master = master of unarmed combat.
-#. TRANSLATORS : master of unarmed combat
 #: script/engine.js:27
 msgid "unarmed master"
 msgstr "nahkampfmeister"
@@ -228,33 +226,33 @@ msgstr "erlange mehr gesundheit durch nahrung"
 msgid "learned to make the most of food"
 msgstr "gelernt besser mit essen aus zu kommen"
 
-#: script/engine.js:138 script/engine.js:483
+#: script/engine.js:138 script/space.js:450
+msgid "app store."
+msgstr "app store."
+
+#: script/engine.js:144 script/engine.js:485
 msgid "lights off."
 msgstr "licht aus."
 
-#: script/engine.js:144 script/engine.js:493
+#: script/engine.js:150 script/engine.js:521
 msgid "hyper."
 msgstr "hyper."
 
-#: script/engine.js:150 script/space.js:442
+#: script/engine.js:156 script/space.js:442
 msgid "restart."
 msgstr "neu starten."
 
-#: script/engine.js:156
+#: script/engine.js:162
 msgid "share."
 msgstr "teilen."
 
-#: script/engine.js:162
+#: script/engine.js:168
 msgid "save."
 msgstr "speichern."
 
-#: script/engine.js:171
+#: script/engine.js:177
 msgid "dropbox."
 msgstr "dropbox."
-
-#: script/engine.js:178
-msgid "app store."
-msgstr "app store."
 
 #: script/engine.js:184
 msgid "github."
@@ -276,7 +274,7 @@ msgstr "oder zum wechseln von computern"
 msgid "export"
 msgstr "export"
 
-#: script/engine.js:281 script/engine.js:325
+#: script/engine.js:281 script/engine.js:326
 msgid "import"
 msgstr "import"
 
@@ -284,79 +282,88 @@ msgstr "import"
 msgid "save this."
 msgstr "speichere das."
 
-#: script/engine.js:296
+#: script/engine.js:297
 msgid "got it"
 msgstr "habe verstanden"
 
-#: script/engine.js:304
+#: script/engine.js:305
 msgid "are you sure?"
 msgstr "bist du sicher?"
 
-#: script/engine.js:305
+#: script/engine.js:306
 msgid "if the code is invalid, all data will be lost."
 msgstr "wenn der code nicht stimmt, werden alle informationen verloren gehen."
 
-#: script/engine.js:306
+#: script/engine.js:307
 msgid "this is irreversible."
 msgstr "dies ist nicht umkehrbar."
 
-#: script/engine.js:310 script/engine.js:378
+#: script/engine.js:311 script/engine.js:380 script/engine.js:499
 msgid "yes"
 msgstr "ja"
 
-#: script/engine.js:315 script/engine.js:383
+#: script/engine.js:316 script/engine.js:385 script/engine.js:504
 msgid "no"
 msgstr "nein"
 
-#: script/engine.js:321
+#: script/engine.js:322
 msgid "put the save code here."
 msgstr "lege den speichercode hier ab."
 
-#: script/engine.js:372
+#: script/engine.js:374
 msgid "Restart?"
 msgstr "neu starten?"
 
-#: script/engine.js:375
+#: script/engine.js:377
 msgid "restart the game?"
 msgstr "das spiel neu starten?"
 
-#: script/engine.js:406
+#: script/engine.js:408
 msgid "Share"
 msgstr "Teilen"
 
-#: script/engine.js:409
+#: script/engine.js:411
 msgid "bring your friends."
 msgstr "bringe deine freunde mit."
 
-#: script/engine.js:412
+#: script/engine.js:414
 msgid "facebook"
 msgstr "facebook"
 
-#: script/engine.js:419
+#: script/engine.js:421
 msgid "google+"
 msgstr "google+"
 
-#: script/engine.js:426
+#: script/engine.js:428
 msgid "twitter"
 msgstr "twitter"
 
-#: script/engine.js:433
+#: script/engine.js:435
 msgid "reddit"
 msgstr "reddit"
 
-#: script/engine.js:440
+#: script/engine.js:442
 msgid "close"
 msgstr "schließen"
 
-#: script/engine.js:474 script/engine.js:478
+#: script/engine.js:476 script/engine.js:480
 msgid "lights on."
 msgstr "licht an."
 
-#: script/engine.js:491
+#: script/engine.js:493
+msgid "Go Hyper?"
+msgstr ""
+
+#: script/engine.js:496
+msgid ""
+"turning hyper mode speeds up the game to x2 speed. do you want to do that?"
+msgstr ""
+
+#: script/engine.js:519
 msgid "classic."
 msgstr "Klassisch."
 
-#: script/engine.js:592
+#: script/engine.js:620
 msgid "{0} per {1}s"
 msgstr "{0} per {1}s"
 
@@ -421,7 +428,6 @@ msgstr "Alle"
 msgid "take everything"
 msgstr "nimm alles"
 
-#. TRANSLATORS : Mind the whitespaces at the beginning and end.
 #: script/events.js:653 script/outside.js:627
 msgid " and "
 msgstr " und "
@@ -912,12 +918,13 @@ msgid "the old compass is dented and dusty, but it looks to work."
 msgstr ""
 "der alte kompass ist verbeult und rostig aber er scheint zu funktionieren."
 
-#: script/events/room.js:45 script/events/room.js:227 script/events/room.js:240
-#: script/events/room.js:253 script/events/room.js:309
-#: script/events/room.js:332 script/events/room.js:388
-#: script/events/room.js:411 script/events/room.js:450
-#: script/events/room.js:568 script/events/room.js:584
-#: script/events/room.js:600 script/events/room.js:611
+#: script/events/room.js:45 script/events/room.js:227
+#: script/events/room.js:240 script/events/room.js:253
+#: script/events/room.js:309 script/events/room.js:332
+#: script/events/room.js:388 script/events/room.js:411
+#: script/events/room.js:450 script/events/room.js:568
+#: script/events/room.js:584 script/events/room.js:600
+#: script/events/room.js:611
 msgid "say goodbye"
 msgstr "verabschiede dich"
 
@@ -1372,7 +1379,6 @@ msgid "rot's been to work on it, and some of the pieces are missing."
 msgstr "verwesung hat eingesetzt. einige teile fehlen."
 
 # 'it' is a wanderer corpse
-#. TRANSLATORS : 'it' is a rotting wanderer's body
 #: script/events/setpieces.js:202
 msgid "can't tell what left it here."
 msgstr "schwer zu sagen was ihn hier zurückgelassen hat."
@@ -1771,7 +1777,6 @@ msgid "looks like a camp of sorts up ahead."
 msgstr "sieht dort vorn nach einer art lager aus."
 
 # a chainlink fence
-#. TRANSLATORS : chainlink is a type of metal fence.
 #: script/events/setpieces.js:1677
 msgid "rusted chainlink is pulled across an alleyway."
 msgstr "rostiger drahtzaun liegt in der gasse."
@@ -1797,7 +1802,6 @@ msgid "the street ahead glows with firelight."
 msgstr "die straßen glühen rot im feuer."
 
 # define squatter
-#. TRANSLATORS : squatters occupy abandoned dwellings they don't own.
 #: script/events/setpieces.js:1729
 msgid "more squatters are crowding around now."
 msgstr "mehr hausbesetzer sammeln sich jetzt."
@@ -1909,7 +1913,6 @@ msgid "scavengers must have gotten to this place already."
 msgstr "plünderer waren wohl schon hier."
 
 # part of the subway?
-#. TRANSLATORS : a platform in the subway
 #: script/events/setpieces.js:2403
 msgid "the tunnel opens up at another platform."
 msgstr "der tunnel öffnet sich an einer anderen haltestelle."
@@ -2029,7 +2032,6 @@ msgid "inside, the remains of its victims are everywhere."
 msgstr "innen liegen die überreste seiner opfer verstreut."
 
 # extremly disfigured
-#. TRANSLATORS : warped means extremely disfigured.
 #: script/events/setpieces.js:2845
 msgid "the warped man lies dead."
 msgstr "der entstellte mann liegt tot am boden."
@@ -2271,7 +2273,6 @@ msgid "charred bodies litter the ground."
 msgstr "verkohlte leichen bedecken den boden."
 
 # afterburner: a engine
-#. TRANSLATORS : tang = strong metallic smell, wanderer afterburner = ship's engines
 #: script/events/setpieces.js:3532
 msgid "the metallic tang of wanderer afterburner hangs in the air."
 msgstr "der metallische geruch eines wanderer-nachbrenners hängt in der luft."
@@ -2591,7 +2592,6 @@ msgid "the town's booming. word does get around."
 msgstr "die stadt wächst. gerüchte verbreiten sich doch."
 
 # short for population.
-#. TRANSLATORS : pop is short for population.
 #: script/outside.js:452
 msgid "pop "
 msgstr "volk "
@@ -2636,7 +2636,6 @@ msgstr "der himmel ist grau und der wind heult erbarmungslos"
 msgid "dry brush and dead branches litter the forest floor"
 msgstr "trockenes gestrüpp und herabgefallene äste bedecken den waldboden"
 
-#. TRANSLATORS : Mind the whitespace at the end.
 #: script/outside.js:621
 msgid "the traps contain "
 msgstr "die fallen beinhalten "

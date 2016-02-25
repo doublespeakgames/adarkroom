@@ -245,7 +245,7 @@ div.button:hover {
 	text-decoration: underline;
 }
 
-div.button.disabled, div.button.disabled:hover {
+.tooltip.disabled, .tooltip > .disabled, div.button.disabled, div.button.disabled:hover, #event.paused  > #buttons .button {
 	cursor: default;
 	border-color: #b2b2b2;
 	color: #b2b2b2;
@@ -370,8 +370,7 @@ div.button div.tooltip {
 }
 
 /* Tooltip */
-
-div.tooltip {
+.tooltip {
 	display: none;
 	padding: 2px 5px;
 	border: 1px solid black;
@@ -394,23 +393,33 @@ div.tooltip {
 }
 
 .tooltip.top {
-	bottom: 20px;
+	bottom: 30px;
 }
 
-*:hover > div.tooltip {
+*:hover > .tooltip {
 	display: block;
 }
 
-div.tooltip:hover {
+.tooltip:hover {
 	display: none !important;
 }
 
-.disabled:hover > div.tooltip, .button.free:hover > div.tooltip {
+.disabled:hover > .tooltip, .button.free:hover > .tooltip {
 	display: none;
 }
 
-#event .button.disabled:hover > div.tooltip {
+#event .button.disabled:hover > .tooltip {
 	display: block;
+}
+
+#pauseButton {
+	text-align:center;
+	margin: 0 0 1.2em;
+}
+
+#pauseButton > .button {
+	float: none;
+	margin: 0 auto;
 }
 
 /* Events */
@@ -520,8 +529,11 @@ body.noMask #description {
 	float: none;
 }
 
-#buttons > .button {
+#buttons .button {
 	margin: 0 5px 5px;
+}
+
+#buttons .button, #pauseButton {
 	margin-right: 15px;
 }
 
@@ -568,7 +580,7 @@ body.noMask #description {
 }
 
 #lootButtons:before {
-	content: "take:";
+	content: attr(data-legend);
 	position: absolute;
 	top: -25px;
 	left: 0px;
@@ -586,7 +598,7 @@ body.noMask #description {
 }
 
 #dropMenu:before {
-	content: "drop:";
+	content: attr(data-legend);
 	border-bottom: 1px solid black;
 	display: block;
 	margin-bottom: 5px;

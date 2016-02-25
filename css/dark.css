@@ -117,7 +117,7 @@ div.button {
 	border: 1px solid #EEE;
 }
 
-div.button.disabled, div.button.disabled:hover {
+.tooltip.disabled, .tooltip > .disabled, div.button.disabled, div.button.disabled:hover, #event.paused  > #buttons .button {
 	border-color: #444;
 	color: #444;
 }
