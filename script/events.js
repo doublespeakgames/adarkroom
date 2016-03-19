@@ -519,6 +519,7 @@ var Events = {
 					}
 			});
 		}
+    },
 
 	endFight: function() {
 		Events.fought = true;
