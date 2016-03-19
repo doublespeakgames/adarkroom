@@ -72,10 +72,23 @@ var Events = {
 
 	startCombat: function(scene) {
 		Engine.event('game event', 'combat');
-		Events.won = false;
+		Events.fought = false;
 		var desc = $('#description', Events.eventPanel());
 
 		$('<div>').text(scene.notification).appendTo(desc);
+
+		// Draw pause button
+		var pauseBox = $('<div>').attr('id', 'pauseButton').appendTo(desc);
+		var pause = new Button.Button({
+			id: 'pause',
+			text: '',
+			cooldown: Events._PAUSE_COOLDOWN,
+			click: Events.togglePause
+		}).appendTo(pauseBox);
+		$('<span>').addClass('text').insertBefore(pause.children('.cooldown'));
+		$('<div>').addClass('clear').appendTo(pauseBox);
+		Events.setPause(pause, 'set');
+		Events.removePause(pause, 'set');
 
 		var fightBox = $('<div>').attr('id', 'fight').appendTo(desc);
 		// Draw the wanderer
@@ -122,7 +135,87 @@ var Events = {
 		Events.setHeal(healBtns);
 
 		// Set up the enemy attack timer
-		Events._enemyAttackTimer = Engine.setTimeout(Events.enemyAttack, scene.attackDelay * 1000);
+		Events._enemyAttackTimer = Engine.setInterval(Events.enemyAttack, scene.attackDelay * 1000);
+	},
+
+	setPause: function(btn, state){
+		if(!btn) {
+			btn = $('#pause');
+		}
+		var event = btn.closest('#event');
+		var string, log;
+		if(state == 'set') {
+			string = 'start.';
+			log = 'loaded';
+		} else {
+			string = 'resume.';
+			log = 'paused';
+		}
+		btn.children('.text').first().text( _(string) )
+		Events.paused = (state == 'auto') ? 'auto' : true;
+		event.addClass('paused');
+		Button.clearCooldown(btn);
+		$('#buttons').find('.button').each(function(i){
+			if($(this).data('onCooldown')){
+				$(this).children('.cooldown').stop(true,false);
+			}
+		});
+		Engine.log('fight '+ log +'.');
+	},
+
+	removePause: function(btn, state){
+		if(!btn) {
+			btn = $('#pause');
+		}
+		var event = btn.closest('#event');
+		var log, time, target;
+		if(state == 'auto' && Events.paused != 'auto') {
+			return;
+		}
+		switch(state){
+			case 'set':
+				Button.cooldown(btn, Events._LEAVE_COOLDOWN);
+				log = 'started';
+				time = Events._LEAVE_COOLDOWN * 1000;
+				target = $();
+				break;
+			case 'end':
+				Button.setDisabled(btn, true);
+				log = 'ended';
+				time = Events._FIGHT_SPEED;
+				target = $();
+				break;
+			case 'auto':
+				Button.cooldown(btn);
+			default:
+				log = 'resumed';
+				time = Events._PAUSE_COOLDOWN * 1000;
+				target = $('#buttons').find('.button');
+				break;
+		}
+		Engine.setTimeout(function(){
+			btn.children('.text').first().text( _('pause.') );
+			Events.paused = false;
+			event.removeClass('paused');
+			target.each(function(i){
+				if($(this).data('onCooldown')){
+					Button.cooldown($(this), 'pause');
+				}
+			});
+			Engine.log('Event '+ log);
+		}, time);
+	},
+
+	togglePause: function(btn, auto){
+		if(!btn) {
+			btn = $('#pause');
+		}
+		if((auto) && (document.hasFocus() == !Events.paused)) {
+			return;
+		}
+		var f = (Events.paused) ? Events.removePause : Events.setPause;
+		var state = (auto) ? 'auto' : false;
+		f(btn, state);
 	},
 
 	createEatMeatButton: function(cooldown) {
@@ -403,6 +496,7 @@ var Events = {
 	},
 
 	enemyAttack: function() {
+		Events.togglePause($('#pause'),'auto');
 
 		var scene = Events.activeEvent().scenes[Events.activeScene];
 
@@ -426,15 +520,20 @@ var Events = {
 			});
 		}
 
-		Events._enemyAttackTimer = Engine.setTimeout(Events.enemyAttack, scene.attackDelay * 1000);
+	endFight: function() {
+		Events.fought = true;
+		clearTimeout(Events._enemyAttackTimer);
+		Events.removePause($('#pause'), 'end');
 	},
 
 	winFight: function() {
-		Events.won = true;
-		clearTimeout(Events._enemyAttackTimer);
-		$('#enemy').animate({opacity: 0}, 300, 'linear', function() {
-			Engine.setTimeout(function() {
-				try {
+		Engine.setTimeout(function() {
+			if(Events.fought) {
+				return;
+			}
+			Events.endFight();
+			$('#enemy').animate({opacity: 0}, 300, 'linear', function() {
+				Engine.setTimeout(function() {
 					var scene = Events.activeEvent().scenes[Events.activeScene];
 					var leaveBtn = false;
 					var desc = $('#description', Events.eventPanel());
@@ -475,11 +574,15 @@ var Events = {
 					$('<div>').addClass('clear').appendTo(exitBtns);
 
 					Events.allowLeave(takeETbtn, leaveBtn);
-				} catch(e) {
-					// It is possible to die and win if the timing is perfect. Just let it fail.
-				}
-			}, 1000, true);
-		});
+				}, 1000, true);
+			});
+		}, Events._FIGHT_SPEED);
+	},
+
+	loseFight: function(){
+		Events.endFight();
+		Events.endEvent();
+		World.die();
 	},
 
 	drawDrop:function(btn) {
@@ -590,7 +693,9 @@ var Events = {
 	},
 
 	setTakeAll: function(lootButtons){
-		var lootButtons = lootButtons || $('#lootButtons');
+		if(!lootButtons) {
+			lootButtons = $('#lootButtons');
+		}
 		var canTakeSomething = false;
 		var free = Path.getFreeSpace();
 		var takeETbutton = lootButtons.find('#loot_takeEverything');
@@ -614,11 +719,7 @@ var Events = {
 				takeAll.children('span').first().text(_('all'));
 			}
 		});
-		if(canTakeSomething){
-			takeETbutton.removeClass('disabled');
-		} else {
-			takeETbutton.addClass('disabled');
-		}
+		Button.setDisabled(takeETbutton, !canTakeSomething);
 		takeETbutton.data('canTakeEverything', (free >= 0) ? true : false);
 		return takeETbutton;
 	},
@@ -633,18 +734,16 @@ var Events = {
 	},
 
 	canLeave: function(btn){
-		var basetext = _('take everything');
+		var basetext = (btn.data('canTakeEverything')) ? _('take everything') : _('take all you can');
 		var textbox = btn.children('span');
 		var takeAndLeave = (btn.data('leaveBtn')) ? btn.data('canTakeEverything') : false;
+		var text = _(basetext);
 		if(takeAndLeave){
-			var verb = btn.data('leaveBtn').text() || _('leave');
-			textbox.text( basetext + _(' and ') +  verb);
-			btn.data('canLeave', true);
 			Button.cooldown(btn);
-		} else {
-			textbox.text( basetext );
-			btn.data('canLeave', false)
+			text += _(' and ') + btn.data('leaveBtn').text();
 		}
+		textbox.text( text );
+		btn.data('canLeave', takeAndLeave);
 	},
 
 	dropStuff: function(e) {
