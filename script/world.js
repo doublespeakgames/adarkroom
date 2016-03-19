@@ -162,6 +162,9 @@ var World = {
 		// compass tooltip text
 		Room.compassTooltip(World.dir);
 
+		// Check if everything has been seen
+		World.testMap();
+
 		//subscribe to stateUpdates
 		$.Dispatch('stateUpdate').subscribe(World.handleStateUpdates);
 	},
@@ -617,10 +620,33 @@ var World = {
 		}
 	},
 
+	testMap: function() {
+		if(!World.seenAll) {
+			var dark; 
+			var mask = $SM.get('game.world.mask');
+			loop:
+			for(var i = 0; i < mask.length; i++) {
+				for(var j = 0; j < mask[i].length; j++) {
+					if(!mask[i][j]) {
+						dark = true;
+						break loop;
+					}
+				}
+			}
+			World.seenAll = !dark;
+		}
+	},
+
 	applyMap: function() {
-		var x = Math.floor(Math.random() * (World.RADIUS * 2) + 1);
-		var y = Math.floor(Math.random() * (World.RADIUS * 2) + 1);
-		World.uncoverMap(x, y, 5, $SM.get('game.world.mask'));
+		if(!World.seenAll){
+			var x,y,mask = $SM.get('game.world.mask');
+			do {
+				x = Math.floor(Math.random() * (World.RADIUS * 2) + 1);
+				y = Math.floor(Math.random() * (World.RADIUS * 2) + 1);
+			} while (mask[x][y]);
+			World.uncoverMap(x, y, 5, mask);
+		}
+		World.testMap();
 	},
 
 	generateMap: function() {
@@ -873,6 +899,8 @@ var World = {
 	goHome: function() {
 		// Home safe! Commit the changes.
 		$SM.setM('game.world', World.state);
+		World.testMap();
+
 		if(World.state.sulphurmine && $SM.get('game.buildings["sulphur mine"]', true) === 0) {
 			$SM.add('game.buildings["sulphur mine"]', 1);
 			Engine.event('progress', 'sulphur mine');
