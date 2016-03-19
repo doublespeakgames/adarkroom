@@ -157,20 +157,19 @@ var Path = {
 			$('.row_val', wRow).text(World.getMaxWater());
 		}
 		
-		
 		var space = Path.getFreeSpace();
-		var total = 0;
+		var currentBagCapacity = 0;
 		// Add the non-craftables to the craftables
 		var carryable = $.extend({
-			'cured meat': { type: 'tool' },
-			'bullets': { type: 'tool' },
+			'cured meat': { type: 'tool', desc: 'restores '+ World.MEAT_HEAL + ' hp' },
+			'bullets': { type: 'tool', desc: 'use with rifle' },
 			'grenade': {type: 'weapon' },
 			'bolas': {type: 'weapon' },
 			'laser rifle': {type: 'weapon' },
-			'energy cell': {type: 'tool' },
+			'energy cell': {type: 'tool', desc: 'use with laser rifle' },
 			'bayonet': {type: 'weapon' },
 			'charm': {type: 'tool'},
-			'medicine': {type: 'tool'}
+			'medicine': {type: 'tool', desc: 'restores ' + World.MEDS_HEAL + ' hp' }
 		}, Room.Craftables);
 		
 		for(var k in carryable) {
@@ -184,9 +183,9 @@ var Path = {
 
 			var row = $('div#outfit_row_' + k.replace(' ', '-'), outfit);
 			if((store.type == 'tool' || store.type == 'weapon') && have > 0) {
-				total += num * Path.getWeight(k);
+				currentBagCapacity += num * Path.getWeight(k);
 				if(row.length === 0) {
-					row = Path.createOutfittingRow(k, num, store.name);
+					row = Path.createOutfittingRow(k, num, store, store.name);
 					
 					var curPrev = null;
 					outfit.children().each(function(i) {
@@ -225,21 +224,27 @@ var Path = {
 				row.remove();
 			}
 		}
-		
+
+		Path.updateBagSpace(currentBagCapacity);
+
+	},
+
+	updateBagSpace: function(currentBagCapacity) {
 		// Update bagspace
-		$('#bagspace').text(_('free {0}/{1}', Math.floor(Path.getCapacity() - total) , Path.getCapacity()));
-		
+		$('#bagspace').text(_('free {0}/{1}', Math.floor(Path.getCapacity() - currentBagCapacity) , Path.getCapacity()));
+
 		if(Path.outfit['cured meat'] > 0) {
 			Button.setDisabled($('#embarkButton'), false);
 		} else {
 			Button.setDisabled($('#embarkButton'), true);
 		}
+
 	},
 	
-	createOutfittingRow: function(key, num, name) {
-		if(!name) name = _(key);
+	createOutfittingRow: function(key, num, store) {
+		if(!store.name) store.name = _(key);
 		var row = $('<div>').attr('id', 'outfit_row_' + key.replace(' ', '-')).addClass('outfitRow').attr('key',key);
-		$('<div>').addClass('row_key').text(name).appendTo(row);
+		$('<div>').addClass('row_key').text(store.name).appendTo(row);
 		var val = $('<div>').addClass('row_val').appendTo(row);
 		
 		$('<span>').text(num).appendTo(val);
@@ -251,6 +256,14 @@ var Path = {
 		
 		var numAvailable = $SM.get('stores["'+key+'"]', true);
 		var tt = $('<div>').addClass('tooltip bottom right').appendTo(row);
+
+		if(store.type == 'weapon') {
+			$('<div>').addClass('row_key').text(_('damage')).appendTo(tt);
+			$('<div>').addClass('row_val').text(World.getDamage(key)).appendTo(tt);
+		} else if(store.type == 'tool' && store.desc != "undefined") {
+			$('<div>').addClass('row_key').text(store.desc).appendTo(tt);
+		}
+
 		$('<div>').addClass('row_key').text(_('weight')).appendTo(tt);
 		$('<div>').addClass('row_val').text(Path.getWeight(key)).appendTo(tt);
 		$('<div>').addClass('row_key').text(_('available')).appendTo(tt);
