@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adarkroom\n"
 "POT-Creation-Date: 2015-02-07 14:15-0500\n"
-"PO-Revision-Date: 2015-05-09 01:38+0500\n"
-"Last-Translator: Dmitry Svechnikov <d.svechnikov@gmail.com>\n"
+"PO-Revision-Date: 2016-03-22 17:40+0300\n"
+"Last-Translator: Alexey Zaraysky <alexz@epicm.org>\n"
 "Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.6\n"
+"X-Generator: Poedit 1.8\n"
 "X-Poedit-KeywordsList: _\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
@@ -22,7 +22,7 @@ msgstr "Снаружи"
 
 #: ../../script/outside.js:13 ../../script/localization.js:41
 msgid "gatherer"
-msgstr "лесник"
+msgstr "сборщик"
 
 #: ../../script/outside.js:20 ../../script/localization.js:21
 msgid "hunter"
@@ -30,7 +30,7 @@ msgstr "охотник"
 
 #: ../../script/outside.js:28 ../../script/localization.js:22
 msgid "trapper"
-msgstr "ловушечник"
+msgstr "следопыт"
 
 #: ../../script/outside.js:36 ../../script/localization.js:23
 msgid "tanner"
@@ -42,15 +42,15 @@ msgstr "мясник"
 
 #: ../../script/outside.js:53 ../../script/localization.js:28
 msgid "iron miner"
-msgstr "добыватель железа"
+msgstr "шахтер железа"
 
 #: ../../script/outside.js:61 ../../script/localization.js:30
 msgid "coal miner"
-msgstr "добыватель угля"
+msgstr "шахтер угля"
 
 #: ../../script/outside.js:69 ../../script/localization.js:32
 msgid "sulphur miner"
-msgstr "спелеолог"
+msgstr "шахтер серы"
 
 #: ../../script/outside.js:77 ../../script/localization.js:35
 msgid "steelworker"
@@ -62,23 +62,23 @@ msgstr "оружейник"
 
 #: ../../script/outside.js:100
 msgid "scraps of fur"
-msgstr "обрывки меха"
+msgstr "клочья меха"
 
 #: ../../script/outside.js:105
 msgid "bits of meat"
-msgstr "куски мяса"
+msgstr "обрубки мяса"
 
 #: ../../script/outside.js:110
 msgid "strange scales"
-msgstr "странную чешую"
+msgstr "странная чешуя"
 
 #: ../../script/outside.js:115
 msgid "scattered teeth"
-msgstr "разбросанные зубы"
+msgstr "рассыпанные зубы"
 
 #: ../../script/outside.js:120
 msgid "tattered cloth"
-msgstr "рваную ткань"
+msgstr "рваное полотно"
 
 #: ../../script/outside.js:125
 msgid "a crudely made charm"
@@ -90,22 +90,23 @@ msgstr "Тихий лес"
 
 #: ../../script/outside.js:166
 msgid "gather wood"
-msgstr "собирать дрова"
+msgstr "собрать дрова"
 
 #: ../../script/outside.js:183
 msgid "a stranger arrives in the night"
-msgstr "незнакомец пришёл ночью"
+msgstr "ночью прибыл незнакомец"
 
 #: ../../script/outside.js:185
 msgid "a weathered family takes up in one of the huts."
-msgstr "замёрзшая семья заняла одну из хижин."
+msgstr "замёрзшая семья устроилась в одной из свободных хижин."
 
 #: ../../script/outside.js:187
 msgid "a small group arrives, all dust and bones."
-msgstr "прибыла небольшая группа, покрытая пылью и костями."
+msgstr "прибыла небольшая группа, покрытая пылью и останками."
 
 #: ../../script/outside.js:189
 #, fuzzy
+#TODO
 msgid "a convoy lurches in, equal parts worry and hope."
 msgstr "пришёл обоз, поровну опасений и надежд"
 
@@ -143,7 +144,7 @@ msgstr "небо затянуто тучами и дует безжалостн�
 
 #: ../../script/outside.js:561
 msgid "dry brush and dead branches litter the forest floor"
-msgstr "сухие кисти и мертвые ветки падают на лесную почву"
+msgstr "неподалеку на лесной опушке разбросаны сухие кисти и мертвые ветки"
 
 #: ../../script/path.js:43
 msgid "embark"
@@ -151,7 +152,7 @@ msgstr "в путь"
 
 #: ../../script/path.js:60
 msgid "the compass points "
-msgstr "компас указывает"
+msgstr "компас указывает на "
 
 #: ../../script/path.js:132
 msgid "none"
@@ -231,15 +232,15 @@ msgstr "выстрелить лазером"
 
 #: ../../script/world.js:90
 msgid "lob"
-msgstr "метнуть гранату"
+msgstr "бросить гранату"
 
 #: ../../script/world.js:97
 msgid "tangle"
-msgstr "связать"
+msgstr "запутать"
 
 #: ../../script/world.js:119
 msgid "An&nbsp;Outpost"
-msgstr "Сторожка"
+msgstr "Аванпост"
 
 #: ../../script/world.js:120
 msgid "Iron&nbsp;Mine"
@@ -255,7 +256,7 @@ msgstr "Серная&nbsp;Шахта"
 
 #: ../../script/world.js:123
 msgid "An&nbsp;Old&nbsp;House"
-msgstr "Старое&nbsp;здание"
+msgstr "Старый&nbsp;Дом"
 
 #: ../../script/world.js:124
 msgid "A&nbsp;Damp&nbsp;Cave"
@@ -283,7 +284,7 @@ msgstr "Поле&nbsp;боя"
 
 #: ../../script/world.js:130
 msgid "A&nbsp;Murky&nbsp;Swamp"
-msgstr "Мутное&nbsp;болото"
+msgstr "Тёмное&nbsp;болото"
 
 #: ../../script/world.js:134
 msgid "A&nbsp;Destroyed&nbsp;Village"
@@ -309,10 +310,12 @@ msgstr "здоровье: {0}/{1}"
 msgid "{0}:{1}"
 msgstr "{0}:{1}"
 
+# TODO
 #: ../../script/world.js:343
 msgid "dangerous to be this far from the village without proper protection"
 msgstr "опасно находится так далеко от деревни без должной защиты"
 
+# TODO
 #: ../../script/world.js:345
 msgid "safer here"
 msgstr "здесь безопаснее"
@@ -336,12 +339,12 @@ msgstr "жажда становится невыносимой"
 
 #: ../../script/world.js:552
 msgid "the trees yield to dry grass. the yellowed brush rustles in the wind."
-msgstr "деревья сменяются сухой травой. пожелтевшие листья гуляют по ветру."
+msgstr "деревья сменяются сухой травой. пожелтевшие листья танциют на ветру."
 
 #: ../../script/world.js:555
 msgid ""
 "the trees are gone. parched earth and blowing dust are poor replacements."
-msgstr "деревьев больше нет. осталась лишь выжженная земля и пыль."
+msgstr "Позади лес. осталась лишь выжженная земля и пыль."
 
 #: ../../script/world.js:562
 msgid ""
@@ -355,12 +358,14 @@ msgstr ""
 msgid "the grasses thin. soon, only dust remains."
 msgstr "травы всё меньше. совсем скоро останется лишь пыль."
 
+# TODO
 #: ../../script/world.js:572
 msgid "the barrens break at a sea of dying grass, swaying in the arid breeze."
 msgstr ""
 "степь заканчивается морем умирающей травы, которая покачивается в этом сухом "
 "бризе."
 
+# TODO
 #: ../../script/world.js:575
 #, fuzzy
 msgid ""
@@ -380,7 +385,7 @@ msgstr "Деревня"
 
 #: ../../script/world.js:811
 msgid "the world fades"
-msgstr "мир темнеет"
+msgstr "последний вздох"
 
 #: ../../script/world.js:939
 msgid "A Barren World"
@@ -394,7 +399,7 @@ msgstr "ловушка"
 msgid ""
 "builder says she can make traps to catch any creatures might still be alive "
 "out there"
-msgstr "строитель говорит, что может расставить ловушки для поимки зверей"
+msgstr "плотница сказала, что она может сделать неподалеку ловушки для поимки зверей" 
 
 #: ../../script/room.js:20
 msgid "more traps to catch more creatures"
@@ -406,15 +411,15 @@ msgstr "новые ловушки сейчас не помогут"
 
 #: ../../script/room.js:31
 msgid "cart"
-msgstr "тележка"
+msgstr "телега"
 
 #: ../../script/room.js:34
 msgid "builder says she can make a cart for carrying wood"
-msgstr "строитель говорит, что может сделать тележку для перевозки дров"
+msgstr "плотница говорит, что она может сделать телегу для перевозки дров"
 
 #: ../../script/room.js:35
 msgid "the rickety cart will carry more wood from the forest"
-msgstr "хлипкая тележка позволит перевозить больше дров"
+msgstr "хлипкая телега позволит перевозить больше дров из леса"
 
 #: ../../script/room.js:44
 msgid "hut"
@@ -423,11 +428,11 @@ msgstr "хижина"
 #: ../../script/room.js:47
 #, fuzzy
 msgid "builder says there are more wanderers. says they'll work, too."
-msgstr "строитель говорит, что новые странники тоже будут работать."
+msgstr "плотница говорит, что новые странники тоже будут работать."
 
 #: ../../script/room.js:48
 msgid "builder puts up a hut, out in the forest. says word will get around."
-msgstr "строитель построил хижину в лесу."
+msgstr "плотница построила хижину в лесу. слухом земля полнится."
 
 #: ../../script/room.js:49
 msgid "no more room for huts."
@@ -435,12 +440,12 @@ msgstr "нет места для новых хижин."
 
 #: ../../script/room.js:59
 msgid "lodge"
-msgstr "домик"
+msgstr "охотничий домик"
 
 #: ../../script/room.js:62
 #, fuzzy
 msgid "villagers could help hunt, given the means"
-msgstr "жители могут помочь в охоте, давая ресурсы"
+msgstr "жители могут помочь в охоте для поддержания деревни"
 
 #: ../../script/room.js:63
 msgid "the hunting lodge stands in the forest, a ways out of town"
@@ -452,7 +457,7 @@ msgstr "рынок"
 
 #: ../../script/room.js:77
 msgid "a trading post would make commerce easier"
-msgstr "с рынком торговля будет идти легче"
+msgstr "с рынком торговля будет в радость"
 
 #: ../../script/room.js:78
 msgid ""
@@ -468,12 +473,12 @@ msgstr "дубильня"
 #: ../../script/room.js:91
 msgid "builder says leather could be useful. says the villagers could make it."
 msgstr ""
-"строитель говорит, что кожа может быть полезна и что жители могли бы "
+"плотница напоминает, что кожа может быть полезна и что жители могут "
 "производить её."
 
 #: ../../script/room.js:92
 msgid "tannery goes up quick, on the edge of the village"
-msgstr "на краю деревни довольно быстро построилась дубильня"
+msgstr "на краю деревни мгновенно появилась дубильня"
 
 #: ../../script/room.js:102
 msgid "smokehouse"
@@ -483,11 +488,11 @@ msgstr "коптильня"
 msgid ""
 "should cure the meat, or it'll spoil. builder says she can fix something up."
 msgstr ""
-"если мясо не обрабатывать, то оно испортится. строитель может помочь с этим."
+"если мясо не обрабатывать, то оно испортится. плотница может помочь с этим."
 
 #: ../../script/room.js:106
 msgid "builder finishes the smokehouse. she looks hungry."
-msgstr "строитель закончил коптильню и проголодался."
+msgstr "плотница закончила коптильню и проголодалась."
 
 #: ../../script/room.js:116
 msgid "workshop"
@@ -495,13 +500,12 @@ msgstr "мастерская"
 
 #: ../../script/room.js:119
 msgid "builder says she could make finer things, if she had the tools"
-msgstr ""
-"строитель говорит, что мог бы делать более крутые штуки, если бы имел "
-"инструменты"
+msgstr "плотница рассказала, что она могла бы делать более крутые вещи, "
+"если бы имела инструменты"
 
 #: ../../script/room.js:120
 msgid "workshop's finally ready. builder's excited to get to it"
-msgstr "мастерская наконец-то готова. радости строителя нет предела"
+msgstr "мастерская наконец-то готова. радости плотницы нет предела"
 
 #: ../../script/room.js:131
 msgid "steelworks"
@@ -510,25 +514,25 @@ msgstr "сталелитейный завод"
 #: ../../script/room.js:134
 msgid "builder says the villagers could make steel, given the tools"
 msgstr ""
-"строитель говорит, что жители могли бы производить сталь, если бы у них были "
+"плотница говорит, что жители могли бы производить сталь, если бы у них были "
 "инструменты"
 
 #: ../../script/room.js:135
 msgid "a haze falls over the village as the steelworks fires up"
-msgstr "сталелитейный завод начал работу и на деревню опустился дым"
+msgstr "на деревню опустился смог, оповещая об открытии сталелитейный завода"
 
 #: ../../script/room.js:146
 msgid "armoury"
-msgstr "оружейный завод"
+msgstr "арсенал"
 
 #: ../../script/room.js:149
 msgid "builder says it'd be useful to have a steady source of bullets"
 msgstr ""
-"строитель говорит, что было бы неплохо иметь постоянный источник патронов"
+"плотница советует, что неплохо бы иметь стабильный источник патронов"
 
 #: ../../script/room.js:150
 msgid "armoury's done, welcoming back the weapons of the past."
-msgstr "оруженый завод готов, поприветствуем оружие прошлого."
+msgstr "арсенал готов. поприветствуем оружие прошлого."
 
 #: ../../script/room.js:161 ../../script/localization.js:19
 msgid "torch"
@@ -536,23 +540,23 @@ msgstr "факел"
 
 #: ../../script/room.js:164
 msgid "a torch to keep the dark away"
-msgstr "факел для отгона темноты"
+msgstr "факел для освещения"
 
 #: ../../script/room.js:173
 msgid "waterskin"
-msgstr "фляга"
+msgstr "кожанная фляга"
 
 #: ../../script/room.js:177
 msgid "this waterskin'll hold a bit of water, at least"
-msgstr "в этой фляге можно переносить немного воды"
+msgstr "в этой фляге, по крайней мере, можно переносить немного воды"
 
 #: ../../script/room.js:185
 msgid "cask"
-msgstr "бочка"
+msgstr "бочонок"
 
 #: ../../script/room.js:189
 msgid "the cask holds enough water for longer expeditions"
-msgstr "в бочке может храниться достаточно воды для длительных путешествий"
+msgstr "в бочонке можно хранить достаточно воды для длительных путешествий"
 
 #: ../../script/room.js:198
 msgid "water tank"
@@ -580,15 +584,15 @@ msgstr "повозка"
 
 #: ../../script/room.js:239
 msgid "the wagon can carry a lot of supplies"
-msgstr "повозка может везти много вещей"
+msgstr "повозка может перевозить больше запасов"
 
 #: ../../script/room.js:248
 msgid "convoy"
-msgstr "обоз"
+msgstr "конвой"
 
 #: ../../script/room.js:252
 msgid "the convoy can haul mostly everything"
-msgstr "обоз может везти практически всё"
+msgstr "конвой может перевозить практически всё"
 
 #: ../../script/room.js:262
 msgid "l armour"
@@ -600,7 +604,7 @@ msgstr "хоть кожа и не прочна, но лучше она, чем �
 
 #: ../../script/room.js:274
 msgid "i armour"
-msgstr "жел. доспехи"
+msgstr "желез. доспехи"
 
 #: ../../script/room.js:277
 msgid "iron's stronger than leather"
@@ -620,7 +624,7 @@ msgstr "железный меч"
 
 #: ../../script/room.js:301
 msgid "sword is sharp. good protection out in the wilds."
-msgstr "меч острый. хорошая защита в лесу."
+msgstr "заточенный меч. хорошая защита в лесу."
 
 #: ../../script/room.js:311
 msgid "steel sword"
@@ -629,7 +633,7 @@ msgstr "стальной меч"
 #: ../../script/room.js:314
 #, fuzzy
 msgid "the steel is strong, and the blade true."
-msgstr "сталь настолько же прочная, как и лезвие из неё."
+msgstr "сталь прочна, как и лезвие."
 
 #: ../../script/room.js:324
 msgid "rifle"
@@ -665,12 +669,12 @@ msgid ""
 "the stranger is standing by the fire. she says she can help. says she builds "
 "things."
 msgstr ""
-"незнакомец стоит около огня. он говорит, что может помочь тебе, он может "
-"строить."
+"незнакомка стоит около огня и говорит, что может помочь и что она мастер "
+"на все руки."
 
 #: ../../script/room.js:578
 msgid "freezing"
-msgstr "морозит"
+msgstr "мороз"
 
 #: ../../script/room.js:579
 msgid "cold"
@@ -678,7 +682,7 @@ msgstr "холодно"
 
 #: ../../script/room.js:580
 msgid "mild"
-msgstr "умеренно"
+msgstr "мягкое тепло"
 
 #: ../../script/room.js:581
 msgid "warm"
@@ -690,7 +694,7 @@ msgstr "жарко"
 
 #: ../../script/room.js:594
 msgid "dead"
-msgstr "смерть"
+msgstr "потух"
 
 #: ../../script/room.js:595
 msgid "smoldering"
@@ -718,7 +722,7 @@ msgstr "Очаг"
 
 #: ../../script/room.js:640
 msgid "not enough wood to get the fire going"
-msgstr "недостаточно дров для зажигания огня"
+msgstr "недостаточно дров для розжига огня"
 
 #: ../../script/room.js:653
 msgid "the wood has run out"
@@ -727,15 +731,15 @@ msgstr "дрова закончились"
 #: ../../script/room.js:673
 #, fuzzy
 msgid "the light from the fire spills from the windows, out into the dark"
-msgstr "свет от огня выходит из окна, прямо в темноту"
+msgstr "свет от огня разливается из окна, прямо в темноту"
 
 #: ../../script/room.js:686
 msgid "builder stokes the fire"
-msgstr "строитель подкидывает дров"
+msgstr "плотница подкидывает дрова"
 
 #: ../../script/room.js:716
 msgid "the wind howls outside"
-msgstr "снаружи свистит ветер"
+msgstr "снаружи воет ветер"
 
 #: ../../script/room.js:717
 msgid "the wood is running out"
@@ -743,17 +747,16 @@ msgstr "дрова скоро закончатся"
 
 #: ../../script/room.js:724
 msgid "a ragged stranger stumbles through the door and collapses in the corner"
-msgstr ""
-"оборванный незнакомец неловко входит в дверь и падает в углу от изнеможения."
+msgstr "измотанная незнакомка неловко входит в дверь и падает в углу от изнеможения."
 
 #: ../../script/room.js:732
 msgid ""
 "the stranger shivers, and mumbles quietly. her words are unintelligible."
-msgstr "незнакомец дрожит и что-то тихо неразборчиво бормочет."
+msgstr "незнакомка дрожит и что-то тихо неразборчиво бормочет."
 
 #: ../../script/room.js:735
 msgid "the stranger in the corner stops shivering. her breathing calms."
-msgstr "незнакомец в углу перестает дрожать и успокаивается."
+msgstr "незнакомка в углу перестает дрожать и успокаивается."
 
 #: ../../script/space.js:42
 msgid "hull: "
@@ -816,7 +819,7 @@ msgstr "взлететь"
 msgid ""
 "somewhere above the debris cloud, the wanderer fleet hovers. been on this "
 "rock too long."
-msgstr "где-то над облаками из мусора летит странник. устал он от земли."
+msgstr "где-то над редеющими облаками парит странник. он слишком долго был на земле."
 
 #: ../../script/ship.js:106 ../../script/ship.js:119
 msgid "not enough alien alloy"
@@ -860,7 +863,7 @@ msgstr "мех"
 
 #: ../../script/localization.js:10
 msgid "alien alloy"
-msgstr "инопланетная жидкость"
+msgstr "инопланетная сплав"
 
 #: ../../script/localization.js:11
 msgid "bullets"
@@ -945,7 +948,7 @@ msgstr "недостаточно меха"
 
 #: ../../script/localization.js:47
 msgid "not enough wood"
-msgstr "недостаточно древесины"
+msgstr "нужно больше древесины"
 
 #: ../../script/localization.js:48
 msgid "not enough coal"
@@ -973,7 +976,7 @@ msgstr "недостаточно чешуи"
 
 #: ../../script/localization.js:54
 msgid "not enough cloth"
-msgstr "недостаточно ткани"
+msgstr "недостаточно полотна"
 
 #: ../../script/localization.js:55
 msgid "not enough teeth"
@@ -1045,7 +1048,7 @@ msgstr "запасы:"
 
 #: ../../script/localization.js:78
 msgid "perks:"
-msgstr "перки:"
+msgstr "способности:"
 
 #: ../../script/localization.js:79
 msgid "take:"
@@ -1065,11 +1068,11 @@ msgstr "деревня"
 
 #: ../../script/dropbox.js:62
 msgid "Dropbox connection"
-msgstr ""
+msgstr "Подлючение Dropbox"
 
 #: ../../script/dropbox.js:65
 msgid "connect game to dropbox local storage"
-msgstr ""
+msgstr "соединить игру с dropbox-диском"
 
 #: ../../script/dropbox.js:68
 msgid "connect"
@@ -1083,7 +1086,7 @@ msgstr "отмена"
 #: ../../script/dropbox.js:86
 #, fuzzy
 msgid "Dropbox Export / Import"
-msgstr "Экспорт / Импорт"
+msgstr "Dropbox Экспорт / Импорт"
 
 #: ../../script/dropbox.js:89
 #, fuzzy
@@ -1093,7 +1096,7 @@ msgstr "экспортируйте или импортируйте данные 
 #: ../../script/dropbox.js:90
 #, fuzzy
 msgid "your are connected to dropbox with account / email "
-msgstr "вы подключены к dropbox под именем "
+msgstr "вы подключены к dropbox под именем / email "
 
 #: ../../script/dropbox.js:93
 msgid "save"
@@ -1109,7 +1112,7 @@ msgstr "выйти"
 
 #: ../../script/dropbox.js:113
 msgid "choose one slot to save to"
-msgstr ""
+msgstr "выбрать слот для сохранения"
 
 #: ../../script/dropbox.js:119
 #, fuzzy
@@ -1118,11 +1121,11 @@ msgstr "сохранить."
 
 #: ../../script/dropbox.js:179
 msgid "successfully saved to dropbox datastorage"
-msgstr ""
+msgstr "успешно сохраненно в dropbox"
 
 #: ../../script/dropbox.js:180
 msgid "error while saving to dropbox datastorage"
-msgstr ""
+msgstr "ошибка во время сохранения в dropbox"
 
 #: ../../script/dropbox.js:183
 msgid "ok"
@@ -1179,7 +1182,7 @@ msgstr "научился размахивать оружие с силой"
 # contexte ?
 #: ../../script/engine.js:37
 msgid "slow metabolism"
-msgstr "замедленный обмен веществ"
+msgstr "замедленный метаболизм"
 
 #: ../../script/engine.js:38
 msgid "go twice as far without eating"
@@ -1215,7 +1218,7 @@ msgstr "научился уклоняться от ударов"
 
 #: ../../script/engine.js:52
 msgid "precise"
-msgstr "догадливый"
+msgstr "точный"
 
 # description pour la précision ...
 #: ../../script/engine.js:53
@@ -1265,7 +1268,7 @@ msgstr "научился делать еду лучше"
 
 #: ../../script/engine.js:137 ../../script/engine.js:473
 msgid "lights off."
-msgstr "выключить свет."
+msgstr "темный фон."
 
 #: ../../script/engine.js:143
 msgid "restart."
@@ -1281,7 +1284,7 @@ msgstr "сохранить."
 
 #: ../../script/engine.js:164
 msgid "dropbox."
-msgstr ""
+msgstr "dropbox."
 
 #: ../../script/engine.js:171
 msgid "app store."
@@ -1289,7 +1292,7 @@ msgstr "app store."
 
 #: ../../script/engine.js:177
 msgid "github."
-msgstr ""
+msgstr "github."
 
 #: ../../script/engine.js:253
 msgid "Export / Import"
@@ -1385,7 +1388,7 @@ msgstr "закрыть"
 
 #: ../../script/engine.js:466 ../../script/engine.js:469
 msgid "lights on."
-msgstr "включить свет."
+msgstr "светлый фон."
 
 #: ../../script/engine.js:571
 msgid "{0} per {1}s"
@@ -1397,7 +1400,7 @@ msgstr "Сломанная ловушка"
 
 #: ../../script/events/outside.js:13
 msgid "some of the traps have been torn apart."
-msgstr "некоторые ловушки оказались разодраны."
+msgstr "некоторые ловушки оказались растерзанны."
 
 #: ../../script/events/outside.js:14
 msgid "large prints lead away, into the forest."
@@ -1409,16 +1412,16 @@ msgstr "некоторые ловушки были сломаны"
 
 #: ../../script/events/outside.js:26
 msgid "track them"
-msgstr "идти по ним"
+msgstr "отслеживать их"
 
 #: ../../script/events/outside.js:30 ../../script/events/room.js:101
 #: ../../script/events/room.js:152
 msgid "ignore them"
-msgstr "игнорировать"
+msgstr "игнорировать их"
 
 #: ../../script/events/outside.js:37
 msgid "the tracks disappear after just a few minutes."
-msgstr "через несколько минут следы исчезают."
+msgstr "следы растворяются через несколько минут."
 
 #: ../../script/events/outside.js:38
 msgid "the forest is silent."
@@ -1433,7 +1436,7 @@ msgstr "вернуться домой"
 
 #: ../../script/events/outside.js:49
 msgid "not far from the village lies a large beast, its fur matted with blood."
-msgstr "недалеко от деревни лежит большой зверь, он весь в крови"
+msgstr "недалеко от деревни лежит большой окровавленный зверь"
 
 #: ../../script/events/outside.js:50
 msgid "it puts up little resistance before the knife."
@@ -1469,11 +1472,11 @@ msgstr "по деревне распространилась болезнь."
 
 #: ../../script/events/outside.js:106
 msgid "the days are spent with burials."
-msgstr "каждый день хоронят людей."
+msgstr "каждый день проводят погребения."
 
 #: ../../script/events/outside.js:107 ../../script/events/outside.js:174
 msgid "the nights are rent with screams."
-msgstr "каждую ночь слышатся крики."
+msgstr "каждую ночь раздаются крики."
 
 #: ../../script/events/outside.js:124
 msgid "Plague"
@@ -1513,11 +1516,11 @@ msgstr "чума распространяется по деревне и уби�
 
 #: ../../script/events/outside.js:175
 msgid "the only hope is a quick death."
-msgstr "единственная надежда - на быструю смерть."
+msgstr "единственная надежда - быстрая смерть."
 
 #: ../../script/events/outside.js:192
 msgid "A Beast Attack"
-msgstr "Нападение зверей"
+msgstr "Атака зверей"
 
 #: ../../script/events/outside.js:199
 msgid "a pack of snarling beasts pours out of the trees."
@@ -1529,11 +1532,11 @@ msgstr "борьба была короткой и кровавой, но зве�
 
 #: ../../script/events/outside.js:201
 msgid "the villagers retreat to mourn the dead."
-msgstr "жители оплакивают погибших."
+msgstr "жители отсупают ради оплакивания погибших."
 
 #: ../../script/events/outside.js:224
 msgid "A Military Raid"
-msgstr "Вооруженный налёт"
+msgstr "Вооруженный рейд"
 
 #: ../../script/events/outside.js:231
 msgid "a gunshot rings through the trees."
@@ -1549,7 +1552,7 @@ msgstr "после стычки они ушли прочь, но не без п�
 
 #: ../../script/events/setpieces.js:6
 msgid "An Outpost"
-msgstr "Сторожка"
+msgstr "Аванпост"
 
 #: ../../script/events/setpieces.js:10 ../../script/events/setpieces.js:12
 msgid "a safe place in the wilds."
@@ -1637,7 +1640,7 @@ msgstr "зайти внутрь"
 
 #: ../../script/events/setpieces.js:120
 msgid "a startled beast defends its home"
-msgstr "испугавшийся зверь защищает свой дом"
+msgstr "испуганный зверь защищает свой дом"
 
 #: ../../script/events/setpieces.js:135 ../../script/events/setpieces.js:186
 msgid "continue"
@@ -1658,7 +1661,7 @@ msgstr "стены покрыты мхом и очень влажные"
 
 #: ../../script/events/setpieces.js:153
 msgid "squeeze"
-msgstr "протиснуться дальше"
+msgstr "протиснуться"
 
 #: ../../script/events/setpieces.js:164
 msgid "the remains of an old camp sits just inside the cave."
@@ -1694,11 +1697,11 @@ msgstr "взять"
 
 #: ../../script/events/setpieces.js:3558
 msgid "all the work of a previous generation is here."
-msgstr "видна работа людей, живших тут раньше."
+msgstr "видна работа предыдушего поколения, жившяя здесь раньше."
 
 #: ../../script/events/setpieces.js:3559
 msgid "ripe for the picking."
-msgstr "готов для нового владельца."
+msgstr "готов для сбора."
 
 #: ../../script/events/room.js:6
 msgid "The Nomad"
@@ -1707,7 +1710,7 @@ msgstr "Кочевник"
 #: ../../script/events/room.js:13
 msgid ""
 "a nomad shuffles into view, laden with makeshift bags bound with rough twine."
-msgstr "появляется кочевник с кучей сумок."
+msgstr "из далека появляется кочевник с самодельными мешками."
 
 #: ../../script/events/room.js:14
 msgid "won't say from where he came, but it's clear that he's not staying."
@@ -1781,7 +1784,7 @@ msgstr "Шум"
 
 #: ../../script/events/room.js:90
 msgid "through the walls, shuffling noises can be heard."
-msgstr "сквозь стены слышен какой-то шум."
+msgstr "сквозь стены слышен какой-то шорох."
 
 #: ../../script/events/room.js:91
 msgid "can't tell what they're up to."
@@ -1838,7 +1841,7 @@ msgstr "на полу разбросано немного чешуи"
 
 #: ../../script/events/room.js:200
 msgid "the ground is littered with scraps of cloth"
-msgstr "на полу разбросана ткань"
+msgstr "на полу разбросано немного полотна"
 
 #: ../../script/events/room.js:220
 msgid "The Beggar"
@@ -1850,7 +1853,7 @@ msgstr "приходит нищий."
 
 #: ../../script/events/room.js:228
 msgid "asks for any spare furs to keep him warm at night."
-msgstr "просит дать ему меха, чтобы он не мёрз по ночам."
+msgstr "умоляет дать ему ненужные меха, чтобы согреться ночью."
 
 #: ../../script/events/room.js:230
 msgid "a beggar arrives"
@@ -1901,7 +1904,7 @@ msgstr ""
 
 #: ../../script/events/room.js:300
 msgid "builder's not sure he's to be trusted."
-msgstr "строитель не уверен можно ли ему доверять."
+msgstr "протница не увереана, что можно ему доверять."
 
 #: ../../script/events/room.js:302 ../../script/events/room.js:373
 msgid "a mysterious wanderer arrives"
@@ -1930,7 +1933,7 @@ msgstr ""
 
 #: ../../script/events/room.js:371
 msgid "builder's not sure she's to be trusted."
-msgstr "строитель не уверен можно ли ей доверять."
+msgstr "протница не увереана, что можно ей доверять."
 
 #: ../../script/events/room.js:387
 msgid "turn her away"
@@ -1982,7 +1985,7 @@ msgstr "прибыл старый странник."
 
 #: ../../script/events/room.js:481
 msgid "he smiles warmly and asks for lodgings for the night."
-msgstr "он добро улыбнулся и попросил ночлега."
+msgstr "у него теплая улыбка и он просить небольшую комнату для ночлега."
 
 #: ../../script/events/room.js:483
 msgid "an old wanderer arrives"
@@ -2002,7 +2005,7 @@ msgstr "уклонение"
 
 #: ../../script/events/room.js:517
 msgid "precision"
-msgstr "точность "
+msgstr "точность"
 
 #: ../../script/events/room.js:527
 msgid "force"
@@ -2022,7 +2025,7 @@ msgstr "прибыл человек, он кашляет и хромает."
 
 #: ../../script/events/room.js:554
 msgid "he begs for medicine."
-msgstr "он просит лекарств."
+msgstr "он умоляет о лекарстве."
 
 #: ../../script/events/room.js:556
 msgid "a sick man hobbles up"
@@ -2038,7 +2041,7 @@ msgstr "человек глотает лекарство"
 
 #: ../../script/events/room.js:566
 msgid "tell him to leave"
-msgstr "попросить уйти"
+msgstr "попросить его уйти"
 
 #: ../../script/events/room.js:573 ../../script/events/room.js:589
 #: ../../script/events/room.js:605
@@ -2078,11 +2081,11 @@ msgstr "жители тащат грязного человека со скла�
 
 #: ../../script/events/global.js:14
 msgid "say his folk have been skimming the supplies."
-msgstr "говорят, что он крал вещи оттуда."
+msgstr "говорят, что он украл вещи оттуда."
 
 #: ../../script/events/global.js:15
 msgid "say he should be strung up as an example."
-msgstr "говорят, что он должен публично повешен. "
+msgstr "говорят, что он должен публично повешен для примера. "
 
 #: ../../script/events/global.js:17
 msgid "a thief is caught"
@@ -2135,15 +2138,15 @@ msgstr "Тощий человек"
 
 #: ../../script/events/encounters.js:52
 msgid "gaunt man"
-msgstr "тощий человек"
+msgstr "изможденный человек"
 
 #: ../../script/events/encounters.js:53
 msgid "the gaunt man is dead"
-msgstr "тощий человек мёртв."
+msgstr "изможденный человек мёртв."
 
 #: ../../script/events/encounters.js:76
 msgid "a gaunt man approaches, a crazed look in his eye"
-msgstr "тощий человек, с явно сумасшедшим взглядом, приближается к вам"
+msgstr "изможденный человек, с явно сумасшедшим взглядом, приближается к вам"
 
 #: ../../script/events/encounters.js:81
 msgid "A Strange Bird"
@@ -2240,7 +2243,7 @@ msgstr "ужасный зверь мёртв"
 
 #: ../../script/events/encounters.js:310
 msgid "a beast, wilder than imagining, erupts out of the foliage"
-msgstr "огромный ужасающий зверь выпрыгивает на вас"
+msgstr "огромный ужасающий воображение зверь выпрыгивает из листвы"
 
 #: ../../script/events/encounters.js:315
 msgid "A Soldier"
@@ -2279,7 +2282,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "недостаточно"
 
 #~ msgid "builder just shivers"
-#~ msgstr "строитель просто дрожит"
+#~ msgstr "плотница просто дрожит"
 
 #~ msgid "eat meat"
 #~ msgstr "есть мясо"
@@ -2288,13 +2291,13 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "использовать лекарства"
 
 #~ msgid "enegy cell"
-#~ msgstr "клетка энергии"
+#~ msgstr "энергетическая ячейка"
 
 #~ msgid "A Dusty Path"
 #~ msgstr "Пыльный путь"
 
 #~ msgid "water replenished"
-#~ msgstr "вода пополнена"
+#~ msgstr "запасы воды пополнены"
 
 #~ msgid "the traps contain "
 #~ msgstr "ловушки содержат "
@@ -2318,13 +2321,13 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "из-за сырости факел перестает светить и затухает"
 
 #~ msgid "the darkness is absolute"
-#~ msgstr "тьма наступает"
+#~ msgstr "наступает абсолютная тьма"
 
 #~ msgid "the torch goes out"
 #~ msgstr "факел гаснет"
 
 #~ msgid "a cave lizard attacks"
-#~ msgstr "атакует пещерная ящерица"
+#~ msgstr "пещерная ящерица атакует"
 
 #~ msgid "a large beast charges out of the dark"
 #~ msgstr "большой зверь выходит из темноты"
@@ -2346,14 +2349,14 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "Пустынный город"
 
 #~ msgid "a small suburb lays ahead, empty houses scorched and peeling."
-#~ msgstr "впереди находится небольшой город."
+#~ msgstr "впереди находится небольшой пригород с пустыми домами."
 
 #~ msgid ""
 #~ "broken streetlights stand, rusting. light hasn't graced this place in a "
 #~ "long time."
 #~ msgstr ""
-#~ "стоят ржавые и сломанные уличные фонари. это место не видело света уже "
-#~ "давно."
+#~ "стоят ржавые и сломанные уличные фонари. это место не видело света слишком "
+#~ "долго."
 
 #~ msgid "the town lies abandoned, its citizens long dead"
 #~ msgstr "город заброшен, его жители давно мертвы"
@@ -2364,16 +2367,16 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgid ""
 #~ "where the windows of the schoolhouse aren't shattered, they're blackened "
 #~ "with soot."
-#~ msgstr "даже там, где окна школы не сломаны, они почернели от старости."
+#~ msgstr "даже там, где окна школы не сломаны, они почернели от копоти."
 
 #~ msgid "the double doors creak endlessly in the wind."
-#~ msgstr "двойные двери бесконечно скрипят из-за ветра."
+#~ msgstr "двойные двери без конца скрипят из-за ветра."
 
 #~ msgid "leave town"
 #~ msgstr "покинуть город"
 
 #~ msgid "ambushed on the street."
-#~ msgstr "на улице была засада."
+#~ msgstr "на улице поджидала засада."
 
 # ?
 #~ msgid "a squat building up ahead."
@@ -2392,12 +2395,12 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "в совсем заросшем парке стоит одинокий зверь."
 
 #~ msgid "an overturned caravan is spread across the pockmarked street."
-#~ msgstr "на дороге лежит перевёрнутый караван."
+#~ msgstr "на грунтовой дороге лежит перевёрнутый караван."
 
 #~ msgid ""
 #~ "it's been picked over by scavengers, but there's still some things worth "
 #~ "taking."
-#~ msgstr "хоть он и был ограблен мусорщиками, здесь еще что-то осталось."
+#~ msgstr "хоть он и был ограблен мусорщиками, здесь еще что-то ценное."
 
 #~ msgid "a madman attacks, screeching."
 #~ msgstr "сумасшедший с визгом атакует вас."
@@ -2421,7 +2424,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "еще один зверь, услышав шум, выпрыгивает из-за деревьев."
 
 #~ msgid "something's causing a commotion a ways down the road."
-#~ msgstr "внизу на дороге что-то происходит."
+#~ msgstr "внизу на дороге какая-то заваруха."
 
 #~ msgid "a fight, maybe."
 #~ msgstr "возможно, это драка."
@@ -2434,7 +2437,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "но слова на ней не удаётся прочитать."
 
 #~ msgid "a panicked scavenger bursts through the door, screaming."
-#~ msgstr "орущий мусорщик врывается через дверь."
+#~ msgstr "орущий мусорщик с криками врывается через дверь."
 
 #~ msgid "a man stands over a dead wanderer. notices he's not alone."
 #~ msgstr "человек стоит над мертвым странником. вдруг, он замечает вас."
@@ -2443,8 +2446,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "у мусорщика был небольшой лагерь в школе."
 
 #~ msgid "collected scraps spread across the floor like they fell from heaven."
-#~ msgstr ""
-#~ "собранные им вещи разбросаны по полу так, будто бы они упали с неба."
+#~ msgstr "собранные им вещи разбросаны по полу так, будто бы они упали с неба."
 
 #~ msgid "scavenger'd been looking for supplies in here, it seems."
 #~ msgstr "мусорщик, видимо, искал здесь полезные вещи."
@@ -2456,10 +2458,10 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ "beneath the wanderer's rags, clutched in one of its many hands, a glint "
 #~ "of steel."
 #~ msgstr ""
-#~ "в тряпке, которую держал в руке странник, было укутано что-то стальное."
+#~ "в тряпке, которую держал в руке странник, виднелся стальной отблеск."
 
 #~ msgid "worth killing for, it seems."
-#~ msgstr "наверное, это стоило смерти."
+#~ msgstr "это стоило смерти, наверное."
 
 #~ msgid "eye for an eye seems fair."
 #~ msgstr "око за око - это довольно справедливо."
@@ -2512,21 +2514,20 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "покинуть город"
 
 #~ msgid "orange traffic cones are set across the street, faded and cracked."
-#~ msgstr ""
-#~ "оранжевые дорожные конусы установлены на дороге, они совсем выцвели и "
+#~ msgstr "оранжевые дорожные конусы, установлены на дороге, совсем выцвели и "
 #~ "потрескались."
 
 #~ msgid "lights flash through the alleys between buildings."
 #~ msgstr "между зданий, впереди по аллее, мигает какой-то свет."
 
 #~ msgid "a large shanty town sprawls across the streets."
-#~ msgstr "большие упавшие башни расстилаются по всему городу."
+#~ msgstr "большие упавшие башни расстилаются по улица города."
 
 #~ msgid "faces, darkened by soot and blood, stare out from crooked huts."
 #~ msgstr "лица, почерневшие от крови и сажи, наблюдают из хижин."
 
 #~ msgid "the shell of an abandoned hospital looms ahead."
-#~ msgstr "впереди виднеется местный госпиталь."
+#~ msgstr "впереди виднеется остатки заброшенного госпиталя."
 
 #~ msgid "the old tower seems mostly intact."
 #~ msgstr "старая башня, на первый взгляд, выглядит нетронутой."
@@ -2535,7 +2536,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "остатки сгоревшего автомобиля преграждают вход."
 
 #~ msgid "most of the windows at ground level are busted anyway."
-#~ msgstr "но окна первых этажей открыты."
+#~ msgstr "большинство окон первых этажей разбиты."
 
 #~ msgid ""
 #~ "a huge lizard scrambles up out of the darkness of an old metro station."
@@ -2545,20 +2546,20 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "спуститься"
 
 #~ msgid "the shot echoes in the empty street."
-#~ msgstr "слышится эхо выстрела."
+#~ msgstr "эхо выстрела издалось из пустой улицы."
 
 #~ msgid "the soldier steps out from between the buildings, rifle raised."
 #~ msgstr ""
 #~ "солдат появляется между двумя строениями и начинает огонь из винтовки."
 
 #~ msgid "a frail man stands defiantly, blocking the path."
-#~ msgstr "вам преграждает путь довольно хилый человек."
+#~ msgstr "вам преграждает путь довольно слабый человек."
 
 #~ msgid "nothing but downcast eyes."
-#~ msgstr "здесь нет ничего, кроме опущенных глаз."
+#~ msgstr "ничего, кроме уставших глаз."
 
 #~ msgid "the people here were broken a long time ago."
-#~ msgstr "люди ушли отсюда уже давно."
+#~ msgstr "люди ушли отсюда очень давно."
 
 #~ msgid "empty corridors."
 #~ msgstr "коридоры пусты."
@@ -2570,7 +2571,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "старик, в руках у которого скальпель, врывается из двери."
 
 #~ msgid "a thug is waiting on the other side of the wall."
-#~ msgstr "с другой стороны стены выбегает бандит и атакует вас."
+#~ msgstr "с другой стороны стены бандит поджидают вас."
 
 #~ msgid "a snarling beast jumps out from behind a car."
 #~ msgstr "дикий зверь выскакивает из-за автомобиля."
@@ -2579,19 +2580,19 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "улица над станцией метро была снесена."
 
 #~ msgid "lets some light down into the dusty haze."
-#~ msgstr "свет факела освещает шахту."
+#~ msgstr "свет факела освещает мглу."
 
 #~ msgid "a sound comes from the tunnel, just ahead."
-#~ msgstr "из туннеля доносится какой-то звук."
+#~ msgstr "далеко из туннеля доносится какой-то звук."
 
 #~ msgid "looks like a camp of sorts up ahead."
 #~ msgstr "похоже впереди какой-то лагерь."
 
 #~ msgid "rusted chainlink is pulled across an alleyway."
-#~ msgstr "вокруг аллеи построен забор."
+#~ msgstr "вокруг аллеи тянется ржавый забор."
 
 #~ msgid "fires burn in the courtyard beyond."
-#~ msgstr "за ним, во дворе, горит огонь."
+#~ msgstr "за ним, во дворе, горят костры."
 
 #~ msgid "more voices can be heard ahead."
 #~ msgstr "всё больше голосов слышится вокруг."
@@ -2606,7 +2607,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "улица впереди освещается пламенем."
 
 #~ msgid "more squatters are crowding around now."
-#~ msgstr "вокруг вас столпились поселенцы, они о чём-то шумят."
+#~ msgstr "вокруг вас сгущаются поселенцы."
 
 #~ msgid "someone throws a stone."
 #~ msgstr "кто-то кинул камень."
@@ -2615,7 +2616,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "прямо на тротуаре находится небольшой магазин."
 
 #~ msgid "the owner stands by, stoic."
-#~ msgstr "рядом с ним стоит хозяин."
+#~ msgstr "рядом с ним стойко стоит хозяин."
 
 #~ msgid "strips of meat hang drying by the side of the street."
 #~ msgstr "на одной стороне улицы развешены полоски мяса."
@@ -2632,7 +2633,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "здесь находится племя пожилых поселенцев."
 
 #~ msgid "a pack of lizards rounds the corner."
-#~ msgstr "стая ящериц ползёт к вам из-за угла."
+#~ msgstr "стая ящериц ползёт из-за угла."
 
 #~ msgid "strips of meat are hung up to dry in this ward."
 #~ msgstr "в палатке развешены сушиться полоски мяса."
@@ -2656,7 +2657,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "второй солдат открывает огонь."
 
 #~ msgid "a masked soldier rounds the corner, gun drawn"
-#~ msgstr "солдат в маске заворачивает за угол, у него виден пистолет"
+#~ msgstr "солдат в маске заворачивает за угол, у него есть оружие"
 
 #~ msgid "the crowd surges forward."
 #~ msgstr "толпа бежит на вас."
@@ -2665,16 +2666,14 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "группа подростков спрыгивает с дерева."
 
 #~ msgid "a squatter stands firmly in the doorway of a small hut."
-#~ msgstr "поселенец преграждает вход в маленькую хижину."
+#~ msgstr "поселенец твердо преграждает вход в маленькую хижину."
 
 #~ msgid "behind the door, a deformed figure awakes and attacks."
-#~ msgstr ""
-#~ "прямо за дверью появляется человек с деформированным телом, он атакует "
-#~ "вас."
+#~ msgstr "прямо за дверью стоит безформенный человек и атакует вас."
 
 #~ msgid ""
 #~ "as soon as the door is open a little bit, hundreds of tentacles erupt."
-#~ msgstr "как только дверь открывается, выскакивают сотни щупальцев."
+#~ msgstr "как только дверь чуть приоткрылась, выскакивают сотни щупальцев."
 
 #~ msgid "bird must have liked shiney things."
 #~ msgstr "похоже птице нравятся блестящие вещи."
@@ -2698,7 +2697,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "тела и снаряжение двух сторон разбросаны по земле."
 
 #~ msgid "the small military outpost is well supplied."
-#~ msgstr "небольшой военный пост хорошо экипирован."
+#~ msgstr "небольшой военный пост хорошо оборудован."
 
 #~ msgid ""
 #~ "arms and munitions, relics from the war, are neatly arranged on the store-"
@@ -2708,7 +2707,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ "кладовой."
 
 #~ msgid "just as deadly now as they were then."
-#~ msgstr "такие же смертельные, как раньше."
+#~ msgstr "такие же смертельные, как и раньше."
 
 #~ msgid "searching the bodies yields a few supplies."
 #~ msgstr "вы обыскали тела и нашли несколько вещей."
@@ -2725,7 +2724,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgid ""
 #~ "the bodies of the wanderers that lived here are still visible in the "
 #~ "flames."
-#~ msgstr "тела живших здесь людей до сих пор видны в пламени."
+#~ msgstr "тела странников до сих пор видны в пламени."
 
 #~ msgid "still time to rescue a few supplies."
 #~ msgstr "еще есть время спасти что-нибудь."
@@ -2751,7 +2750,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "внутри хижины находится плачущий ребёнок."
 
 #~ msgid "a few belongings rest against the walls."
-#~ msgstr "в стену упирается несколько вещей."
+#~ msgstr "около стены лежат несколько вещей."
 
 #~ msgid "the stench of rot and death fills the operating theatres."
 #~ msgstr "в операционной пахнет гнилью и смертью."
@@ -2796,7 +2795,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "дверь в него открыта."
 
 #~ msgid "the remains of an old house stand as a monument to simpler times"
-#~ msgstr "остатки старого здания остались здесь как памятник старым временам."
+#~ msgstr "остатки старого здания установлены здесь как памятник старым временам."
 
 #~ msgid "the house is abandoned, but not yet picked over."
 #~ msgstr "здание заброшено, но еще не разграблено."
@@ -2817,11 +2816,11 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "Заброшенное поле битвы"
 
 #~ msgid "a battle was fought here, long ago."
-#~ msgstr "когда-то здесь происходило сражение, но это было очень давно."
+#~ msgstr "когда-то здесь было сражение, но это было очень давно."
 
 #~ msgid ""
 #~ "battered technology from both sides lays dormant on the blasted landscape."
-#~ msgstr "потрёпанное снаряжение обеих сторон лежит на разрушенной земле."
+#~ msgstr "потрёпанная техника обеих сторон лежит на разрушенной земле."
 
 #~ msgid "A Huge Borehole"
 #~ msgstr "Огромная скважина"
@@ -2843,7 +2842,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 
 #~ msgid ""
 #~ "the familiar curves of a wanderer vessel rise up out of the dust and ash. "
-#~ msgstr "знакомые страннику формы поднимаются из пыли и пепла."
+#~ msgstr "знакомые страннику формы судна поднимаются из пыли и пепла."
 
 #~ msgid "lucky that the natives can't work the mechanisms."
 #~ msgstr "повезло, что местные не умеют работать с механизмами."
@@ -2858,11 +2857,10 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "Серный рудник"
 
 #~ msgid "the military is already set up at the mine's entrance."
-#~ msgstr ""
-#~ "на входе в шахту стоят военные. похоже они в полной боевой готовности."
+#~ msgstr "на входе в шахту стоят военные в полной боевой готовности."
 
 #~ msgid "soldiers patrol the perimeter, rifles slung over their shoulders."
-#~ msgstr "солдаты, с винтовками на плечах, патрулируют периметр."
+#~ msgstr "солдаты с винтовками на плечах патрулируют периметр."
 
 #~ msgid "a military perimeter is set up around the mine."
 #~ msgstr "вокруг шахты установлен военный периметр."
@@ -2880,7 +2878,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "второй солдат вступает в бой."
 
 #~ msgid "a grizzled soldier attacks, waving a bayonet."
-#~ msgstr "размахивая штыком, нападает седой солдат."
+#~ msgstr "размахивая штыком, седой солдат нападает."
 
 #~ msgid "the military presence has been cleared."
 #~ msgstr "военный периметр был зачищен."
@@ -2920,13 +2918,12 @@ msgstr "откуда-то из кустов раздается выстрел"
 
 #~ msgid "an old iron mine sits here, tools abandoned and left to rust."
 #~ msgstr ""
-#~ "здесь находится старый рудник железа, все инструменты были оставлены "
-#~ "ржаветь."
+#~ "здесь находится старый рудник железа с оставленными ржавыми инструментами."
 
 #~ msgid ""
 #~ "bleached bones are strewn about the entrance. many, deeply scored with "
 #~ "jagged grooves."
-#~ msgstr "около входа разбросаны уже побелевшие кости."
+#~ msgstr "около входа разбросаны уже побелевшие кости. многие из-них с глубокими зазубринами"
 
 #~ msgid "feral howls echo out of the darkness."
 #~ msgstr "дикие вопли доносятся эхом из темноты."
@@ -2935,7 +2932,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "путь ведет к заброшенной шахте"
 
 #~ msgid "a large creature lunges, muscles rippling in the torchlight"
-#~ msgstr "большое существо бросается на вас"
+#~ msgstr "освещенное факелом большое существо бросается на вас"
 
 #~ msgid "the beast is dead."
 #~ msgstr "существо мертво."
@@ -2956,7 +2953,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgstr "жителей "
 
 #~ msgid "the {0} is dead."
-#~ msgstr "le {0} est mort"
+#~ msgstr "{0} мертвы."
 
 #~ msgid "not enough {0}"
-#~ msgstr "pas assez de {0}"
+#~ msgstr "нехватает {0}"
