@@ -106,9 +106,8 @@ msgstr "прибыла небольшая группа, покрытая пыл�
 
 #: ../../script/outside.js:189
 #, fuzzy
-#TODO
 msgid "a convoy lurches in, equal parts worry and hope."
-msgstr "пришёл обоз, поровну опасений и надежд"
+msgstr "единственное что осталось у конвоя : мучения и надежда."
 
 #: ../../script/outside.js:191
 msgid "the town's booming. word does get around."
@@ -310,12 +309,10 @@ msgstr "здоровье: {0}/{1}"
 msgid "{0}:{1}"
 msgstr "{0}:{1}"
 
-# TODO
 #: ../../script/world.js:343
 msgid "dangerous to be this far from the village without proper protection"
-msgstr "опасно находится так далеко от деревни без должной защиты"
+msgstr "находится так далеко от деревни опасно без стоящей защиты"
 
-# TODO
 #: ../../script/world.js:345
 msgid "safer here"
 msgstr "здесь безопаснее"
