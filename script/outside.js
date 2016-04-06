@@ -397,6 +397,9 @@ var Outside = {
 		var lname = _(name);
 		var row = $('div#' + id, village);
 		if(row.length === 0 && num > 0) {
+			if(num > 1){
+				lname = lname.concat("s");
+			}
 			row = $('<div>').attr('id', id).addClass('storeRow');
 			$('<div>').addClass('row_key').text(lname).appendTo(row);
 			$('<div>').addClass('row_val').text(num).appendTo(row);
