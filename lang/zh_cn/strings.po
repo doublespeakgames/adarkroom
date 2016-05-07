@@ -17,6 +17,18 @@ msgstr ""
 "X-POOTLE-MTIME: 1421483365.000000\n"
 "X-Poedit-SearchPath-0: ./../../script\n"
 
+#: ../../script/outside.js:621
+msgid "the traps contain "
+msgstr "从陷阱中找到"
+
+#: ../../script/outside.js:627
+msgid " and "
+msgstr " 和 "
+
+#: ../../script/path.js:29
+msgid "A Dusty Path"
+msgstr "满是尘土的小路"
+
 #: ../../script/outside.js:5
 msgid "Outside"
 msgstr "野外"
