@@ -914,7 +914,7 @@ Events.Setpieces = {
 						chance: 1
 					}
 				},
-				notification: _('another beast, drawn by the noise, leaps out of a copse of trees.'),
+				notification: _('another beast, draw by the noise, leaps out of a copse of trees.'),
 				buttons: {
 					'continue': {
 						text: _('continue'),
