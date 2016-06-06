@@ -2417,7 +2417,7 @@ msgstr "откуда-то из кустов раздается выстрел"
 #~ msgid "the footsteps stop."
 #~ msgstr "шаги прекратились."
 
-#~ msgid "another beast, draw by the noise, leaps out of a copse of trees."
+#~ msgid "another beast, drawn by the noise, leaps out of a copse of trees."
 #~ msgstr "еще один зверь, услышав шум, выпрыгивает из-за деревьев."
 
 #~ msgid "something's causing a commotion a ways down the road."

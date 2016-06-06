@@ -2595,7 +2595,7 @@ msgid "the footsteps stop."
 msgstr "τα βήματα σταματούν."
 
 #: script/events/setpieces.js:918
-msgid "another beast, draw by the noise, leaps out of a copse of trees."
+msgid "another beast, drawn by the noise, leaps out of a copse of trees."
 msgstr ""
 "ένα ακόμα θηρίο, ακολουθώντας το θόρυβο, ξεπηδάει από ένα δασάκι των δέντρων."
 

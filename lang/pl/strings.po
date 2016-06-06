@@ -1983,7 +1983,7 @@ msgid "the footsteps stop."
 msgstr "kroki cichną."
 
 #: ../../script/events/setpieces.js:882
-msgid "another beast, draw by the noise, leaps out of a copse of trees."
+msgid "another beast, drawn by the noise, leaps out of a copse of trees."
 msgstr "jeszcze jedna bestia, sprowokowana przez hałas, wyskakuje z zagajnika."
 
 #: ../../script/events/setpieces.js:896

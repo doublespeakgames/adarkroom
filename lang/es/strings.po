@@ -2493,7 +2493,7 @@ msgid "the footsteps stop."
 msgstr "los pasos se detienen."
 
 #: script/events/setpieces.js:918
-msgid "another beast, draw by the noise, leaps out of a copse of trees."
+msgid "another beast, drawn by the noise, leaps out of a copse of trees."
 msgstr "otra bestia, atraida por el ruido, salta de un bosquecillo de árboles."
 
 #: script/events/setpieces.js:934
