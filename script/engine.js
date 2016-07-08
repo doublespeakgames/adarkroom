@@ -135,8 +135,8 @@
 
 			$('<span>')
 				.addClass('appStore menuBtn')
-				.text(_('app store.'))
-				.click(function() { window.open('https://itunes.apple.com/app/apple-store/id736683061?pt=2073437&ct=adrproper&mt=8'); })
+				.text(_('get the app.'))
+				.click(Engine.getApp)
 				.appendTo(menu);
 
 			$('<span>')
@@ -401,6 +401,33 @@
 			if(!noReload) {
 				location.reload();
 			}
+		},
+
+		getApp: function() {
+			Events.startEvent({
+				title: _('Get the App'),
+				scenes: {
+					start: {
+						text: [_('bring the room with you.')],
+						buttons: {
+							'ios': {
+								text: _('ios'),
+								nextScene: 'end',
+								onChoose: function () {
+									window.open('https://itunes.apple.com/app/apple-store/id736683061?pt=2073437&ct=adrproper&mt=8');
+								}
+							},
+							'android': {
+								text: _('android'),
+								nextScene: 'end',
+								onChoose: function() {
+									window.open('https://play.google.com/store/apps/details?id=com.yourcompany.adarkroom');
+								}
+							}
+						}
+					}
+				}
+			})
 		},
 
 		share: function() {
