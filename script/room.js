@@ -16,7 +16,7 @@ var Room = {
 			name: _('trap'),
 			button: null,
 			maximum: 10,
-			availableMsg: _('builder says she can make traps to catch any creatures might still be alive out there'),
+			availableMsg: _('builder says she can make traps to catch creatures that might still be alive out there'),
 			buildMsg: _('more traps to catch more creatures'),
 			maxMsg: _("more traps won't help now"),
 			type: 'building',
