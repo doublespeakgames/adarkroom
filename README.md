@@ -40,4 +40,5 @@ a minimalist text adventure game for your browser
 
 or play the latest on [GitHub](http://doublespeakgames.github.io/adarkroom)
 
-[![app store](http://i.imgur.com/M6jlJQH.png)](https://itunes.apple.com/us/app/a-dark-room/id736683061)
+[![app store](http://i.imgur.com/DMdnDYq.png)](https://itunes.apple.com/us/app/a-dark-room/id736683061)
+[![google play](http://i.imgur.com/6Tw4HZV.png)](https://play.google.com/store/apps/details?id=com.yourcompany.adarkroom)
