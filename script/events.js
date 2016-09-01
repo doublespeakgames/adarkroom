@@ -589,6 +589,7 @@ var Events = {
 			var takeET = new Button.Button({
 				id: 'loot_takeEverything',
 				text: '',
+				cooldown: Events._LEAVE_COOLDOWN,
 				click: Events.takeEverything
 			}).appendTo(takeETrow);
 			$('<span>').insertBefore(takeET.children('.cooldown'));
@@ -650,8 +651,10 @@ var Events = {
 		var textbox = btn.children('span');
 		var takeAndLeave = (btn.data('leaveBtn')) ? btn.data('canTakeEverything') : false;
 		if(takeAndLeave){
-			textbox.text( basetext + _(' and ') + _('leave') );
+			var verb = btn.data('leaveBtn').text() || _('leave');
+			textbox.text( basetext + _(' and ') +  verb);
 			btn.data('canLeave', true);
+			Button.cooldown(btn);
 		} else {
 			textbox.text( basetext );
 			btn.data('canLeave', false)
