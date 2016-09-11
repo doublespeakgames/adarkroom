@@ -145,6 +145,18 @@ msgstr "天色阴沉，风无情地刮着"
 msgid "dry brush and dead branches litter the forest floor"
 msgstr "林地上散落着枯枝败叶"
 
+#: ../../script/outside.js:621
+msgid "the traps contain "
+msgstr "从陷阱中找到"
+
+#: ../../script/outside.js:627
+msgid " and "
+msgstr " 和 "
+
+#: ../../script/path.js:29
+msgid "A Dusty Path"
+msgstr "满是尘土的小路"
+
 #: ../../script/path.js:43
 msgid "embark"
 msgstr "出发"
@@ -2231,6 +2243,10 @@ msgstr "狙击手被灭"
 #: ../../script/events/encounters.js:396
 msgid "a shot rings out, from somewhere in the long grass"
 msgstr "深草丛的某处射出了一发子弹"
+
+#: ../../script/event.js:130
+msgid "eat meat"
+msgstr "吃肉"
 
 #~ msgid "choose one slot to load from"
 #~ msgstr "选择加载位置"
