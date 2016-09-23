@@ -563,7 +563,7 @@ body.noMask #description {
 
 #lootButtons {
 	padding-bottom: 0px !important;
-	margin: 20px 0 0 5px;
+	margin: 20px 0 5px 0;
 	position: relative;
 }
 

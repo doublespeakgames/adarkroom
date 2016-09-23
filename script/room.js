@@ -796,6 +796,9 @@ var Room = {
 			case 'upgrade':
 				// Don't display upgrades on the Room screen
 				continue;
+			case 'building':
+				// Don't display buildings either
+				continue;
 			case 'weapon':
 				location = weapons;
 				break;
