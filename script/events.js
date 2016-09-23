@@ -78,6 +78,7 @@ var Events = {
 		$('<div>').text(scene.notification).appendTo(desc);
 
 		// Draw pause button
+		/* Disable for now, because it doesn't work and looks weird
 		var pauseBox = $('<div>').attr('id', 'pauseButton').appendTo(desc);
 		var pause = new Button.Button({
 			id: 'pause',
@@ -89,6 +90,7 @@ var Events = {
 		$('<div>').addClass('clear').appendTo(pauseBox);
 		Events.setPause(pause, 'set');
 		Events.removePause(pause, 'set');
+		*/
 
 		var fightBox = $('<div>').attr('id', 'fight').appendTo(desc);
 		// Draw the wanderer
@@ -496,7 +498,7 @@ var Events = {
 	},
 
 	enemyAttack: function() {
-		Events.togglePause($('#pause'),'auto');
+		// Events.togglePause($('#pause'),'auto');
 
 		var scene = Events.activeEvent().scenes[Events.activeScene];
 
