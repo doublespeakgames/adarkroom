@@ -372,8 +372,8 @@ var Space = {
 		clearTimeout(Events._eventTimeout);
 		clearTimeout(Room._fireTimer);
 		clearTimeout(Room._tempTimer);
-		for(var k in Room.Craftables) {
-			Room.Craftables[k].button = null;
+		for(var j in Room.Craftables) {
+			Room.Craftables[j].button = null;
 		}
 		for(var k in Room.TradeGoods) {
 			Room.TradeGoods[k].button = null;
