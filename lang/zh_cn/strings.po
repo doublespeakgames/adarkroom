@@ -415,7 +415,6 @@ msgid "take:"
 msgstr "获得:"
 
 #: ../../script/events.js:599
-#, fuzzy
 msgid "nothing to take"
 msgstr "一无所获"
 
@@ -693,7 +692,6 @@ msgid "it puts up little resistance before the knife."
 msgstr "它无力挣扎任人宰割"
 
 #: ../../script/events/outside.js:53
-#, fuzzy
 msgid "there was a beast. it's dead now"
 msgstr "咆哮的野兽倒下了"
 
@@ -702,23 +700,20 @@ msgid "Fire"
 msgstr "着火了"
 
 #: ../../script/events/outside.js:76
-#, fuzzy
 msgid "a fire rampages through one of the huts, destroying it."
-msgstr "你的小屋要起火了,扑灭它"
+msgstr "火焰吞噬了一间屋子，将它摧毁殆尽。"
 
 #: ../../script/events/outside.js:77
-#, fuzzy
 msgid "all residents in the hut perished in the fire."
-msgstr "不幸的是,屋内的所有人都死于火灾中"
+msgstr "屋内的所有人都死于火灾中"
 
 #: ../../script/events/outside.js:79
 msgid "a fire has started"
 msgstr "火灾已经开始"
 
 #: ../../script/events/outside.js:86
-#, fuzzy
 msgid "mourn"
-msgstr "护甲"
+msgstr "哀悼"
 
 #: ../../script/events/outside.js:87
 msgid "some villagers have died"
@@ -737,9 +732,8 @@ msgid "medicine is needed immediately."
 msgstr "亟需药剂"
 
 #: ../../script/events/outside.js:105
-#, fuzzy
 msgid "some villagers are ill"
-msgstr "有一些村民死掉了"
+msgstr "有一些村民生病了"
 
 #: ../../script/events/outside.js:109
 msgid "1 medicine"
@@ -782,9 +776,8 @@ msgid "a terrible plague is fast spreading through the village."
 msgstr "可怕的瘟疫迅速地在村子里传播开来"
 
 #: ../../script/events/outside.js:163
-#, fuzzy
 msgid "a plague afflicts the village"
-msgstr "瘟疫席卷村落"
+msgstr "一场瘟疫席卷了村落"
 
 #: ../../script/events/outside.js:168
 msgid "buy medicine"
@@ -848,7 +841,7 @@ msgstr "野兽袭击了村民们"
 
 #: ../../script/events/outside.js:249
 msgid "predators become prey. price is unfair"
-msgstr "猎食者成为了猎物。价格不公平"
+msgstr "猎食者成为了猎物。这是个弱肉强食的世界"
 
 #: ../../script/events/outside.js:258
 msgid "A Military Raid"
@@ -867,9 +860,8 @@ msgid "after a skirmish they are driven away, but not without losses."
 msgstr "虽然他们撤走了，但我们好些人牺牲了"
 
 #: ../../script/events/outside.js:269
-#, fuzzy
 msgid "troops storm the village"
-msgstr "军队席卷村落"
+msgstr "军队席卷了村落"
 
 #: ../../script/events/outside.js:283
 msgid "warfare is bloodthirsty"
@@ -1512,9 +1504,8 @@ msgid "the torchlight casts a flickering glow down the hallway."
 msgstr ""
 
 #: ../../script/events/setpieces.js:884
-#, fuzzy
 msgid "the footsteps stop."
-msgstr "安静下来了"
+msgstr "脚步声停止了。"
 
 #: ../../script/events/setpieces.js:917
 msgid "another beast, draw by the noise, leaps out of a copse of trees."
@@ -1535,7 +1526,7 @@ msgstr ""
 
 #: ../../script/events/setpieces.js:950
 msgid "can't read the words."
-msgstr ""
+msgstr "无法辨识字迹。"
 
 #: ../../script/events/setpieces.js:997
 msgid "a panicked scavenger bursts through the door, screaming."
@@ -1596,9 +1587,8 @@ msgid "only dust and stains remain."
 msgstr ""
 
 #: ../../script/events/setpieces.js:1239
-#, fuzzy
 msgid "A Ruined City"
-msgstr "损毁的陷阱"
+msgstr "被毁灭的城市"
 
 #: ../../script/events/setpieces.js:1243
 msgid ""
@@ -1620,9 +1610,8 @@ msgid "the towers of a decaying city dominate the skyline"
 msgstr ""
 
 #: ../../script/events/setpieces.js:1261
-#, fuzzy
 msgid "the streets are empty."
-msgstr "剩下的人埋葬了他们"
+msgstr "街道空空如也。"
 
 #: ../../script/events/setpieces.js:1262
 msgid "the air is filled with dust, driven relentlessly by the hard winds."
@@ -1653,9 +1642,8 @@ msgstr ""
 #: ../../script/events/setpieces.js:2741 ../../script/events/setpieces.js:2790
 #: ../../script/events/setpieces.js:2835 ../../script/events/setpieces.js:2881
 #: ../../script/events/setpieces.js:2925
-#, fuzzy
 msgid "leave city"
-msgstr "离开洞穴"
+msgstr "离开城市"
 
 #: ../../script/events/setpieces.js:1277
 msgid "orange traffic cones are set across the street, faded and cracked."
@@ -1711,7 +1699,7 @@ msgstr ""
 
 #: ../../script/events/setpieces.js:1505
 msgid "nothing but downcast eyes."
-msgstr ""
+msgstr "仅有低垂的双眼。"
 
 #: ../../script/events/setpieces.js:1506
 msgid "the people here were broken a long time ago."
@@ -1719,7 +1707,7 @@ msgstr ""
 
 #: ../../script/events/setpieces.js:1521
 msgid "empty corridors."
-msgstr ""
+msgstr "空走廊。"
 
 #: ../../script/events/setpieces.js:1522
 msgid "the place has been swept clean by scavengers."
@@ -1734,9 +1722,8 @@ msgid "a thug is waiting on the other side of the wall."
 msgstr ""
 
 #: ../../script/events/setpieces.js:1615
-#, fuzzy
 msgid "a snarling beast jumps out from behind a car."
-msgstr "一只咆哮的野兽从灌木丛里蹿了出来"
+msgstr "一只咆哮的野兽从车后蹿出。"
 
 #: ../../script/events/setpieces.js:1656
 msgid "street above the subway platform is blown away."
@@ -1763,22 +1750,20 @@ msgid "fires burn in the courtyard beyond."
 msgstr ""
 
 #: ../../script/events/setpieces.js:1694
-#, fuzzy
 msgid "more voices can be heard ahead."
-msgstr "古怪的声响透过墙壁传来"
+msgstr "前方可以听见更多的声音。"
 
 #: ../../script/events/setpieces.js:1695
 msgid "they must be here for a reason."
 msgstr ""
 
 #: ../../script/events/setpieces.js:1711
-#, fuzzy
 msgid "the sound of gunfire carries on the wind."
-msgstr "双开门在风中不停地咯吱作响"
+msgstr "开枪的声音破空回荡着。"
 
 #: ../../script/events/setpieces.js:1712
 msgid "the street ahead glows with firelight."
-msgstr ""
+msgstr "灯火照耀着街道。"
 
 #: ../../script/events/setpieces.js:1729
 msgid "more squatters are crowding around now."
@@ -1786,11 +1771,11 @@ msgstr ""
 
 #: ../../script/events/setpieces.js:1730
 msgid "someone throws a stone."
-msgstr ""
+msgstr "有人丢了一块石头。"
 
 #: ../../script/events/setpieces.js:1746
 msgid "an improvised shop is set up on the sidewalk."
-msgstr ""
+msgstr "人行道上设置了一些简易的商店。"
 
 #: ../../script/events/setpieces.js:1747
 #, fuzzy
@@ -1950,7 +1935,7 @@ msgstr ""
 
 #: ../../script/events/setpieces.js:2597
 msgid "the young settler was carrying a canvas sack."
-msgstr ""
+msgstr "年轻的定居者正拿着一只帆布袋。"
 
 #: ../../script/events/setpieces.js:2598
 msgid "it contains travelling gear, and a few trinkets."
@@ -1958,7 +1943,7 @@ msgstr ""
 
 #: ../../script/events/setpieces.js:2599 ../../script/events/setpieces.js:2635
 msgid "there's nothing else here."
-msgstr ""
+msgstr "这里没有其他的东西了。"
 
 #: ../../script/events/setpieces.js:2633
 msgid "inside the hut, a child cries."
@@ -1970,16 +1955,15 @@ msgstr ""
 
 #: ../../script/events/setpieces.js:2674
 msgid "the stench of rot and death fills the operating theatres."
-msgstr ""
+msgstr "腐烂死尸散发的恶臭弥漫了整间手术室。"
 
 #: ../../script/events/setpieces.js:2675
 msgid "a few items are scattered on the ground."
-msgstr ""
+msgstr "地上散落着少许物品。"
 
 #: ../../script/events/setpieces.js:2676
-#, fuzzy
 msgid "there is nothing else here."
-msgstr "水已耗尽"
+msgstr "这里没有其他的东西了。"
 
 #: ../../script/events/setpieces.js:2715
 msgid "a pristine medicine cabinet at the end of a hallway."
@@ -1994,16 +1978,14 @@ msgid "someone had been stockpiling loot here."
 msgstr ""
 
 #: ../../script/events/setpieces.js:2799
-#, fuzzy
 msgid "the tentacular horror is defeated."
-msgstr "凶怪倒下了"
+msgstr "触手怪物被击败了。"
 
 #: ../../script/events/setpieces.js:2800
 msgid "inside, the remains of its victims are everywhere."
 msgstr ""
 
 #: ../../script/events/setpieces.js:2845
-#, fuzzy
 msgid "the warped man lies dead."
 msgstr "憔悴的男子倒下了"
 
@@ -2024,9 +2006,8 @@ msgid "an old house remains here, once white siding yellowed and peeling."
 msgstr ""
 
 #: ../../script/events/setpieces.js:2939
-#, fuzzy
 msgid "the door hangs open."
-msgstr "安静下来了"
+msgstr "门大张着。"
 
 #: ../../script/events/setpieces.js:2941
 #, fuzzy
@@ -2058,9 +2039,8 @@ msgid "a man charges down the hall, a rusty blade in his hand"
 msgstr ""
 
 #: ../../script/events/setpieces.js:3051
-#, fuzzy
 msgid "A Forgotten Battlefield"
-msgstr "战场"
+msgstr "被遗忘的战场"
 
 #: ../../script/events/setpieces.js:3055
 msgid "a battle was fought here, long ago."
@@ -2072,7 +2052,6 @@ msgid ""
 msgstr ""
 
 #: ../../script/events/setpieces.js:3104
-#, fuzzy
 msgid "A Huge Borehole"
 msgstr "巨坑"
 
@@ -2112,7 +2091,6 @@ msgid "salvage"
 msgstr ""
 
 #: ../../script/events/setpieces.js:3156
-#, fuzzy
 msgid "The Sulphur Mine"
 msgstr "硫磺矿"
 
@@ -2129,7 +2107,6 @@ msgid "a military perimeter is set up around the mine."
 msgstr ""
 
 #: ../../script/events/setpieces.js:3166 ../../script/events/setpieces.js:3315
-#, fuzzy
 msgid "attack"
 msgstr "野兽来袭"
 
@@ -2143,9 +2120,8 @@ msgid "run"
 msgstr ""
 
 #: ../../script/events/setpieces.js:3241
-#, fuzzy
 msgid "a second soldier joins the fight."
-msgstr "侦察兵夜宿于此"
+msgstr "有一个士兵加入了战斗。"
 
 #: ../../script/events/setpieces.js:3275
 msgid "a grizzled soldier attacks, waving a bayonet."
@@ -2157,16 +2133,14 @@ msgstr ""
 
 #: ../../script/events/setpieces.js:3287 ../../script/events/setpieces.js:3429
 #: ../../script/events/setpieces.js:3505
-#, fuzzy
 msgid "the mine is now safe for workers."
-msgstr "水已耗尽"
+msgstr "这个矿现在对工人是安全的了。"
 
 #: ../../script/events/setpieces.js:3289
 msgid "the sulphur mine is clear of dangers"
 msgstr ""
 
 #: ../../script/events/setpieces.js:3305
-#, fuzzy
 msgid "The Coal Mine"
 msgstr "煤矿"
 
@@ -2179,14 +2153,12 @@ msgid "men mill about, weapons at the ready."
 msgstr ""
 
 #: ../../script/events/setpieces.js:3312
-#, fuzzy
 msgid "this old mine is not abandoned"
-msgstr "士兵倒下了"
+msgstr "这个旧矿没有被废弃"
 
 #: ../../script/events/setpieces.js:3344 ../../script/events/setpieces.js:3378
-#, fuzzy
 msgid "a man joins the fight"
-msgstr "陌生人在夜里抵达"
+msgstr "一个男人加入了战斗"
 
 #: ../../script/events/setpieces.js:3417
 msgid "only the chief remains."
@@ -2201,7 +2173,6 @@ msgid "the coal mine is clear of dangers"
 msgstr ""
 
 #: ../../script/events/setpieces.js:3447
-#, fuzzy
 msgid "The Iron Mine"
 msgstr "铁矿"
 
@@ -2229,23 +2200,20 @@ msgid "a large creature lunges, muscles rippling in the torchlight"
 msgstr ""
 
 #: ../../script/events/setpieces.js:3504
-#, fuzzy
 msgid "the beast is dead."
-msgstr "咆哮的野兽倒下了"
+msgstr "野兽死亡了。"
 
 #: ../../script/events/setpieces.js:3507
 msgid "the iron mine is clear of dangers"
 msgstr ""
 
 #: ../../script/events/setpieces.js:3524
-#, fuzzy
 msgid "A Destroyed Village"
-msgstr "中型村落"
+msgstr "被摧毁的村落"
 
 #: ../../script/events/setpieces.js:3528
-#, fuzzy
 msgid "a destroyed village lies in the dust."
-msgstr "陌生人在夜里抵达"
+msgstr "被尘土掩埋的村落。"
 
 #: ../../script/events/setpieces.js:3529
 msgid "charred bodies litter the ground."
