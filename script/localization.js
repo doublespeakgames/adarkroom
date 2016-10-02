@@ -65,5 +65,5 @@
 		_('the compass points southwest')
 	]; 
 
-	delete keywords;
+	keywords = null;
 })();
