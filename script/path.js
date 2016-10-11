@@ -175,11 +175,13 @@ var Path = {
 		for(var k in carryable) {
 			var lk = _(k);
 			var store = carryable[k];
-			var have = $SM.get('stores["'+k+'"]', true);
+			var have = $SM.get('stores["'+k+'"]');
 			var num = Path.outfit[k];
 			num = typeof num == 'number' ? num : 0;
-			if (have < num) { num = have; }
-			$SM.set('outfit["'+k+'"]', num, true);
+			if (have !== undefined) {
+				if (have < num) { num = have; }
+				$SM.set(k, num, true);
+			}
 
 			var row = $('div#outfit_row_' + k.replace(' ', '-'), outfit);
 			if((store.type == 'tool' || store.type == 'weapon') && have > 0) {
