@@ -339,14 +339,13 @@ msgstr "fechar"
 msgid "lights on."
 msgstr "acender luzes."
 
-#: script/engine.js:493
+#: script/engine.js:520
 msgid "Go Hyper?"
-msgstr ""
+msgstr "Alternar para Hyper?"
 
-#: script/engine.js:496
-msgid ""
-"turning hyper mode speeds up the game to x2 speed. do you want to do that?"
-msgstr ""
+#: script/engine.js:523
+msgid "turning hyper mode speeds up the game to x2 speed. do you want to do that?"
+msgstr "alternar para o modo hyper deixa o jogo 2x mais rápido. você quer fazer isso?"
 
 #: script/engine.js:519
 msgid "classic."
@@ -1144,7 +1143,7 @@ msgstr "rugindo"
 
 #: script/room.js:604
 msgid "A Firelit Room"
-msgstr "Uma Quarto Aceso"
+msgstr "Um Quarto Aceso"
 
 #: script/room.js:642
 msgid "not enough wood to get the fire going"
@@ -3308,7 +3307,7 @@ msgstr "uma grande criatura dá o bote, os músculos ondulando à luz da tocha"
 
 #: script/events/setpieces.js:3504
 msgid "the beast is dead."
-msgstr "a fera está morto."
+msgstr "a fera está morta."
 
 #: script/events/setpieces.js:3507
 msgid "the iron mine is clear of dangers"
