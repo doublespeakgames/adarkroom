@@ -5,7 +5,7 @@ Events.Room = [
 	{ /* The Nomad  --  Merchant */
 		title: _('The Nomad'),
 		isAvailable: function() {
-			return Engine.activeModule == Room && $SM.get('stores.fur', true) > 0;
+			return Engine.activeModule == Room && $SM.get('stores.fur', true) >= 5;
 		},
 		scenes: {
 			'start': {
@@ -40,7 +40,7 @@ Events.Room = [
 						cost: { fur: 300, scales: 15, teeth: 5 },
 						reward: { 'compass': 1 },
 						notification: _('the old compass is dented and dusty, but it looks to work.')
-					}, 
+					},
 					'goodbye': {
 						text: _('say goodbye'),
 						nextScene: 'end'
@@ -48,7 +48,7 @@ Events.Room = [
 				}
 			}
 		}
-	}, 
+	},
 	{ /* Noises Outside  --  gain wood/fur */
 		title: _('Noises'),
 		isAvailable: function() {
@@ -189,7 +189,7 @@ Events.Room = [
 	{ /* The Beggar  --  trade fur for better good */
 		title: _('The Beggar'),
 		isAvailable: function() {
-			return Engine.activeModule == Room && $SM.get('stores.fur');
+			return Engine.activeModule == Room && $SM.get('stores.fur') >= 50;
 		},
 		scenes: {
 			start: {
@@ -257,11 +257,11 @@ Events.Room = [
 			}
 		}
 	},
-	
+
 	{ /* Mysterious Wanderer  --  wood gambling */
 		title: _('The Mysterious Wanderer'),
 		isAvailable: function() {
-			return Engine.activeModule == Room && $SM.get('stores.wood');
+			return Engine.activeModule == Room && $SM.get('stores.wood') >= 100;
 		},
 		scenes: {
 			start: {
@@ -336,11 +336,11 @@ Events.Room = [
 			}
 		}
 	},
-	
+
 	{ /* Mysterious Wanderer  --  fur gambling */
 		title: _('The Mysterious Wanderer'),
 		isAvailable: function() {
-			return Engine.activeModule == Room && $SM.get('stores.fur');
+			return Engine.activeModule == Room && $SM.get('stores.fur') >= 100;
 		},
 		scenes: {
 			start: {
@@ -415,11 +415,12 @@ Events.Room = [
 			}
 		}
 	},
-	
+
 	{ /* The Scout  --  Map Merchant */
 		title: _('The Scout'),
 		isAvailable: function() {
-			return Engine.activeModule == Room && $SM.get('features.location.world');
+			return Engine.activeModule == Room && $SM.get('features.location.world') && $SM.get('stores.fur') >= 200
+			 && $SM.get('stores.scales') >= 10;
 		},
 		scenes: {
 			'start': {
@@ -457,11 +458,12 @@ Events.Room = [
 			}
 		}
 	},
-	
+
 	{ /* The Wandering Master */
 		title: _('The Master'),
 		isAvailable: function() {
-			return Engine.activeModule == Room && $SM.get('features.location.world');
+			return Engine.activeModule == Room && $SM.get('features.location.world') && $SM.get('stores.cured meat') >=100
+			 && $SM.get('stores.fur') >=100 && $SM.get('stores.torch') >=1;
 		},
 		scenes: {
 			'start': {
@@ -530,7 +532,7 @@ Events.Room = [
 			}
 		}
 	},
-		
+
 	{ /* The Sick Man */
 		title: _('The Sick Man'),
 		isAvailable: function() {
