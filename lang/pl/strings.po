@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ADR\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-12-22 13:35-0600\n"
+"POT-Creation-Date: 2016-12-09 10:21+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Sebastian <admin@itunix.eu>\n"
 "Language-Team: \n"
@@ -10,19 +10,19 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.6\n"
+"X-Generator: Poedit 1.8.11\n"
 
 #: script/dropbox.js:62
 msgid "Dropbox connection"
-msgstr ""
+msgstr "połączenie z Dropbox"
 
 #: script/dropbox.js:65
 msgid "connect game to dropbox local storage"
-msgstr ""
+msgstr "połącz grę z lokalnym nośnikiem dropobx"
 
 #: script/dropbox.js:68
 msgid "connect"
-msgstr ""
+msgstr "połącz"
 
 #: script/dropbox.js:75 script/dropbox.js:107 script/dropbox.js:133
 #: script/dropbox.js:163 script/engine.js:285 script/engine.js:331
@@ -41,46 +41,43 @@ msgstr "eksportuj lub importuj zapisy, aby stworzyć kopię zapasową,"
 
 #: script/dropbox.js:90
 msgid "your are connected to dropbox with account / email "
-msgstr ""
+msgstr "jesteś połączony z dropbox za pomocą konta / email"
 
 #: script/dropbox.js:93
-#, fuzzy
 msgid "save"
-msgstr "zapisz."
+msgstr "zapisz"
 
 #: script/dropbox.js:97
 msgid "load"
-msgstr ""
+msgstr "wczytaj"
 
 #: script/dropbox.js:102
-#, fuzzy
 msgid "signout"
-msgstr "zignoruj to"
+msgstr "wyloguj"
 
 #: script/dropbox.js:113
 msgid "choose one slot to save to"
-msgstr ""
+msgstr "wybierz miejsce do zapisu"
 
 #: script/dropbox.js:119
-#, fuzzy
 msgid "save to slot"
-msgstr "zapisz to."
+msgstr "zapisz tu"
 
 #: script/dropbox.js:141
 msgid "choose one slot to load from"
-msgstr ""
+msgstr "wybierz z którego miejsca odczytać"
 
 #: script/dropbox.js:148
 msgid "load from slot"
-msgstr ""
+msgstr "wczytaj z tego miejsca"
 
 #: script/dropbox.js:179
 msgid "successfully saved to dropbox datastorage"
-msgstr ""
+msgstr "zapis do dropbox zakończony sukcesem"
 
 #: script/dropbox.js:180
 msgid "error while saving to dropbox datastorage"
-msgstr ""
+msgstr "zapis do dropbox zakończony niepowodzeniem"
 
 #: script/dropbox.js:183
 msgid "ok"
@@ -176,7 +173,7 @@ msgstr "precyzyjny"
 
 #: script/engine.js:53
 msgid "land blows more often"
-msgstr "grunt wybucha coraz częściej"
+msgstr "ciosy trafiają częściej"
 
 #: script/engine.js:54
 msgid "learned to predict their movement"
@@ -228,7 +225,7 @@ msgstr "zgaś światła."
 
 #: script/engine.js:150 script/engine.js:521
 msgid "hyper."
-msgstr ""
+msgstr "hiper."
 
 #: script/engine.js:156 script/space.js:442
 msgid "restart."
@@ -344,16 +341,16 @@ msgstr "włącz światło."
 
 #: script/engine.js:493
 msgid "Go Hyper?"
-msgstr ""
+msgstr "Wejść w Hiper?"
 
 #: script/engine.js:496
 msgid ""
 "turning hyper mode speeds up the game to x2 speed. do you want to do that?"
-msgstr ""
+msgstr "włączenie trybu hiper przyspiesza grę x2. czy chcesz to zrobić?"
 
 #: script/engine.js:519
 msgid "classic."
-msgstr ""
+msgstr "klasyczny."
 
 #: script/engine.js:620
 msgid "{0} per {1}s"
@@ -369,11 +366,11 @@ msgstr "użyj medykamentów"
 
 #: script/events.js:350 script/events.js:395
 msgid "miss"
-msgstr ""
+msgstr "pudło"
 
 #: script/events.js:363 script/events.js:408
 msgid "stunned"
-msgstr ""
+msgstr "ogłuszony"
 
 #: script/events.js:482 script/events.js:653 script/events/global.js:42
 #: script/events/global.js:59 script/events/room.js:142
@@ -394,7 +391,7 @@ msgstr "odejdź"
 
 #: script/events.js:511
 msgid "drop:"
-msgstr ""
+msgstr "upuść:"
 
 #: script/events.js:536 script/events/room.js:523
 msgid "nothing"
@@ -415,11 +412,11 @@ msgstr "nic"
 
 #: script/events.js:627
 msgid "all"
-msgstr ""
+msgstr "wszystko"
 
 #: script/events.js:649
 msgid "take everything"
-msgstr ""
+msgstr "weż wszystko"
 
 #: script/events.js:653 script/outside.js:627
 msgid " and "
@@ -427,7 +424,7 @@ msgstr " i "
 
 #: script/events.js:896
 msgid "*** EVENT ***"
-msgstr ""
+msgstr "*** WYDARZENIE ***"
 
 #: script/localization.js:4
 msgid "saved."
@@ -513,7 +510,7 @@ msgstr "garbarz"
 
 #: script/localization.js:24
 msgid "grenade"
-msgstr ""
+msgstr "granat"
 
 #: script/localization.js:25
 msgid "bolas"
@@ -521,7 +518,7 @@ msgstr ""
 
 #: script/localization.js:26
 msgid "bayonet"
-msgstr ""
+msgstr "bagnet"
 
 #: script/localization.js:27 script/outside.js:46
 msgid "charcutier"
@@ -640,49 +637,40 @@ msgid "not enough leather"
 msgstr "za mało skóry"
 
 #: script/localization.js:57
-#, fuzzy
 msgid "not enough meat"
-msgstr "za mało skóry"
+msgstr "za mało mięsa"
 
 #: script/localization.js:58
-#, fuzzy
 msgid "the compass points east"
-msgstr "kompas wskazuje wschód."
+msgstr "kompas wskazuje wschód"
 
 #: script/localization.js:59
-#, fuzzy
 msgid "the compass points west"
-msgstr "kompas wskazuje zachód."
+msgstr "kompas wskazuje zachód"
 
 #: script/localization.js:60
-#, fuzzy
 msgid "the compass points north"
-msgstr "kompas wskazuje północ."
+msgstr "kompas wskazuje północ"
 
 #: script/localization.js:61
-#, fuzzy
 msgid "the compass points south"
-msgstr "kompas wskazuje południe."
+msgstr "kompas wskazuje południe"
 
 #: script/localization.js:62
-#, fuzzy
 msgid "the compass points northeast"
-msgstr "kompas wskazuje północy-wschód."
+msgstr "kompas wskazuje północy-wschód"
 
 #: script/localization.js:63
-#, fuzzy
 msgid "the compass points northwest"
-msgstr "kompas wskazuje na północny zachód."
+msgstr "kompas wskazuje północny zachód"
 
 #: script/localization.js:64
-#, fuzzy
 msgid "the compass points southeast"
-msgstr "kompas wskazuje na południowy wschód."
+msgstr "kompas wskazuje południowy wschód"
 
 #: script/localization.js:65
-#, fuzzy
 msgid "the compass points southwest"
-msgstr "kompas wskazuje na południowy zachód."
+msgstr "kompas wskazuje południowy zachód"
 
 #: script/outside.js:5
 msgid "Outside"
@@ -710,7 +698,7 @@ msgstr "podarte ubrania"
 
 #: script/outside.js:127
 msgid "a crudely made charm"
-msgstr "słabo wykonany talizman"
+msgstr "topornie wykonany talizman"
 
 #: script/outside.js:143 script/outside.js:562
 msgid "A Silent Forest"
@@ -726,7 +714,7 @@ msgstr "nieznajomy przybywa w nocy"
 
 #: script/outside.js:190
 msgid "a weathered family takes up in one of the huts."
-msgstr "zmęczona rodzina osiada w jednym z szałasów"
+msgstr "zmęczona rodzina osiada w jednej z chat"
 
 #: script/outside.js:192
 msgid "a small group arrives, all dust and bones."
@@ -754,7 +742,7 @@ msgstr "las"
 
 #: script/outside.js:460
 msgid "village"
-msgstr ""
+msgstr "wioska"
 
 #: script/outside.js:543
 msgid "check traps"
@@ -762,7 +750,7 @@ msgstr "sprawdź pułapki"
 
 #: script/outside.js:564
 msgid "A Lonely Hut"
-msgstr "Samotny szałas"
+msgstr "Samotna chata"
 
 #: script/outside.js:566
 msgid "A Tiny Village"
@@ -802,11 +790,11 @@ msgstr "zasoby:"
 
 #: script/path.js:43
 msgid "embark"
-msgstr "wsiądź na statek"
+msgstr "wyrusz w drogę"
 
 #: script/path.js:60 script/room.js:1153
 msgid "the compass points "
-msgstr "kompas wskazuje na "
+msgstr "kompas wskazuje "
 
 #: script/path.js:102
 msgid "perks:"
@@ -826,7 +814,7 @@ msgstr "woda"
 
 #: script/path.js:229 script/world.js:290
 msgid "free {0}/{1}"
-msgstr "wolny {0}/{1}"
+msgstr "wolne {0}/{1}"
 
 #: script/path.js:253
 msgid "weight"
@@ -854,7 +842,7 @@ msgstr "więcej pułapek do złapania większej ilości zwierząt"
 
 #: script/room.js:21
 msgid "more traps won't help now"
-msgstr "większa ilość pułapek teraz nie pomoże"
+msgstr "większa ilość pułapek już nie pomoże"
 
 #: script/room.js:31
 msgid "cart"
@@ -870,7 +858,7 @@ msgstr "rozklekotany wózek pozwoli wozić więcej drzew z lasu"
 
 #: script/room.js:44
 msgid "hut"
-msgstr "szałas"
+msgstr "chata"
 
 #: script/room.js:47
 msgid "builder says there are more wanderers. says they'll work, too."
@@ -879,15 +867,15 @@ msgstr ""
 
 #: script/room.js:48
 msgid "builder puts up a hut, out in the forest. says word will get around."
-msgstr "budowniczy stawia szałas w lesie. wieść się rozniesie."
+msgstr "budowniczy stawia chatę w lesie. wieść się rozniesie."
 
 #: script/room.js:49
 msgid "no more room for huts."
-msgstr "nie ma więcej miejsca dla szałasów."
+msgstr "nie ma więcej miejsca na chaty."
 
 #: script/room.js:59
 msgid "lodge"
-msgstr "szałas myśliwski"
+msgstr "domek myśliwski"
 
 #: script/room.js:62
 msgid "villagers could help hunt, given the means"
@@ -895,7 +883,7 @@ msgstr "mieszkańcy mogliby pomóc w polowaniu, gdyby dano im środki ku temu"
 
 #: script/room.js:63
 msgid "the hunting lodge stands in the forest, a ways out of town"
-msgstr "szałas myśliwski zbudowany w lesie poza miastem"
+msgstr "domek myśliwski zbudowany w lesie poza miastem"
 
 #: script/room.js:74
 msgid "trading post"
@@ -1215,7 +1203,7 @@ msgstr "bronie"
 
 #: script/room.js:914
 msgid "total"
-msgstr ""
+msgstr "razem"
 
 #: script/room.js:935 script/room.js:979
 msgid "not enough "
@@ -1749,7 +1737,7 @@ msgstr "las jest cicho."
 
 #: script/events/outside.js:40
 msgid "nothing was found"
-msgstr ""
+msgstr "nic nie znaleziono"
 
 #: script/events/outside.js:43 script/events/outside.js:61
 #: script/events/outside.js:126 script/events/outside.js:144
@@ -1775,32 +1763,31 @@ msgstr "warcząca bestia jest martwa."
 
 #: script/events/outside.js:69
 msgid "Fire"
-msgstr ""
+msgstr "Ogień"
 
 #: script/events/outside.js:76
 msgid "a fire rampages through one of the huts, destroying it."
-msgstr ""
+msgstr "ogień trawi jedną z chat. zostają zgliszcza."
 
 #: script/events/outside.js:77
 msgid "all residents in the hut perished in the fire."
-msgstr ""
+msgstr "wszyscy mieszkańcy chaty zginęli w płomieniach."
 
 #: script/events/outside.js:79
 msgid "a fire has started"
-msgstr ""
+msgstr "wybuchł pożar"
 
 #: script/events/outside.js:86
-#, fuzzy
 msgid "mourn"
-msgstr "zbroja"
+msgstr "opłakuj"
 
 #: script/events/outside.js:87
 msgid "some villagers have died"
-msgstr ""
+msgstr "kilku mieszkańców zginęło"
 
 #: script/events/outside.js:95
 msgid "Sickness"
-msgstr "choroba"
+msgstr "Choroba"
 
 #: script/events/outside.js:102
 msgid "a sickness is spreading through the village."
@@ -1812,7 +1799,7 @@ msgstr "leki są natychmiast potrzebne."
 
 #: script/events/outside.js:105
 msgid "some villagers are ill"
-msgstr ""
+msgstr "kilku mieszkańców wsi jest chorych"
 
 #: script/events/outside.js:109
 msgid "1 medicine"
@@ -1828,7 +1815,7 @@ msgstr "choroba została uleczona na czas."
 
 #: script/events/outside.js:123
 msgid "sufferers are healed"
-msgstr ""
+msgstr "cierpiący są leczeni"
 
 #: script/events/outside.js:133
 msgid "the sickness spreads through the village."
@@ -1844,25 +1831,23 @@ msgstr "nocami słychać krzyki"
 
 #: script/events/outside.js:137
 msgid "sufferers are left to die"
-msgstr ""
+msgstr "cierpiący pozostawieni na śmierć"
 
 #: script/events/outside.js:153
 msgid "Plague"
-msgstr "plaga"
+msgstr "Zaraza"
 
 #: script/events/outside.js:160
 msgid "a terrible plague is fast spreading through the village."
-msgstr "okropna plaga szybko rozprzestrzenia się po wiosce."
+msgstr "okropna zaraza szybko rozprzestrzenia się po wiosce."
 
 #: script/events/outside.js:163
-#, fuzzy
 msgid "a plague afflicts the village"
-msgstr "plaga sieje zamęt w wiosce."
+msgstr "w wiosce wybucha zaraza"
 
 #: script/events/outside.js:168
-#, fuzzy
 msgid "buy medicine"
-msgstr "1 lek"
+msgstr "kup lekarstwo"
 
 #: script/events/outside.js:174
 msgid "5 medicine"
@@ -1874,7 +1859,7 @@ msgstr "nic nie rób"
 
 #: script/events/outside.js:186
 msgid "the plague is kept from spreading."
-msgstr "plaga nie rozprzestrzenia się."
+msgstr "zaraza nie rozprzestrzenia się."
 
 #: script/events/outside.js:187
 msgid "only a few die."
@@ -1886,11 +1871,11 @@ msgstr "reszta ich chowa pod ziemię."
 
 #: script/events/outside.js:190
 msgid "epidemic is eradicated eventually"
-msgstr ""
+msgstr "epidemia w końcu opanowana"
 
 #: script/events/outside.js:204
 msgid "the plague rips through the village."
-msgstr "plaga sieje zamęt w wiosce."
+msgstr "zaraza sieje zamęt w wiosce."
 
 #: script/events/outside.js:206
 msgid "the only hope is a quick death."
@@ -1898,7 +1883,7 @@ msgstr "jedyną nadzieją jest szybka śmierć."
 
 #: script/events/outside.js:208
 msgid "population is almost exterminated"
-msgstr ""
+msgstr "ludność jest na krawędzi wymarcia"
 
 #: script/events/outside.js:224
 msgid "A Beast Attack"
@@ -1918,11 +1903,11 @@ msgstr "mieszkańcy wioski wycofują się, aby opłakiwać zmarłych."
 
 #: script/events/outside.js:235
 msgid "wild beasts attack the villagers"
-msgstr ""
+msgstr "dzikie bestii atakują mieszkańców wsi"
 
 #: script/events/outside.js:249
 msgid "predators become prey. price is unfair"
-msgstr ""
+msgstr "łowczy stają się ofiarą. cena jest wysoka"
 
 #: script/events/outside.js:258
 msgid "A Military Raid"
@@ -1941,13 +1926,12 @@ msgid "after a skirmish they are driven away, but not without losses."
 msgstr "po potyczce zostają oni przegonieni, ale nie bez strat."
 
 #: script/events/outside.js:269
-#, fuzzy
 msgid "troops storm the village"
-msgstr "plaga sieje zamęt w wiosce."
+msgstr "żołnierze szturmują wieś"
 
 #: script/events/outside.js:283
 msgid "warfare is bloodthirsty"
-msgstr ""
+msgstr "wojowanie wymaga rozlewu krwi"
 
 #: script/events/room.js:6
 msgid "The Nomad"
@@ -1957,7 +1941,7 @@ msgstr "Koczownik"
 msgid ""
 "a nomad shuffles into view, laden with makeshift bags bound with rough twine."
 msgstr ""
-"na twoich oczach pojawia się koczownik, noszący improwizowane worki "
+"na twoich oczach pojawia się koczownik, noszący improwizowane sakwy "
 "przewiązane sznurami."
 
 #: script/events/room.js:14
@@ -1993,13 +1977,12 @@ msgid "the old compass is dented and dusty, but it looks to work."
 msgstr ""
 "stary kompas jest wyszczerbiony i zakurzony, ale wygląda na to, że działa"
 
-#: script/events/room.js:45 script/events/room.js:227
-#: script/events/room.js:240 script/events/room.js:253
-#: script/events/room.js:309 script/events/room.js:332
-#: script/events/room.js:388 script/events/room.js:411
-#: script/events/room.js:450 script/events/room.js:568
-#: script/events/room.js:584 script/events/room.js:600
-#: script/events/room.js:611
+#: script/events/room.js:45 script/events/room.js:227 script/events/room.js:240
+#: script/events/room.js:253 script/events/room.js:309
+#: script/events/room.js:332 script/events/room.js:388
+#: script/events/room.js:411 script/events/room.js:450
+#: script/events/room.js:568 script/events/room.js:584
+#: script/events/room.js:600 script/events/room.js:611
 msgid "say goodbye"
 msgstr "pożegnaj się"
 
@@ -2760,8 +2743,7 @@ msgstr ""
 #: script/events/setpieces.js:1294
 msgid "faces, darkened by soot and blood, stare out from crooked huts."
 msgstr ""
-"twarze, ściemnione przez sadzę i krew, wyglądają z krzywo zbudowanych "
-"szałasów."
+"twarze, ściemnione przez sadzę i krew, wyglądają z krzywo zbudowanych chat."
 
 #: script/events/setpieces.js:1309
 msgid "the shell of an abandoned hospital looms ahead."
@@ -2949,7 +2931,7 @@ msgstr "młodzieniec wyskakuje, trzymając w ręku gałąź."
 
 #: script/events/setpieces.js:2235
 msgid "a squatter stands firmly in the doorway of a small hut."
-msgstr "skwater stoi bacznie w przejściu do małego szałasu."
+msgstr "skwater stoi bacznie w przejściu do małej chaty."
 
 #: script/events/setpieces.js:2270
 msgid "behind the door, a deformed figure awakes and attacks."
@@ -3053,7 +3035,7 @@ msgstr "nie ma tutaj nic więcej."
 
 #: script/events/setpieces.js:2633
 msgid "inside the hut, a child cries."
-msgstr "w środku szałasu płacze dziecko."
+msgstr "w środku chaty płacze dziecko."
 
 #: script/events/setpieces.js:2634
 msgid "a few belongings rest against the walls."
