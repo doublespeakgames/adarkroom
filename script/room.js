@@ -893,7 +893,8 @@ var Room = {
 		$('div.storeRow', stores).each(function(index, el) {
 			el = $(el);
 			$('div.tooltip', el).remove();
-			var tt = $('<div>').addClass('tooltip bottom right');
+			var ttPos = index > 10 ? 'top right' : 'bottom right';
+			var tt = $('<div>').addClass('tooltip ' + ttPos);
 			var storeName = el.attr('id').substring(4).replace('-', ' ');
 			for(var incomeSource in $SM.get('income')) {
 				var income = $SM.get('income["'+incomeSource+'"]');
@@ -1117,7 +1118,8 @@ var Room = {
 						cost: good.cost(),
 						text: _(k),
 						click: Room.buy,
-						width: '80px'
+						width: '80px',
+						ttPos: buySection.children().length > 10 ? 'top right' : 'bottom right'
 					}).css('opacity', 0).attr('buildThing', k).appendTo(buySection).animate({opacity:1}, 300, 'linear');
 				}
 			} else {
@@ -1152,7 +1154,8 @@ var Room = {
 	},
 	
 	compassTooltip: function(direction){
-		var tt = $('<div>').addClass('tooltip bottom right');
+		var ttPos = $('div#resources').children().length > 10 ? 'top right' : 'bottom right';
+		var tt = $('<div>').addClass('tooltip ' + ttPos);
 		$('<div>').addClass('row_key').text(_('the compass points '+ direction)).appendTo(tt);
 		tt.appendTo($('#row_compass'));
 	},
