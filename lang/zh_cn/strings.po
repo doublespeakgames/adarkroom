@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: adarkroom\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2016-11-01 20:13-0400\n"
-"PO-Revision-Date: 2016-11-01 20:24-0400\n"
+"PO-Revision-Date: 2017-01-04 14:57+0800\n"
 "Last-Translator: crafteverywhere <1196377271@qq.com>\n"
 "Language-Team: WhiteGem\n"
 "Language: zh_CN\n"
@@ -92,7 +92,7 @@ msgstr "拳击手"
 
 #: script/engine.js:16
 msgid "punches do more damage"
-msgstr "徒手造成更多伤害"
+msgstr "徒手伤害翻倍"
 
 #: script/engine.js:18
 msgid "learned to throw punches with purpose"
@@ -157,7 +157,7 @@ msgstr "不喝水能坚持走的距离翻倍"
 
 #: script/engine.js:44
 msgid "learned to love the dry air"
-msgstr "学会去爱这干燥的空气"
+msgstr "热点算什么"
 
 #: script/engine.js:47
 msgid "evasive"
@@ -165,11 +165,11 @@ msgstr "避实就虚"
 
 #: script/engine.js:48
 msgid "dodge attacks more effectively"
-msgstr "更高效地闪避袭击"
+msgstr "更有效的闪避攻击"
 
 #: script/engine.js:49
 msgid "learned to be where they're not"
-msgstr "学会了闪到对手打不着的地方"
+msgstr "学会了闪避攻击"
 
 #: script/engine.js:52
 msgid "precise"
@@ -194,7 +194,7 @@ msgstr "看得更远"
 
 #: script/engine.js:59
 msgid "learned to look ahead"
-msgstr "学会往前看"
+msgstr "强化视野"
 
 #: script/engine.js:62
 msgid "stealthy"
@@ -226,7 +226,7 @@ msgstr "应用商店."
 
 #: script/engine.js:144 script/engine.js:485
 msgid "lights off."
-msgstr "熄灯."
+msgstr "夜间模式"
 
 #: script/engine.js:150 script/engine.js:521
 msgid "hyper."
@@ -1234,7 +1234,7 @@ msgstr "点火起飞"
 msgid ""
 "somewhere above the debris cloud, the wanderer fleet hovers. been on this "
 "rock too long."
-msgstr "碎云之上不知处，流浪者的舰队正盘旋.已经在这块大岩石上待得太久了"
+msgstr "在碎片云上方的某处，流浪者舰队徘徊。 在这个岩石上太久了。"
 
 #: script/ship.js:106 script/ship.js:119
 msgid "not enough alien alloy"
@@ -1246,7 +1246,7 @@ msgstr "准备好要离开了吗?"
 
 #: script/ship.js:138
 msgid "time to get out of this place. won't be coming back."
-msgstr "是时候离开这里了.再也不会回头"
+msgstr "是时候离开这里了.不能回头."
 
 #: script/ship.js:150
 msgid "linger"
@@ -1394,7 +1394,7 @@ msgstr "{0}:{1}"
 
 #: script/world.js:349
 msgid "dangerous to be this far from the village without proper protection"
-msgstr "没有妥善防护离开村子这么远很危险"
+msgstr "没有妥善防护离开村子,远行很危险"
 
 #: script/world.js:351
 msgid "safer here"
@@ -1475,11 +1475,11 @@ msgstr "咆哮的野兽"
 
 #: script/events/encounters.js:16
 msgid "the snarling beast is dead"
-msgstr "咆哮的野兽倒下了"
+msgstr "野兽倒下了"
 
 #: script/events/encounters.js:39
 msgid "a snarling beast leaps out of the underbrush"
-msgstr "一只咆哮的野兽从灌木丛里蹿了出来"
+msgstr "一只野兽从灌木丛里蹿了出来"
 
 #: script/events/encounters.js:44
 msgid "A Gaunt Man"
@@ -1660,11 +1660,11 @@ msgstr "村民们将盗贼绞死，高挂在仓库门前"
 #: script/events/global.js:33
 msgid ""
 "the point is made. in the next few days, the missing supplies are returned."
-msgstr "此举卓有成效.数日后，遗失的物资都被还了回来"
+msgstr "此举卓有成效.数日后,遗失的物资都被还了回来"
 
 #: script/events/global.js:49
 msgid "the man says he's grateful. says he won't come around any more."
-msgstr "这家伙感激涕零，说他再也不会来行窃了"
+msgstr "这家伙感激涕零,说他再也不会来行窃了"
 
 #: script/events/global.js:50
 msgid "shares what he knows about sneaking before he goes."
@@ -1723,21 +1723,18 @@ msgid "it puts up little resistance before the knife."
 msgstr "它无力挣扎任人宰割"
 
 #: script/events/outside.js:53
-#, fuzzy
 msgid "there was a beast. it's dead now"
-msgstr "咆哮的野兽倒下了"
+msgstr "野兽死了"
 
 #: script/events/outside.js:69
 msgid "Fire"
 msgstr "着火了"
 
 #: script/events/outside.js:76
-#, fuzzy
 msgid "a fire rampages through one of the huts, destroying it."
-msgstr "你的小屋要起火了,扑灭它"
+msgstr "你的小屋要起火了,快扑灭它"
 
 #: script/events/outside.js:77
-#, fuzzy
 msgid "all residents in the hut perished in the fire."
 msgstr "不幸的是,屋内的所有人都死于火灾中"
 
@@ -1746,7 +1743,6 @@ msgid "a fire has started"
 msgstr "火灾已经开始"
 
 #: script/events/outside.js:86
-#, fuzzy
 msgid "mourn"
 msgstr "护甲"
 
@@ -1767,7 +1763,6 @@ msgid "medicine is needed immediately."
 msgstr "亟需药剂"
 
 #: script/events/outside.js:105
-#, fuzzy
 msgid "some villagers are ill"
 msgstr "有一些村民死掉了"
 
@@ -1812,7 +1807,6 @@ msgid "a terrible plague is fast spreading through the village."
 msgstr "可怕的黑死病迅速地在村子里传播开来"
 
 #: script/events/outside.js:163
-#, fuzzy
 msgid "a plague afflicts the village"
 msgstr "黑死病席卷村落"
 
@@ -2498,164 +2492,159 @@ msgstr "绿草在肮脏的窗户后几乎看不见"
 
 #: script/events/setpieces.js:618
 msgid "a small cache of supplies is tucked inside a rusting locker."
-msgstr ""
+msgstr "一份补给品被塞进一个生锈的柜子里."
 
 #: script/events/setpieces.js:680
 msgid "a scavenger waits just inside the door."
-msgstr ""
+msgstr "门的后面有一位拾荒者."
 
 #: script/events/setpieces.js:714
 msgid "a beast stands alone in an overgrown park."
-msgstr ""
+msgstr "一只野兽在一个杂草丛生的公园中央。"
 
 #: script/events/setpieces.js:730
 msgid "an overturned caravan is spread across the pockmarked street."
-msgstr ""
+msgstr "蜿蜒曲折的街道上.一支忙碌的商队正在整理翻到的马车."
 
 #: script/events/setpieces.js:731
 msgid ""
 "it's been picked over by scavengers, but there's still some things worth "
 "taking."
-msgstr ""
+msgstr "这里已经被拾荒者光顾过了.但是细心点还是能找到点什么"
 
 #: script/events/setpieces.js:793
 msgid "a madman attacks, screeching."
-msgstr ""
+msgstr "一个男人疯狂的尖叫并攻击你"
 
 #: script/events/setpieces.js:832
 msgid "a thug moves out of the shadows."
-msgstr ""
+msgstr "一个暴徒慢慢走出阴影."
 
 #: script/events/setpieces.js:866
-#, fuzzy
 msgid "a beast charges out of a ransacked classroom."
-msgstr "一头巨兽冲出黑暗"
+msgstr "一头巨兽冲出教师"
 
 #: script/events/setpieces.js:882
-#, fuzzy
 msgid "through the large gymnasium doors, footsteps can be heard."
-msgstr "嘈杂声透墙传来"
+msgstr "通过体育馆门,可以听到脚步声"
 
 #: script/events/setpieces.js:883
 msgid "the torchlight casts a flickering glow down the hallway."
-msgstr ""
+msgstr "火炬在走廊上闪烁着光芒."
 
 #: script/events/setpieces.js:884
-#, fuzzy
 msgid "the footsteps stop."
-msgstr "安静下来了"
+msgstr "脚步停止"
 
 #: script/events/setpieces.js:917
 msgid "another beast, draw by the noise, leaps out of a copse of trees."
-msgstr ""
+msgstr "从树丛里跳出一只野兽. 浓重的鼻息."
 
 #: script/events/setpieces.js:933
 msgid "something's causing a commotion a ways down the road."
-msgstr ""
+msgstr "前面的路上有什么引起了骚动."
 
 #: script/events/setpieces.js:934
 msgid "a fight, maybe."
-msgstr ""
+msgstr "也许是在打架"
 
 #: script/events/setpieces.js:949
 msgid ""
 "a small basket of food is hidden under a park bench, with a note attached."
-msgstr ""
+msgstr "一个小篮子食物被掩藏在公园长椅下,上面有张字条"
 
 #: script/events/setpieces.js:950
 msgid "can't read the words."
-msgstr ""
+msgstr "不认识的字"
 
 #: script/events/setpieces.js:997
 msgid "a panicked scavenger bursts through the door, screaming."
-msgstr ""
+msgstr "拾荒者突然尖叫着穿过了门"
 
 #: script/events/setpieces.js:1036
 msgid "a man stands over a dead wanderer. notices he's not alone."
-msgstr ""
+msgstr "一个人站在尸体旁边.他不再孤单一人"
 
 #: script/events/setpieces.js:1052
 msgid "scavenger had a small camp in the school."
-msgstr ""
+msgstr "学校旁边有个拾荒者的据点"
 
 #: script/events/setpieces.js:1053
 msgid "collected scraps spread across the floor like they fell from heaven."
-msgstr ""
+msgstr "穿过这个门收集天堂掉下来的废料."
 
 #: script/events/setpieces.js:1095
 msgid "scavenger'd been looking for supplies in here, it seems."
-msgstr ""
+msgstr "拾荒者一直在这里寻找什么."
 
 #: script/events/setpieces.js:1096
 msgid "a shame to let what he'd found go to waste."
-msgstr ""
+msgstr "浪费东西十分可耻"
 
 #: script/events/setpieces.js:1128
 msgid ""
 "beneath the wanderer's rags, clutched in one of its many hands, a glint of "
 "steel."
-msgstr ""
+msgstr "拾荒者被破布盖着的手中隐约闪着金属的光芒."
 
 #: script/events/setpieces.js:1129
 msgid "worth killing for, it seems."
-msgstr ""
+msgstr "也许应该先下手"
 
 #: script/events/setpieces.js:1156
 msgid "eye for an eye seems fair."
-msgstr ""
+msgstr "凶狠的看着对方"
 
 #: script/events/setpieces.js:1157
 msgid "always worked before, at least."
-msgstr ""
+msgstr "以前还在工作"
 
 #: script/events/setpieces.js:1158
 msgid "picking the bones finds some useful trinkets."
-msgstr ""
+msgstr "在骨头堆里找到一些有用的饰品."
 
 #: script/events/setpieces.js:1200
 msgid "some medicine abandoned in the drawers."
-msgstr ""
+msgstr "一些药物放在抽屉里"
 
 #: script/events/setpieces.js:1222
 msgid "the clinic has been ransacked."
-msgstr ""
+msgstr "诊所已被洗劫."
 
 #: script/events/setpieces.js:1223
 msgid "only dust and stains remain."
-msgstr ""
+msgstr "只有尘土和污渍仍然存在."
 
 #: script/events/setpieces.js:1239
-#, fuzzy
 msgid "A Ruined City"
-msgstr "损毁的陷阱"
+msgstr "被毁的城市"
 
 #: script/events/setpieces.js:1243
 msgid ""
 "a battered highway sign stands guard at the entrance to this once-great city."
-msgstr ""
+msgstr "顺坏的标志竖立在这个曾经伟大的城市入口."
 
 #: script/events/setpieces.js:1244
 msgid ""
 "the towers that haven't crumbled jut from the landscape like the ribcage of "
 "some ancient beast."
-msgstr ""
+msgstr "这个塔有点像腹部破了一个大洞的古老怪兽."
 
 #: script/events/setpieces.js:1245
 msgid "might be things worth having still inside."
-msgstr ""
+msgstr "这个东西有点价值"
 
 #: script/events/setpieces.js:1247
 msgid "the towers of a decaying city dominate the skyline"
-msgstr ""
+msgstr "这座塔在残破的城市里犹如一道天际线"
 
 #: script/events/setpieces.js:1261
-#, fuzzy
 msgid "the streets are empty."
-msgstr "剩下的人埋葬了他们"
+msgstr "剩下空荡的街道"
 
 #: script/events/setpieces.js:1262
 msgid "the air is filled with dust, driven relentlessly by the hard winds."
-msgstr ""
+msgstr "漫天的灰尘在风中飘荡"
 
 #: script/events/setpieces.js:1270 script/events/setpieces.js:1286
 #: script/events/setpieces.js:1302 script/events/setpieces.js:1318
@@ -2682,123 +2671,120 @@ msgstr ""
 #: script/events/setpieces.js:2741 script/events/setpieces.js:2790
 #: script/events/setpieces.js:2835 script/events/setpieces.js:2881
 #: script/events/setpieces.js:2925
-#, fuzzy
 msgid "leave city"
-msgstr "离开洞穴"
+msgstr "离开城市"
 
 #: script/events/setpieces.js:1277
 msgid "orange traffic cones are set across the street, faded and cracked."
-msgstr ""
+msgstr "街道对面全是橙色的路障."
 
 #: script/events/setpieces.js:1278
 msgid "lights flash through the alleys between buildings."
-msgstr ""
+msgstr "巷子里闪烁着灯光"
 
 #: script/events/setpieces.js:1293
 msgid "a large shanty town sprawls across the streets."
-msgstr ""
+msgstr "街道上的帐篷一望无际."
 
 #: script/events/setpieces.js:1294
 msgid "faces, darkened by soot and blood, stare out from crooked huts."
-msgstr ""
+msgstr "烟熏缭绕的墙上都是早已发黑的血."
 
 #: script/events/setpieces.js:1309
 msgid "the shell of an abandoned hospital looms ahead."
-msgstr ""
+msgstr "眺望废弃的医院大楼"
 
 #: script/events/setpieces.js:1325
 msgid "the old tower seems mostly intact."
-msgstr ""
+msgstr "旧的塔似乎大部分完好无损。"
 
 #: script/events/setpieces.js:1326
 msgid "the shell of a burned out car blocks the entrance."
-msgstr ""
+msgstr "被烧毁的汽车阻挡了入口"
 
 #: script/events/setpieces.js:1327
 msgid "most of the windows at ground level are busted anyway."
-msgstr ""
+msgstr "很多落地窗被打碎了"
 
 #: script/events/setpieces.js:1342
 msgid "a huge lizard scrambles up out of the darkness of an old metro station."
-msgstr ""
+msgstr "巨大的蜥蜴从废弃地铁站里爬了出来"
 
 #: script/events/setpieces.js:1368
 msgid "descend"
-msgstr ""
+msgstr "下去"
 
 #: script/events/setpieces.js:1380
 msgid "the shot echoes in the empty street."
-msgstr ""
+msgstr "街道里回响着枪声."
 
 #: script/events/setpieces.js:1420
 msgid "the soldier steps out from between the buildings, rifle raised."
-msgstr ""
+msgstr "士兵举着枪从建筑物之间走出来"
 
 #: script/events/setpieces.js:1460
 msgid "a frail man stands defiantly, blocking the path."
-msgstr ""
+msgstr "必经之路被一个虚弱的人挡住了"
 
 #: script/events/setpieces.js:1505
 msgid "nothing but downcast eyes."
-msgstr ""
+msgstr "悲伤的双眼"
 
 #: script/events/setpieces.js:1506
 msgid "the people here were broken a long time ago."
-msgstr ""
+msgstr "人们很久以前这里就被打破了"
 
 #: script/events/setpieces.js:1521
 msgid "empty corridors."
-msgstr ""
+msgstr "空荡的走廊"
 
 #: script/events/setpieces.js:1522
 msgid "the place has been swept clean by scavengers."
-msgstr ""
+msgstr "清扫的很干净"
 
 #: script/events/setpieces.js:1536
 msgid "an old man bursts through a door, wielding a scalpel."
-msgstr ""
+msgstr "一个老人挥舞的刀从门里跳出来"
 
 #: script/events/setpieces.js:1575
 msgid "a thug is waiting on the other side of the wall."
-msgstr ""
+msgstr "暴徒在另一边看着"
 
 #: script/events/setpieces.js:1615
-#, fuzzy
 msgid "a snarling beast jumps out from behind a car."
-msgstr "一只咆哮的野兽从灌木丛里蹿了出来"
+msgstr "咆哮的野兽从一辆车后面跳出来。"
 
 #: script/events/setpieces.js:1656
 msgid "street above the subway platform is blown away."
-msgstr ""
+msgstr "街道上面的人早已经被吓跑"
 
 #: script/events/setpieces.js:1657
 msgid "lets some light down into the dusty haze."
-msgstr ""
+msgstr "一缕光线射入尘土飞扬的阴霾"
 
 #: script/events/setpieces.js:1658
 msgid "a sound comes from the tunnel, just ahead."
-msgstr ""
+msgstr "隧道的前面有一些响声"
 
 #: script/events/setpieces.js:1675
 msgid "looks like a camp of sorts up ahead."
-msgstr ""
+msgstr "前面在排队"
 
 #: script/events/setpieces.js:1677
 msgid "rusted chainlink is pulled across an alleyway."
-msgstr ""
+msgstr "锈迹斑斑的铁链穿过小巷"
 
 #: script/events/setpieces.js:1678
 msgid "fires burn in the courtyard beyond."
-msgstr ""
+msgstr "院子里被烧着了"
 
 #: script/events/setpieces.js:1694
-#, fuzzy
 msgid "more voices can be heard ahead."
-msgstr "古怪的声响透过墙壁传来"
+msgstr "可以听见更多的声音"
 
 #: script/events/setpieces.js:1695
 msgid "they must be here for a reason."
-msgstr ""
+msgstr "为了一个理由留下"
 
 #: script/events/setpieces.js:1711
 #, fuzzy
@@ -2807,229 +2793,223 @@ msgstr "双开门在风中不停地咯吱作响"
 
 #: script/events/setpieces.js:1712
 msgid "the street ahead glows with firelight."
-msgstr ""
+msgstr "前面的街道闪着火光"
 
 #: script/events/setpieces.js:1729
 msgid "more squatters are crowding around now."
-msgstr ""
+msgstr "拥挤的破房子"
 
 #: script/events/setpieces.js:1730
 msgid "someone throws a stone."
-msgstr ""
+msgstr "有人扔出一个石头"
 
 #: script/events/setpieces.js:1746
 msgid "an improvised shop is set up on the sidewalk."
-msgstr ""
+msgstr "街道上有个临时商店"
 
 #: script/events/setpieces.js:1747
-#, fuzzy
 msgid "the owner stands by, stoic."
-msgstr "安静下来了"
+msgstr "所有者是stoic"
 
 #: script/events/setpieces.js:1792
 msgid "strips of meat hang drying by the side of the street."
-msgstr ""
+msgstr "旁边挂着熏肉"
 
 #: script/events/setpieces.js:1793
 msgid "the people back away, avoiding eye contact."
-msgstr ""
+msgstr "人们互相闪躲.避免眼神接触"
 
 #: script/events/setpieces.js:1818
 msgid "someone has locked and barricaded the door to this operating theatre."
-msgstr ""
+msgstr "有人把手术室的门锁了."
 
 #: script/events/setpieces.js:1833
 msgid "a tribe of elderly squatters is camped out in this ward."
-msgstr ""
+msgstr "一个老年寮屋部落在这个病房内露营"
 
 #: script/events/setpieces.js:1874
-#, fuzzy
 msgid "a pack of lizards rounds the corner."
-msgstr "一群咆哮的野兽冲出丛林"
+msgstr "一群蜥蜴在角落"
 
 #: script/events/setpieces.js:1916
 msgid "strips of meat are hung up to dry in this ward."
-msgstr ""
+msgstr "肉条挂在这个病房里干燥"
 
 #: script/events/setpieces.js:1940
-#, fuzzy
 msgid "a large bird nests at the top of the stairs."
-msgstr "一头巨兽冲出黑暗"
+msgstr "一只大鸟倒挂在楼梯的顶部"
 
 #: script/events/setpieces.js:1971
 msgid "the debris is denser here."
-msgstr ""
+msgstr "这里的碎片更多"
 
 #: script/events/setpieces.js:1972
 msgid "maybe some useful stuff in the rubble."
-msgstr ""
+msgstr "瓦砾中有一些有用的东西"
 
 #: script/events/setpieces.js:2011
 msgid "a swarm of rats rushes up the tunnel."
-msgstr ""
+msgstr "隧道里冲出一堆老鼠"
 
 #: script/events/setpieces.js:2047
 msgid "a large man attacks, waving a bayonet."
-msgstr ""
+msgstr "一个中年人挥舞刺刀"
 
 #: script/events/setpieces.js:2082
 msgid "a second soldier opens fire."
-msgstr ""
+msgstr "其他士兵相继开火"
 
 #: script/events/setpieces.js:2123
 msgid "a masked soldier rounds the corner, gun drawn"
-msgstr ""
+msgstr "士兵躲在掩体后"
 
 #: script/events/setpieces.js:2164
 msgid "the crowd surges forward."
-msgstr ""
+msgstr "人群激增"
 
 #: script/events/setpieces.js:2200
 msgid "a youth lashes out with a tree branch."
-msgstr ""
+msgstr "树枝上长出了新的嫩芽"
 
 #: script/events/setpieces.js:2235
 msgid "a squatter stands firmly in the doorway of a small hut."
-msgstr ""
+msgstr "寮屋在一间小屋的门口巍然屹立"
 
 #: script/events/setpieces.js:2270
 msgid "behind the door, a deformed figure awakes and attacks."
-msgstr ""
+msgstr "门后突然有人袭来"
 
 #: script/events/setpieces.js:2310
 msgid "as soon as the door is open a little bit, hundreds of tentacles erupt."
-msgstr ""
+msgstr "一旦打开了门.涌出了上百个触手"
 
 #: script/events/setpieces.js:2337
 msgid "bird must have liked shiney things."
-msgstr ""
+msgstr "鸟喜欢闪亮的东西"
 
 #: script/events/setpieces.js:2338
 msgid "some good stuff woven into its nest."
-msgstr ""
+msgstr "一些好东西编织成它的巢"
 
 #: script/events/setpieces.js:2372
-#, fuzzy
 msgid "not much here."
-msgstr "皮革不够了"
+msgstr "这里没有了"
 
 #: script/events/setpieces.js:2373
 msgid "scavengers must have gotten to this place already."
-msgstr ""
+msgstr "拾荒者已经到了这个地方"
 
 #: script/events/setpieces.js:2403
 msgid "the tunnel opens up at another platform."
-msgstr ""
+msgstr "隧道出口在另一边"
 
 #: script/events/setpieces.js:2404
 msgid "the walls are scorched from an old battle."
-msgstr ""
+msgstr "旧战场上的墙壁还在燃烧"
 
 #: script/events/setpieces.js:2405
 msgid "bodies and supplies from both sides litter the ground."
-msgstr ""
+msgstr "周围都是尸体"
 
 #: script/events/setpieces.js:2449
 msgid "the small military outpost is well supplied."
-msgstr ""
+msgstr "哨所供应充足"
 
 #: script/events/setpieces.js:2450
 msgid ""
 "arms and munitions, relics from the war, are neatly arranged on the store-"
 "room floor."
-msgstr ""
+msgstr "武器和弹药整齐地放在商店的地板上"
 
 #: script/events/setpieces.js:2451
 msgid "just as deadly now as they were then."
-msgstr ""
+msgstr "他们非常致命"
 
 #: script/events/setpieces.js:2485
 msgid "searching the bodies yields a few supplies."
-msgstr ""
+msgstr "搜索这里其他的地方"
 
 #: script/events/setpieces.js:2486
 msgid "more soldiers will be on their way."
-msgstr ""
+msgstr "更多的士兵在路上"
 
 #: script/events/setpieces.js:2487
 msgid "time to move on."
-msgstr ""
+msgstr "马上将要到来"
 
 #: script/events/setpieces.js:2526
 msgid "the small settlement has clearly been burning a while."
-msgstr ""
+msgstr "明显燃烧了一段时间"
 
 #: script/events/setpieces.js:2527
 msgid ""
 "the bodies of the wanderers that lived here are still visible in the flames."
-msgstr ""
+msgstr "居住在这里的流浪者的尸体在火焰中仍然可见"
 
 #: script/events/setpieces.js:2528
 msgid "still time to rescue a few supplies."
-msgstr ""
+msgstr "还是时间抢救一些用品"
 
 #: script/events/setpieces.js:2562
 msgid ""
 "the remaining settlers flee from the violence, their belongings forgotten."
-msgstr ""
+msgstr "人们逃跑的时候丢下了很多东西"
 
 #: script/events/setpieces.js:2563
 msgid "there's not much, but some useful things can still be found."
-msgstr ""
+msgstr "没什么剩下,但一些有用的东西仍然可以找到"
 
 #: script/events/setpieces.js:2597
 msgid "the young settler was carrying a canvas sack."
-msgstr ""
+msgstr "年轻的定居者携带一个帆布袋"
 
 #: script/events/setpieces.js:2598
 msgid "it contains travelling gear, and a few trinkets."
-msgstr ""
+msgstr "一些齿轮和小饰品"
 
 #: script/events/setpieces.js:2599 script/events/setpieces.js:2635
 msgid "there's nothing else here."
-msgstr ""
+msgstr "这里没东西了"
 
 #: script/events/setpieces.js:2633
 msgid "inside the hut, a child cries."
-msgstr ""
+msgstr "有个小孩在哭"
 
 #: script/events/setpieces.js:2634
 msgid "a few belongings rest against the walls."
-msgstr ""
+msgstr "墙边有些东西"
 
 #: script/events/setpieces.js:2674
 msgid "the stench of rot and death fills the operating theatres."
-msgstr ""
+msgstr "腐烂和死亡的恶臭充斥剧院"
 
 #: script/events/setpieces.js:2675
 msgid "a few items are scattered on the ground."
-msgstr ""
+msgstr "几件物品散落在地上"
 
 #: script/events/setpieces.js:2676
-#, fuzzy
 msgid "there is nothing else here."
-msgstr "水已耗尽"
+msgstr "这里没东西了"
 
 #: script/events/setpieces.js:2715
 msgid "a pristine medicine cabinet at the end of a hallway."
-msgstr ""
+msgstr "在走廊的尽头有一个药柜"
 
 #: script/events/setpieces.js:2716
 msgid "the rest of the hospital is empty."
-msgstr ""
+msgstr "医院的其他房间是空的"
 
 #: script/events/setpieces.js:2750
 msgid "someone had been stockpiling loot here."
-msgstr ""
+msgstr "有人一直在这里抢劫"
 
 #: script/events/setpieces.js:2799
-#, fuzzy
 msgid "the tentacular horror is defeated."
-msgstr "凶怪倒下了"
+msgstr "触手怪被打败了"
 
 #: script/events/setpieces.js:2800
 msgid "inside, the remains of its victims are everywhere."
-msgstr ""
+msgstr "其受害者的遗骸无处不在"
 
 #: script/events/setpieces.js:2845
 #, fuzzy
@@ -3038,63 +3018,60 @@ msgstr "憔悴的男子倒下了"
 
 #: script/events/setpieces.js:2846
 msgid "the operating theatre has a lot of curious equipment."
-msgstr ""
+msgstr "手术室有很多有意思的设备"
 
 #: script/events/setpieces.js:2890
 msgid "the old man had a small cache of interesting items."
-msgstr ""
+msgstr "老人有一个有趣的东西"
 
 #: script/events/setpieces.js:2934
 msgid "An Old House"
-msgstr ""
+msgstr "旧房子"
 
 #: script/events/setpieces.js:2938
 msgid "an old house remains here, once white siding yellowed and peeling."
-msgstr ""
+msgstr "一个老房子仍然在这里"
 
 #: script/events/setpieces.js:2939
-#, fuzzy
 msgid "the door hangs open."
-msgstr "安静下来了"
+msgstr "门敞开着"
 
 #: script/events/setpieces.js:2941
-#, fuzzy
 msgid "the remains of an old house stand as a monument to simpler times"
-msgstr "洞穴内出现一处老旧营地的遗迹"
+msgstr "旧房子内出现一处旧营地的遗迹"
 
 #: script/events/setpieces.js:2955
 msgid "the house is abandoned, but not yet picked over."
-msgstr ""
+msgstr "房子被遗弃,没人来过"
 
 #: script/events/setpieces.js:2956
 msgid "still a few drops of water in the old well."
-msgstr ""
+msgstr "还有几口井"
 
 #: script/events/setpieces.js:2990
 msgid "the house has been ransacked."
-msgstr ""
+msgstr "房子已被洗劫"
 
 #: script/events/setpieces.js:2991
 msgid "but there is a cache of medicine under the floorboards."
-msgstr ""
+msgstr "木地板下面有一些补给品"
 
 #: script/events/setpieces.js:3019
 msgid "a man charges down the hall, a rusty blade in his hand"
-msgstr ""
+msgstr "大厅中央有一个人拿着一块生锈的刀片"
 
 #: script/events/setpieces.js:3051
-#, fuzzy
 msgid "A Forgotten Battlefield"
-msgstr "战场"
+msgstr "被遗忘的战场"
 
 #: script/events/setpieces.js:3055
 msgid "a battle was fought here, long ago."
-msgstr ""
+msgstr "很久之前这里发生了战斗"
 
 #: script/events/setpieces.js:3056
 msgid ""
 "battered technology from both sides lays dormant on the blasted landscape."
-msgstr ""
+msgstr "双方的战斗破坏了很多设备"
 
 #: script/events/setpieces.js:3104
 #, fuzzy
@@ -3103,38 +3080,38 @@ msgstr "巨坑"
 
 #: script/events/setpieces.js:3108
 msgid "a huge hole is cut deep into the earth, evidence of the past harvest."
-msgstr ""
+msgstr "地球上的一个大洞"
 
 #: script/events/setpieces.js:3109
 msgid "they took what they came for, and left."
-msgstr ""
+msgstr "放下后就走了"
 
 #: script/events/setpieces.js:3110
 msgid ""
 "castoff from the mammoth drills can still be found by the edges of the "
 "precipice."
-msgstr ""
+msgstr "继续探索悬崖."
 
 #: script/events/setpieces.js:3133
 msgid "A Crashed Ship"
-msgstr ""
+msgstr "一艘坠毁的船"
 
 #: script/events/setpieces.js:3142
 msgid ""
 "the familiar curves of a wanderer vessel rise up out of the dust and ash. "
-msgstr ""
+msgstr "漂亮的抛物线.船只从灰尘和灰烬中上升"
 
 #: script/events/setpieces.js:3143
 msgid "lucky that the natives can't work the mechanisms."
-msgstr ""
+msgstr "幸运的是这个机器还能工作"
 
 #: script/events/setpieces.js:3144
 msgid "with a little effort, it might fly again."
-msgstr ""
+msgstr "再努力飞一次"
 
 #: script/events/setpieces.js:3148
 msgid "salvage"
-msgstr ""
+msgstr "抢救"
 
 #: script/events/setpieces.js:3156
 #, fuzzy
@@ -3143,52 +3120,49 @@ msgstr "硫磺矿"
 
 #: script/events/setpieces.js:3160
 msgid "the military is already set up at the mine's entrance."
-msgstr ""
+msgstr "矿坑入口有军事设备"
 
 #: script/events/setpieces.js:3161
 msgid "soldiers patrol the perimeter, rifles slung over their shoulders."
-msgstr ""
+msgstr "士兵肩膀上扛着步枪在周围巡逻"
 
 #: script/events/setpieces.js:3163
 msgid "a military perimeter is set up around the mine."
-msgstr ""
+msgstr "矿井周围有军事设备"
 
 #: script/events/setpieces.js:3166 script/events/setpieces.js:3315
-#, fuzzy
 msgid "attack"
-msgstr "野兽来袭"
+msgstr "攻击"
 
 #: script/events/setpieces.js:3201
 msgid "a soldier, alerted, opens fire."
-msgstr ""
+msgstr "警报.开火"
 
 #: script/events/setpieces.js:3209 script/events/setpieces.js:3249
 #: script/events/setpieces.js:3352 script/events/setpieces.js:3386
 msgid "run"
-msgstr ""
+msgstr "跑"
 
 #: script/events/setpieces.js:3241
-#, fuzzy
 msgid "a second soldier joins the fight."
-msgstr "侦察兵夜宿于此"
+msgstr "其他士兵加入了战斗"
 
 #: script/events/setpieces.js:3275
 msgid "a grizzled soldier attacks, waving a bayonet."
-msgstr ""
+msgstr "一个战士在挥舞刺刀"
 
 #: script/events/setpieces.js:3286
 msgid "the military presence has been cleared."
-msgstr ""
+msgstr "军事基地已经被清理干净了"
 
 #: script/events/setpieces.js:3287 script/events/setpieces.js:3429
 #: script/events/setpieces.js:3505
-#, fuzzy
 msgid "the mine is now safe for workers."
-msgstr "水已耗尽"
+msgstr "矿山安全了"
 
 #: script/events/setpieces.js:3289
 msgid "the sulphur mine is clear of dangers"
-msgstr ""
+msgstr "硫磺矿没有危险"
 
 #: script/events/setpieces.js:3305
 #, fuzzy
@@ -3197,33 +3171,31 @@ msgstr "煤矿"
 
 #: script/events/setpieces.js:3309
 msgid "camp fires burn by the entrance to the mine."
-msgstr ""
+msgstr "入口处在燃烧"
 
 #: script/events/setpieces.js:3310
 msgid "men mill about, weapons at the ready."
-msgstr ""
+msgstr "时刻准备战斗"
 
 #: script/events/setpieces.js:3312
-#, fuzzy
 msgid "this old mine is not abandoned"
-msgstr "士兵倒下了"
+msgstr "没有被遗弃的旧矿"
 
 #: script/events/setpieces.js:3344 script/events/setpieces.js:3378
-#, fuzzy
 msgid "a man joins the fight"
-msgstr "陌生人在夜里抵达"
+msgstr "一个人加入战斗"
 
 #: script/events/setpieces.js:3417
 msgid "only the chief remains."
-msgstr ""
+msgstr "勉强还能认出遗骸"
 
 #: script/events/setpieces.js:3428
 msgid "the camp is still, save for the crackling of the fires."
-msgstr ""
+msgstr "营地还在,中央的火堆还没熄灭"
 
 #: script/events/setpieces.js:3431
 msgid "the coal mine is clear of dangers"
-msgstr ""
+msgstr "煤矿没有危险"
 
 #: script/events/setpieces.js:3447
 #, fuzzy
@@ -3232,26 +3204,25 @@ msgstr "铁矿"
 
 #: script/events/setpieces.js:3451
 msgid "an old iron mine sits here, tools abandoned and left to rust."
-msgstr ""
+msgstr "一座废弃的铁矿.四周都是生锈的工具"
 
 #: script/events/setpieces.js:3452
 msgid ""
 "bleached bones are strewn about the entrance. many, deeply scored with "
 "jagged grooves."
-msgstr ""
+msgstr "入口处散落着很多被啃过的骨头"
 
 #: script/events/setpieces.js:3453
-#, fuzzy
 msgid "feral howls echo out of the darkness."
-msgstr "一头巨兽冲出黑暗"
+msgstr "野兽在黑暗中咆哮"
 
 #: script/events/setpieces.js:3455
 msgid "the path leads to an abandoned mine"
-msgstr ""
+msgstr "通向一个废弃的矿井"
 
 #: script/events/setpieces.js:3493
 msgid "a large creature lunges, muscles rippling in the torchlight"
-msgstr ""
+msgstr "一个浑身燃烧的生物"
 
 #: script/events/setpieces.js:3504
 #, fuzzy
@@ -3260,7 +3231,7 @@ msgstr "咆哮的野兽倒下了"
 
 #: script/events/setpieces.js:3507
 msgid "the iron mine is clear of dangers"
-msgstr ""
+msgstr "铁矿脉已经没有危险了"
 
 #: script/events/setpieces.js:3524
 #, fuzzy
@@ -3274,11 +3245,11 @@ msgstr "陌生人在夜里抵达"
 
 #: script/events/setpieces.js:3529
 msgid "charred bodies litter the ground."
-msgstr ""
+msgstr "遍地焦尸"
 
 #: script/events/setpieces.js:3532
 msgid "the metallic tang of wanderer afterburner hangs in the air."
-msgstr "流浪者助燃器的金属架伸了出来，悬在空中"
+msgstr "流浪汉被挂在金属架上"
 
 #: script/events/setpieces.js:3546
 msgid "a shack stands at the center of the village."
