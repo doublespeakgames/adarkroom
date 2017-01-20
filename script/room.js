@@ -750,7 +750,7 @@ var Room = {
 	
 	updateStoresView: function() {
 		var stores = $('div#stores');
-	  var resources = $('div#resources');
+		var resources = $('div#resources');
 		var special = $('div#special');
 		var weapons = $('div#weapons');
 		var needsAppend = false, rNeedsAppend = false, sNeedsAppend = false, wNeedsAppend = false, newRow = false;
@@ -796,6 +796,9 @@ var Room = {
 			case 'upgrade':
 				// Don't display upgrades on the Room screen
 				continue;
+			case 'building':
+				// Don't display buildings either
+				continue;
 			case 'weapon':
 				location = weapons;
 				break;
@@ -825,7 +828,7 @@ var Room = {
 				$SM.startThieves();
 			}
 			
-			if(row.length === 0 && num > 0) {
+			if(row.length === 0) {
 				row = $('<div>').attr('id', id).addClass('storeRow');
 				$('<div>').addClass('row_key').text(lk).appendTo(row);
 				$('<div>').addClass('row_val').text(Math.floor(num)).appendTo(row);
@@ -844,7 +847,7 @@ var Room = {
 					row.insertAfter(location.find('#' + curPrev));
 				}
 				newRow = true;
-			} else if(num>= 0){
+			} else {
 				$('div#' + row.attr('id') + ' > div.row_val', location).text(Math.floor(num));
 			}
 		}
@@ -890,7 +893,8 @@ var Room = {
 		$('div.storeRow', stores).each(function(index, el) {
 			el = $(el);
 			$('div.tooltip', el).remove();
-			var tt = $('<div>').addClass('tooltip bottom right');
+			var ttPos = index > 10 ? 'top right' : 'bottom right';
+			var tt = $('<div>').addClass('tooltip ' + ttPos);
 			var storeName = el.attr('id').substring(4).replace('-', ' ');
 			for(var incomeSource in $SM.get('income')) {
 				var income = $SM.get('income["'+incomeSource+'"]');
@@ -1114,7 +1118,8 @@ var Room = {
 						cost: good.cost(),
 						text: _(k),
 						click: Room.buy,
-						width: '80px'
+						width: '80px',
+						ttPos: buySection.children().length > 10 ? 'top right' : 'bottom right'
 					}).css('opacity', 0).attr('buildThing', k).appendTo(buySection).animate({opacity:1}, 300, 'linear');
 				}
 			} else {
@@ -1149,7 +1154,8 @@ var Room = {
 	},
 	
 	compassTooltip: function(direction){
-		var tt = $('<div>').addClass('tooltip bottom right');
+		var ttPos = $('div#resources').children().length > 10 ? 'top right' : 'bottom right';
+		var tt = $('<div>').addClass('tooltip ' + ttPos);
 		$('<div>').addClass('row_key').text(_('the compass points '+ direction)).appendTo(tt);
 		tt.appendTo($('#row_compass'));
 	},

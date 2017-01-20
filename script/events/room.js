@@ -433,6 +433,9 @@ Events.Room = [
 					'buyMap': {
 						text: _('buy map'),
 						cost: { 'fur': 200, 'scales': 10 },
+						available: function() {
+							return !World.seenAll;
+						},
 						notification: _('the map uncovers a bit of the world'),
 						onChoose: World.applyMap
 					},

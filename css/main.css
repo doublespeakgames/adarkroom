@@ -563,12 +563,12 @@ body.noMask #description {
 
 #lootButtons {
 	padding-bottom: 0px !important;
-	margin: 20px 0 0 5px;
+	margin: 20px 0 5px 0;
 	position: relative;
 }
 
 #lootButtons:before {
-	content: "take:";
+	content: attr(data-legend);
 	position: absolute;
 	top: -25px;
 	left: 0px;
@@ -586,7 +586,7 @@ body.noMask #description {
 }
 
 #dropMenu:before {
-	content: "drop:";
+	content: attr(data-legend);
 	border-bottom: 1px solid black;
 	display: block;
 	margin-bottom: 5px;

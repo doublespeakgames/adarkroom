@@ -577,10 +577,6 @@
 					stores.animate({right: -(panelIndex * 700) + 'px'}, 300 * diff);
 				}
 
-				Engine.activeModule = module;
-
-				module.onArrival(diff);
-
 				if(Engine.activeModule == Room || Engine.activeModule == Path) {
 					// Don't fade out the weapons if we're switching to a module
 					// where we're going to keep showing them anyway.
@@ -593,6 +589,8 @@
 					$('div#weapons').animate({opacity: 1}, 300);
 				}
 
+				Engine.activeModule = module;
+				module.onArrival(diff);
 				Notifications.printQueue(module);
 
 			}
