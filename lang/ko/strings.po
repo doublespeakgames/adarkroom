@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-12-22 13:35-0600\n"
-"PO-Revision-Date: 2016-02-15 02:05+0100\n"
+"POT-Creation-Date: 2017-02-02 13:52+0900\n"
+"PO-Revision-Date: 2017-02-02 13:56+0900\n"
 "Last-Translator: Jeong YunWon <adarkroom@youknowone.org>\n"
 "Language-Team: \n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 1.3\n"
-"X-Generator: Poedit 1.7.6\n"
+"X-Generator: Poedit 1.8.11\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: script/dropbox.js:62
@@ -1949,13 +1949,12 @@ msgstr "나침반 사기"
 msgid "the old compass is dented and dusty, but it looks to work."
 msgstr "낡은 나침반은 찌그러지고 먼지 투성이지만, 그래도 쓸 수 있다."
 
-#: script/events/room.js:45 script/events/room.js:227
-#: script/events/room.js:240 script/events/room.js:253
-#: script/events/room.js:309 script/events/room.js:332
-#: script/events/room.js:388 script/events/room.js:411
-#: script/events/room.js:450 script/events/room.js:568
-#: script/events/room.js:584 script/events/room.js:600
-#: script/events/room.js:611
+#: script/events/room.js:45 script/events/room.js:227 script/events/room.js:240
+#: script/events/room.js:253 script/events/room.js:309
+#: script/events/room.js:332 script/events/room.js:388
+#: script/events/room.js:411 script/events/room.js:450
+#: script/events/room.js:568 script/events/room.js:584
+#: script/events/room.js:600 script/events/room.js:611
 msgid "say goodbye"
 msgstr "작별하기"
 
