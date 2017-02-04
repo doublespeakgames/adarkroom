@@ -109,8 +109,8 @@ var Button = {
 		}
 	},
 
-	clearCooldown: function(btn, ended) {
-		var ended = ended || false;
+	clearCooldown: function(btn, cooldownEnded) {
+		var ended = cooldownEnded || false;
 		if(!ended){
 			$('div.cooldown', btn).stop(true, true);
 		}
