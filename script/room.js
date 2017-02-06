@@ -1093,9 +1093,9 @@ var Room = {
 				var costTooltip = $('.tooltip', craftable.button);
 				costTooltip.empty();
 				var cost = craftable.cost();
-				for(var k in cost) {
-					$("<div>").addClass('row_key').text(_(k)).appendTo(costTooltip);
-					$("<div>").addClass('row_val').text(cost[k]).appendTo(costTooltip);
+				for(var c in cost) {
+					$("<div>").addClass('row_key').text(_(c)).appendTo(costTooltip);
+					$("<div>").addClass('row_val').text(cost[c]).appendTo(costTooltip);
 				}
 				if(max && !craftable.button.hasClass('disabled')) {
 					Notifications.notify(Room, craftable.maxMsg);
@@ -1108,34 +1108,34 @@ var Room = {
 			}
 		}
 		
-		for(var k in Room.TradeGoods) {
-			good = Room.TradeGoods[k];
-			var max = $SM.num(k, good) + 1 > good.maximum;
+		for(var g in Room.TradeGoods) {
+			good = Room.TradeGoods[g];
+			var goodsMax = $SM.num(g, good) + 1 > good.maximum;
 			if(good.button == null) {
-				if(Room.buyUnlocked(k)) {
+				if(Room.buyUnlocked(g)) {
 					good.button = new Button.Button({
-						id: 'build_' + k,
+						id: 'build_' + g,
 						cost: good.cost(),
-						text: _(k),
+						text: _(g),
 						click: Room.buy,
 						width: '80px',
 						ttPos: buySection.children().length > 10 ? 'top right' : 'bottom right'
-					}).css('opacity', 0).attr('buildThing', k).appendTo(buySection).animate({opacity:1}, 300, 'linear');
+					}).css('opacity', 0).attr('buildThing', g).appendTo(buySection).animate({opacity:1}, 300, 'linear');
 				}
 			} else {
 				// refresh the tooltip
-				var costTooltip = $('.tooltip', good.button);
-				costTooltip.empty();
-				var cost = good.cost();
-				for(var k in cost) {
-					$("<div>").addClass('row_key').text(_(k)).appendTo(costTooltip);
-					$("<div>").addClass('row_val').text(cost[k]).appendTo(costTooltip);
+				var goodsCostTooltip = $('.tooltip', good.button);
+				goodsCostTooltip.empty();
+				var goodCost = good.cost();
+				for(var gc in goodCost) {
+					$("<div>").addClass('row_key').text(_(gc)).appendTo(goodsCostTooltip);
+					$("<div>").addClass('row_val').text(goodCost[gc]).appendTo(goodsCostTooltip);
 				}
-				if(max && !good.button.hasClass('disabled')) {
+				if(goodsMax && !good.button.hasClass('disabled')) {
 					Notifications.notify(Room, good.maxMsg);
 				}
 			}
-			if(max) {
+			if(goodsMax) {
 				Button.setDisabled(good.button, true);
 			} else {
 				Button.setDisabled(good.button, false);

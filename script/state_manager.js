@@ -54,10 +54,10 @@ var StateManager = {
 	createState: function(stateName, value) {
 		var words = stateName.split(/[.\[\]'"]+/);
 		//for some reason there are sometimes empty strings
-		for (var i = 0; i < words.length; i++) {
-			if (words[i] === '') {
-				words.splice(i, 1);
-				i--;
+		for (var j = 0; j < words.length; j++) {
+			if (words[j] === '') {
+				words.splice(j, 1);
+				j--;
 			}
 		}
 		var obj = State;
@@ -218,7 +218,7 @@ var StateManager = {
 
 	fireUpdate: function(stateName, save){
 		var category = $SM.getCategory(stateName);
-		if(stateName == undefined) stateName = category = 'all'; //best if this doesn't happen as it will trigger more stuff
+		if(stateName === undefined) stateName = category = 'all'; //best if this doesn't happen as it will trigger more stuff
 		$.Dispatch('stateUpdate').publish({'category': category, 'stateName':stateName});
 		if(save) Engine.saveGame();
 	},
