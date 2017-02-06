@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-02-02 13:52+0900\n"
-"PO-Revision-Date: 2017-02-02 13:56+0900\n"
+"POT-Creation-Date: 2017-02-06 13:57+0900\n"
+"PO-Revision-Date: 2017-02-06 16:38+0900\n"
 "Last-Translator: Jeong YunWon <adarkroom@youknowone.org>\n"
 "Language-Team: \n"
 "Language: ko\n"
@@ -42,7 +42,7 @@ msgstr "드롭박스에 내보내기/가져오기"
 
 #: script/dropbox.js:89
 msgid "export or import save data to dropbox datastorage"
-msgstr "게임 데이터를 드롭박스로 내보내거나 가져옵니다"
+msgstr "게임 데이터를 드롭박스로 내보내거나 가져오기"
 
 #: script/dropbox.js:90
 msgid "your are connected to dropbox with account / email "
@@ -82,7 +82,7 @@ msgstr "드롭박스에 성공적으로 저장되었습니다"
 
 #: script/dropbox.js:180
 msgid "error while saving to dropbox datastorage"
-msgstr "게임을 드롭박스에 저장하다가 오류가 발생했습니다"
+msgstr "게임을 드롭박스에 저장하다 오류가 발생했습니다"
 
 #: script/dropbox.js:183
 msgid "ok"
@@ -106,7 +106,7 @@ msgstr "무술가"
 
 #: script/engine.js:22
 msgid "punches do even more damage."
-msgstr "주먹이 훨씬 더 강해진다."
+msgstr "주먹이 훨씬 더 강해진다"
 
 #: script/engine.js:23
 msgid "learned to fight quite effectively without weapons"
@@ -126,11 +126,11 @@ msgstr "무기 없이 더 빠르게 공격하는 법을 배웠다"
 
 #: script/engine.js:32
 msgid "barbarian"
-msgstr "격투가"
+msgstr "야만전사"
 
 #: script/engine.js:33
 msgid "melee weapons deal more damage"
-msgstr "근거리 무기가 더 강해진다"
+msgstr "근거리 무기 데미지가 강해졌다"
 
 #: script/engine.js:34
 msgid "learned to swing weapons with force"
@@ -142,7 +142,7 @@ msgstr "신진대사 둔화"
 
 #: script/engine.js:38
 msgid "go twice as far without eating"
-msgstr "먹지 않고 두배의 거리를 갈 수 있다"
+msgstr "먹지 않고 두 배의 거리를 갈 수 있다"
 
 #: script/engine.js:39
 msgid "learned how to ignore the hunger"
@@ -158,7 +158,7 @@ msgstr "물을 안 마시고도 두 배 멀리 갈 수 있다"
 
 #: script/engine.js:44
 msgid "learned to love the dry air"
-msgstr "건조한 바람과 친구가 되었다"
+msgstr "건조한 바람을 즐기게 되었다"
 
 #: script/engine.js:47
 msgid "evasive"
@@ -169,6 +169,7 @@ msgid "dodge attacks more effectively"
 msgstr "공격을 더욱 잘 피하게 된다"
 
 #: script/engine.js:49
+#, fuzzy
 msgid "learned to be where they're not"
 msgstr "이리로 오면 저리로 피하는 법을 배웠다"
 
@@ -178,11 +179,11 @@ msgstr "정확"
 
 #: script/engine.js:53
 msgid "land blows more often"
-msgstr "더 많이 때릴 수 있다"
+msgstr "더 잘 맞춘다"
 
 #: script/engine.js:54
 msgid "learned to predict their movement"
-msgstr "그들의 움직임이 눈에 보이기 시작했다"
+msgstr "움직임을 예측하게 되었다"
 
 #: script/engine.js:57
 msgid "scout"
@@ -230,7 +231,7 @@ msgstr "어둡게."
 
 #: script/engine.js:150 script/engine.js:521
 msgid "hyper."
-msgstr "하이퍼."
+msgstr "가속."
 
 #: script/engine.js:156 script/space.js:442
 msgid "restart."
@@ -334,7 +335,7 @@ msgstr "트위터"
 
 #: script/engine.js:435
 msgid "reddit"
-msgstr "reddit"
+msgstr ""
 
 #: script/engine.js:442
 msgid "close"
@@ -342,16 +343,16 @@ msgstr "닫기"
 
 #: script/engine.js:476 script/engine.js:480
 msgid "lights on."
-msgstr "밝게."
+msgstr "불이 켜졌다."
 
 #: script/engine.js:493
 msgid "Go Hyper?"
-msgstr ""
+msgstr "가속할까요?"
 
 #: script/engine.js:496
 msgid ""
 "turning hyper mode speeds up the game to x2 speed. do you want to do that?"
-msgstr ""
+msgstr "가속모드를 키면 게임이 두 배로 빨라집니다. 그렇게 하시겠습니까?"
 
 #: script/engine.js:519
 msgid "classic."
@@ -411,9 +412,8 @@ msgid "take:"
 msgstr "가져가기:"
 
 #: script/events.js:599
-#, fuzzy
 msgid "nothing to take"
-msgstr "사양하기"
+msgstr "가져갈 것이 없다"
 
 #: script/events.js:627
 msgid "all"
@@ -617,7 +617,7 @@ msgstr "유황이 부족하다"
 
 #: script/localization.js:52
 msgid "baited trap"
-msgstr "미끼덫"
+msgstr "미끼놓인 덫"
 
 #: script/localization.js:53
 msgid "not enough scales"
@@ -769,11 +769,11 @@ msgstr "하늘은 회색이고 바람은 계속 분다"
 
 #: script/outside.js:594
 msgid "dry brush and dead branches litter the forest floor"
-msgstr "마른 솔과 죽은 가지가 숲의 바닥을 채운다"
+msgstr "마른 솔과 죽은 가지가 숲에 널부러져있다"
 
 #: script/outside.js:621
 msgid "the traps contain "
-msgstr "덫에서 무언가 찾았다. "
+msgstr "덫에서 무언가 찾았다"
 
 #: script/path.js:29 script/path.js:298
 msgid "A Dusty Path"
@@ -855,11 +855,11 @@ msgstr "오두막"
 
 #: script/room.js:47
 msgid "builder says there are more wanderers. says they'll work, too."
-msgstr "일꾼이 떠돌이들이 더 많다고, 그들도 일을 할 수 있다고 한다."
+msgstr "일꾼이 이방인들이 더 많다고, 그들도 일을 할 수 있다고 한다."
 
 #: script/room.js:48
 msgid "builder puts up a hut, out in the forest. says word will get around."
-msgstr "일꾼이 저 숲 속에 오두막을 짓는다. 곧 소문이 퍼지겠지."
+msgstr "일꾼이 숲 속에 오두막을 짓는다. 곧 소문이 퍼지겠지."
 
 #: script/room.js:49
 msgid "no more room for huts."
@@ -875,7 +875,7 @@ msgstr "주민들도 사냥을 도울 수 있으니, 기회를 주자"
 
 #: script/room.js:63
 msgid "the hunting lodge stands in the forest, a ways out of town"
-msgstr "사냥용 오두막을 숲 속에, 마을 한참 밖에 지었다"
+msgstr "마을과 떨어진 숲속에 사냥용 오두막을 지었다"
 
 #: script/room.js:74
 msgid "trading post"
@@ -904,16 +904,16 @@ msgstr "무두실을 순식간에, 마을 가에 세웠다"
 
 #: script/room.js:102
 msgid "smokehouse"
-msgstr "훈연실"
+msgstr "훈제소"
 
 #: script/room.js:105
 msgid ""
 "should cure the meat, or it'll spoil. builder says she can fix something up."
-msgstr "훈제하지 않으면 고기가 상한다. 일꾼은 훈연실을 만들 수 있다고 한다."
+msgstr "훈제하지 않으면 고기가 상한다. 일꾼은 훈제소을 만들 수 있다고 한다."
 
 #: script/room.js:106
 msgid "builder finishes the smokehouse. she looks hungry."
-msgstr "훈연실이 완성되었다. 일꾼은 배고파보인다."
+msgstr "훈제소가 완성되었다. 일꾼은 배고파보인다."
 
 #: script/room.js:116
 msgid "workshop"
@@ -937,7 +937,7 @@ msgstr "일꾼은 도구만 주어진다면, 주민들도 철을 만들수있다
 
 #: script/room.js:135
 msgid "a haze falls over the village as the steelworks fires up"
-msgstr "제철소에 연기가 피어오르자 마을도 뿌옇게 되었다"
+msgstr "제철소에 연기가 피어오르고 마을을 덮는다"
 
 #: script/room.js:146
 msgid "armoury"
@@ -1725,12 +1725,11 @@ msgstr "마을에서 얼마 못가 큰 짐승을 발견했다. 짐승의 가죽�
 
 #: script/events/outside.js:51
 msgid "it puts up little resistance before the knife."
-msgstr "조금 반항을 했지만 칼로 제압했다."
+msgstr "조금 반항 했지만 칼로 제압했다."
 
 #: script/events/outside.js:53
-#, fuzzy
 msgid "there was a beast. it's dead now"
-msgstr "사나운 짐승이 죽었다"
+msgstr "짐승이 있었다. 이젠 죽었지만"
 
 #: script/events/outside.js:69
 msgid "Fire"
@@ -1769,9 +1768,8 @@ msgid "medicine is needed immediately."
 msgstr "약이 당장 필요하다."
 
 #: script/events/outside.js:105
-#, fuzzy
 msgid "some villagers are ill"
-msgstr "마을 사람 몇 명이 죽었다"
+msgstr "마을사람 몇몇이 병에 걸렸다"
 
 #: script/events/outside.js:109
 msgid "1 medicine"
@@ -1814,9 +1812,8 @@ msgid "a terrible plague is fast spreading through the village."
 msgstr "끔찍한 전염병이 마을에 빠르게 번진다."
 
 #: script/events/outside.js:163
-#, fuzzy
 msgid "a plague afflicts the village"
-msgstr "전염병이 마을을 뒤덮는다."
+msgstr "마을이 전염병을 앓고있다"
 
 # command
 #: script/events/outside.js:168
@@ -1861,7 +1858,7 @@ msgstr "주민이 거의 전멸했다."
 
 #: script/events/outside.js:224
 msgid "A Beast Attack"
-msgstr "맹수 습격"
+msgstr "맹수의 습격"
 
 #: script/events/outside.js:231
 msgid "a pack of snarling beasts pours out of the trees."
@@ -1881,11 +1878,11 @@ msgstr "야수들이 주민들을 공격한다."
 
 #: script/events/outside.js:249
 msgid "predators become prey. price is unfair"
-msgstr "육식동물들은 먹이가 된다. 가격이 부당하다."
+msgstr "포식자들이 사냥감이 된다. 가격이 부당하다."
 
 #: script/events/outside.js:258
 msgid "A Military Raid"
-msgstr "군대 습격"
+msgstr "군대의 급습"
 
 #: script/events/outside.js:265
 msgid "a gunshot rings through the trees."
@@ -1900,9 +1897,8 @@ msgid "after a skirmish they are driven away, but not without losses."
 msgstr "저들은 접전 끝에 후퇴하지만, 사상자를 남겼다."
 
 #: script/events/outside.js:269
-#, fuzzy
 msgid "troops storm the village"
-msgstr "전염병이 마을을 뒤덮는다."
+msgstr "군대가 마을을 휩쓴다"
 
 #: script/events/outside.js:283
 msgid "warfare is bloodthirsty"
@@ -1981,7 +1977,7 @@ msgstr "조사하기"
 
 #: script/events/room.js:78
 msgid "vague shapes move, just out of sight."
-msgstr "희미한 형태가 움직이는 것을 포착했다."
+msgstr "희미한 형태가 움직이고 금세 사라진다."
 
 #: script/events/room.js:79
 msgid "the sounds stop."
@@ -2078,22 +2074,22 @@ msgstr "천조각을 놓고간다."
 
 #: script/events/room.js:262 script/events/room.js:341
 msgid "The Mysterious Wanderer"
-msgstr "수상한 떠돌이"
+msgstr "수상한 이방인"
 
 #: script/events/room.js:269
 msgid ""
 "a wanderer arrives with an empty cart. says if he leaves with wood, he'll be "
 "back with more."
 msgstr ""
-"빈 수레를 끌고 떠돌이가 나타난다. 나무를 주면 더 많은 나무를 가져온다고 한다."
+"빈 수레를 끌고 이방인이 나타난다. 나무를 주면 더 많은 나무를 가져온다고 한다."
 
 #: script/events/room.js:270
 msgid "builder's not sure he's to be trusted."
-msgstr "일꾼은 이 사람이 믿을만 한지 모른다."
+msgstr "일꾼은 이 사람이 믿을만 한지 모르겠다고 한다."
 
 #: script/events/room.js:272 script/events/room.js:351
 msgid "a mysterious wanderer arrives"
-msgstr "수상한 떠돌이가 나타난다"
+msgstr "수상한 이방인이 나타난다"
 
 #: script/events/room.js:281 script/events/room.js:360
 msgid "give 500"
@@ -2101,18 +2097,18 @@ msgstr "500개 주기"
 
 #: script/events/room.js:293 script/events/room.js:316
 msgid "the wanderer leaves, cart loaded with wood"
-msgstr "나무를 가득 싣고, 떠돌이가 떠난다"
+msgstr "나무를 가득 싣고, 이방인이 떠난다"
 
 #: script/events/room.js:299 script/events/room.js:322
 msgid "the mysterious wanderer returns, cart piled high with wood."
-msgstr "수상한 떠돌이가 수레에 나무를 가득 싣고 돌아온다."
+msgstr "수상한 이방인이 수레에 나무를 가득 싣고 돌아온다."
 
 #: script/events/room.js:348
 msgid ""
 "a wanderer arrives with an empty cart. says if she leaves with furs, she'll "
 "be back with more."
 msgstr ""
-"빈 수레를 끌고 떠돌이가 나타난다. 모피를 주면 더 많은 모피를 가져온다고 한다."
+"빈 수레를 끌고 이방인이 나타난다. 모피를 주면 더 많은 모피를 가져온다고 한다."
 
 #: script/events/room.js:349
 msgid "builder's not sure she's to be trusted."
@@ -2124,11 +2120,11 @@ msgstr "그냥 보내기"
 
 #: script/events/room.js:372 script/events/room.js:395
 msgid "the wanderer leaves, cart loaded with furs"
-msgstr "수레 가득 모피를 싣고, 떠돌이가 떠난다"
+msgstr "수레 가득 모피를 싣고, 이방인이 떠난다"
 
 #: script/events/room.js:378 script/events/room.js:401
 msgid "the mysterious wanderer returns, cart piled high with furs."
-msgstr "수상한 떠돌이가 수레에 모피를 가득 싣고 돌아온다."
+msgstr "수상한 이방인이 수레에 모피를 가득 싣고 돌아온다."
 
 #: script/events/room.js:420
 msgid "The Scout"
@@ -2140,7 +2136,7 @@ msgstr "정찰꾼은 안 가본 데가 없다고 한다."
 
 #: script/events/room.js:428
 msgid "willing to talk about it, for a price."
-msgstr "돈을 내면 이야기를 들을 수 있다."
+msgstr "값을 치룬다면 이야기를 들려줄 의향이 있다고 한다."
 
 #: script/events/room.js:430
 msgid "a scout stops for the night"
@@ -2164,7 +2160,7 @@ msgstr "명인"
 
 #: script/events/room.js:466
 msgid "an old wanderer arrives."
-msgstr "늙은 나그네가 나타난다."
+msgstr "늙은 이방인이 나타난다."
 
 #: script/events/room.js:467
 msgid "he smiles warmly and asks for lodgings for the night."
@@ -2172,7 +2168,7 @@ msgstr "따뜻한 미소를 지으며 밤을 지낼 오두막을 청한다."
 
 #: script/events/room.js:469
 msgid "an old wanderer arrives"
-msgstr "늙은 나그네가 나타난다"
+msgstr "늙은 이방인이 나타난다"
 
 #: script/events/room.js:473
 msgid "agree"
@@ -2180,7 +2176,7 @@ msgstr "받아들이기"
 
 #: script/events/room.js:489
 msgid "in exchange, the wanderer offers his wisdom."
-msgstr "나그네는 댓가로 지혜를 나눠준다."
+msgstr "이방인은 댓가로 지혜를 나눠준다."
 
 #: script/events/room.js:493
 msgid "evasion"
@@ -2285,7 +2281,7 @@ msgstr "늪지 깊은 곳에 이끼로 뒤덮힌 오두막이 있다."
 
 #: script/events/setpieces.js:56
 msgid "an old wanderer sits inside, in a seeming trance."
-msgstr "떠돌이 노인이 안에 앉아, 무아지경에 빠져 있다."
+msgstr "늙은 이방인이 안에 앉아, 무아지경에 빠져 있다."
 
 #: script/events/setpieces.js:61
 msgid "talk"
@@ -2293,7 +2289,7 @@ msgstr "이야기하기"
 
 #: script/events/setpieces.js:72
 msgid "the wanderer takes the charm and nods slowly."
-msgstr "노인은 장신구를 들더니 서서히 끄덕거린다."
+msgstr "이방인은 장신구를 들더니 서서히 끄덕거린다."
 
 #: script/events/setpieces.js:73
 msgid "he speaks of once leading the great fleets to fresh worlds."
@@ -2301,11 +2297,11 @@ msgstr "새로운 세상으로 떠나는 거대한 선단을 이끌었다고 이
 
 #: script/events/setpieces.js:74
 msgid "unfathomable destruction to fuel wanderer hungers."
-msgstr "도무지 이해할 수 없는 파괴와 정복자의 욕심을 채우는 약탈."
+msgstr "이방인의 욕심을 채우기위한 수 많은 파괴."
 
 #: script/events/setpieces.js:75
 msgid "his time here, now, is his penance."
-msgstr "지금, 여기에서는, 속죄하고 있다."
+msgstr "지금 그는 여기서 참회하고 있다."
 
 #: script/events/setpieces.js:91
 msgid "A Damp Cave"
@@ -2321,7 +2317,7 @@ msgstr "안은 들여다 볼 수 없다."
 
 #: script/events/setpieces.js:98
 msgid "the earth here is split, as if bearing an ancient wound"
-msgstr "이곳은 땅은, 오랜 상처를 견뎌온 것처럼 갈라져있다"
+msgstr "이곳은 땅은 오랜 상처를 견뎌온 것처럼 갈라져있다"
 
 #: script/events/setpieces.js:101 script/events/setpieces.js:2944
 #: script/events/setpieces.js:3458
@@ -2330,7 +2326,7 @@ msgstr "안으로 들어가기"
 
 #: script/events/setpieces.js:120 script/events/setpieces.js:265
 msgid "a startled beast defends its home"
-msgstr "화들짝 놀란 짐승이 집을 지키려 한다"
+msgstr "놀란 짐승이 집을 지키려 한다"
 
 #: script/events/setpieces.js:135 script/events/setpieces.js:186
 #: script/events/setpieces.js:228 script/events/setpieces.js:247
@@ -2392,11 +2388,11 @@ msgstr "동굴 안쪽에 오래된 야영지가 남아있다."
 
 #: script/events/setpieces.js:165
 msgid "bedrolls, torn and blackened, lay beneath a thin layer of dust."
-msgstr "찢어지고 새까매진 침낭이 먼지에 얇게 덮여있다."
+msgstr "찢어지고 까매진 침낭이 먼지에 얇게 덮여있다."
 
 #: script/events/setpieces.js:199
 msgid "the body of a wanderer lies in a small cavern."
-msgstr "나그네의 시체가 작은 동굴 안에 놓여있다."
+msgstr "이방인의 시체가 작은 동굴 안에 놓여있다."
 
 #: script/events/setpieces.js:200
 msgid "rot's been to work on it, and some of the pieces are missing."
@@ -2424,15 +2420,15 @@ msgstr "동굴 도마뱀이 공격한다"
 
 #: script/events/setpieces.js:333
 msgid "a large beast charges out of the dark"
-msgstr "큰 짐승이 난데없이 나타난다"
+msgstr "큰 짐승이 어둠속에서 달려나온다"
 
 #: script/events/setpieces.js:367
 msgid "a giant lizard shambles forward"
-msgstr "큰 도마뱀이 앞으로 다가온다"
+msgstr "거대한 도마뱀이 성큼 앞으로 다가온다"
 
 #: script/events/setpieces.js:395
 msgid "the nest of a large animal lies at the back of the cave."
-msgstr "동굴 뒤편에는 큰 동물의 집이 있다."
+msgstr "동굴 뒤편에는 큰 동물의 둥지가 있다."
 
 #: script/events/setpieces.js:437
 msgid "a small supply cache is hidden at the back of the cave."
@@ -2454,7 +2450,7 @@ msgstr "작은 도시가 눈 앞에 보이고, 그을리고 칠이 벗겨진 빈
 msgid ""
 "broken streetlights stand, rusting. light hasn't graced this place in a long "
 "time."
-msgstr "가로등은 부서져서 녹슬었다. 오랫동안 불빛이 들어온 적이 없다."
+msgstr "녹슬고 망가진 가로등이 서 있다. 이곳은 오래 빛이 들지 않았다."
 
 #: script/events/setpieces.js:529
 msgid "the town lies abandoned, its citizens long dead"
@@ -2494,7 +2490,7 @@ msgstr "거리에서 습격을 당한다."
 
 #: script/events/setpieces.js:601
 msgid "a squat building up ahead."
-msgstr "저 편에 누군가 빼앗은 듯한 건물이 보인다."
+msgstr "저 앞에 주저앉은 건물이 보인다."
 
 #: script/events/setpieces.js:602
 msgid "a green cross barely visible behind grimy windows."
@@ -2549,7 +2545,7 @@ msgstr "발자국 소리는 멈춘다."
 
 #: script/events/setpieces.js:917
 msgid "another beast, draw by the noise, leaps out of a copse of trees."
-msgstr "다른 동물 한 마리가 소리에 이끌려, 나무를 박차고 펄쩍 뛴다."
+msgstr "다른 동물 한 마리가 소리에 이끌려, 나무들 사이에서 튀어나온다."
 
 #: script/events/setpieces.js:933
 msgid "something's causing a commotion a ways down the road."
@@ -2574,7 +2570,7 @@ msgstr "겁에 질린 좀도둑이 괴성을 지르며 문을 박찬다."
 
 #: script/events/setpieces.js:1036
 msgid "a man stands over a dead wanderer. notices he's not alone."
-msgstr "한 사람이 나그네의 시체 위에 서 있다. 혼자가 아니다."
+msgstr "한 사람이 이방인의 시체 위에 서 있다. 혼자가 아니다."
 
 #: script/events/setpieces.js:1052
 msgid "scavenger had a small camp in the school."
@@ -2590,13 +2586,13 @@ msgstr "좀도둑은 여기서 보급품을 찾고있던 모양이다."
 
 #: script/events/setpieces.js:1096
 msgid "a shame to let what he'd found go to waste."
-msgstr "한번 뭘 수집했는지 살펴보자."
+msgstr "찾은걸 남겨두면 아깝겠지."
 
 #: script/events/setpieces.js:1128
 msgid ""
 "beneath the wanderer's rags, clutched in one of its many hands, a glint of "
 "steel."
-msgstr "방랑자의 누더기 아래에 무슨 금속 조각이 보인다."
+msgstr "방랑자의 누더기 아래, 여러 손들 중 꽉 쥔 손안의 금속 조각."
 
 #: script/events/setpieces.js:1129
 msgid "worth killing for, it seems."
@@ -2639,7 +2635,7 @@ msgstr "찌그러진 고속도로 표지판이 한 때는 번성했던 이 도�
 msgid ""
 "the towers that haven't crumbled jut from the landscape like the ribcage of "
 "some ancient beast."
-msgstr "무너지지 않은 건물은 땅에서 마치 고대 동물들의 갈비뼈처럼 솟아 올랐다."
+msgstr "무너지지 않은 건물은 땅에서 마치 고대 동물의 갈비뼈처럼 튀어나와있다."
 
 #: script/events/setpieces.js:1245
 msgid "might be things worth having still inside."
@@ -2687,11 +2683,11 @@ msgstr "도시 떠나기"
 
 #: script/events/setpieces.js:1277
 msgid "orange traffic cones are set across the street, faded and cracked."
-msgstr "주황색 신호등이 부숴진 채 도로 맞은편에 서있다."
+msgstr "주황색 원뿔 표지가 바래고 부숴진 채 도로 맞은편에 서있다."
 
 #: script/events/setpieces.js:1278
 msgid "lights flash through the alleys between buildings."
-msgstr "건물 사이로, 골목 사이로, 빛이 비춘다."
+msgstr "건물 사이 골목들 사이로 빛이 비춘다."
 
 #: script/events/setpieces.js:1293
 msgid "a large shanty town sprawls across the streets."
@@ -2699,15 +2695,15 @@ msgstr "판자촌이 거리를 따라 멀리 멀리 제 멋대로 뻗어 있다.
 
 #: script/events/setpieces.js:1294
 msgid "faces, darkened by soot and blood, stare out from crooked huts."
-msgstr "그을음과 피로 까매진 얼굴이, 비뚤비뚤한 오두막에서 나를 쳐다본다."
+msgstr "그을음과 피로 까매진 얼굴들이, 비뚤비뚤한 오두막에서 나를 쳐다본다."
 
 #: script/events/setpieces.js:1309
 msgid "the shell of an abandoned hospital looms ahead."
-msgstr "버려진 병원이 저 앞에 보인다."
+msgstr "버려진 병원 잔해가 어렴풋이 앞에 보인다."
 
 #: script/events/setpieces.js:1325
 msgid "the old tower seems mostly intact."
-msgstr "오래된 건물은 별로 나쁜 상태는 아닌것 같다."
+msgstr "낡은 탑은 거의 온전해보인다."
 
 #: script/events/setpieces.js:1326
 msgid "the shell of a burned out car blocks the entrance."
@@ -2719,7 +2715,7 @@ msgstr "하지만 1층의 창문이 거의 다 깨져 있다."
 
 #: script/events/setpieces.js:1342
 msgid "a huge lizard scrambles up out of the darkness of an old metro station."
-msgstr "큰 도마뱀이 옛 지하철 역 속에서 튀어나온다."
+msgstr "거대한 도마뱀이 옛 지하철 역 속에서 튀어나온다."
 
 #: script/events/setpieces.js:1368
 msgid "descend"
@@ -2911,15 +2907,15 @@ msgstr "좀도둑들이 먼저 다녀간 게 틀림없다."
 
 #: script/events/setpieces.js:2403
 msgid "the tunnel opens up at another platform."
-msgstr "다른 승강장에서 터널을 발견한다."
+msgstr "다른 승강장에서 터널을 발견했다."
 
 #: script/events/setpieces.js:2404
 msgid "the walls are scorched from an old battle."
-msgstr "벽은 옛 전쟁 때 불에 그을렸다."
+msgstr "벽은 옛 전투 때 불에 그을렸다."
 
 #: script/events/setpieces.js:2405
 msgid "bodies and supplies from both sides litter the ground."
-msgstr "양 편의 시신과 보급품이 바닥에 흩어져 있다."
+msgstr "두 진영의 시신과 보급품이 바닥에 흩어져 있다."
 
 #: script/events/setpieces.js:2449
 msgid "the small military outpost is well supplied."
@@ -2933,7 +2929,7 @@ msgstr "전쟁 유물인 무기와 탄약이 창고층에 가지런히 놓여있
 
 #: script/events/setpieces.js:2451
 msgid "just as deadly now as they were then."
-msgstr "예전과 똑같이 치명적인 무기이다."
+msgstr "여전히 제 역할을 할 것으로 보인다."
 
 #: script/events/setpieces.js:2485
 msgid "searching the bodies yields a few supplies."
@@ -2954,7 +2950,7 @@ msgstr "이 작은 마을은 불타기 시작한지 얼마 안된 게 분명하�
 #: script/events/setpieces.js:2527
 msgid ""
 "the bodies of the wanderers that lived here are still visible in the flames."
-msgstr "여기 살던 떠돌이들이 시체가 아직도 불길 속에서 보인다."
+msgstr "여기 살던 이방인들이 시체가 아직도 불길 속에서 보인다."
 
 #: script/events/setpieces.js:2528
 msgid "still time to rescue a few supplies."
@@ -2963,11 +2959,11 @@ msgstr "아직 약간의 보급품을 건질 시간은 있다."
 #: script/events/setpieces.js:2562
 msgid ""
 "the remaining settlers flee from the violence, their belongings forgotten."
-msgstr "남은 주민들은 재난을 피해 피난을, 가진건 모두 버리고 떠난다."
+msgstr "남은 주민들은 재난을 피해 가진 것을 모두 버리고 떠난다."
 
 #: script/events/setpieces.js:2563
 msgid "there's not much, but some useful things can still be found."
-msgstr "별로 많지는 않지만, 그래도 쓸모 있는 것도 찾을 수 있다."
+msgstr "별로 많지는 않지만, 아직 쓸모 있는 것을 찾을 수 있다."
 
 #: script/events/setpieces.js:2597
 msgid "the young settler was carrying a canvas sack."
@@ -2979,7 +2975,7 @@ msgstr "여행 도구와 자질구레한 장신구가 몇 개 담겨 있다."
 
 #: script/events/setpieces.js:2599 script/events/setpieces.js:2635
 msgid "there's nothing else here."
-msgstr "여기엔 이제 아무것도 없는 것 같다."
+msgstr "그 밖에 다른 것은 없다."
 
 #: script/events/setpieces.js:2633
 msgid "inside the hut, a child cries."
@@ -3039,7 +3035,7 @@ msgstr "오래된 집"
 
 #: script/events/setpieces.js:2938
 msgid "an old house remains here, once white siding yellowed and peeling."
-msgstr "오래된 집이다. 원래는 하얀 벽이 누렇고 벗겨지기 시작했다."
+msgstr "오래된 집이 남아있다. 한때는 하얗던 벽이 벗겨지고 바래기 시작했다."
 
 #: script/events/setpieces.js:2939
 msgid "the door hangs open."
@@ -3075,12 +3071,12 @@ msgstr "잊혀진 전장"
 
 #: script/events/setpieces.js:3055
 msgid "a battle was fought here, long ago."
-msgstr "예전에 여기서 전쟁이 일어난 모양이다."
+msgstr "오래전 여기서 전투가 일어난 모양이다."
 
 #: script/events/setpieces.js:3056
 msgid ""
 "battered technology from both sides lays dormant on the blasted landscape."
-msgstr "망가진 도구들이 파괴된 조경 아래 얌전히 잠들어있다."
+msgstr "망가진 도구들이 황량해진 풍경 아래 얌전히 잠들어있다."
 
 #: script/events/setpieces.js:3104
 msgid "A Huge Borehole"
@@ -3092,7 +3088,7 @@ msgstr "땅 속 깊이 커다란 구멍이 파여있다. 누군가 한 몫 잡�
 
 #: script/events/setpieces.js:3109
 msgid "they took what they came for, and left."
-msgstr "필요한 것을 챙기고 나서는 떠났다."
+msgstr "그들은 필요한 것을 챙기고, 떠났다."
 
 #: script/events/setpieces.js:3110
 msgid ""
@@ -3131,7 +3127,7 @@ msgstr "광산 입구에는 이미 군대가 자리잡고 있다."
 
 #: script/events/setpieces.js:3161
 msgid "soldiers patrol the perimeter, rifles slung over their shoulders."
-msgstr "군인들이 주위를, 어깨에 소총을 매고 순찰한다."
+msgstr "군인들이 어깨에 소총을 메고 주변을 순찰한다."
 
 #: script/events/setpieces.js:3163
 msgid "a military perimeter is set up around the mine."
@@ -3209,17 +3205,17 @@ msgstr "철 광산"
 
 #: script/events/setpieces.js:3451
 msgid "an old iron mine sits here, tools abandoned and left to rust."
-msgstr "철 광산이 보이고, 버려진 연장은 그대로 녹슬고 있다."
+msgstr "철 광산이 보이고, 버려진 연장은 버려진 채 녹슬고 있다."
 
 #: script/events/setpieces.js:3452
 msgid ""
 "bleached bones are strewn about the entrance. many, deeply scored with "
 "jagged grooves."
-msgstr "입구에는 빛바랜 뼈만 흩어져 있다. 잔뜩, 깊이 삐죽삐죽 파여 나가 있다."
+msgstr "입구에는 빛바랜 뼈만 흩어져 있다. 대부분 들쭉날쭉 홈이 파여있다."
 
 #: script/events/setpieces.js:3453
 msgid "feral howls echo out of the darkness."
-msgstr "무서운 포효가 어둠에 메아리친다."
+msgstr "야성적인 포효가 어둠으로부터 메아리친다."
 
 #: script/events/setpieces.js:3455
 msgid "the path leads to an abandoned mine"
@@ -3243,7 +3239,7 @@ msgstr "파괴된 마을"
 
 #: script/events/setpieces.js:3528
 msgid "a destroyed village lies in the dust."
-msgstr "파괴된 마을이 흙먼지도 뒤덮여 있다."
+msgstr "파괴된 마을이 흙먼지에 뒤덮여 있다."
 
 #: script/events/setpieces.js:3529
 msgid "charred bodies litter the ground."
