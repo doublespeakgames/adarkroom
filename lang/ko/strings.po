@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-02-06 13:57+0900\n"
-"PO-Revision-Date: 2017-02-06 16:38+0900\n"
+"POT-Creation-Date: 2017-02-07 10:04+0900\n"
+"PO-Revision-Date: 2017-02-07 10:16+0900\n"
 "Last-Translator: Jeong YunWon <adarkroom@youknowone.org>\n"
 "Language-Team: \n"
 "Language: ko\n"
@@ -98,15 +98,15 @@ msgstr "주먹이 더 강해진다"
 
 #: script/engine.js:18
 msgid "learned to throw punches with purpose"
-msgstr "내 마음이 가는 곳에 주먹도 간다"
+msgstr "목적을 가지고 주먹쓰는법을 배웠다"
 
 #: script/engine.js:21
 msgid "martial artist"
-msgstr "무술가"
+msgstr "무예가"
 
 #: script/engine.js:22
 msgid "punches do even more damage."
-msgstr "주먹이 훨씬 더 강해진다"
+msgstr "주먹이 훨씬 더 강해진다."
 
 #: script/engine.js:23
 msgid "learned to fight quite effectively without weapons"
@@ -118,7 +118,7 @@ msgstr "맨손격투의 달인"
 
 #: script/engine.js:28
 msgid "punch twice as fast, and with even more force"
-msgstr "주먹이 두 배 빨라지고 강해지기까지 한다"
+msgstr "주먹이 두배 빠르고 강해ㅈ다"
 
 #: script/engine.js:29
 msgid "learned to strike faster without weapons"
@@ -130,7 +130,7 @@ msgstr "야만전사"
 
 #: script/engine.js:33
 msgid "melee weapons deal more damage"
-msgstr "근거리 무기 데미지가 강해졌다"
+msgstr "근거리 무기 데미지가 강해진다"
 
 #: script/engine.js:34
 msgid "learned to swing weapons with force"
@@ -146,7 +146,7 @@ msgstr "먹지 않고 두 배의 거리를 갈 수 있다"
 
 #: script/engine.js:39
 msgid "learned how to ignore the hunger"
-msgstr "배가 고파도 참을 수 있다"
+msgstr "배고픔을 참을 수 있게 되었다"
 
 #: script/engine.js:42
 msgid "desert rat"
@@ -158,7 +158,7 @@ msgstr "물을 안 마시고도 두 배 멀리 갈 수 있다"
 
 #: script/engine.js:44
 msgid "learned to love the dry air"
-msgstr "건조한 바람을 즐기게 되었다"
+msgstr "건조한 바람과 친구가 되었다"
 
 #: script/engine.js:47
 msgid "evasive"
@@ -179,7 +179,7 @@ msgstr "정확"
 
 #: script/engine.js:53
 msgid "land blows more often"
-msgstr "더 잘 맞춘다"
+msgstr "더 잘 맞추게된다"
 
 #: script/engine.js:54
 msgid "learned to predict their movement"
@@ -203,7 +203,7 @@ msgstr "잠입"
 
 #: script/engine.js:63
 msgid "better avoid conflict in the wild"
-msgstr "야외에서는 싸우지 않는 편이 더 낫다"
+msgstr "바깥에서 마찰을 잘 피하게된다"
 
 #: script/engine.js:64
 msgid "learned how not to be seen"
@@ -221,11 +221,11 @@ msgstr "먹을 때 체력을 더 많이 채운다"
 msgid "learned to make the most of food"
 msgstr "더 잘 먹는 법을 배웠다"
 
-#: script/engine.js:138 script/space.js:450
-msgid "app store."
-msgstr "앱 스토어."
+#: script/engine.js:138
+msgid "get the app."
+msgstr "앱 다운로드."
 
-#: script/engine.js:144 script/engine.js:485
+#: script/engine.js:144 script/engine.js:512
 msgid "lights off."
 msgstr "어둡게."
 
@@ -244,14 +244,6 @@ msgstr "공유."
 #: script/engine.js:168
 msgid "save."
 msgstr "저장."
-
-#: script/engine.js:177
-msgid "dropbox."
-msgstr "드롭박스."
-
-#: script/engine.js:184
-msgid "github."
-msgstr ""
 
 #: script/engine.js:268
 msgid "Export / Import"
@@ -283,15 +275,15 @@ msgstr "완료"
 
 #: script/engine.js:305
 msgid "are you sure?"
-msgstr "확인해주세요."
+msgstr "입력한 코드를 확인해주세요."
 
 #: script/engine.js:306
 msgid "if the code is invalid, all data will be lost."
-msgstr "입력하신 코드가 정확하지 않으면, 모든 데이터가 사라집니다."
+msgstr "코드가 정확하지 않으면, 모든 데이터가 사라집니다."
 
 #: script/engine.js:307
 msgid "this is irreversible."
-msgstr "이것은 되돌릴 수 없습니다."
+msgstr "되돌릴 수 없습니다."
 
 #: script/engine.js:311 script/engine.js:380 script/engine.js:499
 msgid "yes"
@@ -313,72 +305,55 @@ msgstr "재시작?"
 msgid "restart the game?"
 msgstr "재시작합니까?"
 
+#: script/engine.js:380
+msgid "yes"
+msgstr "예"
+
+#: script/engine.js:385
+msgid "no"
+msgstr "아니요"
+
 #: script/engine.js:408
+msgid "Get the App"
+msgstr "앱 다운받기"
+
+#: script/engine.js:411
+msgid "bring the room with you."
+msgstr "다크룸과 함께하세요."
+
+#: script/engine.js:435
 msgid "Share"
 msgstr "공유"
 
-#: script/engine.js:411
+#: script/engine.js:438
 msgid "bring your friends."
-msgstr "친구 초대하기."
+msgstr "친구들과 함께하세요."
 
-#: script/engine.js:414
-msgid "facebook"
-msgstr "페이스북"
-
-#: script/engine.js:421
-msgid "google+"
-msgstr "구글+"
-
-#: script/engine.js:428
-msgid "twitter"
-msgstr "트위터"
-
-#: script/engine.js:435
-msgid "reddit"
-msgstr ""
-
-#: script/engine.js:442
+#: script/engine.js:468
 msgid "close"
 msgstr "닫기"
 
-#: script/engine.js:476 script/engine.js:480
+#: script/engine.js:503 script/engine.js:507
 msgid "lights on."
-msgstr "불이 켜졌다."
+msgstr "밝게."
 
-#: script/engine.js:493
-msgid "Go Hyper?"
-msgstr "가속할까요?"
-
-#: script/engine.js:496
-msgid ""
-"turning hyper mode speeds up the game to x2 speed. do you want to do that?"
-msgstr "가속모드를 키면 게임이 두 배로 빨라집니다. 그렇게 하시겠습니까?"
-
-#: script/engine.js:519
-msgid "classic."
-msgstr "클래식."
-
-#: script/engine.js:620
-msgid "{0} per {1}s"
-msgstr "{1}초 당 {0}개"
-
-#: script/events.js:130
+#: script/events.js:231
 msgid "eat meat"
 msgstr "고기 먹기"
 
-#: script/events.js:150
+#: script/events.js:251
 msgid "use meds"
 msgstr "약 사용"
 
-#: script/events.js:350 script/events.js:395
+#: script/events.js:435
 msgid "miss"
 msgstr "회피"
 
-#: script/events.js:363 script/events.js:408
+#: script/events.js:449
 msgid "stunned"
 msgstr "기절"
 
-#: script/events.js:482 script/events.js:653 script/events/global.js:42
+#: script/events.js:566 script/events/global.js:42
 #: script/events/global.js:59 script/events/room.js:142
 #: script/events/room.js:162 script/events/room.js:182
 #: script/events/setpieces.js:25 script/events/setpieces.js:48
@@ -395,33 +370,37 @@ msgstr "기절"
 msgid "leave"
 msgstr "떠나기"
 
-#: script/events.js:511
+#: script/events.js:605
 msgid "drop:"
 msgstr "버리기:"
 
-#: script/events.js:536 script/events/room.js:523
+#: script/events.js:536 script/events/room.js:630
 msgid "nothing"
 msgstr "사양하기"
 
-#: script/events.js:567 script/events/setpieces.js:3551
+#: script/events.js:661 script/events/setpieces.js:3551
 msgid "take"
 msgstr "가져가기"
 
-#: script/events.js:577
+#: script/events.js:671
 msgid "take:"
 msgstr "가져가기:"
 
-#: script/events.js:599
+#: script/events.js:695
 msgid "nothing to take"
 msgstr "가져갈 것이 없다"
 
-#: script/events.js:627
+#: script/events.js:725
 msgid "all"
 msgstr "전부"
 
-#: script/events.js:649
+#: script/events.js:743
 msgid "take everything"
 msgstr "모두 가져가기"
+
+#: script/events.js:743
+msgid "take all you can"
+msgstr "되는대로 가져가기"
 
 #: script/events.js:653 script/outside.js:627
 msgid " and "
