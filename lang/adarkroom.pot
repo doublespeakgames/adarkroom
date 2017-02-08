@@ -303,14 +303,6 @@ msgstr ""
 msgid "restart the game?"
 msgstr ""
 
-#: script/engine.js:380
-msgid "yes"
-msgstr ""
-
-#: script/engine.js:385
-msgid "no"
-msgstr ""
-
 #: script/engine.js:408
 msgid "Get the App"
 msgstr ""
