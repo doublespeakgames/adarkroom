@@ -364,7 +364,7 @@ msgstr ""
 msgid "drop:"
 msgstr ""
 
-#: script/events.js:536 script/events/room.js:630
+#: script/events.js:630 script/events/room.js:526
 msgid "nothing"
 msgstr ""
 
@@ -392,7 +392,7 @@ msgstr ""
 msgid "take all you can"
 msgstr ""
 
-#: script/events.js:653 script/outside.js:627
+#: script/events.js:749 script/outside.js:627
 msgid " and "
 msgstr ""
 
@@ -776,15 +776,15 @@ msgstr ""
 msgid "water"
 msgstr ""
 
-#: script/path.js:229 script/world.js:290
+#: script/path.js:236 script/world.js:290
 msgid "free {0}/{1}"
 msgstr ""
 
-#: script/path.js:253
+#: script/path.js:269
 msgid "weight"
 msgstr ""
 
-#: script/path.js:255
+#: script/path.js:271
 msgid "available"
 msgstr ""
 
@@ -1340,39 +1340,39 @@ msgstr ""
 msgid "water:{0}"
 msgstr ""
 
-#: script/world.js:283
+#: script/world.js:286
 msgid "pockets"
 msgstr ""
 
-#: script/world.js:307
+#: script/world.js:310
 msgid "hp: {0}/{1}"
 msgstr ""
 
-#: script/world.js:314
+#: script/world.js:317
 msgid "{0}:{1}"
 msgstr ""
 
-#: script/world.js:349
+#: script/world.js:352
 msgid "dangerous to be this far from the village without proper protection"
 msgstr ""
 
-#: script/world.js:351
+#: script/world.js:354
 msgid "safer here"
 msgstr ""
 
-#: script/world.js:451
+#: script/world.js:454
 msgid "the meat has run out"
 msgstr ""
 
-#: script/world.js:456
+#: script/world.js:459
 msgid "starvation sets in"
 msgstr ""
 
-#: script/world.js:481
+#: script/world.js:484
 msgid "there is no more water"
 msgstr ""
 
-#: script/world.js:485
+#: script/world.js:488
 msgid "the thirst becomes unbearable"
 msgstr ""
 
@@ -1400,23 +1400,23 @@ msgstr ""
 msgid "a wall of gnarled trees rises from the dust. their branches twist into a skeletal canopy overhead."
 msgstr ""
 
-#: script/world.js:817
+#: script/world.js:847
 msgid "Wanderer"
 msgstr ""
 
-#: script/world.js:822
+#: script/world.js:852
 msgid "The&nbsp;Village"
 msgstr ""
 
-#: script/world.js:851
+#: script/world.js:881
 msgid "the world fades"
 msgstr ""
 
-#: script/world.js:952 script/events/setpieces.js:2961
+#: script/world.js:985 script/events/setpieces.js:2961
 msgid "water replenished"
 msgstr ""
 
-#: script/world.js:982
+#: script/world.js:1015
 msgid "A Barren World"
 msgstr ""
 
@@ -2025,7 +2025,6 @@ msgstr ""
 
 #: script/events/room.js:269
 msgid "a wanderer arrives with an empty cart. says if he leaves with wood, he\'ll be back with more."
-"back with more."
 msgstr ""
 
 #: script/events/room.js:270
@@ -2088,101 +2087,101 @@ msgstr ""
 msgid "buy map"
 msgstr ""
 
-#: script/events/room.js:436
+#: script/events/room.js:439
 msgid "the map uncovers a bit of the world"
 msgstr ""
 
-#: script/events/room.js:440
+#: script/events/room.js:443
 msgid "learn scouting"
 msgstr ""
 
-#: script/events/room.js:459
+#: script/events/room.js:462
 msgid "The Master"
 msgstr ""
 
-#: script/events/room.js:466
+#: script/events/room.js:469
 msgid "an old wanderer arrives."
 msgstr ""
 
-#: script/events/room.js:467
+#: script/events/room.js:470
 msgid "he smiles warmly and asks for lodgings for the night."
 msgstr ""
 
-#: script/events/room.js:469
+#: script/events/room.js:472
 msgid "an old wanderer arrives"
 msgstr ""
 
-#: script/events/room.js:473
+#: script/events/room.js:476
 msgid "agree"
 msgstr ""
 
-#: script/events/room.js:489
+#: script/events/room.js:492
 msgid "in exchange, the wanderer offers his wisdom."
 msgstr ""
 
-#: script/events/room.js:493
+#: script/events/room.js:496
 msgid "evasion"
 msgstr ""
 
-#: script/events/room.js:503
+#: script/events/room.js:506
 msgid "precision"
 msgstr ""
 
-#: script/events/room.js:513
+#: script/events/room.js:516
 msgid "force"
 msgstr ""
 
-#: script/events/room.js:532
+#: script/events/room.js:535
 msgid "The Sick Man"
 msgstr ""
 
-#: script/events/room.js:539
+#: script/events/room.js:542
 msgid "a man hobbles up, coughing."
 msgstr ""
 
-#: script/events/room.js:540
+#: script/events/room.js:543
 msgid "he begs for medicine."
 msgstr ""
 
-#: script/events/room.js:542
+#: script/events/room.js:545
 msgid "a sick man hobbles up"
 msgstr ""
 
-#: script/events/room.js:546
+#: script/events/room.js:549
 msgid "give 1 medicine"
 msgstr ""
 
-#: script/events/room.js:548
+#: script/events/room.js:551
 msgid "the man swallows the medicine eagerly"
 msgstr ""
 
-#: script/events/room.js:552
+#: script/events/room.js:555
 msgid "tell him to leave"
 msgstr ""
 
-#: script/events/room.js:559 script/events/room.js:575
-#: script/events/room.js:591
+#: script/events/room.js:562 script/events/room.js:578
+#: script/events/room.js:594
 msgid "the man is thankful."
 msgstr ""
 
-#: script/events/room.js:560 script/events/room.js:576
-#: script/events/room.js:592
+#: script/events/room.js:563 script/events/room.js:579
+#: script/events/room.js:595
 msgid "he leaves a reward."
 msgstr ""
 
-#: script/events/room.js:561
+#: script/events/room.js:564
 msgid "some weird metal he picked up on his travels."
 msgstr ""
 
-#: script/events/room.js:577
+#: script/events/room.js:580
 msgid "some weird glowing boxes he picked up on his travels."
 msgstr ""
 
-#: script/events/room.js:593
+#: script/events/room.js:596
 msgid "all he has are some scales."
 msgstr ""
 
-#: script/events/room.js:607
+#: script/events/room.js:610
 msgid "the man expresses his thanks and hobbles off."
 msgstr ""
 
