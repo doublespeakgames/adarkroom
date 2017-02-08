@@ -3191,6 +3191,3 @@ msgstr ""
 #: script/events/setpieces.js:3559
 msgid "ripe for the picking."
 msgstr ""
-
-#~ msgid "Export"
-#~ msgstr "내보내기"
