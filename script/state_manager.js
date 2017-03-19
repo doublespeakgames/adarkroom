@@ -361,21 +361,21 @@ var StateManager = {
 
 				if(income.timeLeft <= 0) {
 					Engine.log('collection income from ' + source);
+					var ok = true;
 					if(source == 'thieves') $SM.addStolen(income.stores);
 					else {
-						var ok = true;
 						var cost = income.stores;
 						for (var k in cost) {
 							var have = $SM.get('stores["' + k + '"]', true);
 							if (have + cost[k] < 0) {
 								ok = false;
 								$SM.add('game.workers["'+ source +'"]', -1);
-								Engine.log('a ' + source + ' left due to lack of resources');
+								Engine.log('one ' + source + ' left due to lack of resources');
 								break;
 							}
 						}
-						if (ok) $SM.addM('stores', income.stores, true);
 					}
+					if (ok) $SM.addM('stores', income.stores, true);
 					changed = true;
 					if(typeof income.delay == 'number') {
 						income.timeLeft = income.delay;
