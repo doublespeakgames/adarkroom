@@ -20,64 +20,64 @@ msgstr ""
 
 #: script/dropbox.js:65
 msgid "connect game to dropbox local storage"
-msgstr ""
+msgstr "konekti ludon dropboksen eja ŝparado"
 
 #: script/dropbox.js:68
 msgid "connect"
-msgstr ""
+msgstr "konekti"
 
 #: script/dropbox.js:75 script/dropbox.js:107 script/dropbox.js:133
 #: script/dropbox.js:163 script/engine.js:285 script/engine.js:331
 msgid "cancel"
-msgstr ""
+msgstr "nuligi"
 
 #: script/dropbox.js:86 script/dropbox.js:176
 msgid "Dropbox Export / Import"
-msgstr ""
+msgstr "Dropboksa elirigado / enirigado"
 
 #: script/dropbox.js:89
 msgid "export or import save data to dropbox datastorage"
-msgstr ""
+msgstr "Elirigi aŭ enirigi savi sciaĵo dropboksen sciaĵoŝparado"
 
 #: script/dropbox.js:90
 msgid "your are connected to dropbox with account / email "
-msgstr ""
+msgstr "Vi konektatas al dropbokse kun konto / retpoŝto"
 
 #: script/dropbox.js:93
 msgid "save"
-msgstr "konservi"
+msgstr "savi"
 
 #: script/dropbox.js:97
 msgid "load"
-msgstr ""
+msgstr "ŝarĝo"
 
 #: script/dropbox.js:102
 msgid "signout"
-msgstr ""
+msgstr "elsaluti"
 
 #: script/dropbox.js:113
 msgid "choose one slot to save to"
-msgstr ""
+msgstr "elecktu unun ejeton per savi"
 
 #: script/dropbox.js:119
 msgid "save to slot"
-msgstr ""
+msgstr "savi ejeten"
 
 #: script/dropbox.js:141
 msgid "choose one slot to load from"
-msgstr ""
+msgstr "elektu unun ejeton el kiu ŝarĝi"
 
 #: script/dropbox.js:148
 msgid "load from slot"
-msgstr ""
+msgstr "ŝarĝi el ejeto"
 
 #: script/dropbox.js:179
 msgid "successfully saved to dropbox datastorage"
-msgstr ""
+msgstr "sukcese savis dropboksen sciaĵoŝparado"
 
 #: script/dropbox.js:180
 msgid "error while saving to dropbox datastorage"
-msgstr ""
+msgstr "eraro savante dropboksen sciaĵoŝparado"
 
 #: script/dropbox.js:183
 msgid "ok"
@@ -89,43 +89,43 @@ msgstr ""
 
 #: script/engine.js:16
 msgid "punches do more damage"
-msgstr ""
+msgstr "batoj faras pli damaĝon"
 
 #: script/engine.js:18
 msgid "learned to throw punches with purpose"
-msgstr ""
+msgstr "lernis kiel celbati"
 
 #: script/engine.js:21
 msgid "martial artist"
-msgstr ""
+msgstr "luktartisto"
 
 #: script/engine.js:22
 msgid "punches do even more damage."
-msgstr ""
+msgstr "batoj faras eĉ pli damaĝon"
 
 #: script/engine.js:23
 msgid "learned to fight quite effectively without weapons"
-msgstr ""
+msgstr "lernis lukti sufiĉe efike sen luktiloj"
 
 #: script/engine.js:27
 msgid "unarmed master"
-msgstr ""
+msgstr "senluktila mastro"
 
 #: script/engine.js:28
 msgid "punch twice as fast, and with even more force"
-msgstr ""
+msgstr "bati duoble rapide kaj eĉ pli forte"
 
 #: script/engine.js:29
 msgid "learned to strike faster without weapons"
-msgstr ""
+msgstr "lernis ataki pli rapide senluktile"
 
 #: script/engine.js:32
 msgid "barbarian"
-msgstr ""
+msgstr "malurbeculo"
 
 #: script/engine.js:33
 msgid "melee weapons deal more damage"
-msgstr ""
+msgstr "korpoluktiloj faras pli damaĝon"
 
 #: script/engine.js:34
 msgid "learned to swing weapons with force"
@@ -133,15 +133,15 @@ msgstr ""
 
 #: script/engine.js:37
 msgid "slow metabolism"
-msgstr ""
+msgstr "malrapida korpaŝanĝo"
 
 #: script/engine.js:38
 msgid "go twice as far without eating"
-msgstr ""
+msgstr "iri duoble fore sen manĝi"
 
 #: script/engine.js:39
 msgid "learned how to ignore the hunger"
-msgstr ""
+msgstr "lernis malzorgi pri malsato"
 
 #: script/engine.js:42
 msgid "desert rat"
@@ -149,15 +149,15 @@ msgstr ""
 
 #: script/engine.js:43
 msgid "go twice as far without drinking"
-msgstr ""
+msgstr "iri duoble fore sen trinki"
 
 #: script/engine.js:44
 msgid "learned to love the dry air"
-msgstr ""
+msgstr "lernis ami la malakvan aeron"
 
 #: script/engine.js:47
 msgid "evasive"
-msgstr ""
+msgstr "forirema"
 
 #: script/engine.js:48
 msgid "dodge attacks more effectively"
@@ -165,7 +165,7 @@ msgstr ""
 
 #: script/engine.js:49
 msgid "learned to be where they're not"
-msgstr ""
+msgstr "lernis esti kie ili ne estas"
 
 #: script/engine.js:52
 msgid "precise"
@@ -177,7 +177,7 @@ msgstr ""
 
 #: script/engine.js:54
 msgid "learned to predict their movement"
-msgstr ""
+msgstr "lernis antaŭdiri ilian movojn"
 
 #: script/engine.js:57
 msgid "scout"
@@ -185,7 +185,7 @@ msgstr ""
 
 #: script/engine.js:58
 msgid "see farther"
-msgstr ""
+msgstr "vidi pli fore"
 
 #: script/engine.js:59
 msgid "learned to look ahead"
@@ -193,7 +193,7 @@ msgstr ""
 
 #: script/engine.js:62
 msgid "stealthy"
-msgstr ""
+msgstr "malavizigema"
 
 #: script/engine.js:63
 msgid "better avoid conflict in the wild"
@@ -201,11 +201,11 @@ msgstr ""
 
 #: script/engine.js:64
 msgid "learned how not to be seen"
-msgstr ""
+msgstr "lernis kiel malviditi"
 
 #: script/engine.js:67
 msgid "gastronome"
-msgstr ""
+msgstr "manĝema"
 
 #: script/engine.js:68
 msgid "restore more health when eating"
@@ -225,7 +225,7 @@ msgstr ""
 
 #: script/engine.js:150 script/engine.js:521
 msgid "hyper."
-msgstr ""
+msgstr "sperega"
 
 #: script/engine.js:156 script/space.js:442
 msgid "restart."
@@ -241,7 +241,7 @@ msgstr "konservi."
 
 #: script/engine.js:177
 msgid "dropbox."
-msgstr "dropbox."
+msgstr "dropboks."
 
 #: script/engine.js:184
 msgid "github."
@@ -249,7 +249,7 @@ msgstr "github."
 
 #: script/engine.js:268
 msgid "Export / Import"
-msgstr ""
+msgstr "elirigi / enirigi"
 
 #: script/engine.js:272
 msgid "export or import save data, for backing up"
@@ -261,15 +261,15 @@ msgstr ""
 
 #: script/engine.js:277
 msgid "export"
-msgstr ""
+msgstr "elirigi"
 
 #: script/engine.js:281 script/engine.js:326
 msgid "import"
-msgstr ""
+msgstr "enirigi"
 
 #: script/engine.js:291
 msgid "save this."
-msgstr ""
+msgstr "savi ĉi tiun"
 
 #: script/engine.js:297
 msgid "got it"
@@ -277,7 +277,7 @@ msgstr ""
 
 #: script/engine.js:305
 msgid "are you sure?"
-msgstr ""
+msgstr "ĉu vi certas?"
 
 #: script/engine.js:306
 msgid "if the code is invalid, all data will be lost."
@@ -285,7 +285,7 @@ msgstr ""
 
 #: script/engine.js:307
 msgid "this is irreversible."
-msgstr ""
+msgstr "ĉi tiu malturneblas"
 
 #: script/engine.js:311 script/engine.js:380 script/engine.js:499
 msgid "yes"
@@ -317,7 +317,7 @@ msgstr ""
 
 #: script/engine.js:414
 msgid "facebook"
-msgstr "facebook"
+msgstr "feisbuko"
 
 #: script/engine.js:421
 msgid "google+"
@@ -333,15 +333,15 @@ msgstr "reddit"
 
 #: script/engine.js:442
 msgid "close"
-msgstr ""
+msgstr "fermi"
 
 #: script/engine.js:476 script/engine.js:480
 msgid "lights on."
-msgstr ""
+msgstr "lumigi"
 
 #: script/engine.js:493
 msgid "Go Hyper?"
-msgstr ""
+msgstr "Iru Superge?"
 
 #: script/engine.js:496
 msgid ""
