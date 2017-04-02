@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: adarkroom\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2017-04-01 23:47+0100\n"
-"PO-Revision-Date: 2017-04-02 11:29+0100\n"
+"PO-Revision-Date: 2017-04-02 12:27+0100\n"
 "Last-Translator: Dušan Juretić <dusan.juretic@gmail.com>\n"
 "Language-Team: Esperanto\n"
 "Language: eo\n"
@@ -16,11 +16,11 @@ msgstr ""
 
 #: script/dropbox.js:62
 msgid "Dropbox connection"
-msgstr "Konekto al Dropbox"
+msgstr "Konekto al Dropboks"
 
 #: script/dropbox.js:65
 msgid "connect game to dropbox local storage"
-msgstr "konekti la ludon la loka konservejo de Dropbox"
+msgstr "konekti la ludon la loka konservejo de Dropboks"
 
 #: script/dropbox.js:68
 msgid "connect"
