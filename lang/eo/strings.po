@@ -2,25 +2,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adarkroom\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-12-22 13:35-0600\n"
-"PO-Revision-Date: 2017-03-31 21:50-0300\n"
+"POT-Creation-Date: 2017-04-01 23:47+0100\n"
+"PO-Revision-Date: 2017-04-02 12:27+0100\n"
 "Last-Translator: Dušan Juretić <dusan.juretic@gmail.com>\n"
 "Language-Team: Esperanto\n"
+"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.1.1\n"
-"Language: eo\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.11\n"
 
 #: script/dropbox.js:62
 msgid "Dropbox connection"
-msgstr ""
+msgstr "Konekto al Dropboks"
 
 #: script/dropbox.js:65
 msgid "connect game to dropbox local storage"
-msgstr "konekti ludon dropboksen eja ŝparado"
+msgstr "konekti la ludon la loka konservejo de Dropboks"
 
 #: script/dropbox.js:68
 msgid "connect"
@@ -32,20 +32,23 @@ msgid "cancel"
 msgstr "nuligi"
 
 #: script/dropbox.js:86 script/dropbox.js:176
+#, fuzzy
 msgid "Dropbox Export / Import"
 msgstr "Dropboksa elirigado / enirigado"
 
 #: script/dropbox.js:89
+#, fuzzy
 msgid "export or import save data to dropbox datastorage"
-msgstr "Elirigi aŭ enirigi savi sciaĵo dropboksen sciaĵoŝparado"
+msgstr "Eligi aŭ enigi savi sciaĵo dropboksen sciaĵoŝparado"
 
 #: script/dropbox.js:90
+#, fuzzy
 msgid "your are connected to dropbox with account / email "
 msgstr "Vi konektatas al dropbokse kun konto / retpoŝto"
 
 #: script/dropbox.js:93
 msgid "save"
-msgstr "savi"
+msgstr "konservi"
 
 #: script/dropbox.js:97
 msgid "load"
@@ -56,10 +59,12 @@ msgid "signout"
 msgstr "elsaluti"
 
 #: script/dropbox.js:113
+#, fuzzy
 msgid "choose one slot to save to"
 msgstr "elecktu unun ejeton per savi"
 
 #: script/dropbox.js:119
+#, fuzzy
 msgid "save to slot"
 msgstr "savi ejeten"
 
@@ -72,10 +77,12 @@ msgid "load from slot"
 msgstr "ŝarĝi el ejeto"
 
 #: script/dropbox.js:179
+#, fuzzy
 msgid "successfully saved to dropbox datastorage"
 msgstr "sukcese savis dropboksen sciaĵoŝparado"
 
 #: script/dropbox.js:180
+#, fuzzy
 msgid "error while saving to dropbox datastorage"
 msgstr "eraro savante dropboksen sciaĵoŝparado"
 
@@ -85,7 +92,7 @@ msgstr "okej"
 
 #: script/engine.js:15
 msgid "boxer"
-msgstr ""
+msgstr "boksisto"
 
 #: script/engine.js:16
 msgid "punches do more damage"
@@ -109,7 +116,7 @@ msgstr "lernis lukti sufiĉe efike sen luktiloj"
 
 #: script/engine.js:27
 msgid "unarmed master"
-msgstr "senluktila mastro"
+msgstr "senarmila batalmajstro"
 
 #: script/engine.js:28
 msgid "punch twice as fast, and with even more force"
@@ -129,7 +136,7 @@ msgstr "korpoluktiloj faras pli damaĝon"
 
 #: script/engine.js:34
 msgid "learned to swing weapons with force"
-msgstr ""
+msgstr "lernis svingi armilojn pli forte"
 
 #: script/engine.js:37
 msgid "slow metabolism"
@@ -145,7 +152,7 @@ msgstr "lernis malzorgi pri malsato"
 
 #: script/engine.js:42
 msgid "desert rat"
-msgstr ""
+msgstr "dezerta rato"
 
 #: script/engine.js:43
 msgid "go twice as far without drinking"
@@ -161,7 +168,7 @@ msgstr "forirema"
 
 #: script/engine.js:48
 msgid "dodge attacks more effectively"
-msgstr ""
+msgstr "eviti atokojn pli efike"
 
 #: script/engine.js:49
 msgid "learned to be where they're not"
@@ -169,11 +176,11 @@ msgstr "lernis esti kie ili ne estas"
 
 #: script/engine.js:52
 msgid "precise"
-msgstr ""
+msgstr "precizeco"
 
 #: script/engine.js:53
 msgid "land blows more often"
-msgstr ""
+msgstr "trafi kontraŭulon pli ofte"
 
 #: script/engine.js:54
 msgid "learned to predict their movement"
@@ -181,7 +188,7 @@ msgstr "lernis antaŭdiri ilian movojn"
 
 #: script/engine.js:57
 msgid "scout"
-msgstr ""
+msgstr "skolto"
 
 #: script/engine.js:58
 msgid "see farther"
@@ -189,15 +196,15 @@ msgstr "vidi pli fore"
 
 #: script/engine.js:59
 msgid "learned to look ahead"
-msgstr ""
+msgstr "lernis vidi antaŭen"
 
 #: script/engine.js:62
 msgid "stealthy"
-msgstr "malavizigema"
+msgstr "malatentigeco"
 
 #: script/engine.js:63
 msgid "better avoid conflict in the wild"
-msgstr ""
+msgstr "eviti batalojn pli bone en la naturo"
 
 #: script/engine.js:64
 msgid "learned how not to be seen"
@@ -209,7 +216,7 @@ msgstr "manĝema"
 
 #: script/engine.js:68
 msgid "restore more health when eating"
-msgstr ""
+msgstr "resaniĝi pli per manĝado"
 
 #: script/engine.js:69
 msgid "learned to make the most of food"
@@ -268,12 +275,13 @@ msgid "import"
 msgstr "enirigi"
 
 #: script/engine.js:291
+#, fuzzy
 msgid "save this."
 msgstr "savi ĉi tiun"
 
 #: script/engine.js:297
 msgid "got it"
-msgstr ""
+msgstr "komprenite"
 
 #: script/engine.js:305
 msgid "are you sure?"
@@ -305,7 +313,7 @@ msgstr "Restartigi?"
 
 #: script/engine.js:377
 msgid "restart the game?"
-msgstr ""
+msgstr "ĉu restartigi la ludon?"
 
 #: script/engine.js:408
 msgid "Share"
@@ -362,11 +370,11 @@ msgstr "manĝi viandon "
 
 #: script/events.js:150
 msgid "use meds"
-msgstr ""
+msgstr "uzi kuracilon"
 
 #: script/events.js:350 script/events.js:395
 msgid "miss"
-msgstr ""
+msgstr "maltrafite"
 
 #: script/events.js:363 script/events.js:408
 msgid "stunned"
@@ -387,39 +395,39 @@ msgstr ""
 #: script/events/setpieces.js:3496 script/events/setpieces.js:3515
 #: script/events/setpieces.js:3539 script/events/setpieces.js:3567
 msgid "leave"
-msgstr ""
+msgstr "foriri"
 
 #: script/events.js:511
 msgid "drop:"
-msgstr ""
+msgstr "faligi:"
 
 #: script/events.js:536 script/events/room.js:523
 msgid "nothing"
-msgstr ""
+msgstr "nenion"
 
 #: script/events.js:567 script/events/setpieces.js:3551
 msgid "take"
-msgstr ""
+msgstr "preni"
 
 #: script/events.js:577
 msgid "take:"
-msgstr ""
+msgstr "preni:"
 
 #: script/events.js:599
 msgid "nothing to take"
-msgstr ""
+msgstr "nenio prenebla"
 
 #: script/events.js:627
 msgid "all"
-msgstr ""
+msgstr "ĉion"
 
 #: script/events.js:649
 msgid "take everything"
-msgstr ""
+msgstr "preni ĉion"
 
 #: script/events.js:653 script/outside.js:627
 msgid " and "
-msgstr ""
+msgstr " kaj "
 
 #: script/events.js:896
 msgid "*** EVENT ***"
@@ -427,7 +435,7 @@ msgstr "*** OKAZAĴO ***"
 
 #: script/localization.js:4
 msgid "saved."
-msgstr ""
+msgstr "konservite."
 
 #: script/localization.js:5
 msgid "wood"
@@ -451,7 +459,7 @@ msgstr "felo"
 
 #: script/localization.js:10
 msgid "alien alloy"
-msgstr ""
+msgstr "alimonda kunfondaĵo"
 
 #: script/localization.js:11
 msgid "bullets"
@@ -503,19 +511,19 @@ msgstr ""
 
 #: script/localization.js:23 script/outside.js:38
 msgid "tanner"
-msgstr ""
+msgstr "tanisto"
 
 #: script/localization.js:24
 msgid "grenade"
-msgstr ""
+msgstr "grenado"
 
 #: script/localization.js:25
 msgid "bolas"
-msgstr ""
+msgstr "ĵetbulo"
 
 #: script/localization.js:26
 msgid "bayonet"
-msgstr ""
+msgstr "bajoneto"
 
 #: script/localization.js:27 script/outside.js:46
 msgid "charcutier"
@@ -583,7 +591,7 @@ msgstr ""
 
 #: script/localization.js:45
 msgid "thieves"
-msgstr ""
+msgstr "ŝtelistoj"
 
 #: script/localization.js:46
 msgid "not enough fur"
@@ -635,35 +643,35 @@ msgstr "ne estas sufiĉe da viando"
 
 #: script/localization.js:58
 msgid "the compass points east"
-msgstr ""
+msgstr "la kompaso indikas orienten"
 
 #: script/localization.js:59
 msgid "the compass points west"
-msgstr ""
+msgstr "la kompaso indikas okcidenten"
 
 #: script/localization.js:60
 msgid "the compass points north"
-msgstr ""
+msgstr "la kompaso indikas norden"
 
 #: script/localization.js:61
 msgid "the compass points south"
-msgstr ""
+msgstr "la kompaso indikas suden"
 
 #: script/localization.js:62
 msgid "the compass points northeast"
-msgstr ""
+msgstr "la kompaso indikas nordorienten"
 
 #: script/localization.js:63
 msgid "the compass points northwest"
-msgstr ""
+msgstr "la kompaso indikas nordokcidenten"
 
 #: script/localization.js:64
 msgid "the compass points southeast"
-msgstr ""
+msgstr "la kompaso indikas sudorienten"
 
 #: script/localization.js:65
 msgid "the compass points southwest"
-msgstr ""
+msgstr "la kompaso indikas sudokcidenten"
 
 #: script/outside.js:5
 msgid "Outside"
@@ -671,7 +679,7 @@ msgstr ""
 
 #: script/outside.js:102
 msgid "scraps of fur"
-msgstr ""
+msgstr "feleroj"
 
 #: script/outside.js:107
 msgid "bits of meat"
@@ -683,7 +691,7 @@ msgstr "strangaj skvamoj"
 
 #: script/outside.js:117
 msgid "scattered teeth"
-msgstr ""
+msgstr "disaj dentoj"
 
 #: script/outside.js:122
 msgid "tattered cloth"
@@ -703,7 +711,7 @@ msgstr "kolekti lignon"
 
 #: script/outside.js:188
 msgid "a stranger arrives in the night"
-msgstr ""
+msgstr "alvenas nekonato dum la nokto"
 
 #: script/outside.js:190
 msgid "a weathered family takes up in one of the huts."
@@ -711,7 +719,7 @@ msgstr ""
 
 #: script/outside.js:192
 msgid "a small group arrives, all dust and bones."
-msgstr ""
+msgstr "alvenas grupeto, plejparte plovo kaj ostoj."
 
 #: script/outside.js:194
 msgid "a convoy lurches in, equal parts worry and hope."
@@ -735,7 +743,7 @@ msgstr "vilaĝo"
 
 #: script/outside.js:543
 msgid "check traps"
-msgstr ""
+msgstr "kontroli kaptilojn"
 
 #: script/outside.js:564
 msgid "A Lonely Hut"
@@ -783,7 +791,7 @@ msgstr ""
 
 #: script/path.js:60 script/room.js:1153
 msgid "the compass points "
-msgstr ""
+msgstr "la kompaso indikas "
 
 #: script/path.js:102
 msgid "perks:"
@@ -886,7 +894,7 @@ msgstr ""
 
 #: script/room.js:88
 msgid "tannery"
-msgstr ""
+msgstr "tanejo"
 
 #: script/room.js:91
 msgid "builder says leather could be useful. says the villagers could make it."
@@ -911,7 +919,7 @@ msgstr ""
 
 #: script/room.js:116
 msgid "workshop"
-msgstr ""
+msgstr "laborejo"
 
 #: script/room.js:119
 msgid "builder says she could make finer things, if she had the tools"
@@ -971,7 +979,7 @@ msgstr ""
 
 #: script/room.js:202
 msgid "never go thirsty again"
-msgstr ""
+msgstr "neniam soifa plu"
 
 #: script/room.js:211
 msgid "bone spear"
@@ -983,7 +991,7 @@ msgstr ""
 
 #: script/room.js:223 script/world.js:285
 msgid "rucksack"
-msgstr ""
+msgstr "dorsosako"
 
 #: script/room.js:227
 msgid "carrying more means longer expeditions to the wilds"
@@ -1073,9 +1081,11 @@ msgstr "hejti fajron"
 msgid "the room is {0}"
 msgstr "la ĉambro estas {0}"
 
+# This sentence is made by combining "the fire is" and an adjective.
+# A more natural way of doing this in Esperanto is by combining "la fajro" and a verb.
 #: script/room.js:546 script/room.js:554 script/room.js:672
 msgid "the fire is {0}"
-msgstr "la fajro estas {0}"
+msgstr "la fajro {0}"
 
 #: script/room.js:565
 msgid ""
@@ -1105,23 +1115,23 @@ msgstr "varmega"
 
 #: script/room.js:596
 msgid "dead"
-msgstr "morta"
+msgstr "mortis"
 
 #: script/room.js:597
 msgid "smoldering"
-msgstr ""
+msgstr "fumetas"
 
 #: script/room.js:598
 msgid "flickering"
-msgstr ""
+msgstr "flagretas"
 
 #: script/room.js:599
 msgid "burning"
-msgstr "brulanta"
+msgstr "brulas"
 
 #: script/room.js:600
 msgid "roaring"
-msgstr ""
+msgstr "brulas forte"
 
 #: script/room.js:604
 msgid "A Firelit Room"
@@ -1232,7 +1242,7 @@ msgstr ""
 
 #: script/ship.js:106 script/ship.js:119
 msgid "not enough alien alloy"
-msgstr ""
+msgstr "ne estas sufiĉe da alimonda kunfondaĵo"
 
 #: script/ship.js:134
 msgid "Ready to Leave?"
@@ -1240,39 +1250,39 @@ msgstr ""
 
 #: script/ship.js:138
 msgid "time to get out of this place. won't be coming back."
-msgstr ""
+msgstr "jam temp' estas por forflugi, ne revenos."
 
 #: script/ship.js:150
 msgid "linger"
-msgstr ""
+msgstr "resti iom pli"
 
 #: script/space.js:42
 msgid "hull: "
-msgstr ""
+msgstr "ŝelo: "
 
 #: script/space.js:76
 msgid "Troposphere"
-msgstr ""
+msgstr "Troposfero"
 
 #: script/space.js:78
 msgid "Stratosphere"
-msgstr ""
+msgstr "Stratosfero"
 
 #: script/space.js:80
 msgid "Mesosphere"
-msgstr ""
+msgstr "Mezosfero"
 
 #: script/space.js:82
 msgid "Thermosphere"
-msgstr ""
+msgstr "Termosfero"
 
 #: script/space.js:84
 msgid "Exosphere"
-msgstr ""
+msgstr "Ekzosfero"
 
 #: script/space.js:86
 msgid "Space"
-msgstr ""
+msgstr "La Kosmo"
 
 #: script/space.js:424
 msgid "score for this game: {0}"
@@ -1284,7 +1294,7 @@ msgstr ""
 
 #: script/world.js:46
 msgid "punch"
-msgstr ""
+msgstr "pugni"
 
 #: script/world.js:52
 msgid "stab"
@@ -1304,7 +1314,7 @@ msgstr ""
 
 #: script/world.js:76
 msgid "shoot"
-msgstr ""
+msgstr "pafi"
 
 #: script/world.js:83
 msgid "blast"
@@ -1320,7 +1330,7 @@ msgstr ""
 
 #: script/world.js:119
 msgid "An&nbsp;Outpost"
-msgstr ""
+msgstr "Pikedo"
 
 #: script/world.js:120
 msgid "Iron&nbsp;Mine"
@@ -1340,15 +1350,15 @@ msgstr "Malnova&nbsp;Domo"
 
 #: script/world.js:124
 msgid "A&nbsp;Damp&nbsp;Cave"
-msgstr ""
+msgstr "Malseka Kaverno"
 
 #: script/world.js:125
 msgid "An&nbsp;Abandoned&nbsp;Town"
-msgstr ""
+msgstr "Forlastia Urbeto"
 
 #: script/world.js:126
 msgid "A&nbsp;Ruined&nbsp;City"
-msgstr ""
+msgstr "Ruina Urbo"
 
 #: script/world.js:127
 msgid "A&nbsp;Crashed&nbsp;Starship"
@@ -1356,11 +1366,11 @@ msgstr ""
 
 #: script/world.js:128
 msgid "A&nbsp;Borehole"
-msgstr ""
+msgstr "Boraĵo"
 
 #: script/world.js:129
 msgid "A&nbsp;Battlefield"
-msgstr ""
+msgstr "Batalejo"
 
 #: script/world.js:130
 msgid "A&nbsp;Murky&nbsp;Swamp"
@@ -1368,7 +1378,7 @@ msgstr ""
 
 #: script/world.js:134
 msgid "A&nbsp;Destroyed&nbsp;Village"
-msgstr ""
+msgstr "Detruita Vilaĝo"
 
 #: script/world.js:256
 msgid "water:{0}"
@@ -1376,39 +1386,39 @@ msgstr "akvo:{0}"
 
 #: script/world.js:283
 msgid "pockets"
-msgstr ""
+msgstr "poŝoj"
 
 #: script/world.js:307
 msgid "hp: {0}/{1}"
-msgstr ""
+msgstr "vp: {0}/{1}"
 
 #: script/world.js:314
 msgid "{0}:{1}"
-msgstr ""
+msgstr "{0}:{1}"
 
 #: script/world.js:349
 msgid "dangerous to be this far from the village without proper protection"
-msgstr ""
+msgstr "danĝeras tiom fori de la vilaĝo sen bona kiraso"
 
 #: script/world.js:351
 msgid "safer here"
-msgstr ""
+msgstr "malpli danĝeras ĉi tie"
 
 #: script/world.js:451
 msgid "the meat has run out"
-msgstr ""
+msgstr "ne plu restas viando"
 
 #: script/world.js:456
 msgid "starvation sets in"
-msgstr ""
+msgstr "ekas mortmalsato"
 
 #: script/world.js:481
 msgid "there is no more water"
-msgstr ""
+msgstr "restas neniom da akvo"
 
 #: script/world.js:485
 msgid "the thirst becomes unbearable"
-msgstr ""
+msgstr "ne plu tolereblas la soifo"
 
 #: script/world.js:558
 msgid "the trees yield to dry grass. the yellowed brush rustles in the wind."
@@ -1441,7 +1451,7 @@ msgstr ""
 
 #: script/world.js:817
 msgid "Wanderer"
-msgstr ""
+msgstr "Vaganto"
 
 #: script/world.js:822
 msgid "The&nbsp;Village"
@@ -1641,11 +1651,11 @@ msgstr ""
 
 #: script/events/global.js:21
 msgid "hang him"
-msgstr ""
+msgstr "pendumi lin"
 
 #: script/events/global.js:25
 msgid "spare him"
-msgstr ""
+msgstr "pardoni lin"
 
 #: script/events/global.js:32
 msgid "the villagers hang the thief high in front of the store room."
@@ -1695,7 +1705,7 @@ msgstr ""
 
 #: script/events/outside.js:38
 msgid "the forest is silent."
-msgstr ""
+msgstr "la arbaro silentas."
 
 #: script/events/outside.js:40
 msgid "nothing was found"
@@ -1738,11 +1748,11 @@ msgstr ""
 
 #: script/events/outside.js:86
 msgid "mourn"
-msgstr ""
+msgstr "funebri"
 
 #: script/events/outside.js:87
 msgid "some villagers have died"
-msgstr ""
+msgstr "kelkaj vilaĝanoj mortis"
 
 #: script/events/outside.js:95
 msgid "Sickness"
@@ -1758,7 +1768,7 @@ msgstr ""
 
 #: script/events/outside.js:105
 msgid "some villagers are ill"
-msgstr ""
+msgstr "kelkaj vilaĝanoj malsanas"
 
 #: script/events/outside.js:109
 msgid "1 medicine"
@@ -1814,7 +1824,7 @@ msgstr "5 kuracilo"
 
 #: script/events/outside.js:179
 msgid "do nothing"
-msgstr ""
+msgstr "fari nenion"
 
 #: script/events/outside.js:186
 msgid "the plague is kept from spreading."
@@ -1822,7 +1832,7 @@ msgstr ""
 
 #: script/events/outside.js:187
 msgid "only a few die."
-msgstr ""
+msgstr "malmultaj mortas."
 
 #: script/events/outside.js:188
 msgid "the rest bury them."
@@ -1927,21 +1937,20 @@ msgstr ""
 
 #: script/events/room.js:39
 msgid "buy compass"
-msgstr ""
+msgstr "aĉeti kompason"
 
 #: script/events/room.js:42
 msgid "the old compass is dented and dusty, but it looks to work."
 msgstr ""
 
-#: script/events/room.js:45 script/events/room.js:227
-#: script/events/room.js:240 script/events/room.js:253
-#: script/events/room.js:309 script/events/room.js:332
-#: script/events/room.js:388 script/events/room.js:411
-#: script/events/room.js:450 script/events/room.js:568
-#: script/events/room.js:584 script/events/room.js:600
-#: script/events/room.js:611
+#: script/events/room.js:45 script/events/room.js:227 script/events/room.js:240
+#: script/events/room.js:253 script/events/room.js:309
+#: script/events/room.js:332 script/events/room.js:388
+#: script/events/room.js:411 script/events/room.js:450
+#: script/events/room.js:568 script/events/room.js:584
+#: script/events/room.js:600 script/events/room.js:611
 msgid "say goodbye"
-msgstr ""
+msgstr "adiaŭi"
 
 #: script/events/room.js:53 script/events/room.js:104
 msgid "Noises"
@@ -1970,7 +1979,7 @@ msgstr ""
 
 #: script/events/room.js:79
 msgid "the sounds stop."
-msgstr ""
+msgstr "ĉesas la bruo."
 
 #: script/events/room.js:83 script/events/room.js:96
 msgid "go back inside"
@@ -1983,7 +1992,7 @@ msgstr ""
 
 #: script/events/room.js:92
 msgid "the night is silent."
-msgstr ""
+msgstr "la nokto silentas."
 
 #: script/events/room.js:111
 msgid "scratching noises can be heard from the store room."
@@ -2016,11 +2025,11 @@ msgstr ""
 
 #: script/events/room.js:190
 msgid "The Beggar"
-msgstr ""
+msgstr "La Almozulo"
 
 #: script/events/room.js:197
 msgid "a beggar arrives."
-msgstr ""
+msgstr "alvenas almozulo."
 
 #: script/events/room.js:198
 msgid "asks for any spare furs to keep him warm at night."
@@ -2028,21 +2037,21 @@ msgstr ""
 
 #: script/events/room.js:200
 msgid "a beggar arrives"
-msgstr ""
+msgstr "alvenas almozulo"
 
 #: script/events/room.js:204
 msgid "give 50"
-msgstr ""
+msgstr "doni 50"
 
 #: script/events/room.js:209 script/events/room.js:276
 #: script/events/room.js:355
 msgid "give 100"
-msgstr ""
+msgstr "doni 100"
 
 #: script/events/room.js:214 script/events/room.js:286
 #: script/events/room.js:482
 msgid "turn him away"
-msgstr ""
+msgstr "forsendi lin"
 
 #: script/events/room.js:222 script/events/room.js:235
 #: script/events/room.js:248
@@ -2063,7 +2072,7 @@ msgstr ""
 
 #: script/events/room.js:262 script/events/room.js:341
 msgid "The Mysterious Wanderer"
-msgstr ""
+msgstr "La Mistera Vaganto"
 
 #: script/events/room.js:269
 msgid ""
@@ -2073,45 +2082,47 @@ msgstr ""
 
 #: script/events/room.js:270
 msgid "builder's not sure he's to be trusted."
-msgstr ""
+msgstr "konstruisto dubas, ĉu li fidindas"
 
 #: script/events/room.js:272 script/events/room.js:351
 msgid "a mysterious wanderer arrives"
-msgstr ""
+msgstr "alvenas mistera vaganto"
 
 #: script/events/room.js:281 script/events/room.js:360
 msgid "give 500"
-msgstr ""
+msgstr "doni 500"
 
 #: script/events/room.js:293 script/events/room.js:316
 msgid "the wanderer leaves, cart loaded with wood"
-msgstr ""
+msgstr "la vaganto foriras, ligno en la ĉaro"
 
 #: script/events/room.js:299 script/events/room.js:322
 msgid "the mysterious wanderer returns, cart piled high with wood."
-msgstr ""
+msgstr "revenas la mistera vaganto. ĉaro portas lignamason."
 
 #: script/events/room.js:348
 msgid ""
 "a wanderer arrives with an empty cart. says if she leaves with furs, she'll "
 "be back with more."
 msgstr ""
+"alvenas vaganto kun malplena ĉaro. diras, ke se ŝi foriras kun feloj ŝi "
+"revenos kun pli."
 
 #: script/events/room.js:349
 msgid "builder's not sure she's to be trusted."
-msgstr ""
+msgstr "konstruisto dubas, ĉu li fidindas"
 
 #: script/events/room.js:365
 msgid "turn her away"
-msgstr ""
+msgstr "forsendi ŝin"
 
 #: script/events/room.js:372 script/events/room.js:395
 msgid "the wanderer leaves, cart loaded with furs"
-msgstr ""
+msgstr "la vaganto foriras, feloj en la ĉaro"
 
 #: script/events/room.js:378 script/events/room.js:401
 msgid "the mysterious wanderer returns, cart piled high with furs."
-msgstr ""
+msgstr "revenas la mistera vaganto. ĉaro portas multajn felojn."
 
 #: script/events/room.js:420
 msgid "The Scout"
@@ -2131,7 +2142,7 @@ msgstr ""
 
 #: script/events/room.js:434
 msgid "buy map"
-msgstr ""
+msgstr "aĉeti mapon"
 
 #: script/events/room.js:436
 msgid "the map uncovers a bit of the world"
@@ -2157,9 +2168,10 @@ msgstr ""
 msgid "an old wanderer arrives"
 msgstr ""
 
+# not a direct translation. works in context.
 #: script/events/room.js:473
 msgid "agree"
-msgstr ""
+msgstr "permesi"
 
 #: script/events/room.js:489
 msgid "in exchange, the wanderer offers his wisdom."
@@ -2195,7 +2207,7 @@ msgstr ""
 
 #: script/events/room.js:546
 msgid "give 1 medicine"
-msgstr ""
+msgstr "doni 1 kuracilon"
 
 #: script/events/room.js:548
 msgid "the man swallows the medicine eagerly"
@@ -2233,7 +2245,7 @@ msgstr ""
 
 #: script/events/setpieces.js:6
 msgid "An Outpost"
-msgstr ""
+msgstr "Pikedo"
 
 #: script/events/setpieces.js:10 script/events/setpieces.js:12
 msgid "a safe place in the wilds."
@@ -2272,7 +2284,7 @@ msgstr ""
 
 #: script/events/setpieces.js:61
 msgid "talk"
-msgstr ""
+msgstr "paroli"
 
 #: script/events/setpieces.js:72
 msgid "the wanderer takes the charm and nods slowly."
@@ -2346,7 +2358,7 @@ msgstr ""
 #: script/events/setpieces.js:3347 script/events/setpieces.js:3381
 #: script/events/setpieces.js:3420
 msgid "continue"
-msgstr ""
+msgstr "antaŭen"
 
 #: script/events/setpieces.js:140 script/events/setpieces.js:157
 #: script/events/setpieces.js:191 script/events/setpieces.js:233
@@ -3125,16 +3137,16 @@ msgstr ""
 
 #: script/events/setpieces.js:3201
 msgid "a soldier, alerted, opens fire."
-msgstr ""
+msgstr "soldato, atentigita, ekpafas."
 
 #: script/events/setpieces.js:3209 script/events/setpieces.js:3249
 #: script/events/setpieces.js:3352 script/events/setpieces.js:3386
 msgid "run"
-msgstr ""
+msgstr "forkuri"
 
 #: script/events/setpieces.js:3241
 msgid "a second soldier joins the fight."
-msgstr ""
+msgstr "dua soldato ekbatalas."
 
 #: script/events/setpieces.js:3275
 msgid "a grizzled soldier attacks, waving a bayonet."
@@ -3147,7 +3159,7 @@ msgstr ""
 #: script/events/setpieces.js:3287 script/events/setpieces.js:3429
 #: script/events/setpieces.js:3505
 msgid "the mine is now safe for workers."
-msgstr ""
+msgstr "nun la minejo sendanĝeras por la laboristoj."
 
 #: script/events/setpieces.js:3289
 msgid "the sulphur mine is clear of dangers"
@@ -3171,11 +3183,11 @@ msgstr ""
 
 #: script/events/setpieces.js:3344 script/events/setpieces.js:3378
 msgid "a man joins the fight"
-msgstr ""
+msgstr "viro enbataliĝas"
 
 #: script/events/setpieces.js:3417
 msgid "only the chief remains."
-msgstr ""
+msgstr "restas nur la ĉefo."
 
 #: script/events/setpieces.js:3428
 msgid "the camp is still, save for the crackling of the fires."
@@ -3221,7 +3233,7 @@ msgstr ""
 
 #: script/events/setpieces.js:3524
 msgid "A Destroyed Village"
-msgstr ""
+msgstr "Detruita Vilaĝo"
 
 #: script/events/setpieces.js:3528
 msgid "a destroyed village lies in the dust."
