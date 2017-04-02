@@ -232,7 +232,7 @@ msgstr ""
 
 #: script/engine.js:150 script/engine.js:521
 msgid "hyper."
-msgstr "sperega"
+msgstr "sperega."
 
 #: script/engine.js:156 script/space.js:442
 msgid "restart."
@@ -1350,15 +1350,15 @@ msgstr "Malnova&nbsp;Domo"
 
 #: script/world.js:124
 msgid "A&nbsp;Damp&nbsp;Cave"
-msgstr "Malseka Kaverno"
+msgstr "Malseka&nbsp;Kaverno"
 
 #: script/world.js:125
 msgid "An&nbsp;Abandoned&nbsp;Town"
-msgstr "Forlastia Urbeto"
+msgstr "Forlasita&nbsp;Urbeto"
 
 #: script/world.js:126
 msgid "A&nbsp;Ruined&nbsp;City"
-msgstr "Ruina Urbo"
+msgstr "Ruina&nbsp;Urbo"
 
 #: script/world.js:127
 msgid "A&nbsp;Crashed&nbsp;Starship"
@@ -1599,15 +1599,15 @@ msgstr ""
 
 #: script/events/encounters.js:315
 msgid "A Soldier"
-msgstr ""
+msgstr "Soldato"
 
 #: script/events/encounters.js:323
 msgid "soldier"
-msgstr ""
+msgstr "soldato"
 
 #: script/events/encounters.js:324
 msgid "the soldier is dead"
-msgstr ""
+msgstr "la soldato mortis"
 
 #: script/events/encounters.js:353
 msgid "a soldier opens fire from across the desert"
@@ -1615,15 +1615,15 @@ msgstr ""
 
 #: script/events/encounters.js:358
 msgid "A Sniper"
-msgstr ""
+msgstr "Tiraljoro"
 
 #: script/events/encounters.js:366
 msgid "sniper"
-msgstr ""
+msgstr "tiraljoro"
 
 #: script/events/encounters.js:367
 msgid "the sniper is dead"
-msgstr ""
+msgstr "la tiraljoro mortis"
 
 #: script/events/encounters.js:396
 msgid "a shot rings out, from somewhere in the long grass"
@@ -1631,7 +1631,7 @@ msgstr ""
 
 #: script/events/global.js:6
 msgid "The Thief"
-msgstr ""
+msgstr "La Ŝtelisto"
 
 #: script/events/global.js:13
 msgid "the villagers haul a filthy man out of the store room."
