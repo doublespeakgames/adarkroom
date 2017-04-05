@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: adarkroom\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2017-04-01 23:47+0100\n"
-"PO-Revision-Date: 2017-04-02 12:27+0100\n"
+"PO-Revision-Date: 2017-04-05 17:10-0300\n"
 "Last-Translator: Dušan Juretić <dusan.juretic@gmail.com>\n"
 "Language-Team: Esperanto\n"
 "Language: eo\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.1.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: script/dropbox.js:62
 msgid "Dropbox connection"
@@ -168,7 +168,7 @@ msgstr "forirema"
 
 #: script/engine.js:48
 msgid "dodge attacks more effectively"
-msgstr "eviti atokojn pli efike"
+msgstr "eviti atakojn pli efike"
 
 #: script/engine.js:49
 msgid "learned to be where they're not"
@@ -317,7 +317,7 @@ msgstr "ĉu restartigi la ludon?"
 
 #: script/engine.js:408
 msgid "Share"
-msgstr ""
+msgstr "Konigi"
 
 #: script/engine.js:411
 msgid "bring your friends."
@@ -378,7 +378,7 @@ msgstr "maltrafite"
 
 #: script/events.js:363 script/events.js:408
 msgid "stunned"
-msgstr ""
+msgstr "paralizita"
 
 #: script/events.js:482 script/events.js:653 script/events/global.js:42
 #: script/events/global.js:59 script/events/room.js:142
@@ -491,7 +491,7 @@ msgstr "sulfuro"
 
 #: script/localization.js:18
 msgid "energy cell"
-msgstr ""
+msgstr "energia ĉelo"
 
 #: script/localization.js:19 script/room.js:161
 msgid "torch"
@@ -559,7 +559,7 @@ msgstr ""
 
 #: script/localization.js:35 script/outside.js:79
 msgid "steelworker"
-msgstr ""
+msgstr "ŝtala laboristo"
 
 #: script/localization.js:36
 msgid "bait"
@@ -567,7 +567,7 @@ msgstr "logaĵo"
 
 #: script/localization.js:37 script/localization.js:44
 msgid "cured meat"
-msgstr ""
+msgstr "fumaĵita viando"
 
 #: script/localization.js:38 script/localization.js:43
 msgid "scales"
@@ -587,7 +587,7 @@ msgstr ""
 
 #: script/localization.js:42
 msgid "cloth"
-msgstr ""
+msgstr "ŝtofo"
 
 #: script/localization.js:45
 msgid "thieves"
@@ -627,7 +627,7 @@ msgstr "ne estas sufiĉe da skvamoj"
 
 #: script/localization.js:54
 msgid "not enough cloth"
-msgstr ""
+msgstr "ne estas sufiĉe da ŝtofo"
 
 #: script/localization.js:55
 msgid "not enough teeth"
@@ -679,23 +679,23 @@ msgstr ""
 
 #: script/outside.js:102
 msgid "scraps of fur"
-msgstr "feleroj"
+msgstr "felerojn"
 
 #: script/outside.js:107
 msgid "bits of meat"
-msgstr ""
+msgstr "pecojn da viando"
 
 #: script/outside.js:112
 msgid "strange scales"
-msgstr "strangaj skvamoj"
+msgstr "strangajn skvamojn"
 
 #: script/outside.js:117
 msgid "scattered teeth"
-msgstr "disaj dentoj"
+msgstr "disajn dentojn"
 
 #: script/outside.js:122
 msgid "tattered cloth"
-msgstr ""
+msgstr "disŝiritan ŝtofon"
 
 #: script/outside.js:127
 msgid "a crudely made charm"
@@ -775,7 +775,7 @@ msgstr ""
 
 #: script/outside.js:621
 msgid "the traps contain "
-msgstr ""
+msgstr "la kaptiloj enhavas "
 
 #: script/path.js:29 script/path.js:298
 msgid "A Dusty Path"
@@ -799,7 +799,7 @@ msgstr ""
 
 #: script/path.js:132
 msgid "none"
-msgstr ""
+msgstr "neniu"
 
 #: script/path.js:142
 msgid "armour"
@@ -881,7 +881,7 @@ msgstr ""
 
 #: script/room.js:74
 msgid "trading post"
-msgstr ""
+msgstr "bazaro"
 
 #: script/room.js:77
 msgid "a trading post would make commerce easier"
@@ -1051,7 +1051,7 @@ msgstr "ŝtala glavo"
 
 #: script/room.js:314
 msgid "the steel is strong, and the blade true."
-msgstr ""
+msgstr "ŝtalo estas forta, kaj la tranĉanto estas reala."
 
 #: script/room.js:324
 msgid "rifle"
@@ -1286,11 +1286,11 @@ msgstr "La Kosmo"
 
 #: script/space.js:424
 msgid "score for this game: {0}"
-msgstr ""
+msgstr "poentaro pri ĉi tiu ludo: {0}"
 
 #: script/space.js:431
 msgid "total score: {0}"
-msgstr ""
+msgstr "totala poentaro: {0}"
 
 #: script/world.js:46
 msgid "punch"
@@ -1298,7 +1298,7 @@ msgstr "pugni"
 
 #: script/world.js:52
 msgid "stab"
-msgstr ""
+msgstr "enpiki"
 
 #: script/world.js:58
 msgid "swing"
@@ -1374,7 +1374,7 @@ msgstr "Batalejo"
 
 #: script/world.js:130
 msgid "A&nbsp;Murky&nbsp;Swamp"
-msgstr ""
+msgstr "Malluma&nbsp;Marĉo"
 
 #: script/world.js:134
 msgid "A&nbsp;Destroyed&nbsp;Village"
@@ -1503,15 +1503,15 @@ msgstr ""
 
 #: script/events/encounters.js:81
 msgid "A Strange Bird"
-msgstr ""
+msgstr "Stranga Birdo"
 
 #: script/events/encounters.js:89
 msgid "strange bird"
-msgstr ""
+msgstr "stranga birdo"
 
 #: script/events/encounters.js:90
 msgid "the strange bird is dead"
-msgstr ""
+msgstr "la stranga birdo mortis"
 
 #: script/events/encounters.js:113
 msgid "a strange looking bird speeds across the plains"
@@ -1567,15 +1567,15 @@ msgstr ""
 
 #: script/events/encounters.js:240
 msgid "A Huge Lizard"
-msgstr ""
+msgstr "Grandega Lacerto"
 
 #: script/events/encounters.js:248
 msgid "lizard"
-msgstr ""
+msgstr "lacerto"
 
 #: script/events/encounters.js:249
 msgid "the lizard is dead"
-msgstr ""
+msgstr "la lacerto mortis"
 
 #: script/events/encounters.js:272
 msgid "the grass thrashes wildly as a huge lizard pushes through"
@@ -1716,7 +1716,7 @@ msgstr ""
 #: script/events/outside.js:197 script/events/outside.js:215
 #: script/events/outside.js:248 script/events/outside.js:282
 msgid "go home"
-msgstr ""
+msgstr "iri hejmen"
 
 #: script/events/outside.js:50
 msgid "not far from the village lies a large beast, its fur matted with blood."
@@ -1732,7 +1732,7 @@ msgstr ""
 
 #: script/events/outside.js:69
 msgid "Fire"
-msgstr ""
+msgstr "Fajro"
 
 #: script/events/outside.js:76
 msgid "a fire rampages through one of the huts, destroying it."
@@ -1756,7 +1756,7 @@ msgstr "kelkaj vilaĝanoj mortis"
 
 #: script/events/outside.js:95
 msgid "Sickness"
-msgstr ""
+msgstr "Malsano"
 
 #: script/events/outside.js:102
 msgid "a sickness is spreading through the village."
@@ -1856,7 +1856,7 @@ msgstr ""
 
 #: script/events/outside.js:224
 msgid "A Beast Attack"
-msgstr ""
+msgstr "Besta Atako"
 
 #: script/events/outside.js:231
 msgid "a pack of snarling beasts pours out of the trees."
@@ -1943,12 +1943,13 @@ msgstr "aĉeti kompason"
 msgid "the old compass is dented and dusty, but it looks to work."
 msgstr ""
 
-#: script/events/room.js:45 script/events/room.js:227 script/events/room.js:240
-#: script/events/room.js:253 script/events/room.js:309
-#: script/events/room.js:332 script/events/room.js:388
-#: script/events/room.js:411 script/events/room.js:450
-#: script/events/room.js:568 script/events/room.js:584
-#: script/events/room.js:600 script/events/room.js:611
+#: script/events/room.js:45 script/events/room.js:227
+#: script/events/room.js:240 script/events/room.js:253
+#: script/events/room.js:309 script/events/room.js:332
+#: script/events/room.js:388 script/events/room.js:411
+#: script/events/room.js:450 script/events/room.js:568
+#: script/events/room.js:584 script/events/room.js:600
+#: script/events/room.js:611
 msgid "say goodbye"
 msgstr "adiaŭi"
 
@@ -2183,11 +2184,11 @@ msgstr ""
 
 #: script/events/room.js:503
 msgid "precision"
-msgstr ""
+msgstr "precizeco"
 
 #: script/events/room.js:513
 msgid "force"
-msgstr ""
+msgstr "forto"
 
 #: script/events/room.js:532
 msgid "The Sick Man"
@@ -2253,7 +2254,7 @@ msgstr ""
 
 #: script/events/setpieces.js:34
 msgid "A Murky Swamp"
-msgstr ""
+msgstr "Malluma Marĉo"
 
 #: script/events/setpieces.js:38
 msgid "rotting reeds rise out of the swampy earth."
@@ -2272,7 +2273,7 @@ msgstr ""
 #: script/events/setpieces.js:1313 script/events/setpieces.js:1331
 #: script/events/setpieces.js:3535
 msgid "enter"
-msgstr ""
+msgstr "eniri"
 
 #: script/events/setpieces.js:55
 msgid "deep in the swamp is a moss-covered cabin."
@@ -2304,7 +2305,7 @@ msgstr ""
 
 #: script/events/setpieces.js:91
 msgid "A Damp Cave"
-msgstr ""
+msgstr "Malseka Kaverno"
 
 #: script/events/setpieces.js:95
 msgid "the mouth of the cave is wide and dark."
@@ -2367,7 +2368,7 @@ msgstr "antaŭen"
 #: script/events/setpieces.js:387 script/events/setpieces.js:429
 #: script/events/setpieces.js:481 script/events/setpieces.js:513
 msgid "leave cave"
-msgstr ""
+msgstr "eliri kavernon"
 
 #: script/events/setpieces.js:148
 msgid "the cave narrows a few feet in."
@@ -2415,7 +2416,7 @@ msgstr ""
 
 #: script/events/setpieces.js:299
 msgid "a cave lizard attacks"
-msgstr ""
+msgstr "kaverna lacerto atakas"
 
 #: script/events/setpieces.js:333
 msgid "a large beast charges out of the dark"
@@ -2439,7 +2440,7 @@ msgstr ""
 
 #: script/events/setpieces.js:522
 msgid "A Deserted Town"
-msgstr ""
+msgstr "Forlasita Urbeto"
 
 #: script/events/setpieces.js:526
 msgid "a small suburb lays ahead, empty houses scorched and peeling."
@@ -2481,7 +2482,7 @@ msgstr ""
 #: script/events/setpieces.js:1148 script/events/setpieces.js:1192
 #: script/events/setpieces.js:1214 script/events/setpieces.js:1230
 msgid "leave town"
-msgstr ""
+msgstr "eliri urbeton"
 
 #: script/events/setpieces.js:585
 msgid "ambushed on the street."
@@ -2622,7 +2623,7 @@ msgstr ""
 
 #: script/events/setpieces.js:1239
 msgid "A Ruined City"
-msgstr ""
+msgstr "Ruina Urbo"
 
 #: script/events/setpieces.js:1243
 msgid ""
@@ -2677,7 +2678,7 @@ msgstr ""
 #: script/events/setpieces.js:2835 script/events/setpieces.js:2881
 #: script/events/setpieces.js:2925
 msgid "leave city"
-msgstr ""
+msgstr "eliri urbon"
 
 #: script/events/setpieces.js:1277
 msgid "orange traffic cones are set across the street, faded and cracked."
@@ -3065,7 +3066,7 @@ msgstr ""
 
 #: script/events/setpieces.js:3051
 msgid "A Forgotten Battlefield"
-msgstr ""
+msgstr "Forgesita Batalejo"
 
 #: script/events/setpieces.js:3055
 msgid "a battle was fought here, long ago."
@@ -3078,7 +3079,7 @@ msgstr ""
 
 #: script/events/setpieces.js:3104
 msgid "A Huge Borehole"
-msgstr ""
+msgstr "Grandega Boraĵo"
 
 #: script/events/setpieces.js:3108
 msgid "a huge hole is cut deep into the earth, evidence of the past harvest."
@@ -3133,7 +3134,7 @@ msgstr ""
 
 #: script/events/setpieces.js:3166 script/events/setpieces.js:3315
 msgid "attack"
-msgstr ""
+msgstr "ataki"
 
 #: script/events/setpieces.js:3201
 msgid "a soldier, alerted, opens fire."
@@ -3179,7 +3180,7 @@ msgstr ""
 
 #: script/events/setpieces.js:3312
 msgid "this old mine is not abandoned"
-msgstr ""
+msgstr "ĉi tiu minejo ne estas forlasita"
 
 #: script/events/setpieces.js:3344 script/events/setpieces.js:3378
 msgid "a man joins the fight"
@@ -3225,7 +3226,7 @@ msgstr ""
 
 #: script/events/setpieces.js:3504
 msgid "the beast is dead."
-msgstr ""
+msgstr "la besto mortis."
 
 #: script/events/setpieces.js:3507
 msgid "the iron mine is clear of dangers"
