@@ -35,7 +35,7 @@ a minimalist text adventure game for your browser
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=uk">Ukrainian</a></td>
 </tr><tr>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=vi">Vietnamese</a></td>
-	<td><a href="http://adarkroom.doublespeakgames.com/?lang=lt">Lithuanian</a></td>
+	<td><a href="http://adarkroom.doublespeakgames.com/?lang=lt_LT">Lithuanian</a></td>
 </tr>
 </table>
 
