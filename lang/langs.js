@@ -10,7 +10,7 @@ var langs = {
 	'ko':'한국어',
 	'nb':'norsk',
 	'pl':'polski',
-	'lt':'lietuvių',
+	'lt_LT':'lietuvių',
 	'pt':'português',
 	'pt_br':'português (brasil)',
 	'ru':'русский',
