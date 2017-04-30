@@ -423,6 +423,10 @@
 								onChoose: function() {
 									window.open('https://play.google.com/store/apps/details?id=com.yourcompany.adarkroom');
 								}
+							},
+							'close': {
+								text: _('close'),
+								nextScene: 'end'
 							}
 						}
 					}
