@@ -951,7 +951,7 @@ var Room = {
 	
 	build: function(buildBtn) {
 		var thing = $(buildBtn).attr('buildThing');
-		if($SM.get('game.temperature.value') <= Room.TempEnum.Cold.value) {
+		if($SM.get('game.temperature.value') <= Room.TempEnum.Mild.value) {
 			Notifications.notify(Room, _("builder just shivers"));
 			return false;
 		}
