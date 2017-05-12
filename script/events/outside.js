@@ -91,6 +91,62 @@ Events.Outside = [
 			}
 		}
 	},
+	{/* Shady Builder */
+		title: _('Shady Builder'),
+		isAvailable: function() {
+			return Engine.activeModule == Outside && $SM.get('game.buildings["hut"]', true) >= 5 && $SM.get('game.buildings["hut"]', true) < 20;
+		},
+		scenes: {
+			'start':{
+				text: [
+					_('a shady builder passes through'),
+					_('says he can build you a cheaper hut')
+				],
+				notification: _('a shady builder passes through'),
+				buttons: {
+					'build': {
+						text: _('300 wood'),
+						cost: { 'wood': 200 },
+						nextScene: {0.6: 'steal', 1: 'build'}
+					},
+					'deny': {
+						text: _('say goodbye'),
+						nextScene: 'end'
+					}
+				}
+			},
+			'steal': {
+				text:[
+					_("the shady builder steals your wood")
+				],
+				notification: _('the shady builder steals your wood'),
+				buttons: {
+					'end': {
+						text: _('go home'),
+						nextScene: 'end'
+					}
+				}
+			},
+			'build': {
+				text:[
+					_("the shady builder builds a hut")
+				],
+				notification: _('the shady builder builds a hut'),
+				onLoad: function() {
+					var n = $SM.get('game.buildings["hut"]', true);
+					if(n < 20){
+						$SM.set('game.buildings["hut"]',n+1);
+					}
+				},
+				buttons: {
+					'end': {
+						text: _('go home'),
+						nextScene: 'end'
+					}
+				}
+			}
+		}
+	},
 	{ /* Sickness */
 		title: _('Sickness'),
 		isAvailable: function() {
@@ -148,7 +204,7 @@ Events.Outside = [
 			}
 		}
 	},
-		
+
 	{ /* Plague */
 		title: _('Plague'),
 		isAvailable: function() {
@@ -275,7 +331,7 @@ Events.Outside = [
 					bullets: 10,
 					'cured meat': 50
 				},
-				
+
 				blink: true,
 				buttons: {
 					'end': {
@@ -286,5 +342,6 @@ Events.Outside = [
 				}
 			}
 		}
-	}
+	},
+
 ];
