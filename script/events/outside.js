@@ -91,8 +91,8 @@ Events.Outside = [
 			}
 		}
 	},
-	{/* Shady Builder */
-		title: _('Shady Builder'),
+	{/* The Shady Builder */
+		title: _('The Shady Builder'),
 		isAvailable: function() {
 			return Engine.activeModule == Outside && $SM.get('game.buildings["hut"]', true) >= 5 && $SM.get('game.buildings["hut"]', true) < 20;
 		},
@@ -100,13 +100,13 @@ Events.Outside = [
 			'start':{
 				text: [
 					_('a shady builder passes through'),
-					_('says he can build you a cheaper hut')
+					_('says he can build you a hut for less wood')
 				],
 				notification: _('a shady builder passes through'),
 				buttons: {
 					'build': {
 						text: _('300 wood'),
-						cost: { 'wood': 200 },
+						cost: { 'wood' : 300 },
 						nextScene: {0.6: 'steal', 1: 'build'}
 					},
 					'deny': {
@@ -117,9 +117,9 @@ Events.Outside = [
 			},
 			'steal': {
 				text:[
-					_("the shady builder steals your wood")
+					_("the shady builder has made off with your wood")
 				],
-				notification: _('the shady builder steals your wood'),
+				notification: _('the shady builder has made off with your wood'),
 				buttons: {
 					'end': {
 						text: _('go home'),
