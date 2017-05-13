@@ -342,6 +342,6 @@ Events.Outside = [
 				}
 			}
 		}
-	},
+	}
 
 ];
