@@ -148,7 +148,7 @@ Events.Outside = [
 			}
 		}
 	},
-		
+
 	{ /* Plague */
 		title: _('Plague'),
 		isAvailable: function() {
@@ -275,7 +275,7 @@ Events.Outside = [
 					bullets: 10,
 					'cured meat': 50
 				},
-				
+
 				blink: true,
 				buttons: {
 					'end': {
@@ -287,4 +287,5 @@ Events.Outside = [
 			}
 		}
 	}
+
 ];
