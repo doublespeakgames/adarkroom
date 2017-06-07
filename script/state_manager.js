@@ -19,6 +19,7 @@ var StateManager = {
 	MAX_STORE: 99999999999999,
 
 	options: {},
+	buttons: {}, // adjust 2017-06-07
 
 	init: function(options) {
 		this.options = $.extend(
@@ -135,6 +136,8 @@ var StateManager = {
 			$SM.set(stateName, old + value, noEvent); //setState handles event and save
 		}
 
+		Engine.updateButtonCost(); // adjust 2017-06-07
+
 		return err;
 	},
 
@@ -153,6 +156,9 @@ var StateManager = {
 			Engine.saveGame();
 			$SM.fireUpdate(parentName);
 		}
+
+		Engine.updateButtonCost(); // adjust 2017-06-07
+
 		return err;
 	},
 

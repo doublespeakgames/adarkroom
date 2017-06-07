@@ -1085,18 +1085,16 @@ var Room = {
 						text: _(k),
 						click: Room.build,
 						width: '80px',
-						ttPos: loc.children().length > 10 ? 'top right' : 'bottom right'
+						ttPos: loc.children().length > 10 ? 'top right' : 'bottom right',
+						type: 'build'
 					}).css('opacity', 0).attr('buildThing', k).appendTo(loc).animate({opacity: 1}, 300, 'linear');
 				}
 			} else {
 				// refresh the tooltip
 				var costTooltip = $('.tooltip', craftable.button);
-				costTooltip.empty();
 				var cost = craftable.cost();
-				for(var c in cost) {
-					$("<div>").addClass('row_key').text(_(c)).appendTo(costTooltip);
-					$("<div>").addClass('row_val').text(cost[c]).appendTo(costTooltip);
-				}
+				Engine.setButtonCost(cost, costTooltip, true);// adjust 2017-06-07
+
 				if(max && !craftable.button.hasClass('disabled')) {
 					Notifications.notify(Room, craftable.maxMsg);
 				}
@@ -1119,18 +1117,16 @@ var Room = {
 						text: _(g),
 						click: Room.buy,
 						width: '80px',
-						ttPos: buySection.children().length > 10 ? 'top right' : 'bottom right'
+						ttPos: buySection.children().length > 10 ? 'top right' : 'bottom right',
+						type: 'buy'
 					}).css('opacity', 0).attr('buildThing', g).appendTo(buySection).animate({opacity:1}, 300, 'linear');
 				}
 			} else {
 				// refresh the tooltip
 				var goodsCostTooltip = $('.tooltip', good.button);
-				goodsCostTooltip.empty();
 				var goodCost = good.cost();
-				for(var gc in goodCost) {
-					$("<div>").addClass('row_key').text(_(gc)).appendTo(goodsCostTooltip);
-					$("<div>").addClass('row_val').text(goodCost[gc]).appendTo(goodsCostTooltip);
-				}
+				Engine.setButtonCost(goodCost, goodsCostTooltip, true);// adjust 2017-06-07
+
 				if(goodsMax && !good.button.hasClass('disabled')) {
 					Notifications.notify(Room, good.maxMsg);
 				}

@@ -27,13 +27,11 @@ var Button = {
 		// waiting for expiry of residual cooldown detected in state
 		Button.cooldown(el, 'state');
 
-		if(options.cost) {
+		if (options.cost) {
 			var ttPos = options.ttPos ? options.ttPos : "bottom right";
 			var costTooltip = $('<div>').addClass('tooltip ' + ttPos);
-			for(var k in options.cost) {
-				$("<div>").addClass('row_key').text(_(k)).appendTo(costTooltip);
-				$("<div>").addClass('row_val').text(options.cost[k]).appendTo(costTooltip);
-			}
+			Engine.setButtonCost(options.cost, costTooltip, (options.type));// adjust 2017-06-07
+			
 			if(costTooltip.children().length > 0) {
 				costTooltip.appendTo(el);
 			}
