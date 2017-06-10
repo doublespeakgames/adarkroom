@@ -634,7 +634,7 @@
 			for(var c in cost) {
 				$("<div>").addClass('row_key').text(_(c)).appendTo(costTooltip);
 				if (type) {
-					$("<div>").addClass('row_val').text($SM.get('stores["'+_(c)+'"]')+"/"+cost[c]).appendTo(costTooltip);
+					$("<div>").addClass('row_val').text($SM.get('stores["'+(c)+'"]')+"/"+cost[c]).appendTo(costTooltip);
 				} else {
 					$("<div>").addClass('row_val').text(cost[c]).appendTo(costTooltip);
 				}
