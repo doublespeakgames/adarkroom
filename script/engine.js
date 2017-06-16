@@ -785,7 +785,7 @@
 		setInterval: function(callback, interval, skipDouble){
 			if( Engine.options.doubleTime && !skipDouble ){
 				Engine.log('Double time, cutting interval in half');
-				interval /= 2;
+				interval /= Engine._debug ? 32 : 2;
 			}
 
 			return setInterval(callback, interval);
@@ -796,7 +796,7 @@
 
 			if( Engine.options.doubleTime && !skipDouble ){
 				Engine.log('Double time, cutting timeout in half');
-				timeout /= 2;
+				timeout /= Engine._debug ? 32 : 2;
 			}
 
 			return setTimeout(callback, timeout);

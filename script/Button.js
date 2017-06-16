@@ -68,6 +68,9 @@ var Button = {
 
 	cooldown: function(btn, option) {
 		var cd = btn.data("cooldown");
+        if (Engine.options.doubleTime && Engine._debug) {
+            cd = cd > 1 ? 1 : cd;
+        }
 		var id = 'cooldown.'+ btn.attr('id');
 		if(cd > 0) {
 			if(typeof option == 'number') {

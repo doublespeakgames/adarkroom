@@ -607,6 +607,7 @@ var World = {
 	lightMap: function(x, y, mask) {
 		var r = World.LIGHT_RADIUS;
 		r *= $SM.hasPerk('scout') ? 2 : 1;
+		r *= Engine._debug ? 4 : 1;					// Engine._debug is supposed to speed the game up.  Exploring the map isn't fast.
 		World.uncoverMap(x, y, r, mask);
 		return mask;
 	},

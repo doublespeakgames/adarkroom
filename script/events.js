@@ -137,7 +137,7 @@ var Events = {
 		Events.setHeal(healBtns);
 
 		// Set up the enemy attack timer
-		Events._enemyAttackTimer = Engine.setInterval(Events.enemyAttack, scene.attackDelay * 1000);
+		Events._enemyAttackTimer = Engine.setInterval(Events.enemyAttack, scene.attackDelay * 1000, Engine._debug);
 	},
 
 	setPause: function(btn, state){
@@ -1076,7 +1076,7 @@ var Events = {
 		var nextEvent = Math.floor(Math.random()*(Events._EVENT_TIME_RANGE[1] - Events._EVENT_TIME_RANGE[0])) + Events._EVENT_TIME_RANGE[0];
 		if(scale > 0) { nextEvent *= scale; }
 		Engine.log('next event scheduled in ' + nextEvent + ' minutes');
-		Events._eventTimeout = Engine.setTimeout(Events.triggerEvent, nextEvent * 60 * 1000);
+		Events._eventTimeout = Engine.setTimeout(Events.triggerEvent, nextEvent * 60 * 1000, Engine._debug);
 	},
 
 	endEvent: function() {
