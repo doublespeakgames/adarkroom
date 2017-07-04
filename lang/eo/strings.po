@@ -220,15 +220,15 @@ msgstr "resaniĝi pli per manĝado"
 
 #: script/engine.js:69
 msgid "learned to make the most of food"
-msgstr ""
+msgstr "lernis kiel plej efike uzi manĝon"
 
 #: script/engine.js:138 script/space.js:450
 msgid "app store."
-msgstr ""
+msgstr "aplikaĵa vendejo"
 
 #: script/engine.js:144 script/engine.js:485
 msgid "lights off."
-msgstr ""
+msgstr "mallumigi"
 
 #: script/engine.js:150 script/engine.js:521
 msgid "hyper."
@@ -260,11 +260,11 @@ msgstr "elirigi / enirigi"
 
 #: script/engine.js:272
 msgid "export or import save data, for backing up"
-msgstr ""
+msgstr "elirigi aŭ enirigi konservdatumon por konservi ĝin"
 
 #: script/engine.js:273
 msgid "or migrating computers"
-msgstr ""
+msgstr "aŭ por komputilmigri"
 
 #: script/engine.js:277
 msgid "export"
@@ -289,11 +289,11 @@ msgstr "ĉu vi certas?"
 
 #: script/engine.js:306
 msgid "if the code is invalid, all data will be lost."
-msgstr ""
+msgstr "se la kodo malĝustas, ĉiom da la datumo perdiĝos."
 
 #: script/engine.js:307
 msgid "this is irreversible."
-msgstr "ĉi tiu malturneblas"
+msgstr "ĉi tio neŝanĝeblas"
 
 #: script/engine.js:311 script/engine.js:380 script/engine.js:499
 msgid "yes"
@@ -305,11 +305,11 @@ msgstr "ne"
 
 #: script/engine.js:322
 msgid "put the save code here."
-msgstr ""
+msgstr "metu la konservdatumon ĉi tien"
 
 #: script/engine.js:374
 msgid "Restart?"
-msgstr "Restartigi?"
+msgstr "Ĉu rekomenci?"
 
 #: script/engine.js:377
 msgid "restart the game?"
@@ -321,11 +321,11 @@ msgstr "Konigi"
 
 #: script/engine.js:411
 msgid "bring your friends."
-msgstr ""
+msgstr "alkonduki viajn amikojn"
 
 #: script/engine.js:414
 msgid "facebook"
-msgstr "feisbuko"
+msgstr "fejsbuko"
 
 #: script/engine.js:421
 msgid "google+"
@@ -333,7 +333,7 @@ msgstr "google+"
 
 #: script/engine.js:428
 msgid "twitter"
-msgstr "twitter"
+msgstr "tvitero"
 
 #: script/engine.js:435
 msgid "reddit"
@@ -349,12 +349,12 @@ msgstr "lumigi"
 
 #: script/engine.js:493
 msgid "Go Hyper?"
-msgstr "Iru Superge?"
+msgstr "Ĉu frenezigu la ludon?"
 
 #: script/engine.js:496
 msgid ""
 "turning hyper mode speeds up the game to x2 speed. do you want to do that?"
-msgstr ""
+msgstr "frenezigi la ludon duoble rapidigas ĝin. ĉu vi volas fari tion?"
 
 #: script/engine.js:519
 msgid "classic."
@@ -507,7 +507,7 @@ msgstr "ĉasisto"
 
 #: script/localization.js:22 script/outside.js:30
 msgid "trapper"
-msgstr ""
+msgstr "kaptisto"
 
 #: script/localization.js:23 script/outside.js:38
 msgid "tanner"
@@ -527,7 +527,7 @@ msgstr "bajoneto"
 
 #: script/localization.js:27 script/outside.js:46
 msgid "charcutier"
-msgstr ""
+msgstr "viandisto"
 
 #: script/localization.js:28 script/outside.js:55
 msgid "iron miner"
@@ -555,7 +555,7 @@ msgstr "sulfura minejo"
 
 #: script/localization.js:34 script/outside.js:88
 msgid "armourer"
-msgstr ""
+msgstr "armaĵisto"
 
 #: script/localization.js:35 script/outside.js:79
 msgid "steelworker"
@@ -583,7 +583,7 @@ msgstr "lasera fusilo"
 
 #: script/localization.js:41 script/outside.js:15
 msgid "gatherer"
-msgstr ""
+msgstr "kolektisto"
 
 #: script/localization.js:42
 msgid "cloth"
@@ -619,7 +619,7 @@ msgstr "ne estas sufiĉe da sulfuro"
 
 #: script/localization.js:52
 msgid "baited trap"
-msgstr ""
+msgstr "logebla kaptilo"
 
 #: script/localization.js:53
 msgid "not enough scales"
@@ -675,7 +675,7 @@ msgstr "la kompaso indikas sudokcidenten"
 
 #: script/outside.js:5
 msgid "Outside"
-msgstr ""
+msgstr "Eksteraĵo"
 
 #: script/outside.js:102
 msgid "scraps of fur"
@@ -699,7 +699,7 @@ msgstr "disŝiritan ŝtofon"
 
 #: script/outside.js:127
 msgid "a crudely made charm"
-msgstr ""
+msgstr "aĉe faritan amuleton"
 
 #: script/outside.js:143 script/outside.js:562
 msgid "A Silent Forest"
@@ -715,7 +715,7 @@ msgstr "alvenas nekonato dum la nokto"
 
 #: script/outside.js:190
 msgid "a weathered family takes up in one of the huts."
-msgstr ""
+msgstr "lacega familio enloĝas unu el la kabanoj."
 
 #: script/outside.js:192
 msgid "a small group arrives, all dust and bones."
@@ -723,11 +723,11 @@ msgstr "alvenas grupeto, plejparte plovo kaj ostoj."
 
 #: script/outside.js:194
 msgid "a convoy lurches in, equal parts worry and hope."
-msgstr ""
+msgstr "procesio alvenas, ambaŭ ĉagrene kaj espere."
 
 #: script/outside.js:196
 msgid "the town's booming. word does get around."
-msgstr ""
+msgstr "la urbeto nun egas. certe diskoniĝite."
 
 #: script/outside.js:452
 msgid "pop "
@@ -767,11 +767,11 @@ msgstr "Raŭka Vilaĝo"
 
 #: script/outside.js:584
 msgid "the sky is grey and the wind blows relentlessly"
-msgstr ""
+msgstr "la ĉielo grizas kaj la vento blovas senĉese"
 
 #: script/outside.js:594
 msgid "dry brush and dead branches litter the forest floor"
-msgstr ""
+msgstr "seka plantaĵo kaj mortaj branĉoj disas sube"
 
 #: script/outside.js:621
 msgid "the traps contain "
@@ -795,7 +795,7 @@ msgstr "la kompaso indikas "
 
 #: script/path.js:102
 msgid "perks:"
-msgstr ""
+msgstr "apartaĵoj:"
 
 #: script/path.js:132
 msgid "none"
@@ -829,15 +829,16 @@ msgstr "kaptilo"
 msgid ""
 "builder says she can make traps to catch any creatures might still be alive "
 "out there"
-msgstr ""
+msgstr "la konstruisto diras ke ŝi povas krei kaptilojn por kapti bestojn "
+"kiuj eble plu vivas ekstere"
 
 #: script/room.js:20
 msgid "more traps to catch more creatures"
-msgstr ""
+msgstr "pli da kaptiloj por kapti pli da bestoj"
 
 #: script/room.js:21
 msgid "more traps won't help now"
-msgstr ""
+msgstr "pli da kaptiloj ne plu helpas"
 
 #: script/room.js:31
 msgid "cart"
@@ -845,11 +846,11 @@ msgstr "ĉaro"
 
 #: script/room.js:34
 msgid "builder says she can make a cart for carrying wood"
-msgstr ""
+msgstr "la konstruisto diras ke ŝi povas krei ĉaron lignoportan"
 
 #: script/room.js:35
 msgid "the rickety cart will carry more wood from the forest"
-msgstr ""
+msgstr "la kaduka ĉaro portos pli da ligno el la arbaro"
 
 #: script/room.js:44
 msgid "hut"
@@ -857,27 +858,27 @@ msgstr "kabano"
 
 #: script/room.js:47
 msgid "builder says there are more wanderers. says they'll work, too."
-msgstr ""
+msgstr "la konstruisto diras ke estas pli da vagantoj, kaj ili laboros."
 
 #: script/room.js:48
 msgid "builder puts up a hut, out in the forest. says word will get around."
-msgstr ""
+msgstr "la konstruisto starigas kabanon en la arbaro. tio diskkoniĝos."
 
 #: script/room.js:49
 msgid "no more room for huts."
-msgstr ""
+msgstr "ne sufiĉe da spaco por kabanoj"
 
 #: script/room.js:59
 msgid "lodge"
-msgstr ""
+msgstr "ĉasistejo"
 
 #: script/room.js:62
 msgid "villagers could help hunt, given the means"
-msgstr ""
+msgstr "vilaĝanoj povus helpi ĉasi, se estus ejo"
 
 #: script/room.js:63
 msgid "the hunting lodge stands in the forest, a ways out of town"
-msgstr ""
+msgstr "la ĉasa loĝejo staras en la arbaro, iom for de la urbeto"
 
 #: script/room.js:74
 msgid "trading post"
@@ -885,12 +886,12 @@ msgstr "bazaro"
 
 #: script/room.js:77
 msgid "a trading post would make commerce easier"
-msgstr ""
+msgstr "bazaro plifaciligus komercon"
 
 #: script/room.js:78
 msgid ""
 "now the nomads have a place to set up shop, they might stick around a while"
-msgstr ""
+msgstr "nun la nomadoj havas lokon komerci, do ili verŝajne plu restas"
 
 #: script/room.js:88
 msgid "tannery"
@@ -898,15 +899,15 @@ msgstr "tanejo"
 
 #: script/room.js:91
 msgid "builder says leather could be useful. says the villagers could make it."
-msgstr ""
+msgstr "la konstruisto diras ke ledo utilus, kaj la vilaĝanoj povus krei ĝin."
 
 #: script/room.js:92
 msgid "tannery goes up quick, on the edge of the village"
-msgstr ""
+msgstr "tanejo ekstariĝas, ĉe la vilaĝa bordo"
 
 #: script/room.js:102
 msgid "smokehouse"
-msgstr ""
+msgstr "fumaĵejo"
 
 #: script/room.js:105
 msgid ""
@@ -915,7 +916,7 @@ msgstr ""
 
 #: script/room.js:106
 msgid "builder finishes the smokehouse. she looks hungry."
-msgstr ""
+msgstr "la konstruisto finas la fumaĵejo. ŝi malsate aspektas."
 
 #: script/room.js:116
 msgid "workshop"
@@ -923,23 +924,23 @@ msgstr "laborejo"
 
 #: script/room.js:119
 msgid "builder says she could make finer things, if she had the tools"
-msgstr ""
+msgstr "la konstruisto diras ke ŝi kreus pli delikatajn aĵojn se havus ilojn"
 
 #: script/room.js:120
 msgid "workshop's finally ready. builder's excited to get to it"
-msgstr ""
+msgstr "la laborejo estas finita. la konstruisto viglas"
 
 #: script/room.js:131
 msgid "steelworks"
-msgstr ""
+msgstr "ŝtalejo"
 
 #: script/room.js:134
 msgid "builder says the villagers could make steel, given the tools"
-msgstr ""
+msgstr "la konstruisto diras ke la vilaĝanoj povus krei stalon"
 
 #: script/room.js:135
 msgid "a haze falls over the village as the steelworks fires up"
-msgstr ""
+msgstr "nebuleto falas sur la vilaĝo kiam la ŝtalejo komencas"
 
 #: script/room.js:146
 msgid "armoury"
