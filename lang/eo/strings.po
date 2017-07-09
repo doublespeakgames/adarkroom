@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adarkroom\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-04-01 23:47+0100\n"
-"PO-Revision-Date: 2017-04-05 17:10-0300\n"
+"POT-Creation-Date: 2015-12-22 13:35-0600\n"
+"PO-Revision-Date: 2017-07-09 11:24-0300\n"
 "Last-Translator: Dušan Juretić <dusan.juretic@gmail.com>\n"
 "Language-Team: Esperanto\n"
 "Language: eo\n"
@@ -37,9 +37,8 @@ msgid "Dropbox Export / Import"
 msgstr "Dropboksa elirigado / enirigado"
 
 #: script/dropbox.js:89
-#, fuzzy
 msgid "export or import save data to dropbox datastorage"
-msgstr "Eligi aŭ enigi savi sciaĵo dropboksen sciaĵoŝparado"
+msgstr "Eligi aŭ enigi konservi sciaĵo dropboksen sciaĵoŝparado"
 
 #: script/dropbox.js:90
 #, fuzzy
@@ -59,14 +58,12 @@ msgid "signout"
 msgstr "elsaluti"
 
 #: script/dropbox.js:113
-#, fuzzy
 msgid "choose one slot to save to"
-msgstr "elecktu unun ejeton per savi"
+msgstr "elecktu unun ejeton per konservi"
 
 #: script/dropbox.js:119
-#, fuzzy
 msgid "save to slot"
-msgstr "savi ejeten"
+msgstr "konservi ejeten"
 
 #: script/dropbox.js:141
 msgid "choose one slot to load from"
@@ -77,14 +74,12 @@ msgid "load from slot"
 msgstr "ŝarĝi el ejeto"
 
 #: script/dropbox.js:179
-#, fuzzy
 msgid "successfully saved to dropbox datastorage"
 msgstr "sukcese savis dropboksen sciaĵoŝparado"
 
 #: script/dropbox.js:180
-#, fuzzy
 msgid "error while saving to dropbox datastorage"
-msgstr "eraro savante dropboksen sciaĵoŝparado"
+msgstr "eraro konservante dropboksen sciaĵoŝparado"
 
 #: script/dropbox.js:183
 msgid "ok"
@@ -731,7 +726,7 @@ msgstr ""
 
 #: script/outside.js:452
 msgid "pop "
-msgstr ""
+msgstr "pop"
 
 #: script/outside.js:457
 msgid "forest"
@@ -865,7 +860,7 @@ msgstr ""
 
 #: script/room.js:49
 msgid "no more room for huts."
-msgstr ""
+msgstr "ne plu estas loko por kabanoj."
 
 #: script/room.js:59
 msgid "lodge"
@@ -1151,7 +1146,7 @@ msgstr ""
 
 #: script/room.js:688
 msgid "builder stokes the fire"
-msgstr ""
+msgstr "konstruisto hejtas la fajron"
 
 #: script/room.js:718
 msgid "the wind howls outside"
@@ -1176,7 +1171,7 @@ msgstr ""
 
 #: script/room.js:760
 msgid "stores"
-msgstr ""
+msgstr "bazaroj"
 
 #: script/room.js:779
 msgid "weapons"
@@ -1246,7 +1241,7 @@ msgstr "ne estas sufiĉe da alimonda kunfondaĵo"
 
 #: script/ship.js:134
 msgid "Ready to Leave?"
-msgstr ""
+msgstr "Ĉu vi pretas foriri?"
 
 #: script/ship.js:138
 msgid "time to get out of this place. won't be coming back."
@@ -1647,7 +1642,7 @@ msgstr ""
 
 #: script/events/global.js:17
 msgid "a thief is caught"
-msgstr ""
+msgstr "ŝtelisto estas kaptita"
 
 #: script/events/global.js:21
 msgid "hang him"
@@ -1697,7 +1692,7 @@ msgstr ""
 #: script/events/outside.js:30 script/events/room.js:71
 #: script/events/room.js:122
 msgid "ignore them"
-msgstr ""
+msgstr "ignori ilin"
 
 #: script/events/outside.js:37
 msgid "the tracks disappear after just a few minutes."
@@ -1709,7 +1704,7 @@ msgstr "la arbaro silentas."
 
 #: script/events/outside.js:40
 msgid "nothing was found"
-msgstr ""
+msgstr "nenio estis trovita"
 
 #: script/events/outside.js:43 script/events/outside.js:61
 #: script/events/outside.js:126 script/events/outside.js:144
@@ -1744,7 +1739,7 @@ msgstr ""
 
 #: script/events/outside.js:79
 msgid "a fire has started"
-msgstr ""
+msgstr "fajro ekbruliĝis"
 
 #: script/events/outside.js:86
 msgid "mourn"
@@ -1764,7 +1759,7 @@ msgstr ""
 
 #: script/events/outside.js:103 script/events/outside.js:161
 msgid "medicine is needed immediately."
-msgstr ""
+msgstr "kuracilo estas bezonata tuj."
 
 #: script/events/outside.js:105
 msgid "some villagers are ill"
@@ -2001,7 +1996,7 @@ msgstr ""
 
 #: script/events/room.js:112
 msgid "something's in there."
-msgstr ""
+msgstr "io estas tie."
 
 #: script/events/room.js:114
 msgid "something's in the store room"
@@ -2010,7 +2005,7 @@ msgstr ""
 #: script/events/room.js:129 script/events/room.js:149
 #: script/events/room.js:169
 msgid "some wood is missing."
-msgstr ""
+msgstr "iom da ligno mankas."
 
 #: script/events/room.js:130
 msgid "the ground is littered with small scales"
@@ -2057,7 +2052,7 @@ msgstr "forsendi lin"
 #: script/events/room.js:222 script/events/room.js:235
 #: script/events/room.js:248
 msgid "the beggar expresses his thanks."
-msgstr ""
+msgstr "la almozulo esprimas sian dankon."
 
 #: script/events/room.js:223
 msgid "leaves a pile of small scales behind."
@@ -2127,7 +2122,7 @@ msgstr "revenas la mistera vaganto. ĉaro portas multajn felojn."
 
 #: script/events/room.js:420
 msgid "The Scout"
-msgstr ""
+msgstr "Skolto"
 
 #: script/events/room.js:427
 msgid "the scout says she's been all over."
@@ -2192,7 +2187,7 @@ msgstr "forto"
 
 #: script/events/room.js:532
 msgid "The Sick Man"
-msgstr ""
+msgstr "Malsanulo"
 
 #: script/events/room.js:539
 msgid "a man hobbles up, coughing."
@@ -2200,7 +2195,7 @@ msgstr ""
 
 #: script/events/room.js:540
 msgid "he begs for medicine."
-msgstr ""
+msgstr "li petegas pri kuracilo."
 
 #: script/events/room.js:542
 msgid "a sick man hobbles up"
@@ -2216,12 +2211,12 @@ msgstr ""
 
 #: script/events/room.js:552
 msgid "tell him to leave"
-msgstr ""
+msgstr "diri al li, ke li foriru"
 
 #: script/events/room.js:559 script/events/room.js:575
 #: script/events/room.js:591
 msgid "the man is thankful."
-msgstr ""
+msgstr "la viro estas danka."
 
 #: script/events/room.js:560 script/events/room.js:576
 #: script/events/room.js:592
@@ -2322,7 +2317,7 @@ msgstr ""
 #: script/events/setpieces.js:101 script/events/setpieces.js:2944
 #: script/events/setpieces.js:3458
 msgid "go inside"
-msgstr ""
+msgstr "eniri"
 
 #: script/events/setpieces.js:120 script/events/setpieces.js:265
 msgid "a startled beast defends its home"
@@ -2408,7 +2403,7 @@ msgstr ""
 
 #: script/events/setpieces.js:242
 msgid "the darkness is absolute"
-msgstr ""
+msgstr "la mallumeco estas kompleta"
 
 #: script/events/setpieces.js:244
 msgid "the torch goes out"
@@ -2458,7 +2453,7 @@ msgstr ""
 
 #: script/events/setpieces.js:532 script/events/setpieces.js:1250
 msgid "explore"
-msgstr ""
+msgstr "esplori"
 
 #: script/events/setpieces.js:544
 msgid ""
@@ -2646,7 +2641,7 @@ msgstr ""
 
 #: script/events/setpieces.js:1261
 msgid "the streets are empty."
-msgstr ""
+msgstr "la stratoj malplenas."
 
 #: script/events/setpieces.js:1262
 msgid "the air is filled with dust, driven relentlessly by the hard winds."
@@ -2806,7 +2801,7 @@ msgstr ""
 
 #: script/events/setpieces.js:1730
 msgid "someone throws a stone."
-msgstr ""
+msgstr "iu ĵetas ŝtonon."
 
 #: script/events/setpieces.js:1746
 msgid "an improvised shop is set up on the sidewalk."
@@ -2974,11 +2969,11 @@ msgstr ""
 
 #: script/events/setpieces.js:2599 script/events/setpieces.js:2635
 msgid "there's nothing else here."
-msgstr ""
+msgstr "estas nenio alia ĉi tie."
 
 #: script/events/setpieces.js:2633
 msgid "inside the hut, a child cries."
-msgstr ""
+msgstr "en la kabano, infano ploras."
 
 #: script/events/setpieces.js:2634
 msgid "a few belongings rest against the walls."
@@ -2994,7 +2989,7 @@ msgstr ""
 
 #: script/events/setpieces.js:2676
 msgid "there is nothing else here."
-msgstr ""
+msgstr "estas nenio alia ĉi tie."
 
 #: script/events/setpieces.js:2715
 msgid "a pristine medicine cabinet at the end of a hallway."
