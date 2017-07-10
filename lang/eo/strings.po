@@ -1632,7 +1632,7 @@ msgstr "la tiraljoro mortis"
 
 #: script/events/encounters.js:396
 msgid "a shot rings out, from somewhere in the long grass"
-msgstr ""
+msgstr "pafaĵo sonoras el ie en la alta herbaro"
 
 #: script/events/global.js:6
 msgid "The Thief"
@@ -1640,19 +1640,19 @@ msgstr "La Ŝtelisto"
 
 #: script/events/global.js:13
 msgid "the villagers haul a filthy man out of the store room."
-msgstr ""
+msgstr "la vilaĝanoj tiras malpuregan virno el la provizejo."
 
 #: script/events/global.js:14
 msgid "say his folk have been skimming the supplies."
-msgstr ""
+msgstr "ili diras ke liaj kamaradoj ŝteletis la provizaĵojn."
 
 #: script/events/global.js:15
 msgid "say he should be strung up as an example."
-msgstr ""
+msgstr "ili pensas ke bonas pendumi lin kiel ekzemplo."
 
 #: script/events/global.js:17
 msgid "a thief is caught"
-msgstr ""
+msgstr "ŝtelisto kaptitas"
 
 #: script/events/global.js:21
 msgid "hang him"
@@ -1664,49 +1664,49 @@ msgstr "pardoni lin"
 
 #: script/events/global.js:32
 msgid "the villagers hang the thief high in front of the store room."
-msgstr ""
+msgstr "la vilaĝanoj pendumas la ŝteliston alte antaŭ la provizejo."
 
 #: script/events/global.js:33
 msgid ""
 "the point is made. in the next few days, the missing supplies are returned."
-msgstr ""
+msgstr "la punkto efikas. dum la venontaj tagoj, la mankitaj provizaĵoj estas redonataj."
 
 #: script/events/global.js:49
 msgid "the man says he's grateful. says he won't come around any more."
-msgstr ""
+msgstr "la viro dankegas vin kaj diras ke li ne plu revenos."
 
 #: script/events/global.js:50
 msgid "shares what he knows about sneaking before he goes."
-msgstr ""
+msgstr "antaŭ lia foriro li instruas lian scion pri la rampado."
 
 #: script/events/outside.js:6
 msgid "A Ruined Trap"
-msgstr ""
+msgstr "Detruita Kaptilo"
 
 #: script/events/outside.js:13
 msgid "some of the traps have been torn apart."
-msgstr ""
+msgstr "kelkaj kaptiloj iĝis disŝiritaj."
 
 #: script/events/outside.js:14
 msgid "large prints lead away, into the forest."
-msgstr ""
+msgstr "grandaj piedpremsignoj forpasas arbaren."
 
 #: script/events/outside.js:22
 msgid "some traps have been destroyed"
-msgstr ""
+msgstr "kelkaj kaptiloj iĝis detruitaj"
 
 #: script/events/outside.js:26
 msgid "track them"
-msgstr ""
+msgstr "sekvi ilin"
 
 #: script/events/outside.js:30 script/events/room.js:71
 #: script/events/room.js:122
 msgid "ignore them"
-msgstr ""
+msgstr "ignori ilin"
 
 #: script/events/outside.js:37
 msgid "the tracks disappear after just a few minutes."
-msgstr ""
+msgstr "la piedpremsignoj malaperas post kelkaj minutoj."
 
 #: script/events/outside.js:38
 msgid "the forest is silent."
@@ -1714,7 +1714,7 @@ msgstr "la arbaro silentas."
 
 #: script/events/outside.js:40
 msgid "nothing was found"
-msgstr ""
+msgstr "nenio troveblis."
 
 #: script/events/outside.js:43 script/events/outside.js:61
 #: script/events/outside.js:126 script/events/outside.js:144
@@ -1725,15 +1725,15 @@ msgstr "iri hejmen"
 
 #: script/events/outside.js:50
 msgid "not far from the village lies a large beast, its fur matted with blood."
-msgstr ""
+msgstr "ne multe for de la vilaĝo restas granda besto. ĝia felo sangsorbiĝis."
 
 #: script/events/outside.js:51
 msgid "it puts up little resistance before the knife."
-msgstr ""
+msgstr "ĝi ne multe malcedis kontraŭ la tranĉilo."
 
 #: script/events/outside.js:53
 msgid "there was a beast. it's dead now"
-msgstr ""
+msgstr "estis besto. mortis besto"
 
 #: script/events/outside.js:69
 msgid "Fire"
@@ -1741,15 +1741,15 @@ msgstr "Fajro"
 
 #: script/events/outside.js:76
 msgid "a fire rampages through one of the huts, destroying it."
-msgstr ""
+msgstr "fajro furioze disiris tra unu el la kabanoj, ĝin detruintaj."
 
 #: script/events/outside.js:77
 msgid "all residents in the hut perished in the fire."
-msgstr ""
+msgstr "ĉiuj loĝantoj de la kabano pereis pro la fajro."
 
 #: script/events/outside.js:79
 msgid "a fire has started"
-msgstr ""
+msgstr "fajro ekkomenciĝis"
 
 #: script/events/outside.js:86
 msgid "mourn"
@@ -1765,11 +1765,11 @@ msgstr "Malsano"
 
 #: script/events/outside.js:102
 msgid "a sickness is spreading through the village."
-msgstr ""
+msgstr "malsano disvastiĝas tra la vilaĝo."
 
 #: script/events/outside.js:103 script/events/outside.js:161
 msgid "medicine is needed immediately."
-msgstr ""
+msgstr "kuraciloj estas tujaj devoj."
 
 #: script/events/outside.js:105
 msgid "some villagers are ill"
@@ -1781,43 +1781,43 @@ msgstr "1 kuracilo"
 
 #: script/events/outside.js:114
 msgid "ignore it"
-msgstr ""
+msgstr "ignori ĝin"
 
 #: script/events/outside.js:121
 msgid "the sickness is cured in time."
-msgstr ""
+msgstr "la malsanuloj bontempe estas kuracitaj."
 
 #: script/events/outside.js:123
 msgid "sufferers are healed"
-msgstr ""
+msgstr "suferintoj resaniĝis"
 
 #: script/events/outside.js:133
 msgid "the sickness spreads through the village."
-msgstr ""
+msgstr "la malsano disvastiĝas tra la vilaĝo."
 
 #: script/events/outside.js:134
 msgid "the days are spent with burials."
-msgstr ""
+msgstr "la tagoj pasas per enterigado."
 
 #: script/events/outside.js:135 script/events/outside.js:205
 msgid "the nights are rent with screams."
-msgstr ""
+msgstr "kriegoj aŭdeblas dum la noktoj."
 
 #: script/events/outside.js:137
 msgid "sufferers are left to die"
-msgstr ""
+msgstr "suferantoj lasiĝas morti"
 
 #: script/events/outside.js:153
 msgid "Plague"
-msgstr ""
+msgstr "Pesto"
 
 #: script/events/outside.js:160
 msgid "a terrible plague is fast spreading through the village."
-msgstr ""
+msgstr "terura pesto rapide disvastiĝas tra la vilaĝo."
 
 #: script/events/outside.js:163
 msgid "a plague afflicts the village"
-msgstr ""
+msgstr "pesto afliktas la vilaĝon"
 
 #: script/events/outside.js:168
 msgid "buy medicine"
@@ -1825,7 +1825,7 @@ msgstr "aĉeti kuracilon"
 
 #: script/events/outside.js:174
 msgid "5 medicine"
-msgstr "5 kuracilo"
+msgstr "5 kuraciloj"
 
 #: script/events/outside.js:179
 msgid "do nothing"
@@ -1833,19 +1833,19 @@ msgstr "fari nenion"
 
 #: script/events/outside.js:186
 msgid "the plague is kept from spreading."
-msgstr ""
+msgstr "la pesto ne plu eblas disvastiĝi."
 
 #: script/events/outside.js:187
 msgid "only a few die."
-msgstr "malmultaj mortas."
+msgstr "nur malmultaj mortas."
 
 #: script/events/outside.js:188
 msgid "the rest bury them."
-msgstr ""
+msgstr "la aliaj entombigas ilin."
 
 #: script/events/outside.js:190
 msgid "epidemic is eradicated eventually"
-msgstr ""
+msgstr "pesto tute detruiĝis finfine"
 
 #: script/events/outside.js:204
 msgid "the plague rips through the village."
