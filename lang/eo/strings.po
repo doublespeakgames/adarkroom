@@ -1849,15 +1849,15 @@ msgstr "pesto tute detruiĝis finfine"
 
 #: script/events/outside.js:204
 msgid "the plague rips through the village."
-msgstr ""
+msgstr "la pesto ŝiriras tra la vilaĝo."
 
 #: script/events/outside.js:206
 msgid "the only hope is a quick death."
-msgstr ""
+msgstr "la nura espero estas rapida morto."
 
 #: script/events/outside.js:208
 msgid "population is almost exterminated"
-msgstr ""
+msgstr "la popolo estas preskaŭ tutmortigita"
 
 #: script/events/outside.js:224
 msgid "A Beast Attack"
@@ -1865,47 +1865,47 @@ msgstr "Besta Atako"
 
 #: script/events/outside.js:231
 msgid "a pack of snarling beasts pours out of the trees."
-msgstr ""
+msgstr "aro da sovaĝaj bestoj sinŝutas el la arboj."
 
 #: script/events/outside.js:232
 msgid "the fight is short and bloody, but the beasts are repelled."
-msgstr ""
+msgstr "la batalo estas mallonga kaj sangema, sed la bestoj forkuras."
 
 #: script/events/outside.js:233
 msgid "the villagers retreat to mourn the dead."
-msgstr ""
+msgstr "la vilaĝanoj revenas por funebri pri la mortintoj."
 
 #: script/events/outside.js:235
 msgid "wild beasts attack the villagers"
-msgstr ""
+msgstr "sovaĝaj bestoj atakas la vilaĝanojn"
 
 #: script/events/outside.js:249
 msgid "predators become prey. price is unfair"
-msgstr ""
+msgstr "predantoj iĝas predatoj. la prezo nejustas."
 
 #: script/events/outside.js:258
 msgid "A Military Raid"
-msgstr ""
+msgstr "Milita Provizbatalo"
 
 #: script/events/outside.js:265
 msgid "a gunshot rings through the trees."
-msgstr ""
+msgstr "pafaĵo sonoras tra la arboj."
 
 #: script/events/outside.js:266
 msgid "well armed men charge out of the forest, firing into the crowd."
-msgstr ""
+msgstr "bone armitaj viroj ekkuras el la arbaro, pafante la amason."
 
 #: script/events/outside.js:267
 msgid "after a skirmish they are driven away, but not without losses."
-msgstr ""
+msgstr "post batalo ili forpeliĝis, sed ne sen vilaĝaj mankintoj."
 
 #: script/events/outside.js:269
 msgid "troops storm the village"
-msgstr ""
+msgstr "trupanoj kuratakas la vilaĝon"
 
 #: script/events/outside.js:283
 msgid "warfare is bloodthirsty"
-msgstr ""
+msgstr "militbatalado ĉiam sangon deziras"
 
 #: script/events/room.js:6
 msgid "The Nomad"
@@ -1914,15 +1914,15 @@ msgstr "La Nomado"
 #: script/events/room.js:13
 msgid ""
 "a nomad shuffles into view, laden with makeshift bags bound with rough twine."
-msgstr ""
+msgstr "nomado marŝetas en la vidaĵon, portante tujkreitajn sakojn ligitajn per kruda ŝnuro."
 
 #: script/events/room.js:14
 msgid "won't say from where he came, but it's clear that he's not staying."
-msgstr ""
+msgstr "li ne diras pri lia devenejo, sed certe li ne restos ĉi tie."
 
 #: script/events/room.js:16
 msgid "a nomad arrives, looking to trade"
-msgstr ""
+msgstr "nomado alvenas, dezirante komerci"
 
 #: script/events/room.js:20
 msgid "buy scales"
@@ -1930,15 +1930,15 @@ msgstr "aĉeti skvamojn"
 
 #: script/events/room.js:25
 msgid "buy teeth"
-msgstr "aĉeti denton"
+msgstr "aĉeti dentojn"
 
 #: script/events/room.js:30
 msgid "buy bait"
-msgstr ""
+msgstr "aĉeti logviandon"
 
 #: script/events/room.js:33
 msgid "traps are more effective with bait."
-msgstr ""
+msgstr "kaptilojn pli efikas kun logviando."
 
 #: script/events/room.js:39
 msgid "buy compass"
@@ -1946,7 +1946,7 @@ msgstr "aĉeti kompason"
 
 #: script/events/room.js:42
 msgid "the old compass is dented and dusty, but it looks to work."
-msgstr ""
+msgstr "la malnova kompaso estas batita kaj polva, sed ŝajne funkcias."
 
 #: script/events/room.js:45 script/events/room.js:227
 #: script/events/room.js:240 script/events/room.js:253
