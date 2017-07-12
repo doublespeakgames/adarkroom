@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adarkroom\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-12-22 13:35-0600\n"
-"PO-Revision-Date: 2017-07-09 11:24-0300\n"
+"POT-Creation-Date: 2017-04-01 23:47+0100\n"
+"PO-Revision-Date: 2017-04-05 17:10-0300\n"
 "Last-Translator: Dušan Juretić <dusan.juretic@gmail.com>\n"
 "Language-Team: Esperanto\n"
 "Language: eo\n"
@@ -75,7 +75,7 @@ msgstr "ŝarĝi el ejeto"
 
 #: script/dropbox.js:179
 msgid "successfully saved to dropbox datastorage"
-msgstr "sukcese savis dropboksen sciaĵoŝparado"
+msgstr "sukcese konservis dropboksen sciaĵoŝparado"
 
 #: script/dropbox.js:180
 msgid "error while saving to dropbox datastorage"
@@ -215,15 +215,15 @@ msgstr "resaniĝi pli per manĝado"
 
 #: script/engine.js:69
 msgid "learned to make the most of food"
-msgstr ""
+msgstr "lernis kiel plej efike uzi manĝon"
 
 #: script/engine.js:138 script/space.js:450
 msgid "app store."
-msgstr ""
+msgstr "aplikaĵa vendejo."
 
 #: script/engine.js:144 script/engine.js:485
 msgid "lights off."
-msgstr ""
+msgstr "mallumigi."
 
 #: script/engine.js:150 script/engine.js:521
 msgid "hyper."
@@ -255,11 +255,11 @@ msgstr "elirigi / enirigi"
 
 #: script/engine.js:272
 msgid "export or import save data, for backing up"
-msgstr ""
+msgstr "elirigi aŭ enirigi konservdatumon por konservi ĝin"
 
 #: script/engine.js:273
 msgid "or migrating computers"
-msgstr ""
+msgstr "aŭ por komputilmigri"
 
 #: script/engine.js:277
 msgid "export"
@@ -284,11 +284,11 @@ msgstr "ĉu vi certas?"
 
 #: script/engine.js:306
 msgid "if the code is invalid, all data will be lost."
-msgstr ""
+msgstr "se la kodo malĝustas, ĉiom da la datumo perdiĝos."
 
 #: script/engine.js:307
 msgid "this is irreversible."
-msgstr "ĉi tiu malturneblas"
+msgstr "ĉi tio neŝanĝeblas"
 
 #: script/engine.js:311 script/engine.js:380 script/engine.js:499
 msgid "yes"
@@ -300,11 +300,11 @@ msgstr "ne"
 
 #: script/engine.js:322
 msgid "put the save code here."
-msgstr ""
+msgstr "metu la konservdatumon ĉi tien"
 
 #: script/engine.js:374
 msgid "Restart?"
-msgstr "Restartigi?"
+msgstr "Ĉu rekomenci?"
 
 #: script/engine.js:377
 msgid "restart the game?"
@@ -316,11 +316,11 @@ msgstr "Konigi"
 
 #: script/engine.js:411
 msgid "bring your friends."
-msgstr ""
+msgstr "alkonduki viajn amikojn"
 
 #: script/engine.js:414
 msgid "facebook"
-msgstr "feisbuko"
+msgstr "fejsbuko"
 
 #: script/engine.js:421
 msgid "google+"
@@ -328,7 +328,7 @@ msgstr "google+"
 
 #: script/engine.js:428
 msgid "twitter"
-msgstr "twitter"
+msgstr "tvitero"
 
 #: script/engine.js:435
 msgid "reddit"
@@ -344,12 +344,12 @@ msgstr "lumigi"
 
 #: script/engine.js:493
 msgid "Go Hyper?"
-msgstr "Iru Superge?"
+msgstr "Ĉu frenezigu la ludon?"
 
 #: script/engine.js:496
 msgid ""
 "turning hyper mode speeds up the game to x2 speed. do you want to do that?"
-msgstr ""
+msgstr "frenezigi la ludon duoble rapidigas ĝin. ĉu vi volas fari tion?"
 
 #: script/engine.js:519
 msgid "classic."
@@ -502,7 +502,7 @@ msgstr "ĉasisto"
 
 #: script/localization.js:22 script/outside.js:30
 msgid "trapper"
-msgstr ""
+msgstr "kaptisto"
 
 #: script/localization.js:23 script/outside.js:38
 msgid "tanner"
@@ -522,7 +522,7 @@ msgstr "bajoneto"
 
 #: script/localization.js:27 script/outside.js:46
 msgid "charcutier"
-msgstr ""
+msgstr "viandisto"
 
 #: script/localization.js:28 script/outside.js:55
 msgid "iron miner"
@@ -550,7 +550,7 @@ msgstr "sulfura minejo"
 
 #: script/localization.js:34 script/outside.js:88
 msgid "armourer"
-msgstr ""
+msgstr "armaĵisto"
 
 #: script/localization.js:35 script/outside.js:79
 msgid "steelworker"
@@ -578,7 +578,7 @@ msgstr "lasera fusilo"
 
 #: script/localization.js:41 script/outside.js:15
 msgid "gatherer"
-msgstr ""
+msgstr "kolektisto"
 
 #: script/localization.js:42
 msgid "cloth"
@@ -614,7 +614,7 @@ msgstr "ne estas sufiĉe da sulfuro"
 
 #: script/localization.js:52
 msgid "baited trap"
-msgstr ""
+msgstr "logebla kaptilo"
 
 #: script/localization.js:53
 msgid "not enough scales"
@@ -670,7 +670,7 @@ msgstr "la kompaso indikas sudokcidenten"
 
 #: script/outside.js:5
 msgid "Outside"
-msgstr ""
+msgstr "Eksteraĵo"
 
 #: script/outside.js:102
 msgid "scraps of fur"
@@ -694,7 +694,7 @@ msgstr "disŝiritan ŝtofon"
 
 #: script/outside.js:127
 msgid "a crudely made charm"
-msgstr ""
+msgstr "aĉe faritan amuleton"
 
 #: script/outside.js:143 script/outside.js:562
 msgid "A Silent Forest"
@@ -710,7 +710,7 @@ msgstr "alvenas nekonato dum la nokto"
 
 #: script/outside.js:190
 msgid "a weathered family takes up in one of the huts."
-msgstr ""
+msgstr "lacega familio enloĝas unu el la kabanoj."
 
 #: script/outside.js:192
 msgid "a small group arrives, all dust and bones."
@@ -718,15 +718,15 @@ msgstr "alvenas grupeto, plejparte plovo kaj ostoj."
 
 #: script/outside.js:194
 msgid "a convoy lurches in, equal parts worry and hope."
-msgstr ""
+msgstr "procesio alvenas, ambaŭ ĉagrene kaj espere."
 
 #: script/outside.js:196
 msgid "the town's booming. word does get around."
-msgstr ""
+msgstr "la urbeto nun egas. certe diskoniĝite."
 
 #: script/outside.js:452
 msgid "pop "
-msgstr "pop"
+msgstr ""
 
 #: script/outside.js:457
 msgid "forest"
@@ -762,11 +762,11 @@ msgstr "Raŭka Vilaĝo"
 
 #: script/outside.js:584
 msgid "the sky is grey and the wind blows relentlessly"
-msgstr ""
+msgstr "la ĉielo grizas kaj la vento blovas senĉese"
 
 #: script/outside.js:594
 msgid "dry brush and dead branches litter the forest floor"
-msgstr ""
+msgstr "seka plantaĵo kaj mortaj branĉoj disas sube"
 
 #: script/outside.js:621
 msgid "the traps contain "
@@ -782,7 +782,7 @@ msgstr "provizoj:"
 
 #: script/path.js:43
 msgid "embark"
-msgstr ""
+msgstr "ek!"
 
 #: script/path.js:60 script/room.js:1153
 msgid "the compass points "
@@ -790,7 +790,7 @@ msgstr "la kompaso indikas "
 
 #: script/path.js:102
 msgid "perks:"
-msgstr ""
+msgstr "apartaĵoj:"
 
 #: script/path.js:132
 msgid "none"
@@ -824,15 +824,16 @@ msgstr "kaptilo"
 msgid ""
 "builder says she can make traps to catch any creatures might still be alive "
 "out there"
-msgstr ""
+msgstr "la konstruisto diras ke ŝi povas krei kaptilojn por kapti bestojn "
+"kiuj eble plu vivas ekstere"
 
 #: script/room.js:20
 msgid "more traps to catch more creatures"
-msgstr ""
+msgstr "pli da kaptiloj por kapti pli da bestoj"
 
 #: script/room.js:21
 msgid "more traps won't help now"
-msgstr ""
+msgstr "pli da kaptiloj ne plu helpas"
 
 #: script/room.js:31
 msgid "cart"
@@ -840,11 +841,11 @@ msgstr "ĉaro"
 
 #: script/room.js:34
 msgid "builder says she can make a cart for carrying wood"
-msgstr ""
+msgstr "la konstruisto diras ke ŝi povas krei ĉaron lignoportan"
 
 #: script/room.js:35
 msgid "the rickety cart will carry more wood from the forest"
-msgstr ""
+msgstr "la kaduka ĉaro portos pli da ligno el la arbaro"
 
 #: script/room.js:44
 msgid "hut"
@@ -852,27 +853,27 @@ msgstr "kabano"
 
 #: script/room.js:47
 msgid "builder says there are more wanderers. says they'll work, too."
-msgstr ""
+msgstr "la konstruisto diras ke estas pli da vagantoj, kaj ili laboros."
 
 #: script/room.js:48
 msgid "builder puts up a hut, out in the forest. says word will get around."
-msgstr ""
+msgstr "la konstruisto starigas kabanon en la arbaro. tio diskkoniĝos."
 
 #: script/room.js:49
 msgid "no more room for huts."
-msgstr "ne plu estas loko por kabanoj."
+msgstr "ne sufiĉe da spaco por kabanoj"
 
 #: script/room.js:59
 msgid "lodge"
-msgstr ""
+msgstr "ĉasistejo"
 
 #: script/room.js:62
 msgid "villagers could help hunt, given the means"
-msgstr ""
+msgstr "vilaĝanoj povus helpi ĉasi, se estus ejo"
 
 #: script/room.js:63
 msgid "the hunting lodge stands in the forest, a ways out of town"
-msgstr ""
+msgstr "la ĉasa loĝejo staras en la arbaro, iom for de la urbeto"
 
 #: script/room.js:74
 msgid "trading post"
@@ -880,12 +881,12 @@ msgstr "bazaro"
 
 #: script/room.js:77
 msgid "a trading post would make commerce easier"
-msgstr ""
+msgstr "bazaro plifaciligus komercon"
 
 #: script/room.js:78
 msgid ""
 "now the nomads have a place to set up shop, they might stick around a while"
-msgstr ""
+msgstr "nun la nomadoj havas lokon komerci, do ili verŝajne plu restas"
 
 #: script/room.js:88
 msgid "tannery"
@@ -893,15 +894,15 @@ msgstr "tanejo"
 
 #: script/room.js:91
 msgid "builder says leather could be useful. says the villagers could make it."
-msgstr ""
+msgstr "la konstruisto diras ke ledo utilus, kaj la vilaĝanoj povus krei ĝin."
 
 #: script/room.js:92
 msgid "tannery goes up quick, on the edge of the village"
-msgstr ""
+msgstr "tanejo ekstariĝas, ĉe la vilaĝa bordo"
 
 #: script/room.js:102
 msgid "smokehouse"
-msgstr ""
+msgstr "fumaĵejo"
 
 #: script/room.js:105
 msgid ""
@@ -910,7 +911,7 @@ msgstr ""
 
 #: script/room.js:106
 msgid "builder finishes the smokehouse. she looks hungry."
-msgstr ""
+msgstr "la konstruisto finas la fumaĵejo. ŝi malsate aspektas."
 
 #: script/room.js:116
 msgid "workshop"
@@ -918,59 +919,59 @@ msgstr "laborejo"
 
 #: script/room.js:119
 msgid "builder says she could make finer things, if she had the tools"
-msgstr ""
+msgstr "la konstruisto diras ke ŝi kreus pli delikatajn aĵojn se havus ilojn"
 
 #: script/room.js:120
 msgid "workshop's finally ready. builder's excited to get to it"
-msgstr ""
+msgstr "la laborejo estas finita. la konstruisto viglas"
 
 #: script/room.js:131
 msgid "steelworks"
-msgstr ""
+msgstr "ŝtalejo"
 
 #: script/room.js:134
 msgid "builder says the villagers could make steel, given the tools"
-msgstr ""
+msgstr "la konstruisto diras ke la vilaĝanoj povus krei stalon"
 
 #: script/room.js:135
 msgid "a haze falls over the village as the steelworks fires up"
-msgstr ""
+msgstr "nebuleto falas sur la vilaĝo kiam la ŝtalejo komencas"
 
 #: script/room.js:146
 msgid "armoury"
-msgstr ""
+msgstr "armejo"
 
 #: script/room.js:149
 msgid "builder says it'd be useful to have a steady source of bullets"
-msgstr ""
+msgstr "la konstruisto diras ke utilus havi fonton da kugloj"
 
 #: script/room.js:150
 msgid "armoury's done, welcoming back the weapons of the past."
-msgstr ""
+msgstr "la armejo pretas, bonvenigante armilojn pasintecajn"
 
 #: script/room.js:164
 msgid "a torch to keep the dark away"
-msgstr ""
+msgstr "torĉo por forigi la mallumon"
 
 #: script/room.js:173
 msgid "waterskin"
-msgstr ""
+msgstr "ledbotelo"
 
 #: script/room.js:177
 msgid "this waterskin'll hold a bit of water, at least"
-msgstr ""
+msgstr "ĉi tiu ledbotelo portos iom da akvo, nu"
 
 #: script/room.js:185
 msgid "cask"
-msgstr ""
+msgstr "barelo"
 
 #: script/room.js:189
 msgid "the cask holds enough water for longer expeditions"
-msgstr ""
+msgstr "la barelo portos sufiĉe da akvo por pli longaj vojaĝoj"
 
 #: script/room.js:198
 msgid "water tank"
-msgstr ""
+msgstr "akvocisterno"
 
 #: script/room.js:202
 msgid "never go thirsty again"
@@ -982,7 +983,7 @@ msgstr "osta lanco"
 
 #: script/room.js:214
 msgid "this spear's not elegant, but it's pretty good at stabbing"
-msgstr ""
+msgstr "ĉi tiu lanco ne elegantas, sed bone ponardas."
 
 #: script/room.js:223 script/world.js:285
 msgid "rucksack"
@@ -990,23 +991,23 @@ msgstr "dorsosako"
 
 #: script/room.js:227
 msgid "carrying more means longer expeditions to the wilds"
-msgstr ""
+msgstr "pli portante, plu vojaĝante"
 
 #: script/room.js:235
 msgid "wagon"
-msgstr ""
+msgstr "vagono"
 
 #: script/room.js:239
 msgid "the wagon can carry a lot of supplies"
-msgstr ""
+msgstr "la vagono povas porti multe da provizaĵoj"
 
 #: script/room.js:248
 msgid "convoy"
-msgstr ""
+msgstr "aŭtaro"
 
 #: script/room.js:252
 msgid "the convoy can haul mostly everything"
-msgstr ""
+msgstr "la aŭtaro povas tiri preskaŭ ĉiom"
 
 #: script/room.js:262
 msgid "l armour"
@@ -1014,7 +1015,7 @@ msgstr "l armaĵo"
 
 #: script/room.js:265
 msgid "leather's not strong. better than rags, though."
-msgstr ""
+msgstr "ledo ne fortas, sed nu, pli ol ĉifonoj"
 
 #: script/room.js:274
 msgid "i armour"
@@ -1038,7 +1039,7 @@ msgstr "fera glavo"
 
 #: script/room.js:301
 msgid "sword is sharp. good protection out in the wilds."
-msgstr ""
+msgstr "la glavo estas akra. bona protektilo kontraŭ la sovaĝejo."
 
 #: script/room.js:311
 msgid "steel sword"
@@ -1046,7 +1047,7 @@ msgstr "ŝtala glavo"
 
 #: script/room.js:314
 msgid "the steel is strong, and the blade true."
-msgstr "ŝtalo estas forta, kaj la tranĉanto estas reala."
+msgstr "la ŝtalo estas forta, kaj la klingo estas efektiva."
 
 #: script/room.js:324
 msgid "rifle"
@@ -1054,7 +1055,7 @@ msgstr "fusilo"
 
 #: script/room.js:326
 msgid "black powder and bullets, like the old days."
-msgstr ""
+msgstr "nigra pulvoro kaj kugloj, kiel la tagoj pasintecaj."
 
 #: script/room.js:458
 msgid "Room"
@@ -1086,7 +1087,8 @@ msgstr "la fajro {0}"
 msgid ""
 "the stranger is standing by the fire. she says she can help. says she builds "
 "things."
-msgstr ""
+msgstr "la nekonato staras apud la fajro. ŝi diras ke ŝi povas helpi. diras, "
+"ke ŝi kreas aĵojn."
 
 #: script/room.js:580
 msgid "freezing"
@@ -1134,44 +1136,44 @@ msgstr "Luma Ĉambro"
 
 #: script/room.js:642
 msgid "not enough wood to get the fire going"
-msgstr ""
+msgstr "ne sufiĉe da ligno por ekbruligi la fajron"
 
 #: script/room.js:655
 msgid "the wood has run out"
-msgstr ""
+msgstr "ne plu estas ligno"
 
 #: script/room.js:675
 msgid "the light from the fire spills from the windows, out into the dark"
-msgstr ""
+msgstr "la lumo de la fajro disbrilas el la fenestroj, al la mallumecon"
 
 #: script/room.js:688
 msgid "builder stokes the fire"
-msgstr "konstruisto hejtas la fajron"
+msgstr "la konstruisto hejtas la fajron"
 
 #: script/room.js:718
 msgid "the wind howls outside"
-msgstr ""
+msgstr "la vento blovas ekstere"
 
 #: script/room.js:719
 msgid "the wood is running out"
-msgstr ""
+msgstr "la ligno preskaŭ ne plu estas"
 
 #: script/room.js:726
 msgid "a ragged stranger stumbles through the door and collapses in the corner"
-msgstr ""
+msgstr "kaduka nekonato iras tra la pordo kaj disfalas ĉe la angulo"
 
 #: script/room.js:734
 msgid ""
 "the stranger shivers, and mumbles quietly. her words are unintelligible."
-msgstr ""
+msgstr "la nekonato tremas, kaj mallaŭte murmuras. ŝiaj vortoj nesencas."
 
 #: script/room.js:737
 msgid "the stranger in the corner stops shivering. her breathing calms."
-msgstr ""
+msgstr "la nekonato ĉe la angulo ĉesas tremi. ŝiaj spiroj trankviliĝas."
 
 #: script/room.js:760
 msgid "stores"
-msgstr "bazaroj"
+msgstr "konservaĵoj"
 
 #: script/room.js:779
 msgid "weapons"
@@ -1179,23 +1181,23 @@ msgstr "armiloj"
 
 #: script/room.js:914
 msgid "total"
-msgstr "totalo"
+msgstr "tuto"
 
 #: script/room.js:935 script/room.js:979
 msgid "not enough "
-msgstr ""
+msgstr "ne sufiĉe da "
 
 #: script/room.js:951
 msgid "builder just shivers"
-msgstr ""
+msgstr "la konstruisto nure tremas"
 
 #: script/room.js:1054
 msgid "build:"
-msgstr "konstrukcii:"
+msgstr "konstrui:"
 
 #: script/room.js:1061
 msgid "craft:"
-msgstr "konstrui:"
+msgstr "krei:"
 
 #: script/room.js:1068
 msgid "buy:"
@@ -1203,7 +1205,7 @@ msgstr "aĉeti:"
 
 #: script/ship.js:11
 msgid "Ship"
-msgstr ""
+msgstr "Ŝipo"
 
 #: script/ship.js:27 script/ship.js:100
 msgid "An Old Starship"
@@ -1211,7 +1213,7 @@ msgstr "Malnova Stelŝipo"
 
 #: script/ship.js:38
 msgid "hull:"
-msgstr ""
+msgstr "ŝelo:"
 
 #: script/ship.js:44
 msgid "engine:"
@@ -1219,7 +1221,7 @@ msgstr "motoro:"
 
 #: script/ship.js:51
 msgid "reinforce hull"
-msgstr ""
+msgstr "plifortigi ŝelon"
 
 #: script/ship.js:60
 msgid "upgrade engine"
@@ -1227,13 +1229,14 @@ msgstr "plibonigi motoron"
 
 #: script/ship.js:69 script/ship.js:142
 msgid "lift off"
-msgstr ""
+msgstr "ekflugi"
 
 #: script/ship.js:91
 msgid ""
 "somewhere above the debris cloud, the wanderer fleet hovers. been on this "
 "rock too long."
-msgstr ""
+msgstr "ie super la polvonubo, la vaga ŝiparo ŝvebas. ĉeestis ĉi tiu ŝtono "
+"tro longatempe."
 
 #: script/ship.js:106 script/ship.js:119
 msgid "not enough alien alloy"
@@ -1241,11 +1244,11 @@ msgstr "ne estas sufiĉe da alimonda kunfondaĵo"
 
 #: script/ship.js:134
 msgid "Ready to Leave?"
-msgstr "Ĉu vi pretas foriri?"
+msgstr "Ĉu pretas foriri?"
 
 #: script/ship.js:138
 msgid "time to get out of this place. won't be coming back."
-msgstr "jam temp' estas por forflugi, ne revenos."
+msgstr "jam estas temp' forflugi, ne revenos."
 
 #: script/ship.js:150
 msgid "linger"
@@ -1297,15 +1300,15 @@ msgstr "enpiki"
 
 #: script/world.js:58
 msgid "swing"
-msgstr ""
+msgstr "svingi"
 
 #: script/world.js:64
 msgid "slash"
-msgstr ""
+msgstr "glavstreki"
 
 #: script/world.js:70
 msgid "thrust"
-msgstr ""
+msgstr "trapiki"
 
 #: script/world.js:76
 msgid "shoot"
@@ -1313,15 +1316,15 @@ msgstr "pafi"
 
 #: script/world.js:83
 msgid "blast"
-msgstr ""
+msgstr "fulmobati"
 
 #: script/world.js:90
 msgid "lob"
-msgstr ""
+msgstr "pugnegi"
 
 #: script/world.js:97
 msgid "tangle"
-msgstr ""
+msgstr "ŝnuri"
 
 #: script/world.js:119
 msgid "An&nbsp;Outpost"
@@ -1357,7 +1360,7 @@ msgstr "Ruina&nbsp;Urbo"
 
 #: script/world.js:127
 msgid "A&nbsp;Crashed&nbsp;Starship"
-msgstr ""
+msgstr "Faleginta&nbsp;Stelŝipo"
 
 #: script/world.js:128
 msgid "A&nbsp;Borehole"
@@ -1373,7 +1376,7 @@ msgstr "Malluma&nbsp;Marĉo"
 
 #: script/world.js:134
 msgid "A&nbsp;Destroyed&nbsp;Village"
-msgstr "Detruita Vilaĝo"
+msgstr "Detruita&nbsp;Vilaĝo"
 
 #: script/world.js:256
 msgid "water:{0}"
@@ -1417,32 +1420,34 @@ msgstr "ne plu tolereblas la soifo"
 
 #: script/world.js:558
 msgid "the trees yield to dry grass. the yellowed brush rustles in the wind."
-msgstr ""
+msgstr "la arboj cedas al seka herbaro. la flava subaĵo susuras laŭ la vento."
 
 #: script/world.js:561
 msgid ""
 "the trees are gone. parched earth and blowing dust are poor replacements."
-msgstr ""
+msgstr "la arboj ne pluas. soifa tero kaj blovata polvo ne bone anstataŭas."
 
 #: script/world.js:568
 msgid ""
 "trees loom on the horizon. grasses gradually yield to a forest floor of dry "
 "branches and fallen leaves."
-msgstr ""
+msgstr "arboj aperiĝas sur la horizonto. la herbaro iom post iome cedas al "
+"arbara subo da sekaj branĉoj kaj falintaj folioj.
 
 #: script/world.js:571
 msgid "the grasses thin. soon, only dust remains."
-msgstr ""
+msgstr "la herbaro malkoncentras. nur polvo restas."
 
 #: script/world.js:578
 msgid "the barrens break at a sea of dying grass, swaying in the arid breeze."
-msgstr ""
+msgstr "la neniejo haltas ĉe maro da mortantaj herboj, svingiĝante en la senakva venteto."
 
 #: script/world.js:581
 msgid ""
 "a wall of gnarled trees rises from the dust. their branches twist into a "
 "skeletal canopy overhead."
-msgstr ""
+msgstr "muro da torditaj arboj suprenstaras el la polvo. iliaj branĉoj "
+"serpentumas, formante skeletan superaĵon."
 
 #: script/world.js:817
 msgid "Wanderer"
@@ -1454,47 +1459,47 @@ msgstr "La&nbsp;Vilaĝo"
 
 #: script/world.js:851
 msgid "the world fades"
-msgstr ""
+msgstr "la mondo malklariĝas"
 
 #: script/world.js:952 script/events/setpieces.js:2961
 msgid "water replenished"
-msgstr ""
+msgstr "akvo repleniĝis"
 
 #: script/world.js:982
 msgid "A Barren World"
-msgstr ""
+msgstr "Neniejo"
 
 #: script/events/encounters.js:7
 msgid "A Snarling Beast"
-msgstr ""
+msgstr "Sovaĝa Besto"
 
 #: script/events/encounters.js:15
 msgid "snarling beast"
-msgstr ""
+msgstr "sovaĝa besto"
 
 #: script/events/encounters.js:16
 msgid "the snarling beast is dead"
-msgstr ""
+msgstr "la sovaĝa besto mortis"
 
 #: script/events/encounters.js:39
 msgid "a snarling beast leaps out of the underbrush"
-msgstr ""
+msgstr "sovaĝa besto saltegas el la plantaĵo"
 
 #: script/events/encounters.js:44
 msgid "A Gaunt Man"
-msgstr ""
+msgstr "Maldika Viro"
 
 #: script/events/encounters.js:52
 msgid "gaunt man"
-msgstr ""
+msgstr "maldika viro"
 
 #: script/events/encounters.js:53
 msgid "the gaunt man is dead"
-msgstr ""
+msgstr "la maldika viro mortis"
 
 #: script/events/encounters.js:76
 msgid "a gaunt man approaches, a crazed look in his eye"
-msgstr ""
+msgstr "maldika viro alproksimiĝas, kaj ŝajnas freneza"
 
 #: script/events/encounters.js:81
 msgid "A Strange Bird"
@@ -1510,55 +1515,55 @@ msgstr "la stranga birdo mortis"
 
 #: script/events/encounters.js:113
 msgid "a strange looking bird speeds across the plains"
-msgstr ""
+msgstr "stranga birdo rapidiras trans la ebenaĵo"
 
 #: script/events/encounters.js:119
 msgid "A Shivering Man"
-msgstr ""
+msgstr "Tremanta Viro"
 
 #: script/events/encounters.js:127
 msgid "shivering man"
-msgstr ""
+msgstr "tremanta viro"
 
 #: script/events/encounters.js:128
 msgid "the shivering man is dead"
-msgstr ""
+msgstr "la treminta viro mortis"
 
 #: script/events/encounters.js:156
 msgid "a shivering man approaches and attacks with surprising strength"
-msgstr ""
+msgstr "tremanta viro alproksimiĝas kaj atakas per surprize ega forto"
 
 #: script/events/encounters.js:161
 msgid "A Man-Eater"
-msgstr ""
+msgstr "Hom-Manĝanto"
 
 #: script/events/encounters.js:169
 msgid "man-eater"
-msgstr ""
+msgstr "hom-manĝanto"
 
 #: script/events/encounters.js:170
 msgid "the man-eater is dead"
-msgstr ""
+msgstr "la hom-manĝinto mortis"
 
 #: script/events/encounters.js:193
 msgid "a large creature attacks, claws freshly bloodied"
-msgstr ""
+msgstr "granda estaĵo atakas, ĝiaj ungegoj ĵus sangiĝitaj"
 
 #: script/events/encounters.js:198
 msgid "A Scavenger"
-msgstr ""
+msgstr "Kolektisto"
 
 #: script/events/encounters.js:206
 msgid "scavenger"
-msgstr ""
+msgstr "kolektisto"
 
 #: script/events/encounters.js:207
 msgid "the scavenger is dead"
-msgstr ""
+msgstr "la kolektisto mortis"
 
 #: script/events/encounters.js:235
 msgid "a scavenger draws close, hoping for an easy score"
-msgstr ""
+msgstr "kolektisto venas proksimen, esperante facilan batalon"
 
 #: script/events/encounters.js:240
 msgid "A Huge Lizard"
@@ -1574,23 +1579,23 @@ msgstr "la lacerto mortis"
 
 #: script/events/encounters.js:272
 msgid "the grass thrashes wildly as a huge lizard pushes through"
-msgstr ""
+msgstr "la herbaro sovaĝe svingiĝas dum grandega lacerto tramarŝas"
 
 #: script/events/encounters.js:278
 msgid "A Feral Terror"
-msgstr ""
+msgstr "Sovaĝa Teruraĵo"
 
 #: script/events/encounters.js:286
 msgid "feral terror"
-msgstr ""
+msgstr "sovaĝa teruraĝo"
 
 #: script/events/encounters.js:287
 msgid "the feral terror is dead"
-msgstr ""
+msgstr "la sovaĝa teruraĵo mortis"
 
 #: script/events/encounters.js:310
 msgid "a beast, wilder than imagining, erupts out of the foliage"
-msgstr ""
+msgstr "besto pli sovaĝa ol ĉio imagita ekkuras el la foliaro"
 
 #: script/events/encounters.js:315
 msgid "A Soldier"
@@ -1606,7 +1611,7 @@ msgstr "la soldato mortis"
 
 #: script/events/encounters.js:353
 msgid "a soldier opens fire from across the desert"
-msgstr ""
+msgstr "soldato ekpafadas de la dezerto"
 
 #: script/events/encounters.js:358
 msgid "A Sniper"
@@ -1622,7 +1627,7 @@ msgstr "la tiraljoro mortis"
 
 #: script/events/encounters.js:396
 msgid "a shot rings out, from somewhere in the long grass"
-msgstr ""
+msgstr "pafaĵo sonoras el ie en la alta herbaro"
 
 #: script/events/global.js:6
 msgid "The Thief"
@@ -1630,19 +1635,19 @@ msgstr "La Ŝtelisto"
 
 #: script/events/global.js:13
 msgid "the villagers haul a filthy man out of the store room."
-msgstr ""
+msgstr "la vilaĝanoj tiras malpuregan virno el la provizejo."
 
 #: script/events/global.js:14
 msgid "say his folk have been skimming the supplies."
-msgstr ""
+msgstr "ili diras ke liaj kamaradoj ŝteletis la provizaĵojn."
 
 #: script/events/global.js:15
 msgid "say he should be strung up as an example."
-msgstr ""
+msgstr "ili pensas ke bonas pendumi lin kiel ekzemplo."
 
 #: script/events/global.js:17
 msgid "a thief is caught"
-msgstr "ŝtelisto estas kaptita"
+msgstr "ŝtelisto kaptitas"
 
 #: script/events/global.js:21
 msgid "hang him"
@@ -1654,40 +1659,40 @@ msgstr "pardoni lin"
 
 #: script/events/global.js:32
 msgid "the villagers hang the thief high in front of the store room."
-msgstr ""
+msgstr "la vilaĝanoj pendumas la ŝteliston alte antaŭ la provizejo."
 
 #: script/events/global.js:33
 msgid ""
 "the point is made. in the next few days, the missing supplies are returned."
-msgstr ""
+msgstr "la punkto efikas. dum la venontaj tagoj, la mankitaj provizaĵoj estas redonataj."
 
 #: script/events/global.js:49
 msgid "the man says he's grateful. says he won't come around any more."
-msgstr ""
+msgstr "la viro dankegas vin kaj diras ke li ne plu revenos."
 
 #: script/events/global.js:50
 msgid "shares what he knows about sneaking before he goes."
-msgstr ""
+msgstr "antaŭ lia foriro li instruas lian scion pri la rampado."
 
 #: script/events/outside.js:6
 msgid "A Ruined Trap"
-msgstr ""
+msgstr "Detruita Kaptilo"
 
 #: script/events/outside.js:13
 msgid "some of the traps have been torn apart."
-msgstr ""
+msgstr "kelkaj kaptiloj iĝis disŝiritaj."
 
 #: script/events/outside.js:14
 msgid "large prints lead away, into the forest."
-msgstr ""
+msgstr "grandaj piedpremsignoj forpasas arbaren."
 
 #: script/events/outside.js:22
 msgid "some traps have been destroyed"
-msgstr ""
+msgstr "kelkaj kaptiloj iĝis detruitaj"
 
 #: script/events/outside.js:26
 msgid "track them"
-msgstr ""
+msgstr "sekvi ilin"
 
 #: script/events/outside.js:30 script/events/room.js:71
 #: script/events/room.js:122
@@ -1696,7 +1701,7 @@ msgstr "ignori ilin"
 
 #: script/events/outside.js:37
 msgid "the tracks disappear after just a few minutes."
-msgstr ""
+msgstr "la piedpremsignoj malaperas post kelkaj minutoj."
 
 #: script/events/outside.js:38
 msgid "the forest is silent."
@@ -1704,7 +1709,7 @@ msgstr "la arbaro silentas."
 
 #: script/events/outside.js:40
 msgid "nothing was found"
-msgstr "nenio estis trovita"
+msgstr "nenio troveblis."
 
 #: script/events/outside.js:43 script/events/outside.js:61
 #: script/events/outside.js:126 script/events/outside.js:144
@@ -1715,15 +1720,15 @@ msgstr "iri hejmen"
 
 #: script/events/outside.js:50
 msgid "not far from the village lies a large beast, its fur matted with blood."
-msgstr ""
+msgstr "ne multe for de la vilaĝo restas granda besto. ĝia felo sangsorbiĝis."
 
 #: script/events/outside.js:51
 msgid "it puts up little resistance before the knife."
-msgstr ""
+msgstr "ĝi ne multe malcedis kontraŭ la tranĉilo."
 
 #: script/events/outside.js:53
 msgid "there was a beast. it's dead now"
-msgstr ""
+msgstr "estis besto. mortis besto"
 
 #: script/events/outside.js:69
 msgid "Fire"
@@ -1731,15 +1736,15 @@ msgstr "Fajro"
 
 #: script/events/outside.js:76
 msgid "a fire rampages through one of the huts, destroying it."
-msgstr ""
+msgstr "fajro furioze disiris tra unu el la kabanoj, ĝin detruintaj."
 
 #: script/events/outside.js:77
 msgid "all residents in the hut perished in the fire."
-msgstr ""
+msgstr "ĉiuj loĝantoj de la kabano pereis pro la fajro."
 
 #: script/events/outside.js:79
 msgid "a fire has started"
-msgstr "fajro ekbruliĝis"
+msgstr "fajro ekkomenciĝis"
 
 #: script/events/outside.js:86
 msgid "mourn"
@@ -1755,11 +1760,11 @@ msgstr "Malsano"
 
 #: script/events/outside.js:102
 msgid "a sickness is spreading through the village."
-msgstr ""
+msgstr "malsano disvastiĝas tra la vilaĝo."
 
 #: script/events/outside.js:103 script/events/outside.js:161
 msgid "medicine is needed immediately."
-msgstr "kuracilo estas bezonata tuj."
+msgstr "kuraciloj estas tujaj devoj."
 
 #: script/events/outside.js:105
 msgid "some villagers are ill"
@@ -1771,43 +1776,43 @@ msgstr "1 kuracilo"
 
 #: script/events/outside.js:114
 msgid "ignore it"
-msgstr ""
+msgstr "ignori ĝin"
 
 #: script/events/outside.js:121
 msgid "the sickness is cured in time."
-msgstr ""
+msgstr "la malsanuloj bontempe estas kuracitaj."
 
 #: script/events/outside.js:123
 msgid "sufferers are healed"
-msgstr ""
+msgstr "suferintoj resaniĝis"
 
 #: script/events/outside.js:133
 msgid "the sickness spreads through the village."
-msgstr ""
+msgstr "la malsano disvastiĝas tra la vilaĝo."
 
 #: script/events/outside.js:134
 msgid "the days are spent with burials."
-msgstr ""
+msgstr "la tagoj pasas per enterigado."
 
 #: script/events/outside.js:135 script/events/outside.js:205
 msgid "the nights are rent with screams."
-msgstr ""
+msgstr "kriegoj aŭdeblas dum la noktoj."
 
 #: script/events/outside.js:137
 msgid "sufferers are left to die"
-msgstr ""
+msgstr "suferantoj lasiĝas morti"
 
 #: script/events/outside.js:153
 msgid "Plague"
-msgstr ""
+msgstr "Pesto"
 
 #: script/events/outside.js:160
 msgid "a terrible plague is fast spreading through the village."
-msgstr ""
+msgstr "terura pesto rapide disvastiĝas tra la vilaĝo."
 
 #: script/events/outside.js:163
 msgid "a plague afflicts the village"
-msgstr ""
+msgstr "pesto afliktas la vilaĝon"
 
 #: script/events/outside.js:168
 msgid "buy medicine"
@@ -1815,7 +1820,7 @@ msgstr "aĉeti kuracilon"
 
 #: script/events/outside.js:174
 msgid "5 medicine"
-msgstr "5 kuracilo"
+msgstr "5 kuraciloj"
 
 #: script/events/outside.js:179
 msgid "do nothing"
@@ -1823,31 +1828,31 @@ msgstr "fari nenion"
 
 #: script/events/outside.js:186
 msgid "the plague is kept from spreading."
-msgstr ""
+msgstr "la pesto ne plu eblas disvastiĝi."
 
 #: script/events/outside.js:187
 msgid "only a few die."
-msgstr "malmultaj mortas."
+msgstr "nur malmultaj mortas."
 
 #: script/events/outside.js:188
 msgid "the rest bury them."
-msgstr ""
+msgstr "la aliaj entombigas ilin."
 
 #: script/events/outside.js:190
 msgid "epidemic is eradicated eventually"
-msgstr ""
+msgstr "pesto tute detruiĝis finfine"
 
 #: script/events/outside.js:204
 msgid "the plague rips through the village."
-msgstr ""
+msgstr "la pesto ŝiriras tra la vilaĝo."
 
 #: script/events/outside.js:206
 msgid "the only hope is a quick death."
-msgstr ""
+msgstr "la nura espero estas rapida morto."
 
 #: script/events/outside.js:208
 msgid "population is almost exterminated"
-msgstr ""
+msgstr "la popolo estas preskaŭ tutmortigita"
 
 #: script/events/outside.js:224
 msgid "A Beast Attack"
@@ -1855,47 +1860,47 @@ msgstr "Besta Atako"
 
 #: script/events/outside.js:231
 msgid "a pack of snarling beasts pours out of the trees."
-msgstr ""
+msgstr "aro da sovaĝaj bestoj sinŝutas el la arboj."
 
 #: script/events/outside.js:232
 msgid "the fight is short and bloody, but the beasts are repelled."
-msgstr ""
+msgstr "la batalo estas mallonga kaj sangema, sed la bestoj forkuras."
 
 #: script/events/outside.js:233
 msgid "the villagers retreat to mourn the dead."
-msgstr ""
+msgstr "la vilaĝanoj revenas por funebri pri la mortintoj."
 
 #: script/events/outside.js:235
 msgid "wild beasts attack the villagers"
-msgstr ""
+msgstr "sovaĝaj bestoj atakas la vilaĝanojn"
 
 #: script/events/outside.js:249
 msgid "predators become prey. price is unfair"
-msgstr ""
+msgstr "predantoj iĝas predatoj. la prezo nejustas."
 
 #: script/events/outside.js:258
 msgid "A Military Raid"
-msgstr ""
+msgstr "Milita Provizbatalo"
 
 #: script/events/outside.js:265
 msgid "a gunshot rings through the trees."
-msgstr ""
+msgstr "pafaĵo sonoras tra la arboj."
 
 #: script/events/outside.js:266
 msgid "well armed men charge out of the forest, firing into the crowd."
-msgstr ""
+msgstr "bone armitaj viroj ekkuras el la arbaro, pafante la amason."
 
 #: script/events/outside.js:267
 msgid "after a skirmish they are driven away, but not without losses."
-msgstr ""
+msgstr "post batalo ili forpeliĝis, sed ne sen vilaĝaj mankintoj."
 
 #: script/events/outside.js:269
 msgid "troops storm the village"
-msgstr ""
+msgstr "trupanoj kuratakas la vilaĝon"
 
 #: script/events/outside.js:283
 msgid "warfare is bloodthirsty"
-msgstr ""
+msgstr "militbatalado ĉiam sangon deziras"
 
 #: script/events/room.js:6
 msgid "The Nomad"
@@ -1904,15 +1909,15 @@ msgstr "La Nomado"
 #: script/events/room.js:13
 msgid ""
 "a nomad shuffles into view, laden with makeshift bags bound with rough twine."
-msgstr ""
+msgstr "nomado marŝetas en la vidaĵon, portante tujkreitajn sakojn ligitajn per kruda ŝnuro."
 
 #: script/events/room.js:14
 msgid "won't say from where he came, but it's clear that he's not staying."
-msgstr ""
+msgstr "li ne diras pri lia devenejo, sed certe li ne restos ĉi tie."
 
 #: script/events/room.js:16
 msgid "a nomad arrives, looking to trade"
-msgstr ""
+msgstr "nomado alvenas, dezirante komerci"
 
 #: script/events/room.js:20
 msgid "buy scales"
@@ -1920,15 +1925,15 @@ msgstr "aĉeti skvamojn"
 
 #: script/events/room.js:25
 msgid "buy teeth"
-msgstr "aĉeti denton"
+msgstr "aĉeti dentojn"
 
 #: script/events/room.js:30
 msgid "buy bait"
-msgstr ""
+msgstr "aĉeti logviandon"
 
 #: script/events/room.js:33
 msgid "traps are more effective with bait."
-msgstr ""
+msgstr "kaptilojn pli efikas kun logviando."
 
 #: script/events/room.js:39
 msgid "buy compass"
@@ -1936,7 +1941,7 @@ msgstr "aĉeti kompason"
 
 #: script/events/room.js:42
 msgid "the old compass is dented and dusty, but it looks to work."
-msgstr ""
+msgstr "la malnova kompaso estas batita kaj polva, sed ŝajne funkcias."
 
 #: script/events/room.js:45 script/events/room.js:227
 #: script/events/room.js:240 script/events/room.js:253
@@ -1996,7 +2001,7 @@ msgstr ""
 
 #: script/events/room.js:112
 msgid "something's in there."
-msgstr "io estas tie."
+msgstr ""
 
 #: script/events/room.js:114
 msgid "something's in the store room"
@@ -2005,7 +2010,7 @@ msgstr ""
 #: script/events/room.js:129 script/events/room.js:149
 #: script/events/room.js:169
 msgid "some wood is missing."
-msgstr "iom da ligno mankas."
+msgstr ""
 
 #: script/events/room.js:130
 msgid "the ground is littered with small scales"
@@ -2052,7 +2057,7 @@ msgstr "forsendi lin"
 #: script/events/room.js:222 script/events/room.js:235
 #: script/events/room.js:248
 msgid "the beggar expresses his thanks."
-msgstr "la almozulo esprimas sian dankon."
+msgstr ""
 
 #: script/events/room.js:223
 msgid "leaves a pile of small scales behind."
@@ -2122,7 +2127,7 @@ msgstr "revenas la mistera vaganto. ĉaro portas multajn felojn."
 
 #: script/events/room.js:420
 msgid "The Scout"
-msgstr "Skolto"
+msgstr ""
 
 #: script/events/room.js:427
 msgid "the scout says she's been all over."
@@ -2187,7 +2192,7 @@ msgstr "forto"
 
 #: script/events/room.js:532
 msgid "The Sick Man"
-msgstr "Malsanulo"
+msgstr ""
 
 #: script/events/room.js:539
 msgid "a man hobbles up, coughing."
@@ -2195,7 +2200,7 @@ msgstr ""
 
 #: script/events/room.js:540
 msgid "he begs for medicine."
-msgstr "li petegas pri kuracilo."
+msgstr ""
 
 #: script/events/room.js:542
 msgid "a sick man hobbles up"
@@ -2211,12 +2216,12 @@ msgstr ""
 
 #: script/events/room.js:552
 msgid "tell him to leave"
-msgstr "diri al li, ke li foriru"
+msgstr ""
 
 #: script/events/room.js:559 script/events/room.js:575
 #: script/events/room.js:591
 msgid "the man is thankful."
-msgstr "la viro estas danka."
+msgstr ""
 
 #: script/events/room.js:560 script/events/room.js:576
 #: script/events/room.js:592
@@ -2317,7 +2322,7 @@ msgstr ""
 #: script/events/setpieces.js:101 script/events/setpieces.js:2944
 #: script/events/setpieces.js:3458
 msgid "go inside"
-msgstr "eniri"
+msgstr ""
 
 #: script/events/setpieces.js:120 script/events/setpieces.js:265
 msgid "a startled beast defends its home"
@@ -2403,7 +2408,7 @@ msgstr ""
 
 #: script/events/setpieces.js:242
 msgid "the darkness is absolute"
-msgstr "la mallumeco estas kompleta"
+msgstr ""
 
 #: script/events/setpieces.js:244
 msgid "the torch goes out"
@@ -2453,7 +2458,7 @@ msgstr ""
 
 #: script/events/setpieces.js:532 script/events/setpieces.js:1250
 msgid "explore"
-msgstr "esplori"
+msgstr ""
 
 #: script/events/setpieces.js:544
 msgid ""
@@ -2641,7 +2646,7 @@ msgstr ""
 
 #: script/events/setpieces.js:1261
 msgid "the streets are empty."
-msgstr "la stratoj malplenas."
+msgstr ""
 
 #: script/events/setpieces.js:1262
 msgid "the air is filled with dust, driven relentlessly by the hard winds."
@@ -2801,7 +2806,7 @@ msgstr ""
 
 #: script/events/setpieces.js:1730
 msgid "someone throws a stone."
-msgstr "iu ĵetas ŝtonon."
+msgstr ""
 
 #: script/events/setpieces.js:1746
 msgid "an improvised shop is set up on the sidewalk."
@@ -2969,11 +2974,11 @@ msgstr ""
 
 #: script/events/setpieces.js:2599 script/events/setpieces.js:2635
 msgid "there's nothing else here."
-msgstr "estas nenio alia ĉi tie."
+msgstr ""
 
 #: script/events/setpieces.js:2633
 msgid "inside the hut, a child cries."
-msgstr "en la kabano, infano ploras."
+msgstr ""
 
 #: script/events/setpieces.js:2634
 msgid "a few belongings rest against the walls."
@@ -2989,7 +2994,7 @@ msgstr ""
 
 #: script/events/setpieces.js:2676
 msgid "there is nothing else here."
-msgstr "estas nenio alia ĉi tie."
+msgstr ""
 
 #: script/events/setpieces.js:2715
 msgid "a pristine medicine cabinet at the end of a hallway."
