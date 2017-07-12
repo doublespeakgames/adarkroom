@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: adarkroom\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2017-04-01 23:47+0100\n"
-"PO-Revision-Date: 2017-04-05 17:10-0300\n"
+"PO-Revision-Date: 2017-07-11 21:49-0300\n"
 "Last-Translator: Dušan Juretić <dusan.juretic@gmail.com>\n"
 "Language-Team: Esperanto\n"
 "Language: eo\n"
@@ -270,9 +270,8 @@ msgid "import"
 msgstr "enirigi"
 
 #: script/engine.js:291
-#, fuzzy
 msgid "save this."
-msgstr "savi ĉi tiun"
+msgstr "konservi ĉi tiun"
 
 #: script/engine.js:297
 msgid "got it"
@@ -726,7 +725,7 @@ msgstr "la urbeto nun egas. certe diskoniĝite."
 
 #: script/outside.js:452
 msgid "pop "
-msgstr ""
+msgstr "pop"
 
 #: script/outside.js:457
 msgid "forest"
@@ -824,8 +823,9 @@ msgstr "kaptilo"
 msgid ""
 "builder says she can make traps to catch any creatures might still be alive "
 "out there"
-msgstr "la konstruisto diras ke ŝi povas krei kaptilojn por kapti bestojn "
-"kiuj eble plu vivas ekstere"
+msgstr ""
+"la konstruisto diras ke ŝi povas krei kaptilojn por kapti bestojn kiuj eble "
+"plu vivas ekstere"
 
 #: script/room.js:20
 msgid "more traps to catch more creatures"
@@ -1087,8 +1087,9 @@ msgstr "la fajro {0}"
 msgid ""
 "the stranger is standing by the fire. she says she can help. says she builds "
 "things."
-msgstr "la nekonato staras apud la fajro. ŝi diras ke ŝi povas helpi. diras, "
-"ke ŝi kreas aĵojn."
+msgstr ""
+"la nekonato staras apud la fajro. ŝi diras ke ŝi povas helpi. diras, ke ŝi "
+"kreas aĵojn."
 
 #: script/room.js:580
 msgid "freezing"
@@ -1235,8 +1236,9 @@ msgstr "ekflugi"
 msgid ""
 "somewhere above the debris cloud, the wanderer fleet hovers. been on this "
 "rock too long."
-msgstr "ie super la polvonubo, la vaga ŝiparo ŝvebas. ĉeestis ĉi tiu ŝtono "
-"tro longatempe."
+msgstr ""
+"ie super la polvonubo, la vaga ŝiparo ŝvebas. ĉeestis ĉi tiu ŝtono tro "
+"longatempe."
 
 #: script/ship.js:106 script/ship.js:119
 msgid "not enough alien alloy"
@@ -1432,7 +1434,6 @@ msgid ""
 "trees loom on the horizon. grasses gradually yield to a forest floor of dry "
 "branches and fallen leaves."
 msgstr "arboj aperiĝas sur la horizonto. la herbaro iom post iome cedas al "
-"arbara subo da sekaj branĉoj kaj falintaj folioj.
 
 #: script/world.js:571
 msgid "the grasses thin. soon, only dust remains."
@@ -1440,14 +1441,17 @@ msgstr "la herbaro malkoncentras. nur polvo restas."
 
 #: script/world.js:578
 msgid "the barrens break at a sea of dying grass, swaying in the arid breeze."
-msgstr "la neniejo haltas ĉe maro da mortantaj herboj, svingiĝante en la senakva venteto."
+msgstr ""
+"la neniejo haltas ĉe maro da mortantaj herboj, svingiĝante en la senakva "
+"venteto."
 
 #: script/world.js:581
 msgid ""
 "a wall of gnarled trees rises from the dust. their branches twist into a "
 "skeletal canopy overhead."
-msgstr "muro da torditaj arboj suprenstaras el la polvo. iliaj branĉoj "
-"serpentumas, formante skeletan superaĵon."
+msgstr ""
+"muro da torditaj arboj suprenstaras el la polvo. iliaj branĉoj serpentumas, "
+"formante skeletan superaĵon."
 
 #: script/world.js:817
 msgid "Wanderer"
@@ -1664,7 +1668,9 @@ msgstr "la vilaĝanoj pendumas la ŝteliston alte antaŭ la provizejo."
 #: script/events/global.js:33
 msgid ""
 "the point is made. in the next few days, the missing supplies are returned."
-msgstr "la punkto efikas. dum la venontaj tagoj, la mankitaj provizaĵoj estas redonataj."
+msgstr ""
+"la punkto efikas. dum la venontaj tagoj, la mankitaj provizaĵoj estas "
+"redonataj."
 
 #: script/events/global.js:49
 msgid "the man says he's grateful. says he won't come around any more."
@@ -1909,7 +1915,9 @@ msgstr "La Nomado"
 #: script/events/room.js:13
 msgid ""
 "a nomad shuffles into view, laden with makeshift bags bound with rough twine."
-msgstr "nomado marŝetas en la vidaĵon, portante tujkreitajn sakojn ligitajn per kruda ŝnuro."
+msgstr ""
+"nomado marŝetas en la vidaĵon, portante tujkreitajn sakojn ligitajn per "
+"kruda ŝnuro."
 
 #: script/events/room.js:14
 msgid "won't say from where he came, but it's clear that he's not staying."
