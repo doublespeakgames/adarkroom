@@ -1967,37 +1967,37 @@ msgstr "Bruoj"
 
 #: script/events/room.js:60
 msgid "through the walls, shuffling noises can be heard."
-msgstr ""
+msgstr "tra la muroj, tremaj bruoj aŭdeblas."
 
 #: script/events/room.js:61
 msgid "can't tell what they're up to."
-msgstr ""
+msgstr "ne povas difini kion ili faras."
 
 #: script/events/room.js:63
 msgid "strange noises can be heard through the walls"
-msgstr ""
+msgstr "strangaj bruoj aŭdeblas tra la muroj"
 
 #: script/events/room.js:67 script/events/room.js:118
 #: script/events/setpieces.js:1662
 msgid "investigate"
-msgstr ""
+msgstr "esplori"
 
 #: script/events/room.js:78
 msgid "vague shapes move, just out of sight."
-msgstr ""
+msgstr "nubaj formoj moviĝas, ne en la vidaĵo."
 
 #: script/events/room.js:79
 msgid "the sounds stop."
-msgstr "ĉesas la bruo."
+msgstr "ĉesas la bruoj."
 
 #: script/events/room.js:83 script/events/room.js:96
 msgid "go back inside"
-msgstr ""
+msgstr "reen"
 
 #: script/events/room.js:91
 msgid ""
 "a bundle of sticks lies just beyond the threshold, wrapped in coarse furs."
-msgstr ""
+msgstr "fasko da bastonoj restas preter la pordolimo, kovrita per malglataj feloj."
 
 #: script/events/room.js:92
 msgid "the night is silent."
@@ -2005,32 +2005,32 @@ msgstr "la nokto silentas."
 
 #: script/events/room.js:111
 msgid "scratching noises can be heard from the store room."
-msgstr ""
+msgstr "grataj bruoj aŭdeblas el la provizejo."
 
 #: script/events/room.js:112
 msgid "something's in there."
-msgstr ""
+msgstr "io estas tie."
 
 #: script/events/room.js:114
 msgid "something's in the store room"
-msgstr ""
+msgstr "io estas en la provizejo."
 
 #: script/events/room.js:129 script/events/room.js:149
 #: script/events/room.js:169
 msgid "some wood is missing."
-msgstr ""
+msgstr "iom da ligno mankas."
 
 #: script/events/room.js:130
 msgid "the ground is littered with small scales"
-msgstr ""
+msgstr "etaj skvamoj disas sur la grundo"
 
 #: script/events/room.js:150
 msgid "the ground is littered with small teeth"
-msgstr ""
+msgstr "etaj dentoj disas sur la grundo"
 
 #: script/events/room.js:170
 msgid "the ground is littered with scraps of cloth"
-msgstr ""
+msgstr "etaj ĉifonoj disas sur la grundo"
 
 #: script/events/room.js:190
 msgid "The Beggar"
@@ -2042,7 +2042,7 @@ msgstr "alvenas almozulo."
 
 #: script/events/room.js:198
 msgid "asks for any spare furs to keep him warm at night."
-msgstr ""
+msgstr "li petas ajnajn felojn doneblajn por varmigi lin nokte."
 
 #: script/events/room.js:200
 msgid "a beggar arrives"
@@ -2065,19 +2065,19 @@ msgstr "forsendi lin"
 #: script/events/room.js:222 script/events/room.js:235
 #: script/events/room.js:248
 msgid "the beggar expresses his thanks."
-msgstr ""
+msgstr "la almozulo esprimas dankon."
 
 #: script/events/room.js:223
 msgid "leaves a pile of small scales behind."
-msgstr ""
+msgstr "li forlasas amason da skvametoj."
 
 #: script/events/room.js:236
 msgid "leaves a pile of small teeth behind."
-msgstr ""
+msgstr "li forlasas amason da dentetoj."
 
 #: script/events/room.js:249
 msgid "leaves some scraps of cloth behind."
-msgstr ""
+msgstr "li forlasas kelkajn ĉifonojn."
 
 #: script/events/room.js:262 script/events/room.js:341
 msgid "The Mysterious Wanderer"
@@ -2087,7 +2087,8 @@ msgstr "La Mistera Vaganto"
 msgid ""
 "a wanderer arrives with an empty cart. says if he leaves with wood, he'll be "
 "back with more."
-msgstr ""
+msgstr "alvenas vaganto kun malplena ĉaro. diras, ke se li foriras kun ligno "
+"li revenos kun pli."
 
 #: script/events/room.js:270
 msgid "builder's not sure he's to be trusted."
@@ -2119,7 +2120,7 @@ msgstr ""
 
 #: script/events/room.js:349
 msgid "builder's not sure she's to be trusted."
-msgstr "konstruisto dubas, ĉu li fidindas"
+msgstr "konstruisto dubas, ĉu ŝi fidindas"
 
 #: script/events/room.js:365
 msgid "turn her away"
@@ -2135,19 +2136,19 @@ msgstr "revenas la mistera vaganto. ĉaro portas multajn felojn."
 
 #: script/events/room.js:420
 msgid "The Scout"
-msgstr ""
+msgstr "La Rovero"
 
 #: script/events/room.js:427
 msgid "the scout says she's been all over."
-msgstr ""
+msgstr "la rovero diras ke ŝi ĉie vojaĝis."
 
 #: script/events/room.js:428
 msgid "willing to talk about it, for a price."
-msgstr ""
+msgstr "ŝi diskutus, por prezo."
 
 #: script/events/room.js:430
 msgid "a scout stops for the night"
-msgstr ""
+msgstr "rovero tranoktas"
 
 #: script/events/room.js:434
 msgid "buy map"
@@ -2155,27 +2156,27 @@ msgstr "aĉeti mapon"
 
 #: script/events/room.js:436
 msgid "the map uncovers a bit of the world"
-msgstr ""
+msgstr "la mapo malkovras iom da la mondo"
 
 #: script/events/room.js:440
 msgid "learn scouting"
-msgstr ""
+msgstr "lerni esplori bone"
 
 #: script/events/room.js:459
 msgid "The Master"
-msgstr ""
+msgstr "La Mastro"
 
 #: script/events/room.js:466
 msgid "an old wanderer arrives."
-msgstr ""
+msgstr "maljuna vaganto alvenas."
 
 #: script/events/room.js:467
 msgid "he smiles warmly and asks for lodgings for the night."
-msgstr ""
+msgstr "li amike ridetas kaj petas tranoktan loĝejon."
 
 #: script/events/room.js:469
 msgid "an old wanderer arrives"
-msgstr ""
+msgstr "maljuna vaganto alvenas"
 
 # not a direct translation. works in context.
 #: script/events/room.js:473
@@ -2184,11 +2185,11 @@ msgstr "permesi"
 
 #: script/events/room.js:489
 msgid "in exchange, the wanderer offers his wisdom."
-msgstr ""
+msgstr "pro via helpo, la vaganto ofertas lian saĝon."
 
 #: script/events/room.js:493
 msgid "evasion"
-msgstr ""
+msgstr "evitado"
 
 #: script/events/room.js:503
 msgid "precision"
@@ -2200,19 +2201,19 @@ msgstr "forto"
 
 #: script/events/room.js:532
 msgid "The Sick Man"
-msgstr ""
+msgstr "La Malsanulo"
 
 #: script/events/room.js:539
 msgid "a man hobbles up, coughing."
-msgstr ""
+msgstr "viro lame venas, tusante."
 
 #: script/events/room.js:540
 msgid "he begs for medicine."
-msgstr ""
+msgstr "li almozpetas kuracilon."
 
 #: script/events/room.js:542
 msgid "a sick man hobbles up"
-msgstr ""
+msgstr "malsanulo lame venas"
 
 #: script/events/room.js:546
 msgid "give 1 medicine"
@@ -2220,37 +2221,37 @@ msgstr "doni 1 kuracilon"
 
 #: script/events/room.js:548
 msgid "the man swallows the medicine eagerly"
-msgstr ""
+msgstr "la viro glutas la kuracilon avide"
 
 #: script/events/room.js:552
 msgid "tell him to leave"
-msgstr ""
+msgstr "forigu lin"
 
 #: script/events/room.js:559 script/events/room.js:575
 #: script/events/room.js:591
 msgid "the man is thankful."
-msgstr ""
+msgstr "la viro dankas vin."
 
 #: script/events/room.js:560 script/events/room.js:576
 #: script/events/room.js:592
 msgid "he leaves a reward."
-msgstr ""
+msgstr "li forlasas rekompencon."
 
 #: script/events/room.js:561
 msgid "some weird metal he picked up on his travels."
-msgstr ""
+msgstr "ia stranga metalo kiun li prenis dum lia vojaĝo."
 
 #: script/events/room.js:577
 msgid "some weird glowing boxes he picked up on his travels."
-msgstr ""
+msgstr "iaj strangaj lumaj skatoloj kiujn li prenis dum lia vojaĝo."
 
 #: script/events/room.js:593
 msgid "all he has are some scales."
-msgstr ""
+msgstr "li havas nur kelkajn skvamojn."
 
 #: script/events/room.js:607
 msgid "the man expresses his thanks and hobbles off."
-msgstr ""
+msgstr "la viro dankas vin kaj lame foriras."
 
 #: script/events/setpieces.js:6
 msgid "An Outpost"
@@ -2258,7 +2259,7 @@ msgstr "Pikedo"
 
 #: script/events/setpieces.js:10 script/events/setpieces.js:12
 msgid "a safe place in the wilds."
-msgstr ""
+msgstr "sekurejo en la sovaĝejo."
 
 #: script/events/setpieces.js:34
 msgid "A Murky Swamp"
@@ -2266,15 +2267,15 @@ msgstr "Malluma Marĉo"
 
 #: script/events/setpieces.js:38
 msgid "rotting reeds rise out of the swampy earth."
-msgstr ""
+msgstr "putrantaj kanoj staras el la marĉa tero."
 
 #: script/events/setpieces.js:39
 msgid "a lone frog sits in the muck, silently."
-msgstr ""
+msgstr "sola rano sidas en la sterkakvo, silente."
 
 #: script/events/setpieces.js:41
 msgid "a swamp festers in the stagnant air."
-msgstr ""
+msgstr "marĉo putras sub la senmova aero."
 
 #: script/events/setpieces.js:44 script/events/setpieces.js:549
 #: script/events/setpieces.js:606 script/events/setpieces.js:888
