@@ -2497,140 +2497,142 @@ msgstr "eliri urbeton"
 
 #: script/events/setpieces.js:585
 msgid "ambushed on the street."
-msgstr ""
+msgstr "embuske atakita sur la strato."
 
 #: script/events/setpieces.js:601
 msgid "a squat building up ahead."
-msgstr ""
+msgstr "malalta konstruaĵo staras antaŭe"
 
 #: script/events/setpieces.js:602
 msgid "a green cross barely visible behind grimy windows."
-msgstr ""
+msgstr "verda kruco apenaŭ videbla estas malantaŭ malpuraj fenestroj."
 
 #: script/events/setpieces.js:618
 msgid "a small cache of supplies is tucked inside a rusting locker."
-msgstr ""
+msgstr "eta provizkaŝaĵo estas metita en rusta ŝranko."
 
 #: script/events/setpieces.js:680
 msgid "a scavenger waits just inside the door."
-msgstr ""
+msgstr "serĉisto atendas post la pordo."
 
 #: script/events/setpieces.js:714
 msgid "a beast stands alone in an overgrown park."
-msgstr ""
+msgstr "besto staras sole en surkreskata parko."
 
 #: script/events/setpieces.js:730
 msgid "an overturned caravan is spread across the pockmarked street."
-msgstr ""
+msgstr "renversita karavano diskuŝas trans la multtrua strato."
 
 #: script/events/setpieces.js:731
 msgid ""
 "it's been picked over by scavengers, but there's still some things worth "
 "taking."
-msgstr ""
+msgstr "serĉistoj jam forprenis multe da la enhavaĵoj, sed estas ankoraŭ "
+"kelkaj valoraĵoj en ĝi."
 
 #: script/events/setpieces.js:793
 msgid "a madman attacks, screeching."
-msgstr ""
+msgstr "frenezulo atakas, kriante."
 
 #: script/events/setpieces.js:832
 msgid "a thug moves out of the shadows."
-msgstr ""
+msgstr "fortulo moviĝas el la umbroj."
 
 #: script/events/setpieces.js:866
 msgid "a beast charges out of a ransacked classroom."
-msgstr ""
+msgstr "besto sinŝutas el detruita lernĉambro."
 
 #: script/events/setpieces.js:882
 msgid "through the large gymnasium doors, footsteps can be heard."
-msgstr ""
+msgstr "tra la grandaj gimnastikaj pordoj, piedpaŝoj aŭdeblas."
 
 #: script/events/setpieces.js:883
 msgid "the torchlight casts a flickering glow down the hallway."
-msgstr ""
+msgstr "la torĉlumo sendas flagretaĵon tra la koridoro."
 
 #: script/events/setpieces.js:884
 msgid "the footsteps stop."
-msgstr ""
+msgstr "la piedpaŝoj ĉesas."
 
 #: script/events/setpieces.js:917
 msgid "another beast, draw by the noise, leaps out of a copse of trees."
-msgstr ""
+msgstr "plia besto, ellogite pro la bruo, saltegas el areto da arboj."
 
 #: script/events/setpieces.js:933
 msgid "something's causing a commotion a ways down the road."
-msgstr ""
+msgstr "io kaŭzas agitadon iom fore, sur la vojo."
 
 #: script/events/setpieces.js:934
 msgid "a fight, maybe."
-msgstr ""
+msgstr "eble batalo."
 
 #: script/events/setpieces.js:949
 msgid ""
 "a small basket of food is hidden under a park bench, with a note attached."
-msgstr ""
+msgstr "eta korbo da manĝaĵo estas kaŝita sub parka benko, kun noto."
 
 #: script/events/setpieces.js:950
 msgid "can't read the words."
-msgstr ""
+msgstr "ne povas legi la tekston."
 
 #: script/events/setpieces.js:997
 msgid "a panicked scavenger bursts through the door, screaming."
-msgstr ""
+msgstr "panika serĉisto sin ekŝutas tra la pordo, kriante."
 
 #: script/events/setpieces.js:1036
 msgid "a man stands over a dead wanderer. notices he's not alone."
-msgstr ""
+msgstr "viro staras super morta vaginto kaj rimarkas ke li ne solas."
 
 #: script/events/setpieces.js:1052
 msgid "scavenger had a small camp in the school."
-msgstr ""
+msgstr ";a serĉisto havis etan tendaron en la lernejo."
 
 #: script/events/setpieces.js:1053
 msgid "collected scraps spread across the floor like they fell from heaven."
-msgstr ""
+msgstr "kolektitaj ĉifonoj disvastiĝis trans la planko, kiel ili falis el la bena ĉielo."
 
 #: script/events/setpieces.js:1095
 msgid "scavenger'd been looking for supplies in here, it seems."
-msgstr ""
+msgstr "la serĉisto serĉis provizaĵojn ĉi tie, ŝajne."
 
 #: script/events/setpieces.js:1096
 msgid "a shame to let what he'd found go to waste."
-msgstr ""
+msgstr "bedaŭrus lasi liajn serĉaĵojn putriĝi."
 
 #: script/events/setpieces.js:1128
 msgid ""
 "beneath the wanderer's rags, clutched in one of its many hands, a glint of "
 "steel."
-msgstr ""
+msgstr "sub la ĉifonoj de la vaginto, tenite en unu el ĝiaj multaj manoj, "
+"rebrilo da ŝtalo."
 
 #: script/events/setpieces.js:1129
 msgid "worth killing for, it seems."
-msgstr ""
+msgstr "valoras murdi pro ĝi, ŝajne."
 
 #: script/events/setpieces.js:1156
 msgid "eye for an eye seems fair."
-msgstr ""
+msgstr "prenaĵo po prenaĵo ŝajne justas."
 
 #: script/events/setpieces.js:1157
 msgid "always worked before, at least."
-msgstr ""
+msgstr "nu, ĉiam kutime justis."
 
 #: script/events/setpieces.js:1158
 msgid "picking the bones finds some useful trinkets."
-msgstr ""
+msgstr "ŝercado de la ostoj aperigas kelkajn utilaĵetojn."
 
 #: script/events/setpieces.js:1200
 msgid "some medicine abandoned in the drawers."
-msgstr ""
+msgstr "estas iom da kuraciloj forlasite en la tirkesto."
 
 #: script/events/setpieces.js:1222
 msgid "the clinic has been ransacked."
-msgstr ""
+msgstr "la kuracejo estis rompiĝita."
 
 #: script/events/setpieces.js:1223
 msgid "only dust and stains remain."
-msgstr ""
+msgstr "nur polvo kaj makuloj restas."
 
 #: script/events/setpieces.js:1239
 msgid "A Ruined City"
@@ -2639,29 +2641,30 @@ msgstr "Ruina Urbo"
 #: script/events/setpieces.js:1243
 msgid ""
 "a battered highway sign stands guard at the entrance to this once-great city."
-msgstr ""
+msgstr "batita landstrata signo staras garde ĉe la enirejo de ĉi tiu iam-granda urbo."
 
 #: script/events/setpieces.js:1244
 msgid ""
 "the towers that haven't crumbled jut from the landscape like the ribcage of "
 "some ancient beast."
-msgstr ""
+msgstr "la turoj ankoraŭ nepereiĝintaj staras el la pejzaĵo kiel brustokorbo "
+"de ia prabesto."
 
 #: script/events/setpieces.js:1245
 msgid "might be things worth having still inside."
-msgstr ""
+msgstr "eble ankoraŭ enhavas kelkajn valoraĵojn."
 
 #: script/events/setpieces.js:1247
 msgid "the towers of a decaying city dominate the skyline"
-msgstr ""
+msgstr "la turoj de ruiniĝanta urbo mastras la horizonton"
 
 #: script/events/setpieces.js:1261
 msgid "the streets are empty."
-msgstr ""
+msgstr "la stratoj malplenas."
 
 #: script/events/setpieces.js:1262
 msgid "the air is filled with dust, driven relentlessly by the hard winds."
-msgstr ""
+msgstr "la aero plenas per polvo, peladata de la senĉesa ventego."
 
 #: script/events/setpieces.js:1270 script/events/setpieces.js:1286
 #: script/events/setpieces.js:1302 script/events/setpieces.js:1318
