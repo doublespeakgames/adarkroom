@@ -2286,11 +2286,11 @@ msgstr "eniri"
 
 #: script/events/setpieces.js:55
 msgid "deep in the swamp is a moss-covered cabin."
-msgstr ""
+msgstr "profunde en la marĉo estas muskkovrita kabano."
 
 #: script/events/setpieces.js:56
 msgid "an old wanderer sits inside, in a seeming trance."
-msgstr ""
+msgstr "maljuna vaganto sidas en ĝi, ŝajne trancas."
 
 #: script/events/setpieces.js:61
 msgid "talk"
@@ -2298,19 +2298,19 @@ msgstr "paroli"
 
 #: script/events/setpieces.js:72
 msgid "the wanderer takes the charm and nods slowly."
-msgstr ""
+msgstr "la vaganto forprenas la amuleton kaj malrapide kapjesas."
 
 #: script/events/setpieces.js:73
 msgid "he speaks of once leading the great fleets to fresh worlds."
-msgstr ""
+msgstr "li diras ke li iam pasintece kondukis la egajn ŝiparojn al novaj mondoj."
 
 #: script/events/setpieces.js:74
 msgid "unfathomable destruction to fuel wanderer hungers."
-msgstr ""
+msgstr "nesondebla detruado por daŭrigi la malsatojn de vagantoj."
 
 #: script/events/setpieces.js:75
 msgid "his time here, now, is his penance."
-msgstr ""
+msgstr "lia tempo esti ĉi tie, estas lia puno."
 
 #: script/events/setpieces.js:91
 msgid "A Damp Cave"
@@ -2318,24 +2318,24 @@ msgstr "Malseka Kaverno"
 
 #: script/events/setpieces.js:95
 msgid "the mouth of the cave is wide and dark."
-msgstr ""
+msgstr "la buŝego de la kaverno estas larĝa kaj malluma."
 
 #: script/events/setpieces.js:96
 msgid "can't see what's inside."
-msgstr ""
+msgstr "ne povas vidi la enaĵojn"
 
 #: script/events/setpieces.js:98
 msgid "the earth here is split, as if bearing an ancient wound"
-msgstr ""
+msgstr "la tero ĉi tie fendiĝas, kvazaŭ ĝi havas praan vundon"
 
 #: script/events/setpieces.js:101 script/events/setpieces.js:2944
 #: script/events/setpieces.js:3458
 msgid "go inside"
-msgstr ""
+msgstr "eniri"
 
 #: script/events/setpieces.js:120 script/events/setpieces.js:265
 msgid "a startled beast defends its home"
-msgstr ""
+msgstr "ektimita besto defendas sian hejmon"
 
 #: script/events/setpieces.js:135 script/events/setpieces.js:186
 #: script/events/setpieces.js:228 script/events/setpieces.js:247
@@ -2381,47 +2381,47 @@ msgstr "eliri kavernon"
 
 #: script/events/setpieces.js:148
 msgid "the cave narrows a few feet in."
-msgstr ""
+msgstr "la kaverno mallarĝiĝas post kelkaj futoj."
 
 #: script/events/setpieces.js:149
 msgid "the walls are moist and moss-covered"
-msgstr ""
+msgstr "la muroj estas malseketaj kaj muskkovritaj"
 
 #: script/events/setpieces.js:153
 msgid "squeeze"
-msgstr ""
+msgstr "premi"
 
 #: script/events/setpieces.js:164
 msgid "the remains of an old camp sits just inside the cave."
-msgstr ""
+msgstr "la ruino de malnova tendaro restas en la kaverno."
 
 #: script/events/setpieces.js:165
 msgid "bedrolls, torn and blackened, lay beneath a thin layer of dust."
-msgstr ""
+msgstr "litsakoj, ŝiritaj kaj nigrigitaj, kuŝas sub maldika tavolo da polvo."
 
 #: script/events/setpieces.js:199
 msgid "the body of a wanderer lies in a small cavern."
-msgstr ""
+msgstr "la korpo de vaganto kuŝas en kaverneto."
 
 #: script/events/setpieces.js:200
 msgid "rot's been to work on it, and some of the pieces are missing."
-msgstr ""
+msgstr "putraĵo ĝin putrigis, kaj kelkaj pecoj mankas."
 
 #: script/events/setpieces.js:202
 msgid "can't tell what left it here."
-msgstr ""
+msgstr "ne povas difini kion lasis ĝin ĉi tie."
 
 #: script/events/setpieces.js:241
 msgid "the torch sputters and dies in the damp air"
-msgstr ""
+msgstr "la torĉo skuiĝas kaj la fajro mortas en la malseka aero"
 
 #: script/events/setpieces.js:242
 msgid "the darkness is absolute"
-msgstr ""
+msgstr "la mallumeco tutas"
 
 #: script/events/setpieces.js:244
 msgid "the torch goes out"
-msgstr ""
+msgstr "la torĉo senfajriĝas"
 
 #: script/events/setpieces.js:299
 msgid "a cave lizard attacks"
@@ -2429,23 +2429,23 @@ msgstr "kaverna lacerto atakas"
 
 #: script/events/setpieces.js:333
 msgid "a large beast charges out of the dark"
-msgstr ""
+msgstr "granda besto sinŝutas el la mallumeco"
 
 #: script/events/setpieces.js:367
 msgid "a giant lizard shambles forward"
-msgstr ""
+msgstr "grandega lacerto rampas antaŭen"
 
 #: script/events/setpieces.js:395
 msgid "the nest of a large animal lies at the back of the cave."
-msgstr ""
+msgstr "nesto de granda besto kuŝas ĉe la malantaŭo de la kaverno."
 
 #: script/events/setpieces.js:437
 msgid "a small supply cache is hidden at the back of the cave."
-msgstr ""
+msgstr "eta provizkaŝaĵo kaŝiĝas ĉe la malantaŭo de la kaverno."
 
 #: script/events/setpieces.js:489
 msgid "an old case is wedged behind a rock, covered in a thick layer of dust."
-msgstr ""
+msgstr "malnova kesto estas kojnumita malantaŭ ŝtono, kovrita per dika tavolo da polvo."
 
 #: script/events/setpieces.js:522
 msgid "A Deserted Town"
@@ -2453,31 +2453,33 @@ msgstr "Forlasita Urbeto"
 
 #: script/events/setpieces.js:526
 msgid "a small suburb lays ahead, empty houses scorched and peeling."
-msgstr ""
+msgstr "malgranda urbeto restas antaŭen kun malplenaj domoj bruligitaj kaj senŝeliĝantaj."
 
 #: script/events/setpieces.js:527
 msgid ""
 "broken streetlights stand, rusting. light hasn't graced this place in a long "
 "time."
-msgstr ""
+msgstr "rompitaj stratlumiloj staras, rustiĝas. lumo ne benis la lokon por "
+"longa tempo."
 
 #: script/events/setpieces.js:529
 msgid "the town lies abandoned, its citizens long dead"
-msgstr ""
+msgstr "la urbeto restas forlasita, ĝia civito longtempe mortinta"
 
 #: script/events/setpieces.js:532 script/events/setpieces.js:1250
 msgid "explore"
-msgstr ""
+msgstr "esplori"
 
 #: script/events/setpieces.js:544
 msgid ""
 "where the windows of the schoolhouse aren't shattered, they're blackened "
 "with soot."
-msgstr ""
+msgstr "la fenestroj de la lernejo estas nigriĝitaj per fulgo. la nenigraj "
+"estas jam tute rompitaj."
 
 #: script/events/setpieces.js:545
 msgid "the double doors creak endlessly in the wind."
-msgstr ""
+msgstr "la paro da pordoj knaris senĉese pro la vento."
 
 #: script/events/setpieces.js:554 script/events/setpieces.js:593
 #: script/events/setpieces.js:611 script/events/setpieces.js:649
