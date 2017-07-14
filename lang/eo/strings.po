@@ -3108,28 +3108,29 @@ msgstr "ili forprenis kion ili deziris, kaj foriris."
 msgid ""
 "castoff from the mammoth drills can still be found by the edges of the "
 "precipice."
-msgstr ""
+msgstr "rubo el la grandegaj boriloj troveblas ĉe la rando de la "
+"profundegaĵo."
 
 #: script/events/setpieces.js:3133
 msgid "A Crashed Ship"
-msgstr ""
+msgstr "Kraŝita Ŝipo"
 
 #: script/events/setpieces.js:3142
 msgid ""
 "the familiar curves of a wanderer vessel rise up out of the dust and ash. "
-msgstr ""
+msgstr "la konetaj kurboj de ŝipo de vaganto staras el la polvo kaj cindro."
 
 #: script/events/setpieces.js:3143
 msgid "lucky that the natives can't work the mechanisms."
-msgstr ""
+msgstr "bonŝance la Terloĝantoj ne povas funkciigi la meĥanikaĵojn."
 
 #: script/events/setpieces.js:3144
 msgid "with a little effort, it might fly again."
-msgstr ""
+msgstr "per iom da klopodo, ĝi eble denove flugos."
 
 #: script/events/setpieces.js:3148
 msgid "salvage"
-msgstr ""
+msgstr "serĉi"
 
 #: script/events/setpieces.js:3156
 msgid "The Sulphur Mine"
@@ -3137,15 +3138,15 @@ msgstr "La Sulfura Minejo"
 
 #: script/events/setpieces.js:3160
 msgid "the military is already set up at the mine's entrance."
-msgstr ""
+msgstr "la armeo jam staras ĉe la mineja enirejo."
 
 #: script/events/setpieces.js:3161
 msgid "soldiers patrol the perimeter, rifles slung over their shoulders."
-msgstr ""
+msgstr "soldatoj patrolas ĉe la ĉirkaŭbordo. fusiloj restas sur iliaj ŝultroj."
 
 #: script/events/setpieces.js:3163
 msgid "a military perimeter is set up around the mine."
-msgstr ""
+msgstr "milita ĉirkaŭbordo staras ĉirkaŭ la minejo.s"
 
 #: script/events/setpieces.js:3166 script/events/setpieces.js:3315
 msgid "attack"
@@ -3166,11 +3167,11 @@ msgstr "dua soldato ekbatalas."
 
 #: script/events/setpieces.js:3275
 msgid "a grizzled soldier attacks, waving a bayonet."
-msgstr ""
+msgstr "grizharara soldato atakas, svingante bajoneton."
 
 #: script/events/setpieces.js:3286
 msgid "the military presence has been cleared."
-msgstr ""
+msgstr "la armea ĉeesteco estas forigita."
 
 #: script/events/setpieces.js:3287 script/events/setpieces.js:3429
 #: script/events/setpieces.js:3505
@@ -3179,7 +3180,7 @@ msgstr "nun la minejo sendanĝeras por la laboristoj."
 
 #: script/events/setpieces.js:3289
 msgid "the sulphur mine is clear of dangers"
-msgstr ""
+msgstr "la sulfura minejo sendanĝeras"
 
 #: script/events/setpieces.js:3305
 msgid "The Coal Mine"
@@ -3187,11 +3188,11 @@ msgstr "La Karba Minejo"
 
 #: script/events/setpieces.js:3309
 msgid "camp fires burn by the entrance to the mine."
-msgstr ""
+msgstr "tendaraj fajroj brulas ĉe la enirejo de la minejo."
 
 #: script/events/setpieces.js:3310
 msgid "men mill about, weapons at the ready."
-msgstr ""
+msgstr "viroj tien kaj reen marŝas, armiloj pretas."
 
 #: script/events/setpieces.js:3312
 msgid "this old mine is not abandoned"
@@ -3207,11 +3208,11 @@ msgstr "restas nur la ĉefo."
 
 #: script/events/setpieces.js:3428
 msgid "the camp is still, save for the crackling of the fires."
-msgstr ""
+msgstr "la tendaro trankviliĝas, krom la kraketado de la fajroj."
 
 #: script/events/setpieces.js:3431
 msgid "the coal mine is clear of dangers"
-msgstr ""
+msgstr "la karba minejo sendanĝeras"
 
 #: script/events/setpieces.js:3447
 msgid "The Iron Mine"
@@ -3219,25 +3220,26 @@ msgstr "La Fera Minejo"
 
 #: script/events/setpieces.js:3451
 msgid "an old iron mine sits here, tools abandoned and left to rust."
-msgstr ""
+msgstr "malnova fera minejo restas ĉi tie, iloj forlasitaj kaj rustaj."
 
 #: script/events/setpieces.js:3452
 msgid ""
 "bleached bones are strewn about the entrance. many, deeply scored with "
 "jagged grooves."
-msgstr ""
+msgstr "senkoloraj ostoj multe disas ĉe la enirejo. multaj havas "
+"profundajn kanelaĉojn"
 
 #: script/events/setpieces.js:3453
 msgid "feral howls echo out of the darkness."
-msgstr ""
+msgstr "sovaĝaj hurloj resonas el la mallumeco."
 
 #: script/events/setpieces.js:3455
 msgid "the path leads to an abandoned mine"
-msgstr ""
+msgstr "la vojo kondukas al forlasita minejo"
 
 #: script/events/setpieces.js:3493
 msgid "a large creature lunges, muscles rippling in the torchlight"
-msgstr ""
+msgstr "granda besto sinĵetas, muskoloj fortŝajnaj en la torĉlumo"
 
 #: script/events/setpieces.js:3504
 msgid "the beast is dead."
@@ -3245,7 +3247,7 @@ msgstr "la besto mortis."
 
 #: script/events/setpieces.js:3507
 msgid "the iron mine is clear of dangers"
-msgstr ""
+msgstr "la fera minejo sendanĝeras"
 
 #: script/events/setpieces.js:3524
 msgid "A Destroyed Village"
@@ -3253,28 +3255,28 @@ msgstr "Detruita Vilaĝo"
 
 #: script/events/setpieces.js:3528
 msgid "a destroyed village lies in the dust."
-msgstr ""
+msgstr "detruita vilaĝo restas en polvo."
 
 #: script/events/setpieces.js:3529
 msgid "charred bodies litter the ground."
-msgstr ""
+msgstr "nigrigitaj korpoj disas sube."
 
 #: script/events/setpieces.js:3532
 msgid "the metallic tang of wanderer afterburner hangs in the air."
-msgstr ""
+msgstr "la metala gusteto da vaganta postbrulaĵo ŝvebas en la aero."
 
 #: script/events/setpieces.js:3546
 msgid "a shack stands at the center of the village."
-msgstr ""
+msgstr "domaĉo staras ĉe la centro de la vilaĝo."
 
 #: script/events/setpieces.js:3547
 msgid "there are still supplies inside."
-msgstr ""
+msgstr "estas ankoraŭ provizaĵoj en ĝi."
 
 #: script/events/setpieces.js:3558
 msgid "all the work of a previous generation is here."
-msgstr ""
+msgstr "ĉiom da la laboro de antaŭa generacio estas ĉi tie."
 
 #: script/events/setpieces.js:3559
 msgid "ripe for the picking."
-msgstr ""
+msgstr "maturaĵo por forrikolti."
