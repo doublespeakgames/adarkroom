@@ -2872,175 +2872,176 @@ msgstr "amaso da ratoj ekkuras el la tunelo."
 
 #: script/events/setpieces.js:2047
 msgid "a large man attacks, waving a bayonet."
-msgstr ""
+msgstr "granda viro atakas, svingante bajoneton."
 
 #: script/events/setpieces.js:2082
 msgid "a second soldier opens fire."
-msgstr ""
+msgstr "dua soldato ekpafadas."
 
 #: script/events/setpieces.js:2123
 msgid "a masked soldier rounds the corner, gun drawn"
-msgstr ""
+msgstr "maskita soldato venas el la angulo, tenante pafilon."
 
 #: script/events/setpieces.js:2164
 msgid "the crowd surges forward."
-msgstr ""
+msgstr "la amaso hule kuras antauen."
 
 #: script/events/setpieces.js:2200
 msgid "a youth lashes out with a tree branch."
-msgstr ""
+msgstr "junulo atakas per branĉo."
 
 #: script/events/setpieces.js:2235
 msgid "a squatter stands firmly in the doorway of a small hut."
-msgstr ""
+msgstr "loĝanto staras forte en la pordaperturo de eta kabano."
 
 #: script/events/setpieces.js:2270
 msgid "behind the door, a deformed figure awakes and attacks."
-msgstr ""
+msgstr "malantaŭ la pordo, misformita figuro vekiĝas kaj atakas."
 
 #: script/events/setpieces.js:2310
 msgid "as soon as the door is open a little bit, hundreds of tentacles erupt."
-msgstr ""
+msgstr "tuj kiam la pordo malfermiĝas iomete, centoj da tentakloj erupcie sinŝutas el ĝi."
 
 #: script/events/setpieces.js:2337
 msgid "bird must have liked shiney things."
-msgstr ""
+msgstr "la birdo certe ŝatis briletaĵojn."
 
 #: script/events/setpieces.js:2338
 msgid "some good stuff woven into its nest."
-msgstr ""
+msgstr "kelkaj bonaĵoj estas enteksitaj en ĝia nesto."
 
 #: script/events/setpieces.js:2372
 msgid "not much here."
-msgstr ""
+msgstr "ne multo ĉi tie."
 
 #: script/events/setpieces.js:2373
 msgid "scavengers must have gotten to this place already."
-msgstr ""
+msgstr "serĉistoj ŝajne jam serĉis ĉi tie."
 
 #: script/events/setpieces.js:2403
 msgid "the tunnel opens up at another platform."
-msgstr ""
+msgstr "la tunelo estas konektita al alia platformo."
 
 #: script/events/setpieces.js:2404
 msgid "the walls are scorched from an old battle."
-msgstr ""
+msgstr "la muroj estas bruligitaj pro praa batalo."
 
 #: script/events/setpieces.js:2405
 msgid "bodies and supplies from both sides litter the ground."
-msgstr ""
+msgstr "korpoj kaj provizaĵoj el la du partioj disas sube."
 
 #: script/events/setpieces.js:2449
 msgid "the small military outpost is well supplied."
-msgstr ""
+msgstr "la eta armea pikedo enhavas multajn provizaĵojn."
 
 #: script/events/setpieces.js:2450
 msgid ""
 "arms and munitions, relics from the war, are neatly arranged on the store-"
 "room floor."
-msgstr ""
+msgstr "armiloj kaj municioj, antikvaĵoj de la milito, estas ordeme aranĝitaj "
+"sur la planko de la provizejo."
 
 #: script/events/setpieces.js:2451
 msgid "just as deadly now as they were then."
-msgstr ""
+msgstr "same morteble nun, kiel tiam."
 
 #: script/events/setpieces.js:2485
 msgid "searching the bodies yields a few supplies."
-msgstr ""
+msgstr "kelkaj provizaĵoj troveblas post serĉado de la korpoj."
 
 #: script/events/setpieces.js:2486
 msgid "more soldiers will be on their way."
-msgstr ""
+msgstr "pli da soldatoj venos."
 
 #: script/events/setpieces.js:2487
 msgid "time to move on."
-msgstr ""
+msgstr "bona tempo foriri."
 
 #: script/events/setpieces.js:2526
 msgid "the small settlement has clearly been burning a while."
-msgstr ""
+msgstr "la vilaĝeto jam dum longa tempo brulas."
 
 #: script/events/setpieces.js:2527
 msgid ""
 "the bodies of the wanderers that lived here are still visible in the flames."
-msgstr ""
+msgstr "la korpoj de la vagintoj kiuj loĝis ĉi tie ankoraŭ videblas en la fajroj."
 
 #: script/events/setpieces.js:2528
 msgid "still time to rescue a few supplies."
-msgstr ""
+msgstr "ankoraŭ povas savi kelkajn provizaĵojn."
 
 #: script/events/setpieces.js:2562
 msgid ""
 "the remaining settlers flee from the violence, their belongings forgotten."
-msgstr ""
+msgstr "la restantaj enloĝintoj fuĝas la perforton, iliajn propraĵojn forlasinte."
 
 #: script/events/setpieces.js:2563
 msgid "there's not much, but some useful things can still be found."
-msgstr ""
+msgstr "ne estas multo. sed kelkaj utilaĵoj ankoraŭ troveblas."
 
 #: script/events/setpieces.js:2597
 msgid "the young settler was carrying a canvas sack."
-msgstr ""
+msgstr "la juna enloĝinto portis kanvasan sakon."
 
 #: script/events/setpieces.js:2598
 msgid "it contains travelling gear, and a few trinkets."
-msgstr ""
+msgstr "ĝi enhavas vojaĝilaron, kaj kelkajn aĵetojn."
 
 #: script/events/setpieces.js:2599 script/events/setpieces.js:2635
 msgid "there's nothing else here."
-msgstr ""
+msgstr "ne estas pli ĉi tie."
 
 #: script/events/setpieces.js:2633
 msgid "inside the hut, a child cries."
-msgstr ""
+msgstr "en la kabano, infano ploras."
 
 #: script/events/setpieces.js:2634
 msgid "a few belongings rest against the walls."
-msgstr ""
+msgstr "kelkaj propraĵoj restas kontraŭ la muroj."
 
 #: script/events/setpieces.js:2674
 msgid "the stench of rot and death fills the operating theatres."
-msgstr ""
+msgstr "la fetoro de putro kaj morto plenigas la operaciejojn."
 
 #: script/events/setpieces.js:2675
 msgid "a few items are scattered on the ground."
-msgstr ""
+msgstr "kelkaj aĵoj disas sube."
 
 #: script/events/setpieces.js:2676
 msgid "there is nothing else here."
-msgstr ""
+msgstr "ne estas pli ĉi tie."
 
 #: script/events/setpieces.js:2715
 msgid "a pristine medicine cabinet at the end of a hallway."
-msgstr ""
+msgstr "perfektŝajna kuracilujo staras ĉe la fino de koridoro."
 
 #: script/events/setpieces.js:2716
 msgid "the rest of the hospital is empty."
-msgstr ""
+msgstr "la kromaĵo de la malsanulejo estas malplena."
 
 #: script/events/setpieces.js:2750
 msgid "someone had been stockpiling loot here."
-msgstr ""
+msgstr "iu arigis provizaĵojn ĉi tie."
 
 #: script/events/setpieces.js:2799
 msgid "the tentacular horror is defeated."
-msgstr ""
+msgstr "la tentakla hororaĵo malvenkis."
 
 #: script/events/setpieces.js:2800
 msgid "inside, the remains of its victims are everywhere."
-msgstr ""
+msgstr "interne, la korperaĵoj de ĝiaj viktimoj disas ĉie."
 
 #: script/events/setpieces.js:2845
 msgid "the warped man lies dead."
-msgstr ""
+msgstr "la misformita viro mortis."
 
 #: script/events/setpieces.js:2846
 msgid "the operating theatre has a lot of curious equipment."
-msgstr ""
+msgstr "la operaciejo enhavas multe da strangaj iloj."
 
 #: script/events/setpieces.js:2890
 msgid "the old man had a small cache of interesting items."
-msgstr ""
+msgstr "la maljuna viro havis etan kaŝaĵon da interesaj aĵoj."
 
 #: script/events/setpieces.js:2934
 msgid "An Old House"
@@ -3048,35 +3049,35 @@ msgstr "Malnova Domo"
 
 #: script/events/setpieces.js:2938
 msgid "an old house remains here, once white siding yellowed and peeling."
-msgstr ""
+msgstr "malnova domo restas ĉi tie, iam blanka, nun flaveta kaj senŝeliĝanta."
 
 #: script/events/setpieces.js:2939
 msgid "the door hangs open."
-msgstr ""
+msgstr "la pordo pendas, malfermiĝinta."
 
 #: script/events/setpieces.js:2941
 msgid "the remains of an old house stand as a monument to simpler times"
-msgstr ""
+msgstr "la ruino de malnova domo staras kiel monumento por pli simpla epoko"
 
 #: script/events/setpieces.js:2955
 msgid "the house is abandoned, but not yet picked over."
-msgstr ""
+msgstr "la domo estas forlasita sed ne enserĉita."
 
 #: script/events/setpieces.js:2956
 msgid "still a few drops of water in the old well."
-msgstr ""
+msgstr "estas ankoraŭ kelkaj akveroj en la malnova puto."
 
 #: script/events/setpieces.js:2990
 msgid "the house has been ransacked."
-msgstr ""
+msgstr "la domo estis enserĉita kaj rompita."
 
 #: script/events/setpieces.js:2991
 msgid "but there is a cache of medicine under the floorboards."
-msgstr ""
+msgstr "sed estas kaŝejo da kuraciloj sub la planko."
 
 #: script/events/setpieces.js:3019
 msgid "a man charges down the hall, a rusty blade in his hand"
-msgstr ""
+msgstr "viro ekkuras trans la koridoro, rustan tranĉilon portante"
 
 #: script/events/setpieces.js:3051
 msgid "A Forgotten Battlefield"
@@ -3084,12 +3085,12 @@ msgstr "Forgesita Batalejo"
 
 #: script/events/setpieces.js:3055
 msgid "a battle was fought here, long ago."
-msgstr ""
+msgstr "batalo okazis ĉi tie, antaŭ longa tempo."
 
 #: script/events/setpieces.js:3056
 msgid ""
 "battered technology from both sides lays dormant on the blasted landscape."
-msgstr ""
+msgstr "batita teĥnologio el la du partioj restas sur la fulmobatita pejzaĝo."
 
 #: script/events/setpieces.js:3104
 msgid "A Huge Borehole"
@@ -3097,11 +3098,11 @@ msgstr "Grandega Boraĵo"
 
 #: script/events/setpieces.js:3108
 msgid "a huge hole is cut deep into the earth, evidence of the past harvest."
-msgstr ""
+msgstr "grandega truo profunde tranĉitis en la teron. atesto al la pasinta rikolto."
 
 #: script/events/setpieces.js:3109
 msgid "they took what they came for, and left."
-msgstr ""
+msgstr "ili forprenis kion ili deziris, kaj foriris."
 
 #: script/events/setpieces.js:3110
 msgid ""
