@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: adarkroom\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2017-04-01 23:47+0100\n"
-"PO-Revision-Date: 2017-07-11 21:49-0300\n"
+"PO-Revision-Date: 2017-07-20 19:30-0300\n"
 "Last-Translator: Dušan Juretić <dusan.juretic@gmail.com>\n"
 "Language-Team: Esperanto\n"
 "Language: eo\n"
@@ -32,7 +32,6 @@ msgid "cancel"
 msgstr "nuligi"
 
 #: script/dropbox.js:86 script/dropbox.js:176
-#, fuzzy
 msgid "Dropbox Export / Import"
 msgstr "Dropbokse eligi / enigi"
 
@@ -41,7 +40,6 @@ msgid "export or import save data to dropbox datastorage"
 msgstr "Eligi aŭ enigi konservdatumon al Dropboksa datumkonservejo"
 
 #: script/dropbox.js:90
-#, fuzzy
 msgid "your are connected to dropbox with account / email "
 msgstr "Vi estas konektita al Dropboks per konto / retpoŝto"
 
@@ -1433,8 +1431,9 @@ msgstr "la arboj ne pluas. soifa tero kaj blovata polvo ne bele anstataŭas."
 msgid ""
 "trees loom on the horizon. grasses gradually yield to a forest floor of dry "
 "branches and fallen leaves."
-msgstr "arboj aperiĝas sur la horizonto. la herbaro iom post iome cedas al "
-"arbara subaĵo da sekaj branĉoj kaj falintaj folioj."
+msgstr ""
+"arboj aperiĝas sur la horizonto. la herbaro iom post iome cedas al arbara "
+"subaĵo da sekaj branĉoj kaj falintaj folioj."
 
 #: script/world.js:571
 msgid "the grasses thin. soon, only dust remains."
@@ -1998,7 +1997,8 @@ msgstr "reen"
 #: script/events/room.js:91
 msgid ""
 "a bundle of sticks lies just beyond the threshold, wrapped in coarse furs."
-msgstr "fasko da bastonoj restas preter la pordolimo, kovrita per malglataj feloj."
+msgstr ""
+"fasko da bastonoj restas preter la pordolimo, kovrita per malglataj feloj."
 
 #: script/events/room.js:92
 msgid "the night is silent."
@@ -2088,8 +2088,9 @@ msgstr "La Mistera Vaganto"
 msgid ""
 "a wanderer arrives with an empty cart. says if he leaves with wood, he'll be "
 "back with more."
-msgstr "alvenas vaganto kun malplena ĉaro. diras, ke se li foriras kun ligno "
-"li revenos kun pli."
+msgstr ""
+"alvenas vaganto kun malplena ĉaro. diras, ke se li foriras kun ligno li "
+"revenos kun pli."
 
 #: script/events/room.js:270
 msgid "builder's not sure he's to be trusted."
@@ -2303,7 +2304,8 @@ msgstr "la vaganto forprenas la talismanon kaj malrapide kapjesas."
 
 #: script/events/setpieces.js:73
 msgid "he speaks of once leading the great fleets to fresh worlds."
-msgstr "li diras ke li iam pasintece kondukis la egajn ŝiparojn al novaj mondoj."
+msgstr ""
+"li diras ke li iam pasintece kondukis la egajn ŝiparojn al novaj mondoj."
 
 #: script/events/setpieces.js:74
 msgid "unfathomable destruction to fuel wanderer hungers."
@@ -2446,7 +2448,9 @@ msgstr "eta provizkaŝaĵo kaŝiĝas ĉe la malantaŭo de la kaverno."
 
 #: script/events/setpieces.js:489
 msgid "an old case is wedged behind a rock, covered in a thick layer of dust."
-msgstr "malnova kesto estas kojnumita malantaŭ ŝtono, kovrita per dika tavolo da polvo."
+msgstr ""
+"malnova kesto estas kojnumita malantaŭ ŝtono, kovrita per dika tavolo da "
+"polvo."
 
 #: script/events/setpieces.js:522
 msgid "A Deserted Town"
@@ -2454,14 +2458,17 @@ msgstr "Forlasita Urbeto"
 
 #: script/events/setpieces.js:526
 msgid "a small suburb lays ahead, empty houses scorched and peeling."
-msgstr "malgranda urbeto restas antaŭen kun malplenaj domoj bruligitaj kaj senŝeliĝantaj."
+msgstr ""
+"malgranda urbeto restas antaŭen kun malplenaj domoj bruligitaj kaj "
+"senŝeliĝantaj."
 
 #: script/events/setpieces.js:527
 msgid ""
 "broken streetlights stand, rusting. light hasn't graced this place in a long "
 "time."
-msgstr "rompitaj stratlumiloj staras, rustiĝas. lumo ne benis la lokon por "
-"longa tempo."
+msgstr ""
+"rompitaj stratlumiloj staras, rustiĝas. lumo ne benis la lokon por longa "
+"tempo."
 
 #: script/events/setpieces.js:529
 msgid "the town lies abandoned, its citizens long dead"
@@ -2475,8 +2482,9 @@ msgstr "esplori"
 msgid ""
 "where the windows of the schoolhouse aren't shattered, they're blackened "
 "with soot."
-msgstr "la fenestroj de la lernejo estas nigriĝitaj per fulgo. la nenigraj "
-"estas jam tute rompitaj."
+msgstr ""
+"la fenestroj de la lernejo estas nigriĝitaj per fulgo. la nenigraj estas jam "
+"tute rompitaj."
 
 #: script/events/setpieces.js:545
 msgid "the double doors creak endlessly in the wind."
@@ -2528,8 +2536,9 @@ msgstr "renversita karavano diskuŝas trans la multtrua strato."
 msgid ""
 "it's been picked over by scavengers, but there's still some things worth "
 "taking."
-msgstr "kolektistoj jam forprenis multe da la enhavaĵoj, sed estas ankoraŭ "
-"kelkaj valoraĵoj en ĝi."
+msgstr ""
+"kolektistoj jam forprenis multe da la enhavaĵoj, sed estas ankoraŭ kelkaj "
+"valoraĵoj en ĝi."
 
 #: script/events/setpieces.js:793
 msgid "a madman attacks, screeching."
@@ -2590,7 +2599,9 @@ msgstr "la kolektisto havis etan tendaron en la lernejo."
 
 #: script/events/setpieces.js:1053
 msgid "collected scraps spread across the floor like they fell from heaven."
-msgstr "kolektitaj ĉifonoj disvastiĝis trans la planko, kiel ili falis el la bena ĉielo."
+msgstr ""
+"kolektitaj ĉifonoj disvastiĝis trans la planko, kiel ili falis el la bena "
+"ĉielo."
 
 #: script/events/setpieces.js:1095
 msgid "scavenger'd been looking for supplies in here, it seems."
@@ -2604,8 +2615,9 @@ msgstr "bedaŭrus lasi liajn serĉaĵojn putriĝi."
 msgid ""
 "beneath the wanderer's rags, clutched in one of its many hands, a glint of "
 "steel."
-msgstr "sub la ĉifonoj de la vaginto, tenite en unu el ĝiaj multaj manoj, "
-"rebrilo de ŝtalo."
+msgstr ""
+"sub la ĉifonoj de la vaginto, tenite en unu el ĝiaj multaj manoj, rebrilo de "
+"ŝtalo."
 
 #: script/events/setpieces.js:1129
 msgid "worth killing for, it seems."
@@ -2642,14 +2654,16 @@ msgstr "Ruina Urbo"
 #: script/events/setpieces.js:1243
 msgid ""
 "a battered highway sign stands guard at the entrance to this once-great city."
-msgstr "batita landstrata signo staras garde ĉe la enirejo de ĉi tiu iam-granda urbo."
+msgstr ""
+"batita landstrata signo staras garde ĉe la enirejo de ĉi tiu iam-granda urbo."
 
 #: script/events/setpieces.js:1244
 msgid ""
 "the towers that haven't crumbled jut from the landscape like the ribcage of "
 "some ancient beast."
-msgstr "la turoj ankoraŭ nepereiĝintaj staras el la pejzaĵo kiel brustokorbo "
-"de ia prabesto."
+msgstr ""
+"la turoj ankoraŭ nepereiĝintaj staras el la pejzaĵo kiel brustokorbo de ia "
+"prabesto."
 
 #: script/events/setpieces.js:1245
 msgid "might be things worth having still inside."
@@ -2697,7 +2711,8 @@ msgstr "foriri de la urbo"
 
 #: script/events/setpieces.js:1277
 msgid "orange traffic cones are set across the street, faded and cracked."
-msgstr "oranĝkoloraj trafikkonusoj metitas trans la strato, palaj kaj rompitaj."
+msgstr ""
+"oranĝkoloraj trafikkonusoj metitas trans la strato, palaj kaj rompitaj."
 
 #: script/events/setpieces.js:1278
 msgid "lights flash through the alleys between buildings."
@@ -2901,7 +2916,9 @@ msgstr "malantaŭ la pordo, misformita figuro vekiĝas kaj atakas."
 
 #: script/events/setpieces.js:2310
 msgid "as soon as the door is open a little bit, hundreds of tentacles erupt."
-msgstr "tuj kiam la pordo malfermiĝas iomete, centoj da tentakloj erupcie sinĵetas el ĝi."
+msgstr ""
+"tuj kiam la pordo malfermiĝas iomete, centoj da tentakloj erupcie sinĵetas "
+"el ĝi."
 
 #: script/events/setpieces.js:2337
 msgid "bird must have liked shiney things."
@@ -2939,8 +2956,9 @@ msgstr "la eta armea pikedo enhavas multajn provizaĵojn."
 msgid ""
 "arms and munitions, relics from the war, are neatly arranged on the store-"
 "room floor."
-msgstr "armiloj kaj municioj, antikvaĵoj de la milito, estas ordeme aranĝitaj "
-"sur la planko de la provizejo."
+msgstr ""
+"armiloj kaj municioj, antikvaĵoj de la milito, estas ordeme aranĝitaj sur la "
+"planko de la provizejo."
 
 #: script/events/setpieces.js:2451
 msgid "just as deadly now as they were then."
@@ -2965,7 +2983,8 @@ msgstr "la vilaĝeto jam dum longa tempo brulas."
 #: script/events/setpieces.js:2527
 msgid ""
 "the bodies of the wanderers that lived here are still visible in the flames."
-msgstr "la korpoj de la vagintoj kiuj loĝis ĉi tie ankoraŭ videblas en la fajroj."
+msgstr ""
+"la korpoj de la vagintoj kiuj loĝis ĉi tie ankoraŭ videblas en la fajroj."
 
 #: script/events/setpieces.js:2528
 msgid "still time to rescue a few supplies."
@@ -2974,7 +2993,8 @@ msgstr "ankoraŭ povas savi kelkajn provizaĵojn."
 #: script/events/setpieces.js:2562
 msgid ""
 "the remaining settlers flee from the violence, their belongings forgotten."
-msgstr "la restantaj enloĝintoj fuĝas la perforton, iliajn propraĵojn forlasinte."
+msgstr ""
+"la restantaj enloĝintoj fuĝas la perforton, iliajn propraĵojn forlasinte."
 
 #: script/events/setpieces.js:2563
 msgid "there's not much, but some useful things can still be found."
@@ -3099,7 +3119,8 @@ msgstr "Grandega Boraĵo"
 
 #: script/events/setpieces.js:3108
 msgid "a huge hole is cut deep into the earth, evidence of the past harvest."
-msgstr "grandega truo profunde tranĉitis en la teron. atesto al la pasinta rikolto."
+msgstr ""
+"grandega truo profunde tranĉitis en la teron. atesto al la pasinta rikolto."
 
 #: script/events/setpieces.js:3109
 msgid "they took what they came for, and left."
@@ -3109,8 +3130,7 @@ msgstr "ili forprenis kion ili deziris, kaj foriris."
 msgid ""
 "castoff from the mammoth drills can still be found by the edges of the "
 "precipice."
-msgstr "rubo el la grandegaj boriloj troveblas ĉe la rando de la "
-"profundegaĵo."
+msgstr "rubo el la grandegaj boriloj troveblas ĉe la rando de la profundegaĵo."
 
 #: script/events/setpieces.js:3133
 msgid "A Crashed Ship"
@@ -3227,8 +3247,9 @@ msgstr "malnova fera minejo restas ĉi tie, iloj forlasitaj kaj rustaj."
 msgid ""
 "bleached bones are strewn about the entrance. many, deeply scored with "
 "jagged grooves."
-msgstr "senkoloraj ostoj multe disas ĉe la enirejo. multaj havas "
-"profundajn kanelaĉojn"
+msgstr ""
+"senkoloraj ostoj multe disas ĉe la enirejo. multaj havas profundajn "
+"kanelaĉojn"
 
 #: script/events/setpieces.js:3453
 msgid "feral howls echo out of the darkness."
