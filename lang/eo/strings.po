@@ -354,7 +354,7 @@ msgstr "klasike."
 
 #: script/engine.js:620
 msgid "{0} per {1}s"
-msgstr "{0} po {1}s"
+msgstr "po {0} en {1}s"
 
 #: script/events.js:130
 msgid "eat meat"
