@@ -2,6 +2,7 @@ var langs = {
 	'de':'deutsch',
 	'el':'ελληνικά',
 	'en':'english',
+	'eo':'esperanto',
 	'es':'español',
 	'fr':'français',
 	'id':'bahasa indonesia',
