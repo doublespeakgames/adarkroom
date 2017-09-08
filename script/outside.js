@@ -47,7 +47,7 @@ var Outside = {
 			delay: 10,
 			stores: {
 				'meat': -5,
-				'wood': -5,
+				'wood': -1,
 				'cured meat': 1
 			}
 		},
