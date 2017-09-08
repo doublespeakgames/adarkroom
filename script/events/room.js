@@ -16,6 +16,16 @@ Events.Room = [
 				notification: _('a nomad arrives, looking to trade'),
 				blink: true,
 				buttons: {
+					'buy25Scales': {
+						text: _('buy 25 scales'),
+						cost: { 'fur': 2500 },
+						reward: { 'scales': 25 }
+					},
+					'buy15Teeth': {
+						text: _('buy 15 teeth'),
+						cost: { 'fur': 3000 },
+						reward: { 'teeth': 15 }
+					},
 					'buyScales': {
 						text: _('buy scales'),
 						cost: { 'fur': 100 },
