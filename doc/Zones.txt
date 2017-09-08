@@ -1,5 +1,27 @@
-Radius		Enemy DPS		Player DPS		Enemy HP		Player HP
+Radius		Enemy DPS 		Player DPS		Enemy HP		Player HP
 =====================================================================
-< 10		1				1				5				10			
-< 20		3				3				10				15-20		
-< 30		6				4				20				30-40
+< 11		1 (1-1.5)		1 (0.5-1)		5 (6-4)			10-15
+< 21		3 (2-3.125)		3 (1-3)			10 (30-20)		25
+< 31		6 (6-4-3.75)	6-10 (6-12)		20 (45-50-30)	45
+
+(DPS calcs ignore the 0.8 attack chance factor)
+(enemy values in parens are actual numbers from encounters)
+(Players DPS assumes multiple melee weapons, or unarmed)
+(NB: Zones 2 and 3: Mobs do less damage than stated design spec,
+but have much more HP as the alternative)
+(Player actual HP is higher than original stated docs,
+	assumes iron/steel in zones 2/3. NB: Leather in zone 1 is recommended.)
+(All figures based on random encounters, not caves/mines/towns/etc)
+(Additional note: Bolas reduce enemy DPS to 0. Laser/Riffles increase
+	dps significantly at cost of ammo. Player zone 3 base raised from 4 to 6)
+(Zone 3 "10" assumes bayonet, and that is NOT always present/not craftable.)
+(Sniper is significantly weaker than the rest of zone 3)
+(Player DPS will be less; these numbers assume perfect button pressing.)
+(If you are going for unarmed combat, you should get 6 dmg in zone 1 --
+	that's two boosts up to martial artist. That makes your hth damage 3 and 12
+	in zones 2 and 3, matching non-ammo weapons of 3 and 10. No bolas/riffles.)
+("barbarian" increases weapon damage 50%, making 4.5, and 9-15, putting HTH
+	in second place.)
+(A new "increase HTH by 50%/100%" skill level is needed to keep HTH damage in line.
+	50% is parity with barbarian and no ammo weapons. 100% is parity with ammo weapons.)
+
