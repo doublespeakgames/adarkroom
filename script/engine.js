@@ -1,15 +1,15 @@
 (function() {
 	var Engine = window.Engine = {
-		
+
 		SITE_URL: encodeURIComponent("http://adarkroom.doublespeakgames.com"),
 		VERSION: 1.3,
 		MAX_STORE: 99999999999999,
 		SAVE_DISPLAY: 30 * 1000,
 		GAME_OVER: false,
-		
+
 		//object event types
 		topics: {},
-			
+
 		Perks: {
 			'boxer': {
 				name: _('boxer'),
@@ -69,7 +69,7 @@
 				notify: _('learned to make the most of food')
 			}
 		},
-		
+
 		options: {
 			state: null,
 			debug: false,
@@ -77,7 +77,7 @@
 			dropbox: false,
 			doubleTime: false
 		},
-			
+
 		init: function(options) {
 			this.options = $.extend(
 				this.options,
@@ -85,31 +85,31 @@
 			);
 			this._debug = this.options.debug;
 			this._log = this.options.log;
-			
+
 			// Check for HTML5 support
 			if(!Engine.browserValid()) {
 				window.location = 'browserWarning.html';
 			}
-			
+
 			// Check for mobile
 			if(Engine.isMobile()) {
 				window.location = 'mobileWarning.html';
 			}
-	
+
 			Engine.disableSelection();
-			
+
 			if(this.options.state != null) {
 				window.State = this.options.state;
 			} else {
 				Engine.loadGame();
 			}
-			
+
 			$('<div>').attr('id', 'locationSlider').appendTo('#main');
 
 			var menu = $('<div>')
 				.addClass('menu')
 				.appendTo('body');
-	
+
 			if(typeof langs != 'undefined'){
 				var customSelect = $('<span>')
 					.addClass('customSelect')
@@ -123,7 +123,7 @@
 				$('<li>')
 					.text("language.")
 					.appendTo(optionsList);
-				
+
 				$.each(langs, function(name,display){
 					$('<li>')
 						.text(display)
@@ -134,21 +134,21 @@
 			}
 
 			$('<span>')
+				.addClass('appStore menuBtn')
+				.text(_('get the app.'))
+				.click(Engine.getApp)
+				.appendTo(menu);
+
+			$('<span>')
 				.addClass('lightsOff menuBtn')
 				.text(_('lights off.'))
 				.click(Engine.turnLightsOff)
 				.appendTo(menu);
 
 			$('<span>')
-				.addClass('menuBtn')
+				.addClass('hyper menuBtn')
 				.text(_('hyper.'))
-				.click(function(){
-					Engine.options.doubleTime = !Engine.options.doubleTime;
-					if(Engine.options.doubleTime)
-						$(this).text(_('classic.'));
-					else
-						$(this).text(_('hyper.'));
-				})
+				.click(Engine.confirmHyperMode)
 				.appendTo(menu);
 
 			$('<span>')
@@ -156,7 +156,7 @@
 				.text(_('restart.'))
 				.click(Engine.confirmDelete)
 				.appendTo(menu);
-			
+
 			$('<span>')
 				.addClass('menuBtn')
 				.text(_('share.'))
@@ -178,19 +178,13 @@
 					.click(Engine.Dropbox.startDropbox)
 					.appendTo(menu);
 			}
-			
-			$('<span>')
-				.addClass('menuBtn')
-				.text(_('app store.'))
-				.click(function() { window.open('https://itunes.apple.com/us/app/a-dark-room/id736683061'); })
-				.appendTo(menu);
 
 			$('<span>')
 				.addClass('menuBtn')
 				.text(_('github.'))
-				.click(function() { window.open('https://github.com/Continuities/adarkroom'); })
+				.click(function() { window.open('https://github.com/doublespeakgames/adarkroom'); })
 				.appendTo(menu);
-			
+
 			// Register keypress handlers
 			$('body').off('keydown').keydown(Engine.keyDown);
 			$('body').off('keyup').keyup(Engine.keyUp);
@@ -201,7 +195,7 @@
 			swipeElement.on('swiperight', Engine.swipeRight);
 			swipeElement.on('swipeup', Engine.swipeUp);
 			swipeElement.on('swipedown', Engine.swipeDown);
-		
+
 			// subscribe to stateUpdates
 			$.Dispatch('stateUpdate').subscribe(Engine.handleStateUpdates);
 
@@ -209,7 +203,7 @@
 			Notifications.init();
 			Events.init();
 			Room.init();
-			
+
 			if(typeof $SM.get('stores.wood') != 'undefined') {
 				Outside.init();
 			}
@@ -219,20 +213,28 @@
 			if($SM.get('features.location.spaceShip')) {
 				Ship.init();
 			}
-			
+
+			if($SM.get('config.lightsOff', true)){
+					Engine.turnLightsOff();
+			}
+
+			if($SM.get('config.hyperMode', true)){
+					Engine.triggerHyperMode();
+			}
+
 			Engine.saveLanguage();
 			Engine.travelTo(Room);
 
 		},
-		
+
 		browserValid: function() {
 			return ( location.search.indexOf( 'ignorebrowser=true' ) >= 0 || ( typeof Storage != 'undefined' && !oldIE ) );
 		},
-		
+
 		isMobile: function() {
 			return ( location.search.indexOf( 'ignorebrowser=true' ) < 0 && /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test( navigator.userAgent ) );
 		},
-		
+
 		saveGame: function() {
 			if(typeof Storage != 'undefined' && localStorage) {
 				if(Engine._saveTimer != null) {
@@ -245,7 +247,7 @@
 				localStorage.gameState = JSON.stringify(State);
 			}
 		},
-		
+
 		loadGame: function() {
 			try {
 				var savedState = JSON.parse(localStorage.gameState);
@@ -260,7 +262,7 @@
 				Engine.event('progress', 'new game');
 			}
 		},
-		
+
 		exportImport: function() {
 			Events.startEvent({
 				title: _('Export / Import'),
@@ -273,7 +275,7 @@
 						buttons: {
 							'export': {
 								text: _('export'),
-								onChoose: Engine.export64
+								nextScene: {1: 'inputExport'}
 							},
 							'import': {
 								text: _('import'),
@@ -282,6 +284,19 @@
 							'cancel': {
 								text: _('cancel'),
 								nextScene: 'end'
+							}
+						}
+					},
+					'inputExport': {
+						text: [_('save this.')],
+						textarea: Engine.export64(),
+						onLoad: function() { Engine.event('progress', 'export'); },
+						readonly: true,
+						buttons: {
+							'done': {
+								text: _('got it'),
+								nextScene: 'end',
+								onChoose: Engine.disableSelection
 							}
 						}
 					},
@@ -299,7 +314,7 @@
 							},
 							'no': {
 								text: _('no'),
-								nextScene: 'end'
+								nextScene: {1: 'start'}
 							}
 						}
 					},
@@ -333,29 +348,12 @@
 
 		export64: function() {
 			Engine.saveGame();
-			var string64 = Engine.generateExport64();
 			Engine.enableSelection();
-			Events.startEvent({
-				title: _('Export'),
-				scenes: {
-					start: {
-						text: [_('save this.')],
-						textarea: string64,
-						readonly: true,
-						buttons: {
-							'done': {
-								text: _('got it'),
-								nextScene: 'end',
-								onChoose: Engine.disableSelection
-							}
-						}
-					}
-				}
-			});
-			Engine.autoSelect('#description textarea');
+			return Engine.generateExport64();
 		},
 
 		import64: function(string64) {
+			Engine.event('progress', 'import');
 			Engine.disableSelection();
 			string64 = string64.replace(/\s/g, '');
 			string64 = string64.replace(/\./g, '');
@@ -370,7 +368,7 @@
 				ga('send', 'event', cat, act);
 			}
 		},
-	
+
 		confirmDelete: function() {
 			Events.startEvent({
 				title: _('Restart?'),
@@ -392,7 +390,7 @@
 				}
 			});
 		},
-	
+
 		deleteSave: function(noReload) {
 			if(typeof Storage != 'undefined' && localStorage) {
 				var prestige = Prestige.get();
@@ -404,7 +402,38 @@
 				location.reload();
 			}
 		},
-	
+
+		getApp: function() {
+			Events.startEvent({
+				title: _('Get the App'),
+				scenes: {
+					start: {
+						text: [_('bring the room with you.')],
+						buttons: {
+							'ios': {
+								text: _('ios'),
+								nextScene: 'end',
+								onChoose: function () {
+									window.open('https://itunes.apple.com/app/apple-store/id736683061?pt=2073437&ct=adrproper&mt=8');
+								}
+							},
+							'android': {
+								text: _('android'),
+								nextScene: 'end',
+								onChoose: function() {
+									window.open('https://play.google.com/store/apps/details?id=com.yourcompany.adarkroom');
+								}
+							},
+							'close': {
+								text: _('close'),
+								nextScene: 'end'
+							}
+						}
+					}
+				}
+			});
+		},
+
 		share: function() {
 			Events.startEvent({
 				title: _('Share'),
@@ -470,22 +499,61 @@
 			}
 			return false;
 		},
-	
+
 		turnLightsOff: function() {
 			var darkCss = Engine.findStylesheet('darkenLights');
 			if (darkCss == null) {
 				$('head').append('<link rel="stylesheet" href="css/dark.css" type="text/css" title="darkenLights" />');
 				$('.lightsOff').text(_('lights on.'));
+				$SM.set('config.lightsOff', true, true);
 			} else if (darkCss.disabled) {
 				darkCss.disabled = false;
 				$('.lightsOff').text(_('lights on.'));
+				$SM.set('config.lightsOff', true,true);
 			} else {
 				$("#darkenLights").attr("disabled", "disabled");
 				darkCss.disabled = true;
 				$('.lightsOff').text(_('lights off.'));
+				$SM.set('config.lightsOff', false, true);
 			}
 		},
-	
+
+		confirmHyperMode: function(){
+			if (!Engine.options.doubleTime) {
+				Events.startEvent({
+					title: _('Go Hyper?'),
+					scenes: {
+						start: {
+							text: [_('turning hyper mode speeds up the game to x2 speed. do you want to do that?')],
+							buttons: {
+								'yes': {
+									text: _('yes'),
+									nextScene: 'end',
+									onChoose: Engine.triggerHyperMode
+								},
+								'no': {
+									text: _('no'),
+									nextScene: 'end'
+								}
+							}
+						}
+					}
+				});
+			} else {
+				Engine.triggerHyperMode();
+			}
+		},
+
+		triggerHyperMode: function() {
+			Engine.options.doubleTime = !Engine.options.doubleTime;
+			if(Engine.options.doubleTime)
+				$('.hyper').text(_('classic.'));
+			else
+				$('.hyper').text(_('hyper.'));
+
+			$SM.set('config.hyperMode', Engine.options.doubleTime, false);
+		},
+
 		// Gets a guid
 		getGuid: function() {
 			return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -493,9 +561,9 @@
 				return v.toString(16);
 			});
 		},
-	
+
 		activeModule: null,
-	
+
 		travelTo: function(module) {
 			if(Engine.activeModule != module) {
 				var currentIndex = Engine.activeModule ? $('.location').index(Engine.activeModule.panel) : 1;
@@ -512,10 +580,6 @@
 				// FIXME Why does this work if there's an animation queue...?
 					stores.animate({right: -(panelIndex * 700) + 'px'}, 300 * diff);
 				}
-			
-				Engine.activeModule = module;
-
-				module.onArrival(diff);
 
 				if(Engine.activeModule == Room || Engine.activeModule == Path) {
 					// Don't fade out the weapons if we're switching to a module
@@ -529,8 +593,10 @@
 					$('div#weapons').animate({opacity: 1}, 300);
 				}
 
+				Engine.activeModule = module;
+				module.onArrival(diff);
 				Notifications.printQueue(module);
-			
+
 			}
 		},
 
@@ -557,33 +623,37 @@
 						top: top_container.height() + 26 + 'px'
 					},
 					{
-						queue: false, 
+						queue: false,
 						duration: 300 * transition_diff
 				});
 			}
 		},
-	
+
 		log: function(msg) {
 			if(this._log) {
 				console.log(msg);
 			}
 		},
-	
+
 		updateSlider: function() {
 			var slider = $('#locationSlider');
 			slider.width((slider.children().length * 700) + 'px');
 		},
-	
+
 		updateOuterSlider: function() {
 			var slider = $('#outerSlider');
 			slider.width((slider.children().length * 700) + 'px');
 		},
-	
+
 		getIncomeMsg: function(num, delay) {
 			return _("{0} per {1}s", (num > 0 ? "+" : "") + num, delay);
 			//return (num > 0 ? "+" : "") + num + " per " + delay + "s";
 		},
-	
+
+		keyLock: false,
+		tabNavigation: true,
+		restoreNavigation: false,
+
 		keyDown: function(e) {
 			e = e || window.event;
 			if(!Engine.keyPressed && !Engine.keyLock) {
@@ -594,14 +664,12 @@
 			}
 			return jQuery.inArray(e.keycode, [37,38,39,40]) < 0;
 		},
-	
+
 		keyUp: function(e) {
 			Engine.pressed = false;
 			if(Engine.activeModule.keyUp) {
 				Engine.activeModule.keyUp(e);
-			}
-			else
-			{
+			} else {
 				switch(e.which) {
 					case 38: // Up
 					case 87:
@@ -619,33 +687,40 @@
 						break;
 					case 37: // Left
 					case 65:
-						if(Engine.activeModule == Ship && Path.tab)
-							Engine.travelTo(Path);
-						else if(Engine.activeModule == Path && Outside.tab){
-							Engine.activeModule.scrollSidebar('left', true);
-							Engine.travelTo(Outside);
-						}else if(Engine.activeModule == Outside && Room.tab){
-							Engine.activeModule.scrollSidebar('left', true);
-							Engine.travelTo(Room);
+						if(Engine.tabNavigation){
+							if(Engine.activeModule == Ship && Path.tab)
+								Engine.travelTo(Path);
+							else if(Engine.activeModule == Path && Outside.tab){
+								Engine.activeModule.scrollSidebar('left', true);
+								Engine.travelTo(Outside);
+							}else if(Engine.activeModule == Outside && Room.tab){
+								Engine.activeModule.scrollSidebar('left', true);
+								Engine.travelTo(Room);
+							}
 						}
 						Engine.log('left');
 						break;
 					case 39: // Right
 					case 68:
-						if(Engine.activeModule == Room && Outside.tab)
-							Engine.travelTo(Outside);
-						else if(Engine.activeModule == Outside && Path.tab){
-							Engine.activeModule.scrollSidebar('right', true);
-							Engine.travelTo(Path);
-						}else if(Engine.activeModule == Path && Ship.tab){
-							Engine.activeModule.scrollSidebar('right', true);
-							Engine.travelTo(Ship);
+						if(Engine.tabNavigation){
+							if(Engine.activeModule == Room && Outside.tab)
+								Engine.travelTo(Outside);
+							else if(Engine.activeModule == Outside && Path.tab){
+								Engine.activeModule.scrollSidebar('right', true);
+								Engine.travelTo(Path);
+							}else if(Engine.activeModule == Path && Ship.tab){
+								Engine.activeModule.scrollSidebar('right', true);
+								Engine.travelTo(Ship);
+							}
 						}
 						Engine.log('right');
 						break;
 				}
 			}
-	
+			if(Engine.restoreNavigation){
+				Engine.tabNavigation = true;
+				Engine.restoreNavigation = false;
+			}
 			return false;
 		},
 
@@ -682,15 +757,15 @@
 			document.onselectstart = eventPassthrough;
 			document.onmousedown = eventPassthrough;
 		},
-	
+
 		autoSelect: function(selector) {
 			$(selector).focus().select();
 		},
-	
+
 		handleStateUpdates: function(e){
-		
+
 		},
-	
+
 		switchLanguage: function(dom){
 			var lang = $(dom).data("language");
 			if(document.location.href.search(/[\?\&]lang=[a-z_]+/) != -1){
@@ -699,12 +774,22 @@
 				document.location.href = document.location.href + ( (document.location.href.search(/\?/) != -1 )?"&":"?") + "lang="+lang;
 			}
 		},
-	
+
 		saveLanguage: function(){
-			var lang = decodeURIComponent((new RegExp('[?|&]lang=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;	
+			var lang = decodeURIComponent((new RegExp('[?|&]lang=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
 			if(lang && typeof Storage != 'undefined' && localStorage) {
 				localStorage.lang = lang;
 			}
+		},
+
+		setInterval: function(callback, interval, skipDouble){
+			if( Engine.options.doubleTime && !skipDouble ){
+				Engine.log('Double time, cutting interval in half');
+				interval /= 2;
+			}
+
+			return setInterval(callback, interval);
+
 		},
 
 		setTimeout: function(callback, timeout, skipDouble){
@@ -732,32 +817,32 @@
 
 function inView(dir, elem){
 
-        var scTop = $('#main').offset().top;
-        var scBot = scTop + $('#main').height();
+		var scTop = $('#main').offset().top;
+		var scBot = scTop + $('#main').height();
 
-        var elTop = elem.offset().top;
-        var elBot = elTop + elem.height();
+		var elTop = elem.offset().top;
+		var elBot = elTop + elem.height();
 
-        if( dir == 'up' ){
-                // STOP MOVING IF BOTTOM OF ELEMENT IS VISIBLE IN SCREEN
-                return ( elBot < scBot );
-        }else if( dir == 'down' ){
-                return ( elTop > scTop );
-        }else{
-                return ( ( elBot <= scBot ) && ( elTop >= scTop ) );
-        }
+		if( dir == 'up' ){
+				// STOP MOVING IF BOTTOM OF ELEMENT IS VISIBLE IN SCREEN
+				return ( elBot < scBot );
+		}else if( dir == 'down' ){
+				return ( elTop > scTop );
+		}else{
+				return ( ( elBot <= scBot ) && ( elTop >= scTop ) );
+		}
 
 }
 
 function scrollByX(elem, x){
 
-        var elTop = parseInt( elem.css('top'), 10 );
-        elem.css( 'top', ( elTop + x ) + "px" );
+		var elTop = parseInt( elem.css('top'), 10 );
+		elem.css( 'top', ( elTop + x ) + "px" );
 
 }
 
 
-//create jQuery Callbacks() to handle object events 
+//create jQuery Callbacks() to handle object events
 $.Dispatch = function( id ) {
 	var callbacks, topic = id && Engine.topics[ id ];
 	if ( !topic ) {

@@ -171,7 +171,7 @@ var Space = {
 			}
 			
 			if(!Space.done) {
-				Engine.setTimeout(Space.createAsteroid, 1000 - (Space.altitude * 10));
+				Engine.setTimeout(Space.createAsteroid, 1000 - (Space.altitude * 10), true);
 			}
 		}
 	},
@@ -271,7 +271,7 @@ var Space = {
 				$('#spacePanel, .menu, select.menuBtn').animate({color: '#272823'}, 500, 'linear');
 			else
 				$('#spacePanel, .menu, select.menuBtn').animate({color: 'white'}, 500, 'linear');
-		}, Space.FTB_SPEED / 2);
+		}, Space.FTB_SPEED / 2, true);
 		
 		Space.createAsteroid();
 	},
@@ -377,8 +377,8 @@ var Space = {
 		clearTimeout(Events._eventTimeout);
 		clearTimeout(Room._fireTimer);
 		clearTimeout(Room._tempTimer);
-		for(var k in Room.Craftables) {
-			Room.Craftables[k].button = null;
+		for(var j in Room.Craftables) {
+			Room.Craftables[j].button = null;
 		}
 		for(var k in Room.TradeGoods) {
 			Room.TradeGoods[k].button = null;
@@ -443,11 +443,38 @@ var Space = {
 								$('#starsContainer').remove();
 								$('#content, #notifications').remove();
 								$('<span>')
-									.addClass('endGame endGameRestart')
+									.addClass('endGame endGameOption')
 									.text(_('restart.'))
 									.click(Engine.confirmDelete)
 									.appendTo('.centerCont')
 									.animate({opacity:1},1500);
+								$('<br />')
+									.appendTo('.centerCont');
+								$('<br />')
+										.appendTo('.centerCont');
+								$('<span>')
+										.addClass('endGame')
+										.text(_('expanded story. alternate ending. behind the scenes commentary. get the app.'))
+										.appendTo('.centerCont')
+										.animate({opacity:1}, 1500);
+								$('<br />')
+										.appendTo('.centerCont');
+								$('<br />')
+										.appendTo('.centerCont');
+								$('<span>')
+									.addClass('endGame endGameOption')
+									.text(_('iOS.'))
+									.click(function() { window.open('https://itunes.apple.com/app/apple-store/id736683061?pt=2073437&ct=gameover&mt=8'); })
+									.appendTo('.centerCont')
+									.animate({opacity:1},1500);
+								$('<br />')
+										.appendTo('.centerCont');
+								$('<span>')
+										.addClass('endGame endGameOption')
+										.text(_('android.'))
+										.click(function() { window.open('https://play.google.com/store/apps/details?id=com.yourcompany.adarkroom'); })
+										.appendTo('.centerCont')
+										.animate({opacity:1},1500);
 								Engine.options = {};
 								Engine.deleteSave(true);
 							}

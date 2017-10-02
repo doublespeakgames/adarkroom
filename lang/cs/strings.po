@@ -1,0 +1,3313 @@
+# Translations template for PROJECT.
+# Copyright (C) 2014 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# Eis <Eiskalt555@web.de>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-03-11 10:38+0100\n"
+"PO-Revision-Date: 2017-03-11 10:38+0100\n"
+"Last-Translator: Bernd Dorer <bdorer@mailbox.org>\n"
+"Language-Team: \n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: script/dropbox.js:62
+msgid "Dropbox connection"
+msgstr "Propojení s Dropboxem"
+
+#: script/dropbox.js:65
+msgid "connect game to dropbox local storage"
+msgstr "spojit hru s místním uložištěm Dropbox"
+
+#: script/dropbox.js:68
+msgid "connect"
+msgstr "spojit"
+
+#: script/dropbox.js:75 script/dropbox.js:107 script/dropbox.js:133
+#: script/dropbox.js:163 script/engine.js:285 script/engine.js:331
+msgid "cancel"
+msgstr "zrušit"
+
+#: script/dropbox.js:86 script/dropbox.js:176
+msgid "Dropbox Export / Import"
+msgstr "Dropbox Export / Import"
+
+#: script/dropbox.js:89
+msgid "export or import save data to dropbox datastorage"
+msgstr "exportuje nebo importuje save data do uložiště dropbox"
+
+#: script/dropbox.js:90
+msgid "your are connected to dropbox with account / email "
+msgstr "jste připojeni na dropbox s účtem/emailem"
+
+#: script/dropbox.js:93
+msgid "save"
+msgstr "uložit"
+
+#: script/dropbox.js:97
+msgid "load"
+msgstr "načíst"
+
+#: script/dropbox.js:102
+msgid "signout"
+msgstr "odhlásit"
+
+#: script/dropbox.js:113
+msgid "choose one slot to save to"
+msgstr "vyberte slot pro uložení"
+
+#: script/dropbox.js:119
+msgid "save to slot"
+msgstr "uložit do slotu"
+
+#: script/dropbox.js:141
+msgid "choose one slot to load from"
+msgstr "vyberte slot pro nahrání"
+
+#: script/dropbox.js:148
+msgid "load from slot"
+msgstr "nahrát ze slotu"
+
+#: script/dropbox.js:179
+msgid "successfully saved to dropbox datastorage"
+msgstr "uspěšně uloženo do uložiště dropbox"
+
+#: script/dropbox.js:180
+msgid "error while saving to dropbox datastorage"
+msgstr "chyba během ukládání na dropbox"
+
+#: script/dropbox.js:183
+msgid "ok"
+msgstr "ok"
+
+#: script/engine.js:15
+msgid "boxer"
+msgstr "boxer"
+
+#: script/engine.js:16
+msgid "punches do more damage"
+msgstr "údery způsobují větší poškození"
+
+# more force
+#: script/engine.js:18
+msgid "learned to throw punches with purpose"
+msgstr "naučil se cílit údery"
+
+#: script/engine.js:21
+msgid "martial artist"
+msgstr "bojové umění"
+
+#: script/engine.js:22
+msgid "punches do even more damage."
+msgstr "udery způsobuje ještě více zranění"
+
+#: script/engine.js:23
+msgid "learned to fight quite effectively without weapons"
+msgstr "naučil se bojovat efektivně bezezbraní"
+
+# unarmed master = master of unarmed combat.
+#: script/engine.js:27
+msgid "unarmed master"
+msgstr "neozbrojený mistr"
+
+#: script/engine.js:28
+msgid "punch twice as fast, and with even more force"
+msgstr "bojuje dvakrát rychlejí,a s větší silou"
+
+#: script/engine.js:29
+msgid "learned to strike faster without weapons"
+msgstr "naučil se udeřit bezezbraní rychleji"
+
+#: script/engine.js:32
+msgid "barbarian"
+msgstr "barbar"
+
+#: script/engine.js:33
+msgid "melee weapons deal more damage"
+msgstr "chladné zbraně způsobují větší zranění"
+
+#: script/engine.js:34
+msgid "learned to swing weapons with force"
+msgstr "naučil se máchat zbraní silou"
+
+#: script/engine.js:37
+msgid "slow metabolism"
+msgstr "pomalí metabolismus"
+
+#: script/engine.js:38
+msgid "go twice as far without eating"
+msgstr "dojde dvakrát dál bez jídla"
+
+#: script/engine.js:39
+msgid "learned how to ignore the hunger"
+msgstr "naučil se ingnorovat hlad"
+
+#: script/engine.js:42
+msgid "desert rat"
+msgstr "pouštní krysa"
+
+#: script/engine.js:43
+msgid "go twice as far without drinking"
+msgstr "dojde dvakrát dál bez vody"
+
+#: script/engine.js:44
+msgid "learned to love the dry air"
+msgstr "naučil se milovat suchý vzduch"
+
+#: script/engine.js:47
+msgid "evasive"
+msgstr "vyhýbavý"
+
+#: script/engine.js:48
+msgid "dodge attacks more effectively"
+msgstr "uníká před útoky efektivněji"
+
+#: script/engine.js:49
+msgid "learned to be where they're not"
+msgstr "naučil se být tam kde oni nejsou"
+
+#: script/engine.js:52
+msgid "precise"
+msgstr "přesnost"
+
+#: script/engine.js:53
+msgid "land blows more often"
+msgstr ""
+
+#: script/engine.js:54
+msgid "learned to predict their movement"
+msgstr "naučil se předvídat jejich pohyb"
+
+#: script/engine.js:57
+msgid "scout"
+msgstr "zvěd"
+
+#: script/engine.js:58
+msgid "see farther"
+msgstr "vidí dál"
+
+#: script/engine.js:59
+msgid "learned to look ahead"
+msgstr "naučil se ohlížet"
+
+#: script/engine.js:62
+msgid "stealthy"
+msgstr "plížíví"
+
+#: script/engine.js:63
+msgid "better avoid conflict in the wild"
+msgstr "lépe předchází konfliktům v divočině"
+
+#: script/engine.js:64
+msgid "learned how not to be seen"
+msgstr "naučil se jak nebýt vidět"
+
+#: script/engine.js:67
+msgid "gastronome"
+msgstr "gastronom"
+
+#: script/engine.js:68
+msgid "restore more health when eating"
+msgstr "obnoví více zdraví když jí"
+
+#: script/engine.js:69
+msgid "learned to make the most of food"
+msgstr "naučil se připravovat většinu jídla"
+
+#: script/engine.js:138
+msgid "get the app."
+msgstr ""
+
+#: script/engine.js:144 script/engine.js:512
+msgid "lights off."
+msgstr "vypnout světla."
+
+#: script/engine.js:150 script/engine.js:548
+msgid "hyper."
+msgstr ""
+
+#: script/engine.js:156 script/space.js:442
+msgid "restart."
+msgstr "restart."
+
+#: script/engine.js:162
+msgid "share."
+msgstr "sdílet."
+
+#: script/engine.js:168
+msgid "save."
+msgstr "uložit."
+
+#: script/engine.js:177
+msgid "dropbox."
+msgstr "dropbox."
+
+#: script/engine.js:184
+msgid "github."
+msgstr "github."
+
+#: script/engine.js:268
+msgid "Export / Import"
+msgstr "Export/Import"
+
+#: script/engine.js:272
+msgid "export or import save data, for backing up"
+msgstr "export nebo import uložených dat, jako záloha"
+
+#: script/engine.js:273
+msgid "or migrating computers"
+msgstr "nebo změnu počítače"
+
+#: script/engine.js:277
+msgid "export"
+msgstr "export"
+
+#: script/engine.js:281 script/engine.js:326
+msgid "import"
+msgstr "import"
+
+#: script/engine.js:291
+msgid "save this."
+msgstr "uložit tohle."
+
+#: script/engine.js:297
+msgid "got it"
+msgstr "mám to"
+
+#: script/engine.js:305
+msgid "are you sure?"
+msgstr "jste si jistí?"
+
+#: script/engine.js:306
+msgid "if the code is invalid, all data will be lost."
+msgstr "pokud bude kód neplatný, všechna data budou ztracena."
+
+#: script/engine.js:307
+msgid "this is irreversible."
+msgstr "tohle je nevratné."
+
+#: script/engine.js:311 script/engine.js:380 script/engine.js:526
+msgid "yes"
+msgstr "ano"
+
+#: script/engine.js:316 script/engine.js:385 script/engine.js:531
+msgid "no"
+msgstr "ne"
+
+#: script/engine.js:322
+msgid "put the save code here."
+msgstr "sem vlože uložený kód."
+
+#: script/engine.js:374
+msgid "Restart?"
+msgstr "Restartova?"
+
+#: script/engine.js:377
+msgid "restart the game?"
+msgstr "restartovat hru?"
+
+#: script/engine.js:408
+msgid "Get the App"
+msgstr ""
+
+#: script/engine.js:411
+msgid "bring the room with you."
+msgstr ""
+
+#: script/engine.js:414
+msgid "ios"
+msgstr ""
+
+#: script/engine.js:421
+msgid "android"
+msgstr ""
+
+#: script/engine.js:435
+msgid "Share"
+msgstr "Sdílet"
+
+#: script/engine.js:438
+msgid "bring your friends."
+msgstr "přivěďte své přátele."
+
+#: script/engine.js:441
+msgid "facebook"
+msgstr "facebook"
+
+#: script/engine.js:448
+msgid "google+"
+msgstr "google+"
+
+#: script/engine.js:455
+msgid "twitter"
+msgstr "twitter"
+
+#: script/engine.js:462
+msgid "reddit"
+msgstr "reddit"
+
+#: script/engine.js:469
+msgid "close"
+msgstr "zavřít"
+
+#: script/engine.js:503 script/engine.js:507
+msgid "lights on."
+msgstr "zapnout světla"
+
+#: script/engine.js:520
+msgid "Go Hyper?"
+msgstr "Být Hyper?"
+
+#: script/engine.js:523
+msgid ""
+"turning hyper mode speeds up the game to x2 speed. do you want to do that?"
+msgstr "spuštění hyper módu zrychlí hru na dvoj násobek. chcete to udělat?"
+
+#: script/engine.js:546
+msgid "classic."
+msgstr "klasika."
+
+#: script/engine.js:645
+msgid "{0} per {1}s"
+msgstr "{0} za {1}s"
+
+#: script/events.js:200
+msgid "pause."
+msgstr ""
+
+#: script/events.js:231
+msgid "eat meat"
+msgstr "sníst maso"
+
+#: script/events.js:251
+msgid "use meds"
+msgstr "použít léky"
+
+#: script/events.js:435
+msgid "miss"
+msgstr "vedle"
+
+#: script/events.js:449
+msgid "stunned"
+msgstr "omráčený"
+
+#: script/events.js:566 script/events/global.js:42 script/events/global.js:59
+#: script/events/room.js:142 script/events/room.js:162
+#: script/events/room.js:182 script/events/setpieces.js:25
+#: script/events/setpieces.js:48 script/events/setpieces.js:65
+#: script/events/setpieces.js:83 script/events/setpieces.js:106
+#: script/events/setpieces.js:536 script/events/setpieces.js:1254
+#: script/events/setpieces.js:2948 script/events/setpieces.js:2982
+#: script/events/setpieces.js:3005 script/events/setpieces.js:3042
+#: script/events/setpieces.js:3095 script/events/setpieces.js:3124
+#: script/events/setpieces.js:3170 script/events/setpieces.js:3297
+#: script/events/setpieces.js:3319 script/events/setpieces.js:3439
+#: script/events/setpieces.js:3463 script/events/setpieces.js:3496
+#: script/events/setpieces.js:3515 script/events/setpieces.js:3539
+#: script/events/setpieces.js:3567
+msgid "leave"
+msgstr "opustit"
+
+#: script/events.js:605
+msgid "drop:"
+msgstr "zahodit:"
+
+#: script/events.js:630 script/events/room.js:526
+msgid "nothing"
+msgstr "nic"
+
+#: script/events.js:661 script/events/setpieces.js:3551
+msgid "take"
+msgstr "vzít"
+
+#: script/events.js:671
+msgid "take:"
+msgstr "vzít:"
+
+#: script/events.js:695
+msgid "nothing to take"
+msgstr "níc k sebrání"
+
+#: script/events.js:725
+msgid "all"
+msgstr "vše"
+
+#: script/events.js:743
+msgid "take everything"
+msgstr "vzít všechno"
+
+#: script/events.js:743
+msgid "take all you can"
+msgstr ""
+
+#: script/events.js:749 script/outside.js:627
+msgid " and "
+msgstr "a"
+
+#: script/events.js:994
+msgid "*** EVENT ***"
+msgstr "*** ÚDÁLOST ***"
+
+#: script/events/encounters.js:7
+msgid "A Snarling Beast"
+msgstr ""
+
+#: script/events/encounters.js:15
+msgid "snarling beast"
+msgstr ""
+
+#: script/events/encounters.js:16
+msgid "the snarling beast is dead"
+msgstr ""
+
+#: script/events/encounters.js:39
+msgid "a snarling beast leaps out of the underbrush"
+msgstr ""
+
+#: script/events/encounters.js:44
+msgid "A Gaunt Man"
+msgstr ""
+
+#: script/events/encounters.js:52
+msgid "gaunt man"
+msgstr ""
+
+#: script/events/encounters.js:53
+msgid "the gaunt man is dead"
+msgstr ""
+
+#: script/events/encounters.js:76
+msgid "a gaunt man approaches, a crazed look in his eye"
+msgstr ""
+
+#: script/events/encounters.js:81
+msgid "A Strange Bird"
+msgstr ""
+
+#: script/events/encounters.js:89
+msgid "strange bird"
+msgstr ""
+
+#: script/events/encounters.js:90
+msgid "the strange bird is dead"
+msgstr ""
+
+#: script/events/encounters.js:113
+msgid "a strange looking bird speeds across the plains"
+msgstr ""
+
+#: script/events/encounters.js:119
+msgid "A Shivering Man"
+msgstr ""
+
+#: script/events/encounters.js:127
+msgid "shivering man"
+msgstr ""
+
+#: script/events/encounters.js:128
+msgid "the shivering man is dead"
+msgstr ""
+
+#: script/events/encounters.js:156
+msgid "a shivering man approaches and attacks with surprising strength"
+msgstr ""
+
+#: script/events/encounters.js:161
+msgid "A Man-Eater"
+msgstr ""
+
+#: script/events/encounters.js:169
+msgid "man-eater"
+msgstr ""
+
+#: script/events/encounters.js:170
+msgid "the man-eater is dead"
+msgstr ""
+
+#: script/events/encounters.js:193
+msgid "a large creature attacks, claws freshly bloodied"
+msgstr ""
+
+#: script/events/encounters.js:198
+msgid "A Scavenger"
+msgstr ""
+
+#: script/events/encounters.js:206
+msgid "scavenger"
+msgstr ""
+
+#: script/events/encounters.js:207
+msgid "the scavenger is dead"
+msgstr ""
+
+#: script/events/encounters.js:235
+msgid "a scavenger draws close, hoping for an easy score"
+msgstr ""
+
+#: script/events/encounters.js:240
+msgid "A Huge Lizard"
+msgstr ""
+
+#: script/events/encounters.js:248
+msgid "lizard"
+msgstr ""
+
+#: script/events/encounters.js:249
+msgid "the lizard is dead"
+msgstr ""
+
+#: script/events/encounters.js:272
+msgid "the grass thrashes wildly as a huge lizard pushes through"
+msgstr ""
+
+#: script/events/encounters.js:278
+msgid "A Feral Terror"
+msgstr ""
+
+#: script/events/encounters.js:286
+msgid "feral terror"
+msgstr ""
+
+#: script/events/encounters.js:287
+msgid "the feral terror is dead"
+msgstr ""
+
+#: script/events/encounters.js:310
+msgid "a beast, wilder than imagining, erupts out of the foliage"
+msgstr ""
+
+#: script/events/encounters.js:315
+msgid "A Soldier"
+msgstr ""
+
+#: script/events/encounters.js:323
+msgid "soldier"
+msgstr ""
+
+#: script/events/encounters.js:324
+msgid "the soldier is dead"
+msgstr ""
+
+#: script/events/encounters.js:353
+msgid "a soldier opens fire from across the desert"
+msgstr ""
+
+#: script/events/encounters.js:358
+msgid "A Sniper"
+msgstr ""
+
+#: script/events/encounters.js:366
+msgid "sniper"
+msgstr ""
+
+#: script/events/encounters.js:367
+msgid "the sniper is dead"
+msgstr ""
+
+#: script/events/encounters.js:396
+msgid "a shot rings out, from somewhere in the long grass"
+msgstr ""
+
+#: script/events/global.js:6
+msgid "The Thief"
+msgstr ""
+
+#: script/events/global.js:13
+msgid "the villagers haul a filthy man out of the store room."
+msgstr ""
+
+#: script/events/global.js:14
+msgid "say his folk have been skimming the supplies."
+msgstr ""
+
+#: script/events/global.js:15
+msgid "say he should be strung up as an example."
+msgstr ""
+
+#: script/events/global.js:17
+msgid "a thief is caught"
+msgstr ""
+
+#: script/events/global.js:21
+msgid "hang him"
+msgstr ""
+
+#: script/events/global.js:25
+msgid "spare him"
+msgstr ""
+
+#: script/events/global.js:32
+msgid "the villagers hang the thief high in front of the store room."
+msgstr ""
+
+#: script/events/global.js:33
+msgid ""
+"the point is made. in the next few days, the missing supplies are returned."
+msgstr ""
+
+#: script/events/global.js:49
+msgid "the man says he's grateful. says he won't come around any more."
+msgstr ""
+
+#: script/events/global.js:50
+msgid "shares what he knows about sneaking before he goes."
+msgstr ""
+
+#: script/events/outside.js:6
+msgid "A Ruined Trap"
+msgstr ""
+
+#: script/events/outside.js:13
+msgid "some of the traps have been torn apart."
+msgstr ""
+
+#: script/events/outside.js:14
+msgid "large prints lead away, into the forest."
+msgstr ""
+
+#: script/events/outside.js:22
+msgid "some traps have been destroyed"
+msgstr ""
+
+#: script/events/outside.js:26
+msgid "track them"
+msgstr ""
+
+#: script/events/outside.js:30 script/events/room.js:71
+#: script/events/room.js:122
+msgid "ignore them"
+msgstr ""
+
+#: script/events/outside.js:37
+msgid "the tracks disappear after just a few minutes."
+msgstr ""
+
+#: script/events/outside.js:38
+msgid "the forest is silent."
+msgstr ""
+
+#: script/events/outside.js:40
+msgid "nothing was found"
+msgstr ""
+
+#: script/events/outside.js:43 script/events/outside.js:61
+#: script/events/outside.js:126 script/events/outside.js:144
+#: script/events/outside.js:197 script/events/outside.js:215
+#: script/events/outside.js:248 script/events/outside.js:282
+msgid "go home"
+msgstr ""
+
+#: script/events/outside.js:50
+msgid "not far from the village lies a large beast, its fur matted with blood."
+msgstr ""
+
+#: script/events/outside.js:51
+msgid "it puts up little resistance before the knife."
+msgstr ""
+
+#: script/events/outside.js:53
+msgid "there was a beast. it's dead now"
+msgstr ""
+
+#: script/events/outside.js:69
+msgid "Fire"
+msgstr ""
+
+#: script/events/outside.js:76
+msgid "a fire rampages through one of the huts, destroying it."
+msgstr ""
+
+#: script/events/outside.js:77
+msgid "all residents in the hut perished in the fire."
+msgstr ""
+
+#: script/events/outside.js:79
+msgid "a fire has started"
+msgstr ""
+
+#: script/events/outside.js:86
+msgid "mourn"
+msgstr ""
+
+#: script/events/outside.js:87
+msgid "some villagers have died"
+msgstr ""
+
+#: script/events/outside.js:95
+msgid "Sickness"
+msgstr ""
+
+#: script/events/outside.js:102
+msgid "a sickness is spreading through the village."
+msgstr ""
+
+#: script/events/outside.js:103 script/events/outside.js:161
+msgid "medicine is needed immediately."
+msgstr ""
+
+#: script/events/outside.js:105
+msgid "some villagers are ill"
+msgstr ""
+
+#: script/events/outside.js:109
+msgid "1 medicine"
+msgstr ""
+
+#: script/events/outside.js:114
+msgid "ignore it"
+msgstr ""
+
+#: script/events/outside.js:121
+msgid "the sickness is cured in time."
+msgstr ""
+
+#: script/events/outside.js:123
+msgid "sufferers are healed"
+msgstr ""
+
+#: script/events/outside.js:133
+msgid "the sickness spreads through the village."
+msgstr ""
+
+#: script/events/outside.js:134
+msgid "the days are spent with burials."
+msgstr ""
+
+#: script/events/outside.js:135 script/events/outside.js:205
+msgid "the nights are rent with screams."
+msgstr ""
+
+#: script/events/outside.js:137
+msgid "sufferers are left to die"
+msgstr ""
+
+#: script/events/outside.js:153
+msgid "Plague"
+msgstr ""
+
+#: script/events/outside.js:160
+msgid "a terrible plague is fast spreading through the village."
+msgstr ""
+
+#: script/events/outside.js:163
+msgid "a plague afflicts the village"
+msgstr ""
+
+#: script/events/outside.js:168
+msgid "buy medicine"
+msgstr ""
+
+#: script/events/outside.js:174
+msgid "5 medicine"
+msgstr ""
+
+#: script/events/outside.js:179
+msgid "do nothing"
+msgstr ""
+
+#: script/events/outside.js:186
+msgid "the plague is kept from spreading."
+msgstr ""
+
+#: script/events/outside.js:187
+msgid "only a few die."
+msgstr ""
+
+#: script/events/outside.js:188
+msgid "the rest bury them."
+msgstr ""
+
+#: script/events/outside.js:190
+msgid "epidemic is eradicated eventually"
+msgstr ""
+
+#: script/events/outside.js:204
+msgid "the plague rips through the village."
+msgstr ""
+
+#: script/events/outside.js:206
+msgid "the only hope is a quick death."
+msgstr ""
+
+#: script/events/outside.js:208
+msgid "population is almost exterminated"
+msgstr ""
+
+#: script/events/outside.js:224
+msgid "A Beast Attack"
+msgstr ""
+
+#: script/events/outside.js:231
+msgid "a pack of snarling beasts pours out of the trees."
+msgstr ""
+
+#: script/events/outside.js:232
+msgid "the fight is short and bloody, but the beasts are repelled."
+msgstr ""
+
+#: script/events/outside.js:233
+msgid "the villagers retreat to mourn the dead."
+msgstr ""
+
+#: script/events/outside.js:235
+msgid "wild beasts attack the villagers"
+msgstr ""
+
+#: script/events/outside.js:249
+msgid "predators become prey. price is unfair"
+msgstr ""
+
+#: script/events/outside.js:258
+msgid "A Military Raid"
+msgstr ""
+
+#: script/events/outside.js:265
+msgid "a gunshot rings through the trees."
+msgstr ""
+
+#: script/events/outside.js:266
+msgid "well armed men charge out of the forest, firing into the crowd."
+msgstr ""
+
+#: script/events/outside.js:267
+msgid "after a skirmish they are driven away, but not without losses."
+msgstr ""
+
+#: script/events/outside.js:269
+msgid "troops storm the village"
+msgstr ""
+
+#: script/events/outside.js:283
+msgid "warfare is bloodthirsty"
+msgstr ""
+
+#: script/events/room.js:6
+msgid "The Nomad"
+msgstr ""
+
+#: script/events/room.js:13
+msgid ""
+"a nomad shuffles into view, laden with makeshift bags bound with rough twine."
+msgstr ""
+
+#: script/events/room.js:14
+msgid "won't say from where he came, but it's clear that he's not staying."
+msgstr ""
+
+#: script/events/room.js:16
+msgid "a nomad arrives, looking to trade"
+msgstr ""
+
+#: script/events/room.js:20
+msgid "buy scales"
+msgstr ""
+
+#: script/events/room.js:25
+msgid "buy teeth"
+msgstr ""
+
+#: script/events/room.js:30
+msgid "buy bait"
+msgstr ""
+
+#: script/events/room.js:33
+msgid "traps are more effective with bait."
+msgstr ""
+
+#: script/events/room.js:39
+msgid "buy compass"
+msgstr ""
+
+#: script/events/room.js:42
+msgid "the old compass is dented and dusty, but it looks to work."
+msgstr ""
+
+#: script/events/room.js:45 script/events/room.js:227 script/events/room.js:240
+#: script/events/room.js:253 script/events/room.js:309
+#: script/events/room.js:332 script/events/room.js:388
+#: script/events/room.js:411 script/events/room.js:453
+#: script/events/room.js:571 script/events/room.js:587
+#: script/events/room.js:603 script/events/room.js:614
+msgid "say goodbye"
+msgstr ""
+
+#: script/events/room.js:53 script/events/room.js:104
+msgid "Noises"
+msgstr ""
+
+#: script/events/room.js:60
+msgid "through the walls, shuffling noises can be heard."
+msgstr ""
+
+#: script/events/room.js:61
+msgid "can't tell what they're up to."
+msgstr ""
+
+#: script/events/room.js:63
+msgid "strange noises can be heard through the walls"
+msgstr ""
+
+#: script/events/room.js:67 script/events/room.js:118
+#: script/events/setpieces.js:1662
+msgid "investigate"
+msgstr ""
+
+#: script/events/room.js:78
+msgid "vague shapes move, just out of sight."
+msgstr ""
+
+#: script/events/room.js:79
+msgid "the sounds stop."
+msgstr ""
+
+#: script/events/room.js:83 script/events/room.js:96
+msgid "go back inside"
+msgstr ""
+
+#: script/events/room.js:91
+msgid ""
+"a bundle of sticks lies just beyond the threshold, wrapped in coarse furs."
+msgstr ""
+
+#: script/events/room.js:92
+msgid "the night is silent."
+msgstr ""
+
+#: script/events/room.js:111
+msgid "scratching noises can be heard from the store room."
+msgstr ""
+
+#: script/events/room.js:112
+msgid "something's in there."
+msgstr ""
+
+#: script/events/room.js:114
+msgid "something's in the store room"
+msgstr ""
+
+#: script/events/room.js:129 script/events/room.js:149
+#: script/events/room.js:169
+msgid "some wood is missing."
+msgstr ""
+
+#: script/events/room.js:130
+msgid "the ground is littered with small scales"
+msgstr ""
+
+#: script/events/room.js:150
+msgid "the ground is littered with small teeth"
+msgstr ""
+
+#: script/events/room.js:170
+msgid "the ground is littered with scraps of cloth"
+msgstr ""
+
+#: script/events/room.js:190
+msgid "The Beggar"
+msgstr ""
+
+#: script/events/room.js:197
+msgid "a beggar arrives."
+msgstr ""
+
+#: script/events/room.js:198
+msgid "asks for any spare furs to keep him warm at night."
+msgstr ""
+
+#: script/events/room.js:200
+msgid "a beggar arrives"
+msgstr ""
+
+#: script/events/room.js:204
+msgid "give 50"
+msgstr ""
+
+#: script/events/room.js:209 script/events/room.js:276
+#: script/events/room.js:355
+msgid "give 100"
+msgstr ""
+
+#: script/events/room.js:214 script/events/room.js:286
+#: script/events/room.js:485
+msgid "turn him away"
+msgstr ""
+
+#: script/events/room.js:222 script/events/room.js:235
+#: script/events/room.js:248
+msgid "the beggar expresses his thanks."
+msgstr ""
+
+#: script/events/room.js:223
+msgid "leaves a pile of small scales behind."
+msgstr ""
+
+#: script/events/room.js:236
+msgid "leaves a pile of small teeth behind."
+msgstr ""
+
+#: script/events/room.js:249
+msgid "leaves some scraps of cloth behind."
+msgstr ""
+
+#: script/events/room.js:262 script/events/room.js:341
+msgid "The Mysterious Wanderer"
+msgstr ""
+
+#: script/events/room.js:269
+msgid ""
+"a wanderer arrives with an empty cart. says if he leaves with wood, he'll be "
+"back with more."
+msgstr ""
+
+#: script/events/room.js:270
+msgid "builder's not sure he's to be trusted."
+msgstr ""
+
+#: script/events/room.js:272 script/events/room.js:351
+msgid "a mysterious wanderer arrives"
+msgstr ""
+
+#: script/events/room.js:281 script/events/room.js:360
+msgid "give 500"
+msgstr ""
+
+#: script/events/room.js:293 script/events/room.js:316
+msgid "the wanderer leaves, cart loaded with wood"
+msgstr ""
+
+#: script/events/room.js:299 script/events/room.js:322
+msgid "the mysterious wanderer returns, cart piled high with wood."
+msgstr ""
+
+#: script/events/room.js:348
+msgid ""
+"a wanderer arrives with an empty cart. says if she leaves with furs, she'll "
+"be back with more."
+msgstr ""
+
+#: script/events/room.js:349
+msgid "builder's not sure she's to be trusted."
+msgstr ""
+
+#: script/events/room.js:365
+msgid "turn her away"
+msgstr ""
+
+#: script/events/room.js:372 script/events/room.js:395
+msgid "the wanderer leaves, cart loaded with furs"
+msgstr ""
+
+#: script/events/room.js:378 script/events/room.js:401
+msgid "the mysterious wanderer returns, cart piled high with furs."
+msgstr ""
+
+#: script/events/room.js:420
+msgid "The Scout"
+msgstr ""
+
+#: script/events/room.js:427
+msgid "the scout says she's been all over."
+msgstr ""
+
+#: script/events/room.js:428
+msgid "willing to talk about it, for a price."
+msgstr ""
+
+#: script/events/room.js:430
+msgid "a scout stops for the night"
+msgstr ""
+
+#: script/events/room.js:434
+msgid "buy map"
+msgstr ""
+
+#: script/events/room.js:439
+msgid "the map uncovers a bit of the world"
+msgstr ""
+
+#: script/events/room.js:443
+msgid "learn scouting"
+msgstr ""
+
+#: script/events/room.js:462
+msgid "The Master"
+msgstr ""
+
+#: script/events/room.js:469
+msgid "an old wanderer arrives."
+msgstr ""
+
+#: script/events/room.js:470
+msgid "he smiles warmly and asks for lodgings for the night."
+msgstr ""
+
+#: script/events/room.js:472
+msgid "an old wanderer arrives"
+msgstr ""
+
+#: script/events/room.js:476
+msgid "agree"
+msgstr ""
+
+#: script/events/room.js:492
+msgid "in exchange, the wanderer offers his wisdom."
+msgstr ""
+
+#: script/events/room.js:496
+msgid "evasion"
+msgstr ""
+
+#: script/events/room.js:506
+msgid "precision"
+msgstr ""
+
+#: script/events/room.js:516
+msgid "force"
+msgstr ""
+
+#: script/events/room.js:535
+msgid "The Sick Man"
+msgstr ""
+
+#: script/events/room.js:542
+msgid "a man hobbles up, coughing."
+msgstr ""
+
+#: script/events/room.js:543
+msgid "he begs for medicine."
+msgstr ""
+
+#: script/events/room.js:545
+msgid "a sick man hobbles up"
+msgstr ""
+
+#: script/events/room.js:549
+msgid "give 1 medicine"
+msgstr ""
+
+#: script/events/room.js:551
+msgid "the man swallows the medicine eagerly"
+msgstr ""
+
+#: script/events/room.js:555
+msgid "tell him to leave"
+msgstr ""
+
+#: script/events/room.js:562 script/events/room.js:578
+#: script/events/room.js:594
+msgid "the man is thankful."
+msgstr ""
+
+#: script/events/room.js:563 script/events/room.js:579
+#: script/events/room.js:595
+msgid "he leaves a reward."
+msgstr ""
+
+#: script/events/room.js:564
+msgid "some weird metal he picked up on his travels."
+msgstr ""
+
+#: script/events/room.js:580
+msgid "some weird glowing boxes he picked up on his travels."
+msgstr ""
+
+#: script/events/room.js:596
+msgid "all he has are some scales."
+msgstr ""
+
+#: script/events/room.js:610
+msgid "the man expresses his thanks and hobbles off."
+msgstr ""
+
+#: script/events/setpieces.js:6
+msgid "An Outpost"
+msgstr ""
+
+#: script/events/setpieces.js:10 script/events/setpieces.js:12
+msgid "a safe place in the wilds."
+msgstr ""
+
+#: script/events/setpieces.js:34
+msgid "A Murky Swamp"
+msgstr ""
+
+#: script/events/setpieces.js:38
+msgid "rotting reeds rise out of the swampy earth."
+msgstr ""
+
+#: script/events/setpieces.js:39
+msgid "a lone frog sits in the muck, silently."
+msgstr ""
+
+#: script/events/setpieces.js:41
+msgid "a swamp festers in the stagnant air."
+msgstr ""
+
+#: script/events/setpieces.js:44 script/events/setpieces.js:549
+#: script/events/setpieces.js:606 script/events/setpieces.js:888
+#: script/events/setpieces.js:1313 script/events/setpieces.js:1331
+#: script/events/setpieces.js:3535
+msgid "enter"
+msgstr ""
+
+#: script/events/setpieces.js:55
+msgid "deep in the swamp is a moss-covered cabin."
+msgstr ""
+
+#: script/events/setpieces.js:56
+msgid "an old wanderer sits inside, in a seeming trance."
+msgstr ""
+
+#: script/events/setpieces.js:61
+msgid "talk"
+msgstr ""
+
+#: script/events/setpieces.js:72
+msgid "the wanderer takes the charm and nods slowly."
+msgstr ""
+
+#: script/events/setpieces.js:73
+msgid "he speaks of once leading the great fleets to fresh worlds."
+msgstr ""
+
+#: script/events/setpieces.js:74
+msgid "unfathomable destruction to fuel wanderer hungers."
+msgstr ""
+
+#: script/events/setpieces.js:75
+msgid "his time here, now, is his penance."
+msgstr ""
+
+#: script/events/setpieces.js:91
+msgid "A Damp Cave"
+msgstr ""
+
+#: script/events/setpieces.js:95
+msgid "the mouth of the cave is wide and dark."
+msgstr ""
+
+#: script/events/setpieces.js:96
+msgid "can't see what's inside."
+msgstr ""
+
+#: script/events/setpieces.js:98
+msgid "the earth here is split, as if bearing an ancient wound"
+msgstr ""
+
+#: script/events/setpieces.js:101 script/events/setpieces.js:2944
+#: script/events/setpieces.js:3458
+msgid "go inside"
+msgstr ""
+
+#: script/events/setpieces.js:120 script/events/setpieces.js:265
+msgid "a startled beast defends its home"
+msgstr ""
+
+#: script/events/setpieces.js:135 script/events/setpieces.js:186
+#: script/events/setpieces.js:228 script/events/setpieces.js:247
+#: script/events/setpieces.js:280 script/events/setpieces.js:314
+#: script/events/setpieces.js:348 script/events/setpieces.js:382
+#: script/events/setpieces.js:588 script/events/setpieces.js:644
+#: script/events/setpieces.js:683 script/events/setpieces.js:717
+#: script/events/setpieces.js:757 script/events/setpieces.js:796
+#: script/events/setpieces.js:835 script/events/setpieces.js:869
+#: script/events/setpieces.js:920 script/events/setpieces.js:938
+#: script/events/setpieces.js:961 script/events/setpieces.js:1000
+#: script/events/setpieces.js:1039 script/events/setpieces.js:1266
+#: script/events/setpieces.js:1282 script/events/setpieces.js:1298
+#: script/events/setpieces.js:1408 script/events/setpieces.js:1448
+#: script/events/setpieces.js:1492 script/events/setpieces.js:1510
+#: script/events/setpieces.js:1526 script/events/setpieces.js:1563
+#: script/events/setpieces.js:1602 script/events/setpieces.js:1642
+#: script/events/setpieces.js:1682 script/events/setpieces.js:1699
+#: script/events/setpieces.js:1716 script/events/setpieces.js:1734
+#: script/events/setpieces.js:1778 script/events/setpieces.js:1804
+#: script/events/setpieces.js:1822 script/events/setpieces.js:1861
+#: script/events/setpieces.js:1902 script/events/setpieces.js:1927
+#: script/events/setpieces.js:1957 script/events/setpieces.js:1998
+#: script/events/setpieces.js:2034 script/events/setpieces.js:2069
+#: script/events/setpieces.js:2110 script/events/setpieces.js:2151
+#: script/events/setpieces.js:2187 script/events/setpieces.js:2222
+#: script/events/setpieces.js:2257 script/events/setpieces.js:2302
+#: script/events/setpieces.js:2328 script/events/setpieces.js:3204
+#: script/events/setpieces.js:3244 script/events/setpieces.js:3278
+#: script/events/setpieces.js:3347 script/events/setpieces.js:3381
+#: script/events/setpieces.js:3420
+msgid "continue"
+msgstr ""
+
+#: script/events/setpieces.js:140 script/events/setpieces.js:157
+#: script/events/setpieces.js:191 script/events/setpieces.js:233
+#: script/events/setpieces.js:252 script/events/setpieces.js:285
+#: script/events/setpieces.js:319 script/events/setpieces.js:353
+#: script/events/setpieces.js:387 script/events/setpieces.js:429
+#: script/events/setpieces.js:481 script/events/setpieces.js:513
+msgid "leave cave"
+msgstr ""
+
+#: script/events/setpieces.js:148
+msgid "the cave narrows a few feet in."
+msgstr ""
+
+#: script/events/setpieces.js:149
+msgid "the walls are moist and moss-covered"
+msgstr ""
+
+#: script/events/setpieces.js:153
+msgid "squeeze"
+msgstr ""
+
+#: script/events/setpieces.js:164
+msgid "the remains of an old camp sits just inside the cave."
+msgstr ""
+
+#: script/events/setpieces.js:165
+msgid "bedrolls, torn and blackened, lay beneath a thin layer of dust."
+msgstr ""
+
+#: script/events/setpieces.js:199
+msgid "the body of a wanderer lies in a small cavern."
+msgstr ""
+
+#: script/events/setpieces.js:200
+msgid "rot's been to work on it, and some of the pieces are missing."
+msgstr ""
+
+# 'it' is a wanderer corpse
+#: script/events/setpieces.js:202
+msgid "can't tell what left it here."
+msgstr ""
+
+#: script/events/setpieces.js:241
+msgid "the torch sputters and dies in the damp air"
+msgstr ""
+
+#: script/events/setpieces.js:242
+msgid "the darkness is absolute"
+msgstr ""
+
+#: script/events/setpieces.js:244
+msgid "the torch goes out"
+msgstr ""
+
+#: script/events/setpieces.js:299
+msgid "a cave lizard attacks"
+msgstr ""
+
+#: script/events/setpieces.js:333
+msgid "a large beast charges out of the dark"
+msgstr ""
+
+#: script/events/setpieces.js:367
+msgid "a giant lizard shambles forward"
+msgstr ""
+
+#: script/events/setpieces.js:395
+msgid "the nest of a large animal lies at the back of the cave."
+msgstr ""
+
+#: script/events/setpieces.js:437
+msgid "a small supply cache is hidden at the back of the cave."
+msgstr ""
+
+#: script/events/setpieces.js:489
+msgid "an old case is wedged behind a rock, covered in a thick layer of dust."
+msgstr ""
+
+#: script/events/setpieces.js:522
+msgid "A Deserted Town"
+msgstr ""
+
+#: script/events/setpieces.js:526
+msgid "a small suburb lays ahead, empty houses scorched and peeling."
+msgstr ""
+
+#: script/events/setpieces.js:527
+msgid ""
+"broken streetlights stand, rusting. light hasn't graced this place in a long "
+"time."
+msgstr ""
+
+#: script/events/setpieces.js:529
+msgid "the town lies abandoned, its citizens long dead"
+msgstr ""
+
+#: script/events/setpieces.js:532 script/events/setpieces.js:1250
+msgid "explore"
+msgstr ""
+
+#: script/events/setpieces.js:544
+msgid ""
+"where the windows of the schoolhouse aren't shattered, they're blackened "
+"with soot."
+msgstr ""
+
+#: script/events/setpieces.js:545
+msgid "the double doors creak endlessly in the wind."
+msgstr ""
+
+#: script/events/setpieces.js:554 script/events/setpieces.js:593
+#: script/events/setpieces.js:611 script/events/setpieces.js:649
+#: script/events/setpieces.js:688 script/events/setpieces.js:722
+#: script/events/setpieces.js:762 script/events/setpieces.js:801
+#: script/events/setpieces.js:840 script/events/setpieces.js:874
+#: script/events/setpieces.js:892 script/events/setpieces.js:925
+#: script/events/setpieces.js:942 script/events/setpieces.js:966
+#: script/events/setpieces.js:1005 script/events/setpieces.js:1044
+#: script/events/setpieces.js:1087 script/events/setpieces.js:1120
+#: script/events/setpieces.js:1148 script/events/setpieces.js:1192
+#: script/events/setpieces.js:1214 script/events/setpieces.js:1230
+msgid "leave town"
+msgstr ""
+
+#: script/events/setpieces.js:585
+msgid "ambushed on the street."
+msgstr ""
+
+#: script/events/setpieces.js:601
+msgid "a squat building up ahead."
+msgstr ""
+
+# what kind of green cross?
+#: script/events/setpieces.js:602
+msgid "a green cross barely visible behind grimy windows."
+msgstr ""
+
+#: script/events/setpieces.js:618
+msgid "a small cache of supplies is tucked inside a rusting locker."
+msgstr ""
+
+#: script/events/setpieces.js:680
+msgid "a scavenger waits just inside the door."
+msgstr ""
+
+#: script/events/setpieces.js:714
+msgid "a beast stands alone in an overgrown park."
+msgstr ""
+
+#: script/events/setpieces.js:730
+msgid "an overturned caravan is spread across the pockmarked street."
+msgstr ""
+
+#: script/events/setpieces.js:731
+msgid ""
+"it's been picked over by scavengers, but there's still some things worth "
+"taking."
+msgstr ""
+
+#: script/events/setpieces.js:793
+msgid "a madman attacks, screeching."
+msgstr ""
+
+#: script/events/setpieces.js:832
+msgid "a thug moves out of the shadows."
+msgstr ""
+
+#: script/events/setpieces.js:866
+msgid "a beast charges out of a ransacked classroom."
+msgstr ""
+
+#: script/events/setpieces.js:882
+msgid "through the large gymnasium doors, footsteps can be heard."
+msgstr ""
+
+#: script/events/setpieces.js:883
+msgid "the torchlight casts a flickering glow down the hallway."
+msgstr ""
+
+#: script/events/setpieces.js:884
+msgid "the footsteps stop."
+msgstr ""
+
+#: script/events/setpieces.js:917
+msgid "another beast, draw by the noise, leaps out of a copse of trees."
+msgstr ""
+
+#: script/events/setpieces.js:933
+msgid "something's causing a commotion a ways down the road."
+msgstr ""
+
+#: script/events/setpieces.js:934
+msgid "a fight, maybe."
+msgstr ""
+
+#: script/events/setpieces.js:949
+msgid ""
+"a small basket of food is hidden under a park bench, with a note attached."
+msgstr ""
+
+#: script/events/setpieces.js:950
+msgid "can't read the words."
+msgstr ""
+
+#: script/events/setpieces.js:997
+msgid "a panicked scavenger bursts through the door, screaming."
+msgstr ""
+
+#: script/events/setpieces.js:1036
+msgid "a man stands over a dead wanderer. notices he's not alone."
+msgstr ""
+
+#: script/events/setpieces.js:1052
+msgid "scavenger had a small camp in the school."
+msgstr ""
+
+#: script/events/setpieces.js:1053
+msgid "collected scraps spread across the floor like they fell from heaven."
+msgstr ""
+
+#: script/events/setpieces.js:1095
+msgid "scavenger'd been looking for supplies in here, it seems."
+msgstr ""
+
+#: script/events/setpieces.js:1096
+msgid "a shame to let what he'd found go to waste."
+msgstr ""
+
+#: script/events/setpieces.js:1128
+msgid ""
+"beneath the wanderer's rags, clutched in one of its many hands, a glint of "
+"steel."
+msgstr ""
+
+#: script/events/setpieces.js:1129
+msgid "worth killing for, it seems."
+msgstr ""
+
+#: script/events/setpieces.js:1156
+msgid "eye for an eye seems fair."
+msgstr ""
+
+#: script/events/setpieces.js:1157
+msgid "always worked before, at least."
+msgstr ""
+
+#: script/events/setpieces.js:1158
+msgid "picking the bones finds some useful trinkets."
+msgstr ""
+
+#: script/events/setpieces.js:1200
+msgid "some medicine abandoned in the drawers."
+msgstr ""
+
+#: script/events/setpieces.js:1222
+msgid "the clinic has been ransacked."
+msgstr ""
+
+#: script/events/setpieces.js:1223
+msgid "only dust and stains remain."
+msgstr ""
+
+#: script/events/setpieces.js:1239
+msgid "A Ruined City"
+msgstr ""
+
+#: script/events/setpieces.js:1243
+msgid ""
+"a battered highway sign stands guard at the entrance to this once-great city."
+msgstr ""
+
+#: script/events/setpieces.js:1244
+msgid ""
+"the towers that haven't crumbled jut from the landscape like the ribcage of "
+"some ancient beast."
+msgstr ""
+
+#: script/events/setpieces.js:1245
+msgid "might be things worth having still inside."
+msgstr ""
+
+#: script/events/setpieces.js:1247
+msgid "the towers of a decaying city dominate the skyline"
+msgstr ""
+
+#: script/events/setpieces.js:1261
+msgid "the streets are empty."
+msgstr ""
+
+#: script/events/setpieces.js:1262
+msgid "the air is filled with dust, driven relentlessly by the hard winds."
+msgstr ""
+
+#: script/events/setpieces.js:1270 script/events/setpieces.js:1286
+#: script/events/setpieces.js:1302 script/events/setpieces.js:1318
+#: script/events/setpieces.js:1335 script/events/setpieces.js:1373
+#: script/events/setpieces.js:1413 script/events/setpieces.js:1453
+#: script/events/setpieces.js:1497 script/events/setpieces.js:1514
+#: script/events/setpieces.js:1530 script/events/setpieces.js:1568
+#: script/events/setpieces.js:1607 script/events/setpieces.js:1647
+#: script/events/setpieces.js:1667 script/events/setpieces.js:1686
+#: script/events/setpieces.js:1703 script/events/setpieces.js:1720
+#: script/events/setpieces.js:1738 script/events/setpieces.js:1783
+#: script/events/setpieces.js:1809 script/events/setpieces.js:1826
+#: script/events/setpieces.js:1866 script/events/setpieces.js:1907
+#: script/events/setpieces.js:1932 script/events/setpieces.js:1962
+#: script/events/setpieces.js:2003 script/events/setpieces.js:2039
+#: script/events/setpieces.js:2074 script/events/setpieces.js:2115
+#: script/events/setpieces.js:2156 script/events/setpieces.js:2192
+#: script/events/setpieces.js:2227 script/events/setpieces.js:2262
+#: script/events/setpieces.js:2363 script/events/setpieces.js:2393
+#: script/events/setpieces.js:2440 script/events/setpieces.js:2476
+#: script/events/setpieces.js:2517 script/events/setpieces.js:2553
+#: script/events/setpieces.js:2588 script/events/setpieces.js:2624
+#: script/events/setpieces.js:2665 script/events/setpieces.js:2706
+#: script/events/setpieces.js:2741 script/events/setpieces.js:2790
+#: script/events/setpieces.js:2835 script/events/setpieces.js:2881
+#: script/events/setpieces.js:2925
+msgid "leave city"
+msgstr ""
+
+#: script/events/setpieces.js:1277
+msgid "orange traffic cones are set across the street, faded and cracked."
+msgstr ""
+
+#: script/events/setpieces.js:1278
+msgid "lights flash through the alleys between buildings."
+msgstr ""
+
+#: script/events/setpieces.js:1293
+msgid "a large shanty town sprawls across the streets."
+msgstr ""
+
+#: script/events/setpieces.js:1294
+msgid "faces, darkened by soot and blood, stare out from crooked huts."
+msgstr ""
+
+#: script/events/setpieces.js:1309
+msgid "the shell of an abandoned hospital looms ahead."
+msgstr ""
+
+#: script/events/setpieces.js:1325
+msgid "the old tower seems mostly intact."
+msgstr ""
+
+#: script/events/setpieces.js:1326
+msgid "the shell of a burned out car blocks the entrance."
+msgstr ""
+
+#: script/events/setpieces.js:1327
+msgid "most of the windows at ground level are busted anyway."
+msgstr ""
+
+#: script/events/setpieces.js:1342
+msgid "a huge lizard scrambles up out of the darkness of an old metro station."
+msgstr ""
+
+#: script/events/setpieces.js:1368
+msgid "descend"
+msgstr ""
+
+#: script/events/setpieces.js:1380
+msgid "the shot echoes in the empty street."
+msgstr ""
+
+#: script/events/setpieces.js:1420
+msgid "the soldier steps out from between the buildings, rifle raised."
+msgstr ""
+
+#: script/events/setpieces.js:1460
+msgid "a frail man stands defiantly, blocking the path."
+msgstr ""
+
+#: script/events/setpieces.js:1505
+msgid "nothing but downcast eyes."
+msgstr ""
+
+#: script/events/setpieces.js:1506
+msgid "the people here were broken a long time ago."
+msgstr ""
+
+#: script/events/setpieces.js:1521
+msgid "empty corridors."
+msgstr ""
+
+#: script/events/setpieces.js:1522
+msgid "the place has been swept clean by scavengers."
+msgstr ""
+
+#: script/events/setpieces.js:1536
+msgid "an old man bursts through a door, wielding a scalpel."
+msgstr ""
+
+#: script/events/setpieces.js:1575
+msgid "a thug is waiting on the other side of the wall."
+msgstr ""
+
+#: script/events/setpieces.js:1615
+msgid "a snarling beast jumps out from behind a car."
+msgstr ""
+
+#: script/events/setpieces.js:1656
+msgid "street above the subway platform is blown away."
+msgstr ""
+
+#: script/events/setpieces.js:1657
+msgid "lets some light down into the dusty haze."
+msgstr ""
+
+#: script/events/setpieces.js:1658
+msgid "a sound comes from the tunnel, just ahead."
+msgstr ""
+
+#: script/events/setpieces.js:1675
+msgid "looks like a camp of sorts up ahead."
+msgstr ""
+
+# a chainlink fence
+#: script/events/setpieces.js:1677
+msgid "rusted chainlink is pulled across an alleyway."
+msgstr ""
+
+#: script/events/setpieces.js:1678
+msgid "fires burn in the courtyard beyond."
+msgstr ""
+
+#: script/events/setpieces.js:1694
+msgid "more voices can be heard ahead."
+msgstr ""
+
+#: script/events/setpieces.js:1695
+msgid "they must be here for a reason."
+msgstr ""
+
+#: script/events/setpieces.js:1711
+msgid "the sound of gunfire carries on the wind."
+msgstr ""
+
+#: script/events/setpieces.js:1712
+msgid "the street ahead glows with firelight."
+msgstr ""
+
+# define squatter
+#: script/events/setpieces.js:1729
+msgid "more squatters are crowding around now."
+msgstr ""
+
+#: script/events/setpieces.js:1730
+msgid "someone throws a stone."
+msgstr ""
+
+#: script/events/setpieces.js:1746
+msgid "an improvised shop is set up on the sidewalk."
+msgstr ""
+
+#: script/events/setpieces.js:1747
+msgid "the owner stands by, stoic."
+msgstr ""
+
+#: script/events/setpieces.js:1792
+msgid "strips of meat hang drying by the side of the street."
+msgstr ""
+
+#: script/events/setpieces.js:1793
+msgid "the people back away, avoiding eye contact."
+msgstr ""
+
+#: script/events/setpieces.js:1818
+msgid "someone has locked and barricaded the door to this operating theatre."
+msgstr ""
+
+# ward as part of the hospital?
+#: script/events/setpieces.js:1833
+msgid "a tribe of elderly squatters is camped out in this ward."
+msgstr ""
+
+#: script/events/setpieces.js:1874
+msgid "a pack of lizards rounds the corner."
+msgstr ""
+
+# part of the hospital?
+#: script/events/setpieces.js:1916
+msgid "strips of meat are hung up to dry in this ward."
+msgstr ""
+
+#: script/events/setpieces.js:1940
+msgid "a large bird nests at the top of the stairs."
+msgstr ""
+
+#: script/events/setpieces.js:1971
+msgid "the debris is denser here."
+msgstr ""
+
+#: script/events/setpieces.js:1972
+msgid "maybe some useful stuff in the rubble."
+msgstr ""
+
+#: script/events/setpieces.js:2011
+msgid "a swarm of rats rushes up the tunnel."
+msgstr ""
+
+#: script/events/setpieces.js:2047
+msgid "a large man attacks, waving a bayonet."
+msgstr ""
+
+#: script/events/setpieces.js:2082
+msgid "a second soldier opens fire."
+msgstr ""
+
+#: script/events/setpieces.js:2123
+msgid "a masked soldier rounds the corner, gun drawn"
+msgstr ""
+
+#: script/events/setpieces.js:2164
+msgid "the crowd surges forward."
+msgstr ""
+
+#: script/events/setpieces.js:2200
+msgid "a youth lashes out with a tree branch."
+msgstr ""
+
+#: script/events/setpieces.js:2235
+msgid "a squatter stands firmly in the doorway of a small hut."
+msgstr ""
+
+#: script/events/setpieces.js:2270
+msgid "behind the door, a deformed figure awakes and attacks."
+msgstr ""
+
+#: script/events/setpieces.js:2310
+msgid "as soon as the door is open a little bit, hundreds of tentacles erupt."
+msgstr ""
+
+#: script/events/setpieces.js:2337
+msgid "bird must have liked shiney things."
+msgstr ""
+
+#: script/events/setpieces.js:2338
+msgid "some good stuff woven into its nest."
+msgstr ""
+
+#: script/events/setpieces.js:2372
+msgid "not much here."
+msgstr ""
+
+#: script/events/setpieces.js:2373
+msgid "scavengers must have gotten to this place already."
+msgstr ""
+
+# part of the subway?
+#: script/events/setpieces.js:2403
+msgid "the tunnel opens up at another platform."
+msgstr ""
+
+#: script/events/setpieces.js:2404
+msgid "the walls are scorched from an old battle."
+msgstr ""
+
+#: script/events/setpieces.js:2405
+msgid "bodies and supplies from both sides litter the ground."
+msgstr ""
+
+#: script/events/setpieces.js:2449
+msgid "the small military outpost is well supplied."
+msgstr ""
+
+#: script/events/setpieces.js:2450
+msgid ""
+"arms and munitions, relics from the war, are neatly arranged on the store-"
+"room floor."
+msgstr ""
+
+#: script/events/setpieces.js:2451
+msgid "just as deadly now as they were then."
+msgstr ""
+
+#: script/events/setpieces.js:2485
+msgid "searching the bodies yields a few supplies."
+msgstr ""
+
+#: script/events/setpieces.js:2486
+msgid "more soldiers will be on their way."
+msgstr ""
+
+#: script/events/setpieces.js:2487
+msgid "time to move on."
+msgstr ""
+
+#: script/events/setpieces.js:2526
+msgid "the small settlement has clearly been burning a while."
+msgstr ""
+
+#: script/events/setpieces.js:2527
+msgid ""
+"the bodies of the wanderers that lived here are still visible in the flames."
+msgstr ""
+
+#: script/events/setpieces.js:2528
+msgid "still time to rescue a few supplies."
+msgstr ""
+
+#: script/events/setpieces.js:2562
+msgid ""
+"the remaining settlers flee from the violence, their belongings forgotten."
+msgstr ""
+
+#: script/events/setpieces.js:2563
+msgid "there's not much, but some useful things can still be found."
+msgstr ""
+
+#: script/events/setpieces.js:2597
+msgid "the young settler was carrying a canvas sack."
+msgstr ""
+
+#: script/events/setpieces.js:2598
+msgid "it contains travelling gear, and a few trinkets."
+msgstr ""
+
+#: script/events/setpieces.js:2599 script/events/setpieces.js:2635
+msgid "there's nothing else here."
+msgstr ""
+
+#: script/events/setpieces.js:2633
+msgid "inside the hut, a child cries."
+msgstr ""
+
+#: script/events/setpieces.js:2634
+msgid "a few belongings rest against the walls."
+msgstr ""
+
+#: script/events/setpieces.js:2674
+msgid "the stench of rot and death fills the operating theatres."
+msgstr ""
+
+#: script/events/setpieces.js:2675
+msgid "a few items are scattered on the ground."
+msgstr ""
+
+#: script/events/setpieces.js:2676
+msgid "there is nothing else here."
+msgstr ""
+
+#: script/events/setpieces.js:2715
+msgid "a pristine medicine cabinet at the end of a hallway."
+msgstr ""
+
+#: script/events/setpieces.js:2716
+msgid "the rest of the hospital is empty."
+msgstr ""
+
+#: script/events/setpieces.js:2750
+msgid "someone had been stockpiling loot here."
+msgstr ""
+
+#: script/events/setpieces.js:2799
+msgid "the tentacular horror is defeated."
+msgstr ""
+
+#: script/events/setpieces.js:2800
+msgid "inside, the remains of its victims are everywhere."
+msgstr ""
+
+# extremly disfigured
+#: script/events/setpieces.js:2845
+msgid "the warped man lies dead."
+msgstr ""
+
+#: script/events/setpieces.js:2846
+msgid "the operating theatre has a lot of curious equipment."
+msgstr ""
+
+#: script/events/setpieces.js:2890
+msgid "the old man had a small cache of interesting items."
+msgstr ""
+
+#: script/events/setpieces.js:2934
+msgid "An Old House"
+msgstr ""
+
+#: script/events/setpieces.js:2938
+msgid "an old house remains here, once white siding yellowed and peeling."
+msgstr ""
+
+#: script/events/setpieces.js:2939
+msgid "the door hangs open."
+msgstr ""
+
+#: script/events/setpieces.js:2941
+msgid "the remains of an old house stand as a monument to simpler times"
+msgstr ""
+
+#: script/events/setpieces.js:2955
+msgid "the house is abandoned, but not yet picked over."
+msgstr ""
+
+#: script/events/setpieces.js:2956
+msgid "still a few drops of water in the old well."
+msgstr ""
+
+#: script/events/setpieces.js:2961 script/world.js:985
+msgid "water replenished"
+msgstr ""
+
+#: script/events/setpieces.js:2990
+msgid "the house has been ransacked."
+msgstr ""
+
+#: script/events/setpieces.js:2991
+msgid "but there is a cache of medicine under the floorboards."
+msgstr ""
+
+#: script/events/setpieces.js:3019
+msgid "a man charges down the hall, a rusty blade in his hand"
+msgstr ""
+
+#: script/events/setpieces.js:3051
+msgid "A Forgotten Battlefield"
+msgstr ""
+
+#: script/events/setpieces.js:3055
+msgid "a battle was fought here, long ago."
+msgstr ""
+
+#: script/events/setpieces.js:3056
+msgid ""
+"battered technology from both sides lays dormant on the blasted landscape."
+msgstr ""
+
+#: script/events/setpieces.js:3104
+msgid "A Huge Borehole"
+msgstr ""
+
+#: script/events/setpieces.js:3108
+msgid "a huge hole is cut deep into the earth, evidence of the past harvest."
+msgstr ""
+
+#: script/events/setpieces.js:3109
+msgid "they took what they came for, and left."
+msgstr ""
+
+#: script/events/setpieces.js:3110
+msgid ""
+"castoff from the mammoth drills can still be found by the edges of the "
+"precipice."
+msgstr ""
+
+#: script/events/setpieces.js:3133
+msgid "A Crashed Ship"
+msgstr ""
+
+#: script/events/setpieces.js:3142
+msgid ""
+"the familiar curves of a wanderer vessel rise up out of the dust and ash. "
+msgstr ""
+
+#: script/events/setpieces.js:3143
+msgid "lucky that the natives can't work the mechanisms."
+msgstr ""
+
+#: script/events/setpieces.js:3144
+msgid "with a little effort, it might fly again."
+msgstr ""
+
+#: script/events/setpieces.js:3148
+msgid "salvage"
+msgstr ""
+
+#: script/events/setpieces.js:3156
+msgid "The Sulphur Mine"
+msgstr ""
+
+#: script/events/setpieces.js:3160
+msgid "the military is already set up at the mine's entrance."
+msgstr ""
+
+#: script/events/setpieces.js:3161
+msgid "soldiers patrol the perimeter, rifles slung over their shoulders."
+msgstr ""
+
+#: script/events/setpieces.js:3163
+msgid "a military perimeter is set up around the mine."
+msgstr ""
+
+#: script/events/setpieces.js:3166 script/events/setpieces.js:3315
+msgid "attack"
+msgstr "útok"
+
+#: script/events/setpieces.js:3201
+msgid "a soldier, alerted, opens fire."
+msgstr ""
+
+#: script/events/setpieces.js:3209 script/events/setpieces.js:3249
+#: script/events/setpieces.js:3352 script/events/setpieces.js:3386
+msgid "run"
+msgstr "utéct"
+
+#: script/events/setpieces.js:3241
+msgid "a second soldier joins the fight."
+msgstr ""
+
+#: script/events/setpieces.js:3275
+msgid "a grizzled soldier attacks, waving a bayonet."
+msgstr ""
+
+#: script/events/setpieces.js:3286
+msgid "the military presence has been cleared."
+msgstr ""
+
+#: script/events/setpieces.js:3287 script/events/setpieces.js:3429
+#: script/events/setpieces.js:3505
+msgid "the mine is now safe for workers."
+msgstr ""
+
+#: script/events/setpieces.js:3289
+msgid "the sulphur mine is clear of dangers"
+msgstr ""
+
+#: script/events/setpieces.js:3305
+msgid "The Coal Mine"
+msgstr ""
+
+#: script/events/setpieces.js:3309
+msgid "camp fires burn by the entrance to the mine."
+msgstr ""
+
+#: script/events/setpieces.js:3310
+msgid "men mill about, weapons at the ready."
+msgstr ""
+
+#: script/events/setpieces.js:3312
+msgid "this old mine is not abandoned"
+msgstr ""
+
+#: script/events/setpieces.js:3344 script/events/setpieces.js:3378
+msgid "a man joins the fight"
+msgstr ""
+
+#: script/events/setpieces.js:3417
+msgid "only the chief remains."
+msgstr ""
+
+#: script/events/setpieces.js:3428
+msgid "the camp is still, save for the crackling of the fires."
+msgstr ""
+
+#: script/events/setpieces.js:3431
+msgid "the coal mine is clear of dangers"
+msgstr ""
+
+#: script/events/setpieces.js:3447
+msgid "The Iron Mine"
+msgstr ""
+
+#: script/events/setpieces.js:3451
+msgid "an old iron mine sits here, tools abandoned and left to rust."
+msgstr ""
+
+#: script/events/setpieces.js:3452
+msgid ""
+"bleached bones are strewn about the entrance. many, deeply scored with "
+"jagged grooves."
+msgstr ""
+
+#: script/events/setpieces.js:3453
+msgid "feral howls echo out of the darkness."
+msgstr ""
+
+#: script/events/setpieces.js:3455
+msgid "the path leads to an abandoned mine"
+msgstr ""
+
+#: script/events/setpieces.js:3493
+msgid "a large creature lunges, muscles rippling in the torchlight"
+msgstr ""
+
+#: script/events/setpieces.js:3504
+msgid "the beast is dead."
+msgstr ""
+
+#: script/events/setpieces.js:3507
+msgid "the iron mine is clear of dangers"
+msgstr ""
+
+#: script/events/setpieces.js:3524
+msgid "A Destroyed Village"
+msgstr ""
+
+#: script/events/setpieces.js:3528
+msgid "a destroyed village lies in the dust."
+msgstr ""
+
+#: script/events/setpieces.js:3529
+msgid "charred bodies litter the ground."
+msgstr ""
+
+# afterburner: a engine
+#: script/events/setpieces.js:3532
+msgid "the metallic tang of wanderer afterburner hangs in the air."
+msgstr ""
+
+#: script/events/setpieces.js:3546
+msgid "a shack stands at the center of the village."
+msgstr ""
+
+#: script/events/setpieces.js:3547
+msgid "there are still supplies inside."
+msgstr ""
+
+#: script/events/setpieces.js:3558
+msgid "all the work of a previous generation is here."
+msgstr ""
+
+#: script/events/setpieces.js:3559
+msgid "ripe for the picking."
+msgstr ""
+
+#: script/localization.js:4
+msgid "saved."
+msgstr "uloženo."
+
+#: script/localization.js:5
+msgid "wood"
+msgstr "dřevo"
+
+#: script/localization.js:6
+msgid "builder"
+msgstr "stavitel"
+
+#: script/localization.js:7
+msgid "teeth"
+msgstr "zuby"
+
+#: script/localization.js:8
+msgid "meat"
+msgstr "maso"
+
+#: script/localization.js:9
+msgid "fur"
+msgstr "srst"
+
+#: script/localization.js:10
+msgid "alien alloy"
+msgstr "neznámá slitina"
+
+#: script/localization.js:11
+msgid "bullets"
+msgstr "náboje"
+
+#: script/localization.js:12
+msgid "charm"
+msgstr "amulet"
+
+#: script/localization.js:13 script/path.js:138
+msgid "leather"
+msgstr "kůže"
+
+#: script/localization.js:14 script/path.js:136
+msgid "iron"
+msgstr "železo"
+
+#: script/localization.js:15 script/path.js:134
+msgid "steel"
+msgstr "ocel"
+
+#: script/localization.js:16
+msgid "coal"
+msgstr "uhlí"
+
+#: script/localization.js:17
+msgid "sulphur"
+msgstr "síra"
+
+#: script/localization.js:18
+msgid "energy cell"
+msgstr "energetická beterie"
+
+#: script/localization.js:19 script/room.js:161
+msgid "torch"
+msgstr "louč"
+
+#: script/localization.js:20
+msgid "medicine"
+msgstr "léky"
+
+#: script/localization.js:21 script/outside.js:22
+msgid "hunter"
+msgstr "lovec"
+
+#: script/localization.js:22 script/outside.js:30
+msgid "trapper"
+msgstr "traper"
+
+#: script/localization.js:23 script/outside.js:38
+msgid "tanner"
+msgstr "koželuh"
+
+#: script/localization.js:24
+msgid "grenade"
+msgstr "granát"
+
+#: script/localization.js:25
+msgid "bolas"
+msgstr "bolaso"
+
+#: script/localization.js:26
+msgid "bayonet"
+msgstr "bajonet"
+
+#: script/localization.js:27 script/outside.js:46
+msgid "charcutier"
+msgstr "uzenář"
+
+#: script/localization.js:28 script/outside.js:55
+msgid "iron miner"
+msgstr "horník železa"
+
+#: script/localization.js:29
+msgid "iron mine"
+msgstr "železný důl"
+
+#: script/localization.js:30 script/outside.js:63
+msgid "coal miner"
+msgstr "havíř"
+
+#: script/localization.js:31
+msgid "coal mine"
+msgstr "uhelný důl"
+
+#: script/localization.js:32 script/outside.js:71
+msgid "sulphur miner"
+msgstr "horník síry"
+
+#: script/localization.js:33
+msgid "sulphur mine"
+msgstr "sírový důl"
+
+#: script/localization.js:34 script/outside.js:88
+msgid "armourer"
+msgstr "zbrojmistr"
+
+#: script/localization.js:35 script/outside.js:79
+msgid "steelworker"
+msgstr "ocelář"
+
+#: script/localization.js:36
+msgid "bait"
+msgstr "návnada"
+
+#: script/localization.js:37 script/localization.js:44
+msgid "cured meat"
+msgstr "nakládané maso"
+
+#: script/localization.js:38 script/localization.js:43
+msgid "scales"
+msgstr "šupiny"
+
+#: script/localization.js:39
+msgid "compass"
+msgstr "kompas"
+
+#: script/localization.js:40
+msgid "laser rifle"
+msgstr "laserová puška"
+
+#: script/localization.js:41 script/outside.js:15
+msgid "gatherer"
+msgstr "sběrač"
+
+#: script/localization.js:42
+msgid "cloth"
+msgstr "tkanina"
+
+#: script/localization.js:45
+msgid "thieves"
+msgstr "zloději"
+
+#: script/localization.js:46
+msgid "not enough fur"
+msgstr "nedostatek kožešiny"
+
+#: script/localization.js:47
+msgid "not enough wood"
+msgstr "nedostatek dřeva"
+
+#: script/localization.js:48
+msgid "not enough coal"
+msgstr "nedostatek uhlí"
+
+#: script/localization.js:49
+msgid "not enough iron"
+msgstr "nedostatek železa"
+
+#: script/localization.js:50
+msgid "not enough steel"
+msgstr "nedostatek oceli"
+
+#: script/localization.js:51
+msgid "not enough sulphur"
+msgstr "nedostatek síry"
+
+#: script/localization.js:52
+msgid "baited trap"
+msgstr "past s návnadou"
+
+#: script/localization.js:53
+msgid "not enough scales"
+msgstr "nedostatek šupin"
+
+#: script/localization.js:54
+msgid "not enough cloth"
+msgstr "nedostatek tkaniny"
+
+#: script/localization.js:55
+msgid "not enough teeth"
+msgstr "nedostatek zubů"
+
+#: script/localization.js:56
+msgid "not enough leather"
+msgstr "nedostatek kůže"
+
+#: script/localization.js:57
+msgid "not enough meat"
+msgstr "nedostatek masa"
+
+#: script/localization.js:58
+msgid "the compass points east"
+msgstr "kompasu ukazuje na východ"
+
+#: script/localization.js:59
+msgid "the compass points west"
+msgstr "kompas ukazuje na západ"
+
+#: script/localization.js:60
+msgid "the compass points north"
+msgstr "kompas ukazuje na sever"
+
+#: script/localization.js:61
+msgid "the compass points south"
+msgstr "kompas ukazuje na jih"
+
+#: script/localization.js:62
+msgid "the compass points northeast"
+msgstr "kompas ukazuje na severovýchod"
+
+#: script/localization.js:63
+msgid "the compass points northwest"
+msgstr "kompasu ukazuje na severozápad"
+
+#: script/localization.js:64
+msgid "the compass points southeast"
+msgstr "kompasu ukazuje na jihovýchod"
+
+#: script/localization.js:65
+msgid "the compass points southwest"
+msgstr "kompasu ukazuje na jihozápad"
+
+#: script/outside.js:5
+msgid "Outside"
+msgstr "Venku"
+
+#: script/outside.js:102
+msgid "scraps of fur"
+msgstr "útržků kožešiny"
+
+#: script/outside.js:107
+msgid "bits of meat"
+msgstr "kusů masa"
+
+#: script/outside.js:112
+msgid "strange scales"
+msgstr "podivných šupin"
+
+#: script/outside.js:117
+msgid "scattered teeth"
+msgstr "rozptýlené zuby"
+
+#: script/outside.js:122
+msgid "tattered cloth"
+msgstr "potrhané tkaniny"
+
+#: script/outside.js:127
+msgid "a crudely made charm"
+msgstr "hurbě vyrobená amulet"
+
+#: script/outside.js:143 script/outside.js:562
+msgid "A Silent Forest"
+msgstr "Tichý les"
+
+#: script/outside.js:169
+msgid "gather wood"
+msgstr "sbírat dřevo"
+
+#: script/outside.js:188
+msgid "a stranger arrives in the night"
+msgstr "v noci přšel cizinec"
+
+#: script/outside.js:190
+msgid "a weathered family takes up in one of the huts."
+msgstr "omšelá rodina zabrala jednu z chatrčí"
+
+#: script/outside.js:192
+msgid "a small group arrives, all dust and bones."
+msgstr "dorazila malá skupina, samí prach a kosti."
+
+#: script/outside.js:194
+msgid "a convoy lurches in, equal parts worry and hope."
+msgstr "připotácel se konvoj, rovným dílem strach a naděje."
+
+#: script/outside.js:196
+msgid "the town's booming. word does get around."
+msgstr "město je na vzestupu. slova se šíří."
+
+# short for population.
+#: script/outside.js:452
+msgid "pop "
+msgstr "pop"
+
+#: script/outside.js:457
+msgid "forest"
+msgstr "les"
+
+#: script/outside.js:460
+msgid "village"
+msgstr "vesnice"
+
+#: script/outside.js:543
+msgid "check traps"
+msgstr "zkontrolovat pasti"
+
+#: script/outside.js:564
+msgid "A Lonely Hut"
+msgstr "Osamělá chata"
+
+#: script/outside.js:566
+msgid "A Tiny Village"
+msgstr "Malá vesnice"
+
+#: script/outside.js:568
+msgid "A Modest Village"
+msgstr "Skromná vesnice"
+
+#: script/outside.js:570
+msgid "A Large Village"
+msgstr "Velká vesnice"
+
+#: script/outside.js:572
+msgid "A Raucous Village"
+msgstr "Nevázaná vesnice"
+
+#: script/outside.js:584
+msgid "the sky is grey and the wind blows relentlessly"
+msgstr "nebe je šedá a fouká  neúprosný vítr"
+
+#: script/outside.js:594
+msgid "dry brush and dead branches litter the forest floor"
+msgstr "suché klestí a mrtvě větve ležící v lese"
+
+#: script/outside.js:621
+msgid "the traps contain "
+msgstr "pasti obsahují"
+
+#: script/path.js:29 script/path.js:312
+msgid "A Dusty Path"
+msgstr "Prašná cesta"
+
+#: script/path.js:37
+msgid "supplies:"
+msgstr "zásoby"
+
+#: script/path.js:43
+msgid "embark"
+msgstr "vyrazit"
+
+#: script/path.js:60 script/room.js:1159
+msgid "the compass points "
+msgstr "kompas ukazuje"
+
+#: script/path.js:102
+msgid "perks:"
+msgstr "výhody:"
+
+#: script/path.js:132
+msgid "none"
+msgstr "nic"
+
+#: script/path.js:142
+msgid "armour"
+msgstr "zbroj"
+
+#: script/path.js:153
+msgid "water"
+msgstr "voda"
+
+#: script/path.js:236 script/world.js:293
+msgid "free {0}/{1}"
+msgstr "volné {0}/{1}"
+
+#: script/path.js:263
+msgid "damage"
+msgstr ""
+
+#: script/path.js:269
+msgid "weight"
+msgstr "hmotnost"
+
+#: script/path.js:271
+msgid "available"
+msgstr "k dispozici"
+
+#: script/room.js:16
+msgid "trap"
+msgstr "past"
+
+#: script/room.js:19
+msgid ""
+"builder says she can make traps to catch any creatures might still be alive "
+"out there"
+msgstr ""
+
+#: script/room.js:20
+msgid "more traps to catch more creatures"
+msgstr ""
+
+#: script/room.js:21
+msgid "more traps won't help now"
+msgstr ""
+
+#: script/room.js:31
+msgid "cart"
+msgstr "vozík"
+
+#: script/room.js:34
+msgid "builder says she can make a cart for carrying wood"
+msgstr ""
+
+#: script/room.js:35
+msgid "the rickety cart will carry more wood from the forest"
+msgstr ""
+
+#: script/room.js:44
+msgid "hut"
+msgstr "chatrč"
+
+#: script/room.js:47
+msgid "builder says there are more wanderers. says they'll work, too."
+msgstr ""
+
+#: script/room.js:48
+msgid "builder puts up a hut, out in the forest. says word will get around."
+msgstr ""
+
+#: script/room.js:49
+msgid "no more room for huts."
+msgstr ""
+
+#: script/room.js:59
+msgid "lodge"
+msgstr "myslivna"
+
+#: script/room.js:62
+msgid "villagers could help hunt, given the means"
+msgstr ""
+
+#: script/room.js:63
+msgid "the hunting lodge stands in the forest, a ways out of town"
+msgstr ""
+
+#: script/room.js:74
+msgid "trading post"
+msgstr ""
+
+#: script/room.js:77
+msgid "a trading post would make commerce easier"
+msgstr ""
+
+#: script/room.js:78
+msgid ""
+"now the nomads have a place to set up shop, they might stick around a while"
+msgstr ""
+
+#: script/room.js:88
+msgid "tannery"
+msgstr "koželužna"
+
+#: script/room.js:91
+msgid "builder says leather could be useful. says the villagers could make it."
+msgstr ""
+
+#: script/room.js:92
+msgid "tannery goes up quick, on the edge of the village"
+msgstr ""
+
+#: script/room.js:102
+msgid "smokehouse"
+msgstr "udírna"
+
+#: script/room.js:105
+msgid ""
+"should cure the meat, or it'll spoil. builder says she can fix something up."
+msgstr ""
+
+#: script/room.js:106
+msgid "builder finishes the smokehouse. she looks hungry."
+msgstr ""
+
+#: script/room.js:116
+msgid "workshop"
+msgstr "dílna"
+
+#: script/room.js:119
+msgid "builder says she could make finer things, if she had the tools"
+msgstr ""
+
+#: script/room.js:120
+msgid "workshop's finally ready. builder's excited to get to it"
+msgstr ""
+
+#: script/room.js:131
+msgid "steelworks"
+msgstr "ocelárna"
+
+#: script/room.js:134
+msgid "builder says the villagers could make steel, given the tools"
+msgstr ""
+
+#: script/room.js:135
+msgid "a haze falls over the village as the steelworks fires up"
+msgstr ""
+
+#: script/room.js:146
+msgid "armoury"
+msgstr "zbrojnice"
+
+#: script/room.js:149
+msgid "builder says it'd be useful to have a steady source of bullets"
+msgstr ""
+
+#: script/room.js:150
+msgid "armoury's done, welcoming back the weapons of the past."
+msgstr ""
+
+#: script/room.js:164
+msgid "a torch to keep the dark away"
+msgstr ""
+
+#: script/room.js:173
+msgid "waterskin"
+msgstr "měch"
+
+#: script/room.js:177
+msgid "this waterskin'll hold a bit of water, at least"
+msgstr ""
+
+#: script/room.js:185
+msgid "cask"
+msgstr "sud"
+
+#: script/room.js:189
+msgid "the cask holds enough water for longer expeditions"
+msgstr ""
+
+#: script/room.js:198
+msgid "water tank"
+msgstr "nádrž na vodu"
+
+#: script/room.js:202
+msgid "never go thirsty again"
+msgstr ""
+
+#: script/room.js:211
+msgid "bone spear"
+msgstr "kostěné kopí"
+
+#: script/room.js:214
+msgid "this spear's not elegant, but it's pretty good at stabbing"
+msgstr ""
+
+#: script/room.js:223 script/world.js:288
+msgid "rucksack"
+msgstr "batoh"
+
+#: script/room.js:227
+msgid "carrying more means longer expeditions to the wilds"
+msgstr ""
+
+#: script/room.js:235
+msgid "wagon"
+msgstr "povoz"
+
+#: script/room.js:239
+msgid "the wagon can carry a lot of supplies"
+msgstr ""
+
+#: script/room.js:248
+msgid "convoy"
+msgstr "konvoj"
+
+#: script/room.js:252
+msgid "the convoy can haul mostly everything"
+msgstr ""
+
+#: script/room.js:262
+msgid "l armour"
+msgstr "k zbroj"
+
+#: script/room.js:265
+msgid "leather's not strong. better than rags, though."
+msgstr ""
+
+#: script/room.js:274
+msgid "i armour"
+msgstr "ž zbroj"
+
+#: script/room.js:277
+msgid "iron's stronger than leather"
+msgstr ""
+
+#: script/room.js:286
+msgid "s armour"
+msgstr "o zbroj"
+
+#: script/room.js:289
+msgid "steel's stronger than iron"
+msgstr ""
+
+#: script/room.js:298
+msgid "iron sword"
+msgstr "železný meč"
+
+#: script/room.js:301
+msgid "sword is sharp. good protection out in the wilds."
+msgstr ""
+
+#: script/room.js:311
+msgid "steel sword"
+msgstr "ocelový meč"
+
+#: script/room.js:314
+msgid "the steel is strong, and the blade true."
+msgstr ""
+
+#: script/room.js:324
+msgid "rifle"
+msgstr "puška"
+
+#: script/room.js:326
+msgid "black powder and bullets, like the old days."
+msgstr ""
+
+#: script/room.js:458
+msgid "Room"
+msgstr "Místnost"
+
+#: script/room.js:485 script/room.js:604
+msgid "A Dark Room"
+msgstr "Temná místnost"
+
+#: script/room.js:498
+msgid "light fire"
+msgstr ""
+
+#: script/room.js:508
+msgid "stoke fire"
+msgstr ""
+
+#: script/room.js:545 script/room.js:555 script/room.js:703 script/room.js:707
+msgid "the room is {0}"
+msgstr "místnost je {0}"
+
+# wont work well with 'is'
+#: script/room.js:546 script/room.js:554 script/room.js:672
+msgid "the fire is {0}"
+msgstr "oheň {0}"
+
+#: script/room.js:565
+msgid ""
+"the stranger is standing by the fire. she says she can help. says she builds "
+"things."
+msgstr ""
+
+#: script/room.js:580
+msgid "freezing"
+msgstr "mrzne"
+
+#: script/room.js:581
+msgid "cold"
+msgstr "zima"
+
+#: script/room.js:582
+msgid "mild"
+msgstr "vlídně"
+
+#: script/room.js:583
+msgid "warm"
+msgstr "horko"
+
+#: script/room.js:584
+msgid "hot"
+msgstr "vedro"
+
+#: script/room.js:596
+msgid "dead"
+msgstr "je mrtvý"
+
+#: script/room.js:597
+msgid "smoldering"
+msgstr "doutná"
+
+#: script/room.js:598
+msgid "flickering"
+msgstr "bliká"
+
+#: script/room.js:599
+msgid "burning"
+msgstr "hoří"
+
+#: script/room.js:600
+msgid "roaring"
+msgstr "praská"
+
+#: script/room.js:604
+msgid "A Firelit Room"
+msgstr ""
+
+#: script/room.js:642
+msgid "not enough wood to get the fire going"
+msgstr ""
+
+#: script/room.js:655
+msgid "the wood has run out"
+msgstr ""
+
+#: script/room.js:675
+msgid "the light from the fire spills from the windows, out into the dark"
+msgstr ""
+
+#: script/room.js:688
+msgid "builder stokes the fire"
+msgstr ""
+
+#: script/room.js:718
+msgid "the wind howls outside"
+msgstr ""
+
+#: script/room.js:719
+msgid "the wood is running out"
+msgstr ""
+
+#: script/room.js:726
+msgid "a ragged stranger stumbles through the door and collapses in the corner"
+msgstr ""
+
+#: script/room.js:734
+msgid ""
+"the stranger shivers, and mumbles quietly. her words are unintelligible."
+msgstr ""
+
+#: script/room.js:737
+msgid "the stranger in the corner stops shivering. her breathing calms."
+msgstr ""
+
+#: script/room.js:760
+msgid "stores"
+msgstr "obchod"
+
+#: script/room.js:779
+msgid "weapons"
+msgstr "zbraně"
+
+#: script/room.js:918
+msgid "total"
+msgstr "celkem"
+
+#: script/room.js:939 script/room.js:983
+msgid "not enough "
+msgstr "nedostatek"
+
+#: script/room.js:955
+msgid "builder just shivers"
+msgstr ""
+
+#: script/room.js:1058
+msgid "build:"
+msgstr "stavět:"
+
+#: script/room.js:1065
+msgid "craft:"
+msgstr "vyrobit:"
+
+#: script/room.js:1072
+msgid "buy:"
+msgstr "koupit:"
+
+#: script/ship.js:11
+msgid "Ship"
+msgstr "Loď"
+
+#: script/ship.js:27 script/ship.js:100
+msgid "An Old Starship"
+msgstr ""
+
+#: script/ship.js:38
+msgid "hull:"
+msgstr ""
+
+#: script/ship.js:44
+msgid "engine:"
+msgstr ""
+
+#: script/ship.js:51
+msgid "reinforce hull"
+msgstr ""
+
+#: script/ship.js:60
+msgid "upgrade engine"
+msgstr ""
+
+#: script/ship.js:69 script/ship.js:142
+msgid "lift off"
+msgstr ""
+
+#: script/ship.js:91
+msgid ""
+"somewhere above the debris cloud, the wanderer fleet hovers. been on this "
+"rock too long."
+msgstr ""
+
+#: script/ship.js:106 script/ship.js:119
+msgid "not enough alien alloy"
+msgstr ""
+
+#: script/ship.js:134
+msgid "Ready to Leave?"
+msgstr ""
+
+#: script/ship.js:138
+msgid "time to get out of this place. won't be coming back."
+msgstr ""
+
+#: script/ship.js:150
+msgid "linger"
+msgstr ""
+
+#: script/space.js:42
+msgid "hull: "
+msgstr ""
+
+#: script/space.js:76
+msgid "Troposphere"
+msgstr ""
+
+#: script/space.js:78
+msgid "Stratosphere"
+msgstr ""
+
+#: script/space.js:80
+msgid "Mesosphere"
+msgstr ""
+
+#: script/space.js:82
+msgid "Thermosphere"
+msgstr ""
+
+#: script/space.js:84
+msgid "Exosphere"
+msgstr ""
+
+#: script/space.js:86
+msgid "Space"
+msgstr ""
+
+#: script/space.js:424
+msgid "score for this game: {0}"
+msgstr ""
+
+#: script/space.js:431
+msgid "total score: {0}"
+msgstr ""
+
+#: script/space.js:452
+msgid ""
+"expanded story. alternate ending. behind the scenes commentary. get the app."
+msgstr ""
+
+#: script/space.js:461
+msgid "iOS."
+msgstr ""
+
+#: script/space.js:469
+msgid "android."
+msgstr ""
+
+#: script/world.js:46
+msgid "punch"
+msgstr ""
+
+#: script/world.js:52
+msgid "stab"
+msgstr ""
+
+#: script/world.js:58
+msgid "swing"
+msgstr ""
+
+#: script/world.js:64
+msgid "slash"
+msgstr ""
+
+#: script/world.js:70
+msgid "thrust"
+msgstr ""
+
+#: script/world.js:76
+msgid "shoot"
+msgstr ""
+
+#: script/world.js:83
+msgid "blast"
+msgstr ""
+
+#: script/world.js:90
+msgid "lob"
+msgstr ""
+
+#: script/world.js:97
+msgid "tangle"
+msgstr ""
+
+#: script/world.js:119
+msgid "An&nbsp;Outpost"
+msgstr ""
+
+#: script/world.js:120
+msgid "Iron&nbsp;Mine"
+msgstr ""
+
+#: script/world.js:121
+msgid "Coal&nbsp;Mine"
+msgstr ""
+
+#: script/world.js:122
+msgid "Sulphur&nbsp;Mine"
+msgstr ""
+
+#: script/world.js:123
+msgid "An&nbsp;Old&nbsp;House"
+msgstr ""
+
+#: script/world.js:124
+msgid "A&nbsp;Damp&nbsp;Cave"
+msgstr ""
+
+#: script/world.js:125
+msgid "An&nbsp;Abandoned&nbsp;Town"
+msgstr ""
+
+#: script/world.js:126
+msgid "A&nbsp;Ruined&nbsp;City"
+msgstr ""
+
+#: script/world.js:127
+msgid "A&nbsp;Crashed&nbsp;Starship"
+msgstr ""
+
+#: script/world.js:128
+msgid "A&nbsp;Borehole"
+msgstr ""
+
+#: script/world.js:129
+msgid "A&nbsp;Battlefield"
+msgstr ""
+
+#: script/world.js:130
+msgid "A&nbsp;Murky&nbsp;Swamp"
+msgstr ""
+
+#: script/world.js:134
+msgid "A&nbsp;Destroyed&nbsp;Village"
+msgstr ""
+
+#: script/world.js:259
+msgid "water:{0}"
+msgstr "voda:{0}"
+
+#: script/world.js:286
+msgid "pockets"
+msgstr "kapsy"
+
+#: script/world.js:310
+msgid "hp: {0}/{1}"
+msgstr "zdraví: {0}/{1}"
+
+#: script/world.js:317
+msgid "{0}:{1}"
+msgstr "{0}:{1}"
+
+#: script/world.js:352
+msgid "dangerous to be this far from the village without proper protection"
+msgstr ""
+
+#: script/world.js:354
+msgid "safer here"
+msgstr ""
+
+#: script/world.js:454
+msgid "the meat has run out"
+msgstr ""
+
+#: script/world.js:459
+msgid "starvation sets in"
+msgstr ""
+
+#: script/world.js:484
+msgid "there is no more water"
+msgstr ""
+
+#: script/world.js:488
+msgid "the thirst becomes unbearable"
+msgstr ""
+
+#: script/world.js:565
+msgid "the trees yield to dry grass. the yellowed brush rustles in the wind."
+msgstr ""
+
+#: script/world.js:568
+msgid ""
+"the trees are gone. parched earth and blowing dust are poor replacements."
+msgstr ""
+
+#: script/world.js:575
+msgid ""
+"trees loom on the horizon. grasses gradually yield to a forest floor of dry "
+"branches and fallen leaves."
+msgstr ""
+
+#: script/world.js:578
+msgid "the grasses thin. soon, only dust remains."
+msgstr ""
+
+#: script/world.js:585
+msgid "the barrens break at a sea of dying grass, swaying in the arid breeze."
+msgstr ""
+
+#: script/world.js:588
+msgid ""
+"a wall of gnarled trees rises from the dust. their branches twist into a "
+"skeletal canopy overhead."
+msgstr ""
+
+#: script/world.js:847
+msgid "Wanderer"
+msgstr ""
+
+#: script/world.js:852
+msgid "The&nbsp;Village"
+msgstr ""
+
+#: script/world.js:881
+msgid "the world fades"
+msgstr ""
+
+#: script/world.js:1015
+msgid "A Barren World"
+msgstr ""

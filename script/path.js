@@ -34,7 +34,7 @@ var Path = {
 			.appendTo('div#locationSlider');
 		
 		// Add the outfitting area
-		var outfitting = $('<div>').attr('id', 'outfitting').appendTo(this.panel);
+		var outfitting = $('<div>').attr({'id': 'outfitting', 'data-legend': _('supplies:')}).appendTo(this.panel);
 		$('<div>').attr('id', 'bagspace').appendTo(outfitting);
 		
 		// Add the embark button
@@ -99,7 +99,7 @@ var Path = {
 			var needsAppend = false;
 			if(perks.length === 0) {
 				needsAppend = true;
-				perks = $('<div>').attr('id', 'perks');
+				perks = $('<div>').attr({'id': 'perks', 'data-legend': _('perks:')});
 			}
 			for(var k in $SM.get('character.perks')) {
 				var id = 'perk_' + k.replace(' ', '-');
@@ -112,7 +112,7 @@ var Path = {
 			}
 			
 			if(needsAppend && perks.children().length > 0) {
-				perks.appendTo(Path.panel);
+				perks.prependTo(Path.panel);
 			}
 			
 			if(!ignoreStores && Engine.activeModule === Path) {
@@ -157,55 +157,56 @@ var Path = {
 			$('.row_val', wRow).text(World.getMaxWater());
 		}
 		
-		
 		var space = Path.getFreeSpace();
-		var total = 0;
+		var currentBagCapacity = 0;
 		// Add the non-craftables to the craftables
 		var carryable = $.extend({
-			'cured meat': { type: 'tool' },
-			'bullets': { type: 'tool' },
+			'cured meat': { type: 'tool', desc: 'restores '+ World.MEAT_HEAL + ' hp' },
+			'bullets': { type: 'tool', desc: 'use with rifle' },
 			'grenade': {type: 'weapon' },
 			'bolas': {type: 'weapon' },
 			'laser rifle': {type: 'weapon' },
-			'energy cell': {type: 'tool' },
+			'energy cell': {type: 'tool', desc: 'use with laser rifle' },
 			'bayonet': {type: 'weapon' },
 			'charm': {type: 'tool'},
-			'medicine': {type: 'tool'}
+			'medicine': {type: 'tool', desc: 'restores ' + World.MEDS_HEAL + ' hp' }
 		}, Room.Craftables);
 		
 		for(var k in carryable) {
+			var lk = _(k);
 			var store = carryable[k];
 			var have = $SM.get('stores["'+k+'"]');
 			var num = Path.outfit[k];
 			num = typeof num == 'number' ? num : 0;
-			if (have < num) { num = have; }
-			var numAvailable = $SM.get('stores["'+k+'"]', true);
+			if (have !== undefined) {
+				if (have < num) { num = have; }
+				$SM.set(k, num, true);
+			}
+
 			var row = $('div#outfit_row_' + k.replace(' ', '-'), outfit);
 			if((store.type == 'tool' || store.type == 'weapon') && have > 0) {
-				total += num * Path.getWeight(k);
+				currentBagCapacity += num * Path.getWeight(k);
 				if(row.length === 0) {
-					row = Path.createOutfittingRow(k, num, store.name);
+					row = Path.createOutfittingRow(k, num, store, store.name);
 					
 					var curPrev = null;
 					outfit.children().each(function(i) {
 						var child = $(this);
 						if(child.attr('id').indexOf('outfit_row_') === 0) {
-							var cName = child.attr('id').substring(11).replace('-', ' ');
-							if(cName < k && (curPrev == null || cName > curPrev)) {
-								curPrev = cName;
+							var cName = child.children('.row_key').text();
+							if(cName < lk) {
+								curPrev = child.attr('id');
 							}
 						}
 					});
 					if(curPrev == null) {
 						row.insertAfter(wRow);
-					} 
-					else 
-					{
-						row.insertAfter(outfit.find('#outfit_row_' + curPrev.replace(' ', '-')));
+					} else {
+						row.insertAfter(outfit.find('#' + curPrev));
 					}
 				} else {
 					$('div#' + row.attr('id') + ' > div.row_val > span', outfit).text(num);
-					$('div#' + row.attr('id') + ' .tooltip .numAvailable', outfit).text(numAvailable - num);
+					$('div#' + row.attr('id') + ' .tooltip .numAvailable', outfit).text(have - num);
 				}
 				if(num === 0) {
 					$('.dnBtn', row).addClass('disabled');
@@ -214,10 +215,10 @@ var Path = {
 					$('.dnBtn', row).removeClass('disabled');
 					$('.dnManyBtn', row).removeClass('disabled');
 				}
-				if(num >= numAvailable || space < Path.getWeight(k)) {
+				if(num == have || space < Path.getWeight(k)) {
 					$('.upBtn', row).addClass('disabled');
 					$('.upManyBtn', row).addClass('disabled');
-				} else if(space >= Path.getWeight(k)) {
+				} else {
 					$('.upBtn', row).removeClass('disabled');
 					$('.upManyBtn', row).removeClass('disabled');
 				}
@@ -225,21 +226,27 @@ var Path = {
 				row.remove();
 			}
 		}
-		
+
+		Path.updateBagSpace(currentBagCapacity);
+
+	},
+
+	updateBagSpace: function(currentBagCapacity) {
 		// Update bagspace
-		$('#bagspace').text(_('free {0}/{1}', Math.floor(Path.getCapacity() - total) , Path.getCapacity()));
-		
+		$('#bagspace').text(_('free {0}/{1}', Math.floor(Path.getCapacity() - currentBagCapacity) , Path.getCapacity()));
+
 		if(Path.outfit['cured meat'] > 0) {
 			Button.setDisabled($('#embarkButton'), false);
 		} else {
 			Button.setDisabled($('#embarkButton'), true);
 		}
+
 	},
 	
-	createOutfittingRow: function(key, num, name) {
-		if(!name) name = _(key);
+	createOutfittingRow: function(key, num, store) {
+		if(!store.name) store.name = _(key);
 		var row = $('<div>').attr('id', 'outfit_row_' + key.replace(' ', '-')).addClass('outfitRow').attr('key',key);
-		$('<div>').addClass('row_key').text(name).appendTo(row);
+		$('<div>').addClass('row_key').text(store.name).appendTo(row);
 		var val = $('<div>').addClass('row_val').appendTo(row);
 		
 		$('<span>').text(num).appendTo(val);
@@ -251,6 +258,14 @@ var Path = {
 		
 		var numAvailable = $SM.get('stores["'+key+'"]', true);
 		var tt = $('<div>').addClass('tooltip bottom right').appendTo(row);
+
+		if(store.type == 'weapon') {
+			$('<div>').addClass('row_key').text(_('damage')).appendTo(tt);
+			$('<div>').addClass('row_val').text(World.getDamage(key)).appendTo(tt);
+		} else if(store.type == 'tool' && store.desc != "undefined") {
+			$('<div>').addClass('row_key').text(store.desc).appendTo(tt);
+		}
+
 		$('<div>').addClass('row_key').text(_('weight')).appendTo(tt);
 		$('<div>').addClass('row_val').text(Path.getWeight(key)).appendTo(tt);
 		$('<div>').addClass('row_key').text(_('available')).appendTo(tt);
@@ -267,8 +282,7 @@ var Path = {
 		if(Path.getFreeSpace() >= Path.getWeight(supply) && cur < $SM.get('stores["'+supply+'"]', true)) {
 			var maxExtraByWeight = Math.floor(Path.getFreeSpace() / Path.getWeight(supply));
 			var maxExtraByStore  = $SM.get('stores["'+supply+'"]', true) - cur;
-			var maxExtraByBtn    = btn.data;
-			Path.outfit[supply] = cur + Math.min(maxExtraByBtn, Math.min(maxExtraByWeight, maxExtraByStore));
+			Path.outfit[supply] = cur + Math.min(btn.data, maxExtraByWeight, maxExtraByStore);
 			$SM.set('outfit['+supply+']', Path.outfit[supply]);
 			Path.updateOutfitting();
 		}
@@ -290,7 +304,6 @@ var Path = {
 		Path.setTitle();
 		Path.updateOutfitting();
 		Path.updatePerks(true);
-		$SM.set('outfit', Path.outfit);
 
 		Engine.moveStoresView($('#perks'), transition_diff);
 	},
@@ -303,7 +316,6 @@ var Path = {
 		for(var k in Path.outfit) {
 			$SM.add('stores["'+k+'"]', -Path.outfit[k]);
 		}
-		$SM.remove('outfit');
 		World.onArrival();
 		$('#outerSlider').animate({left: '-700px'}, 300);
 		Engine.activeModule = World;
@@ -312,7 +324,9 @@ var Path = {
 	handleStateUpdates: function(e){
 		if(e.category == 'character' && e.stateName.indexOf('character.perks') === 0 && Engine.activeModule == Path){
 			Path.updatePerks();
-		};
+		} else if(e.category == 'income' && Engine.activeModule == Path){
+			Path.updateOutfitting();
+		}
 	},
 
 	scrollSidebar: function(direction, reset){
@@ -327,7 +341,7 @@ var Path = {
 		var momentum = 10;
 
 		if( direction == 'up' )
-			momentum = momentum * -1
+			momentum = momentum * -1;
 
 		if( direction == 'down' && inView( direction, $('#perks') ) ){
 

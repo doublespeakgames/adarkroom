@@ -69,6 +69,7 @@ div#header {
 	right: 10px;
 	bottom: 10px;
 	color: #666;
+	z-index: 10;
 }
 
 .menu span {
@@ -83,12 +84,12 @@ div#header {
 
 span.customSelectOptions {
 	margin: 0;
-	width: 80px;
+	width: 120px;
 }
 
 .customSelectOptions > ul {
 	max-height: 20px;
-	width: 80px;
+	width: 120px;
 	overflow: hidden;
 	-webkit-transition: max-height 1s;
 	transition: max-height 1s;
@@ -100,7 +101,7 @@ span.customSelectOptions {
 }
 
 .customSelectOptions > ul:hover {
-	max-height: 400px;
+	max-height: 600px;
 }
 
 .customSelectOptions > ul > li {
@@ -124,6 +125,10 @@ span.customSelectOptions {
 
 .menu span:hover {
 	text-decoration: underline;
+}
+
+.menu .appStore {
+	font-weight: bold;
 }
 
 div.headerButton {
@@ -179,6 +184,10 @@ div.row_key {
 
 div.row_val {
 	float: right;
+}
+
+div.total {
+	font-weight: bold;
 }
 
 /* Notifications */
@@ -257,7 +266,7 @@ div.button div.cooldown {
 .upBtn, .dnBtn, .upManyBtn, .dnManyBtn {
 	position: absolute;
 	width: 14px;
-	height: 15px;
+	height: 12px;
 	cursor: pointer;
 }
 
@@ -266,7 +275,7 @@ div.button div.cooldown {
 }
 
 .upManyBtn, .dnManyBtn {
-	right: -11px;
+	right: -15px;
 }
 
 .upBtn.disabled, .dnBtn.disabled, .upManyBtn.disabled, .dnManyBtn.disabled {
@@ -274,11 +283,11 @@ div.button div.cooldown {
 }
 
 .upBtn {
-	top: -2px;
+	top: -3px;
 }
 
 .upManyBtn {
-	top: -2px;
+	top: -3px;
 }
 
 .upBtn:after, .upBtn:before, .upManyBtn:after, .upManyBtn:before {
@@ -287,7 +296,7 @@ div.button div.cooldown {
 	content: " ";
 	height: 0;
 	width: 0;
-	bottom: 4px;
+	bottom: 2px;
 }
 
 .upBtn:after, .upManyBtn:after {
@@ -317,25 +326,31 @@ div.button div.cooldown {
 	content: " ";
 	height: 0;
 	width: 0;
-	top: 4px;
+	top: 2px;
 }
 
+/* Overall size of buttons controlled by this style
+   border-width and margin-left should be the same. */
+.upBtn:before, .dnBtn:before, .upManyBtn:before, .dnManyBtn:before {
+	border-width: 6px;
+	left: 50%;
+	margin-left: -6px;
+}
+
+/* Thickness of up/down button lines controlled by this style.
+   border-width and margin-left should be the same.
+   Thickness = :before.border-width minus :after.border-width */
 .upBtn:after, .dnBtn:after {
+	border-width: 4px;
+	left: 50%;
+	margin-left: -4px;
+}
+
+/* See comment on .upBtn:after, .dnBtn:after */
+.upManyBtn:after, .dnManyBtn:after {
 	border-width: 3px;
 	left: 50%;
 	margin-left: -3px;
-}
-
-.upBtn:before, .dnBtn:before, .upManyBtn:before, .dnManyBtn:before {
-	border-width: 5px;
-	left: 50%;
-	margin-left: -5px;
-}
-
-.upManyBtn:after, .dnManyBtn:after {
-	border-width: 2px;
-	left: 50%;
-	margin-left: -2px;
 }
 
 .dnBtn:after, .dnManyBtn:after {
@@ -501,6 +516,10 @@ body.noMask #description {
 	padding-bottom: 20px;
 }
 
+.take-all-button {
+	float: none;
+}
+
 #buttons > .button {
 	margin: 0 5px 5px;
 	margin-right: 15px;
@@ -544,12 +563,12 @@ body.noMask #description {
 
 #lootButtons {
 	padding-bottom: 0px !important;
-	margin: 20px 0 0 5px;
+	margin: 20px 0 5px 0;
 	position: relative;
 }
 
 #lootButtons:before {
-	content: "take:";
+	content: attr(data-legend);
 	position: absolute;
 	top: -25px;
 	left: 0px;
@@ -567,7 +586,7 @@ body.noMask #description {
 }
 
 #dropMenu:before {
-	content: "drop:";
+	content: attr(data-legend);
 	border-bottom: 1px solid black;
 	display: block;
 	margin-bottom: 5px;

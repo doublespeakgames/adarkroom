@@ -13,7 +13,7 @@ var Score = {
 		var fullScore = 0;
 		
 		var factor = [1, 1.5, 1, 2, 2, 3, 3, 2, 2, 2, 2, 1.5, 1, 
-			     1, 10, 30, 50, 100, 150, 150, 3, 3, 5, 4]
+			     1, 10, 30, 50, 100, 150, 150, 3, 3, 5, 4];
 		for(var i = 0; i< factor.length; i++){
 			fullScore += scoreUnadded[i] * factor[i];
 		}
