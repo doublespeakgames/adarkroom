@@ -18,11 +18,11 @@ msgstr ""
 
 #: ../../script/dropbox.js:62
 msgid "Dropbox connection"
-msgstr ""
+msgstr "Подключение к Dropbox"
 
 #: ../../script/dropbox.js:65
 msgid "connect game to dropbox local storage"
-msgstr ""
+msgstr "подключить игру к хранилущу Dropbox"
 
 #: ../../script/dropbox.js:68
 msgid "connect"
@@ -63,7 +63,7 @@ msgstr "выйти"
 
 #: ../../script/dropbox.js:113
 msgid "choose one slot to save to"
-msgstr ""
+msgstr "выберите один из слотов, чтобы сохранить"
 
 #: ../../script/dropbox.js:119
 #, fuzzy
@@ -72,7 +72,7 @@ msgstr "сохранить."
 
 #: ../../script/dropbox.js:141
 msgid "choose one slot to load from"
-msgstr ""
+msgstr "выберите один из слотов, чтобы загрузить"
 
 #: ../../script/dropbox.js:148
 #, fuzzy
@@ -81,11 +81,11 @@ msgstr "сохранить."
 
 #: ../../script/dropbox.js:179
 msgid "successfully saved to dropbox datastorage"
-msgstr ""
+msgstr "успешно сохранено в хранилище dropbox"
 
 #: ../../script/dropbox.js:180
 msgid "error while saving to dropbox datastorage"
-msgstr ""
+msgstr "ошибка при сохранении в хранилище dropbox"
 
 #: ../../script/dropbox.js:183
 msgid "ok"
@@ -252,11 +252,11 @@ msgstr "сохранить."
 
 #: ../../script/engine.js:177
 msgid "dropbox."
-msgstr ""
+msgstr "dropbox"
 
 #: ../../script/engine.js:184
 msgid "github."
-msgstr ""
+msgstr "github"
 
 #: ../../script/engine.js:268
 msgid "Export / Import"
@@ -363,7 +363,7 @@ msgstr ""
 
 #: ../../script/engine.js:519
 msgid "classic."
-msgstr ""
+msgstr "классический."
 
 #: ../../script/engine.js:620
 msgid "{0} per {1}s"
@@ -426,11 +426,11 @@ msgstr "ничего"
 
 #: ../../script/events.js:627
 msgid "all"
-msgstr ""
+msgstr "всё"
 
 #: ../../script/events.js:649
 msgid "take everything"
-msgstr ""
+msgstr "взять всё"
 
 #: ../../script/events.js:653 ../../script/outside.js:627
 msgid " and "
@@ -682,7 +682,7 @@ msgstr "в лесу тишина."
 
 #: ../../script/events/outside.js:40
 msgid "nothing was found"
-msgstr ""
+msgstr "ничего не найдено"
 
 #: ../../script/events/outside.js:43 ../../script/events/outside.js:61
 #: ../../script/events/outside.js:126 ../../script/events/outside.js:144
@@ -745,7 +745,7 @@ msgstr "срочно нужно лекарство."
 #: ../../script/events/outside.js:105
 #, fuzzy
 msgid "some villagers are ill"
-msgstr "некоторые жители погибли"
+msgstr "некоторые жители заболели"
 
 #: ../../script/events/outside.js:109
 msgid "1 medicine"
@@ -761,7 +761,7 @@ msgstr "болезнь была вовремя вылечена."
 
 #: ../../script/events/outside.js:123
 msgid "sufferers are healed"
-msgstr ""
+msgstr "больные исцелены"
 
 #: ../../script/events/outside.js:133
 msgid "the sickness spreads through the village."
@@ -777,7 +777,7 @@ msgstr "каждую ночь слышатся крики."
 
 #: ../../script/events/outside.js:137
 msgid "sufferers are left to die"
-msgstr ""
+msgstr "страдальцы остались умирать"
 
 #: ../../script/events/outside.js:153
 msgid "Plague"
@@ -818,7 +818,7 @@ msgstr "остальные хоронят их."
 
 #: ../../script/events/outside.js:190
 msgid "epidemic is eradicated eventually"
-msgstr ""
+msgstr "в конце концов эпидемия ликвидирована"
 
 #: ../../script/events/outside.js:204
 msgid "the plague rips through the village."
@@ -830,7 +830,7 @@ msgstr "единственная надежда - на быструю смерт
 
 #: ../../script/events/outside.js:208
 msgid "population is almost exterminated"
-msgstr ""
+msgstr "население почти истреблено"
 
 #: ../../script/events/outside.js:224
 msgid "A Beast Attack"
@@ -850,11 +850,11 @@ msgstr "жители оплакивают погибших."
 
 #: ../../script/events/outside.js:235
 msgid "wild beasts attack the villagers"
-msgstr ""
+msgstr "дикие звери атакуют жителей деревни"
 
 #: ../../script/events/outside.js:249
 msgid "predators become prey. price is unfair"
-msgstr ""
+msgstr "хищники становятся жертвами. цена несправедлива"
 
 #: ../../script/events/outside.js:258
 msgid "A Military Raid"
