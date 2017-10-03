@@ -332,6 +332,17 @@ var Room = {
 				};
 			}
 		}
+		'i dagger': {
+			name: _('dagger'),
+			type: 'weapon',
+			buildMsg: _("good for melee"),
+			cost: function() {
+				return {
+					'iron': 20,
+					'wood': 10
+				};
+			}
+		}
 	},
 	
 	TradeGoods: {
