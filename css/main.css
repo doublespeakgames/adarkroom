@@ -68,7 +68,7 @@ div#header {
 	position: fixed;
 	right: 10px;
 	bottom: 10px;
-	color: #666;
+	color: rgba(126,126,126);
 	z-index: 10;
 }
 
@@ -76,6 +76,8 @@ div#header {
 	cursor: pointer;
 	float: right;
 	margin-left: 20px;
+	padding:4px;
+	border-radius:3px;
 }
 
 .customSelect {
@@ -125,6 +127,9 @@ span.customSelectOptions {
 
 .menu span:hover {
 	text-decoration: underline;
+	border:1px solid white;
+	background:grey;
+	
 }
 
 .menu .appStore {
