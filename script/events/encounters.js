@@ -423,7 +423,7 @@ Events.Encounters = [
 						min: 1,
 						max: 1,
 						chance: 1
-					}
+					},
 					'bullets': {
 						min: 5,
 						max: 15,
