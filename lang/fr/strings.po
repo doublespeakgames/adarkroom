@@ -1178,7 +1178,7 @@ msgstr "en échange, il offrira un peu de sa sagesse."
 
 #: ../../script/events/room.js:496
 msgid "evasion"
-msgstr "esquive"
+msgstr "fuite"
 
 #: ../../script/events/room.js:506
 msgid "precision"
@@ -1194,7 +1194,7 @@ msgstr "Le malade"
 
 #: ../../script/events/room.js:542
 msgid "a man hobbles up, coughing."
-msgstr "un homme arrive. boitillant et toussant."
+msgstr "un homme arrive. boitant et toussant."
 
 #: ../../script/events/room.js:543
 msgid "he begs for medicine."
@@ -1202,7 +1202,7 @@ msgstr "il supplie pour quelques médicaments."
 
 #: ../../script/events/room.js:545
 msgid "a sick man hobbles up"
-msgstr "un homme arrive, boitillant"
+msgstr "un homme arrive, boitant"
 
 #: ../../script/events/room.js:549
 msgid "give 1 medicine"
@@ -1240,7 +1240,7 @@ msgstr "quelques écailles, toutes ses possessions."
 
 #: ../../script/events/room.js:610
 msgid "the man expresses his thanks and hobbles off."
-msgstr "l'homme vous remercie et repart, boitillant."
+msgstr "l'homme vous remercie et repart, en boitant."
 
 #: ../../script/events/setpieces.js:6
 msgid "An Outpost"
