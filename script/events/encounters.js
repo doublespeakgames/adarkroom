@@ -396,5 +396,41 @@ Events.Encounters = [
 				notification: _('a shot rings out, from somewhere in the long grass')
 			}
 		}
+	},
+	{
+		title: _("A madman"),
+			isAvailable: function() {
+				return World.getDistance() > 20 && World.getTerrain() == World.TILE.BARRENS;
+			},
+			scenes: {
+				combat: true,
+				enemy: 'madman',
+				enemyName: _("madman"),
+				deathMessage: _('the madman has died.'),
+				chara: "D",
+				damage: 15,
+				hit: 0.99,
+				attackDelay: 3,
+				health: 15,
+				ranged: true,
+				loot: {
+					'cloth': {
+						min: 5,
+						max: 10,
+						chance: 0.1
+					},
+					'rifle': {
+						min: 1,
+						max: 1,
+						chance: 1
+					}
+					'bullets': {
+						min: 5,
+						max: 15,
+						chance: 0.7
+					}
+				},
+				notification: _("A random person runs out, armed with a rifle.")
+			}
 	}
 ];
