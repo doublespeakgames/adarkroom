@@ -49,7 +49,7 @@ var World = {
 			cooldown: 2
 		},
 		'bone spear': {
-			verb: _('stab'),
+			verb: _('throw'),
 			type: 'melee',
 			damage: 2,
 			cooldown: 2
@@ -99,6 +99,18 @@ var World = {
 			damage: 'stun',
 			cooldown: 15,
 			cost: { 'bolas': 1 }
+		},
+		'i dagger': {
+			verb: _('stab'),
+			type: "melee",
+			damage: 3,
+			cooldown: 1
+		},
+		's dagger': {
+			verb: _('impale'),
+			type: 'melee',
+			damage: 5,
+			cooldown: 1,
 		}
 	},
 
@@ -626,7 +638,7 @@ var World = {
 
 	testMap: function() {
 		if(!World.seenAll) {
-			var dark; 
+			var dark;
 			var mask = $SM.get('game.world.mask');
 			loop:
 			for(var i = 0; i < mask.length; i++) {
