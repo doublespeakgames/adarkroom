@@ -13,7 +13,8 @@ var Path = {
 		'laser rifle': 5,
 		'bolas': 0.5,
 		'dagger': 1,
-		's dagger': 1
+		's dagger': 1,
+		'bow': 5
 	},
 
 	name: 'Path',

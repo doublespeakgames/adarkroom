@@ -111,6 +111,13 @@ var World = {
 			type: 'melee',
 			damage: 5,
 			cooldown: 1,
+		},
+		'bow': {
+			verb: _('shoot arrow'),
+			type: 'ranged',
+			damage: 5,
+			cooldown: 0.6,
+			cost: { 'arrow':1 }
 		}
 	},
 

@@ -353,6 +353,18 @@ var Room = {
 					'wood': 10
 				};
 			}
+		},
+		'bow': {
+			name: _('bow'),
+			type: 'weapon',
+			buildMsg: 'a good ranged weapon',
+			cost: function(){
+				return {
+					'wood': 50,
+					'string': 20,
+					'steel': 30
+				};
+			}
 		}
 	},
 
@@ -466,6 +478,15 @@ var Room = {
 					fur: 400,
 					scales: 20,
 					teeth: 10
+				};
+			}
+		},
+		'arrow': {
+			type: 'good',
+			cost: function() {
+				return {
+					wood: 5,
+					iron: 5
 				};
 			}
 		}
