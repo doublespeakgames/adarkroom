@@ -525,7 +525,7 @@ Events.Room = [
 					_('an old wanderer arrives.'),
 					_('he smiles warmly and asks for lodgings for the night.')
 				],
-				notification: _('an old wanderer arrives.'),
+				notification: _('an old wanderer arrives'),
 				blink: true,
 				buttons: {
 					'agree': {
