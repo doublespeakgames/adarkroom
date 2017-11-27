@@ -3245,7 +3245,7 @@ msgstr "파괴된 마을"
 
 #: script/events/setpieces.js:3528
 msgid "a destroyed village lies in the dust."
-msgstr "파괴된 마을이 흙먼지도 뒤덮여 있다."
+msgstr "파괴된 마을이 흙먼지로 뒤덮여 있다."
 
 #: script/events/setpieces.js:3529
 msgid "charred bodies litter the ground."
