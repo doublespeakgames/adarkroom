@@ -2164,8 +2164,8 @@ msgstr "정찰술 배우기"
 msgid "The Master"
 msgstr "명인"
 
-#: script/events/room.js:466
-#: script/events/room.js:469
+#: script/events/room.js:525
+#: script/events/room.js:528
 msgid "an old wanderer arrives."
 msgstr "늙은 나그네가 나타난다."
 
