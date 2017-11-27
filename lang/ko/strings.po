@@ -2323,7 +2323,7 @@ msgstr "안은 들여다 볼 수 없다."
 
 #: script/events/setpieces.js:98
 msgid "the earth here is split, as if bearing an ancient wound"
-msgstr "이곳은 땅은, 오랜 상처를 견뎌온 것처럼 갈라져있다"
+msgstr "이곳의 땅은, 오랜 상처를 견뎌온 것처럼 갈라져있다"
 
 #: script/events/setpieces.js:101 script/events/setpieces.js:2944
 #: script/events/setpieces.js:3458
