@@ -2965,7 +2965,7 @@ msgstr "아직 약간의 보급품을 건질 시간은 있다."
 #: script/events/setpieces.js:2562
 msgid ""
 "the remaining settlers flee from the violence, their belongings forgotten."
-msgstr "남은 주민들은 재난을 피해 피난을, 가진건 모두 버리고 떠난다."
+msgstr "남은 주민들은 재난을 피해 가진건 모두 버리고 피난을 떠난다."
 
 #: script/events/setpieces.js:2563
 msgid "there's not much, but some useful things can still be found."
