@@ -2307,7 +2307,7 @@ msgstr "도무지 이해할 수 없는 파괴와 정복자의 욕심을 채우�
 
 #: script/events/setpieces.js:75
 msgid "his time here, now, is his penance."
-msgstr "지금, 여기에서는, 속죄하고 있다."
+msgstr "여기에서는, 지금, 그의 속죄의 시간이다."
 
 #: script/events/setpieces.js:91
 msgid "A Damp Cave"
