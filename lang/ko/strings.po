@@ -2165,6 +2165,7 @@ msgid "The Master"
 msgstr "명인"
 
 #: script/events/room.js:466
+#: script/events/room.js:469
 msgid "an old wanderer arrives."
 msgstr "늙은 나그네가 나타난다."
 
@@ -2172,9 +2173,6 @@ msgstr "늙은 나그네가 나타난다."
 msgid "he smiles warmly and asks for lodgings for the night."
 msgstr "따뜻한 미소를 지으며 밤을 지낼 오두막을 청한다."
 
-#: script/events/room.js:469
-msgid "an old wanderer arrives"
-msgstr "늙은 나그네가 나타난다"
 
 #: script/events/room.js:473
 msgid "agree"
