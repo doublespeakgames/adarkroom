@@ -190,15 +190,9 @@ var Path = {
 					row = Path.createOutfittingRow(k, num, store, store.name);
 					
 					var curPrev = null;
-					outfit.children().each(function(i) {
-						var child = $(this);
-						if(child.attr('id').indexOf('outfit_row_') === 0) {
-							var cName = child.children('.row_key').text();
-							if(cName < lk) {
-								curPrev = child.attr('id');
-							}
-						}
-					});
+					
+					outfit.children().each(outfit_call(i));
+					
 					if(curPrev == null) {
 						row.insertAfter(wRow);
 					} else {
@@ -229,6 +223,16 @@ var Path = {
 
 		Path.updateBagSpace(currentBagCapacity);
 
+	},
+	
+	outfit_call: function(i) {
+		var child = $(this);
+		if(child.attr('id').indexOf('outfit_row_') === 0) {
+			var cName = child.children('.row_key').text();
+			if(cName < lk) {
+				curPrev = child.attr('id');
+			}
+		}
 	},
 
 	updateBagSpace: function(currentBagCapacity) {
