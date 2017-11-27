@@ -2956,7 +2956,7 @@ msgstr "이 작은 마을은 불타기 시작한지 얼마 안된 게 분명하�
 #: script/events/setpieces.js:2527
 msgid ""
 "the bodies of the wanderers that lived here are still visible in the flames."
-msgstr "여기 살던 떠돌이들이 시체가 아직도 불길 속에서 보인다."
+msgstr "여기 살았던 떠돌이들의 시체가 아직도 불길 속에서 보인다."
 
 #: script/events/setpieces.js:2528
 msgid "still time to rescue a few supplies."
