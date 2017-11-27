@@ -3133,7 +3133,7 @@ msgstr "광산 입구에는 이미 군대가 자리잡고 있다."
 
 #: script/events/setpieces.js:3161
 msgid "soldiers patrol the perimeter, rifles slung over their shoulders."
-msgstr "군인들이 주위를, 어깨에 소총을 매고 순찰한다."
+msgstr "군인들이 어깨에 소총을 매고 주위를 순찰한다."
 
 #: script/events/setpieces.js:3163
 msgid "a military perimeter is set up around the mine."
