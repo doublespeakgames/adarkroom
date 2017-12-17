@@ -250,7 +250,7 @@ msgstr "드롭박스."
 
 #: script/engine.js:184
 msgid "github."
-msgstr ""
+msgstr "깃허브"
 
 #: script/engine.js:268
 msgid "Export / Import"
