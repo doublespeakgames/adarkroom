@@ -138,6 +138,9 @@ var Events = {
 
 		// Set up the enemy attack timer
 		Events._enemyAttackTimer = Engine.setInterval(Events.enemyAttack, scene.attackDelay * 1000);
+
+		// Bind hotkeys
+		bindHotKeys();
 	},
 
 	setPause: function(btn, state){
@@ -228,7 +231,7 @@ var Events = {
 
 		var btn = new Button.Button({
 			id: 'eat',
-			text: _('eat meat'),
+			text: _('eat meat' + ' ' + hotKeys.eat.text),
 			cooldown: cooldown,
 			click: Events.eatMeat,
 			cost: { 'cured meat': 1 }
@@ -248,7 +251,7 @@ var Events = {
 
 		var btn = new Button.Button({
 			id: 'meds',
-			text: _('use meds'),
+			text: _('use meds' + ' ' + hotKeys.meds.text),
 			cooldown: cooldown,
 			click: Events.useMeds,
 			cost: { 'medicine': 1 }
@@ -271,7 +274,7 @@ var Events = {
 		}
 		var btn = new Button.Button({
 			id: 'attack_' + weaponName.replace(' ', '-'),
-			text: weapon.verb,
+			text: weapon.verb + ' ' + hotKeys[weapon.verb].text,
 			cooldown: cd,
 			click: Events.useWeapon,
 			cost: weapon.cost
@@ -286,7 +289,6 @@ var Events = {
 				break;
 			}
 		}
-
 		return btn;
 	},
 
