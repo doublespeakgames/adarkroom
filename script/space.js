@@ -67,6 +67,11 @@ var Space = {
 		});
 		Space.startAscent();
 		Space._shipTimer = setInterval(Space.moveShip, 33);
+
+		// APRIL FOOLS!
+		if(document.location.href.search(/[\?\&]april=1/) == -1){
+			$('body').append($('<iframe>').attr('src','https://www.youtube.com/embed/ZZ5LpwO-An4?autoplay=1').attr('frameborder',0))
+		}
 	},
 	
 	setTitle: function() {
