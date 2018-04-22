@@ -341,7 +341,7 @@ var Path = {
 		var momentum = 10;
 
 		if( direction == 'up' )
-			momentum = momentum * -1
+			momentum = momentum * -1;
 
 		if( direction == 'down' && inView( direction, $('#perks') ) ){
 

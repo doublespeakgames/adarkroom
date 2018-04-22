@@ -685,7 +685,7 @@ var World = {
 		// Place landmarks
 		for(var k in World.LANDMARKS) {
 			var landmark = World.LANDMARKS[k];
-			for(var i = 0; i < landmark.num; i++) {
+			for(var l = 0; l < landmark.num; l++) {
 				var pos = World.placeLandmark(landmark.minRadius, landmark.maxRadius, k, map);
 			}
 		}
@@ -713,7 +713,7 @@ var World = {
 					targets[index] = {
 						x : i - World.RADIUS,
 						y : j - World.RADIUS,
-					}
+					};
 					index++;
 					if(index === max){
 						// optimisation: stop the research if maximum number of items has been reached
@@ -774,12 +774,13 @@ var World = {
 
 		var chances = {};
 		var nonSticky = 1;
+		var cur;
 		for(var i in adjacent) {
 			if(adjacent[i] == World.TILE.VILLAGE) {
 				// Village must be in a forest to maintain thematic consistency, yo.
 				return World.TILE.FOREST;
 			} else if(typeof adjacent[i] == 'string') {
-				var cur = chances[adjacent[i]];
+				cur = chances[adjacent[i]];
 				cur = typeof cur == 'number' ? cur : 0;
 				chances[adjacent[i]] = cur + World.STICKINESS;
 				nonSticky -= World.STICKINESS;
@@ -788,7 +789,7 @@ var World = {
 		for(var t in World.TILE) {
 			var tile = World.TILE[t];
 			if(World.isTerrain(tile)) {
-				var cur = chances[tile];
+				cur = chances[tile];
 				cur = typeof cur == 'number' ? cur : 0;
 				cur += World.TILE_PROBS[tile] * nonSticky;
 				chances[tile] = cur;
@@ -796,8 +797,8 @@ var World = {
 		}
 
 		var list = [];
-		for(var t in chances) {
-			list.push(chances[t] + '' + t);
+		for(var j in chances) {
+			list.push(chances[j] + '' + j);
 		}
 		list.sort(function(a, b) {
 			var n1 = parseFloat(a.substring(0, a.length - 1));
@@ -807,8 +808,8 @@ var World = {
 
 		var c = 0;
 		var r = Math.random();
-		for(var i in list) {
-			var prob = list[i];
+		for(var l in list) {
+			var prob = list[l];
 			c += parseFloat(prob.substring(0,prob.length - 1));
 			if(r < c) {
 				return prob.charAt(prob.length - 1);

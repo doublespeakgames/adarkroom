@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adarkroom\n"
 "POT-Creation-Date: 2016-02-15 02:03+0100\n"
-"PO-Revision-Date: 2016-02-15 02:03+0100\n"
+"PO-Revision-Date: 2017-05-02 09:32+0200\n"
 "Last-Translator: Vanadar <vanadar.univers@gmail.com>\n"
 "Language-Team: \n"
-"Language: fr\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.6\n"
+"X-Generator: Poedit 2.0.1\n"
 "X-Poedit-KeywordsList: _\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: s;\n"
@@ -247,11 +247,11 @@ msgstr "kaydet"
 
 #: ../../script/engine.js:177
 msgid "dropbox."
-msgstr ""
+msgstr "dropbox"
 
 #: ../../script/engine.js:184
 msgid "github."
-msgstr ""
+msgstr "github"
 
 #: ../../script/engine.js:268
 msgid "Export / Import"
@@ -424,8 +424,9 @@ msgid "all"
 msgstr ""
 
 #: ../../script/events.js:649
+#, fuzzy
 msgid "take everything"
-msgstr ""
+msgstr "hepsini al"
 
 #: ../../script/events.js:653 ../../script/outside.js:627
 msgid " and "
@@ -847,7 +848,7 @@ msgstr "köylüler geri çekildi ve ölenler için yas tutuyor."
 
 #: ../../script/events/outside.js:235
 msgid "wild beasts attack the villagers"
-msgstr ""
+msgstr "vahşi yaratıklar köylülere saldırdı"
 
 #: ../../script/events/outside.js:249
 msgid "predators become prey. price is unfair"
@@ -2034,7 +2035,7 @@ msgstr ""
 
 #: ../../script/events/setpieces.js:2934
 msgid "An Old House"
-msgstr ""
+msgstr "Eski bir ev"
 
 #: ../../script/events/setpieces.js:2938
 msgid "an old house remains here, once white siding yellowed and peeling."
@@ -2129,9 +2130,8 @@ msgid "salvage"
 msgstr ""
 
 #: ../../script/events/setpieces.js:3156
-#, fuzzy
 msgid "The Sulphur Mine"
-msgstr "sülfür madeni"
+msgstr "Sülfür madeni"
 
 #: ../../script/events/setpieces.js:3160
 msgid "the military is already set up at the mine's entrance."
@@ -2157,12 +2157,11 @@ msgstr ""
 #: ../../script/events/setpieces.js:3209 ../../script/events/setpieces.js:3249
 #: ../../script/events/setpieces.js:3352 ../../script/events/setpieces.js:3386
 msgid "run"
-msgstr ""
+msgstr "koş"
 
 #: ../../script/events/setpieces.js:3241
-#, fuzzy
 msgid "a second soldier joins the fight."
-msgstr "bir gözcü gecelemek için uğradı"
+msgstr "bir gözcü gecelemek için uğradı."
 
 #: ../../script/events/setpieces.js:3275
 msgid "a grizzled soldier attacks, waving a bayonet."
@@ -2174,18 +2173,16 @@ msgstr ""
 
 #: ../../script/events/setpieces.js:3287 ../../script/events/setpieces.js:3429
 #: ../../script/events/setpieces.js:3505
-#, fuzzy
 msgid "the mine is now safe for workers."
-msgstr "hiç su kalmadı"
+msgstr "maden işçiler için şimdi güvenli."
 
 #: ../../script/events/setpieces.js:3289
 msgid "the sulphur mine is clear of dangers"
 msgstr ""
 
 #: ../../script/events/setpieces.js:3305
-#, fuzzy
 msgid "The Coal Mine"
-msgstr "kömür madeni"
+msgstr "Kömür madeni"
 
 #: ../../script/events/setpieces.js:3309
 msgid "camp fires burn by the entrance to the mine."
@@ -3060,7 +3057,7 @@ msgstr "silahlar"
 
 #: ../../script/room.js:914
 msgid "total"
-msgstr ""
+msgstr "toplam"
 
 #: ../../script/room.js:935 ../../script/room.js:979
 msgid "not enough "

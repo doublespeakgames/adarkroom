@@ -619,14 +619,14 @@ var Outside = {
 		}
 		/// TRANSLATORS : Mind the whitespace at the end.
 		var s = _('the traps contain ');
-		for(var i = 0, len = msg.length; i < len; i++) {
-			if(len > 1 && i > 0 && i < len - 1) {
+		for(var l = 0, len = msg.length; l < len; l++) {
+			if(len > 1 && l > 0 && l < len - 1) {
 				s += ", ";
-			} else if(len > 1 && i == len - 1) {
+			} else if(len > 1 && l == len - 1) {
 				/// TRANSLATORS : Mind the whitespaces at the beginning and end.
 				s += _(" and ");
 			}
-			s += msg[i];
+			s += msg[l];
 		}
 		
 		var baitUsed = numBait < numTraps ? numBait : numTraps;
@@ -643,7 +643,7 @@ var Outside = {
 			Outside.updateVillage();
 			Outside.updateWorkersView();
 			Outside.updateVillageIncome();
-		};
+		}
 	},
 
 	scrollSidebar: function(direction, reset) {

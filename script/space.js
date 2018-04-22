@@ -166,7 +166,7 @@ var Space = {
 			}
 			
 			if(!Space.done) {
-				Engine.setTimeout(Space.createAsteroid, 1000 - (Space.altitude * 10));
+				Engine.setTimeout(Space.createAsteroid, 1000 - (Space.altitude * 10), true);
 			}
 		}
 	},
@@ -266,7 +266,7 @@ var Space = {
 				$('#spacePanel, .menu, select.menuBtn').animate({color: '#272823'}, 500, 'linear');
 			else
 				$('#spacePanel, .menu, select.menuBtn').animate({color: 'white'}, 500, 'linear');
-		}, Space.FTB_SPEED / 2);
+		}, Space.FTB_SPEED / 2, true);
 		
 		Space.createAsteroid();
 	},
@@ -372,8 +372,8 @@ var Space = {
 		clearTimeout(Events._eventTimeout);
 		clearTimeout(Room._fireTimer);
 		clearTimeout(Room._tempTimer);
-		for(var k in Room.Craftables) {
-			Room.Craftables[k].button = null;
+		for(var j in Room.Craftables) {
+			Room.Craftables[j].button = null;
 		}
 		for(var k in Room.TradeGoods) {
 			Room.TradeGoods[k].button = null;

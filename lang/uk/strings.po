@@ -451,7 +451,7 @@ msgstr "взяти все"
 
 #: ../../script/events.js:738
 msgid "take all you can"
-msgstr ""
+msgstr "взяти все. що можеш"
 
 #. TRANSLATORS : Mind the whitespaces at the beginning and end.
 #: ../../script/events.js:744 ../../script/outside.js:627
@@ -764,7 +764,7 @@ msgstr "негайно потрібні ліки."
 
 #: ../../script/events/outside.js:105
 msgid "some villagers are ill"
-msgstr ""
+msgstr "деякі селяни захворіли"
 
 #: ../../script/events/outside.js:109
 msgid "1 medicine"
@@ -780,7 +780,7 @@ msgstr "хворобу вчасно зупинили."
 
 #: ../../script/events/outside.js:123
 msgid "sufferers are healed"
-msgstr ""
+msgstr "пострадалі були виліковані"
 
 #: ../../script/events/outside.js:133
 msgid "the sickness spreads through the village."
@@ -868,7 +868,7 @@ msgstr "поселенці сумують за загиблими."
 
 #: ../../script/events/outside.js:235
 msgid "wild beasts attack the villagers"
-msgstr ""
+msgstr "дикі звірі атакують селян"
 
 #: ../../script/events/outside.js:249
 msgid "predators become prey. price is unfair"
