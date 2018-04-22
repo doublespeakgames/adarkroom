@@ -259,7 +259,8 @@ have been validly granted by You or Your distributors under this License
 prior to termination shall survive termination.
 
 
-```************************************************************************
+```
+************************************************************************
 *                                                                      *
 *  6. Disclaimer of Warranty                                           *
 *  -------------------------                                           *
