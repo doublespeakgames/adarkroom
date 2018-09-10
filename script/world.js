@@ -645,8 +645,8 @@ var World = {
 		if(!World.seenAll){
 			var x,y,mask = $SM.get('game.world.mask');
 			do {
-				x = Math.floor(Math.random() * (World.RADIUS * 2) + 1);
-				y = Math.floor(Math.random() * (World.RADIUS * 2) + 1);
+				x = Math.floor(Math.random() * (World.RADIUS * 2 + 1));
+				y = Math.floor(Math.random() * (World.RADIUS * 2 + 1));
 			} while (mask[x][y]);
 			World.uncoverMap(x, y, 5, mask);
 		}
