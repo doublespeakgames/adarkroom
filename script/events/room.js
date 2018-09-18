@@ -651,7 +651,7 @@ Events.Room = [
 					}
 				}
 			},
-			'killman':{
+			'killman': {
 				text: [
 					_("beaten to a pulp"),
 					_("the man had very little"),
@@ -663,6 +663,7 @@ Events.Room = [
 						text: _('gather goods'),
 						nextScene: 'end'
 					}
+				}
 			},
 			'killmanlots':{
 				text: [
@@ -674,6 +675,7 @@ Events.Room = [
 						text: _('gather goods'),
 						nextScene: 'end'
 					}
+				}
 			},
 			'killmannothing':{
 				text: [
@@ -685,6 +687,7 @@ Events.Room = [
 						text: _('gather goods'),
 						nextScene: 'end'
 					}
+				}
 			},
 			'scales': {
 				text: [
