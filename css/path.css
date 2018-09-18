@@ -19,6 +19,15 @@ div.outfitRow {
 	margin: 10px -30px 10px 0px;
 }
 
+.outfitRow:after {
+	content: "";
+	display: block;
+	width: 200px;
+    border-bottom: solid;
+    border-width:thin;
+	padding: 7px 0px 0px 0px;
+}
+    
 div.outfitRow > .row_val {
 	padding-right: 30px;
 	-webkit-touch-callout: none;
