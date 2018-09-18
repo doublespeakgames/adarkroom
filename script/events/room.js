@@ -609,7 +609,7 @@ Events.Room = [
 					},
 					'kill': {
 						 text: _('kill man, take supplies'),
-						 cost: { 'bullets': 5, 'rifle': 1},
+						 cost: { 'bullets': 5,},
 						 notification: _('the man fights back, however dies in the end'),
 						 nextScene: { 0.3: 'killman', 0.3: 'killmanlots', 0.4 'killmannothing' }
 					},
@@ -655,20 +655,19 @@ Events.Room = [
 				text: [
 					_("beaten to a pulp"),
 					_("the man had very little"),
-					_("you see his family in the distance"),
+					_("others cower in the distance"),
 					_("was it worth it")
 				],
 				buttons: {
 					'bye': {
-						text: _('shamefully gather goods'),
+						text: _('gather goods'),
 						nextScene: 'end'
 					}
 			},
 			'killmanlots':{
 				text: [
 					_("a life brutally ended"),
-					_("the man carried lots"),
-					_("your rewarded greatly")
+					_("the man carried a lot")
 				],
 				buttons: {
 					'bye': {
@@ -679,12 +678,11 @@ Events.Room = [
 			'killmannothing':{
 				text: [
 					_("the man lays there."),
-					_('he had nothing to give'),
-					_('is it really worth it')
+					_('he had nothing to give')
 				],
 				buttons: {
 					'bye': {
-						text: _('regret your actions'),
+						text: _('gather goods'),
 						nextScene: 'end'
 					}
 			},
