@@ -607,6 +607,12 @@ Events.Room = [
 						notification: _('the man swallows the medicine eagerly'),
 						nextScene: { 0.1: 'alloy', 0.3: 'cells', 0.5: 'scales', 1.0: 'nothing' }
 					},
+					'kill': {
+						 text: _('kill man, take supplies'),
+						 cost: { 'bullets': 5,},
+						 notification: _('the man fights back, however dies in the end'),
+						 nextScene: { 0.3: 'killman', 0.3: 'killmanlots', 0.4 'killmannothing' }
+					},
 					'ignore': {
 						text: _('tell him to leave'),
 						nextScene: 'end'
@@ -644,6 +650,41 @@ Events.Room = [
 						nextScene: 'end'
 					}
 				}
+			},
+			'killman':{
+				text: [
+					_("beaten to a pulp"),
+					_("the man had very little"),
+					_("others cower in the distance"),
+					_("was it worth it")
+				],
+				buttons: {
+					'bye': {
+						text: _('gather goods'),
+						nextScene: 'end'
+					}
+			},
+			'killmanlots':{
+				text: [
+					_("a life brutally ended"),
+					_("the man carried a lot")
+				],
+				buttons: {
+					'bye': {
+						text: _('gather goods'),
+						nextScene: 'end'
+					}
+			},
+			'killmannothing':{
+				text: [
+					_("the man lays there."),
+					_('he had nothing to give')
+				],
+				buttons: {
+					'bye': {
+						text: _('gather goods'),
+						nextScene: 'end'
+					}
 			},
 			'scales': {
 				text: [
