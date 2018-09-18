@@ -355,23 +355,43 @@ var World = {
 			}
 		}
 	},
-
+	
+	isWindowScrollable: function {
+	
+	  var docHeight = $(document).height();
+	  var windowHeight    = $(window).height();
+	  var isWindowScrollable = (docHeight > windowHeight);
+	  console.log(isWindowScrollable);
+	  if (isWindowScrollable === true){
+	    window.addEventListener("keydown", function(e) {
+	    // space and arrow keys
+	    if([37, 38, 39, 40, 87, 83, 65, 68].indexOf(e.keyCode) > -1) {
+		e.preventDefault();
+		console.log("prevented");
+	    }
+	}, false);  
+	  },
+	
 	keyDown: function(event) {
 		switch(event.which) {
 			case 38: // Up
 			case 87:
+				isWindowScrollable;
 				World.moveNorth();
 				break;
 			case 40: // Down
 			case 83:
+				isWindowScrollable;
 				World.moveSouth();
 				break;
 			case 37: // Left
 			case 65:
+				isWindowScrollable;
 				World.moveWest();
 				break;
 			case 39: // Right
 			case 68:
+				isWindowScrollable;
 				World.moveEast();
 				break;
 			default:
