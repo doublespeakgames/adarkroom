@@ -58,7 +58,7 @@ div#workers {
 div.storeRow div.tooltip {
 	width: 160px;
 }
-.storeRow:nth-child(even) {
-    border-style: solid none solid none;
+.storeRow {
+    border-style: solid none none none;
     border-width:thin;
 }
