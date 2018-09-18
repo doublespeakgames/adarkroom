@@ -591,9 +591,9 @@ var Outside = {
 	},
 	
 	gatherWood: function() {
-		Notifications.notify(Outside, _("dry brush and dead branches litter the forest floor"));
 		var gatherAmt = $SM.get('game.buildings["cart"]', true) > 0 ? 50 : 10;
 		$SM.add('stores.wood', gatherAmt);
+		Notifications.notify(Outside, _("dry brush and dead branches litter the forest floor +" + gatherAmt + " wood"));
 	},
 	
 	checkTraps: function() {
@@ -618,13 +618,23 @@ var Outside = {
 			}
 		}
 		/// TRANSLATORS : Mind the whitespace at the end.
-		var s = _('the traps contain ');
+		var whatObject = 0;
+		function getItemNumeration(){
+		var key = Object.keys(drops)[whatObject];
+		numOfObjects = drops[key];
+		whatObject++;
+		}
+		getItemNumeration();
+		var s = _(numTraps + ' traps contain ' + numOfObjects + ' ');
 		for(var l = 0, len = msg.length; l < len; l++) {
 			if(len > 1 && l > 0 && l < len - 1) {
-				s += ", ";
+			    getItemNumeration(); 
+				s += ", " + numOfObjects + " ";
 			} else if(len > 1 && l == len - 1) {
 				/// TRANSLATORS : Mind the whitespaces at the beginning and end.
-				s += _(" and ");
+				getItemNumeration();
+				s += _(" and " + numOfObjects + " ");
+				
 			}
 			s += msg[l];
 		}
