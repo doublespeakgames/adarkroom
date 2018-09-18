@@ -611,7 +611,7 @@ Events.Room = [
 						 text: _('kill man, take supplies'),
 						 cost: { 'bullets': 5,},
 						 notification: _('the man fights back, however dies in the end'),
-						 nextScene: { 0.3: 'killman', 0.3: 'killmanlots', 0.4 'killmannothing' }
+						 nextScene: { 0.3: 'killman', 0.3: 'killmanlots', 0.4: 'killmannothing' }
 					},
 					'ignore': {
 						text: _('tell him to leave'),
