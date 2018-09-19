@@ -1,4 +1,4 @@
-(function (Engine, Events, Dropbox, $) {
+(function(Engine, Events, Dropbox, $) {
 
   /**
    * Module that enables a save of the gamestate to the dropbox datastore
@@ -12,8 +12,12 @@
 
   'use strict';
 
-  if (!Engine) { return false; }  // Game Engine not available
-  if (!Dropbox) { return false; } // Dropbox Connector not available
+  if (!Engine) {
+    return false;
+  } // Game Engine not available
+  if (!Dropbox) {
+    return false;
+  } // Dropbox Connector not available
 
   var DropboxConnector = {
 
@@ -27,9 +31,15 @@
     table: false,
     dropboxAccount: false,
     savegameKey: false,
-    savegames: {0: null, 1: null, 2: null, 3: null, 4: null},
+    savegames: {
+      0: null,
+      1: null,
+      2: null,
+      3: null,
+      4: null
+    },
 
-    init: function (options) {
+    init: function(options) {
       this.options = $.extend(
         this.options,
         options
@@ -37,13 +47,15 @@
 
       this._log = this.options.log;
 
-      this.client = new Dropbox.Client({key: DropboxConnector.options.key});
+      this.client = new Dropbox.Client({
+        key: DropboxConnector.options.key
+      });
       this.connectToDropbox(false);
 
       return this;
     },
 
-    startDropbox: function () {
+    startDropbox: function() {
       if (!DropboxConnector.client || !DropboxConnector.table) {
         DropboxConnector.startDropboxConnectEvent();
       } else {
@@ -57,7 +69,7 @@
      * ******
      */
 
-    startDropboxConnectEvent: function () {
+    startDropboxConnectEvent: function() {
       Events.startEvent({
         title: _('Dropbox connection'),
         scenes: {
@@ -67,7 +79,7 @@
               'connect': {
                 text: _('connect'),
                 nextScene: 'end',
-                onChoose: function () {
+                onChoose: function() {
                   DropboxConnector.connectToDropbox(DropboxConnector.startDropboxImportEvent);
                 }
               },
@@ -81,21 +93,26 @@
       });
     },
 
-    startDropboxImportEvent: function () {
+    startDropboxImportEvent: function() {
       Events.startEvent({
         title: _('Dropbox Export / Import'),
         scenes: {
           start: {
             text: [_('export or import save data to dropbox datastorage'),
-                  _('your are connected to dropbox with account / email ') + DropboxConnector.dropboxAccount],
+              _('your are connected to dropbox with account / email ') + DropboxConnector.dropboxAccount
+            ],
             buttons: {
               'save': {
                 text: _('save'),
-                nextScene: {1: 'saveToSlot'}
+                nextScene: {
+                  1: 'saveToSlot'
+                }
               },
               'load': {
                 text: _('load'),
-                nextScene: {1: 'loadFromSlot'},
+                nextScene: {
+                  1: 'loadFromSlot'
+                },
                 onChoose: DropboxConnector.loadGamesFromDropbox
               },
               'signout': {
@@ -111,17 +128,17 @@
           },
           saveToSlot: {
             text: [_('choose one slot to save to')],
-            buttons: (function () {
+            buttons: (function() {
               var buttons = {};
 
-              $.each(DropboxConnector.savegames, function (n, savegame) {
+              $.each(DropboxConnector.savegames, function(n, savegame) {
                 buttons['savegame' + n] = {
                   text: _('save to slot') + n + ' ' + (savegame ? DropboxConnector.prepareSaveDate(savegame.get('timestamp')) : 'empty'),
                   nextScene: 'end',
-                  onChoose: function () {
+                  onChoose: function() {
                     DropboxConnector.log('Save to slot ' + n + ' initiated');
                     // timeout prevents error due to fade out animation of the previous event
-                    Engine.setTimeout(function () {
+                    Engine.setTimeout(function() {
                       DropboxConnector.log('Save to slot ' + n);
                       DropboxConnector.saveGameToDropbox(n, DropboxConnector.savedtoDropboxEvent);
                     }, 1000);
@@ -139,18 +156,18 @@
           },
           loadFromSlot: {
             text: [_('choose one slot to load from')],
-            buttons: (function () {
+            buttons: (function() {
               var buttons = {};
 
-              $.each(DropboxConnector.savegames, function (n, savegame) {
+              $.each(DropboxConnector.savegames, function(n, savegame) {
                 if (savegame) {
                   buttons['savegame' + n] = {
                     text: _('load from slot') + n + ' ' + DropboxConnector.prepareSaveDate(savegame.get('timestamp')),
                     nextScene: 'end',
-                    onChoose: function () {
+                    onChoose: function() {
                       DropboxConnector.log('Load from slot ' + n + ' initiated');
                       // timeout prevents error due to fade out animation of the previous event
-                      Engine.setTimeout(function () {
+                      Engine.setTimeout(function() {
                         DropboxConnector.log('Load from slot ' + n);
                         DropboxConnector.loadGameFromDropbox(n);
                       }, 1000);
@@ -171,13 +188,12 @@
       });
     },
 
-    savedtoDropboxEvent: function (success) {
+    savedtoDropboxEvent: function(success) {
       Events.startEvent({
         title: _('Dropbox Export / Import'),
         scenes: {
           start: {
-            text: success ? [_('successfully saved to dropbox datastorage')] :
-                [_('error while saving to dropbox datastorage')],
+            text: success ? [_('successfully saved to dropbox datastorage')] : [_('error while saving to dropbox datastorage')],
             buttons: {
               'ok': {
                 text: _('ok'),
@@ -201,13 +217,15 @@
      * @param interactive
      * @param callback
      */
-    connectToDropbox: function (interactive, callback) {
+    connectToDropbox: function(interactive, callback) {
 
       DropboxConnector.log('start dropbox');
 
       var client = this.client;
 
-      client.authenticate({interactive: interactive}, function (error) {
+      client.authenticate({
+        interactive: interactive
+      }, function(error) {
         if (error) {
           DropboxConnector.log('Dropbox Authentication error: ' + error);
         }
@@ -216,7 +234,7 @@
       if (client.isAuthenticated()) {
 
         var datastoreManager = client.getDatastoreManager();
-        datastoreManager.openDefaultDatastore(function (error, datastore) {
+        datastoreManager.openDefaultDatastore(function(error, datastore) {
           if (error) {
             DropboxConnector.log('Error opening default datastore: ' + error);
           } else {
@@ -225,7 +243,7 @@
 
             DropboxConnector.log(DropboxConnector.client.credentials());
 
-            DropboxConnector.client.getAccountInfo({}, function (error, info) {
+            DropboxConnector.client.getAccountInfo({}, function(error, info) {
               if (!error) {
                 DropboxConnector.dropboxAccount = info.email;
               }
@@ -248,11 +266,13 @@
      *
      * @returns {*}
      */
-    loadGamesFromDropbox: function () {
+    loadGamesFromDropbox: function() {
       var savegames = DropboxConnector.savegames;
 
-      $.each(savegames, function (n) {
-        var results = DropboxConnector.table.query({savegameId: DropboxConnector.prepareSavegameID(n)});
+      $.each(savegames, function(n) {
+        var results = DropboxConnector.table.query({
+          savegameId: DropboxConnector.prepareSavegameID(n)
+        });
         savegames[n] = results[0];
       });
 
@@ -264,11 +284,13 @@
      *
      * @param slotnumber
      */
-    loadGameFromDropbox: function (slotnumber) {
+    loadGameFromDropbox: function(slotnumber) {
 
       var table = DropboxConnector.table;
       var id = DropboxConnector.prepareSavegameID(slotnumber);
-      var results = table.query({savegameId: id});
+      var results = table.query({
+        savegameId: id
+      });
       var record = results[0];
 
       if (record && record.get('gameState')) {
@@ -282,7 +304,7 @@
      * @param slotnumber
      * @param callback
      */
-    saveGameToDropbox: function (slotnumber, callback) {
+    saveGameToDropbox: function(slotnumber, callback) {
 
       var table = DropboxConnector.table;
       var record = null;
@@ -322,8 +344,8 @@
     /**
      * Terminates the connection to your db account
      */
-    signout: function () {
-      DropboxConnector.client.signOut({}, function (error) {
+    signout: function() {
+      DropboxConnector.client.signOut({}, function(error) {
         if (error) {
           alert('Error while logout from dropbox');
         } else {
@@ -341,16 +363,16 @@
      * **************
      */
 
-    prepareSavegameID: function (slotnumber) {
+    prepareSavegameID: function(slotnumber) {
       return 'adarkroom_savegame_' + slotnumber;
     },
 
-    prepareSaveDate: function (timestamp) {
+    prepareSaveDate: function(timestamp) {
       var date = new Date(timestamp);
       return date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
     },
 
-    log: function () {
+    log: function() {
       if (this._log) {
         console.log(arguments);
       }

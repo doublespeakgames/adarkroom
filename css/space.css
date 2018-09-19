@@ -1,154 +1,158 @@
 @-ms-keyframes spin {
-	0% { 
-		-ms-transform: rotate(0deg);
-		-webkit-transform: rotate(0deg); 
-		-moz-transform: rotate(0deg);
-		transform:rotate(0deg); 
-	}
-	100% { 
-		-ms-transform: rotate(360deg); 
-		-webkit-transform: rotate(360deg); 
-		-moz-transform: rotate(360deg);
-		transform:rotate(360deg); 
-	}
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 @-webkit-keyframes spin {
-	0% { 
-		-ms-transform: rotate(0deg);
-		-webkit-transform: rotate(0deg); 
-		-moz-transform: rotate(0deg);
-		transform:rotate(0deg); 
-	}
-	100% { 
-		-ms-transform: rotate(360deg); 
-		-webkit-transform: rotate(360deg); 
-		-moz-transform: rotate(360deg);
-		transform:rotate(360deg); 
-	}
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 @-moz-keyframes spin {
-	0% { 
-		-ms-transform: rotate(0deg);
-		-webkit-transform: rotate(0deg); 
-		-moz-transform: rotate(0deg);
-		transform:rotate(0deg); 
-	}
-	100% { 
-		-ms-transform: rotate(360deg); 
-		-webkit-transform: rotate(360deg); 
-		-moz-transform: rotate(360deg);
-		transform:rotate(360deg); 
-	}
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-	0% { 
-		-ms-transform: rotate(0deg);
-		-webkit-transform: rotate(0deg); 
-		-moz-transform: rotate(0deg);
-		transform:rotate(0deg); 
-	}
-	100% { 
-		-ms-transform: rotate(360deg); 
-		-webkit-transform: rotate(360deg); 
-		-moz-transform: rotate(360deg);
-		transform:rotate(360deg); 
-	}
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 #spacePanel {
-	float: none !important;
-	position: absolute !important;
-	top: -700px;
-	left: 0px;
+  float: none !important;
+  position: absolute !important;
+  top: -700px;
+  left: 0px;
 }
 
 #starsContainer {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
 }
 
 #stars, #starsBack {
-	position: absolute;
-	z-index: -1;
-	left: 0px;
+  position: absolute;
+  z-index: -1;
+  left: 0px;
 }
 
-#stars > div, #starsBack > div {
-	position: relative;
-	height: 3000px;
-	width: 3000px;
-	color: white;
+#stars>div, #starsBack>div {
+  position: relative;
+  height: 3000px;
+  width: 3000px;
+  color: white;
 }
 
 #starsBack {
-	opacity: 0.5;
+  opacity: 0.5;
 }
 
 .star {
-	position: absolute;
+  position: absolute;
 }
 
 #ship {
-	cursor: default;
-	position: absolute;
-	margin-top: -10px;
-	margin-left: -7.5px;
+  cursor: default;
+  position: absolute;
+  margin-top: -10px;
+  margin-left: -7.5px;
 }
 
 #theEnd {
-	position: relative;
-	cursor: default;
-	top: 200px;
-	margin-left: -220px;
-	text-align: center;
-	font-size: 24px;
-	font-weight: bold;
-	opacity: 0;
-	color: white;
+  position: relative;
+  cursor: default;
+  top: 200px;
+  margin-left: -220px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 0;
+  color: white;
 }
 
 .asteroid {
-	cursor: default;
-	position: absolute;
-	top: -40px;
-	left: 350px;
-	-webkit-animation: 1s linear 0s normal none infinite spin;
-	-moz-animation: 1s linear 0s normal none infinite spin;
-	-ms-animation: 1s linear 0s normal none infinite spin;
-	animation: 1s linear 0s normal none infinite spin;
-	font-size: 32px;
+  cursor: default;
+  position: absolute;
+  top: -40px;
+  left: 350px;
+  -webkit-animation: 1s linear 0s normal none infinite spin;
+  -moz-animation: 1s linear 0s normal none infinite spin;
+  -ms-animation: 1s linear 0s normal none infinite spin;
+  animation: 1s linear 0s normal none infinite spin;
+  font-size: 32px;
 }
 
 #hullRemaining {
-	width: 70px;
-	position: absolute;
-	top: 0px;
-	left: 0px;
+  width: 70px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 .centerCont {
-	padding-top:10%;
+  padding-top: 10%;
 }
 
 .endGame {
-	font-size:48px;
-	color:#FFFFFF;
-	opacity:0;
-	position:relative;
+  font-size: 48px;
+  color: #FFFFFF;
+  opacity: 0;
+  position: relative;
 }
 
 .endGameOption {
-	font-size: 32px;
-	cursor: pointer;
+  font-size: 32px;
+  cursor: pointer;
 }
 
 .endGameOption:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
