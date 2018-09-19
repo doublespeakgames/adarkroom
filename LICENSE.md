@@ -35,7 +35,7 @@ Mozilla Public License Version 2.0
     means any form of the work other than Source Code Form.
 
 1.7. "Larger Work"
-    means a work that combines Covered Software with other material, in 
+    means a work that combines Covered Software with other material, in
     a separate file or files, that is not Covered Software.
 
 1.8. "License"
@@ -258,6 +258,8 @@ end user license agreements (excluding distributors and resellers) which
 have been validly granted by You or Your distributors under this License
 prior to termination shall survive termination.
 
+
+```
 ************************************************************************
 *                                                                      *
 *  6. Disclaimer of Warranty                                           *
@@ -299,6 +301,7 @@ prior to termination shall survive termination.
 *  limitation may not apply to You.                                    *
 *                                                                      *
 ************************************************************************
+```
 
 8. Litigation
 -------------
