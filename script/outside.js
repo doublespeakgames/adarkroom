@@ -47,7 +47,7 @@ var Outside = {
 			delay: 10,
 			stores: {
 				'meat': -5,
-				'wood': -5,
+				'wood': -1,
 				'cured meat': 1
 			}
 		},
@@ -55,7 +55,7 @@ var Outside = {
 			name: _('iron miner'),
 			delay: 10,
 			stores: {
-				'cured meat': -1,
+				'cured meat': -6,
 				'iron': 1
 			}
 		},
@@ -63,7 +63,7 @@ var Outside = {
 			name: _('coal miner'),
 			delay: 10,
 			stores: {
-				'cured meat': -1,
+				'cured meat': -11,
 				'coal': 1
 			}
 		},
@@ -71,7 +71,7 @@ var Outside = {
 			name: _('sulphur miner'),
 			delay: 10,
 			stores: {
-				'cured meat': -1,
+				'cured meat': -21,
 				'sulphur': 1
 			}
 		},
