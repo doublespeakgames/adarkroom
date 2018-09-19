@@ -1059,6 +1059,7 @@ var Events = {
 			if(options != null && options.width != null) {
 				Events.eventPanel().css('width', options.width);
 			}
+			$('<div>').attr('id', 'eventBackground').appendTo(Events.eventPanel());
 			$('<div>').addClass('eventTitle').text(Events.activeEvent().title).appendTo(Events.eventPanel());
 			$('<div>').attr('id', 'description').appendTo(Events.eventPanel());
 			$('<div>').attr('id', 'buttons').appendTo(Events.eventPanel());
