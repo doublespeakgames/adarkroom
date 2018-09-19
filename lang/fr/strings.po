@@ -92,11 +92,11 @@ msgstr "boxeur"
 
 #: ../../script/engine.js:16
 msgid "punches do more damage"
-msgstr "les points font plus de dégats"
+msgstr "les coups points font plus de dégats"
 
 #: ../../script/engine.js:18
 msgid "learned to throw punches with purpose"
-msgstr "appris à donner des coups de poings avec un objectif"
+msgstr "vous avez appris à donner des coups de poings avec un objectif"
 
 #: ../../script/engine.js:21
 msgid "martial artist"
@@ -104,11 +104,11 @@ msgstr "maître d'un art martial"
 
 #: ../../script/engine.js:22
 msgid "punches do even more damage."
-msgstr "les coups de poings font plus de dégats"
+msgstr "les coups de poings font encore plus de dégats"
 
 #: ../../script/engine.js:23
 msgid "learned to fight quite effectively without weapons"
-msgstr "apprendre à se battre de façon efficace sans arme"
+msgstr "vous avez appris à vous battre de façon efficace sans arme"
 
 #: ../../script/engine.js:27
 msgid "unarmed master"
@@ -262,7 +262,7 @@ msgstr "exporter ou importer vos données de sauvegarde"
 
 #: ../../script/engine.js:273
 msgid "or migrating computers"
-msgstr "pour sauver votre partie ou changer d'ordinateur"
+msgstr "ou changer d'ordinateur"
 
 #: ../../script/engine.js:277
 msgid "export"
@@ -290,7 +290,7 @@ msgstr "si le code est incorrect, toutes les données seront perdues."
 
 #: ../../script/engine.js:307
 msgid "this is irreversible."
-msgstr "Il n'y a pas de retour en arrière possible."
+msgstr "c'est irreversible."
 
 #: ../../script/engine.js:311 ../../script/engine.js:380
 #: ../../script/engine.js:526
@@ -370,7 +370,7 @@ msgstr "Passer en Hyper ?"
 msgid ""
 "turning hyper mode speeds up the game to x2 speed. do you want to do that?"
 msgstr ""
-"le mode hyper accélère la vitesse du jeu (2x). est-ce ce que vous souhaitez ?"
+"le mode hyper accélère la vitesse du jeu (2x). voulez-vous faire ça ?"
 
 #: ../../script/engine.js:546
 msgid "classic."
@@ -443,7 +443,7 @@ msgstr "tout"
 
 #: ../../script/events.js:740
 msgid "take everything"
-msgstr "prendre tout"
+msgstr "tout prendre"
 
 #: ../../script/events.js:740
 msgid "take all you can"
@@ -471,7 +471,7 @@ msgstr "la bête grognante est morte."
 
 #: ../../script/events/encounters.js:39
 msgid "a snarling beast leaps out of the underbrush"
-msgstr "une bête grondante surgit des buissons"
+msgstr "une bête grongnante surgit des buissons"
 
 #: ../../script/events/encounters.js:44
 msgid "A Gaunt Man"
@@ -935,9 +935,7 @@ msgstr "acheter une boussole"
 
 #: ../../script/events/room.js:42
 msgid "the old compass is dented and dusty, but it looks to work."
-msgstr ""
-"la vieille boussole est abîmée et rouillée, mais elle semble encore "
-"fonctionner"
+msgstr "la vieille boussole est abîmée et rouillée, mais elle semble encore fonctionner"
 
 #: ../../script/events/room.js:45 ../../script/events/room.js:227
 #: ../../script/events/room.js:240 ../../script/events/room.js:253
@@ -1180,7 +1178,7 @@ msgstr "en échange, il offrira un peu de sa sagesse."
 
 #: ../../script/events/room.js:496
 msgid "evasion"
-msgstr "esquive"
+msgstr "fuite"
 
 #: ../../script/events/room.js:506
 msgid "precision"
@@ -1196,7 +1194,7 @@ msgstr "Le malade"
 
 #: ../../script/events/room.js:542
 msgid "a man hobbles up, coughing."
-msgstr "un homme arrive. boitillant et toussant."
+msgstr "un homme arrive. boitant et toussant."
 
 #: ../../script/events/room.js:543
 msgid "he begs for medicine."
@@ -1204,7 +1202,7 @@ msgstr "il supplie pour quelques médicaments."
 
 #: ../../script/events/room.js:545
 msgid "a sick man hobbles up"
-msgstr "un homme arrive, boitillant"
+msgstr "un homme arrive, boitant"
 
 #: ../../script/events/room.js:549
 msgid "give 1 medicine"
@@ -1242,7 +1240,7 @@ msgstr "quelques écailles, toutes ses possessions."
 
 #: ../../script/events/room.js:610
 msgid "the man expresses his thanks and hobbles off."
-msgstr "l'homme vous remercie et repart, boitillant."
+msgstr "l'homme vous remercie et repart, en boitant."
 
 #: ../../script/events/setpieces.js:6
 msgid "An Outpost"
