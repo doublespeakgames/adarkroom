@@ -834,13 +834,8 @@ var Room = {
 				$('<div>').addClass('row_val').text(Math.floor(num)).appendTo(row);
 				$('<div>').addClass('clear').appendTo(row);
 				var curPrev = null;
-				location.children().each(function(i) {
-					var child = $(this);
-					var cName = child.children('.row_key').text();
-					if(cName < lk) {
-						curPrev = child.attr('id');
-					}
-				});
+				location.children.each(location_call(i));
+				
 				if(curPrev == null) {
 					row.prependTo(location);
 				} else {
@@ -883,6 +878,14 @@ var Room = {
 		if($SM.get('stores.compass') && !Room.pathDiscovery){
 			Room.pathDiscovery = true;
 			Path.openPath();
+		}
+	},
+	
+	location_call: function(i){
+		var child = $(this);
+		var cName = child.children('.row_key').text();
+		if(cName < lk) {
+			curPrev = child.attr('id');
 		}
 	},
 	

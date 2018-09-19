@@ -213,7 +213,7 @@ var Events = {
 		if(!btn) {
 			btn = $('#pause');
 		}
-		if((auto) && (document.hasFocus() == !Events.paused)) {
+		if((auto) && (document.hasFocus() != Events.paused)) {
 			return;
 		}
 		var f = (Events.paused) ? Events.removePause : Events.setPause;

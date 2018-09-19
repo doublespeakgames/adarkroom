@@ -282,15 +282,8 @@ var Outside = {
 				row = Outside.makeWorkerRow(k, workerCount);
 				
 				var curPrev = null;
-				workers.children().each(function(i) {
-					var child = $(this);
-					var cName = child.children('.row_key').text();
-					if(cName != 'gatherer') {
-						if(cName < lk) {
-							curPrev = child.attr('id');
-						}
-					}
-				});
+				workers.children().each(workers_call(i));
+				
 				if(curPrev == null && gatherer.length === 0) {
 					row.prependTo(workers);
 				} else if(curPrev == null) {
@@ -330,6 +323,16 @@ var Outside = {
 		
 		if(needsAppend && workers.children().length > 0) {
 			workers.appendTo('#outsidePanel').animate({opacity:1}, 300, 'linear');
+		}
+	},
+	
+	workers_call: function(i){
+		var child = $(this);
+		var cName = child.children('.row_key').text();
+		if(cName != 'gatherer') {
+			if(cName < lk) {
+				curPrev = child.attr('id');
+			}
 		}
 	},
 	

@@ -2164,7 +2164,7 @@ msgstr "정찰술 배우기"
 msgid "The Master"
 msgstr "명인"
 
-#: script/events/room.js:466
+#: script/events/room.js:525
 msgid "an old wanderer arrives."
 msgstr "늙은 나그네가 나타난다."
 
@@ -2172,7 +2172,7 @@ msgstr "늙은 나그네가 나타난다."
 msgid "he smiles warmly and asks for lodgings for the night."
 msgstr "따뜻한 미소를 지으며 밤을 지낼 오두막을 청한다."
 
-#: script/events/room.js:469
+#: script/events/room.js:528
 msgid "an old wanderer arrives"
 msgstr "늙은 나그네가 나타난다"
 
@@ -2307,7 +2307,7 @@ msgstr "도무지 이해할 수 없는 파괴와 정복자의 욕심을 채우�
 
 #: script/events/setpieces.js:75
 msgid "his time here, now, is his penance."
-msgstr "지금, 여기에서는, 속죄하고 있다."
+msgstr "여기에서는, 지금, 그의 속죄의 시간이다."
 
 #: script/events/setpieces.js:91
 msgid "A Damp Cave"
@@ -2323,7 +2323,7 @@ msgstr "안은 들여다 볼 수 없다."
 
 #: script/events/setpieces.js:98
 msgid "the earth here is split, as if bearing an ancient wound"
-msgstr "이곳은 땅은, 오랜 상처를 견뎌온 것처럼 갈라져있다"
+msgstr "이곳의 땅은, 오랜 상처를 견뎌온 것처럼 갈라져있다"
 
 #: script/events/setpieces.js:101 script/events/setpieces.js:2944
 #: script/events/setpieces.js:3458
@@ -2956,7 +2956,7 @@ msgstr "이 작은 마을은 불타기 시작한지 얼마 안된 게 분명하�
 #: script/events/setpieces.js:2527
 msgid ""
 "the bodies of the wanderers that lived here are still visible in the flames."
-msgstr "여기 살던 떠돌이들이 시체가 아직도 불길 속에서 보인다."
+msgstr "여기 살았던 떠돌이들의 시체가 아직도 불길 속에서 보인다."
 
 #: script/events/setpieces.js:2528
 msgid "still time to rescue a few supplies."
@@ -2965,7 +2965,7 @@ msgstr "아직 약간의 보급품을 건질 시간은 있다."
 #: script/events/setpieces.js:2562
 msgid ""
 "the remaining settlers flee from the violence, their belongings forgotten."
-msgstr "남은 주민들은 재난을 피해 피난을, 가진건 모두 버리고 떠난다."
+msgstr "남은 주민들은 재난을 피해 가진건 모두 버리고 피난을 떠난다."
 
 #: script/events/setpieces.js:2563
 msgid "there's not much, but some useful things can still be found."
@@ -3133,7 +3133,7 @@ msgstr "광산 입구에는 이미 군대가 자리잡고 있다."
 
 #: script/events/setpieces.js:3161
 msgid "soldiers patrol the perimeter, rifles slung over their shoulders."
-msgstr "군인들이 주위를, 어깨에 소총을 매고 순찰한다."
+msgstr "군인들이 어깨에 소총을 매고 주위를 순찰한다."
 
 #: script/events/setpieces.js:3163
 msgid "a military perimeter is set up around the mine."
@@ -3245,7 +3245,7 @@ msgstr "파괴된 마을"
 
 #: script/events/setpieces.js:3528
 msgid "a destroyed village lies in the dust."
-msgstr "파괴된 마을이 흙먼지도 뒤덮여 있다."
+msgstr "파괴된 마을이 흙먼지로 뒤덮여 있다."
 
 #: script/events/setpieces.js:3529
 msgid "charred bodies litter the ground."
