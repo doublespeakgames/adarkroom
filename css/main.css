@@ -56,7 +56,7 @@ div#saveNotify {
 div#content {
 	position: relative;
 	overflow: hidden;
-	height: 700px;
+	height: 1100px;
 }
 
 div#header {
@@ -163,7 +163,7 @@ div#outerSlider > div {
 	position: relative;
 	float: left;
 	width: 700px;
-	height: 700px;
+	height: 1100px;
 	overflow: hidden;
 }
 
