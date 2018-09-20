@@ -481,7 +481,7 @@ var Room = {
       $SM.set('game.builder.level', -1);
     }
 
-    // If this is the first time playing, the fire is dead and it's freezing. 
+    // If this is the first time playing, the fire is dead and it's freezing.
     // Otherwise grab past save state temp and fire level.
     $SM.set('game.temperature', $SM.get('game.temperature.value') === undefined ? this.TempEnum.Freezing : $SM.get('game.temperature'));
     $SM.set('game.fire', $SM.get('game.fire.value') === undefined ? this.FireEnum.Dead : $SM.get('game.fire'));
@@ -878,13 +878,7 @@ var Room = {
         $('<div>').addClass('row_val').text(Math.floor(num)).appendTo(row);
         $('<div>').addClass('clear').appendTo(row);
         var curPrev = null;
-        location.children().each(function(i) {
-          var child = $(this);
-          var cName = child.children('.row_key').text();
-          if (cName < lk) {
-            curPrev = child.attr('id');
-          }
-        });
+        
         if (curPrev == null) {
           row.prependTo(location);
         } else {
