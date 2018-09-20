@@ -1,3 +1,4 @@
+
 _.setTranslation({
   "water tank": "\u6c34\u7f50",
   "all": "\u5168\u90e8",
