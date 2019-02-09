@@ -884,6 +884,8 @@ var Room = {
 			Room.pathDiscovery = true;
 			Path.openPath();
 		}
+
+		Room.updateIncomeView();
 	},
 	
 	updateIncomeView: function() {
