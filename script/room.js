@@ -920,6 +920,7 @@ var Room = {
 				$('<div>').addClass('total row_key').text(_('total')).appendTo(tt);
 				$('<div>').addClass('total row_val').text(Engine.getIncomeMsg(total, totalIncome[storeName].delay)).appendTo(tt);
 				tt.appendTo(el);
+				$(el.context.children[1]).text($SM.get('stores["' + storeName + '"]', true) + " (" + (total >= 0 ? "+" : "") + total + ")");
 			}
 		});
 	},
