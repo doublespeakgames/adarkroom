@@ -1,70 +1,71 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Jasmine Spec Runner v3.4.0</title>
+    <meta charset="utf-8">
+    <title>Jasmine Spec Runner v3.4.0</title>
 
-  <link rel="shortcut icon" type="image/png" href="lib/jasmine-3.4.0/jasmine_favicon.png">
-  <link rel="stylesheet" href="lib/jasmine-3.4.0/jasmine.css">
+    <link rel="shortcut icon" type="image/png" href="lib/jasmine-3.4.0/jasmine_favicon.png">
+    <link rel="stylesheet" href="lib/jasmine-3.4.0/jasmine.css">
 
-  <script src="lib/jasmine-3.4.0/jasmine.js"></script>
-  <script src="lib/jasmine-3.4.0/jasmine-html.js"></script>
-  <script src="lib/jasmine-3.4.0/boot.js"></script>
+    <script src="lib/jasmine-3.4.0/jasmine.js"></script>
+    <script src="lib/jasmine-3.4.0/jasmine-html.js"></script>
+    <script src="lib/jasmine-3.4.0/boot.js"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-	<script>
-		if(!window.jQuery) {
-			document.write('<script src="lib/jquery.min.js"><\/script>')
-		}
-	</script>
-	<script src="../../lib/jquery.color-2.1.2.min.js"></script>
-	<script src="../../lib/jquery.event.move.js"></script>
-	<script src="../../lib/jquery.event.swipe.js"></script>
-	<script src="../../lib/base64.js"></script>
-	<script src="../../lib/translate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+        if (!window.jQuery) {
+            document.write('<script src="lib/jquery.min.js"><\/script>')
+        }
+    </script>
+    <script src="../../lib/jquery.color-2.1.2.min.js"></script>
+    <script src="../../lib/jquery.event.move.js"></script>
+    <script src="../../lib/jquery.event.swipe.js"></script>
+    <script src="../../lib/base64.js"></script>
+    <script src="../../lib/translate.js"></script>
 
-	<script src="../../script/Button.js"></script>
-	<script src="../../script/engine.js"></script>
-	<script src="../../script/state_manager.js"></script>
-	<script src="../../script/header.js"></script>
-	<script src="../../script/notifications.js"></script>
-	<script src="../../script/events.js"></script>
-	<script src="../../script/room.js"></script>
-	<script src="../../script/outside.js"></script>
-	<script src="../../script/world.js"></script>
-	<script src="../../script/path.js"></script>
-	<script src="../../script/ship.js"></script>
-	<script src="../../script/space.js"></script>
-	<script src="../../script/prestige.js"></script>
-	<script src="../../script/scoring.js"></script>
-	<!-- Event modules -->
-	<script src="../../script/events/global.js"></script>
-	<script src="../../script/events/room.js"></script>
-	<script src="../../script/events/outside.js"></script>
-	<script src="../../script/events/encounters.js"></script>
-	<script src="../../script/events/setpieces.js"></script>
+    <script src="../../script/Button.js"></script>
+    <script src="../../script/engine.js"></script>
+    <script src="../../script/state_manager.js"></script>
+    <script src="../../script/header.js"></script>
+    <script src="../../script/notifications.js"></script>
+    <script src="../../script/events.js"></script>
+    <script src="../../script/room.js"></script>
+    <script src="../../script/outside.js"></script>
+    <script src="../../script/world.js"></script>
+    <script src="../../script/path.js"></script>
+    <script src="../../script/ship.js"></script>
+    <script src="../../script/space.js"></script>
+    <script src="../../script/prestige.js"></script>
+    <script src="../../script/scoring.js"></script>
+    <!-- Event modules -->
+    <script src="../../script/events/global.js"></script>
+    <script src="../../script/events/room.js"></script>
+    <script src="../../script/events/outside.js"></script>
+    <script src="../../script/events/encounters.js"></script>
+    <script src="../../script/events/setpieces.js"></script>
 
-	<script type='text/javascript'>
-		var oldIE = false;
-	</script>
-	<!--[if lt IE 9]>
-		<script type="text/javascript">oldIE = true;</script>
-	<![endif]-->
+    <script type='text/javascript'>
+        var oldIE = false;
+    </script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript">oldIE = true;</script>
+    <![endif]-->
 
-	<link rel="stylesheet" type="text/css" href="css/main.css" />
-	<link rel="stylesheet" type="text/css" href="css/room.css" />
-	<link rel="stylesheet" type="text/css" href="css/outside.css" />
-	<link rel="stylesheet" type="text/css" href="css/path.css" />
-	<link rel="stylesheet" type="text/css" href="css/world.css" />
-	<link rel="stylesheet" type="text/css" href="css/ship.css" />
-	<link rel="stylesheet" type="text/css" href="css/space.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/room.css" />
+    <link rel="stylesheet" type="text/css" href="css/outside.css" />
+    <link rel="stylesheet" type="text/css" href="css/path.css" />
+    <link rel="stylesheet" type="text/css" href="css/world.css" />
+    <link rel="stylesheet" type="text/css" href="css/ship.css" />
+    <link rel="stylesheet" type="text/css" href="css/space.css" />
 
-	<script src="../../script/localization.js"></script>
+    <script src="../../script/localization.js"></script>
 
-  <!-- Testing Modules -->
-  <script src="spec/GatherWoodAndTrapsSpec.js"></script>
-  <script src="spec/TestMovement.js"></script>
-  <script src="spec/AddandKillVillager.js"></script>
+    <!-- Testing Modules -->
+    <script src="spec/GatherWoodAndTrapsSpec.js"></script>
+    <script src="spec/TestMovement.js"></script>
+    <script src="spec/AddandKillVillager.js"></script>
+    <script src="spec/PathSpec.js"></script>
 </head>
 
 <body>
