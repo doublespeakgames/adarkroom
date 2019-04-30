@@ -9,22 +9,62 @@ describe("Test Movement Capabilities", function() {
 
     it("can move north", function() {
       World.moveNorth();
+      expect(World.curPos[0]).toEqual(World.RADIUS);
       expect(World.curPos[1]).toEqual(World.RADIUS - 1);
     });
 
     it("can move south", function() {
       World.moveSouth();
+      expect(World.curPos[0]).toEqual(World.RADIUS);
       expect(World.curPos[1]).toEqual(World.RADIUS + 1);
     });
 
     it("can move west", function() {
       World.moveWest();
       expect(World.curPos[0]).toEqual(World.RADIUS - 1);
+      expect(World.curPos[1]).toEqual(World.RADIUS);
     });
 
     it("can move east", function() {
       World.moveEast();
       expect(World.curPos[0]).toEqual(World.RADIUS + 1);
+      expect(World.curPos[1]).toEqual(World.RADIUS);
+    });
+
+    it("can't move north at border", function() {
+      World.curPos[0] = 0;
+      World.curPos[1] = 0;
+
+      World.moveNorth();
+      expect(World.curPos[0]).toEqual(0);
+      expect(World.curPos[1]).toEqual(0);
+    });
+
+    it("can't move south at border", function() {
+      World.curPos[0] = World.RADIUS * 2;
+      World.curPos[1] = World.RADIUS * 2;
+
+      World.moveSouth();
+      expect(World.curPos[0]).toEqual(World.RADIUS * 2);
+      expect(World.curPos[1]).toEqual(World.RADIUS * 2);
+    });
+
+    it("can't move west at border", function() {
+      World.curPos[0] = 0;
+      World.curPos[1] = 0;
+
+      World.moveWest();
+      expect(World.curPos[0]).toEqual(0);
+      expect(World.curPos[1]).toEqual(0);
+    });
+
+    it("can't move east at border", function() {
+      World.curPos[0] = World.RADIUS * 2;
+      World.curPos[1] = World.RADIUS * 2;
+
+      World.moveEast();
+      expect(World.curPos[0]).toEqual(World.RADIUS * 2);
+      expect(World.curPos[1]).toEqual(World.RADIUS * 2);
     });
   });
 
