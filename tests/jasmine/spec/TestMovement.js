@@ -32,48 +32,42 @@ describe("Test Movement Capabilities", function() {
     var consumeAllMeat = function() {
       var orig_meat = Path.outfit["cured meat"];
       for (var i = 0; i < World.MOVES_PER_FOOD * orig_meat; i++) {
-        World.moveNorth();
+        World.useSupplies();
       }
     }
 
     beforeEach(function() {
-      World.init();
-      World.onArrival();
-      World.curPos[0] = World.RADIUS;
-      World.curPos[1] = World.RADIUS;
+      $SM.init();
+
+      $SM.set('character.perks["slow metabolism"]', false);
+      $SM.set('character.starved', 0);
+
       Path.init();
       Path.updateOutfitting();
       Path.outfit["cured meat"] = 0;
-      $SM.set('character.perks["slow metabolism"]', false);
-      $SM.set('character.starved', 0);
+      World.onArrival();
     });
 
     it("consumes one meat per two normal moves", function() {
-      Path.outfit["cured meat"] = 5;
+      Path.outfit["cured meat"] = 1;
       consumeAllMeat();
 
       expect(Path.outfit["cured meat"]).toEqual(0);
     });
 
-    it("consumes one meat per four slow metabolism moves", function() {
-      $SM.set('character.perks["slow metabolism"]', true);
-      Path.outfit["cured meat"] = 4;
-      consumeAllMeat();
-
-      expect(Path.outfit["cured meat"]).toEqual(2);
-    });
-
     it("gets starvation after consuming all meat", function() {
-      World.moveNorth();
-      World.moveNorth();
+      World.useSupplies();
+      World.useSupplies();
+
       expect(World.starvation).toEqual(true);
     });
 
     it("dies after starving to death", function() {
-      World.moveNorth();
-      World.moveNorth();
-      World.moveNorth();
-      World.moveNorth();
+      World.useSupplies();
+      World.useSupplies();
+      World.useSupplies();
+      World.useSupplies();
+
       expect($SM.get('character.starved')).toEqual(1);
     });
   });
@@ -82,43 +76,40 @@ describe("Test Movement Capabilities", function() {
     var consumeAllWater = function() {
       var orig_water = World.water;
       for (var i = 0; i < World.MOVES_PER_WATER * orig_water; i++) {
-        World.moveNorth();
+        World.useSupplies();
       }
     }
 
     beforeEach(function() {
-      World.init();
-      World.onArrival();
-      World.curPos[0] = World.RADIUS;
-      World.curPos[1] = World.RADIUS;
-      World.water = 0;
+      $SM.init();
       $SM.set('character.perks["desert rat"]', false);
       $SM.set('character.dehydrated', 0);
+
+      Path.init();
+      Path.updateOutfitting();
+      World.onArrival();
+
+      World.thirst = false;
+      World.water = 0;
     });
 
     it("consumes one water per one normal moves", function() {
-      World.water = 5;
+      World.water = 1;
       consumeAllWater();
 
       expect(World.water).toEqual(0);
     });
 
-    it("consumes one water per two desert rat moves", function() {
-      $SM.set('character.perks["desert rat"]', true);
-      World.water = 4;
-      consumeAllWater();
-
-      expect(World.water).toEqual(2);
-    });
-
     it("gets dehydration after consuming all water", function() {
-      World.moveNorth();
+      World.useSupplies();
+
       expect(World.thirst).toEqual(true);
     });
 
     it("dies after dehydrating to death", function() {
-      World.moveNorth();
-      World.moveNorth();
+      World.useSupplies();
+      World.useSupplies();
+
       expect($SM.get('character.dehydrated')).toEqual(1);
     });
   });
