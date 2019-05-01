@@ -5,41 +5,39 @@ describe("Increase and decrease worker population Capabilities", function () {
 		
 		beforeEach( function(){
         Outside.init();
-		$SM.set('game.workers', 20);
-      
+		
 		});
 		
-		it("5 workers should be added to the original amount of 20 ", function() {
-			/*var row = $('<div>')
-			.attr('key', key)
-			.attr('id', 'workers_row_' + key.replace(' ','-'))
-			.addClass('workerRow');
-			$('<div>').addClass('row_key').text(name).appendTo(row);
-			var val = $('<div>').addClass('row_val').appendTo(row);
-			var btn = $('<div>').addClass('upBtn').appendTo(val).click([1], Outside.increaseWorker);*/
-			
-			//var btn = document.createElement("BUTTON");
-			//document.body.appendEle
-			
+		it("1 worker should be added to the original amount of 10, resulting in 11", function() {
+			$SM.set('game.workers', 10);			
 			var btn =  {
 				
-				data: 5
+				data: 10,
 				
 			}
-			
 			Outside.increaseWorker(btn);
-			expect($SM.get('game.workers')).toEqual(25);
+			expect($SM.get('game.workers')).toEqual(11);
+					
 			
 			
-			
+		});
+		
+		it("1 worker should be added to the original amount of 15, resulting in 16", function() {
+			$SM.set('game.workers', 15);			
+			var btn =  {
+				
+				data: 15,
+				
+			}
+			Outside.increaseWorker(btn);
+			expect($SM.get('game.workers')).toEqual(16);
+					
 			
 			
 		});
 		
 		
-		
-		
-		
+				
 		
 		
 		
@@ -47,30 +45,51 @@ describe("Increase and decrease worker population Capabilities", function () {
 		
 	});	
 	
-	/*describe("Remove Worker", function(){
+	describe("Remove Worker", function(){
+		
 		
 		beforeEach( function(){
         Outside.init();
-		$SM.set('game.workers',100);
+		
+		});
+		
+		it("1 worker should be removed from the original amount of 10, resulting in 9", function() {
+			$SM.set('game.workers', 10);			
+			var btn =  {
+				
+				data: 10,
+				
+			}
+			Outside.decreaseWorker(btn);
+			expect($SM.get('game.workers')).toEqual(9);
+					
+			
+			
+			
 		});
 		
 		
-		it("Decrease the amount of workers by 10",function(){
+		
+		it("1 worker should be removed from the original amount of 15, resulting in 14", function() {
+			$SM.set('game.workers', 15);			
+			var btn =  {
+				
+				data: 15,
+				
+			}
+			Outside.decreaseWorker(btn);
+			expect($SM.get('game.workers')).toEqual(14);
+					
 			
-			expect($SM.get('game.workers')).toEqual(100);
 			
-			
-		});	
+		});
 		
 		
 		
 		
 		
 		
-		
-		
-	});	*/
-	
+	});		
 	
 	
 	
