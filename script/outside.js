@@ -374,12 +374,38 @@ var Outside = {
 		return row;
 	},
 	
+	/*increaseWorker: function(*btn*) {
+		var worker = $(this).closest('.workerRow').attr('key');
+		if(Outside.getNumGatherers() > 0) {
+			console.log("The amount of gatherers is greater than zero");
+			console.log("There are " + Outside.getNumGatherers() + " gatherers");
+			console.log("The amount of workers is " + $SM.get('game.workers'));
+			//console.log("btn.data is equal to " + btn.data);
+			//var increaseAmt = Math.min(Outside.getNumGatherers(), btn.data);
+			var increaseAmt = 5;
+			//console.log("The amount of workers will be increase by " + increaseAmt); 
+			Engine.log('increasing ' + worker + ' by ' + increaseAmt);
+			$SM.add('game.workers["'+worker+'"]', increaseAmt);
+		}
+		else{
+				console.log("The amount of Gatherers is less than zero");
+		}
+		//$SM.set('game.workers',50);
+	},*/
+	
 	increaseWorker: function(btn) {
 		var worker = $(this).closest('.workerRow').attr('key');
 		if(Outside.getNumGatherers() > 0) {
+			alert("There are " + Outside.getNumGatherers() + " gatherers");
 			var increaseAmt = Math.min(Outside.getNumGatherers(), btn.data);
+			alert("The workers is increased by " + increaseAmt);
 			Engine.log('increasing ' + worker + ' by ' + increaseAmt);
 			$SM.add('game.workers["'+worker+'"]', increaseAmt);
+			alert("The amount of workers is " + $SM.get('game.workers'));
+			alert("There are " + Outside.getNumGatherers() + " gatherers");
+			alert("The amount of workers is " + $SM.get('game.workers["worker"]'));
+			
+			
 		}
 	},
 	
