@@ -153,4 +153,69 @@ describe("Test Movement Capabilities", function() {
       expect($SM.get('character.dehydrated')).toEqual(1);
     });
   });
+
+  describe("Test Perks", function() {
+    beforeEach(function() {
+      $SM.init();
+      $SM.set('character.perks["desert rat"]', false);
+      $SM.set('character.dehydrated', 0);
+      $SM.set('character.perks["slow metabolism"]', false);
+      $SM.set('character.starved', 0);
+
+      Path.init();
+      Path.updateOutfitting();
+      Path.outfit["cured meat"] = 0;
+      World.onArrival();
+
+      World.thirst = false;
+      World.water = 0;
+      World.foodMove = 0;
+      World.waterMove = 0;
+    });
+
+    it("gains desert rat after dehydrating to death 10 times", function() {
+      $SM.set('character.dehydrated', 9);
+
+      World.useSupplies();
+      World.useSupplies();
+
+      expect($SM.get('character.perks["desert rat"]')).toEqual(true);
+    });
+
+    it("gains slow metabolism after starving to death 10 times", function() {
+      $SM.set('character.starved', 9);
+      World.water = 10;
+
+      World.useSupplies();
+      World.useSupplies();
+      World.useSupplies();
+      World.useSupplies();
+
+      expect($SM.get('character.perks["slow metabolism"]')).toEqual(true);
+    });
+
+    it("one water used for two desert rat moves", function() {
+      $SM.set('character.perks["desert rat"]', true);
+      World.water = 2;
+      Path.outfit["cured meat"] = 10;
+
+      World.useSupplies();
+      World.useSupplies();
+
+      expect(World.water).toEqual(1);
+    });
+
+    it("one food used per four slow metabolism moves", function() {
+      $SM.set('character.perks["slow metabolism"]', true);
+      World.water = 10;
+      Path.outfit["cured meat"] = 2;
+
+      World.useSupplies();
+      World.useSupplies();
+      World.useSupplies();
+      World.useSupplies();
+
+      expect(Path.outfit["cured meat"]).toEqual(1);
+    });
+  });
 });
