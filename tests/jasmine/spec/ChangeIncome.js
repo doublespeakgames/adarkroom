@@ -16,6 +16,12 @@ describe("Test changing income", function () {
     beforeEach(function() {
       $SM.init();
       Outside.init();
+      for(var source in $SM.get('income')) {
+        $SM.setIncome(source, {
+  				delay: 10,
+  				stores: {'wood' : 0 }
+  			});
+      }
     });
 
     it("can set income to 1", function() {
@@ -62,6 +68,12 @@ describe("Test changing income", function () {
     beforeEach(function() {
       $SM.init();
       Outside.init();
+      for(var source in $SM.get('income')) {
+        $SM.setIncome(source, {
+  				delay: 10,
+  				stores: {'wood' : 0 }
+  			});
+      }
 
       $SM.setIncome('thieves', {
   			delay: 10,

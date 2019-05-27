@@ -1,4 +1,4 @@
-describe("Gather Wood and Check Traps Capabilities", function() {
+describe("Gather Resources Capabilities", function() {
   describe("Gather Wood", function() {
     beforeEach(function() {
       Outside.init();
@@ -119,6 +119,78 @@ describe("Gather Wood and Check Traps Capabilities", function() {
 
       Outside.checkTraps();
       expect($SM.get('stores.charm')).toEqual(1);
+    });
+  });
+
+  describe("Builder Gathers Wood", function() {
+    beforeEach(function() {
+      $SM.init();
+      Room.init();
+      $SM.set('stores.wood', 0);
+      for(var source in $SM.get('income')) {
+        $SM.setIncome(source, {
+  				delay: 10,
+  				stores: {'wood' : 0 }
+  			});
+      }
+    });
+
+    it("sets builder income to 0 if builder level is less than 3", function() {
+      $SM.set('game.builder.level', 1);
+      Room.onArrival();
+
+      var builder_income = $SM.getIncome("builder");
+
+      expect(builder_income["stores"]["wood"]).toEqual(0);
+    });
+
+    it("sets builder income to 2 if builder level is equal to 3", function() {
+      $SM.set('game.builder.level', 3);
+      Room.onArrival();
+
+      var builder_income = $SM.getIncome("builder");
+
+      expect(builder_income["stores"]["wood"]).toEqual(2);
+    });
+
+    it("builder collects 0 wood if builder level is less than 3", function() {
+      $SM.set('game.builder.level', 1);
+      Room.onArrival();
+
+      $SM.set('income["builder"]["timeLeft"]', 0);
+      $SM.collectIncome();
+
+      expect($SM.get('stores.wood')).toEqual(0);
+    });
+
+    it("builder collects 2 wood if builder level is equal to 3", function() {
+      $SM.set('game.builder.level', 3);
+      Room.onArrival();
+
+      $SM.set('income["builder"]["timeLeft"]', 0);
+      $SM.collectIncome();
+
+      expect($SM.get('stores.wood')).toEqual(2);
+    });
+
+    it("builder collects 0 wood if builder level is less than 3 and there is still time left in countdown", function() {
+      $SM.set('game.builder.level', 1);
+      Room.onArrival();
+
+      $SM.set('income["builder"]["timeLeft"]', 2);
+      $SM.collectIncome();
+
+      expect($SM.get('stores.wood')).toEqual(0);
+    });
+
+    it("builder collects 0 wood if builder level is equal to 3 and there is still time left in countdown", function() {
+      $SM.set('game.builder.level', 3);
+      Room.onArrival();
+
+      $SM.set('income["builder"]["timeLeft"]', 2);
+      $SM.collectIncome();
+
+      expect($SM.get('stores.wood')).toEqual(0);
     });
   });
 });
