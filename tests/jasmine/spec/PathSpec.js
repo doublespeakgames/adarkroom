@@ -8,7 +8,7 @@ describe("Path Capabilities", function () {
             Path.DEFAULT_BAG_SPACE = 10;
         });
         it("Appropriate Capacity for Default", function () {
-            $SM.set('stores.rucksack', false);
+			$SM.set('stores.rucksack', false);
             expect(Path.getCapacity()).toEqual(Path.DEFAULT_BAG_SPACE);
         });
         it("Appropriate Capacity for Rucksack", function () {
@@ -66,5 +66,56 @@ describe("Path Capabilities", function () {
             expect(Path.getWeight("bolas")).toEqual(0.5);
         });
     });
+	
+	describe("Appropiate free space", function() {
+		beforeEach(function () {
+            Path.init();
+            $SM.set('stores.rucksack', false);
+            $SM.set('stores.convoy',false);
+            $SM.set('stores.wagon', false);
+            Path.DEFAULT_BAG_SPACE = 10;
+        });
+		
+		it("Expect free space to equal 10", function(){
+			var freeSpace = Path.getFreeSpace();
+			expect(freeSpace).toEqual(10);
+		});
+		
+		it("Expect free space to equal 20", function(){
+
+			$SM.set('stores.rucksack',true);
+			var freeSpace = Path.getFreeSpace();
+			expect(freeSpace).toEqual(20);
+			
+
+		});	
+
+		it("Expect free space to equal 40", function(){
+			
+			$SM.set('stores.rucksack',true);
+			$SM.set('stores.wagon',true);
+			var freeSpace = Path.getFreeSpace();
+			expect(freeSpace).toEqual(40);
+					
+			
+			
+		});
+		
+		it("Expect free space to equal 70", function(){
+			
+			$SM.set('stores.rucksack',true);
+			$SM.set('stores.wagon',true);
+			$SM.set('stores.convoy',true);
+			var freeSpace = Path.getFreeSpace();
+			expect(freeSpace).toEqual(70);
+					
+			
+		});
+		
+		
+		
+		
+		
+	});
    
 });
