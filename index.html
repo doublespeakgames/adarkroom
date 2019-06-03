@@ -2,10 +2,10 @@
 <html itemscope itemtype="https://schema.org/CreativeWork">
 <head>
 	<meta charset="UTF-8"/>
-	<!--  
+	<!--
 		A Dark Room (v1.4)
 		==================
-		
+
 		A minimalist text adventure by Michael Townsend and all his friends.
 		Inspired by Candy Box (http://candies.aniwey.net/)
 		Contribute on GitHub! (https://github.com/doublespeakgames/adarkroom/)
@@ -28,9 +28,9 @@
 	<script src="lib/jquery.event.swipe.js"></script>
 	<script src="lib/base64.js"></script>
 	<script src="lib/translate.js"></script>
-	
+
 	<script src="lang/langs.js"></script>
-	
+
 	<script>
 		// try to read "lang" param's from url
 		var lang = decodeURIComponent((new RegExp('[?|&]lang=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
@@ -46,7 +46,7 @@
 			document.write('<link rel="stylesheet" type="text/css" href="lang/'+lang+'/main.css" \/>');
 		}
 	</script>
-	
+
 	<script src="script/Button.js"></script>
 	<script src="script/engine.js"></script>
 	<script src="script/state_manager.js"></script>
@@ -57,6 +57,7 @@
 	<script src="script/room.js"></script>
 	<script src="script/outside.js"></script>
 	<script src="script/world.js"></script>
+	<script src="script/configs/path_settings.js"></script>
 	<script src="script/path.js"></script>
 	<script src="script/ship.js"></script>
 	<script src="script/space.js"></script>
@@ -68,14 +69,14 @@
 	<script src="script/events/outside.js"></script>
 	<script src="script/events/encounters.js"></script>
 	<script src="script/events/setpieces.js"></script>
-	
+
 	<script type='text/javascript'>
 		var oldIE = false;
 	</script>
-	<!--[if lt IE 9]> 
-		<script type="text/javascript">oldIE = true;</script> 
+	<!--[if lt IE 9]>
+		<script type="text/javascript">oldIE = true;</script>
 	<![endif]-->
-	
+
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
 	<link rel="stylesheet" type="text/css" href="css/room.css" />
 	<link rel="stylesheet" type="text/css" href="css/outside.css" />
@@ -83,7 +84,7 @@
 	<link rel="stylesheet" type="text/css" href="css/world.css" />
 	<link rel="stylesheet" type="text/css" href="css/ship.css" />
 	<link rel="stylesheet" type="text/css" href="css/space.css" />
-	
+
 	<script src="script/localization.js"></script>
 	<!-- Google Analytics -->
 	<script>
@@ -95,7 +96,7 @@
 		ga('create', 'UA-41314886-1', 'doublespeakgames.com');
 		ga('send', 'pageview');
 	</script>
-	
+
 </head>
 <body>
 	<div id="wrapper">
