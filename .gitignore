@@ -3,3 +3,5 @@
 *.mo
 *.swp
 .idea
+lang/.DS_Store
+.DS_Store
