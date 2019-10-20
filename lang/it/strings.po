@@ -484,7 +484,7 @@ msgstr "zolfo"
 
 #: script/localization.js:18
 msgid "energy cell"
-msgstr "batteria"
+msgstr "cella d'energia"
 
 #: script/localization.js:19 script/room.js:161
 msgid "torch"
