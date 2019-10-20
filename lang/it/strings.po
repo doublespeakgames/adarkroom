@@ -692,7 +692,7 @@ msgstr "scampoli di stoffa"
 
 #: script/outside.js:127
 msgid "a crudely made charm"
-msgstr "un amuleto di fattura grezza"
+msgstr "un amuleto dall'aspetto indefinito"
 
 #: script/outside.js:143 script/outside.js:562
 msgid "A Silent Forest"
