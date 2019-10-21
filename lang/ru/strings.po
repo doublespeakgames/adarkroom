@@ -37,7 +37,7 @@ msgstr "отмена"
 #: ../../script/dropbox.js:86 ../../script/dropbox.js:176
 #, fuzzy
 msgid "Dropbox Export / Import"
-msgstr "Экспорт / Импорт"
+msgstr "Дропбокс Экспорт / Импорт"
 
 #: ../../script/dropbox.js:89
 #, fuzzy
@@ -77,7 +77,7 @@ msgstr "выберите один из слотов, чтобы загрузит
 #: ../../script/dropbox.js:148
 #, fuzzy
 msgid "load from slot"
-msgstr "сохранить."
+msgstr "загрузить."
 
 #: ../../script/dropbox.js:179
 msgid "successfully saved to dropbox datastorage"
@@ -236,7 +236,7 @@ msgstr "выключить свет."
 
 #: ../../script/engine.js:150 ../../script/engine.js:521
 msgid "hyper."
-msgstr ""
+msgstr "гипер."
 
 #: ../../script/engine.js:156 ../../script/space.js:442
 msgid "restart."
@@ -2632,7 +2632,7 @@ msgstr "компас указывает"
 
 #: ../../script/path.js:102
 msgid "perks:"
-msgstr "перки:"
+msgstr "надбавки:"
 
 #: ../../script/path.js:132
 msgid "none"
@@ -3331,10 +3331,10 @@ msgstr "Пустынный мир"
 #~ msgstr "Экспорт"
 
 #~ msgid "enegy cell"
-#~ msgstr "клетка энергии"
+#~ msgstr "энергетическая ячейка"
 
 #~ msgid "the {0} is dead."
 #~ msgstr "le {0} est mort"
 
 #~ msgid "not enough {0}"
-#~ msgstr "pas assez de {0}"
+#~ msgstr "недостаточно {0}"
