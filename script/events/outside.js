@@ -171,8 +171,8 @@ Events.Outside = [
 						reward: { 'medicine': 1 }
 					},
 					'heal': {
-						text: _('5 medicine'),
-						cost: { 'medicine' : 5 },
+						text: _('2 medicine'),
+						cost: { 'medicine' : 2 },
 						nextScene: {1: 'healed'}
 					},
 					'ignore': {
