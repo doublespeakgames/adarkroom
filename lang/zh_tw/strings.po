@@ -23,7 +23,7 @@ msgstr "dropbox連接"
 
 #: ../../script/dropbox.js:65
 msgid "connect game to dropbox local storage"
-msgstr "連接到dropbox雲存儲"
+msgstr "連接到dropbox本地存儲"
 
 #: ../../script/dropbox.js:68
 msgid "connect"
@@ -329,7 +329,7 @@ msgstr "臉書"
 
 #: ../../script/engine.js:421
 msgid "google+"
-msgstr "環聊"
+msgstr "Google+"
 
 #: ../../script/engine.js:428
 msgid "twitter"
@@ -349,16 +349,16 @@ msgstr "開燈"
 
 #: ../../script/engine.js:493
 msgid "Go Hyper?"
-msgstr ""
+msgstr "開啟加速模式？"
 
 #: ../../script/engine.js:496
 msgid ""
 "turning hyper mode speeds up the game to x2 speed. do you want to do that?"
-msgstr ""
+msgstr "開啟加速模式遊戲速度將會增加一倍。你確定想要這麼做嗎？"
 
 #: ../../script/engine.js:519
 msgid "classic."
-msgstr ""
+msgstr "經典模式"
 
 #: ../../script/engine.js:620
 msgid "{0} per {1}s"
@@ -421,11 +421,11 @@ msgstr "一無所獲"
 
 #: ../../script/events.js:627
 msgid "all"
-msgstr ""
+msgstr "全部"
 
 #: ../../script/events.js:649
 msgid "take everything"
-msgstr ""
+msgstr "全部取走"
 
 #: ../../script/events.js:653 ../../script/outside.js:627
 msgid " and "
@@ -433,7 +433,7 @@ msgstr "以及"
 
 #: ../../script/events.js:896
 msgid "*** EVENT ***"
-msgstr "*** 消息 ***"
+msgstr "*** 事件 ***"
 
 #: ../../script/events/encounters.js:7
 msgid "A Snarling Beast"
@@ -675,7 +675,7 @@ msgstr "森林歸於靜謐"
 
 #: ../../script/events/outside.js:40
 msgid "nothing was found"
-msgstr ""
+msgstr "沒有找到任何東西"
 
 #: ../../script/events/outside.js:43 ../../script/events/outside.js:61
 #: ../../script/events/outside.js:126 ../../script/events/outside.js:144
@@ -718,7 +718,7 @@ msgstr "火災已經開始"
 #: ../../script/events/outside.js:86
 #, fuzzy
 msgid "mourn"
-msgstr "護甲"
+msgstr "哀悼"
 
 #: ../../script/events/outside.js:87
 msgid "some villagers have died"
@@ -755,7 +755,7 @@ msgstr "疫病及時得到了控制"
 
 #: ../../script/events/outside.js:123
 msgid "sufferers are healed"
-msgstr ""
+msgstr "受苦者獲得治療"
 
 #: ../../script/events/outside.js:133
 msgid "the sickness spreads through the village."
@@ -771,7 +771,7 @@ msgstr "尖叫響徹黑夜"
 
 #: ../../script/events/outside.js:137
 msgid "sufferers are left to die"
-msgstr ""
+msgstr "受苦者被遺棄致死"
 
 #: ../../script/events/outside.js:153
 msgid "Plague"
@@ -812,7 +812,7 @@ msgstr "剩下的人埋葬了他們"
 
 #: ../../script/events/outside.js:190
 msgid "epidemic is eradicated eventually"
-msgstr ""
+msgstr "大流感鐘就被消滅"
 
 #: ../../script/events/outside.js:204
 msgid "the plague rips through the village."
@@ -824,7 +824,7 @@ msgstr "人們只求速死"
 
 #: ../../script/events/outside.js:208
 msgid "population is almost exterminated"
-msgstr ""
+msgstr "大部分人口幾乎都被殲滅了"
 
 #: ../../script/events/outside.js:224
 msgid "A Beast Attack"
@@ -844,11 +844,11 @@ msgstr "村民撤了回來，悼念那些死去的人"
 
 #: ../../script/events/outside.js:235
 msgid "wild beasts attack the villagers"
-msgstr ""
+msgstr "野獸開始攻擊村民"
 
 #: ../../script/events/outside.js:249
 msgid "predators become prey. price is unfair"
-msgstr ""
+msgstr "狩獵者變成獵物。價格並不公平"
 
 #: ../../script/events/outside.js:258
 msgid "A Military Raid"
@@ -873,7 +873,7 @@ msgstr "黑死病席捲村落"
 
 #: ../../script/events/outside.js:283
 msgid "warfare is bloodthirsty"
-msgstr ""
+msgstr "一場嗜血的戰爭"
 
 #: ../../script/events/room.js:6
 msgid "The Nomad"
@@ -1461,41 +1461,41 @@ msgstr "街頭有埋伏"
 
 #: ../../script/events/setpieces.js:601
 msgid "a squat building up ahead."
-msgstr ""
+msgstr "前方一棟蹲樓"
 
 #: ../../script/events/setpieces.js:602
 msgid "a green cross barely visible behind grimy windows."
-msgstr ""
+msgstr "在骯髒的窗戶後勉強看得到一個綠色的十字"
 
 #: ../../script/events/setpieces.js:618
 msgid "a small cache of supplies is tucked inside a rusting locker."
-msgstr ""
+msgstr "在一個生鏽的置物櫃內塞進了些許補給"
 
 #: ../../script/events/setpieces.js:680
 msgid "a scavenger waits just inside the door."
-msgstr ""
+msgstr "一個撿破爛的人就在裡面等候"
 
 #: ../../script/events/setpieces.js:714
 msgid "a beast stands alone in an overgrown park."
-msgstr ""
+msgstr "一個猛獸聳立在茂密的公園內"
 
 #: ../../script/events/setpieces.js:730
 msgid "an overturned caravan is spread across the pockmarked street."
-msgstr ""
+msgstr "在充滿凹痕的街道上佈滿了傾倒得車隊"
 
 #: ../../script/events/setpieces.js:731
 msgid ""
 "it's been picked over by scavengers, but there's still some things worth "
 "taking."
-msgstr ""
+msgstr "這已經被撿破爛的人搜刮過了，但還是遺留一些有用的東西"
 
 #: ../../script/events/setpieces.js:793
 msgid "a madman attacks, screeching."
-msgstr ""
+msgstr "一個瘋子尖叫的攻擊著"
 
 #: ../../script/events/setpieces.js:832
 msgid "a thug moves out of the shadows."
-msgstr ""
+msgstr "一個暴徒從陰影中走出來"
 
 #: ../../script/events/setpieces.js:866
 #, fuzzy
@@ -1509,7 +1509,7 @@ msgstr "嘈雜聲透牆傳來"
 
 #: ../../script/events/setpieces.js:883
 msgid "the torchlight casts a flickering glow down the hallway."
-msgstr ""
+msgstr "火把所噴出的火光照亮了下方的長廊"
 
 #: ../../script/events/setpieces.js:884
 #, fuzzy
@@ -1518,115 +1518,115 @@ msgstr "安靜下來了"
 
 #: ../../script/events/setpieces.js:917
 msgid "another beast, draw by the noise, leaps out of a copse of trees."
-msgstr ""
+msgstr "另一隻野獸，聽見聲音，從矮林中探出"
 
 #: ../../script/events/setpieces.js:933
 msgid "something's causing a commotion a ways down the road."
-msgstr ""
+msgstr "後方的路有甚麼東西引發了騷動"
 
 #: ../../script/events/setpieces.js:934
 msgid "a fight, maybe."
-msgstr ""
+msgstr "一場爭鬥，也許吧"
 
 #: ../../script/events/setpieces.js:949
 msgid ""
 "a small basket of food is hidden under a park bench, with a note attached."
-msgstr ""
+msgstr "一個裝著食物得小籃子藏在公園的板凳下，上面附著一個紙條"
 
 #: ../../script/events/setpieces.js:950
 msgid "can't read the words."
-msgstr ""
+msgstr "字已經看不清楚了"
 
 #: ../../script/events/setpieces.js:997
 msgid "a panicked scavenger bursts through the door, screaming."
-msgstr ""
+msgstr "一個慌張的撿破爛者衝進門內，尖叫著"
 
 #: ../../script/events/setpieces.js:1036
 msgid "a man stands over a dead wanderer. notices he's not alone."
-msgstr ""
+msgstr "一個男子站在一個流浪者的屍體一旁。他注意到他並不孤單"
 
 #: ../../script/events/setpieces.js:1052
 msgid "scavenger had a small camp in the school."
-msgstr ""
+msgstr "撿破爛者在學校內有一個小營地"
 
 #: ../../script/events/setpieces.js:1053
 msgid "collected scraps spread across the floor like they fell from heaven."
-msgstr ""
+msgstr "蒐集來的零碎廢棄物散佈在地板上，彷彿從天堂降下來的一班"
 
 #: ../../script/events/setpieces.js:1095
 msgid "scavenger'd been looking for supplies in here, it seems."
-msgstr ""
+msgstr "看來，撿破爛的人在這裡找尋物資"
 
 #: ../../script/events/setpieces.js:1096
 msgid "a shame to let what he'd found go to waste."
-msgstr ""
+msgstr "如果和她說他所將找到的都是廢物應該很可恥"
 
 #: ../../script/events/setpieces.js:1128
 msgid ""
 "beneath the wanderer's rags, clutched in one of its many hands, a glint of "
 "steel."
-msgstr ""
+msgstr "在流浪者破舊得衣服後，一隻手緊握著一個閃爍的金屬"
 
 #: ../../script/events/setpieces.js:1129
 msgid "worth killing for, it seems."
-msgstr ""
+msgstr "看來值得拚了命去取得"
 
 #: ../../script/events/setpieces.js:1156
 msgid "eye for an eye seems fair."
-msgstr ""
+msgstr "以眼還眼看似公平"
 
 #: ../../script/events/setpieces.js:1157
 msgid "always worked before, at least."
-msgstr ""
+msgstr "之少之前都可行"
 
 #: ../../script/events/setpieces.js:1158
 msgid "picking the bones finds some useful trinkets."
-msgstr ""
+msgstr "在骨頭之間找尋有用得小物資"
 
 #: ../../script/events/setpieces.js:1200
 msgid "some medicine abandoned in the drawers."
-msgstr ""
+msgstr "一些藥品遺留在抽屜內"
 
 #: ../../script/events/setpieces.js:1222
 msgid "the clinic has been ransacked."
-msgstr ""
+msgstr "這診所已經被洗劫過了"
 
 #: ../../script/events/setpieces.js:1223
 msgid "only dust and stains remain."
-msgstr ""
+msgstr "只剩下灰塵與污垢"
 
 #: ../../script/events/setpieces.js:1239
 #, fuzzy
 msgid "A Ruined City"
-msgstr "損毀的陷阱"
+msgstr "損毀的城市"
 
 #: ../../script/events/setpieces.js:1243
 msgid ""
 "a battered highway sign stands guard at the entrance to this once-great city."
-msgstr ""
+msgstr "一個被打扁的高速公路站牌看守著這一個曾經偉大的城市"
 
 #: ../../script/events/setpieces.js:1244
 msgid ""
 "the towers that haven't crumbled jut from the landscape like the ribcage of "
 "some ancient beast."
-msgstr ""
+msgstr "一個尚未被摧毀的高塔在這風景內就像一個古老怪物的肋骨"
 
 #: ../../script/events/setpieces.js:1245
 msgid "might be things worth having still inside."
-msgstr ""
+msgstr "也許還有一些值得哪取的東西在裡面"
 
 #: ../../script/events/setpieces.js:1247
 msgid "the towers of a decaying city dominate the skyline"
-msgstr ""
+msgstr "在這損壞的城市這高塔主宰者天際線"
 
 #: ../../script/events/setpieces.js:1261
 #, fuzzy
 msgid "the streets are empty."
-msgstr "剩下的人埋葬了他們"
+msgstr "接上空無一人"
 
 #: ../../script/events/setpieces.js:1262
 msgid "the air is filled with dust, driven relentlessly by the hard winds."
-msgstr ""
+msgstr "空氣瀰漫著沙塵，被風無情的拖曳著"
 
 #: ../../script/events/setpieces.js:1270 ../../script/events/setpieces.js:1286
 #: ../../script/events/setpieces.js:1302 ../../script/events/setpieces.js:1318
