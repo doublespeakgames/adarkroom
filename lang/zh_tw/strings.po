@@ -1659,67 +1659,67 @@ msgstr "離開洞穴"
 
 #: ../../script/events/setpieces.js:1277
 msgid "orange traffic cones are set across the street, faded and cracked."
-msgstr ""
+msgstr "橘色的三角錐橫跨了街道，碎裂且逐漸令人遺忘"
 
 #: ../../script/events/setpieces.js:1278
 msgid "lights flash through the alleys between buildings."
-msgstr ""
+msgstr "有光線從建築間的走道上閃爍"
 
 #: ../../script/events/setpieces.js:1293
 msgid "a large shanty town sprawls across the streets."
-msgstr ""
+msgstr "簡陋房屋所形成的城鎮在街道上蔓延開"
 
 #: ../../script/events/setpieces.js:1294
 msgid "faces, darkened by soot and blood, stare out from crooked huts."
-msgstr ""
+msgstr "一張張沾滿油煙與鮮血的臉從屋縫裡探出來"
 
 #: ../../script/events/setpieces.js:1309
 msgid "the shell of an abandoned hospital looms ahead."
-msgstr ""
+msgstr "凋零的廢棄醫院隱約出現在前方"
 
 #: ../../script/events/setpieces.js:1325
 msgid "the old tower seems mostly intact."
-msgstr ""
+msgstr "這座老塔看似完好"
 
 #: ../../script/events/setpieces.js:1326
 msgid "the shell of a burned out car blocks the entrance."
-msgstr ""
+msgstr "被燒毀的汽車擋住了入口"
 
 #: ../../script/events/setpieces.js:1327
 msgid "most of the windows at ground level are busted anyway."
-msgstr ""
+msgstr "大部分在一樓的窗戶都被打破了"
 
 #: ../../script/events/setpieces.js:1342
 msgid "a huge lizard scrambles up out of the darkness of an old metro station."
-msgstr ""
+msgstr "一隻巨大的蜥蜴從一個老舊地鐵站的黑暗中爬了出來"
 
 #: ../../script/events/setpieces.js:1368
 msgid "descend"
-msgstr ""
+msgstr "向下"
 
 #: ../../script/events/setpieces.js:1380
 msgid "the shot echoes in the empty street."
-msgstr ""
+msgstr "槍聲在空蕩的街道上回響"
 
 #: ../../script/events/setpieces.js:1420
 msgid "the soldier steps out from between the buildings, rifle raised."
-msgstr ""
+msgstr "一位士兵從建築物間走出來，他舉起了他的步槍"
 
 #: ../../script/events/setpieces.js:1460
 msgid "a frail man stands defiantly, blocking the path."
-msgstr ""
+msgstr "一個虛弱的男子堅定的站在那擋住前方的路"
 
 #: ../../script/events/setpieces.js:1505
 msgid "nothing but downcast eyes."
-msgstr ""
+msgstr "充滿了氣餒的眼神"
 
 #: ../../script/events/setpieces.js:1506
 msgid "the people here were broken a long time ago."
-msgstr ""
+msgstr "很久以前這裡的人都已經分崩離析"
 
 #: ../../script/events/setpieces.js:1521
 msgid "empty corridors."
-msgstr ""
+msgstr "空的迴廊"
 
 #: ../../script/events/setpieces.js:1522
 msgid "the place has been swept clean by scavengers."
