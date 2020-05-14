@@ -1723,125 +1723,125 @@ msgstr "空的迴廊"
 
 #: ../../script/events/setpieces.js:1522
 msgid "the place has been swept clean by scavengers."
-msgstr ""
+msgstr "這個地方已經被掠奪者搶光了"
 
 #: ../../script/events/setpieces.js:1536
 msgid "an old man bursts through a door, wielding a scalpel."
-msgstr ""
+msgstr "一個老人衝進門內揮舞著手術刀"
 
 #: ../../script/events/setpieces.js:1575
 msgid "a thug is waiting on the other side of the wall."
-msgstr ""
+msgstr "一個混混在牆的另一頭等著"
 
 #: ../../script/events/setpieces.js:1615
 #, fuzzy
 msgid "a snarling beast jumps out from behind a car."
-msgstr "一隻咆哮的野獸從灌木叢裡躥了出來"
+msgstr "一隻咆哮的野獸從車子後方裡跳了出來"
 
 #: ../../script/events/setpieces.js:1656
 msgid "street above the subway platform is blown away."
-msgstr ""
+msgstr "地鐵月台上的道路已經被炸開"
 
 #: ../../script/events/setpieces.js:1657
 msgid "lets some light down into the dusty haze."
-msgstr ""
+msgstr "讓燈光照亮底下的塵土飄揚"
 
 #: ../../script/events/setpieces.js:1658
 msgid "a sound comes from the tunnel, just ahead."
-msgstr ""
+msgstr "就在前方的隧道內傳出了聲響"
 
 #: ../../script/events/setpieces.js:1675
 msgid "looks like a camp of sorts up ahead."
-msgstr ""
+msgstr "前方看起來好像有帳篷營地的樣子"
 
 #: ../../script/events/setpieces.js:1677
 msgid "rusted chainlink is pulled across an alleyway."
-msgstr ""
+msgstr "生鏽的鐵絲網圍繞住了走道"
 
 #: ../../script/events/setpieces.js:1678
 msgid "fires burn in the courtyard beyond."
-msgstr ""
+msgstr "就在庭外有火焰正在燃燒"
 
 #: ../../script/events/setpieces.js:1694
 #, fuzzy
 msgid "more voices can be heard ahead."
-msgstr "古怪的聲響透過牆壁傳來"
+msgstr "古怪的聲響透在前方傳來"
 
 #: ../../script/events/setpieces.js:1695
 msgid "they must be here for a reason."
-msgstr ""
+msgstr "它們出現在這裡一定是有甚麼原因"
 
 #: ../../script/events/setpieces.js:1711
 #, fuzzy
 msgid "the sound of gunfire carries on the wind."
-msgstr "雙開門在風中不停地咯吱作響"
+msgstr "槍聲隨著風在空氣中傳遞"
 
 #: ../../script/events/setpieces.js:1712
 msgid "the street ahead glows with firelight."
-msgstr ""
+msgstr "前方的道路有火光"
 
 #: ../../script/events/setpieces.js:1729
 msgid "more squatters are crowding around now."
-msgstr ""
+msgstr "許多佔據房子的人聚集在一起"
 
 #: ../../script/events/setpieces.js:1730
 msgid "someone throws a stone."
-msgstr ""
+msgstr "有人丟了顆石頭"
 
 #: ../../script/events/setpieces.js:1746
 msgid "an improvised shop is set up on the sidewalk."
-msgstr ""
+msgstr "一個臨時搭建的商店設置在道路的一旁"
 
 #: ../../script/events/setpieces.js:1747
 #, fuzzy
 msgid "the owner stands by, stoic."
-msgstr "安靜下來了"
+msgstr "店老闆就堅定的站在那裏"
 
 #: ../../script/events/setpieces.js:1792
 msgid "strips of meat hang drying by the side of the street."
-msgstr ""
+msgstr "一條又一條的肉掛在道路一旁曬乾"
 
 #: ../../script/events/setpieces.js:1793
 msgid "the people back away, avoiding eye contact."
-msgstr ""
+msgstr "人們都退開來，避免眼神交會"
 
 #: ../../script/events/setpieces.js:1818
 msgid "someone has locked and barricaded the door to this operating theatre."
-msgstr ""
+msgstr "有人把手術室的門鎖住並且封死了"
 
 #: ../../script/events/setpieces.js:1833
 msgid "a tribe of elderly squatters is camped out in this ward."
-msgstr ""
+msgstr "一個年長部落的開拓著在病房裡紮了營地"
 
 #: ../../script/events/setpieces.js:1874
 #, fuzzy
 msgid "a pack of lizards rounds the corner."
-msgstr "一群咆哮的野獸衝出叢林"
+msgstr "一群蜥蜴衝守住了轉角處"
 
 #: ../../script/events/setpieces.js:1916
 msgid "strips of meat are hung up to dry in this ward."
-msgstr ""
+msgstr "一條肉掛在病房上曬乾"
 
 #: ../../script/events/setpieces.js:1940
 #, fuzzy
 msgid "a large bird nests at the top of the stairs."
-msgstr "一頭巨獸衝出黑暗"
+msgstr "一個巨大的鳥巢在樓梯的最上方"
 
 #: ../../script/events/setpieces.js:1971
 msgid "the debris is denser here."
-msgstr ""
+msgstr "這邊的碎片濃密的分佈在這"
 
 #: ../../script/events/setpieces.js:1972
 msgid "maybe some useful stuff in the rubble."
-msgstr ""
+msgstr "也許能在瓦礫堆裡找到有用的東西"
 
 #: ../../script/events/setpieces.js:2011
 msgid "a swarm of rats rushes up the tunnel."
-msgstr ""
+msgstr "一大群老鼠在隧道裡頭衝了出來"
 
 #: ../../script/events/setpieces.js:2047
 msgid "a large man attacks, waving a bayonet."
-msgstr ""
+msgstr "壯大的男子正攻擊著，揮舞者它的刺刀"
 
 #: ../../script/events/setpieces.js:2082
 msgid "a second soldier opens fire."
