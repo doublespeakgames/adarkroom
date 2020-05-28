@@ -28,7 +28,8 @@ Events.Setpieces = {
 					}
 				}
 			}
-		}
+		},
+		audio: AudioLibrary.LANDMARK_FRIENDLY_OUTPOST
 	},
 	"swamp": { /* Swamp */
 		title: _('A Murky Swamp'),
@@ -85,7 +86,8 @@ Events.Setpieces = {
 					}
 				}
 			}
-		}
+		},
+		audio: AudioLibrary.LANDMARK_SWAMP
 	},
 	"cave": { /* Cave */
 		title: _('A Damp Cave'),
@@ -516,7 +518,8 @@ Events.Setpieces = {
 					}
 				}
 			}
-		}
+		},
+		audio: AudioLibrary.LANDMARK_CAVE
 	},
 	"town": { /* Town */
 		title: _('A Deserted Town'),
@@ -1233,7 +1236,8 @@ Events.Setpieces = {
 					}
 				}
 			}
-		}
+		},
+		audio: AudioLibrary.LANDMARK_TOWN
 	},
 	"city": { /* City */
 		title: _('A Ruined City'),
@@ -2928,7 +2932,8 @@ Events.Setpieces = {
 					}
 				}
 			}
-		}
+		},
+		audio: AudioLibrary.LANDMARK_CITY
 	},
 	"house": { /* Abandoned House */
 		title: _('An Old House'),
@@ -3045,7 +3050,8 @@ Events.Setpieces = {
 					}
 				}
 			}
-		}
+		},
+		audio: AudioLibrary.LANDMARK_HOUSE
 	},
 	"battlefield": { /* Discovering an old battlefield */
 		title: _('A Forgotten Battlefield'),
@@ -3098,7 +3104,8 @@ Events.Setpieces = {
 					}
 				}
 			}
-		}
+		},
+		audio: AudioLibrary.LANDMARK_BATTLEFIELD
 	},
 	"borehole": { /* Admiring a huge borehole */
 		title: _('A Huge Borehole'),
@@ -3127,7 +3134,8 @@ Events.Setpieces = {
 					}
 				}
 			}
-		}
+		},
+		audio: AudioLibrary.LANDMARK_BOREHOLE
 	},
 	"ship": { /* Finding a way off this rock */
 		title: _('A Crashed Ship'),
@@ -3150,7 +3158,8 @@ Events.Setpieces = {
 					}
 				}
 			}
-		}
+		},
+		audio: AudioLibrary.LANDMARK_CRASHED_SHIP
 	},
 	"sulphurmine": { /* Clearing the Sulphur Mine */
 		title: _('The Sulphur Mine'),
@@ -3299,7 +3308,8 @@ Events.Setpieces = {
 					}
 				}
 			}
-		}
+		},
+		audio: AudioLibrary.LANDMARK_SULPHUR_MINE
 	},
 	"coalmine": { /* Clearing the Coal Mine */
 		title: _('The Coal Mine'),
@@ -3441,7 +3451,8 @@ Events.Setpieces = {
 					}
 				}
 			}
-		}
+		},
+		audio: AudioLibrary.LANDMARK_COAL_MINE
 	},
 	"ironmine": { /* Clearing the Iron Mine */
 		title: _('The Iron Mine'),
@@ -3517,7 +3528,8 @@ Events.Setpieces = {
 					}
 				}
 			}
-		}
+		},
+		audio: AudioLibrary.LANDMARK_IRON_MINE
 	},
 	
 	"cache": { /* Cache - contains some of supplies from previous game */
@@ -3569,6 +3581,7 @@ Events.Setpieces = {
 					}
 				}
 			}
-		}
+		},
+		audio: AudioLibrary.LANDMARK_DESTROYED_VILLAGE
 	}
 };

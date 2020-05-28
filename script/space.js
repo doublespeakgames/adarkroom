@@ -11,7 +11,6 @@ var Space = {
 	NUM_STARS: 200,
 	STAR_SPEED: 60000,
 	FRAME_DELAY: 100,
-	
 	stars: null,
 	backStars: null,
 	ship: null,
@@ -54,6 +53,7 @@ var Space = {
 		Space.hull = Ship.getMaxHull();
 		Space.altitude = 0;
 		Space.setTitle();
+		AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_SPACE);
 		Space.updateHull();
 		
 		Space.up = 
@@ -67,6 +67,8 @@ var Space = {
 		});
 		Space.startAscent();
 		Space._shipTimer = setInterval(Space.moveShip, 33);
+		Space._volumeTimer = setInterval(Space.lowerVolume, 1000);
+		AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_SPACE);
 	},
 	
 	setTitle: function() {
@@ -136,6 +138,21 @@ var Space = {
 						t.remove();
 						Space.hull--;
 						Space.updateHull();
+
+						// play audio on asteroid hit
+						// higher altitudes play higher frequency hits
+						var r = Math.floor(Math.random() * 2);
+						if(Space.altitude > 40) {
+							r += 6;
+							AudioEngine.playSound(AudioLibrary['ASTEROID_HIT_' + r]);
+						} else if(Space.altitude > 20) {
+							r += 4;
+							AudioEngine.playSound(AudioLibrary['ASTEROID_HIT_' + r]);
+						} else  {
+							r += 1;
+							AudioEngine.playSound(AudioLibrary['ASTEROID_HIT_' + r]);
+						}
+
 						if(Space.hull === 0) {
 							Space.crash();
 						}
@@ -221,7 +238,7 @@ var Space = {
 			left: x + 'px',
 			top: y + 'px'
 		});
-		
+
 		Space.lastMove = Date.now();
 	},
 	
@@ -325,6 +342,7 @@ var Space = {
 		Space.done = true;
 		clearInterval(Space._timer);
 		clearInterval(Space._shipTimer);
+		clearInterval(Space._volumeTimer);
 		clearTimeout(Space._panelTimeout);
 		var body_color;
 		if (Engine.isLightsOff())
@@ -358,6 +376,7 @@ var Space = {
 		Ship.onArrival();
 		Button.cooldown($('#liftoffButton'));
 		Engine.event('progress', 'crash');
+		AudioEngine.playSound(AudioLibrary.CRASH);
 	},
 	
 	endGame: function() {
@@ -366,6 +385,7 @@ var Space = {
 		Space.done = true;
 		clearInterval(Space._timer);
 		clearInterval(Space._shipTimer);
+		clearInterval(Space._volumeTimer);
 		clearTimeout(Engine._saveTimer);
 		clearTimeout(Outside._popTimeout);
 		clearTimeout(Engine._incomeTimeout);
@@ -380,6 +400,8 @@ var Space = {
 		}
 		delete Outside._popTimeout;
 		
+		AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_ENDING);
+
 		$('#hullRemaining', Space.panel).animate({opacity: 0}, 500, 'linear');
 		Space.ship.animate({
 			top: '350px',
@@ -532,5 +554,14 @@ var Space = {
 	
 	handleStateUpdates: function(e){
 		
+	},
+	
+	lowerVolume: function () {
+		if (Space.done) return;
+		
+		// lower audio as ship gets further into space
+		var progress = Space.altitude / 60;
+		var newVolume = 1.0 - progress;
+		AudioEngine.setBackgroundMusicVolume(newVolume, 0.3);
 	}
 };

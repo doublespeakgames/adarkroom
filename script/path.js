@@ -1,5 +1,4 @@
 var Path = {
-		
 	DEFAULT_BAG_SPACE: 10,
 	_STORES_OFFSET: 0,
 	// Everything not in this list weighs 1
@@ -304,6 +303,8 @@ var Path = {
 		Path.setTitle();
 		Path.updateOutfitting();
 		Path.updatePerks(true);
+		
+		AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_DUSTY_PATH);
 
 		Engine.moveStoresView($('#perks'), transition_diff);
 	},
@@ -319,6 +320,7 @@ var Path = {
 		World.onArrival();
 		$('#outerSlider').animate({left: '-700px'}, 300);
 		Engine.activeModule = World;
+		AudioEngine.playSound(AudioLibrary.EMBARK);
 	},
 	
 	handleStateUpdates: function(e){

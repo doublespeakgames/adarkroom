@@ -75,7 +75,7 @@
 			debug: false,
 			log: false,
 			dropbox: false,
-			doubleTime: false
+			doubleTime: true
 		},
 
 		init: function(options) {
@@ -102,6 +102,15 @@
 				window.State = this.options.state;
 			} else {
 				Engine.loadGame();
+			}
+
+			// start loading music and events early
+			for (var key in AudioLibrary) {
+				if (
+					key.toString().indexOf('MUSIC_') > -1 ||
+					key.toString().indexOf('EVENT_') > -1) {
+						AudioEngine.loadAudioFile(AudioLibrary[key]);
+					}
 			}
 
 			$('<div>').attr('id', 'locationSlider').appendTo('#main');
@@ -132,6 +141,12 @@
 						.appendTo(optionsList);
 				});
 			}
+
+			$('<span>')
+				.addClass('volume menuBtn')
+				.text(_('sound on.'))
+				.click(() => Engine.toggleVolume())
+				.appendTo(menu);
 
 			$('<span>')
 				.addClass('appStore menuBtn')
@@ -200,9 +215,11 @@
 			$.Dispatch('stateUpdate').subscribe(Engine.handleStateUpdates);
 
 			$SM.init();
+			AudioEngine.init();
 			Notifications.init();
 			Events.init();
 			Room.init();
+
 
 			if(typeof $SM.get('stores.wood') != 'undefined') {
 				Outside.init();
@@ -215,18 +232,32 @@
 			}
 
 			if($SM.get('config.lightsOff', true)){
-					Engine.turnLightsOff();
+				Engine.turnLightsOff();
 			}
 
 			if($SM.get('config.hyperMode', true)){
-					Engine.triggerHyperMode();
+				Engine.triggerHyperMode();
 			}
 
+      Engine.toggleVolume(Boolean($SM.get('config.soundOn')));
+      if(!AudioEngine.isAudioContextRunning()){
+        document.addEventListener('click', Engine.resumeAudioContext, true);
+      }
+			
 			Engine.saveLanguage();
 			Engine.travelTo(Room);
 
-		},
+      setTimeout(notifyAboutSound, 3000);
 
+		},
+		resumeAudioContext: function () {
+			AudioEngine.tryResumingAudioContext();
+			
+			// turn on music!
+      AudioEngine.setMasterVolume($SM.get('config.soundOn') ? 1.0 : 0.0, 0);
+
+			document.removeEventListener('click', Engine.resumeAudioContext);
+		},
 		browserValid: function() {
 			return ( location.search.indexOf( 'ignorebrowser=true' ) >= 0 || ( typeof Storage != 'undefined' && !oldIE ) );
 		},
@@ -596,7 +627,6 @@
 				Engine.activeModule = module;
 				module.onArrival(diff);
 				Notifications.printQueue(module);
-
 			}
 		},
 
@@ -782,6 +812,21 @@
 			}
 		},
 
+		toggleVolume: function(enabled /* optional */) {
+      if (enabled == null) {
+        enabled = !$SM.get('config.soundOn');
+      }
+			if (!enabled) {
+				$('.volume').text(_('sound on.'));
+				$SM.set('config.soundOn', false);
+				AudioEngine.setMasterVolume(0.0);
+			} else {
+				$('.volume').text(_('sound off.'));
+				$SM.set('config.soundOn', true);
+				AudioEngine.setMasterVolume(1.0);
+			}
+		},
+
 		setInterval: function(callback, interval, skipDouble){
 			if( Engine.options.doubleTime && !skipDouble ){
 				Engine.log('Double time, cutting interval in half');
@@ -802,7 +847,6 @@
 			return setTimeout(callback, timeout);
 
 		}
-
 	};
 
 	function eventNullifier(e) {
@@ -812,6 +856,38 @@
 	function eventPassthrough(e) {
 		return true;
 	}
+
+  function notifyAboutSound() {
+    if ($SM.get('playStats.audioAlertShown')) {
+      return;
+    }
+
+    // Tell new users that there's sound now!
+    $SM.set('playStats.audioAlertShown', true);
+    Events.startEvent({
+      title: _('Sound Available!'),
+      scenes: {
+        start: {
+          text: [
+            _('ears flooded with new sensations.'),
+            _('perhaps silence is safer?')
+          ],
+          buttons: {
+            'yes': {
+              text: _('enable audio'),
+              nextScene: 'end',
+              onChoose: () => Engine.toggleVolume(true)
+            },
+            'no': {
+              text: _('disable audio'),
+              nextScene: 'end',
+              onChoose: () => Engine.toggleVolume(false)
+            }
+          }
+        }
+      }
+    });
+  }
 
 })();
 

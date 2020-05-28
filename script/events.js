@@ -11,7 +11,6 @@ var Events = {
 	_LEAVE_COOLDOWN: 1,
 	STUN_DURATION: 4000,
 	BLINK_INTERVAL: false,
-
 	init: function(options) {
 		this.options = $.extend(
 			this.options,
@@ -135,7 +134,7 @@ var Events = {
 		}
 		$('<div>').addClass('clear').appendTo(healBtns);
 		Events.setHeal(healBtns);
-
+		
 		// Set up the enemy attack timer
 		Events._enemyAttackTimer = Engine.setInterval(Events.enemyAttack, scene.attackDelay * 1000);
 	},
@@ -340,10 +339,12 @@ var Events = {
 
 	eatMeat: function(btn) {
 		Events.doHeal('cured meat', World.meatHeal(), btn);
+		AudioEngine.playSound(AudioLibrary.EAT_MEAT);
 	},
 
 	useMeds: function(btn) {
 		Events.doHeal('medicine', World.medsHeal(), btn);
+		AudioEngine.playSound(AudioLibrary.USE_MEDS);
 	},
 
 	useWeapon: function(btn) {
@@ -416,8 +417,23 @@ var Events = {
 					}
 				}
 			}
-
+			
 			var attackFn = weapon.type == 'ranged' ? Events.animateRanged : Events.animateMelee;
+			
+			// play variation audio for weapon type
+			var r = Math.floor(Math.random() * 2) + 1;
+			switch (weapon.type) {
+				case 'unarmed':
+					AudioEngine.playSound(AudioLibrary['WEAPON_UNARMED_' + r]);
+					break;
+				case 'melee':
+					AudioEngine.playSound(AudioLibrary['WEAPON_MELEE_' + r]);
+					break;
+				case 'ranged':
+					AudioEngine.playSound(AudioLibrary['WEAPON_RANGED_' + r]);
+					break;
+			}
+
 			attackFn($('#wanderer'), dmg, function() {
 				if($('#enemy').data('hp') <= 0 && !Events.won) {
 					// Success!
@@ -427,7 +443,7 @@ var Events = {
 		}
 	},
 
-	damage: function(fighter, enemy, dmg) {
+	damage: function(fighter, enemy, dmg, type) {
 		var enemyHp = enemy.data('hp');
 		var msg = "";
 		if(typeof dmg == 'number') {
@@ -443,6 +459,20 @@ var Events = {
 					Events.setHeal();
 				}
 				Events.updateFighterDiv(enemy);
+
+				// play variation audio for weapon type
+				var r = Math.floor(Math.random() * 2) + 1;
+				switch (type) {
+					case 'unarmed':
+						AudioEngine.playSound(AudioLibrary['WEAPON_UNARMED_' + r]);
+						break;
+					case 'melee':
+						AudioEngine.playSound(AudioLibrary['WEAPON_MELEE_' + r]);
+						break;
+					case 'ranged':
+						AudioEngine.playSound(AudioLibrary['WEAPON_RANGED_' + r]);
+						break;
+				}
 			}
 		} else {
 			if(dmg == 'stun') {
@@ -468,7 +498,7 @@ var Events = {
 
 		fighter.stop(true, true).animate(start, Events._FIGHT_SPEED, function() {
 
-			Events.damage(fighter, enemy, dmg);
+			Events.damage(fighter, enemy, dmg, 'melee');
 
 			$(this).animate(end, Events._FIGHT_SPEED, callback);
 		});
@@ -489,7 +519,7 @@ var Events = {
 		$('<div>').css(start).addClass('bullet').text('o').appendTo('#description')
 			.animate(end, Events._FIGHT_SPEED * 2, 'linear', function() {
 
-			Events.damage(fighter, enemy, dmg);
+			Events.damage(fighter, enemy, dmg, 'ranged');
 
 			$(this).remove();
 			if(typeof callback == 'function') {
@@ -519,6 +549,7 @@ var Events = {
 						clearTimeout(Events._enemyAttackTimer);
 						Events.endEvent();
 						World.die();
+						AudioEngine.playSound(AudioLibrary.LOSE_FIGHT);
 					}
 			});
 		}
@@ -536,6 +567,7 @@ var Events = {
 				return;
 			}
 			Events.endFight();
+			// AudioEngine.playSound(AudioLibrary.WIN_FIGHT);
 			$('#enemy').animate({opacity: 0}, 300, 'linear', function() {
 				Engine.setTimeout(function() {
 					var scene = Events.activeEvent().scenes[Events.activeScene];
@@ -1018,6 +1050,7 @@ var Events = {
 			} else {
 				var r = Math.floor(Math.random()*(possibleEvents.length));
 				Events.startEvent(possibleEvents[r]);
+				AudioEngine.playEventMusic(possibleEvents[r].audio);
 			}
 		}
 
@@ -1035,6 +1068,20 @@ var Events = {
 
 		var r = Math.floor(Math.random()*(possibleFights.length));
 		Events.startEvent(possibleFights[r]);
+		
+		// play audio only when fight is possible
+		if (possibleFights.length > 0) {
+			if (World.getDistance() > 20) {
+				// Tier 3
+				AudioEngine.playEventMusic(AudioLibrary.ENCOUNTER_TIER_3);
+			} else if (World.getDistance() > 10) {
+				// Tier 2
+				AudioEngine.playEventMusic(AudioLibrary.ENCOUNTER_TIER_2);
+			} else {
+				// Tier 1
+				AudioEngine.playEventMusic(AudioLibrary.ENCOUNTER_TIER_1);
+			}
+		}
 	},
 
 	activeEvent: function() {
@@ -1080,6 +1127,7 @@ var Events = {
 	},
 
 	endEvent: function() {
+		AudioEngine.stopEventMusic();
 		Events.eventPanel().animate({opacity:0}, Events._PANEL_FADE, 'linear', function() {
 			Events.eventPanel().remove();
 			Events.activeEvent().eventPanel = null;
