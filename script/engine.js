@@ -200,6 +200,7 @@
 			$.Dispatch('stateUpdate').subscribe(Engine.handleStateUpdates);
 
 			$SM.init();
+			AudioEngine.init();
 			Notifications.init();
 			Events.init();
 			Room.init();
