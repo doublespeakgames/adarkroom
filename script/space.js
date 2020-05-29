@@ -11,7 +11,21 @@ var Space = {
 	NUM_STARS: 200,
 	STAR_SPEED: 60000,
 	FRAME_DELAY: 100,
-	
+	currentMusic: 0,
+	MUSIC: {
+		0: '/audio/space.wav',
+		1: '/audio/troposphere.wav',
+		2: '/audio/stratosphere.wav',
+		3: '/audio/mesosphere.wav',
+		4: '/audio/thermosphere.wav',
+		5: '/audio/exosphere.wav',
+		6: '/audio/ending.wav',
+	},
+	SOUNDS: {
+		'asteroid-hit-1': '/audio/asteroid-hit-1.wav',
+		'asteroid-hit-2': '/audio/asteroid-hit-2.wav',
+		'asteroid-hit-3': '/audio/asteroid-hit-3.wav',
+	},
 	stars: null,
 	backStars: null,
 	ship: null,
@@ -67,6 +81,7 @@ var Space = {
 		});
 		Space.startAscent();
 		Space._shipTimer = setInterval(Space.moveShip, 33);
+		Space.setMusic();
 	},
 	
 	setTitle: function() {
@@ -532,5 +547,9 @@ var Space = {
 	
 	handleStateUpdates: function(e){
 		
+	},
+
+	setMusic: function () {
+		AudioEngine.changeMusic(Space.MUSIC[0]);
 	}
 };
