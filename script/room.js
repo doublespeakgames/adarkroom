@@ -10,7 +10,7 @@ var Room = {
 	_NEED_WOOD_DELAY: 15 * 1000, // from when the stranger shows up, to when you need wood
 	
 	buttons:{},
-	
+	music: '/audio/room.wav',
 	Craftables: {
 		'trap': {
 			name: _('trap'),

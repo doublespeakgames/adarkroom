@@ -597,7 +597,7 @@
 				Engine.activeModule = module;
 				module.onArrival(diff);
 				Notifications.printQueue(module);
-
+				AudioEngine.changeMusic(module.music);
 			}
 		},
 

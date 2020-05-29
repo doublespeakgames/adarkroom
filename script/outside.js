@@ -3,6 +3,7 @@
  */
 var Outside = {
 	name: _("Outside"),
+	music: '/audio/outside.wav',
 	
 	_STORES_OFFSET: 0,
 	_GATHER_DELAY: 60,
