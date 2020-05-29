@@ -72,10 +72,10 @@
 
 		options: {
 			state: null,
-			debug: false,
-			log: false,
+			debug: true,
+			log: true,
 			dropbox: false,
-			doubleTime: false
+			doubleTime: true
 		},
 
 		init: function(options) {
@@ -597,7 +597,6 @@
 				Engine.activeModule = module;
 				module.onArrival(diff);
 				Notifications.printQueue(module);
-				AudioEngine.changeMusic(module.music);
 			}
 		},
 

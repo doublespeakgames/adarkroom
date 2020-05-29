@@ -51,7 +51,7 @@ var AudioEngine = {
         }
         
         // fade in new track
-        var fadeTime = this.audioContext.currentTime + 5.0;
+        var fadeTime = this.audioContext.currentTime + 2.0;
         newTrack.connect(this.tracks[nextBackgroundChannel]);
         newTrack.start(0);
         this.tracks[nextBackgroundChannel].gain.setValueAtTime(0.0, this.audioContext.currentTime);
@@ -60,7 +60,7 @@ var AudioEngine = {
         // fade out old track
         this.tracks[this.currentBackgroundChannel].gain.linearRampToValueAtTime(0.0, fadeTime);
         if (this.currentTrack) {
-            this.currentTrack.stop(fadeTime + 1.0); // make sure fade has completed
+            this.currentTrack.stop(fadeTime + 0.3); // make sure fade has completed
         }
 
         // switch background track
