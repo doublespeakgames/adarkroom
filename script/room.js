@@ -18,7 +18,14 @@ var Room = {
 	},
 	SOUNDS: {
 		'light-fire': '/audio/light-fire.wav',
-		'stoke-fire': '/audio/stoke-fire.wav'
+		'stoke-fire': '/audio/stoke-fire.wav',
+		'build-trap': '/audio/build-trap.wav',
+		'build-cart': '/audio/build-cart.wav',
+		'build-hut': '/audio/build-hut.wav',
+		'build-lodge': '/audio/build-lodge.wav',
+		'build-trading-post': '/audio/build-trading-post.wav',
+		'build-tannery': '/audio/build-tannery.wav',
+		'build-smokehouse': '/audio/build-smokehouse.wav',
 	},
 	buttons: {},
 	Craftables: {
