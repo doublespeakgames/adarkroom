@@ -94,7 +94,19 @@ var Outside = {
 			}
 		}
 	},
-	
+	currentMusic: 0,
+	MUSIC: {
+		0: '/audio/silent-forest.wav',
+		1: '/audio/lonely-hut.wav',
+		2: '/audio/tiny-village.wav',
+		3: '/audio/modest-village.wav',
+		4: '/audio/large-village.wav',
+		5: '/audio/raucous-village.wav',
+	},
+	SOUNDS: {
+		'gather-wood': '/audio/gather-wood.wav',
+		'check-traps': '/audio/check-traps.wav'
+	},
 	TrapDrops: [
 		{
 			rollUnder: 0.5,
@@ -588,6 +600,7 @@ var Outside = {
 		Outside.updateVillage(true);
 
 		Engine.moveStoresView($('#village'), transition_diff);
+		Outside.setMusic();
 	},
 	
 	gatherWood: function() {
@@ -676,5 +689,25 @@ var Outside = {
 		scrollByX( $('#storesContainer'), momentum );
 		Outside._STORES_OFFSET += momentum;
 
+	},
+
+	setMusic: function () {
+		var numberOfHuts = $SM.get('game.buildings["hut"]', true);
+		var currentMusic = 0;
+		if(numberOfHuts === 0) {
+			currentMusic = 0;
+		} else if(numberOfHuts == 1) {
+			currentMusic = 1;
+		} else if(numberOfHuts <= 4) {
+			currentMusic = 2;
+		} else if(numberOfHuts <= 8) {
+			currentMusic = 3;
+		} else if(numberOfHuts <= 14) {
+			currentMusic = 4;
+		} else {
+			currentMusic = 5;
+		}
+		Outside.currentMusic = currentMusic;
+		AudioEngine.changeMusic(Outside.MUSIC[currentMusic]);
 	}
 };
