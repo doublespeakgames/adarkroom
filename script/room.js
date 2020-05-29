@@ -26,6 +26,10 @@ var Room = {
 		'build-trading-post': '/audio/build-trading-post.wav',
 		'build-tannery': '/audio/build-tannery.wav',
 		'build-smokehouse': '/audio/build-smokehouse.wav',
+		'build-workshop': '/audio/build-workshop.wav',
+		'buy-scales': '/audio/buy-scales.wav',
+		'buy-teeth': '/audio/buy-teeth.wav',
+		'buy-compass': '/audio/buy-compass.wav',
 	},
 	buttons: {},
 	Craftables: {
