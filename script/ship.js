@@ -7,7 +7,6 @@ var Ship = {
 	ALLOY_PER_THRUSTER: 1,
 	BASE_HULL: 0,
 	BASE_THRUSTERS: 1,
-	
 	currentMusic: 0,
 	MUSIC: {
 		0: '/audio/ship.wav'
@@ -100,6 +99,7 @@ var Ship = {
 			Notifications.notify(Ship, _('somewhere above the debris cloud, the wanderer fleet hovers. been on this rock too long.'));
 			$SM.set('game.spaceShip.seenShip', true);
 		}
+		Ship.setMusic();
 
 		Engine.moveStoresView(null, transition_diff);
 	},
