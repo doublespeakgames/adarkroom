@@ -27,6 +27,7 @@ var Room = {
 		'build-tannery': '/audio/build-tannery.wav',
 		'build-smokehouse': '/audio/build-smokehouse.wav',
 		'build-workshop': '/audio/build-workshop.wav',
+		'build-steelworks': '/audio/build-steelworks.wav',
 		'craft-torch': '/audio/craft-torch.wav',
 		'craft-waterskin': '/audio/craft-waterskin.wav',
 		'craft-bone-spear': '/audio/craft-bone-spear.wav',
@@ -46,6 +47,10 @@ var Room = {
 		'buy-iron': '/audio/buy-iron.wav',
 		'buy-steel': '/audio/buy-steel.wav',
 		'buy-bolas': '/audio/buy-bolas.wav',
+		'buy-alien-alloy': '/audio/buy-alient-alloy.wav',
+		'buy-energy-cell': '/audio/buy-energy-cell.wav',
+		'buy-grenade': '/audio/buy-grenade.wav',
+		'buy-coal': '/audio/buy-coal.wav',
 	},
 	buttons: {},
 	Craftables: {
