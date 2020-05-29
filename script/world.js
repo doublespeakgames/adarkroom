@@ -1,5 +1,14 @@
 var World = {
 
+	currentMusic: 0,
+	MUSIC: {
+		0: '/audio/world.wav'
+	},
+	SOUNDS: {
+		'footsteps-1': '/audio/footsteps-1.wav',
+		'footsteps-2': '/audio/footsteps-2.wav',
+		'footsteps-3': '/audio/footsteps-3.wav',
+	},
 	RADIUS: 30,
 	VILLAGE_POS: [30, 30],
 	TILE: {
@@ -347,6 +356,11 @@ var World = {
 		World.lightMap(World.curPos[0], World.curPos[1], World.state.mask);
 		World.drawMap();
 		World.doSpace();
+
+		// play random footstep
+		var randomFootstep = Math.floor(Math.random() * 2) + 1;
+		AudioEngine.playSound(World.SOUNDS['footsteps-' + randomFootstep]);
+
 		if(World.checkDanger()) {
 			if(World.danger) {
 				Notifications.notify(World, _('dangerous to be this far from the village without proper protection'));
@@ -1006,6 +1020,7 @@ var World = {
 		World.curPos = World.copyPos(World.VILLAGE_POS);
 		World.drawMap();
 		World.setTitle();
+		World.setMusic();
 		World.dead = false;
 		$('div#bagspace-world > div').empty();
 		World.updateSupplies();
@@ -1022,5 +1037,9 @@ var World = {
 
 	handleStateUpdates: function(e){
 
+	},
+
+	setMusic: function () {
+		AudioEngine.changeMusic(World.MUSIC[0]);
 	}
 };
