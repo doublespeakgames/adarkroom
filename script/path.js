@@ -2,6 +2,13 @@ var Path = {
 		
 	DEFAULT_BAG_SPACE: 10,
 	_STORES_OFFSET: 0,
+	currentMusic: 0,
+	MUSIC: {
+		0: '/audio/dusty-path.wav'
+	},
+	SOUNDS: {
+		'embark': '/audio/embark.wav',
+	},
 	// Everything not in this list weighs 1
 	Weight: {
 		'bone spear': 2,
@@ -304,6 +311,7 @@ var Path = {
 		Path.setTitle();
 		Path.updateOutfitting();
 		Path.updatePerks(true);
+		Path.setMusic();
 
 		Engine.moveStoresView($('#perks'), transition_diff);
 	},
@@ -357,5 +365,9 @@ var Path = {
 		scrollByX( $('#storesContainer'), momentum );
 		Path._STORES_OFFSET += momentum;
 
+	},
+
+	setMusic: function () {
+		AudioEngine.changeMusic(Path.MUSIC[0]);
 	}
 };
