@@ -55,59 +55,68 @@ var World = {
 			verb: _('punch'),
 			type: 'unarmed',
 			damage: 1,
-			cooldown: 2
+			cooldown: 2,
+			audio: '/audio/punch.wav'
 		},
 		'bone spear': {
 			verb: _('stab'),
 			type: 'melee',
 			damage: 2,
-			cooldown: 2
+			cooldown: 2,
+			audio: '/audio/stab.wav'
 		},
 		'iron sword': {
 			verb: _('swing'),
 			type: 'melee',
 			damage: 4,
-			cooldown: 2
+			cooldown: 2,
+			audio: '/audio/swing.wav'
 		},
 		'steel sword': {
 			verb: _('slash'),
 			type: 'melee',
 			damage: 6,
-			cooldown: 2
+			cooldown: 2,
+			audio: '/audio/slash.wav'
 		},
 		'bayonet': {
 			verb: _('thrust'),
 			type: 'melee',
 			damage: 8,
-			cooldown: 2
+			cooldown: 2,
+			audio: '/audio/thrust.wav'
 		},
 		'rifle': {
 			verb: _('shoot'),
 			type: 'ranged',
 			damage: 5,
 			cooldown: 1,
-			cost: { 'bullets': 1 }
+			cost: { 'bullets': 1 },
+			audio: '/audio/shoot.wav'
 		},
 		'laser rifle': {
 			verb: _('blast'),
 			type: 'ranged',
 			damage: 8,
 			cooldown: 1,
-			cost: { 'energy cell': 1 }
+			cost: { 'energy cell': 1 },
+			audio: '/audio/blast.wav'
 		},
 		'grenade': {
 			verb: _('lob'),
 			type: 'ranged',
 			damage: 15,
 			cooldown: 5,
-			cost: { 'grenade': 1 }
+			cost: { 'grenade': 1 },
+			audio: '/audio/lob.wav'
 		},
 		'bolas': {
 			verb: _('tangle'),
 			type: 'ranged',
 			damage: 'stun',
 			cooldown: 15,
-			cost: { 'bolas': 1 }
+			cost: { 'bolas': 1 },
+			audio: '/audio/tangle.wav'
 		}
 	},
 

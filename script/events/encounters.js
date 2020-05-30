@@ -38,7 +38,8 @@ Events.Encounters = [
 				},
 				notification: _('a snarling beast leaps out of the underbrush')
 			}
-		}
+		},
+		audio: '/audio/snarling-beast.wav'
 	},
 	{ /* Gaunt Man */
 	title: _('A Gaunt Man'),
@@ -75,7 +76,8 @@ Events.Encounters = [
 				},
 				notification: _('a gaunt man approaches, a crazed look in his eye')
 			}
-		}
+		},
+		audio: '/audio/gaunt-man.wav'
 	},
 	{ /* Strange Bird */
 	title: _('A Strange Bird'),
@@ -112,7 +114,8 @@ Events.Encounters = [
 				},
 				notification: _('a strange looking bird speeds across the plains')
 			}
-		}
+		},
+		audio: '/audio/strange-bird.wav'
 	},
 	/* Tier 2*/
 	{ /* Shivering Man */
@@ -155,7 +158,8 @@ Events.Encounters = [
 				},
 				notification: _('a shivering man approaches and attacks with surprising strength')
 			}
-		}
+		},
+		audio: '/audio/shivering-man.wav'
 	},
 	{ /* Man-eater */
 		title: _('A Man-Eater'),
@@ -192,7 +196,8 @@ Events.Encounters = [
 				},
 				notification: _('a large creature attacks, claws freshly bloodied')
 			}
-		}
+		},
+		audio: '/audio/man-eater.wav'
 	},
 	{ /* Scavenger */
 	title: _('A Scavenger'),
@@ -234,7 +239,8 @@ Events.Encounters = [
 				},
 				notification: _('a scavenger draws close, hoping for an easy score')
 			}
-		}
+		},
+		audio: '/audio/scavenger.wav'
 	},
 	{ /* Huge Lizard */
 	title: _('A Huge Lizard'),
@@ -271,7 +277,8 @@ Events.Encounters = [
 				},
 				notification: _('the grass thrashes wildly as a huge lizard pushes through')
 			}
-		}
+		},
+		audio: '/audio/huge-lizard.wav'
 	},
 	/* Tier 3*/
 	{ /* Feral Terror */
@@ -309,7 +316,8 @@ Events.Encounters = [
 				},
 				notification: _('a beast, wilder than imagining, erupts out of the foliage')
 			}
-		}
+		},
+		audio: '/audio/feral-terror.wav'
 	},
 	{ /* Soldier */
 	title: _('A Soldier'),
@@ -352,7 +360,8 @@ Events.Encounters = [
 				},
 				notification: _('a soldier opens fire from across the desert')
 			}
-		}
+		},
+		audio: '/audio/soldier.wav'
 	},
 	{ /* Sniper */
 	title: _('A Sniper'),
@@ -395,6 +404,7 @@ Events.Encounters = [
 				},
 				notification: _('a shot rings out, from somewhere in the long grass')
 			}
-		}
+		},
+		audio: '/audio/sniper.wav'
 	}
 ];

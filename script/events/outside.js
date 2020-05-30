@@ -63,7 +63,8 @@ Events.Outside = [
 					}
 				}
 			}
-		}
+		},
+		audio: '/audio/ruined-trap.wav'
 	},
 	{ /* Hut fire */
 		title: _('Fire'),
@@ -89,7 +90,8 @@ Events.Outside = [
 					}
 				}
 			}
-		}
+		},
+		audio: '/audio/hut-fire.wav'
 	},
 	{ /* Sickness */
 		title: _('Sickness'),
@@ -146,7 +148,8 @@ Events.Outside = [
 					}
 				}
 			}
-		}
+		},
+		audio: '/audio/sickness.wav'
 	},
 
 	{ /* Plague */
@@ -217,7 +220,8 @@ Events.Outside = [
 					}
 				}
 			}
-		}
+		},
+		audio: '/audio/plague.wav'
 	},
 
 	{ /* Beast attack */
@@ -251,7 +255,8 @@ Events.Outside = [
 					}
 				}
 			}
-		}
+		},
+		audio: '/audio/beast-attack.wav'
 	},
 
 	{ /* Soldier attack */
@@ -285,7 +290,8 @@ Events.Outside = [
 					}
 				}
 			}
-		}
+		},
+		audio: '/audio/soldier-attack.wav'
 	}
 
 ];

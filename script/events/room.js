@@ -47,7 +47,8 @@ Events.Room = [
 					}
 				}
 			}
-		}
+		},
+		audio: '/audio/nomad.wav'
 	},
 	{ /* Noises Outside  --  gain wood/fur */
 		title: _('Noises'),
@@ -98,7 +99,8 @@ Events.Room = [
 					}
 				}
 			}
-		}
+		},
+		audio: '/audio/noises-outside.wav'
 	},
 	{ /* Noises Inside  --  trade wood for better good */
 		title: _('Noises'),
@@ -184,7 +186,8 @@ Events.Room = [
 					}
 				}
 			}
-		}
+		},
+		audio: '/audio/noises-inside.wav'
 	},
 	{ /* The Beggar  --  trade fur for better good */
 		title: _('The Beggar'),
@@ -255,7 +258,8 @@ Events.Room = [
 					}
 				}
 			}
-		}
+		},
+		audio: '/audio/beggar.wav'
 	},
 	{/* The Shady Builder */
 		title: _('The Shady Builder'),
@@ -311,7 +315,8 @@ Events.Room = [
 					}
 				}
 			}
-		}
+		},
+		audio: '/audio/shady-builder.wav'
 	},
 
 	{ /* Mysterious Wanderer  --  wood gambling */
@@ -390,7 +395,8 @@ Events.Room = [
 					}
 				}
 			}
-		}
+		},
+		audio: '/audio/mysterious-wanderer.wav'
 	},
 
 	{ /* Mysterious Wanderer  --  fur gambling */
@@ -469,7 +475,8 @@ Events.Room = [
 					}
 				}
 			}
-		}
+		},
+		audio: '/audio/mysterious-wanderer.wav'
 	},
 
 	{ /* The Scout  --  Map Merchant */
@@ -511,7 +518,8 @@ Events.Room = [
 					}
 				}
 			}
-		}
+		},
+		audio: '/audio/scout.wav'
 	},
 
 	{ /* The Wandering Master */
@@ -584,7 +592,8 @@ Events.Room = [
 					}
 				}
 			}
-		}
+		},
+		audio: '/audio/wandering-master.wav'
 	},
 
 	{ /* The Sick Man */
@@ -672,6 +681,7 @@ Events.Room = [
 					}
 				}
 			}
-		}
+		},
+		audio: '/audio/sick-man.wav'
 	}
 ];

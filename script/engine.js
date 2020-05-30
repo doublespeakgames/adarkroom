@@ -73,7 +73,7 @@
 		options: {
 			state: null,
 			debug: true,
-			log: true,
+			log: false,
 			dropbox: false,
 			doubleTime: true
 		},

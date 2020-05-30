@@ -11,7 +11,20 @@ var Events = {
 	_LEAVE_COOLDOWN: 1,
 	STUN_DURATION: 4000,
 	BLINK_INTERVAL: false,
-
+	currentMusic: 0,
+	MUSIC: {
+		0: '/audio/combat.wav',
+		1: '/audio/event.wav'
+	},
+	SOUNDS: {
+		'trigger-fight': '/audio/trigger-fight.wav',
+		'trigger-event': '/audio/trigger-event.wav',
+		'enemy-hit': '/audio/enemy-hit.wav',
+		'eat-meat': '/audio/eat-meat.wav',
+		'use-meds': '/audio/use-meds.wav',
+		'win-fight': '/audio/win-fight.wav',
+		'lose-fight': '/audio/lose-fight.wav'
+	},
 	init: function(options) {
 		this.options = $.extend(
 			this.options,
@@ -135,7 +148,7 @@ var Events = {
 		}
 		$('<div>').addClass('clear').appendTo(healBtns);
 		Events.setHeal(healBtns);
-
+		
 		// Set up the enemy attack timer
 		Events._enemyAttackTimer = Engine.setInterval(Events.enemyAttack, scene.attackDelay * 1000);
 	},
@@ -340,13 +353,17 @@ var Events = {
 
 	eatMeat: function(btn) {
 		Events.doHeal('cured meat', World.meatHeal(), btn);
+		AudioEngine.playSound(Events.SOUNDS['eat-meat']);
 	},
 
 	useMeds: function(btn) {
 		Events.doHeal('medicine', World.medsHeal(), btn);
+		AudioEngine.playSound(Events.SOUNDS['use-meds']);
 	},
 
 	useWeapon: function(btn) {
+		console.log('%cuse weapon: ', 'background: #222; color: #bada55');
+		console.log(btn);
 		if(Events.activeEvent()) {
 			var weaponName = btn.attr('id').substring(7).replace('-', ' ');
 			var weapon = World.Weapons[weaponName];
@@ -416,8 +433,9 @@ var Events = {
 					}
 				}
 			}
-
+			
 			var attackFn = weapon.type == 'ranged' ? Events.animateRanged : Events.animateMelee;
+			AudioEngine.playSound(weapon.audio);
 			attackFn($('#wanderer'), dmg, function() {
 				if($('#enemy').data('hp') <= 0 && !Events.won) {
 					// Success!
@@ -443,6 +461,9 @@ var Events = {
 					Events.setHeal();
 				}
 				Events.updateFighterDiv(enemy);
+
+				// play hit sound
+				AudioEngine.playSound(Events.SOUNDS['enemy-hit']);
 			}
 		} else {
 			if(dmg == 'stun') {
@@ -519,6 +540,8 @@ var Events = {
 						clearTimeout(Events._enemyAttackTimer);
 						Events.endEvent();
 						World.die();
+
+						AudioEngine.playSound(Events.SOUNDS['lose-fight']);
 					}
 			});
 		}
@@ -536,6 +559,7 @@ var Events = {
 				return;
 			}
 			Events.endFight();
+			AudioEngine.playSound(Events.SOUNDS['win-fight']);
 			$('#enemy').animate({opacity: 0}, 300, 'linear', function() {
 				Engine.setTimeout(function() {
 					var scene = Events.activeEvent().scenes[Events.activeScene];
@@ -1018,6 +1042,9 @@ var Events = {
 			} else {
 				var r = Math.floor(Math.random()*(possibleEvents.length));
 				Events.startEvent(possibleEvents[r]);
+				console.log('event', possibleEvents[r].audio);
+				AudioEngine.playSound(Events.SOUNDS['trigger-event']);
+				AudioEngine.changeMusic(possibleEvents[r].audio);
 			}
 		}
 
@@ -1035,6 +1062,11 @@ var Events = {
 
 		var r = Math.floor(Math.random()*(possibleFights.length));
 		Events.startEvent(possibleFights[r]);
+		
+		// play audio only when fight is possible
+		if (possibleFights.length > 0) {
+			AudioEngine.playSound(Events.SOUNDS['trigger-fight']);
+		}
 	},
 
 	activeEvent: function() {

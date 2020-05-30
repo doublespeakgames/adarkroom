@@ -61,6 +61,7 @@ Events.Global = [
 					}
 				}
 			}
-		}
+		},
+		audio: '/audio/thief.wav'
 	}
 ];
