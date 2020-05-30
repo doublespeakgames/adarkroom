@@ -327,6 +327,7 @@ var Path = {
 		World.onArrival();
 		$('#outerSlider').animate({left: '-700px'}, 300);
 		Engine.activeModule = World;
+		AudioEngine.playSound(Path.SOUNDS['embark']);
 	},
 	
 	handleStateUpdates: function(e){

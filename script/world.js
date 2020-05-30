@@ -8,6 +8,8 @@ var World = {
 		'footsteps-1': '/audio/footsteps-1.wav',
 		'footsteps-2': '/audio/footsteps-2.wav',
 		'footsteps-3': '/audio/footsteps-3.wav',
+		'death-starved': '/audio/death-starved.wav',
+		'death-dehydrated': '/audio/death-dehydrated.wav',
 	},
 	RADIUS: 30,
 	VILLAGE_POS: [30, 30],
@@ -488,6 +490,7 @@ var World = {
 						$SM.addPerk('slow metabolism');
 					}
 					World.die();
+					AudioEngine.playSound(World.SOUNDS['death-starved']);
 					return false;
 				}
 			} else {
@@ -517,6 +520,7 @@ var World = {
 						$SM.addPerk('desert rat');
 					}
 					World.die();
+					AudioEngine.playSound(World.SOUNDS['death-dehydrated']);
 					return false;
 				}
 			} else {

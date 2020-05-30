@@ -607,6 +607,7 @@ var Outside = {
 		Notifications.notify(Outside, _("dry brush and dead branches litter the forest floor"));
 		var gatherAmt = $SM.get('game.buildings["cart"]', true) > 0 ? 50 : 10;
 		$SM.add('stores.wood', gatherAmt);
+		AudioEngine.playSound(Outside.SOUNDS['gather-wood']);
 	},
 	
 	checkTraps: function() {
@@ -647,6 +648,7 @@ var Outside = {
 		
 		Notifications.notify(Outside, s);
 		$SM.addM('stores', drops);
+		AudioEngine.playSound(Outside.SOUNDS['check-traps']);
 	},
 	
 	handleStateUpdates: function(e){

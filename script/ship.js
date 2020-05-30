@@ -121,6 +121,7 @@ var Ship = {
 			Button.setDisabled($('#liftoffButton', Ship.panel), false);
 		}
 		$('#hullRow .row_val', Ship.panel).text($SM.get('game.spaceShip.hull'));
+		AudioEngine.playSound(Ship.SOUNDS['reinforce-hull']);
 	},
 	
 	upgradeEngine: function() {
@@ -131,6 +132,7 @@ var Ship = {
 		$SM.add('stores["alien alloy"]', -Ship.ALLOY_PER_THRUSTER);
 		$SM.add('game.spaceShip.thrusters', 1);
 		$('#engineRow .row_val', Ship.panel).text($SM.get('game.spaceShip.thrusters'));
+		AudioEngine.playSound(Ship.SOUNDS['upgrade-engine']);
 	},
 	
 	getMaxHull: function() {
@@ -175,6 +177,7 @@ var Ship = {
 		$('#outerSlider').animate({top: '700px'}, 300);
 		Space.onArrival();
 		Engine.activeModule = Space;
+		AudioEngine.playSound(Ship.SOUNDS['lift-off']);
 	},
 	
 	handleStateUpdates: function(e){

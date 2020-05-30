@@ -18,43 +18,7 @@ var Room = {
 	},
 	SOUNDS: {
 		'light-fire': '/audio/light-fire.wav',
-		'stoke-fire': '/audio/stoke-fire.wav',
-		'build-trap': '/audio/build-trap.wav',
-		'build-cart': '/audio/build-cart.wav',
-		'build-hut': '/audio/build-hut.wav',
-		'build-lodge': '/audio/build-lodge.wav',
-		'build-trading-post': '/audio/build-trading-post.wav',
-		'build-tannery': '/audio/build-tannery.wav',
-		'build-smokehouse': '/audio/build-smokehouse.wav',
-		'build-workshop': '/audio/build-workshop.wav',
-		'build-steelworks': '/audio/build-steelworks.wav',
-		'build-armoury': '/audio/build-armoury.wav',
-		'craft-torch': '/audio/craft-torch.wav',
-		'craft-waterskin': '/audio/craft-waterskin.wav',
-		'craft-bone-spear': '/audio/craft-bone-spear.wav',
-		'craft-rucksack': '/audio/craft-rucksack.wav',
-		'craft-cask': '/audio/craft-cask.wav',
-		'craft-leather-armour': '/audio/craft-leather-armour.wav',
-		'craft-wagon': '/audio/craft-wagon.wav',
-		'craft-iron-armour': '/audio/craft-iron-armour.wav',
-		'craft-iron-sword': '/audio/craft-iron-sword.wav',
-		'craft-water-tank': '/audio/craft-water-tank.wav',
-		'craft-convoy': '/audio/craft-convoy.wav',
-		'craft-steel-armour': '/audio/craft-steel-armour.wav',
-		'craft-steel-sword': '/audio/craft-steel-sword.wav',
-		'craft-rifle': '/audio/craft-rifle.wav',
-		'buy-scales': '/audio/buy-scales.wav',
-		'buy-teeth': '/audio/buy-teeth.wav',
-		'buy-compass': '/audio/buy-compass.wav',
-		'buy-iron': '/audio/buy-iron.wav',
-		'buy-steel': '/audio/buy-steel.wav',
-		'buy-bolas': '/audio/buy-bolas.wav',
-		'buy-bullets': '/audio/buy-bullets.wav',
-		'buy-bayonet': '/audio/buy-bayonet.wav',
-		'buy-alien-alloy': '/audio/buy-alien-alloy.wav',
-		'buy-energy-cell': '/audio/buy-energy-cell.wav',
-		'buy-grenade': '/audio/buy-grenade.wav',
-		'buy-coal': '/audio/buy-coal.wav',
+		'stoke-fire': '/audio/stoke-fire.wav'
 	},
 	buttons: {},
 	Craftables: {
@@ -71,7 +35,8 @@ var Room = {
 				return {
 					'wood': 10 + (n * 10)
 				};
-			}
+			},
+			audio: '/audio/build-trap.wav'
 		},
 		'cart': {
 			name: _('cart'),
@@ -84,7 +49,8 @@ var Room = {
 				return {
 					'wood': 30
 				};
-			}
+			},
+			audio: '/audio/build-cart.wav'
 		},
 		'hut': {
 			name: _('hut'),
@@ -99,7 +65,8 @@ var Room = {
 				return {
 					'wood': 100 + (n * 50)
 				};
-			}
+			},
+			audio: '/audio/build-hut.wav'
 		},
 		'lodge': {
 			name: _('lodge'),
@@ -114,7 +81,8 @@ var Room = {
 					fur: 10,
 					meat: 5
 				};
-			}
+			},
+			audio: '/audio/build-lodge.wav'
 		},
 		'trading post': {
 			name: _('trading post'),
@@ -128,7 +96,8 @@ var Room = {
 					'wood': 400,
 					'fur': 100
 				};
-			}
+			},
+			audio: '/audio/build-trading-post.wav'
 		},
 		'tannery': {
 			name: _('tannery'),
@@ -142,7 +111,8 @@ var Room = {
 					'wood': 500,
 					'fur': 50
 				};
-			}
+			},
+			audio: '/audio/build-tannery.wav'
 		},
 		'smokehouse': {
 			name: _('smokehouse'),
@@ -156,7 +126,8 @@ var Room = {
 					'wood': 600,
 					'meat': 50
 				};
-			}
+			},
+			audio: '/audio/build-smokehouse.wav'
 		},
 		'workshop': {
 			name: _('workshop'),
@@ -171,7 +142,8 @@ var Room = {
 					'leather': 100,
 					'scales': 10
 				};
-			}
+			},
+			audio: '/audio/build-workshop.wav'
 		},
 		'steelworks': {
 			name: _('steelworks'),
@@ -186,7 +158,8 @@ var Room = {
 					'iron': 100,
 					'coal': 100
 				};
-			}
+			},
+			audio: '/audio/build-steelworks.wav'
 		},
 		'armoury': {
 			name: _('armoury'),
@@ -201,7 +174,8 @@ var Room = {
 					'steel': 100,
 					'sulphur': 50
 				};
-			}
+			},
+			audio: '/audio/build-armoury.wav'
 		},
 		'torch': {
 			name: _('torch'),
@@ -213,7 +187,8 @@ var Room = {
 					'wood': 1,
 					'cloth': 1
 				};
-			}
+			},
+			audio: '/audio/craft-torch.wav'
 		},
 		'waterskin': {
 			name: _('waterskin'),
@@ -225,7 +200,8 @@ var Room = {
 				return {
 					'leather': 50
 				};
-			}
+			},
+			audio: '/audio/craft-waterskin.wav'
 		},
 		'cask': {
 			name: _('cask'),
@@ -238,7 +214,8 @@ var Room = {
 					'leather': 100,
 					'iron': 20
 				};
-			}
+			},
+			audio: '/audio/craft-cask.wav'
 		},
 		'water tank': {
 			name: _('water tank'),
@@ -251,7 +228,8 @@ var Room = {
 					'iron': 100,
 					'steel': 50
 				};
-			}
+			},
+			audio: '/audio/craft-water-tank.wav'
 		},
 		'bone spear': {
 			name: _('bone spear'),
@@ -263,7 +241,8 @@ var Room = {
 					'wood': 100,
 					'teeth': 5
 				};
-			}
+			},
+			audio: '/audio/craft-bone-spear.wav'
 		},
 		'rucksack': {
 			name: _('rucksack'),
@@ -275,7 +254,8 @@ var Room = {
 				return {
 					'leather': 200
 				};
-			}
+			},
+			audio: '/audio/craft-rucksack.wav'
 		},
 		'wagon': {
 			name: _('wagon'),
@@ -288,7 +268,8 @@ var Room = {
 					'wood': 500,
 					'iron': 100
 				};
-			}
+			},
+			audio: '/audio/craft-wagon.wav'
 		},
 		'convoy': {
 			name: _('convoy'),
@@ -302,7 +283,8 @@ var Room = {
 					'iron': 200,
 					'steel': 100
 				};
-			}
+			},
+			audio: '/audio/craft-convoy.wav'
 		},
 		'l armour': {
 			name: _('l armour'),
@@ -314,7 +296,8 @@ var Room = {
 					'leather': 200,
 					'scales': 20
 				};
-			}
+			},
+			audio: '/audio/craft-leather-armour.wav'
 		},
 		'i armour': {
 			name: _('i armour'),
@@ -326,7 +309,8 @@ var Room = {
 					'leather': 200,
 					'iron': 100
 				};
-			}
+			},
+			audio: '/audio/craft-iron-armour.wav'
 		},
 		's armour': {
 			name: _('s armour'),
@@ -338,7 +322,8 @@ var Room = {
 					'leather': 200,
 					'steel': 100
 				};
-			}
+			},
+			audio: '/audio/craft-steel-armour.wav'
 		},
 		'iron sword': {
 			name: _('iron sword'),
@@ -351,7 +336,8 @@ var Room = {
 					'leather': 50,
 					'iron': 20
 				};
-			}
+			},
+			audio: '/audio/craft-iron-sword.wav'
 		},
 		'steel sword': {
 			name: _('steel sword'),
@@ -364,7 +350,8 @@ var Room = {
 					'leather': 100,
 					'steel': 20
 				};
-			}
+			},
+			audio: '/audio/craft-steel-sword.wav'
 		},
 		'rifle': {
 			name: _('rifle'),
@@ -376,7 +363,8 @@ var Room = {
 					'steel': 50,
 					'sulphur': 50
 				};
-			}
+			},
+			audio: '/audio/craft-rifle.wav'
 		}
 	},
 
@@ -385,13 +373,15 @@ var Room = {
 			type: 'good',
 			cost: function () {
 				return { fur: 150 };
-			}
+			},
+			audio: '/audio/buy-scales.wav'
 		},
 		'teeth': {
 			type: 'good',
 			cost: function () {
 				return { fur: 300 };
-			}
+			},
+			audio: '/audio/buy-teeth.wav'
 		},
 		'iron': {
 			type: 'good',
@@ -400,7 +390,8 @@ var Room = {
 					'fur': 150,
 					'scales': 50
 				};
-			}
+			},
+			audio: '/audio/buy-iron.wav'
 		},
 		'coal': {
 			type: 'good',
@@ -409,7 +400,8 @@ var Room = {
 					'fur': 200,
 					'teeth': 50
 				};
-			}
+			},
+			audio: '/audio/buy-coal.wav'
 		},
 		'steel': {
 			type: 'good',
@@ -419,7 +411,8 @@ var Room = {
 					'scales': 50,
 					'teeth': 50
 				};
-			}
+			},
+			audio: '/audio/buy-steel.wav'
 		},
 		'medicine': {
 			type: 'good',
@@ -427,7 +420,8 @@ var Room = {
 				return {
 					'scales': 50, 'teeth': 30
 				};
-			}
+			},
+			audio: '/audio/buy-medicine.wav'
 		},
 		'bullets': {
 			type: 'good',
@@ -435,7 +429,8 @@ var Room = {
 				return {
 					'scales': 10
 				};
-			}
+			},
+			audio: '/audio/buy-bullets.wav'
 		},
 		'energy cell': {
 			type: 'good',
@@ -444,7 +439,8 @@ var Room = {
 					'scales': 10,
 					'teeth': 10
 				};
-			}
+			},
+			audio: '/audio/buy-energy-cell.wav'
 		},
 		'bolas': {
 			type: 'weapon',
@@ -452,7 +448,8 @@ var Room = {
 				return {
 					'teeth': 10
 				};
-			}
+			},
+			audio: '/audio/buy-bolas.wav'
 		},
 		'grenade': {
 			type: 'weapon',
@@ -461,7 +458,8 @@ var Room = {
 					'scales': 100,
 					'teeth': 50
 				};
-			}
+			},
+			audio: '/audio/buy-grenade.wav'
 		},
 		'bayonet': {
 			type: 'weapon',
@@ -470,7 +468,8 @@ var Room = {
 					'scales': 500,
 					'teeth': 250
 				};
-			}
+			},
+			audio: '/audio/buy-bayonet.wav'
 		},
 		'alien alloy': {
 			type: 'good',
@@ -480,7 +479,8 @@ var Room = {
 					'scales': 750,
 					'teeth': 300
 				};
-			}
+			},
+			audio: '/audio/buy-alien-alloy.wav'
 		},
 		'compass': {
 			type: 'special',
@@ -491,7 +491,8 @@ var Room = {
 					scales: 20,
 					teeth: 10
 				};
-			}
+			},
+			audio: '/audio/buy-compass.wav'
 		}
 	},
 
@@ -1000,6 +1001,7 @@ var Room = {
 		Notifications.notify(Room, good.buildMsg);
 
 		$SM.add('stores["' + thing + '"]', 1);
+		AudioEngine.playSound(good.audio);
 	},
 
 	build: function (buildBtn) {
@@ -1054,6 +1056,7 @@ var Room = {
 				$SM.add('game.buildings["' + thing + '"]', 1);
 				break;
 		}
+		AudioEngine.playSound(craftable.audio);
 	},
 
 	needsWorkshop: function (type) {

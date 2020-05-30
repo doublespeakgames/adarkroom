@@ -25,6 +25,7 @@ var Space = {
 		'asteroid-hit-1': '/audio/asteroid-hit-1.wav',
 		'asteroid-hit-2': '/audio/asteroid-hit-2.wav',
 		'asteroid-hit-3': '/audio/asteroid-hit-3.wav',
+		'crash': '/audio/crash.wav',
 	},
 	stars: null,
 	backStars: null,
@@ -68,6 +69,7 @@ var Space = {
 		Space.hull = Ship.getMaxHull();
 		Space.altitude = 0;
 		Space.setTitle();
+		AudioEngine.changeMusic(Space.MUSIC[0]);
 		Space.updateHull();
 		
 		Space.up = 
@@ -81,7 +83,6 @@ var Space = {
 		});
 		Space.startAscent();
 		Space._shipTimer = setInterval(Space.moveShip, 33);
-		Space.setMusic();
 	},
 	
 	setTitle: function() {
@@ -89,16 +90,22 @@ var Space = {
 			var t;
 			if(Space.altitude < 10) {
 				t = _("Troposphere");
+				AudioEngine.changeMusic(Space.MUSIC[1]);
 			} else if(Space.altitude < 20) {
 				t = _("Stratosphere");
+				AudioEngine.changeMusic(Space.MUSIC[2]);
 			} else if(Space.altitude < 30) {
 				t = _("Mesosphere");
+				AudioEngine.changeMusic(Space.MUSIC[3]);
 			} else if(Space.altitude < 45) {
 				t = _("Thermosphere");
+				AudioEngine.changeMusic(Space.MUSIC[4]);
 			} else if(Space.altitude < 60){
 				t = _("Exosphere");
+				AudioEngine.changeMusic(Space.MUSIC[5]);
 			} else {
 				t = _("Space");
+				AudioEngine.changeMusic(Space.MUSIC[0]);
 			}
 			document.title = t;
 		}
@@ -151,6 +158,11 @@ var Space = {
 						t.remove();
 						Space.hull--;
 						Space.updateHull();
+
+						// play random asteroid hit
+						var r = Math.floor(Math.random() * 2) + 1;
+						AudioEngine.playSound(Space.SOUNDS['asteroid-hit-' + r]);
+
 						if(Space.hull === 0) {
 							Space.crash();
 						}
@@ -373,6 +385,7 @@ var Space = {
 		Ship.onArrival();
 		Button.cooldown($('#liftoffButton'));
 		Engine.event('progress', 'crash');
+		AudioEngine.playSound(Space.SOUNDS['crash']);
 	},
 	
 	endGame: function() {
@@ -395,6 +408,7 @@ var Space = {
 		}
 		delete Outside._popTimeout;
 		
+		AudioEngine.changeMusic(Space.MUSIC[6]);
 		$('#hullRemaining', Space.panel).animate({opacity: 0}, 500, 'linear');
 		Space.ship.animate({
 			top: '350px',
@@ -547,9 +561,5 @@ var Space = {
 	
 	handleStateUpdates: function(e){
 		
-	},
-
-	setMusic: function () {
-		AudioEngine.changeMusic(Space.MUSIC[0]);
 	}
 };

@@ -540,7 +540,6 @@ var Events = {
 						clearTimeout(Events._enemyAttackTimer);
 						Events.endEvent();
 						World.die();
-
 						AudioEngine.playSound(Events.SOUNDS['lose-fight']);
 					}
 			});
@@ -1044,7 +1043,7 @@ var Events = {
 				Events.startEvent(possibleEvents[r]);
 				console.log('event', possibleEvents[r].audio);
 				AudioEngine.playSound(Events.SOUNDS['trigger-event']);
-				AudioEngine.changeMusic(possibleEvents[r].audio);
+				AudioEngine.playEventMusic(possibleEvents[r].audio);
 			}
 		}
 
@@ -1066,6 +1065,7 @@ var Events = {
 		// play audio only when fight is possible
 		if (possibleFights.length > 0) {
 			AudioEngine.playSound(Events.SOUNDS['trigger-fight']);
+			AudioEngine.playEventMusic(possibleFights[r].audio);
 		}
 	},
 
@@ -1112,6 +1112,7 @@ var Events = {
 	},
 
 	endEvent: function() {
+		AudioEngine.stopEventMusic();
 		Events.eventPanel().animate({opacity:0}, Events._PANEL_FADE, 'linear', function() {
 			Events.eventPanel().remove();
 			Events.activeEvent().eventPanel = null;

@@ -2,30 +2,28 @@
  * Module that takes care of audio playback
  */
 var AudioEngine = {
-    canPlayAudio: false,
+    FADE_TIME: 1,
     AUDIO_BUFFER_CACHE: {},
     audioContext: null,
     master: null,
-
-    // Tracks for playing music and sound effects
-    // 0 - Background music
-    // 1 - Background music
-    // 2 - Event music
-    // 3 - Sound effects
-    tracks: null,
-    currentBackgroundChannel: 0,
-    currentTrack: null,
+    tracks: {
+        'bg1': null,
+        'bg2': null,
+        'events': null,
+        'sfx': null
+    },
+    currentBackgroundChannel: 'bg1',
+    currentBackgroundAudio: null,
+    currentEventAudio: null,
 	init: function(options) {
         // for legacy browsers
         AudioEngine.audioContext = new (window.AudioContext || window.webkitAudioContext);
         audioLog('starting audio engine');
         console.log(AudioEngine.audioContext);
-        audioLog('state: ' + AudioEngine.audioContext.state);
 
         if (AudioEngine.audioContext.state === 'suspended') {
             AudioEngine.audioContext.resume().then(function () {
                 AudioEngine.createChannels();
-                AudioEngine.canPlayAudio = true;
             });
         } else {
             AudioEngine.createChannels();
@@ -34,72 +32,133 @@ var AudioEngine = {
     createChannels() {
         // create master
         AudioEngine.master = AudioEngine.audioContext.createGain();
+        AudioEngine.master.gain.setValueAtTime(1.0, AudioEngine.audioContext.currentTime);
         AudioEngine.master.connect(AudioEngine.audioContext.destination);
 
         // create 4 tracks to output to master
-        AudioEngine.tracks = [];
-        for (var i = 0; i < 4; i++) {
-            AudioEngine.tracks[i] = AudioEngine.audioContext.createGain();
-            AudioEngine.tracks[i].connect(AudioEngine.master);
-        }
+        AudioEngine.tracks['bg1'] = AudioEngine.audioContext.createGain();
+        AudioEngine.tracks['bg1'].connect(AudioEngine.master);
+        AudioEngine.tracks['bg1'].gain.setValueAtTime(1.0, AudioEngine.audioContext.currentTime);
+        AudioEngine.tracks['bg2'] = AudioEngine.audioContext.createGain();
+        AudioEngine.tracks['bg2'].connect(AudioEngine.master);
+        AudioEngine.tracks['bg2'].gain.setValueAtTime(1.0, AudioEngine.audioContext.currentTime);
+        AudioEngine.tracks['events'] = AudioEngine.audioContext.createGain();
+        AudioEngine.tracks['events'].connect(AudioEngine.master);
+        AudioEngine.tracks['events'].gain.setValueAtTime(1.0, AudioEngine.audioContext.currentTime);
+        AudioEngine.tracks['sfx'] = AudioEngine.audioContext.createGain();
+        AudioEngine.tracks['sfx'].connect(AudioEngine.master);
+        AudioEngine.tracks['sfx'].gain.setValueAtTime(1.0, AudioEngine.audioContext.currentTime);
     },
-	options: {}, // Nothing for now
+    options: {}, // Nothing for now,
+    _canPlayAudio: function() {
+        if (AudioEngine.audioContext.state === 'suspended') {
+            audioLog('can\'t play audio');
+            return false;
+        }
+        return true;
+    },
     _playSound: function(buffer) {
-        if (!AudioEngine.canPlayAudio) return;
+        if (!AudioEngine._canPlayAudio()) return;
 
         var source = AudioEngine.audioContext.createBufferSource();
         source.buffer = buffer;
-        source.connect(AudioEngine.tracks[1]);
+        source.connect(AudioEngine.tracks['sfx']);
         source.start(AudioEngine.audioContext.currentTime);
     },
     _fadeTrack: function(buffer) {
-        if (!AudioEngine.canPlayAudio) return;
+        if (!AudioEngine._canPlayAudio()) return;
 
-        var newTrack = AudioEngine.audioContext.createBufferSource();
-        newTrack.buffer = buffer;
-        newTrack.loop = true;
+        audioLog('_fadeMusic');
+        console.log(buffer);
+        
+        var bufferSource = AudioEngine.audioContext.createBufferSource();
+        bufferSource.buffer = buffer;
+        bufferSource.loop = true;
 
         // figure out which background track to start on
         // in order to do crossfade
         var nextBackgroundChannel;
-        if (AudioEngine.currentBackgroundChannel === 0) {
-            nextBackgroundChannel = 1;
+        if (AudioEngine.currentBackgroundChannel === 'bg1') {
+            nextBackgroundChannel = 'bg2';
         } else {
-            nextBackgroundChannel = 0;
+            nextBackgroundChannel = 'bg1';
         }
         
         // fade in new track
-        var fadeTime = AudioEngine.audioContext.currentTime + 2.0;
-        newTrack.connect(AudioEngine.tracks[nextBackgroundChannel]);
-        newTrack.start(0);
+        var fadeTime = AudioEngine.audioContext.currentTime + AudioEngine.FADE_TIME;
+        bufferSource.connect(AudioEngine.tracks[nextBackgroundChannel]);
+        bufferSource.start(AudioEngine.audioContext.currentTime);
         AudioEngine.tracks[nextBackgroundChannel].gain.setValueAtTime(0.0, AudioEngine.audioContext.currentTime);
-        AudioEngine.tracks[nextBackgroundChannel].gain.linearRampToValueAtTime(.1, fadeTime);
+        AudioEngine.tracks[nextBackgroundChannel].gain.linearRampToValueAtTime(1.0, fadeTime);
 
         // fade out old track
         AudioEngine.tracks[AudioEngine.currentBackgroundChannel].gain.linearRampToValueAtTime(0.0, fadeTime);
-        if (AudioEngine.currentTrack) {
-            AudioEngine.currentTrack.stop(fadeTime + 0.3); // make sure fade has completed
+        if (AudioEngine.currentBackgroundAudio) {
+            AudioEngine.currentBackgroundAudio.stop(fadeTime + 0.3); // make sure fade has completed
         }
 
         // switch background track
         AudioEngine.currentBackgroundChannel = nextBackgroundChannel;
-        AudioEngine.currentTrack = newTrack;
+        AudioEngine.currentBackgroundAudio = bufferSource;
+    },
+    _playEvent: function(buffer) {
+        if (!AudioEngine._canPlayAudio()) return;
+
+        var bufferSource = AudioEngine.audioContext.createBufferSource();
+        bufferSource.buffer = buffer;
+        bufferSource.loop = true;
+        
+        var fadeTime = AudioEngine.audioContext.currentTime + AudioEngine.FADE_TIME * 2;
+
+        // turn down background music
+        AudioEngine.tracks['bg1'].gain.linearRampToValueAtTime(0.2, fadeTime);
+        AudioEngine.tracks['bg2'].gain.linearRampToValueAtTime(0.2, fadeTime);
+        
+        // fade in event music
+        bufferSource.connect(AudioEngine.tracks['events']);
+        bufferSource.start(0);
+        AudioEngine.currentEventAudio = bufferSource;
+
+        AudioEngine.tracks['events'].gain.setValueAtTime(0.0, AudioEngine.audioContext.currentTime);
+        AudioEngine.tracks['events'].gain.linearRampToValueAtTime(1.0, fadeTime);
+    },
+    _stopEventMusic: function() {
+        var fadeTime = AudioEngine.audioContext.currentTime + AudioEngine.FADE_TIME * 2;
+
+        // fade out event music and stop
+        AudioEngine.tracks['events'].gain.linearRampToValueAtTime(0.0, fadeTime);
+        if (AudioEngine.currentEventAudio) {
+            AudioEngine.currentEventAudio.stop(fadeTime + 1); // make sure fade has completed
+            AudioEngine.currentEventAudio = null;
+        }
+
+        // turn up background music
+        AudioEngine.tracks[AudioEngine.currentBackgroundChannel].gain.linearRampToValueAtTime(1.0, fadeTime);
     },
 	changeMusic: function(src) {
         AudioEngine.loadAudioFile(src)
             .then(function (buffer) {
+                audioLog('changeMusic: ' + src);
                 AudioEngine._fadeTrack(buffer);
             });
-        audioLog('change music: ' + src);
-        audioLog('audio engine status: ' + AudioEngine.audioContext.state);
+    },
+	playEventMusic: function(src) {
+        AudioEngine.loadAudioFile(src)
+            .then(function (buffer) {
+                audioLog('playEventMusic: ' + src);
+                AudioEngine._playEvent(buffer);
+            });
+    },
+	stopEventMusic: function() {
+        audioLog('stopEventMusic');
+        AudioEngine._stopEventMusic();
     },
 	playSound: function(src) {
         AudioEngine.loadAudioFile(src)
             .then(function (buffer) {
+                audioLog('playSound: ' + src);
                 AudioEngine._playSound(buffer);
             });
-        audioLog('play sound: ' + src);
-        audioLog('audio engine status: ' + AudioEngine.audioContext.state);
     },
     loadAudioFile(src) {
         if (AudioEngine.AUDIO_BUFFER_CACHE[src]) {
