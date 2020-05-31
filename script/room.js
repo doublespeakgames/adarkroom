@@ -9,6 +9,7 @@ var Room = {
 	_STOKE_COOLDOWN: 10, // cooldown to stoke the fire
 	_NEED_WOOD_DELAY: 15 * 1000, // from when the stranger shows up, to when you need wood
 	buttons: {},
+	currentFireMusic: 0,
 	Craftables: {
 		'trap': {
 			name: _('trap'),
@@ -602,26 +603,7 @@ var Room = {
 
 		Engine.moveStoresView(null, transition_diff);
 		
-		// set music based on fire level
-		var fireValue = $SM.get('game.fire.value');
-		switch (fireValue) {
-			case 0:
-				AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE0);
-				break;
-			case 1:
-				AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE1);
-				break;
-			case 2:
-				AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE2);
-				break;
-			case 3:
-				AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE3);
-				break;
-			case 4:
-				AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE4);
-				break;
-		}
-		Room.currentMusic = fireValue;
+		Room.setMusic();
 	},
 
 	TempEnum: {
@@ -737,10 +719,7 @@ var Room = {
 		Room._fireTimer = Engine.setTimeout(Room.coolFire, Room._FIRE_COOL_DELAY);
 		Room.updateButton();
 		Room.setTitle();
-
-		if ($SM.get('game.fire.value') !== Room.currentMusic) {
-			Room.setMusic();
-		}
+		Room.setMusic();
 	},
 
 	coolFire: function () {
@@ -1234,5 +1213,30 @@ var Room = {
 		} else if (e.stateName.indexOf('game.buildings') === 0) {
 			Room.updateBuildButtons();
 		}
+	},
+
+	setMusic() {
+		// set music based on fire level
+		var fireValue = $SM.get('game.fire.value');
+		if ($SM.get('game.fire.value') !== Room.currentFireMusic) {
+			switch (fireValue) {
+				case 0:
+					AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_DEAD);
+					break;
+				case 1:
+					AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_SMOLDERING);
+					break;
+				case 2:
+					AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_FLICKERING);
+					break;
+				case 3:
+					AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_BURNING);
+					break;
+				case 4:
+					AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_ROARING);
+					break;
+			}
+		}
+		Room.currentFireMusic = fireValue;
 	}
 };
