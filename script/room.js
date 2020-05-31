@@ -9,7 +9,7 @@ var Room = {
 	_STOKE_COOLDOWN: 10, // cooldown to stoke the fire
 	_NEED_WOOD_DELAY: 15 * 1000, // from when the stranger shows up, to when you need wood
 	buttons: {},
-	currentFireMusic: 0,
+	currentFireMusic: null,
 	Craftables: {
 		'trap': {
 			name: _('trap'),
