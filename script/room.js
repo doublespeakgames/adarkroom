@@ -9,7 +9,6 @@ var Room = {
 	_STOKE_COOLDOWN: 10, // cooldown to stoke the fire
 	_NEED_WOOD_DELAY: 15 * 1000, // from when the stranger shows up, to when you need wood
 	buttons: {},
-	currentFireMusic: null,
 	Craftables: {
 		'trap': {
 			name: _('trap'),
@@ -988,7 +987,9 @@ var Room = {
 		Notifications.notify(Room, good.buildMsg);
 
 		$SM.add('stores["' + thing + '"]', 1);
-		AudioEngine.playSound(good.audio);
+
+		// audio
+		AudioEngine.playSound(AudioLibrary.BUY);
 	},
 
 	build: function (buildBtn) {
@@ -1043,7 +1044,18 @@ var Room = {
 				$SM.add('game.buildings["' + thing + '"]', 1);
 				break;
 		}
-		AudioEngine.playSound(craftable.audio);
+
+		// audio
+		switch (craftable.type) {
+			case 'weapon':
+			case 'upgrade':
+			case 'tool':
+				AudioEngine.playSound(AudioLibrary.CRAFT);
+				break;
+			case 'building':
+				AudioEngine.playSound(AudioLibrary.BUILD);
+				break;
+		}
 	},
 
 	needsWorkshop: function (type) {
@@ -1218,25 +1230,22 @@ var Room = {
 	setMusic() {
 		// set music based on fire level
 		var fireValue = $SM.get('game.fire.value');
-		if ($SM.get('game.fire.value') !== Room.currentFireMusic) {
-			switch (fireValue) {
-				case 0:
-					AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_DEAD);
-					break;
-				case 1:
-					AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_SMOLDERING);
-					break;
-				case 2:
-					AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_FLICKERING);
-					break;
-				case 3:
-					AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_BURNING);
-					break;
-				case 4:
-					AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_ROARING);
-					break;
-			}
+		switch (fireValue) {
+			case 0:
+				AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_DEAD);
+				break;
+			case 1:
+				AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_SMOLDERING);
+				break;
+			case 2:
+				AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_FLICKERING);
+				break;
+			case 3:
+				AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_BURNING);
+				break;
+			case 4:
+				AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_ROARING);
+				break;
 		}
-		Room.currentFireMusic = fireValue;
 	}
 };

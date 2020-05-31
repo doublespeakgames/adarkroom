@@ -130,6 +130,7 @@ var AudioEngine = {
         AudioEngine.tracks[AudioEngine.currentBackgroundChannel].gain.linearRampToValueAtTime(1.0, fadeTime);
     },
     changeMusic: function (src) {
+        console.log('changeMusic ', src);
         AudioEngine.loadAudioFile(src)
             .then(function (buffer) {
                 AudioEngine._fadeTrack(buffer);
