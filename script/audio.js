@@ -18,8 +18,6 @@ var AudioEngine = {
     init: function (options) {
         // for legacy browsers
         AudioEngine.audioContext = new (window.AudioContext || window.webkitAudioContext);
-        audioLog('starting audio engine');
-        console.log(AudioEngine.audioContext);
 
         if (AudioEngine.audioContext.state === 'suspended') {
             AudioEngine.audioContext.resume().then(function () {
@@ -52,7 +50,6 @@ var AudioEngine = {
     options: {}, // Nothing for now,
     _canPlayAudio: function () {
         if (AudioEngine.audioContext.state === 'suspended') {
-            audioLog('can\'t play audio');
             return false;
         }
         return true;
@@ -67,9 +64,6 @@ var AudioEngine = {
     },
     _fadeTrack: function (buffer) {
         if (!AudioEngine._canPlayAudio()) return;
-
-        audioLog('_fadeMusic');
-        console.log(buffer);
 
         var bufferSource = AudioEngine.audioContext.createBufferSource();
         bufferSource.buffer = buffer;
@@ -138,25 +132,21 @@ var AudioEngine = {
     changeMusic: function (src) {
         AudioEngine.loadAudioFile(src)
             .then(function (buffer) {
-                audioLog('changeMusic: ' + src);
                 AudioEngine._fadeTrack(buffer);
             });
     },
     playEventMusic: function (src) {
         AudioEngine.loadAudioFile(src)
             .then(function (buffer) {
-                audioLog('playEventMusic: ' + src);
                 AudioEngine._playEvent(buffer);
             });
     },
     stopEventMusic: function () {
-        audioLog('stopEventMusic');
         AudioEngine._stopEventMusic();
     },
     playSound: function (src) {
         AudioEngine.loadAudioFile(src)
             .then(function (buffer) {
-                audioLog('playSound: ' + src);
                 AudioEngine._playSound(buffer);
             });
     },
@@ -198,7 +188,3 @@ var AudioEngine = {
         );
     }
 };
-
-function audioLog(message) {
-    console.log('%c' + message, 'background: #222; color: #bada55');
-}

@@ -362,8 +362,6 @@ var Events = {
 	},
 
 	useWeapon: function(btn) {
-		console.log('%cuse weapon: ', 'background: #222; color: #bada55');
-		console.log(btn);
 		if(Events.activeEvent()) {
 			var weaponName = btn.attr('id').substring(7).replace('-', ' ');
 			var weapon = World.Weapons[weaponName];
@@ -1041,7 +1039,6 @@ var Events = {
 			} else {
 				var r = Math.floor(Math.random()*(possibleEvents.length));
 				Events.startEvent(possibleEvents[r]);
-				console.log('event', possibleEvents[r].audio);
 				AudioEngine.playSound(Events.SOUNDS['trigger-event']);
 				AudioEngine.playEventMusic(possibleEvents[r].audio);
 			}
