@@ -134,6 +134,12 @@
 			}
 
 			$('<span>')
+				.addClass('volume menuBtn')
+				.text(_('sound off.'))
+				.click(Engine.toggleVolume)
+				.appendTo(menu);
+
+			$('<span>')
 				.addClass('appStore menuBtn')
 				.text(_('get the app.'))
 				.click(Engine.getApp)
@@ -215,12 +221,16 @@
 				Ship.init();
 			}
 
+			if(!$SM.get('config.soundOn')){
+				Engine.toggleVolume();
+			}
+
 			if($SM.get('config.lightsOff', true)){
-					Engine.turnLightsOff();
+				Engine.turnLightsOff();
 			}
 
 			if($SM.get('config.hyperMode', true)){
-					Engine.triggerHyperMode();
+				Engine.triggerHyperMode();
 			}
 
 			Engine.saveLanguage();
@@ -779,6 +789,18 @@
 			var lang = decodeURIComponent((new RegExp('[?|&]lang=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
 			if(lang && typeof Storage != 'undefined' && localStorage) {
 				localStorage.lang = lang;
+			}
+		},
+
+		toggleVolume: function() {
+			if ($SM.get('config.soundOn')) {
+				$('.volume').text(_('sound on.'));
+				$SM.set('config.soundOn', false);
+				AudioEngine.mute();
+			} else {
+				$('.volume').text(_('sound off.'));
+				$SM.set('config.soundOn', true);
+				AudioEngine.setVolume(1.0);
 			}
 		},
 
