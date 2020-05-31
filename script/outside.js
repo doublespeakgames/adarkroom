@@ -587,14 +587,29 @@ var Outside = {
 		Outside.updateVillage(true);
 
 		Engine.moveStoresView($('#village'), transition_diff);
-		Outside.setMusic();
+		
+		// set music
+		var numberOfHuts = $SM.get('game.buildings["hut"]', true);
+		if(numberOfHuts === 0) {
+			AudioEngine.changeMusic(AudioLibrary.MUSIC_SILENT_FOREST);
+		} else if(numberOfHuts == 1) {
+			AudioEngine.changeMusic(AudioLibrary.MUSIC_LONELY_HUT);
+		} else if(numberOfHuts <= 4) {
+			AudioEngine.changeMusic(AudioLibrary.MUSIC_TINY_VILLAGE);
+		} else if(numberOfHuts <= 8) {
+			AudioEngine.changeMusic(AudioLibrary.MUSIC_MODEST_VILLAGE);
+		} else if(numberOfHuts <= 14) {
+			AudioEngine.changeMusic(AudioLibrary.MUSIC_LARGE_VILLAGE);
+		} else {
+			AudioEngine.changeMusic(AudioLibrary.MUSIC_RAUCOUS_VILLAGE);
+		}
 	},
 	
 	gatherWood: function() {
 		Notifications.notify(Outside, _("dry brush and dead branches litter the forest floor"));
 		var gatherAmt = $SM.get('game.buildings["cart"]', true) > 0 ? 50 : 10;
 		$SM.add('stores.wood', gatherAmt);
-		AudioEngine.playSound(Outside.SOUNDS['gather-wood']);
+		AudioEngine.playSound(AudioLibrary.GATHER_WOOD);
 	},
 	
 	checkTraps: function() {
@@ -635,7 +650,7 @@ var Outside = {
 		
 		Notifications.notify(Outside, s);
 		$SM.addM('stores', drops);
-		AudioEngine.playSound(Outside.SOUNDS['check-traps']);
+		AudioEngine.playSound(AudioLibrary.CHECL_TRAPS);
 	},
 	
 	handleStateUpdates: function(e){
@@ -678,25 +693,5 @@ var Outside = {
 		scrollByX( $('#storesContainer'), momentum );
 		Outside._STORES_OFFSET += momentum;
 
-	},
-
-	setMusic: function () {
-		var numberOfHuts = $SM.get('game.buildings["hut"]', true);
-		var currentMusic = 0;
-		if(numberOfHuts === 0) {
-			currentMusic = 0;
-		} else if(numberOfHuts == 1) {
-			currentMusic = 1;
-		} else if(numberOfHuts <= 4) {
-			currentMusic = 2;
-		} else if(numberOfHuts <= 8) {
-			currentMusic = 3;
-		} else if(numberOfHuts <= 14) {
-			currentMusic = 4;
-		} else {
-			currentMusic = 5;
-		}
-		Outside.currentMusic = currentMusic;
-		AudioEngine.changeMusic(Outside.MUSIC[currentMusic]);
 	}
 };

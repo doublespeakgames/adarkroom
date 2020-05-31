@@ -339,12 +339,12 @@ var Events = {
 
 	eatMeat: function(btn) {
 		Events.doHeal('cured meat', World.meatHeal(), btn);
-		AudioEngine.playSound(Events.SOUNDS['eat-meat']);
+		AudioEngine.playSound(AudioLibrary.EAT_MEAT);
 	},
 
 	useMeds: function(btn) {
 		Events.doHeal('medicine', World.medsHeal(), btn);
-		AudioEngine.playSound(Events.SOUNDS['use-meds']);
+		AudioEngine.playSound(AudioLibrary.USE_MEDS);
 	},
 
 	useWeapon: function(btn) {
@@ -447,7 +447,7 @@ var Events = {
 				Events.updateFighterDiv(enemy);
 
 				// play hit sound
-				AudioEngine.playSound(Events.SOUNDS['enemy-hit']);
+				AudioEngine.playSound(AudioLibrary.ENEMY_HIT);
 			}
 		} else {
 			if(dmg == 'stun') {
@@ -524,7 +524,7 @@ var Events = {
 						clearTimeout(Events._enemyAttackTimer);
 						Events.endEvent();
 						World.die();
-						AudioEngine.playSound(Events.SOUNDS['lose-fight']);
+						AudioEngine.playSound(AudioLibrary.LOSE_FIGHT);
 					}
 			});
 		}
@@ -542,7 +542,7 @@ var Events = {
 				return;
 			}
 			Events.endFight();
-			AudioEngine.playSound(Events.SOUNDS['win-fight']);
+			AudioEngine.playSound(AudioLibrary.WIN_FIGHT);
 			$('#enemy').animate({opacity: 0}, 300, 'linear', function() {
 				Engine.setTimeout(function() {
 					var scene = Events.activeEvent().scenes[Events.activeScene];
@@ -1025,7 +1025,7 @@ var Events = {
 			} else {
 				var r = Math.floor(Math.random()*(possibleEvents.length));
 				Events.startEvent(possibleEvents[r]);
-				AudioEngine.playSound(Events.SOUNDS['trigger-event']);
+				AudioEngine.playSound(AudioLibrary.TRIGGER_EVENT);
 				AudioEngine.playEventMusic(possibleEvents[r].audio);
 			}
 		}
@@ -1047,7 +1047,7 @@ var Events = {
 		
 		// play audio only when fight is possible
 		if (possibleFights.length > 0) {
-			AudioEngine.playSound(Events.SOUNDS['trigger-fight']);
+			AudioEngine.playSound(AudioLibrary.TRIGGER_FIGHT);
 			AudioEngine.playEventMusic(possibleFights[r].audio);
 		}
 	},

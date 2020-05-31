@@ -124,5 +124,13 @@ var AudioLibrary = {
     CRASH: '/audio/crash.wav',
     REINFORCE_HULL: '/audio/reinforce-hull.wav',
     UPGRADE_ENGINE: '/audio/upgrade-engine.wav',
-    LIFT_OFF: '/audio/lift-off.wav'
+    LIFT_OFF: '/audio/lift-off.wav',
+    PUNCH: '/audio/punch.wav',
+    STAB: '/audio/stab.wav',
+    SWING: '/audio/swing.wav',
+    SLASH: '/audio/slash.wav',
+    THRUST: '/audio/thrust.wav',
+    SHOOT: '/audio/shoot.wav',
+    BLAST: '/audio/blast.wav',
+    TANGLE: '/audio/tangle.wav'
 };

@@ -46,35 +46,35 @@ var World = {
 			type: 'unarmed',
 			damage: 1,
 			cooldown: 2,
-			audio: '/audio/punch.wav'
+			audio: AudioLibrary.PUNCH
 		},
 		'bone spear': {
 			verb: _('stab'),
 			type: 'melee',
 			damage: 2,
 			cooldown: 2,
-			audio: '/audio/stab.wav'
+			audio: AudioLibrary.STAB
 		},
 		'iron sword': {
 			verb: _('swing'),
 			type: 'melee',
 			damage: 4,
 			cooldown: 2,
-			audio: '/audio/swing.wav'
+			audio: AudioLibrary.SWING
 		},
 		'steel sword': {
 			verb: _('slash'),
 			type: 'melee',
 			damage: 6,
 			cooldown: 2,
-			audio: '/audio/slash.wav'
+			audio: AudioLibrary.SLASH
 		},
 		'bayonet': {
 			verb: _('thrust'),
 			type: 'melee',
 			damage: 8,
 			cooldown: 2,
-			audio: '/audio/thrust.wav'
+			audio: AudioLibrary.THRUST
 		},
 		'rifle': {
 			verb: _('shoot'),
@@ -82,7 +82,7 @@ var World = {
 			damage: 5,
 			cooldown: 1,
 			cost: { 'bullets': 1 },
-			audio: '/audio/shoot.wav'
+			audio: AudioLibrary.SHOOT
 		},
 		'laser rifle': {
 			verb: _('blast'),
@@ -90,7 +90,7 @@ var World = {
 			damage: 8,
 			cooldown: 1,
 			cost: { 'energy cell': 1 },
-			audio: '/audio/blast.wav'
+			audio: AudioLibrary.BLAST
 		},
 		'grenade': {
 			verb: _('lob'),
@@ -98,7 +98,7 @@ var World = {
 			damage: 15,
 			cooldown: 5,
 			cost: { 'grenade': 1 },
-			audio: '/audio/lob.wav'
+			audio: AudioLibrary.LOB
 		},
 		'bolas': {
 			verb: _('tangle'),
@@ -106,7 +106,7 @@ var World = {
 			damage: 'stun',
 			cooldown: 15,
 			cost: { 'bolas': 1 },
-			audio: '/audio/tangle.wav'
+			audio: AudioLibrary.TANGLE
 		}
 	},
 
@@ -358,7 +358,7 @@ var World = {
 
 		// play random footstep
 		var randomFootstep = Math.floor(Math.random() * 2) + 1;
-		AudioEngine.playSound(World.SOUNDS['footsteps-' + randomFootstep]);
+		AudioEngine.playSound(AudioLibrary['FOOTSTEPS' + randomFootstep]);
 
 		if(World.checkDanger()) {
 			if(World.danger) {
@@ -478,7 +478,7 @@ var World = {
 						$SM.addPerk('slow metabolism');
 					}
 					World.die();
-					AudioEngine.playSound(World.SOUNDS['death-starved']);
+					AudioEngine.playSound(AudioLibrary.DEATH_STARVED);
 					return false;
 				}
 			} else {
@@ -508,7 +508,7 @@ var World = {
 						$SM.addPerk('desert rat');
 					}
 					World.die();
-					AudioEngine.playSound(World.SOUNDS['death-dehydrated']);
+					AudioEngine.playSound(AudioLibrary.DEATH_DEHYDRATED);
 					return false;
 				}
 			} else {
@@ -1022,7 +1022,7 @@ var World = {
 		World.curPos = World.copyPos(World.VILLAGE_POS);
 		World.drawMap();
 		World.setTitle();
-		World.setMusic();
+		AudioEngine.changeMusic(AudioLibrary.MUSIC_WORLD);
 		World.dead = false;
 		$('div#bagspace-world > div').empty();
 		World.updateSupplies();
@@ -1039,9 +1039,5 @@ var World = {
 
 	handleStateUpdates: function(e){
 
-	},
-
-	setMusic: function () {
-		AudioEngine.changeMusic(World.MUSIC[0]);
 	}
 };

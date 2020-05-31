@@ -29,7 +29,7 @@ Events.Setpieces = {
 				}
 			}
 		},
-		audio: '/audio/friendly-outpost.wav'
+		audio: AudioLibrary.EVENT_FRIENDLY_OUTPOST
 	},
 	"swamp": { /* Swamp */
 		title: _('A Murky Swamp'),
@@ -87,7 +87,7 @@ Events.Setpieces = {
 				}
 			}
 		},
-		audio: '/audio/swamp.wav'
+		audio: AudioLibrary.EVENT_SWAMP
 	},
 	"cave": { /* Cave */
 		title: _('A Damp Cave'),
@@ -519,7 +519,7 @@ Events.Setpieces = {
 				}
 			}
 		},
-		audio: '/audio/cave.wav'
+		audio: AudioLibrary.EVENT_CAVE
 	},
 	"town": { /* Town */
 		title: _('A Deserted Town'),
@@ -1237,7 +1237,7 @@ Events.Setpieces = {
 				}
 			}
 		},
-		audio: '/audio/town.wav'
+		audio: AudioLibrary.EVENT_TOWN
 	},
 	"city": { /* City */
 		title: _('A Ruined City'),
@@ -2933,7 +2933,7 @@ Events.Setpieces = {
 				}
 			}
 		},
-		audio: '/audio/city.wav'
+		audio: AudioLibrary.EVENT_CITY
 	},
 	"house": { /* Abandoned House */
 		title: _('An Old House'),
@@ -3051,7 +3051,7 @@ Events.Setpieces = {
 				}
 			}
 		},
-		audio: '/audio/house.wav'
+		audio: AudioLibrary.EVENT_HOUSE
 	},
 	"battlefield": { /* Discovering an old battlefield */
 		title: _('A Forgotten Battlefield'),
@@ -3105,7 +3105,7 @@ Events.Setpieces = {
 				}
 			}
 		},
-		audio: '/audio/battlefield.wav'
+		audio: AudioLibrary.EVENT_BATTLEFIELD
 	},
 	"borehole": { /* Admiring a huge borehole */
 		title: _('A Huge Borehole'),
@@ -3135,7 +3135,7 @@ Events.Setpieces = {
 				}
 			}
 		},
-		audio: '/audio/borehole.wav'
+		audio: AudioLibrary.EVENT_BOREHOLE
 	},
 	"ship": { /* Finding a way off this rock */
 		title: _('A Crashed Ship'),
@@ -3159,7 +3159,7 @@ Events.Setpieces = {
 				}
 			}
 		},
-		audio: '/audio/crashed-ship.wav'
+		audio: AudioLibrary.EVENT_CRASHED_SHIP
 	},
 	"sulphurmine": { /* Clearing the Sulphur Mine */
 		title: _('The Sulphur Mine'),
@@ -3309,7 +3309,7 @@ Events.Setpieces = {
 				}
 			}
 		},
-		audio: '/audio/sulphurmine.wav'
+		audio: AudioLibrary.EVENT_SULPHUR_MINE
 	},
 	"coalmine": { /* Clearing the Coal Mine */
 		title: _('The Coal Mine'),
@@ -3452,7 +3452,7 @@ Events.Setpieces = {
 				}
 			}
 		},
-		audio: '/audio/coalmine.wav'
+		audio: AudioLibrary.EVENT_COAL_MINE
 	},
 	"ironmine": { /* Clearing the Iron Mine */
 		title: _('The Iron Mine'),
@@ -3529,7 +3529,7 @@ Events.Setpieces = {
 				}
 			}
 		},
-		audio: '/audio/ironmine.wav'
+		audio: AudioLibrary.EVENT_IRON_MINE
 	},
 	
 	"cache": { /* Cache - contains some of supplies from previous game */
@@ -3582,6 +3582,6 @@ Events.Setpieces = {
 				}
 			}
 		},
-		audio: '/audio/destroyed-village.wav'
+		audio: AudioLibrary.EVENT_DESTROYED_VILLAGE
 	}
 };

@@ -303,7 +303,8 @@ var Path = {
 		Path.setTitle();
 		Path.updateOutfitting();
 		Path.updatePerks(true);
-		Path.setMusic();
+		
+		AudioEngine.changeMusic(AudioLibrary.MUSIC_PATH);
 
 		Engine.moveStoresView($('#perks'), transition_diff);
 	},
@@ -319,7 +320,7 @@ var Path = {
 		World.onArrival();
 		$('#outerSlider').animate({left: '-700px'}, 300);
 		Engine.activeModule = World;
-		AudioEngine.playSound(Path.SOUNDS['embark']);
+		AudioEngine.playSound(AudioLibrary.EMBARK);
 	},
 	
 	handleStateUpdates: function(e){
@@ -358,9 +359,5 @@ var Path = {
 		scrollByX( $('#storesContainer'), momentum );
 		Path._STORES_OFFSET += momentum;
 
-	},
-
-	setMusic: function () {
-		AudioEngine.changeMusic(Path.MUSIC[0]);
 	}
 };

@@ -90,7 +90,7 @@ var Ship = {
 			Notifications.notify(Ship, _('somewhere above the debris cloud, the wanderer fleet hovers. been on this rock too long.'));
 			$SM.set('game.spaceShip.seenShip', true);
 		}
-		Ship.setMusic();
+		AudioEngine.changeMusic(AudioLibrary.MUSIC_SHIP);
 
 		Engine.moveStoresView(null, transition_diff);
 	},
@@ -112,7 +112,7 @@ var Ship = {
 			Button.setDisabled($('#liftoffButton', Ship.panel), false);
 		}
 		$('#hullRow .row_val', Ship.panel).text($SM.get('game.spaceShip.hull'));
-		AudioEngine.playSound(Ship.SOUNDS['reinforce-hull']);
+		AudioEngine.playSound(AudioLibrary.REINFORCE_HULL);
 	},
 	
 	upgradeEngine: function() {
@@ -123,7 +123,7 @@ var Ship = {
 		$SM.add('stores["alien alloy"]', -Ship.ALLOY_PER_THRUSTER);
 		$SM.add('game.spaceShip.thrusters', 1);
 		$('#engineRow .row_val', Ship.panel).text($SM.get('game.spaceShip.thrusters'));
-		AudioEngine.playSound(Ship.SOUNDS['upgrade-engine']);
+		AudioEngine.playSound(AudioLibrary.UPGRADE_ENGINE);
 	},
 	
 	getMaxHull: function() {
@@ -168,14 +168,10 @@ var Ship = {
 		$('#outerSlider').animate({top: '700px'}, 300);
 		Space.onArrival();
 		Engine.activeModule = Space;
-		AudioEngine.playSound(Ship.SOUNDS['lift-off']);
+		AudioEngine.playSound(AudioLibrary.LIFT_OFF);
 	},
 	
 	handleStateUpdates: function(e){
 		
-	},
-
-	setMusic: function () {
-		AudioEngine.changeMusic(Ship.MUSIC[0]);
 	}
 };

@@ -39,7 +39,7 @@ Events.Encounters = [
 				notification: _('a snarling beast leaps out of the underbrush')
 			}
 		},
-		audio: '/audio/snarling-beast.wav'
+		audio: AudioLibrary.ENCOUNTER_SNARLING_BEAST
 	},
 	{ /* Gaunt Man */
 	title: _('A Gaunt Man'),
@@ -77,7 +77,7 @@ Events.Encounters = [
 				notification: _('a gaunt man approaches, a crazed look in his eye')
 			}
 		},
-		audio: '/audio/gaunt-man.wav'
+		audio: AudioLibrary.ENCOUNTER_GAUNT_MAN
 	},
 	{ /* Strange Bird */
 	title: _('A Strange Bird'),
@@ -115,7 +115,7 @@ Events.Encounters = [
 				notification: _('a strange looking bird speeds across the plains')
 			}
 		},
-		audio: '/audio/strange-bird.wav'
+		audio: AudioLibrary.ENCOUNTER_STRANGE_BIRD
 	},
 	/* Tier 2*/
 	{ /* Shivering Man */
@@ -159,7 +159,7 @@ Events.Encounters = [
 				notification: _('a shivering man approaches and attacks with surprising strength')
 			}
 		},
-		audio: '/audio/shivering-man.wav'
+		audio: AudioLibrary.ENCOUNTER_SHIVERING_MAN
 	},
 	{ /* Man-eater */
 		title: _('A Man-Eater'),
@@ -197,7 +197,7 @@ Events.Encounters = [
 				notification: _('a large creature attacks, claws freshly bloodied')
 			}
 		},
-		audio: '/audio/man-eater.wav'
+		audio: AudioLibrary.ENCOUNTER_MAN_EATER
 	},
 	{ /* Scavenger */
 	title: _('A Scavenger'),
@@ -240,7 +240,7 @@ Events.Encounters = [
 				notification: _('a scavenger draws close, hoping for an easy score')
 			}
 		},
-		audio: '/audio/scavenger.wav'
+		audio: AudioLibrary.ENCOUNTER_SCAVENGER
 	},
 	{ /* Huge Lizard */
 	title: _('A Huge Lizard'),
@@ -278,7 +278,7 @@ Events.Encounters = [
 				notification: _('the grass thrashes wildly as a huge lizard pushes through')
 			}
 		},
-		audio: '/audio/huge-lizard.wav'
+		audio: AudioLibrary.ENCOUNTER_HUGE_LIZARD
 	},
 	/* Tier 3*/
 	{ /* Feral Terror */
@@ -317,7 +317,7 @@ Events.Encounters = [
 				notification: _('a beast, wilder than imagining, erupts out of the foliage')
 			}
 		},
-		audio: '/audio/feral-terror.wav'
+		audio: AudioLibrary.ENCOUNTER_FERAL_TERROR
 	},
 	{ /* Soldier */
 	title: _('A Soldier'),
@@ -361,7 +361,7 @@ Events.Encounters = [
 				notification: _('a soldier opens fire from across the desert')
 			}
 		},
-		audio: '/audio/soldier.wav'
+		audio: AudioLibrary.ENCOUNTER_SOLDIER
 	},
 	{ /* Sniper */
 	title: _('A Sniper'),
@@ -405,6 +405,6 @@ Events.Encounters = [
 				notification: _('a shot rings out, from somewhere in the long grass')
 			}
 		},
-		audio: '/audio/sniper.wav'
+		audio: AudioLibrary.ENCOUNTER_SNIPER
 	}
 ];

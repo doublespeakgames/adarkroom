@@ -53,7 +53,7 @@ var Space = {
 		Space.hull = Ship.getMaxHull();
 		Space.altitude = 0;
 		Space.setTitle();
-		AudioEngine.changeMusic(Space.MUSIC[0]);
+		AudioEngine.changeMusic(AudioLibrary.MUSIC_SPACE);
 		Space.updateHull();
 		
 		Space.up = 
@@ -74,22 +74,22 @@ var Space = {
 			var t;
 			if(Space.altitude < 10) {
 				t = _("Troposphere");
-				AudioEngine.changeMusic(Space.MUSIC[1]);
+				AudioEngine.changeMusic(AudioLibrary.MUSIC_TROPOSPHERE);
 			} else if(Space.altitude < 20) {
 				t = _("Stratosphere");
-				AudioEngine.changeMusic(Space.MUSIC[2]);
+				AudioEngine.changeMusic(AudioLibrary.MUSIC_STRATOSPHERE);
 			} else if(Space.altitude < 30) {
 				t = _("Mesosphere");
-				AudioEngine.changeMusic(Space.MUSIC[3]);
+				AudioEngine.changeMusic(AudioLibrary.MUSIC_MESOSPHERE);
 			} else if(Space.altitude < 45) {
 				t = _("Thermosphere");
-				AudioEngine.changeMusic(Space.MUSIC[4]);
+				AudioEngine.changeMusic(AudioLibrary.MUSIC_THERMOSPHERE);
 			} else if(Space.altitude < 60){
 				t = _("Exosphere");
-				AudioEngine.changeMusic(Space.MUSIC[5]);
+				AudioEngine.changeMusic(AudioLibrary.MUSIC_EXOSPHERE);
 			} else {
 				t = _("Space");
-				AudioEngine.changeMusic(Space.MUSIC[0]);
+				AudioEngine.changeMusic(AudioLibrary.MUSIC_SPACE);
 			}
 			document.title = t;
 		}
@@ -145,7 +145,7 @@ var Space = {
 
 						// play random asteroid hit
 						var r = Math.floor(Math.random() * 2) + 1;
-						AudioEngine.playSound(Space.SOUNDS['asteroid-hit-' + r]);
+						AudioEngine.playSound(AudioLibrary['ASTEROID_HIT' + r]);
 
 						if(Space.hull === 0) {
 							Space.crash();
@@ -369,7 +369,7 @@ var Space = {
 		Ship.onArrival();
 		Button.cooldown($('#liftoffButton'));
 		Engine.event('progress', 'crash');
-		AudioEngine.playSound(Space.SOUNDS['crash']);
+		AudioEngine.playSound(AudioLibrary.CRASH);
 	},
 	
 	endGame: function() {
@@ -392,7 +392,7 @@ var Space = {
 		}
 		delete Outside._popTimeout;
 		
-		AudioEngine.changeMusic(Space.MUSIC[6]);
+		AudioEngine.changeMusic(AudioLibrary.MUSIC_ENDING);
 		$('#hullRemaining', Space.panel).animate({opacity: 0}, 500, 'linear');
 		Space.ship.animate({
 			top: '350px',
