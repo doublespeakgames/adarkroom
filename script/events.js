@@ -11,20 +11,6 @@ var Events = {
 	_LEAVE_COOLDOWN: 1,
 	STUN_DURATION: 4000,
 	BLINK_INTERVAL: false,
-	currentMusic: 0,
-	MUSIC: {
-		0: '/audio/combat.wav',
-		1: '/audio/event.wav'
-	},
-	SOUNDS: {
-		'trigger-fight': '/audio/trigger-fight.wav',
-		'trigger-event': '/audio/trigger-event.wav',
-		'enemy-hit': '/audio/enemy-hit.wav',
-		'eat-meat': '/audio/eat-meat.wav',
-		'use-meds': '/audio/use-meds.wav',
-		'win-fight': '/audio/win-fight.wav',
-		'lose-fight': '/audio/lose-fight.wav'
-	},
 	init: function(options) {
 		this.options = $.extend(
 			this.options,

@@ -8,18 +8,6 @@ var Room = {
 	_BUILDER_STATE_DELAY: 0.5 * 60 * 1000, // time between builder state updates
 	_STOKE_COOLDOWN: 10, // cooldown to stoke the fire
 	_NEED_WOOD_DELAY: 15 * 1000, // from when the stranger shows up, to when you need wood
-	currentMusic: 0,
-	MUSIC: {
-		0: '/audio/fire-0.wav',
-		1: '/audio/fire-1.wav',
-		2: '/audio/fire-2.wav',
-		3: '/audio/fire-3.wav',
-		4: '/audio/fire-4.wav',
-	},
-	SOUNDS: {
-		'light-fire': '/audio/light-fire.wav',
-		'stoke-fire': '/audio/stoke-fire.wav'
-	},
 	buttons: {},
 	Craftables: {
 		'trap': {

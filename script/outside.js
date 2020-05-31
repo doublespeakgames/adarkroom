@@ -94,19 +94,6 @@ var Outside = {
 			}
 		}
 	},
-	currentMusic: 0,
-	MUSIC: {
-		0: '/audio/silent-forest.wav',
-		1: '/audio/lonely-hut.wav',
-		2: '/audio/tiny-village.wav',
-		3: '/audio/modest-village.wav',
-		4: '/audio/large-village.wav',
-		5: '/audio/raucous-village.wav',
-	},
-	SOUNDS: {
-		'gather-wood': '/audio/gather-wood.wav',
-		'check-traps': '/audio/check-traps.wav'
-	},
 	TrapDrops: [
 		{
 			rollUnder: 0.5,

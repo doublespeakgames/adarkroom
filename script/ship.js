@@ -7,15 +7,6 @@ var Ship = {
 	ALLOY_PER_THRUSTER: 1,
 	BASE_HULL: 0,
 	BASE_THRUSTERS: 1,
-	currentMusic: 0,
-	MUSIC: {
-		0: '/audio/ship.wav'
-	},
-	SOUNDS: {
-		'reinforce-hull': '/audio/reinforce-hull.wav',
-		'upgrade-engine': '/audio/upgrade-engine.wav',
-		'lift-off': '/audio/lift-off.wav',
-	},
 	name: _("Ship"),
 	init: function(options) {
 		this.options = $.extend(

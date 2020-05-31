@@ -1,14 +1,6 @@
 var Path = {
-		
 	DEFAULT_BAG_SPACE: 10,
 	_STORES_OFFSET: 0,
-	currentMusic: 0,
-	MUSIC: {
-		0: '/audio/dusty-path.wav'
-	},
-	SOUNDS: {
-		'embark': '/audio/embark.wav',
-	},
 	// Everything not in this list weighs 1
 	Weight: {
 		'bone spear': 2,

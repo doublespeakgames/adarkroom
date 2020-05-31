@@ -1,16 +1,4 @@
 var World = {
-
-	currentMusic: 0,
-	MUSIC: {
-		0: '/audio/world.wav'
-	},
-	SOUNDS: {
-		'footsteps-1': '/audio/footsteps-1.wav',
-		'footsteps-2': '/audio/footsteps-2.wav',
-		'footsteps-3': '/audio/footsteps-3.wav',
-		'death-starved': '/audio/death-starved.wav',
-		'death-dehydrated': '/audio/death-dehydrated.wav',
-	},
 	RADIUS: 30,
 	VILLAGE_POS: [30, 30],
 	TILE: {
