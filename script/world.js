@@ -561,6 +561,7 @@ var World = {
 		} else if(typeof World.LANDMARKS[curTile] != 'undefined') {
 			if(curTile != World.TILE.OUTPOST || !World.outpostUsed()) {
 				Events.startEvent(Events.Setpieces[World.LANDMARKS[curTile].scene]);
+				AudioEngine.playEventMusic(Events.Setpieces[World.LANDMARKS[curTile].scene].audio);
 			}
 		} else {
 			if(World.useSupplies()) {
