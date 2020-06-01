@@ -54,6 +54,19 @@ var AudioEngine = {
         }
         return true;
     },
+    _getMissingAudioBuffer: function () {
+        var buffer = AudioEngine.audioContext.createBuffer(
+            1, 
+            AudioEngine.audioContext.sampleRate, 
+            AudioEngine.audioContext.sampleRate
+        );
+        // Fill the buffer
+        var bufferData = buffer.getChannelData(0);
+        for (var i = 0; i < buffer.length / 2; i++) {
+            bufferData[i] = Math.sin(i * .05) / 2;
+        }
+        return buffer;
+    },
     _playSound: function (buffer) {
         if (!AudioEngine._canPlayAudio()) return;
 
@@ -164,6 +177,11 @@ var AudioEngine = {
             return fetch(request).then(function (response) {
                 return response.arrayBuffer();
             }).then(function (buffer) {
+                if (buffer.byteLength === 0) {
+                    console.error('cannot load audio from ' + src);
+                    return AudioEngine._getMissingAudioBuffer();
+                }
+
                 return AudioEngine.audioContext.decodeAudioData(buffer, function (decodedData) {
                     AudioEngine.AUDIO_BUFFER_CACHE[src] = decodedData;
                     return AudioEngine.AUDIO_BUFFER_CACHE[src];
