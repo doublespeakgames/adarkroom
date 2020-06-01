@@ -114,7 +114,7 @@ var AudioEngine = {
         AudioEngine.currentEventAudio = bufferSource;
 
         AudioEngine.tracks['events'].gain.setValueAtTime(0.0, AudioEngine.audioContext.currentTime);
-        AudioEngine.tracks['events'].gain.linearRampToValueAtTime(1.0, fadeTime);
+        AudioEngine.tracks['events'].gain.linearRampToValueAtTime(0.1, fadeTime);
     },
     _stopEventMusic: function () {
         var fadeTime = AudioEngine.audioContext.currentTime + AudioEngine.FADE_TIME * 2;
