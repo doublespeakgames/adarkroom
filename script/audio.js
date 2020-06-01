@@ -152,6 +152,9 @@ var AudioEngine = {
             });
     },
     loadAudioFile(src) {
+        if (src.indexOf('http') === -1) {
+            src = window.location + src;
+        }
         if (AudioEngine.AUDIO_BUFFER_CACHE[src]) {
             return new Promise(function (resolve, reject) {
                 resolve(AudioEngine.AUDIO_BUFFER_CACHE[src]);
