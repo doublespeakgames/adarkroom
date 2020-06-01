@@ -419,7 +419,21 @@ var Events = {
 			}
 			
 			var attackFn = weapon.type == 'ranged' ? Events.animateRanged : Events.animateMelee;
-			AudioEngine.playSound(weapon.audio);
+			
+			// play variation audio for weapon type
+			var r = Math.floor(Math.random() * 2) + 1;
+			switch (weapon.type) {
+				case 'unarmed':
+					AudioEngine.playSound(AudioLibrary['WEAPON_UNARMED_' + r]);
+					break;
+				case 'melee':
+					AudioEngine.playSound(AudioLibrary['WEAPON_MELEE_' + r]);
+					break;
+				case 'ranged':
+					AudioEngine.playSound(AudioLibrary['WEAPON_RANGED_' + r]);
+					break;
+			}
+
 			attackFn($('#wanderer'), dmg, function() {
 				if($('#enemy').data('hp') <= 0 && !Events.won) {
 					// Success!
@@ -429,7 +443,7 @@ var Events = {
 		}
 	},
 
-	damage: function(fighter, enemy, dmg) {
+	damage: function(fighter, enemy, dmg, type) {
 		var enemyHp = enemy.data('hp');
 		var msg = "";
 		if(typeof dmg == 'number') {
@@ -446,8 +460,19 @@ var Events = {
 				}
 				Events.updateFighterDiv(enemy);
 
-				// play hit sound
-				AudioEngine.playSound(AudioLibrary.ENEMY_HIT);
+				// play variation audio for weapon type
+				var r = Math.floor(Math.random() * 2) + 1;
+				switch (type) {
+					case 'unarmed':
+						AudioEngine.playSound(AudioLibrary['WEAPON_UNARMED_' + r]);
+						break;
+					case 'melee':
+						AudioEngine.playSound(AudioLibrary['WEAPON_MELEE_' + r]);
+						break;
+					case 'ranged':
+						AudioEngine.playSound(AudioLibrary['WEAPON_RANGED_' + r]);
+						break;
+				}
 			}
 		} else {
 			if(dmg == 'stun') {
@@ -473,7 +498,7 @@ var Events = {
 
 		fighter.stop(true, true).animate(start, Events._FIGHT_SPEED, function() {
 
-			Events.damage(fighter, enemy, dmg);
+			Events.damage(fighter, enemy, dmg, 'melee');
 
 			$(this).animate(end, Events._FIGHT_SPEED, callback);
 		});
@@ -494,7 +519,7 @@ var Events = {
 		$('<div>').css(start).addClass('bullet').text('o').appendTo('#description')
 			.animate(end, Events._FIGHT_SPEED * 2, 'linear', function() {
 
-			Events.damage(fighter, enemy, dmg);
+			Events.damage(fighter, enemy, dmg, 'ranged');
 
 			$(this).remove();
 			if(typeof callback == 'function') {
@@ -542,7 +567,7 @@ var Events = {
 				return;
 			}
 			Events.endFight();
-			AudioEngine.playSound(AudioLibrary.WIN_FIGHT);
+			// AudioEngine.playSound(AudioLibrary.WIN_FIGHT);
 			$('#enemy').animate({opacity: 0}, 300, 'linear', function() {
 				Engine.setTimeout(function() {
 					var scene = Events.activeEvent().scenes[Events.activeScene];
@@ -1025,7 +1050,7 @@ var Events = {
 			} else {
 				var r = Math.floor(Math.random()*(possibleEvents.length));
 				Events.startEvent(possibleEvents[r]);
-				AudioEngine.playSound(AudioLibrary.TRIGGER_EVENT);
+				// AudioEngine.playSound(AudioLibrary.TRIGGER_EVENT);
 				AudioEngine.playEventMusic(possibleEvents[r].audio);
 			}
 		}
@@ -1047,7 +1072,7 @@ var Events = {
 		
 		// play audio only when fight is possible
 		if (possibleFights.length > 0) {
-			AudioEngine.playSound(AudioLibrary.TRIGGER_FIGHT);
+			// AudioEngine.playSound(AudioLibrary.TRIGGER_FIGHT);
 			AudioEngine.playEventMusic(possibleFights[r].audio);
 		}
 	},

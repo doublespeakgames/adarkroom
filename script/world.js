@@ -45,68 +45,59 @@ var World = {
 			verb: _('punch'),
 			type: 'unarmed',
 			damage: 1,
-			cooldown: 2,
-			audio: AudioLibrary.PUNCH
+			cooldown: 2
 		},
 		'bone spear': {
 			verb: _('stab'),
 			type: 'melee',
 			damage: 2,
-			cooldown: 2,
-			audio: AudioLibrary.STAB
+			cooldown: 2
 		},
 		'iron sword': {
 			verb: _('swing'),
 			type: 'melee',
 			damage: 4,
-			cooldown: 2,
-			audio: AudioLibrary.SWING
+			cooldown: 2
 		},
 		'steel sword': {
 			verb: _('slash'),
 			type: 'melee',
 			damage: 6,
-			cooldown: 2,
-			audio: AudioLibrary.SLASH
+			cooldown: 2
 		},
 		'bayonet': {
 			verb: _('thrust'),
 			type: 'melee',
 			damage: 8,
-			cooldown: 2,
-			audio: AudioLibrary.THRUST
+			cooldown: 2
 		},
 		'rifle': {
 			verb: _('shoot'),
 			type: 'ranged',
 			damage: 5,
 			cooldown: 1,
-			cost: { 'bullets': 1 },
-			audio: AudioLibrary.SHOOT
+			cost: { 'bullets': 1 }
 		},
 		'laser rifle': {
 			verb: _('blast'),
 			type: 'ranged',
 			damage: 8,
 			cooldown: 1,
-			cost: { 'energy cell': 1 },
-			audio: AudioLibrary.BLAST
+			cost: { 'energy cell': 1 }
 		},
 		'grenade': {
 			verb: _('lob'),
 			type: 'ranged',
 			damage: 15,
 			cooldown: 5,
-			cost: { 'grenade': 1 },
-			audio: AudioLibrary.LOB
+			cost: { 'grenade': 1 }
 		},
 		'bolas': {
 			verb: _('tangle'),
 			type: 'ranged',
 			damage: 'stun',
 			cooldown: 15,
-			cost: { 'bolas': 1 },
-			audio: AudioLibrary.TANGLE
+			cost: { 'bolas': 1 }
 		}
 	},
 
@@ -358,7 +349,7 @@ var World = {
 
 		// play random footstep
 		var randomFootstep = Math.floor(Math.random() * 2) + 1;
-		AudioEngine.playSound(AudioLibrary['FOOTSTEPS' + randomFootstep]);
+		AudioEngine.playSound(AudioLibrary['FOOTSTEPS_' + randomFootstep]);
 
 		if(World.checkDanger()) {
 			if(World.danger) {
@@ -478,7 +469,6 @@ var World = {
 						$SM.addPerk('slow metabolism');
 					}
 					World.die();
-					AudioEngine.playSound(AudioLibrary.DEATH_STARVED);
 					return false;
 				}
 			} else {
@@ -508,7 +498,6 @@ var World = {
 						$SM.addPerk('desert rat');
 					}
 					World.die();
-					AudioEngine.playSound(AudioLibrary.DEATH_DEHYDRATED);
 					return false;
 				}
 			} else {
@@ -899,6 +888,7 @@ var World = {
 			World.state = null;
 			Path.outfit = {};
 			$SM.remove('outfit');
+			AudioEngine.playSound(AudioLibrary.DEATH);
 			$('#outerSlider').animate({opacity: '0'}, 600, 'linear', function() {
 				$('#outerSlider').css('left', '0px');
 				$('#locationSlider').css('left', '0px');
