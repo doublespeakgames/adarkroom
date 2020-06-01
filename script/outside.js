@@ -650,7 +650,7 @@ var Outside = {
 		
 		Notifications.notify(Outside, s);
 		$SM.addM('stores', drops);
-		AudioEngine.playSound(AudioLibrary.CHECL_TRAPS);
+		AudioEngine.playSound(AudioLibrary.CHECK_TRAPS);
 	},
 	
 	handleStateUpdates: function(e){
