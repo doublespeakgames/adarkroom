@@ -1050,7 +1050,6 @@ var Events = {
 			} else {
 				var r = Math.floor(Math.random()*(possibleEvents.length));
 				Events.startEvent(possibleEvents[r]);
-				// AudioEngine.playSound(AudioLibrary.TRIGGER_EVENT);
 				AudioEngine.playEventMusic(possibleEvents[r].audio);
 			}
 		}
@@ -1072,8 +1071,16 @@ var Events = {
 		
 		// play audio only when fight is possible
 		if (possibleFights.length > 0) {
-			// AudioEngine.playSound(AudioLibrary.TRIGGER_FIGHT);
-			AudioEngine.playEventMusic(possibleFights[r].audio);
+			if (World.getDistance() > 20) {
+				// Tier 3
+				AudioEngine.playEventMusic(AudioLibrary.ENCOUNTER_TIER_3);
+			} else if (World.getDistance() > 10) {
+				// Tier 2
+				AudioEngine.playEventMusic(AudioLibrary.ENCOUNTER_TIER_2);
+			} else {
+				// Tier 1
+				AudioEngine.playEventMusic(AudioLibrary.ENCOUNTER_TIER_1);
+			}
 		}
 	},
 
