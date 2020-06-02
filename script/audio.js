@@ -194,10 +194,16 @@ var AudioEngine = {
             AudioEngine.audioContext.currentTime + AudioEngine.FADE_TIME
         );
     },
-    setVolume: function (volume) {
+    getVolume: function () {
+        return AudioEngine.master.gain.value;
+    },
+    setVolume: function (volume, s) {
         if (!AudioEngine.master) return; // master may not be ready yet
         if (!volume) {
             volume = 1.0;
+        }
+        if (!s) {
+            s = 1.0;
         }
         AudioEngine.master.gain.setValueAtTime(
             AudioEngine.master.gain.value,
@@ -205,7 +211,7 @@ var AudioEngine = {
         );
         AudioEngine.master.gain.linearRampToValueAtTime(
             volume,
-            AudioEngine.audioContext.currentTime + AudioEngine.FADE_TIME / 2
+            AudioEngine.audioContext.currentTime + s
         );
     }
 };
