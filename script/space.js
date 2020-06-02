@@ -67,6 +67,7 @@ var Space = {
 		});
 		Space.startAscent();
 		Space._shipTimer = setInterval(Space.moveShip, 33);
+		AudioEngine.changeMusic(AudioLibrary.MUSIC_SPACE);
 	},
 	
 	setTitle: function() {
@@ -74,22 +75,16 @@ var Space = {
 			var t;
 			if(Space.altitude < 10) {
 				t = _("Troposphere");
-				AudioEngine.changeMusic(AudioLibrary.MUSIC_TROPOSPHERE);
 			} else if(Space.altitude < 20) {
 				t = _("Stratosphere");
-				AudioEngine.changeMusic(AudioLibrary.MUSIC_STRATOSPHERE);
 			} else if(Space.altitude < 30) {
 				t = _("Mesosphere");
-				AudioEngine.changeMusic(AudioLibrary.MUSIC_MESOSPHERE);
 			} else if(Space.altitude < 45) {
 				t = _("Thermosphere");
-				AudioEngine.changeMusic(AudioLibrary.MUSIC_THERMOSPHERE);
 			} else if(Space.altitude < 60){
 				t = _("Exosphere");
-				AudioEngine.changeMusic(AudioLibrary.MUSIC_EXOSPHERE);
 			} else {
 				t = _("Space");
-				AudioEngine.changeMusic(AudioLibrary.MUSIC_SPACE);
 			}
 			document.title = t;
 		}
@@ -143,9 +138,20 @@ var Space = {
 						Space.hull--;
 						Space.updateHull();
 
-						// play random asteroid hit
-						var r = Math.floor(Math.random() * 2) + 1;
-						AudioEngine.playSound(AudioLibrary['ASTEROID_HIT' + r]);
+						// play audio on asteroid hit
+						// higher altitudes play higher frequency hits
+						var r = Math.floor(Math.random() * 2);
+						if(Space.altitude > 40) {
+							r += 6;
+							AudioEngine.playSound(AudioLibrary['ASTEROID_HIT_' + r]);
+						} else if(Space.altitude > 20) {
+							r += 4;
+							AudioEngine.playSound(AudioLibrary['ASTEROID_HIT_' + r]);
+						} else  {
+							r += 1;
+							AudioEngine.playSound(AudioLibrary['ASTEROID_HIT_' + r]);
+						}
+						console.log(r);
 
 						if(Space.hull === 0) {
 							Space.crash();
