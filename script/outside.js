@@ -591,17 +591,17 @@ var Outside = {
 		// set music
 		var numberOfHuts = $SM.get('game.buildings["hut"]', true);
 		if(numberOfHuts === 0) {
-			AudioEngine.changeMusic(AudioLibrary.MUSIC_SILENT_FOREST);
+			AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_SILENT_FOREST);
 		} else if(numberOfHuts == 1) {
-			AudioEngine.changeMusic(AudioLibrary.MUSIC_LONELY_HUT);
+			AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_LONELY_HUT);
 		} else if(numberOfHuts <= 4) {
-			AudioEngine.changeMusic(AudioLibrary.MUSIC_TINY_VILLAGE);
+			AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_TINY_VILLAGE);
 		} else if(numberOfHuts <= 8) {
-			AudioEngine.changeMusic(AudioLibrary.MUSIC_MODEST_VILLAGE);
+			AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_MODEST_VILLAGE);
 		} else if(numberOfHuts <= 14) {
-			AudioEngine.changeMusic(AudioLibrary.MUSIC_LARGE_VILLAGE);
+			AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_LARGE_VILLAGE);
 		} else {
-			AudioEngine.changeMusic(AudioLibrary.MUSIC_RAUCOUS_VILLAGE);
+			AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_RAUCOUS_VILLAGE);
 		}
 	},
 	

@@ -304,7 +304,7 @@ var Path = {
 		Path.updateOutfitting();
 		Path.updatePerks(true);
 		
-		AudioEngine.changeMusic(AudioLibrary.MUSIC_DUSTY_PATH);
+		AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_DUSTY_PATH);
 
 		Engine.moveStoresView($('#perks'), transition_diff);
 	},

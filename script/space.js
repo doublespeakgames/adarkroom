@@ -53,7 +53,7 @@ var Space = {
 		Space.hull = Ship.getMaxHull();
 		Space.altitude = 0;
 		Space.setTitle();
-		AudioEngine.changeMusic(AudioLibrary.MUSIC_SPACE);
+		AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_SPACE);
 		Space.updateHull();
 		
 		Space.up = 
@@ -68,7 +68,7 @@ var Space = {
 		Space.startAscent();
 		Space._shipTimer = setInterval(Space.moveShip, 33);
 		Space._volumeTimer = setInterval(Space.lowerVolume, 1000);
-		AudioEngine.changeMusic(AudioLibrary.MUSIC_SPACE);
+		AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_SPACE);
 	},
 	
 	setTitle: function() {
@@ -401,7 +401,7 @@ var Space = {
 		delete Outside._popTimeout;
 		
 		AudioEngine.setVolume(1.0);
-		AudioEngine.changeMusic(AudioLibrary.MUSIC_ENDING);
+		AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_ENDING);
 		$('#hullRemaining', Space.panel).animate({opacity: 0}, 500, 'linear');
 		Space.ship.animate({
 			top: '350px',

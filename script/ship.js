@@ -90,7 +90,7 @@ var Ship = {
 			Notifications.notify(Ship, _('somewhere above the debris cloud, the wanderer fleet hovers. been on this rock too long.'));
 			$SM.set('game.spaceShip.seenShip', true);
 		}
-		AudioEngine.changeMusic(AudioLibrary.MUSIC_SHIP);
+		AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_SHIP);
 
 		Engine.moveStoresView(null, transition_diff);
 	},

@@ -1232,19 +1232,19 @@ var Room = {
 		var fireValue = $SM.get('game.fire.value');
 		switch (fireValue) {
 			case 0:
-				AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_DEAD);
+				AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_FIRE_DEAD);
 				break;
 			case 1:
-				AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_SMOLDERING);
+				AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_FIRE_SMOLDERING);
 				break;
 			case 2:
-				AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_FLICKERING);
+				AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_FIRE_FLICKERING);
 				break;
 			case 3:
-				AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_BURNING);
+				AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_FIRE_BURNING);
 				break;
 			case 4:
-				AudioEngine.changeMusic(AudioLibrary.MUSIC_FIRE_ROARING);
+				AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_FIRE_ROARING);
 				break;
 		}
 	}

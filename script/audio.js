@@ -4,158 +4,157 @@
 var AudioEngine = {
     FADE_TIME: 1,
     AUDIO_BUFFER_CACHE: {},
-    _audioPreloaded: false,
-    audioContext: null,
-    master: null,
-    tracks: {
-        'bg1': null,
-        'bg2': null,
-        'events': null,
-        'sfx': null
+    _audioContext: null,
+    _master: null,
+    _currentBackgroundMusic: null,
+    _currentEventAudio: null,
+    _currentSoundEffectAudio: null,
+    init: function () {
+        AudioEngine._initAudioContext();
     },
-    currentBackgroundChannel: 'bg1',
-    currentBackgroundAudio: null,
-    currentEventAudio: null,
-    init: function (options) {
-        AudioEngine.initAudioContext();
-    },
-    initAudioContext: function () {
+    _initAudioContext: function () {
         // for legacy browsers
-        AudioEngine.audioContext = new (window.AudioContext || window.webkitAudioContext);
-
-        if (AudioEngine.audioContext.state === 'suspended') {
-            AudioEngine.audioContext.resume().then(function () {
-                AudioEngine.createChannels();
+        AudioEngine._audioContext = new (window.AudioContext || window.webkitAudioContext);
+        if (AudioEngine._audioContext.state === 'suspended') {
+            AudioEngine._audioContext.resume().then(function () {
+                AudioEngine._createMasterChannel();
             });
         } else {
-            AudioEngine.createChannels();
+            AudioEngine._createMasterChannel();
         }
     },
-    createChannels: function () {
+    _createMasterChannel: function () {
         // create master
-        AudioEngine.master = AudioEngine.audioContext.createGain();
-        AudioEngine.master.gain.setValueAtTime(1.0, AudioEngine.audioContext.currentTime);
-        AudioEngine.master.connect(AudioEngine.audioContext.destination);
-
-        // create 4 tracks to output to master
-        AudioEngine.tracks['bg1'] = AudioEngine.audioContext.createGain();
-        AudioEngine.tracks['bg1'].connect(AudioEngine.master);
-        AudioEngine.tracks['bg1'].gain.setValueAtTime(1.0, AudioEngine.audioContext.currentTime);
-        AudioEngine.tracks['bg2'] = AudioEngine.audioContext.createGain();
-        AudioEngine.tracks['bg2'].connect(AudioEngine.master);
-        AudioEngine.tracks['bg2'].gain.setValueAtTime(1.0, AudioEngine.audioContext.currentTime);
-        AudioEngine.tracks['events'] = AudioEngine.audioContext.createGain();
-        AudioEngine.tracks['events'].connect(AudioEngine.master);
-        AudioEngine.tracks['events'].gain.setValueAtTime(1.0, AudioEngine.audioContext.currentTime);
-        AudioEngine.tracks['sfx'] = AudioEngine.audioContext.createGain();
-        AudioEngine.tracks['sfx'].connect(AudioEngine.master);
-        AudioEngine.tracks['sfx'].gain.setValueAtTime(1.0, AudioEngine.audioContext.currentTime);
+        AudioEngine._master = AudioEngine._audioContext.createGain();
+        AudioEngine._master.gain.setValueAtTime(1.0, AudioEngine._audioContext.currentTime);
+        AudioEngine._master.connect(AudioEngine._audioContext.destination);
     },
-    options: {}, // Nothing for now,
     _canPlayAudio: function () {
-        if (AudioEngine.audioContext.state === 'suspended') {
+        if (AudioEngine._audioContext.state === 'suspended') {
             return false;
         }
         return true;
     },
     _getMissingAudioBuffer: function () {
-        var buffer = AudioEngine.audioContext.createBuffer(
+        // plays beeping sound to indicate missing audio
+        var buffer = AudioEngine._audioContext.createBuffer(
             1,
-            AudioEngine.audioContext.sampleRate,
-            AudioEngine.audioContext.sampleRate
+            AudioEngine._audioContext.sampleRate,
+            AudioEngine._audioContext.sampleRate
         );
         // Fill the buffer
         var bufferData = buffer.getChannelData(0);
         for (var i = 0; i < buffer.length / 2; i++) {
-            bufferData[i] = Math.sin(i * .05) / 2;
+            bufferData[i] = Math.sin(i * .05) / 4; // max .25 gain value
         }
         return buffer;
     },
     _playSound: function (buffer) {
         if (!AudioEngine._canPlayAudio()) return;
 
-        var source = AudioEngine.audioContext.createBufferSource();
+        var source = AudioEngine._audioContext.createBufferSource();
         source.buffer = buffer;
-        source.connect(AudioEngine.tracks['sfx']);
-        source.start(AudioEngine.audioContext.currentTime);
+        source.connect(AudioEngine._master);
+        source.start();
+
+        AudioEngine._currentSoundEffectAudio = {
+            source: source
+        };
     },
-    _fadeTrack: function (buffer) {
+    _playBackgroundMusic: function (buffer) {
         if (!AudioEngine._canPlayAudio()) return;
 
-        var bufferSource = AudioEngine.audioContext.createBufferSource();
-        bufferSource.buffer = buffer;
-        bufferSource.loop = true;
+        var source = AudioEngine._audioContext.createBufferSource();
+        source.buffer = buffer;
+        source.loop = true;
 
-        // figure out which background track to start on
-        // in order to do crossfade
-        var nextBackgroundChannel;
-        if (AudioEngine.currentBackgroundChannel === 'bg1') {
-            nextBackgroundChannel = 'bg2';
-        } else {
-            nextBackgroundChannel = 'bg1';
+        var envelope = AudioEngine._audioContext.createGain();
+        envelope.gain.setValueAtTime(0.0, AudioEngine._audioContext.currentTime);
+        
+        var fadeTime = AudioEngine._audioContext.currentTime + AudioEngine.FADE_TIME;
+
+        // fade out current background music
+        if (AudioEngine._currentBackgroundMusic) {
+            var currentBackgroundGainValue = AudioEngine._currentBackgroundMusic.envelope.gain.value;
+            AudioEngine._currentBackgroundMusic.envelope.gain.cancelScheduledValues(AudioEngine._audioContext.currentTime);
+            AudioEngine._currentBackgroundMusic.envelope.gain.setValueAtTime(currentBackgroundGainValue, AudioEngine._audioContext.currentTime);
+            AudioEngine._currentBackgroundMusic.envelope.gain.linearRampToValueAtTime(0.0, fadeTime);
+            AudioEngine._currentBackgroundMusic.source.stop(fadeTime + 0.3); // make sure fade has completed
         }
 
-        // fade in new track
-        var fadeTime = AudioEngine.audioContext.currentTime + AudioEngine.FADE_TIME;
-        bufferSource.connect(AudioEngine.tracks[nextBackgroundChannel]);
-        bufferSource.start(AudioEngine.audioContext.currentTime);
-        AudioEngine.tracks[nextBackgroundChannel].gain.setValueAtTime(0.0, AudioEngine.audioContext.currentTime);
-        AudioEngine.tracks[nextBackgroundChannel].gain.linearRampToValueAtTime(1.0, fadeTime);
+        // fade in new backgorund music
+        source.connect(envelope);
+        envelope.connect(AudioEngine._master);
+        source.start();
+        envelope.gain.linearRampToValueAtTime(1.0, fadeTime);
 
-        // fade out old track
-        AudioEngine.tracks[AudioEngine.currentBackgroundChannel].gain.linearRampToValueAtTime(0.0, fadeTime);
-        if (AudioEngine.currentBackgroundAudio) {
-            AudioEngine.currentBackgroundAudio.stop(fadeTime + 0.3); // make sure fade has completed
-        }
-
-        // switch background track
-        AudioEngine.currentBackgroundChannel = nextBackgroundChannel;
-        AudioEngine.currentBackgroundAudio = bufferSource;
+        // update current background music
+        AudioEngine._currentBackgroundMusic = {
+            source: source,
+            envelope: envelope
+        };
     },
-    _playEvent: function (buffer) {
+    _playEventMusic: function (buffer) {
         if (!AudioEngine._canPlayAudio()) return;
 
-        var bufferSource = AudioEngine.audioContext.createBufferSource();
-        bufferSource.buffer = buffer;
-        bufferSource.loop = true;
+        var source = AudioEngine._audioContext.createBufferSource();
+        source.buffer = buffer;
+        source.loop = true;
 
-        var fadeTime = AudioEngine.audioContext.currentTime + AudioEngine.FADE_TIME * 2;
+        var envelope = AudioEngine._audioContext.createGain();
+        envelope.gain.setValueAtTime(0.0, AudioEngine._audioContext.currentTime);
 
-        // turn down background music
-        AudioEngine.tracks['bg1'].gain.linearRampToValueAtTime(0.2, fadeTime);
-        AudioEngine.tracks['bg2'].gain.linearRampToValueAtTime(0.2, fadeTime);
+        var fadeTime = AudioEngine._audioContext.currentTime + AudioEngine.FADE_TIME * 2;
+
+        // turn down current background music
+        if (AudioEngine._currentBackgroundMusic != null) {
+            var currentBackgroundGainValue = AudioEngine._currentBackgroundMusic.envelope.gain.value;
+            AudioEngine._currentBackgroundMusic.envelope.gain.cancelScheduledValues(AudioEngine._audioContext.currentTime);
+            AudioEngine._currentBackgroundMusic.envelope.gain.setValueAtTime(currentBackgroundGainValue, AudioEngine._audioContext.currentTime);
+            AudioEngine._currentBackgroundMusic.envelope.gain.linearRampToValueAtTime(0.2, fadeTime);
+        }
 
         // fade in event music
-        bufferSource.connect(AudioEngine.tracks['events']);
-        bufferSource.start(0);
-        AudioEngine.currentEventAudio = bufferSource;
+        source.connect(envelope);
+        envelope.connect(AudioEngine._master);
+        source.start();
+        envelope.gain.linearRampToValueAtTime(1.0, fadeTime);
 
-        AudioEngine.tracks['events'].gain.setValueAtTime(0.0, AudioEngine.audioContext.currentTime);
-        AudioEngine.tracks['events'].gain.linearRampToValueAtTime(1.0, fadeTime);
+        // update reference
+        AudioEngine._currentEventAudio = {
+            source: source,
+            envelope: envelope
+        };
     },
     _stopEventMusic: function () {
-        var fadeTime = AudioEngine.audioContext.currentTime + AudioEngine.FADE_TIME * 2;
+        var fadeTime = AudioEngine._audioContext.currentTime + AudioEngine.FADE_TIME * 2;
 
         // fade out event music and stop
-        AudioEngine.tracks['events'].gain.linearRampToValueAtTime(0.0, fadeTime);
-        if (AudioEngine.currentEventAudio) {
-            AudioEngine.currentEventAudio.stop(fadeTime + 1); // make sure fade has completed
-            AudioEngine.currentEventAudio = null;
+        if (AudioEngine._currentEventAudio) {
+            var currentEventGainValue = AudioEngine._currentEventAudio.envelope.gain.value;
+            AudioEngine._currentEventAudio.envelope.gain.cancelScheduledValues(AudioEngine._audioContext.currentTime);
+            AudioEngine._currentEventAudio.envelope.gain.setValueAtTime(currentEventGainValue, AudioEngine._audioContext.currentTime);
+            AudioEngine._currentEventAudio.envelope.gain.linearRampToValueAtTime(0.0, fadeTime);
+            AudioEngine._currentEventAudio.source.stop(fadeTime + 1); // make sure fade has completed
+            AudioEngine._currentEventAudio = null;
         }
 
         // turn up background music
-        AudioEngine.tracks[AudioEngine.currentBackgroundChannel].gain.linearRampToValueAtTime(1.0, fadeTime);
+        var currentBackgroundGainValue = AudioEngine._currentBackgroundMusic.envelope.gain.value;
+        AudioEngine._currentBackgroundMusic.envelope.gain.cancelScheduledValues(AudioEngine._audioContext.currentTime);
+        AudioEngine._currentBackgroundMusic.envelope.gain.setValueAtTime(currentBackgroundGainValue, AudioEngine._audioContext.currentTime);
+        AudioEngine._currentBackgroundMusic.envelope.gain.linearRampToValueAtTime(1.0, fadeTime);
     },
-    changeMusic: function (src) {
+    playBackgroundMusic: function (src) {
         AudioEngine.loadAudioFile(src)
             .then(function (buffer) {
-                AudioEngine._fadeTrack(buffer);
+                AudioEngine._playBackgroundMusic(buffer);
             });
     },
     playEventMusic: function (src) {
         AudioEngine.loadAudioFile(src)
             .then(function (buffer) {
-                AudioEngine._playEvent(buffer);
+                AudioEngine._playEventMusic(buffer);
             });
     },
     stopEventMusic: function () {
@@ -185,37 +184,29 @@ var AudioEngine = {
                     return AudioEngine._getMissingAudioBuffer();
                 }
 
-                return AudioEngine.audioContext.decodeAudioData(buffer, function (decodedData) {
+                return AudioEngine._audioContext.decodeAudioData(buffer, function (decodedData) {
                     AudioEngine.AUDIO_BUFFER_CACHE[src] = decodedData;
                     return AudioEngine.AUDIO_BUFFER_CACHE[src];
                 });
             });
         }
     },
-    mute: function () {
-        AudioEngine.master.gain.linearRampToValueAtTime(
-            0.0,
-            AudioEngine.audioContext.currentTime + AudioEngine.FADE_TIME
-        );
-    },
-    getVolume: function () {
-        return AudioEngine.master.gain.value;
-    },
     setVolume: function (volume, s) {
-        if (!AudioEngine.master) return; // master may not be ready yet
-        if (!volume) {
+        if (AudioEngine._master == null) return;  // master may not be ready yet
+        if (volume === undefined) {
             volume = 1.0;
         }
-        if (!s) {
+        if (s === undefined) {
             s = 1.0;
         }
-        AudioEngine.master.gain.setValueAtTime(
-            AudioEngine.master.gain.value,
-            AudioEngine.audioContext.currentTime
-        );
-        AudioEngine.master.gain.linearRampToValueAtTime(
+
+        // cancel any current schedules and then ramp
+        var currentGainValue = AudioEngine._master.gain.value;
+        AudioEngine._master.gain.cancelScheduledValues(AudioEngine._audioContext.currentTime);
+        AudioEngine._master.gain.setValueAtTime(currentGainValue, AudioEngine._audioContext.currentTime);
+        AudioEngine._master.gain.linearRampToValueAtTime(
             volume,
-            AudioEngine.audioContext.currentTime + s
+            AudioEngine._audioContext.currentTime + s
         );
     }
 };

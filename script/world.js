@@ -1012,7 +1012,7 @@ var World = {
 		World.curPos = World.copyPos(World.VILLAGE_POS);
 		World.drawMap();
 		World.setTitle();
-		AudioEngine.changeMusic(AudioLibrary.MUSIC_WORLD);
+		AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_WORLD);
 		World.dead = false;
 		$('div#bagspace-world > div').empty();
 		World.updateSupplies();
