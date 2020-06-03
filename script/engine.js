@@ -805,11 +805,11 @@
 			if ($SM.get('config.soundOn')) {
 				$('.volume').text(_('sound on.'));
 				$SM.set('config.soundOn', false);
-				AudioEngine.setVolume(0.0);
+				AudioEngine.setMasterVolume(0.0);
 			} else {
 				$('.volume').text(_('sound off.'));
 				$SM.set('config.soundOn', true);
-				AudioEngine.setVolume(1.0);
+				AudioEngine.setMasterVolume(1.0);
 			}
 		},
 
