@@ -4,6 +4,7 @@
 var AudioEngine = {
     FADE_TIME: 1,
     AUDIO_BUFFER_CACHE: {},
+    _audioPreloaded: false,
     audioContext: null,
     master: null,
     tracks: {
@@ -16,6 +17,9 @@ var AudioEngine = {
     currentBackgroundAudio: null,
     currentEventAudio: null,
     init: function (options) {
+        AudioEngine.initAudioContext();
+    },
+    initAudioContext: function () {
         // for legacy browsers
         AudioEngine.audioContext = new (window.AudioContext || window.webkitAudioContext);
 
@@ -27,7 +31,7 @@ var AudioEngine = {
             AudioEngine.createChannels();
         }
     },
-    createChannels() {
+    createChannels: function () {
         // create master
         AudioEngine.master = AudioEngine.audioContext.createGain();
         AudioEngine.master.gain.setValueAtTime(1.0, AudioEngine.audioContext.currentTime);
@@ -56,8 +60,8 @@ var AudioEngine = {
     },
     _getMissingAudioBuffer: function () {
         var buffer = AudioEngine.audioContext.createBuffer(
-            1, 
-            AudioEngine.audioContext.sampleRate, 
+            1,
+            AudioEngine.audioContext.sampleRate,
             AudioEngine.audioContext.sampleRate
         );
         // Fill the buffer
@@ -163,7 +167,7 @@ var AudioEngine = {
                 AudioEngine._playSound(buffer);
             });
     },
-    loadAudioFile(src) {
+    loadAudioFile: function (src) {
         if (src.indexOf('http') === -1) {
             src = window.location + src;
         }
