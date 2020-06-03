@@ -718,7 +718,11 @@ var Room = {
 		Room._fireTimer = Engine.setTimeout(Room.coolFire, Room._FIRE_COOL_DELAY);
 		Room.updateButton();
 		Room.setTitle();
-		Room.setMusic();
+
+		// only update music if in the room
+		if (Engine.activeModule == Room) {
+			Room.setMusic();
+		}
 	},
 
 	coolFire: function () {
