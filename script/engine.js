@@ -835,19 +835,6 @@
 		},
 
 		enableGodMode: function() {
-			// open up all section
-			if(!Outside.tab) {
-				Outside.init();
-			}
-
-			if(!Path.tab) {
-				Path.init();
-			}
-			
-			if(!Ship.tab) {
-				Ship.init();
-			}
-
 			// add all remaining craftables and goods
 			var buildSection = $('#buildBtns');
 			if (buildSection.length === 0) {
@@ -909,14 +896,6 @@
 				}
 			}
 
-			// remove all cooldowns
-			$('.button').each(function (i, el) {
-				$(el).off('click');
-				$(el).click(function() {
-					$(this).data("handler")($(this));
-				})
-			});
-
 			// set water/health
 			Path.DEFAULT_BAG_SPACE = 1000;
 			World.BASE_WATER = 1000;
@@ -942,6 +921,27 @@
 					State.game.world.mask[i][j] = true;
 				}
 			}
+
+			// open up all section
+			if(!Outside.tab) {
+				Outside.init();
+			}
+
+			if(!Path.tab) {
+				Path.init();
+			}
+			
+			if(!Ship.tab) {
+				Ship.init();
+			}
+
+			// remove all cooldowns
+			$('.button').each(function (i, el) {
+				$(el).off('click');
+				$(el).click(function() {
+					$(this).data("handler")($(this));
+				})
+			});
 
 		}
 
