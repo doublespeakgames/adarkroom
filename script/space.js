@@ -400,8 +400,8 @@ var Space = {
 		}
 		delete Outside._popTimeout;
 		
-		AudioEngine.setVolume(1.0);
 		AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_ENDING);
+
 		$('#hullRemaining', Space.panel).animate({opacity: 0}, 500, 'linear');
 		Space.ship.animate({
 			top: '350px',
@@ -558,8 +558,10 @@ var Space = {
 	
 	lowerVolume: function () {
 		if (Space.done) return;
+		
 		// lower audio as ship gets further into space
-		var newVolume = 1.0 - (Space.altitude / 60);
-		AudioEngine.setVolume(newVolume, .3);
+		var progress = Space.altitude / 60;
+		var newVolume = 1.0 - progress;
+		AudioEngine.setBackgroundMusicVolume(newVolume, .3);
 	}
 };

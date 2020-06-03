@@ -191,7 +191,25 @@ var AudioEngine = {
             });
         }
     },
-    setVolume: function (volume, s) {
+    setBackgroundMusicVolume: function (volume, s) {
+        if (AudioEngine._master == null) return;  // master may not be ready yet
+        if (volume === undefined) {
+            volume = 1.0;
+        }
+        if (s === undefined) {
+            s = 1.0;
+        }
+
+        // cancel any current schedules and then ramp
+        var currentBackgroundGainValue = AudioEngine._currentBackgroundMusic.envelope.gain.value;
+        AudioEngine._currentBackgroundMusic.envelope.gain.cancelScheduledValues(AudioEngine._audioContext.currentTime);
+        AudioEngine._currentBackgroundMusic.envelope.gain.setValueAtTime(currentBackgroundGainValue, AudioEngine._audioContext.currentTime);
+        AudioEngine._currentBackgroundMusic.envelope.gain.linearRampToValueAtTime(
+            volume,
+            AudioEngine._audioContext.currentTime + s
+        );
+    },
+    setMasterVolume: function (volume, s) {
         if (AudioEngine._master == null) return;  // master may not be ready yet
         if (volume === undefined) {
             volume = 1.0;
