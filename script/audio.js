@@ -51,9 +51,21 @@ var AudioEngine = {
     },
     _playSound: function (buffer) {
         if (!AudioEngine._canPlayAudio()) return;
+        if (AudioEngine._currentSoundEffectAudio &&
+            AudioEngine._currentSoundEffectAudio.source.buffer == buffer) {
+            return;
+        }
 
         var source = AudioEngine._audioContext.createBufferSource();
         source.buffer = buffer;
+        source.onended = function(event) {
+            // dereference current sound effect when finished
+            if (AudioEngine._currentSoundEffectAudio &&
+                AudioEngine._currentSoundEffectAudio.source.buffer == buffer) {
+                AudioEngine._currentSoundEffectAudio = null;
+            }
+        };
+
         source.connect(AudioEngine._master);
         source.start();
 
