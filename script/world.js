@@ -348,7 +348,7 @@ var World = {
 		World.doSpace();
 
 		// play random footstep
-		var randomFootstep = Math.floor(Math.random() * 2) + 1;
+		var randomFootstep = Math.floor(Math.random() * 5) + 1;
 		AudioEngine.playSound(AudioLibrary['FOOTSTEPS_' + randomFootstep]);
 
 		if(World.checkDanger()) {
