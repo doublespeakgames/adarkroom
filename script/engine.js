@@ -908,18 +908,12 @@
 			}
 
 			// give 100000 of all stores
-			Prestige.storesMap.forEach(function (e) {
-				State.stores[e.store] = 100000;
-			});
+			for (var i = 0; i < Prestige.storesMap.length; i++) {
+				State.stores[Prestige.storesMap[i].store] = 100000;
+
+			}
 			for (var key in Room.TradeGoods) {
 				State.stores[key] = 100000;
-			}
-
-			// set world map mask to reveal entire map
-			for(var j = 0; j <= World.RADIUS * 2; j++) {
-				for(var i = 0; i <= World.RADIUS * 2; i++) {
-					State.game.world.mask[i][j] = true;
-				}
 			}
 
 			// open up all section
@@ -933,6 +927,13 @@
 			
 			if(!Ship.tab) {
 				Ship.init();
+			}
+
+			// set world map mask to reveal entire map
+			for(var j = 0; j <= World.RADIUS * 2; j++) {
+				for(var i = 0; i <= World.RADIUS * 2; i++) {
+					State.game.world.mask[i][j] = true;
+				}
 			}
 
 			// remove all cooldowns
