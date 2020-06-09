@@ -13,27 +13,14 @@ var AudioEngine = {
         AudioEngine._initAudioContext();
     },
     _initAudioContext: function () {
-        // for legacy browsers
         AudioEngine._audioContext = new (window.AudioContext || window.webkitAudioContext);
-        if (AudioEngine._audioContext.state === 'suspended') {
-            AudioEngine._audioContext.resume().then(function () {
-                AudioEngine._createMasterChannel();
-            });
-        } else {
-            AudioEngine._createMasterChannel();
-        }
+        AudioEngine._createMasterChannel();
     },
     _createMasterChannel: function () {
         // create master
         AudioEngine._master = AudioEngine._audioContext.createGain();
         AudioEngine._master.gain.setValueAtTime(1.0, AudioEngine._audioContext.currentTime);
         AudioEngine._master.connect(AudioEngine._audioContext.destination);
-    },
-    _canPlayAudio: function () {
-        if (AudioEngine._audioContext.state === 'suspended') {
-            return false;
-        }
-        return true;
     },
     _getMissingAudioBuffer: function () {
         // plays beeping sound to indicate missing audio
@@ -50,7 +37,6 @@ var AudioEngine = {
         return buffer;
     },
     _playSound: function (buffer) {
-        if (!AudioEngine._canPlayAudio()) return;
         if (AudioEngine._currentSoundEffectAudio &&
             AudioEngine._currentSoundEffectAudio.source.buffer == buffer) {
             return;
@@ -74,8 +60,6 @@ var AudioEngine = {
         };
     },
     _playBackgroundMusic: function (buffer) {
-        if (!AudioEngine._canPlayAudio()) return;
-
         var source = AudioEngine._audioContext.createBufferSource();
         source.buffer = buffer;
         source.loop = true;
@@ -107,8 +91,6 @@ var AudioEngine = {
         };
     },
     _playEventMusic: function (buffer) {
-        if (!AudioEngine._canPlayAudio()) return;
-
         var source = AudioEngine._audioContext.createBufferSource();
         source.buffer = buffer;
         source.loop = true;
@@ -156,6 +138,14 @@ var AudioEngine = {
         AudioEngine._currentBackgroundMusic.envelope.gain.cancelScheduledValues(AudioEngine._audioContext.currentTime);
         AudioEngine._currentBackgroundMusic.envelope.gain.setValueAtTime(currentBackgroundGainValue, AudioEngine._audioContext.currentTime);
         AudioEngine._currentBackgroundMusic.envelope.gain.linearRampToValueAtTime(1.0, fadeTime);
+    },
+    isAudioContextRunning: function () {
+        return AudioEngine._audioContext.state !== 'suspended';
+    },
+    tryResumingAudioContext: function() {
+        if (AudioEngine._audioContext.state === 'suspended') {
+            AudioEngine._audioContext.resume();
+        }
     },
     playBackgroundMusic: function (src) {
         AudioEngine.loadAudioFile(src)

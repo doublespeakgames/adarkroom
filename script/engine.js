@@ -220,6 +220,7 @@
 			Events.init();
 			Room.init();
 
+
 			if(typeof $SM.get('stores.wood') != 'undefined') {
 				Outside.init();
 			}
@@ -230,10 +231,6 @@
 				Ship.init();
 			}
 
-			if(!$SM.get('config.soundOn')){
-				Engine.toggleVolume();
-			}
-
 			if($SM.get('config.lightsOff', true)){
 				Engine.turnLightsOff();
 			}
@@ -242,11 +239,20 @@
 				Engine.triggerHyperMode();
 			}
 
+			if(!AudioEngine.isAudioContextRunning()){
+				Engine.toggleVolume();
+				document.addEventListener('click', Engine.resumeAudioContext);
+			}
+
 			Engine.saveLanguage();
 			Engine.travelTo(Room);
 
 		},
-
+		resumeAudioContext: function () {
+			AudioEngine.tryResumingAudioContext();
+			Engine.toggleVolume();
+			document.removeEventListener('click', Engine.resumeAudioContext);
+		},
 		browserValid: function() {
 			return ( location.search.indexOf( 'ignorebrowser=true' ) >= 0 || ( typeof Storage != 'undefined' && !oldIE ) );
 		},
