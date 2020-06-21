@@ -240,17 +240,23 @@
 			}
 
 			if(!AudioEngine.isAudioContextRunning()){
-				Engine.toggleVolume();
 				document.addEventListener('click', Engine.resumeAudioContext);
 			}
-
+			
 			Engine.saveLanguage();
 			Engine.travelTo(Room);
 
 		},
 		resumeAudioContext: function () {
 			AudioEngine.tryResumingAudioContext();
-			Engine.toggleVolume();
+			
+			// turn on music!
+			if (AudioEngine._audioContext.state !== 'suspended') {
+				$('.volume').text(_('sound off.'));
+				$SM.set('config.soundOn', true);
+				AudioEngine.setMasterVolume(1.0);
+			}
+
 			document.removeEventListener('click', Engine.resumeAudioContext);
 		},
 		browserValid: function() {
