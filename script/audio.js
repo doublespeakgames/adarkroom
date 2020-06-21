@@ -70,7 +70,9 @@ var AudioEngine = {
         var fadeTime = AudioEngine._audioContext.currentTime + AudioEngine.FADE_TIME;
 
         // fade out current background music
-        if (AudioEngine._currentBackgroundMusic) {
+        if (AudioEngine._currentBackgroundMusic && 
+            AudioEngine._currentBackgroundMusic.source &&
+            AudioEngine._currentBackgroundMusic.source.playbackState !== 0) {
             var currentBackgroundGainValue = AudioEngine._currentBackgroundMusic.envelope.gain.value;
             AudioEngine._currentBackgroundMusic.envelope.gain.cancelScheduledValues(AudioEngine._audioContext.currentTime);
             AudioEngine._currentBackgroundMusic.envelope.gain.setValueAtTime(currentBackgroundGainValue, AudioEngine._audioContext.currentTime);
