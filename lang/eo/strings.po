@@ -1,0 +1,3304 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: adarkroom\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-04-01 23:47+0100\n"
+"PO-Revision-Date: 2017-07-20 19:30-0300\n"
+"Last-Translator: Dušan Juretić <dusan.juretic@gmail.com>\n"
+"Language-Team: Esperanto\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.1.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: script/dropbox.js:62
+msgid "Dropbox connection"
+msgstr "Konekto al Dropboks"
+
+#: script/dropbox.js:65
+msgid "connect game to dropbox local storage"
+msgstr "konekti la ludon al loka konservejo de Dropboks"
+
+#: script/dropbox.js:68
+msgid "connect"
+msgstr "konekti"
+
+#: script/dropbox.js:75 script/dropbox.js:107 script/dropbox.js:133
+#: script/dropbox.js:163 script/engine.js:285 script/engine.js:331
+msgid "cancel"
+msgstr "nuligi"
+
+#: script/dropbox.js:86 script/dropbox.js:176
+msgid "Dropbox Export / Import"
+msgstr "Dropbokse eligi / enigi"
+
+#: script/dropbox.js:89
+msgid "export or import save data to dropbox datastorage"
+msgstr "Eligi aŭ enigi konservdatumon al Dropboksa datumkonservejo"
+
+#: script/dropbox.js:90
+msgid "your are connected to dropbox with account / email "
+msgstr "Vi estas konektita al Dropboks per konto / retpoŝto"
+
+#: script/dropbox.js:93
+msgid "save"
+msgstr "konservi"
+
+#: script/dropbox.js:97
+msgid "load"
+msgstr "startigi"
+
+#: script/dropbox.js:102
+msgid "signout"
+msgstr "elsaluti"
+
+#: script/dropbox.js:113
+msgid "choose one slot to save to"
+msgstr "elektu unu foldon alkonservi"
+
+#: script/dropbox.js:119
+msgid "save to slot"
+msgstr "konservi al foldo"
+
+#: script/dropbox.js:141
+msgid "choose one slot to load from"
+msgstr "elektu unu foldon por startigi la ludon"
+
+#: script/dropbox.js:148
+msgid "load from slot"
+msgstr "startigi per folddatumo"
+
+#: script/dropbox.js:179
+msgid "successfully saved to dropbox datastorage"
+msgstr "sukcese konservis al Dropboksa datumkonservejo"
+
+#: script/dropbox.js:180
+msgid "error while saving to dropbox datastorage"
+msgstr "eraro konservinte al Dropboksa datumkonservejo"
+
+#: script/dropbox.js:183
+msgid "ok"
+msgstr "rigardite"
+
+#: script/engine.js:15
+msgid "boxer"
+msgstr "boksisto"
+
+#: script/engine.js:16
+msgid "punches do more damage"
+msgstr "batoj faras pli da damaĝo"
+
+#: script/engine.js:18
+msgid "learned to throw punches with purpose"
+msgstr "lernis celbati"
+
+#: script/engine.js:21
+msgid "martial artist"
+msgstr "luktartisto"
+
+#: script/engine.js:22
+msgid "punches do even more damage."
+msgstr "batoj faras eĉ pli da damaĝo"
+
+#: script/engine.js:23
+msgid "learned to fight quite effectively without weapons"
+msgstr "lernis batali sufiĉe efike sen armiloj"
+
+#: script/engine.js:27
+msgid "unarmed master"
+msgstr "senarmila batalmajstro"
+
+#: script/engine.js:28
+msgid "punch twice as fast, and with even more force"
+msgstr "bati duoble rapide kaj eĉ pli forte"
+
+#: script/engine.js:29
+msgid "learned to strike faster without weapons"
+msgstr "lernis ataki pli rapide senarmile"
+
+#: script/engine.js:32
+msgid "barbarian"
+msgstr "sovaĝulo"
+
+#: script/engine.js:33
+msgid "melee weapons deal more damage"
+msgstr "korparmiloj faras pli da damaĝo"
+
+#: script/engine.js:34
+msgid "learned to swing weapons with force"
+msgstr "lernis svingi armilojn pli forte"
+
+#: script/engine.js:37
+msgid "slow metabolism"
+msgstr "malrapida metabolo"
+
+#: script/engine.js:38
+msgid "go twice as far without eating"
+msgstr "daŭri duoble sen manĝi"
+
+#: script/engine.js:39
+msgid "learned how to ignore the hunger"
+msgstr "lernis malzorgi pri malsato"
+
+#: script/engine.js:42
+msgid "desert rat"
+msgstr "dezerta rato"
+
+#: script/engine.js:43
+msgid "go twice as far without drinking"
+msgstr "daŭri duoble sen trinki"
+
+#: script/engine.js:44
+msgid "learned to love the dry air"
+msgstr "lernis ami la senakvan aeron"
+
+#: script/engine.js:47
+msgid "evasive"
+msgstr "evitema"
+
+#: script/engine.js:48
+msgid "dodge attacks more effectively"
+msgstr "eviti atakojn pli efike"
+
+#: script/engine.js:49
+msgid "learned to be where they're not"
+msgstr "lernis esti kie batoj ne estas"
+
+#: script/engine.js:52
+msgid "precise"
+msgstr "precizeco"
+
+#: script/engine.js:53
+msgid "land blows more often"
+msgstr "trafi kontraŭulojn pli ofte"
+
+#: script/engine.js:54
+msgid "learned to predict their movement"
+msgstr "lernis antaŭvidi la movojn de kontraŭuloj"
+
+#: script/engine.js:57
+msgid "scout"
+msgstr "esplorvidi"
+
+#: script/engine.js:58
+msgid "see farther"
+msgstr "vidi pli fore"
+
+#: script/engine.js:59
+msgid "learned to look ahead"
+msgstr "lernis vidi antaŭen"
+
+#: script/engine.js:62
+msgid "stealthy"
+msgstr "ŝteliri"
+
+#: script/engine.js:63
+msgid "better avoid conflict in the wild"
+msgstr "eviti batalojn pli ofte en la sovaĝejo"
+
+#: script/engine.js:64
+msgid "learned how not to be seen"
+msgstr "lernis malvidati"
+
+#: script/engine.js:67
+msgid "gastronome"
+msgstr "manĝema"
+
+#: script/engine.js:68
+msgid "restore more health when eating"
+msgstr "pli resaniĝi per manĝado"
+
+#: script/engine.js:69
+msgid "learned to make the most of food"
+msgstr "lernis plej efike uzi manĝon"
+
+#: script/engine.js:138 script/space.js:450
+msgid "app store."
+msgstr "aplikaĵa vendejo."
+
+#: script/engine.js:144 script/engine.js:485
+msgid "lights off."
+msgstr "mallumigi."
+
+#: script/engine.js:150 script/engine.js:521
+msgid "hyper."
+msgstr "freneze."
+
+#: script/engine.js:156 script/space.js:442
+msgid "restart."
+msgstr "restartigi."
+
+#: script/engine.js:162
+msgid "share."
+msgstr "diskonigi."
+
+#: script/engine.js:168
+msgid "save."
+msgstr "konservi."
+
+#: script/engine.js:177
+msgid "dropbox."
+msgstr "dropboks."
+
+#: script/engine.js:184
+msgid "github."
+msgstr "github."
+
+#: script/engine.js:268
+msgid "Export / Import"
+msgstr "eligi / enigi"
+
+#: script/engine.js:272
+msgid "export or import save data, for backing up"
+msgstr "eligi aŭ enigi konservdatumon por ĝin konservi"
+
+#: script/engine.js:273
+msgid "or migrating computers"
+msgstr "aŭ por komputilmigri"
+
+#: script/engine.js:277
+msgid "export"
+msgstr "eligi"
+
+#: script/engine.js:281 script/engine.js:326
+msgid "import"
+msgstr "enigi"
+
+#: script/engine.js:291
+msgid "save this."
+msgstr "konservi ĉi tiun"
+
+#: script/engine.js:297
+msgid "got it"
+msgstr "komprenite"
+
+#: script/engine.js:305
+msgid "are you sure?"
+msgstr "ĉu vi certas?"
+
+#: script/engine.js:306
+msgid "if the code is invalid, all data will be lost."
+msgstr "se la kodo malĝustas, ĉiom da la datumo perdiĝos."
+
+#: script/engine.js:307
+msgid "this is irreversible."
+msgstr "ĉi tio ne reŝanĝeblas."
+
+#: script/engine.js:311 script/engine.js:380 script/engine.js:499
+msgid "yes"
+msgstr "jes"
+
+#: script/engine.js:316 script/engine.js:385 script/engine.js:504
+msgid "no"
+msgstr "ne"
+
+#: script/engine.js:322
+msgid "put the save code here."
+msgstr "metu la konservdatumon ĉi tien"
+
+#: script/engine.js:374
+msgid "Restart?"
+msgstr "Ĉu restartigi?"
+
+#: script/engine.js:377
+msgid "restart the game?"
+msgstr "ĉu restartigi la ludon?"
+
+#: script/engine.js:408
+msgid "Share"
+msgstr "Diskonigi"
+
+#: script/engine.js:411
+msgid "bring your friends."
+msgstr "diskonigi la ludon inter viaj amikoj."
+
+#: script/engine.js:414
+msgid "facebook"
+msgstr "fejsbuko"
+
+#: script/engine.js:421
+msgid "google+"
+msgstr "guglo+"
+
+#: script/engine.js:428
+msgid "twitter"
+msgstr "tvitero"
+
+#: script/engine.js:435
+msgid "reddit"
+msgstr "redito"
+
+#: script/engine.js:442
+msgid "close"
+msgstr "fermi"
+
+#: script/engine.js:476 script/engine.js:480
+msgid "lights on."
+msgstr "lumigi"
+
+#: script/engine.js:493
+msgid "Go Hyper?"
+msgstr "Ĉu frenezigu la ludon?"
+
+#: script/engine.js:496
+msgid ""
+"turning hyper mode speeds up the game to x2 speed. do you want to do that?"
+msgstr "frenezigi la ludon duoble rapidigas ĝin. ĉu vi volas fari tion?"
+
+#: script/engine.js:519
+msgid "classic."
+msgstr "klasike."
+
+#: script/engine.js:620
+msgid "{0} per {1}s"
+msgstr "po {0} en {1}s"
+
+#: script/events.js:130
+msgid "eat meat"
+msgstr "manĝi viandon "
+
+#: script/events.js:150
+msgid "use meds"
+msgstr "uzi kuracilon"
+
+#: script/events.js:350 script/events.js:395
+msgid "miss"
+msgstr "maltrafite"
+
+#: script/events.js:363 script/events.js:408
+msgid "stunned"
+msgstr "paralizita"
+
+#: script/events.js:482 script/events.js:653 script/events/global.js:42
+#: script/events/global.js:59 script/events/room.js:142
+#: script/events/room.js:162 script/events/room.js:182
+#: script/events/setpieces.js:25 script/events/setpieces.js:48
+#: script/events/setpieces.js:65 script/events/setpieces.js:83
+#: script/events/setpieces.js:106 script/events/setpieces.js:536
+#: script/events/setpieces.js:1254 script/events/setpieces.js:2948
+#: script/events/setpieces.js:2982 script/events/setpieces.js:3005
+#: script/events/setpieces.js:3042 script/events/setpieces.js:3095
+#: script/events/setpieces.js:3124 script/events/setpieces.js:3170
+#: script/events/setpieces.js:3297 script/events/setpieces.js:3319
+#: script/events/setpieces.js:3439 script/events/setpieces.js:3463
+#: script/events/setpieces.js:3496 script/events/setpieces.js:3515
+#: script/events/setpieces.js:3539 script/events/setpieces.js:3567
+msgid "leave"
+msgstr "foriri"
+
+#: script/events.js:511
+msgid "drop:"
+msgstr "forlasi:"
+
+#: script/events.js:536 script/events/room.js:523
+msgid "nothing"
+msgstr "nenion"
+
+#: script/events.js:567 script/events/setpieces.js:3551
+msgid "take"
+msgstr "preni"
+
+#: script/events.js:577
+msgid "take:"
+msgstr "preni:"
+
+#: script/events.js:599
+msgid "nothing to take"
+msgstr "nenio prenebla"
+
+#: script/events.js:627
+msgid "all"
+msgstr "ĉion"
+
+#: script/events.js:649
+msgid "take everything"
+msgstr "preni ĉion"
+
+#: script/events.js:653 script/outside.js:627
+msgid " and "
+msgstr " kaj "
+
+#: script/events.js:896
+msgid "*** EVENT ***"
+msgstr "*** OKAZAĴO ***"
+
+#: script/localization.js:4
+msgid "saved."
+msgstr "konservite."
+
+#: script/localization.js:5
+msgid "wood"
+msgstr "ligno"
+
+#: script/localization.js:6
+msgid "builder"
+msgstr "konstruisto"
+
+#: script/localization.js:7
+msgid "teeth"
+msgstr "dentoj"
+
+#: script/localization.js:8
+msgid "meat"
+msgstr "viando"
+
+#: script/localization.js:9
+msgid "fur"
+msgstr "felo"
+
+#: script/localization.js:10
+msgid "alien alloy"
+msgstr "alimonda kunfondaĵo"
+
+#: script/localization.js:11
+msgid "bullets"
+msgstr "kugloj"
+
+#: script/localization.js:12
+msgid "charm"
+msgstr "talismano"
+
+#: script/localization.js:13 script/path.js:138
+msgid "leather"
+msgstr "ledo"
+
+#: script/localization.js:14 script/path.js:136
+msgid "iron"
+msgstr "fero"
+
+#: script/localization.js:15 script/path.js:134
+msgid "steel"
+msgstr "ŝtalo"
+
+#: script/localization.js:16
+msgid "coal"
+msgstr "karbo"
+
+#: script/localization.js:17
+msgid "sulphur"
+msgstr "sulfuro"
+
+#: script/localization.js:18
+msgid "energy cell"
+msgstr "energia ĉelo"
+
+#: script/localization.js:19 script/room.js:161
+msgid "torch"
+msgstr "torĉo"
+
+#: script/localization.js:20
+msgid "medicine"
+msgstr "kuracilo"
+
+#: script/localization.js:21 script/outside.js:22
+msgid "hunter"
+msgstr "ĉasisto"
+
+#: script/localization.js:22 script/outside.js:30
+msgid "trapper"
+msgstr "kaptisto"
+
+#: script/localization.js:23 script/outside.js:38
+msgid "tanner"
+msgstr "tanisto"
+
+#: script/localization.js:24
+msgid "grenade"
+msgstr "grenado"
+
+#: script/localization.js:25
+msgid "bolas"
+msgstr "ĵetkaptilo"
+
+#: script/localization.js:26
+msgid "bayonet"
+msgstr "bajoneto"
+
+#: script/localization.js:27 script/outside.js:46
+msgid "charcutier"
+msgstr "viandisto"
+
+#: script/localization.js:28 script/outside.js:55
+msgid "iron miner"
+msgstr "fera ministo"
+
+#: script/localization.js:29
+msgid "iron mine"
+msgstr "fera minejo"
+
+#: script/localization.js:30 script/outside.js:63
+msgid "coal miner"
+msgstr "karba ministo"
+
+#: script/localization.js:31
+msgid "coal mine"
+msgstr "karba minejo"
+
+#: script/localization.js:32 script/outside.js:71
+msgid "sulphur miner"
+msgstr "sulfura ministo"
+
+#: script/localization.js:33
+msgid "sulphur mine"
+msgstr "sulfura minejo"
+
+#: script/localization.js:34 script/outside.js:88
+msgid "armourer"
+msgstr "armaĵisto"
+
+#: script/localization.js:35 script/outside.js:79
+msgid "steelworker"
+msgstr "ŝtala laboristo"
+
+#: script/localization.js:36
+msgid "bait"
+msgstr "logviando"
+
+#: script/localization.js:37 script/localization.js:44
+msgid "cured meat"
+msgstr "fumaĵita viando"
+
+#: script/localization.js:38 script/localization.js:43
+msgid "scales"
+msgstr "skvamoj"
+
+#: script/localization.js:39
+msgid "compass"
+msgstr "kompaso"
+
+#: script/localization.js:40
+msgid "laser rifle"
+msgstr "lasera fusilo"
+
+#: script/localization.js:41 script/outside.js:15
+msgid "gatherer"
+msgstr "kolektisto"
+
+#: script/localization.js:42
+msgid "cloth"
+msgstr "ŝtofo"
+
+#: script/localization.js:45
+msgid "thieves"
+msgstr "ŝtelistoj"
+
+#: script/localization.js:46
+msgid "not enough fur"
+msgstr "ne estas sufiĉe da felo"
+
+#: script/localization.js:47
+msgid "not enough wood"
+msgstr "ne estas sufiĉe da ligno"
+
+#: script/localization.js:48
+msgid "not enough coal"
+msgstr "ne estas sufiĉe da karbo"
+
+#: script/localization.js:49
+msgid "not enough iron"
+msgstr "ne estas sufiĉe da fero"
+
+#: script/localization.js:50
+msgid "not enough steel"
+msgstr "ne estas sufiĉe da ŝtalo"
+
+#: script/localization.js:51
+msgid "not enough sulphur"
+msgstr "ne estas sufiĉe da sulfuro"
+
+#: script/localization.js:52
+msgid "baited trap"
+msgstr "logebla kaptilo"
+
+#: script/localization.js:53
+msgid "not enough scales"
+msgstr "ne estas sufiĉe da skvamoj"
+
+#: script/localization.js:54
+msgid "not enough cloth"
+msgstr "ne estas sufiĉe da ŝtofo"
+
+#: script/localization.js:55
+msgid "not enough teeth"
+msgstr "ne estas sufiĉe da dentoj"
+
+#: script/localization.js:56
+msgid "not enough leather"
+msgstr "ne estas sufiĉe da ledo"
+
+#: script/localization.js:57
+msgid "not enough meat"
+msgstr "ne estas sufiĉe da viando"
+
+#: script/localization.js:58
+msgid "the compass points east"
+msgstr "la kompaso indikas orienten"
+
+#: script/localization.js:59
+msgid "the compass points west"
+msgstr "la kompaso indikas okcidenten"
+
+#: script/localization.js:60
+msgid "the compass points north"
+msgstr "la kompaso indikas norden"
+
+#: script/localization.js:61
+msgid "the compass points south"
+msgstr "la kompaso indikas suden"
+
+#: script/localization.js:62
+msgid "the compass points northeast"
+msgstr "la kompaso indikas nordorienten"
+
+#: script/localization.js:63
+msgid "the compass points northwest"
+msgstr "la kompaso indikas nordokcidenten"
+
+#: script/localization.js:64
+msgid "the compass points southeast"
+msgstr "la kompaso indikas sudorienten"
+
+#: script/localization.js:65
+msgid "the compass points southwest"
+msgstr "la kompaso indikas sudokcidenten"
+
+#: script/outside.js:5
+msgid "Outside"
+msgstr "Eksteraĵo"
+
+#: script/outside.js:102
+msgid "scraps of fur"
+msgstr "felerojn"
+
+#: script/outside.js:107
+msgid "bits of meat"
+msgstr "pecojn da viando"
+
+#: script/outside.js:112
+msgid "strange scales"
+msgstr "strangajn skvamojn"
+
+#: script/outside.js:117
+msgid "scattered teeth"
+msgstr "disajn dentojn"
+
+#: script/outside.js:122
+msgid "tattered cloth"
+msgstr "disŝiritan ŝtofon"
+
+#: script/outside.js:127
+msgid "a crudely made charm"
+msgstr "aĉe faritan talismanon"
+
+#: script/outside.js:143 script/outside.js:562
+msgid "A Silent Forest"
+msgstr "Silenta Arbaro"
+
+#: script/outside.js:169
+msgid "gather wood"
+msgstr "kolekti lignon"
+
+#: script/outside.js:188
+msgid "a stranger arrives in the night"
+msgstr "alvenas nekonato dum la nokto"
+
+#: script/outside.js:190
+msgid "a weathered family takes up in one of the huts."
+msgstr "lacega familio enloĝas unu el la kabanoj."
+
+#: script/outside.js:192
+msgid "a small group arrives, all dust and bones."
+msgstr "alvenas grupeto, plejparte plovo kaj ostoj."
+
+#: script/outside.js:194
+msgid "a convoy lurches in, equal parts worry and hope."
+msgstr "vagonaro alvenas, ambaŭ ĉagrene kaj espere."
+
+#: script/outside.js:196
+msgid "the town's booming. word does get around."
+msgstr "la urbeto nun egas. certe diskonite."
+
+#: script/outside.js:452
+msgid "pop "
+msgstr "pop "
+
+#: script/outside.js:457
+msgid "forest"
+msgstr "arbaro"
+
+#: script/outside.js:460
+msgid "village"
+msgstr "vilaĝo"
+
+#: script/outside.js:543
+msgid "check traps"
+msgstr "kontroli kaptilojn"
+
+#: script/outside.js:564
+msgid "A Lonely Hut"
+msgstr "Soleca Kabano"
+
+#: script/outside.js:566
+msgid "A Tiny Village"
+msgstr "Malgrandega Vilaĝo"
+
+#: script/outside.js:568
+msgid "A Modest Village"
+msgstr "Modesta Vilaĝo"
+
+#: script/outside.js:570
+msgid "A Large Village"
+msgstr "Granda Vilaĝo"
+
+#: script/outside.js:572
+msgid "A Raucous Village"
+msgstr "Raŭka Vilaĝo"
+
+#: script/outside.js:584
+msgid "the sky is grey and the wind blows relentlessly"
+msgstr "la ĉielo grizas kaj la vento blovas senĉese"
+
+#: script/outside.js:594
+msgid "dry brush and dead branches litter the forest floor"
+msgstr "seka plantaĵo kaj mortaj branĉoj disas sube"
+
+#: script/outside.js:621
+msgid "the traps contain "
+msgstr "la kaptiloj enhavas "
+
+#: script/path.js:29 script/path.js:298
+msgid "A Dusty Path"
+msgstr "Polva Vojo"
+
+#: script/path.js:37
+msgid "supplies:"
+msgstr "provizaĵoj:"
+
+#: script/path.js:43
+msgid "embark"
+msgstr "ek!"
+
+#: script/path.js:60 script/room.js:1153
+msgid "the compass points "
+msgstr "la kompaso indikas "
+
+#: script/path.js:102
+msgid "perks:"
+msgstr "apartaĵoj:"
+
+#: script/path.js:132
+msgid "none"
+msgstr "neniu"
+
+#: script/path.js:142
+msgid "armour"
+msgstr "armaĵo"
+
+#: script/path.js:153
+msgid "water"
+msgstr "akvo"
+
+#: script/path.js:229 script/world.js:290
+msgid "free {0}/{1}"
+msgstr "neokupita {0}/{1}"
+
+#: script/path.js:253
+msgid "weight"
+msgstr "pezo"
+
+#: script/path.js:255
+msgid "available"
+msgstr "disponebla"
+
+#: script/room.js:16
+msgid "trap"
+msgstr "kaptilo"
+
+#: script/room.js:19
+msgid ""
+"builder says she can make traps to catch any creatures might still be alive "
+"out there"
+msgstr ""
+"la konstruisto diras ke ŝi povas krei kaptilojn por kapti bestojn kiuj eble "
+"plu vivas ekstere"
+
+#: script/room.js:20
+msgid "more traps to catch more creatures"
+msgstr "pli da kaptiloj por kapti pli da bestoj"
+
+#: script/room.js:21
+msgid "more traps won't help now"
+msgstr "pli da kaptiloj ne plu helpas"
+
+#: script/room.js:31
+msgid "cart"
+msgstr "ĉaro"
+
+#: script/room.js:34
+msgid "builder says she can make a cart for carrying wood"
+msgstr "la konstruisto diras ke ŝi povas krei ĉaron lignoportan"
+
+#: script/room.js:35
+msgid "the rickety cart will carry more wood from the forest"
+msgstr "la kaduka ĉaro portos pli da ligno el la arbaro"
+
+#: script/room.js:44
+msgid "hut"
+msgstr "kabano"
+
+#: script/room.js:47
+msgid "builder says there are more wanderers. says they'll work, too."
+msgstr "la konstruisto diras ke estas pli da vagantoj, kaj ili laboros."
+
+#: script/room.js:48
+msgid "builder puts up a hut, out in the forest. says word will get around."
+msgstr "la konstruisto starigas kabanon en la arbaro. tio diskoniĝos."
+
+#: script/room.js:49
+msgid "no more room for huts."
+msgstr "ne sufiĉe da spaco por kabanoj"
+
+#: script/room.js:59
+msgid "lodge"
+msgstr "ĉasistejo"
+
+#: script/room.js:62
+msgid "villagers could help hunt, given the means"
+msgstr "vilaĝanoj povus helpi ĉasi, se estus ejo"
+
+#: script/room.js:63
+msgid "the hunting lodge stands in the forest, a ways out of town"
+msgstr "la ĉasista loĝejo staras en la arbaro, iom for de la urbeto"
+
+#: script/room.js:74
+msgid "trading post"
+msgstr "bazaro"
+
+#: script/room.js:77
+msgid "a trading post would make commerce easier"
+msgstr "bazaro plifaciligus komercon"
+
+#: script/room.js:78
+msgid ""
+"now the nomads have a place to set up shop, they might stick around a while"
+msgstr "nun la nomadoj havas lokon komerci, do ili verŝajne plu restas"
+
+#: script/room.js:88
+msgid "tannery"
+msgstr "tanejo"
+
+#: script/room.js:91
+msgid "builder says leather could be useful. says the villagers could make it."
+msgstr "la konstruisto diras ke ledo utilus, kaj la vilaĝanoj povus krei ĝin."
+
+#: script/room.js:92
+msgid "tannery goes up quick, on the edge of the village"
+msgstr "tanejo ekstariĝas, ĉe la vilaĝa bordo"
+
+#: script/room.js:102
+msgid "smokehouse"
+msgstr "fumaĵejo"
+
+#: script/room.js:105
+msgid ""
+"should cure the meat, or it'll spoil. builder says she can fix something up."
+msgstr "bonus fumaĵi la viandon aŭ ĝi putros. la konstruisto povas krei ejon."
+
+#: script/room.js:106
+msgid "builder finishes the smokehouse. she looks hungry."
+msgstr "la konstruisto finas la fumaĵejo. ŝi malsate aspektas."
+
+#: script/room.js:116
+msgid "workshop"
+msgstr "laborejo"
+
+#: script/room.js:119
+msgid "builder says she could make finer things, if she had the tools"
+msgstr "la konstruisto diras ke ŝi kreus pli delikatajn aĵojn se havus ilojn"
+
+#: script/room.js:120
+msgid "workshop's finally ready. builder's excited to get to it"
+msgstr "la laborejo estas finita. la konstruisto viglas"
+
+#: script/room.js:131
+msgid "steelworks"
+msgstr "ŝtalejo"
+
+#: script/room.js:134
+msgid "builder says the villagers could make steel, given the tools"
+msgstr "la konstruisto diras ke la vilaĝanoj povus krei ŝtalon"
+
+#: script/room.js:135
+msgid "a haze falls over the village as the steelworks fires up"
+msgstr "nebuleto falas sur la vilaĝo kiam la ŝtalejo komencas"
+
+#: script/room.js:146
+msgid "armoury"
+msgstr "armejo"
+
+#: script/room.js:149
+msgid "builder says it'd be useful to have a steady source of bullets"
+msgstr "la konstruisto diras ke utilus havi fonton da kugloj"
+
+#: script/room.js:150
+msgid "armoury's done, welcoming back the weapons of the past."
+msgstr "la armejo pretas, bonvenigante armilojn pasintecajn"
+
+#: script/room.js:164
+msgid "a torch to keep the dark away"
+msgstr "torĉo por forigi la mallumon"
+
+#: script/room.js:173
+msgid "waterskin"
+msgstr "ledbotelo"
+
+#: script/room.js:177
+msgid "this waterskin'll hold a bit of water, at least"
+msgstr "ĉi tiu ledbotelo portos iom da akvo, nu"
+
+#: script/room.js:185
+msgid "cask"
+msgstr "barelo"
+
+#: script/room.js:189
+msgid "the cask holds enough water for longer expeditions"
+msgstr "la barelo portos sufiĉe da akvo por pli longaj vojaĝoj"
+
+#: script/room.js:198
+msgid "water tank"
+msgstr "akvocisterno"
+
+#: script/room.js:202
+msgid "never go thirsty again"
+msgstr "neniam soifos"
+
+#: script/room.js:211
+msgid "bone spear"
+msgstr "osta lanco"
+
+#: script/room.js:214
+msgid "this spear's not elegant, but it's pretty good at stabbing"
+msgstr "ĉi tiu lanco ne elegantas, sed bone ponardas."
+
+#: script/room.js:223 script/world.js:285
+msgid "rucksack"
+msgstr "dorsosako"
+
+#: script/room.js:227
+msgid "carrying more means longer expeditions to the wilds"
+msgstr "pli portante, plu vojaĝante"
+
+#: script/room.js:235
+msgid "wagon"
+msgstr "vagono"
+
+#: script/room.js:239
+msgid "the wagon can carry a lot of supplies"
+msgstr "la vagono povas porti multe da provizaĵoj"
+
+#: script/room.js:248
+msgid "convoy"
+msgstr "vagonaro"
+
+#: script/room.js:252
+msgid "the convoy can haul mostly everything"
+msgstr "la vangonaro povas tiri preskaŭ ĉiom"
+
+#: script/room.js:262
+msgid "l armour"
+msgstr "l armaĵo"
+
+#: script/room.js:265
+msgid "leather's not strong. better than rags, though."
+msgstr "ledo ne fortas, sed nu, pli ol ĉifonoj."
+
+#: script/room.js:274
+msgid "i armour"
+msgstr "f armaĵo"
+
+#: script/room.js:277
+msgid "iron's stronger than leather"
+msgstr "fero estas pli forta ol ledo"
+
+#: script/room.js:286
+msgid "s armour"
+msgstr "ŝ armaĵo"
+
+#: script/room.js:289
+msgid "steel's stronger than iron"
+msgstr "ŝtalo estas pli forta ol fero"
+
+#: script/room.js:298
+msgid "iron sword"
+msgstr "fera glavo"
+
+#: script/room.js:301
+msgid "sword is sharp. good protection out in the wilds."
+msgstr "la glavo estas akra. bona protektilo kontraŭ la sovaĝejo."
+
+#: script/room.js:311
+msgid "steel sword"
+msgstr "ŝtala glavo"
+
+#: script/room.js:314
+msgid "the steel is strong, and the blade true."
+msgstr "la ŝtalo estas forta, kaj la klingo estas efektiva."
+
+#: script/room.js:324
+msgid "rifle"
+msgstr "fusilo"
+
+#: script/room.js:326
+msgid "black powder and bullets, like the old days."
+msgstr "nigra pulvoro kaj kugloj, kiel la tagoj pasintecaj."
+
+#: script/room.js:458
+msgid "Room"
+msgstr "Ĉambro"
+
+#: script/room.js:485 script/room.js:604
+msgid "A Dark Room"
+msgstr "Malluma Ĉambro"
+
+#: script/room.js:498
+msgid "light fire"
+msgstr "ekbruligi fajron"
+
+#: script/room.js:508
+msgid "stoke fire"
+msgstr "hejti fajron"
+
+#: script/room.js:545 script/room.js:555 script/room.js:703 script/room.js:707
+msgid "the room is {0}"
+msgstr "la ĉambro estas {0}"
+
+# This sentence is made by combining "the fire is" and an adjective.
+# A more natural way of doing this in Esperanto is by combining "la fajro" and a verb.
+#: script/room.js:546 script/room.js:554 script/room.js:672
+msgid "the fire is {0}"
+msgstr "la fajro {0}"
+
+#: script/room.js:565
+msgid ""
+"the stranger is standing by the fire. she says she can help. says she builds "
+"things."
+msgstr ""
+"la nekonato staras apud la fajro. ŝi diras ke ŝi povas helpi. diras, ke ŝi "
+"kreas aĵojn."
+
+#: script/room.js:580
+msgid "freezing"
+msgstr "frosta"
+
+#: script/room.js:581
+msgid "cold"
+msgstr "malvarma"
+
+#: script/room.js:582
+msgid "mild"
+msgstr "milda"
+
+#: script/room.js:583
+msgid "warm"
+msgstr "varma"
+
+#: script/room.js:584
+msgid "hot"
+msgstr "varmega"
+
+#: script/room.js:596
+msgid "dead"
+msgstr "mortis"
+
+#: script/room.js:597
+msgid "smoldering"
+msgstr "fumetas"
+
+#: script/room.js:598
+msgid "flickering"
+msgstr "flagretas"
+
+#: script/room.js:599
+msgid "burning"
+msgstr "brulas"
+
+#: script/room.js:600
+msgid "roaring"
+msgstr "brulas forte"
+
+#: script/room.js:604
+msgid "A Firelit Room"
+msgstr "Luma Ĉambro"
+
+#: script/room.js:642
+msgid "not enough wood to get the fire going"
+msgstr "ne sufiĉe da ligno por ekbruligi la fajron"
+
+#: script/room.js:655
+msgid "the wood has run out"
+msgstr "ne plu restas ligno"
+
+#: script/room.js:675
+msgid "the light from the fire spills from the windows, out into the dark"
+msgstr "la lumo de la fajro disbrilas el la fenestroj, al la mallumecon"
+
+#: script/room.js:688
+msgid "builder stokes the fire"
+msgstr "la konstruisto hejtas la fajron"
+
+#: script/room.js:718
+msgid "the wind howls outside"
+msgstr "la vento blovas ekstere"
+
+#: script/room.js:719
+msgid "the wood is running out"
+msgstr "la ligno preskaŭ ne plu estas"
+
+#: script/room.js:726
+msgid "a ragged stranger stumbles through the door and collapses in the corner"
+msgstr "kaduka nekonato iras tra la pordo kaj disfalas ĉe la angulo"
+
+#: script/room.js:734
+msgid ""
+"the stranger shivers, and mumbles quietly. her words are unintelligible."
+msgstr "la nekonato tremas, kaj mallaŭte murmuras. ŝiaj vortoj nesencas."
+
+#: script/room.js:737
+msgid "the stranger in the corner stops shivering. her breathing calms."
+msgstr "la nekonato ĉe la angulo ĉesas tremi. ŝiaj spiroj trankviliĝas."
+
+#: script/room.js:760
+msgid "stores"
+msgstr "provizaĵoj"
+
+#: script/room.js:779
+msgid "weapons"
+msgstr "armiloj"
+
+#: script/room.js:914
+msgid "total"
+msgstr "tuto"
+
+#: script/room.js:935 script/room.js:979
+msgid "not enough "
+msgstr "ne sufiĉe da "
+
+#: script/room.js:951
+msgid "builder just shivers"
+msgstr "la konstruisto nure tremas"
+
+#: script/room.js:1054
+msgid "build:"
+msgstr "konstrui:"
+
+#: script/room.js:1061
+msgid "craft:"
+msgstr "krei:"
+
+#: script/room.js:1068
+msgid "buy:"
+msgstr "aĉeti:"
+
+#: script/ship.js:11
+msgid "Ship"
+msgstr "Ŝipo"
+
+#: script/ship.js:27 script/ship.js:100
+msgid "An Old Starship"
+msgstr "Malnova Stelŝipo"
+
+#: script/ship.js:38
+msgid "hull:"
+msgstr "ŝelo:"
+
+#: script/ship.js:44
+msgid "engine:"
+msgstr "motoro:"
+
+#: script/ship.js:51
+msgid "reinforce hull"
+msgstr "plifortigi ŝelon"
+
+#: script/ship.js:60
+msgid "upgrade engine"
+msgstr "plibonigi motoron"
+
+#: script/ship.js:69 script/ship.js:142
+msgid "lift off"
+msgstr "ekflugi"
+
+#: script/ship.js:91
+msgid ""
+"somewhere above the debris cloud, the wanderer fleet hovers. been on this "
+"rock too long."
+msgstr ""
+"ie super la polvonubo, la ŝiparo de la vagantoj ŝvebas. ĉeestis ĉi tiu ŝtono "
+"tro longatempe."
+
+#: script/ship.js:106 script/ship.js:119
+msgid "not enough alien alloy"
+msgstr "ne sufiĉe da alimonda kunfondaĵo"
+
+#: script/ship.js:134
+msgid "Ready to Leave?"
+msgstr "Ĉu pretas foriri?"
+
+#: script/ship.js:138
+msgid "time to get out of this place. won't be coming back."
+msgstr "jam estas la temp' forflugi, ne revenos."
+
+#: script/ship.js:150
+msgid "linger"
+msgstr "resti iom pli"
+
+#: script/space.js:42
+msgid "hull: "
+msgstr "ŝelo: "
+
+#: script/space.js:76
+msgid "Troposphere"
+msgstr "Troposfero"
+
+#: script/space.js:78
+msgid "Stratosphere"
+msgstr "Stratosfero"
+
+#: script/space.js:80
+msgid "Mesosphere"
+msgstr "Mezosfero"
+
+#: script/space.js:82
+msgid "Thermosphere"
+msgstr "Termosfero"
+
+#: script/space.js:84
+msgid "Exosphere"
+msgstr "Ekzosfero"
+
+#: script/space.js:86
+msgid "Space"
+msgstr "La Kosmo"
+
+#: script/space.js:424
+msgid "score for this game: {0}"
+msgstr "poentaro pri ĉi tiu ludo: {0}"
+
+#: script/space.js:431
+msgid "total score: {0}"
+msgstr "totala poentaro: {0}"
+
+#: script/world.js:46
+msgid "punch"
+msgstr "pugni"
+
+#: script/world.js:52
+msgid "stab"
+msgstr "enpiki"
+
+#: script/world.js:58
+msgid "swing"
+msgstr "svingi"
+
+#: script/world.js:64
+msgid "slash"
+msgstr "glavstreki"
+
+#: script/world.js:70
+msgid "thrust"
+msgstr "trapiki"
+
+#: script/world.js:76
+msgid "shoot"
+msgstr "pafi"
+
+#: script/world.js:83
+msgid "blast"
+msgstr "fulmobati"
+
+#: script/world.js:90
+msgid "lob"
+msgstr "pugnegi"
+
+#: script/world.js:97
+msgid "tangle"
+msgstr "ŝnuri"
+
+#: script/world.js:119
+msgid "An&nbsp;Outpost"
+msgstr "Pikedo"
+
+#: script/world.js:120
+msgid "Iron&nbsp;Mine"
+msgstr "Fera&nbsp;Minejo"
+
+#: script/world.js:121
+msgid "Coal&nbsp;Mine"
+msgstr "Karba&nbsp;Minejo"
+
+#: script/world.js:122
+msgid "Sulphur&nbsp;Mine"
+msgstr "Sulfura&nbsp;Minejo"
+
+#: script/world.js:123
+msgid "An&nbsp;Old&nbsp;House"
+msgstr "Malnova&nbsp;Domo"
+
+#: script/world.js:124
+msgid "A&nbsp;Damp&nbsp;Cave"
+msgstr "Malseka&nbsp;Kaverno"
+
+#: script/world.js:125
+msgid "An&nbsp;Abandoned&nbsp;Town"
+msgstr "Forlasita&nbsp;Urbeto"
+
+#: script/world.js:126
+msgid "A&nbsp;Ruined&nbsp;City"
+msgstr "Ruina&nbsp;Urbo"
+
+#: script/world.js:127
+msgid "A&nbsp;Crashed&nbsp;Starship"
+msgstr "Faleginta&nbsp;Stelŝipo"
+
+#: script/world.js:128
+msgid "A&nbsp;Borehole"
+msgstr "Boraĵo"
+
+#: script/world.js:129
+msgid "A&nbsp;Battlefield"
+msgstr "Batalejo"
+
+#: script/world.js:130
+msgid "A&nbsp;Murky&nbsp;Swamp"
+msgstr "Malluma&nbsp;Marĉo"
+
+#: script/world.js:134
+msgid "A&nbsp;Destroyed&nbsp;Village"
+msgstr "Detruita&nbsp;Vilaĝo"
+
+#: script/world.js:256
+msgid "water:{0}"
+msgstr "akvo:{0}"
+
+#: script/world.js:283
+msgid "pockets"
+msgstr "poŝoj"
+
+#: script/world.js:307
+msgid "hp: {0}/{1}"
+msgstr "vp: {0}/{1}"
+
+#: script/world.js:314
+msgid "{0}:{1}"
+msgstr "{0}:{1}"
+
+#: script/world.js:349
+msgid "dangerous to be this far from the village without proper protection"
+msgstr "danĝeras esti tiom for de la vilaĝo sen bona amraĵo"
+
+#: script/world.js:351
+msgid "safer here"
+msgstr "malpli danĝeras ĉi tie"
+
+#: script/world.js:451
+msgid "the meat has run out"
+msgstr "ne plu restas viando"
+
+#: script/world.js:456
+msgid "starvation sets in"
+msgstr "ekas mortmalsato"
+
+#: script/world.js:481
+msgid "there is no more water"
+msgstr "restas neniom da akvo"
+
+#: script/world.js:485
+msgid "the thirst becomes unbearable"
+msgstr "ne plu tolereblas la soifo"
+
+#: script/world.js:558
+msgid "the trees yield to dry grass. the yellowed brush rustles in the wind."
+msgstr "la arboj cedas al seka herbaro. la flava subaĵo susuras laŭ la vento."
+
+#: script/world.js:561
+msgid ""
+"the trees are gone. parched earth and blowing dust are poor replacements."
+msgstr "la arboj ne pluas. soifa tero kaj blovata polvo ne bele anstataŭas."
+
+#: script/world.js:568
+msgid ""
+"trees loom on the horizon. grasses gradually yield to a forest floor of dry "
+"branches and fallen leaves."
+msgstr ""
+"arboj aperiĝas sur la horizonto. la herbaro iom post iome cedas al arbara "
+"subaĵo da sekaj branĉoj kaj falintaj folioj."
+
+#: script/world.js:571
+msgid "the grasses thin. soon, only dust remains."
+msgstr "la herbaro malkoncentriĝas. nur polvo restas."
+
+#: script/world.js:578
+msgid "the barrens break at a sea of dying grass, swaying in the arid breeze."
+msgstr ""
+"la neniejo haltas ĉe maro da mortantaj herboj, svingiĝante en la senakva "
+"venteto."
+
+#: script/world.js:581
+msgid ""
+"a wall of gnarled trees rises from the dust. their branches twist into a "
+"skeletal canopy overhead."
+msgstr ""
+"muro da torditaj arboj suprenstaras el la polvo. iliaj branĉoj serpentumas, "
+"formante skeletan superaĵon."
+
+#: script/world.js:817
+msgid "Wanderer"
+msgstr "Vaganto"
+
+#: script/world.js:822
+msgid "The&nbsp;Village"
+msgstr "La&nbsp;Vilaĝo"
+
+#: script/world.js:851
+msgid "the world fades"
+msgstr "la mondo malklariĝas"
+
+#: script/world.js:952 script/events/setpieces.js:2961
+msgid "water replenished"
+msgstr "akvo repleniĝis"
+
+#: script/world.js:982
+msgid "A Barren World"
+msgstr "Neniejo"
+
+#: script/events/encounters.js:7
+msgid "A Snarling Beast"
+msgstr "Sovaĝa Besto"
+
+#: script/events/encounters.js:15
+msgid "snarling beast"
+msgstr "sovaĝa besto"
+
+#: script/events/encounters.js:16
+msgid "the snarling beast is dead"
+msgstr "la sovaĝa besto mortis"
+
+#: script/events/encounters.js:39
+msgid "a snarling beast leaps out of the underbrush"
+msgstr "sovaĝa besto saltegas el la plantaĵo"
+
+#: script/events/encounters.js:44
+msgid "A Gaunt Man"
+msgstr "Maldika Viro"
+
+#: script/events/encounters.js:52
+msgid "gaunt man"
+msgstr "maldika viro"
+
+#: script/events/encounters.js:53
+msgid "the gaunt man is dead"
+msgstr "la maldika viro mortis"
+
+#: script/events/encounters.js:76
+msgid "a gaunt man approaches, a crazed look in his eye"
+msgstr "maldika viro alproksimiĝas, kaj ŝajnas freneza"
+
+#: script/events/encounters.js:81
+msgid "A Strange Bird"
+msgstr "Stranga Birdo"
+
+#: script/events/encounters.js:89
+msgid "strange bird"
+msgstr "stranga birdo"
+
+#: script/events/encounters.js:90
+msgid "the strange bird is dead"
+msgstr "la stranga birdo mortis"
+
+#: script/events/encounters.js:113
+msgid "a strange looking bird speeds across the plains"
+msgstr "stranga birdo rapidege kuras trans la ebenaĵo"
+
+#: script/events/encounters.js:119
+msgid "A Shivering Man"
+msgstr "Tremanta Viro"
+
+#: script/events/encounters.js:127
+msgid "shivering man"
+msgstr "tremanta viro"
+
+#: script/events/encounters.js:128
+msgid "the shivering man is dead"
+msgstr "la treminta viro mortis"
+
+#: script/events/encounters.js:156
+msgid "a shivering man approaches and attacks with surprising strength"
+msgstr "tremanta viro alproksimiĝas kaj atakas per surprize ega forto"
+
+#: script/events/encounters.js:161
+msgid "A Man-Eater"
+msgstr "Hom-Manĝanto"
+
+#: script/events/encounters.js:169
+msgid "man-eater"
+msgstr "hom-manĝanto"
+
+#: script/events/encounters.js:170
+msgid "the man-eater is dead"
+msgstr "la hom-manĝinto mortis"
+
+#: script/events/encounters.js:193
+msgid "a large creature attacks, claws freshly bloodied"
+msgstr "granda estaĵo atakas, ĝiaj ungegoj ĵus sangiĝitaj"
+
+#: script/events/encounters.js:198
+msgid "A Scavenger"
+msgstr "Kolektisto"
+
+#: script/events/encounters.js:206
+msgid "scavenger"
+msgstr "kolektisto"
+
+#: script/events/encounters.js:207
+msgid "the scavenger is dead"
+msgstr "la kolektisto mortis"
+
+#: script/events/encounters.js:235
+msgid "a scavenger draws close, hoping for an easy score"
+msgstr "kolektisto venas proksimen, esperante facilan batalon"
+
+#: script/events/encounters.js:240
+msgid "A Huge Lizard"
+msgstr "Grandega Lacerto"
+
+#: script/events/encounters.js:248
+msgid "lizard"
+msgstr "lacerto"
+
+#: script/events/encounters.js:249
+msgid "the lizard is dead"
+msgstr "la lacerto mortis"
+
+#: script/events/encounters.js:272
+msgid "the grass thrashes wildly as a huge lizard pushes through"
+msgstr "la herbaro sovaĝe svingiĝas dum grandega lacerto tramarŝas"
+
+#: script/events/encounters.js:278
+msgid "A Feral Terror"
+msgstr "Sovaĝa Teruraĵo"
+
+#: script/events/encounters.js:286
+msgid "feral terror"
+msgstr "sovaĝa teruraĵo"
+
+#: script/events/encounters.js:287
+msgid "the feral terror is dead"
+msgstr "la sovaĝa teruraĵo mortis"
+
+#: script/events/encounters.js:310
+msgid "a beast, wilder than imagining, erupts out of the foliage"
+msgstr "besto pli sovaĝa ol ĉio imagita ekkuras el la foliaro"
+
+#: script/events/encounters.js:315
+msgid "A Soldier"
+msgstr "Soldato"
+
+#: script/events/encounters.js:323
+msgid "soldier"
+msgstr "soldato"
+
+#: script/events/encounters.js:324
+msgid "the soldier is dead"
+msgstr "la soldato mortis"
+
+#: script/events/encounters.js:353
+msgid "a soldier opens fire from across the desert"
+msgstr "soldato ekpafadas de trans la dezerto"
+
+#: script/events/encounters.js:358
+msgid "A Sniper"
+msgstr "Tiraljoro"
+
+#: script/events/encounters.js:366
+msgid "sniper"
+msgstr "tiraljoro"
+
+#: script/events/encounters.js:367
+msgid "the sniper is dead"
+msgstr "la tiraljoro mortis"
+
+#: script/events/encounters.js:396
+msgid "a shot rings out, from somewhere in the long grass"
+msgstr "pafo sonoras el ie en la alta herbaro"
+
+#: script/events/global.js:6
+msgid "The Thief"
+msgstr "La Ŝtelisto"
+
+#: script/events/global.js:13
+msgid "the villagers haul a filthy man out of the store room."
+msgstr "la vilaĝanoj tiras malpuregan viron el la provizejo."
+
+#: script/events/global.js:14
+msgid "say his folk have been skimming the supplies."
+msgstr "ili diras ke liaj kamaradoj ŝteletadis la provizaĵojn."
+
+#: script/events/global.js:15
+msgid "say he should be strung up as an example."
+msgstr "ili pensas ke bonas pendumi lin kiel ekzemplo."
+
+#: script/events/global.js:17
+msgid "a thief is caught"
+msgstr "ŝtelisto kaptitas"
+
+#: script/events/global.js:21
+msgid "hang him"
+msgstr "pendumi lin"
+
+#: script/events/global.js:25
+msgid "spare him"
+msgstr "pardoni lin"
+
+#: script/events/global.js:32
+msgid "the villagers hang the thief high in front of the store room."
+msgstr "la vilaĝanoj pendumas la ŝteliston alte antaŭ la provizejo."
+
+#: script/events/global.js:33
+msgid ""
+"the point is made. in the next few days, the missing supplies are returned."
+msgstr ""
+"la punkto efikas. dum la venontaj tagoj, la mankitaj provizaĵoj estas "
+"redonataj."
+
+#: script/events/global.js:49
+msgid "the man says he's grateful. says he won't come around any more."
+msgstr "la viro dankegas vin kaj diras ke li ne plu revenos."
+
+#: script/events/global.js:50
+msgid "shares what he knows about sneaking before he goes."
+msgstr "antaŭ lia foriro li instruas lian scion pri la ŝtelirado."
+
+#: script/events/outside.js:6
+msgid "A Ruined Trap"
+msgstr "Detruita Kaptilo"
+
+#: script/events/outside.js:13
+msgid "some of the traps have been torn apart."
+msgstr "kelkaj kaptiloj estas disŝiritaj."
+
+#: script/events/outside.js:14
+msgid "large prints lead away, into the forest."
+msgstr "grandaj piedpremsignoj forpasas arbaren."
+
+#: script/events/outside.js:22
+msgid "some traps have been destroyed"
+msgstr "kelkaj kaptiloj iĝis detruitaj"
+
+#: script/events/outside.js:26
+msgid "track them"
+msgstr "sekvi ilin"
+
+#: script/events/outside.js:30 script/events/room.js:71
+#: script/events/room.js:122
+msgid "ignore them"
+msgstr "ignori ilin"
+
+#: script/events/outside.js:37
+msgid "the tracks disappear after just a few minutes."
+msgstr "la piedpremsignoj malaperas post kelkaj minutoj."
+
+#: script/events/outside.js:38
+msgid "the forest is silent."
+msgstr "la arbaro silentas."
+
+#: script/events/outside.js:40
+msgid "nothing was found"
+msgstr "nenio troveblis."
+
+#: script/events/outside.js:43 script/events/outside.js:61
+#: script/events/outside.js:126 script/events/outside.js:144
+#: script/events/outside.js:197 script/events/outside.js:215
+#: script/events/outside.js:248 script/events/outside.js:282
+msgid "go home"
+msgstr "iri hejmen"
+
+#: script/events/outside.js:50
+msgid "not far from the village lies a large beast, its fur matted with blood."
+msgstr "ne multe for de la vilaĝo restas granda besto. ĝia felo sangsorbiĝis."
+
+#: script/events/outside.js:51
+msgid "it puts up little resistance before the knife."
+msgstr "ĝi ne multe malcedis kontraŭ la tranĉilo."
+
+#: script/events/outside.js:53
+msgid "there was a beast. it's dead now"
+msgstr "estis besto. mortis besto"
+
+#: script/events/outside.js:69
+msgid "Fire"
+msgstr "Fajro"
+
+#: script/events/outside.js:76
+msgid "a fire rampages through one of the huts, destroying it."
+msgstr "fajro furioze disiris tra unu el la kabanoj, ĝin detruinta."
+
+#: script/events/outside.js:77
+msgid "all residents in the hut perished in the fire."
+msgstr "ĉiuj loĝantoj de la kabano pereis pro la fajro."
+
+#: script/events/outside.js:79
+msgid "a fire has started"
+msgstr "fajro ekkomenciĝis"
+
+#: script/events/outside.js:86
+msgid "mourn"
+msgstr "funebri"
+
+#: script/events/outside.js:87
+msgid "some villagers have died"
+msgstr "kelkaj vilaĝanoj mortis"
+
+#: script/events/outside.js:95
+msgid "Sickness"
+msgstr "Malsano"
+
+#: script/events/outside.js:102
+msgid "a sickness is spreading through the village."
+msgstr "malsano disvastiĝas tra la vilaĝo."
+
+#: script/events/outside.js:103 script/events/outside.js:161
+msgid "medicine is needed immediately."
+msgstr "kuraciloj estas tujaj devoj."
+
+#: script/events/outside.js:105
+msgid "some villagers are ill"
+msgstr "kelkaj vilaĝanoj malsanas"
+
+#: script/events/outside.js:109
+msgid "1 medicine"
+msgstr "1 kuracilo"
+
+#: script/events/outside.js:114
+msgid "ignore it"
+msgstr "ignori ĝin"
+
+#: script/events/outside.js:121
+msgid "the sickness is cured in time."
+msgstr "la malsanuloj bontempe estas kuracitaj."
+
+#: script/events/outside.js:123
+msgid "sufferers are healed"
+msgstr "suferintoj resaniĝis"
+
+#: script/events/outside.js:133
+msgid "the sickness spreads through the village."
+msgstr "la malsano disvastiĝas tra la vilaĝo."
+
+#: script/events/outside.js:134
+msgid "the days are spent with burials."
+msgstr "la tagojn pasigas per enterigado."
+
+#: script/events/outside.js:135 script/events/outside.js:205
+msgid "the nights are rent with screams."
+msgstr "kriegoj aŭdeblas dum la noktoj."
+
+#: script/events/outside.js:137
+msgid "sufferers are left to die"
+msgstr "suferantoj lasiĝas morti"
+
+#: script/events/outside.js:153
+msgid "Plague"
+msgstr "Pesto"
+
+#: script/events/outside.js:160
+msgid "a terrible plague is fast spreading through the village."
+msgstr "terura pesto rapide disvastiĝas tra la vilaĝo."
+
+#: script/events/outside.js:163
+msgid "a plague afflicts the village"
+msgstr "pesto afliktas la vilaĝon"
+
+#: script/events/outside.js:168
+msgid "buy medicine"
+msgstr "aĉeti kuracilon"
+
+#: script/events/outside.js:174
+msgid "5 medicine"
+msgstr "5 kuraciloj"
+
+#: script/events/outside.js:179
+msgid "do nothing"
+msgstr "fari nenion"
+
+#: script/events/outside.js:186
+msgid "the plague is kept from spreading."
+msgstr "la pesto ne plu eblas disvastiĝi."
+
+#: script/events/outside.js:187
+msgid "only a few die."
+msgstr "nur malmultaj mortas."
+
+#: script/events/outside.js:188
+msgid "the rest bury them."
+msgstr "la aliaj entombigas ilin."
+
+#: script/events/outside.js:190
+msgid "epidemic is eradicated eventually"
+msgstr "pesto tute detruiĝis finfine"
+
+#: script/events/outside.js:204
+msgid "the plague rips through the village."
+msgstr "la pesto ŝiriras tra la vilaĝo."
+
+#: script/events/outside.js:206
+msgid "the only hope is a quick death."
+msgstr "la nura espero estas rapida morto."
+
+#: script/events/outside.js:208
+msgid "population is almost exterminated"
+msgstr "la popolo estas preskaŭ tutmortigita"
+
+#: script/events/outside.js:224
+msgid "A Beast Attack"
+msgstr "Besta Atako"
+
+#: script/events/outside.js:231
+msgid "a pack of snarling beasts pours out of the trees."
+msgstr "aro da sovaĝaj bestoj sinŝutas el la arboj."
+
+#: script/events/outside.js:232
+msgid "the fight is short and bloody, but the beasts are repelled."
+msgstr "la batalo estas mallonga kaj sangema, sed la bestoj forkuras."
+
+#: script/events/outside.js:233
+msgid "the villagers retreat to mourn the dead."
+msgstr "la vilaĝanoj revenas por funebri pri la mortintoj."
+
+#: script/events/outside.js:235
+msgid "wild beasts attack the villagers"
+msgstr "sovaĝaj bestoj atakas la vilaĝanojn"
+
+#: script/events/outside.js:249
+msgid "predators become prey. price is unfair"
+msgstr "predantoj iĝas predatoj. la vivprezo nejustas."
+
+#: script/events/outside.js:258
+msgid "A Military Raid"
+msgstr "Milita Provizbatalo"
+
+#: script/events/outside.js:265
+msgid "a gunshot rings through the trees."
+msgstr "pafo sonoras tra la arboj."
+
+#: script/events/outside.js:266
+msgid "well armed men charge out of the forest, firing into the crowd."
+msgstr "bone armitaj viroj ekkuras el la arbaro, pafante la amason."
+
+#: script/events/outside.js:267
+msgid "after a skirmish they are driven away, but not without losses."
+msgstr "post batalo ili forpeliĝis, sed ne sen vilaĝaj mankintoj."
+
+#: script/events/outside.js:269
+msgid "troops storm the village"
+msgstr "trupanoj kuratakas la vilaĝon"
+
+#: script/events/outside.js:283
+msgid "warfare is bloodthirsty"
+msgstr "militbatalado ĉiam sangon deziras"
+
+#: script/events/room.js:6
+msgid "The Nomad"
+msgstr "La Nomado"
+
+#: script/events/room.js:13
+msgid ""
+"a nomad shuffles into view, laden with makeshift bags bound with rough twine."
+msgstr ""
+"nomado marŝetas en la vidaĵon, portante tujkreitajn sakojn ligitajn per "
+"kruda ŝnuro."
+
+#: script/events/room.js:14
+msgid "won't say from where he came, but it's clear that he's not staying."
+msgstr "li ne diras pri lia devenejo, sed certe li ne restos ĉi tie."
+
+#: script/events/room.js:16
+msgid "a nomad arrives, looking to trade"
+msgstr "nomado alvenas, dezirante komerci"
+
+#: script/events/room.js:20
+msgid "buy scales"
+msgstr "aĉeti skvamojn"
+
+#: script/events/room.js:25
+msgid "buy teeth"
+msgstr "aĉeti dentojn"
+
+#: script/events/room.js:30
+msgid "buy bait"
+msgstr "aĉeti logviandon"
+
+#: script/events/room.js:33
+msgid "traps are more effective with bait."
+msgstr "kaptilojn pli efikas kun logviando."
+
+#: script/events/room.js:39
+msgid "buy compass"
+msgstr "aĉeti kompason"
+
+#: script/events/room.js:42
+msgid "the old compass is dented and dusty, but it looks to work."
+msgstr "la malnova kompaso estas batita kaj polva, sed ŝajne funkcias."
+
+#: script/events/room.js:45 script/events/room.js:227
+#: script/events/room.js:240 script/events/room.js:253
+#: script/events/room.js:309 script/events/room.js:332
+#: script/events/room.js:388 script/events/room.js:411
+#: script/events/room.js:450 script/events/room.js:568
+#: script/events/room.js:584 script/events/room.js:600
+#: script/events/room.js:611
+msgid "say goodbye"
+msgstr "adiaŭi"
+
+#: script/events/room.js:53 script/events/room.js:104
+msgid "Noises"
+msgstr "Bruoj"
+
+#: script/events/room.js:60
+msgid "through the walls, shuffling noises can be heard."
+msgstr "tra la muroj, tremaj bruoj aŭdeblas."
+
+#: script/events/room.js:61
+msgid "can't tell what they're up to."
+msgstr "ne povas difini kion ili faras."
+
+#: script/events/room.js:63
+msgid "strange noises can be heard through the walls"
+msgstr "strangaj bruoj aŭdeblas tra la muroj"
+
+#: script/events/room.js:67 script/events/room.js:118
+#: script/events/setpieces.js:1662
+msgid "investigate"
+msgstr "esplori"
+
+#: script/events/room.js:78
+msgid "vague shapes move, just out of sight."
+msgstr "nubaj formoj moviĝas, ne en la vidaĵo."
+
+#: script/events/room.js:79
+msgid "the sounds stop."
+msgstr "ĉesas la bruoj."
+
+#: script/events/room.js:83 script/events/room.js:96
+msgid "go back inside"
+msgstr "reen"
+
+#: script/events/room.js:91
+msgid ""
+"a bundle of sticks lies just beyond the threshold, wrapped in coarse furs."
+msgstr ""
+"fasko da bastonoj restas preter la pordolimo, kovrita per malglataj feloj."
+
+#: script/events/room.js:92
+msgid "the night is silent."
+msgstr "la nokto silentas."
+
+#: script/events/room.js:111
+msgid "scratching noises can be heard from the store room."
+msgstr "grataj bruoj aŭdeblas el la provizejo."
+
+#: script/events/room.js:112
+msgid "something's in there."
+msgstr "io estas tie."
+
+#: script/events/room.js:114
+msgid "something's in the store room"
+msgstr "io estas en la provizejo."
+
+#: script/events/room.js:129 script/events/room.js:149
+#: script/events/room.js:169
+msgid "some wood is missing."
+msgstr "iom da ligno mankas."
+
+#: script/events/room.js:130
+msgid "the ground is littered with small scales"
+msgstr "etaj skvamoj disas sur la grundo"
+
+#: script/events/room.js:150
+msgid "the ground is littered with small teeth"
+msgstr "etaj dentoj disas sur la grundo"
+
+#: script/events/room.js:170
+msgid "the ground is littered with scraps of cloth"
+msgstr "etaj ĉifonoj disas sur la grundo"
+
+#: script/events/room.js:190
+msgid "The Beggar"
+msgstr "La Almozulo"
+
+#: script/events/room.js:197
+msgid "a beggar arrives."
+msgstr "alvenas almozulo."
+
+#: script/events/room.js:198
+msgid "asks for any spare furs to keep him warm at night."
+msgstr "li petas ajnajn felojn doneblajn por varmigi lin nokte."
+
+#: script/events/room.js:200
+msgid "a beggar arrives"
+msgstr "alvenas almozulo"
+
+#: script/events/room.js:204
+msgid "give 50"
+msgstr "doni 50"
+
+#: script/events/room.js:209 script/events/room.js:276
+#: script/events/room.js:355
+msgid "give 100"
+msgstr "doni 100"
+
+#: script/events/room.js:214 script/events/room.js:286
+#: script/events/room.js:482
+msgid "turn him away"
+msgstr "forsendi lin"
+
+#: script/events/room.js:222 script/events/room.js:235
+#: script/events/room.js:248
+msgid "the beggar expresses his thanks."
+msgstr "la almozulo esprimas dankon."
+
+#: script/events/room.js:223
+msgid "leaves a pile of small scales behind."
+msgstr "li forlasas amason da skvametoj."
+
+#: script/events/room.js:236
+msgid "leaves a pile of small teeth behind."
+msgstr "li forlasas amason da dentetoj."
+
+#: script/events/room.js:249
+msgid "leaves some scraps of cloth behind."
+msgstr "li forlasas kelkajn ĉifonojn."
+
+#: script/events/room.js:262 script/events/room.js:341
+msgid "The Mysterious Wanderer"
+msgstr "La Mistera Vaganto"
+
+#: script/events/room.js:269
+msgid ""
+"a wanderer arrives with an empty cart. says if he leaves with wood, he'll be "
+"back with more."
+msgstr ""
+"alvenas vaganto kun malplena ĉaro. diras, ke se li foriras kun ligno li "
+"revenos kun pli."
+
+#: script/events/room.js:270
+msgid "builder's not sure he's to be trusted."
+msgstr "konstruisto dubas, ĉu li fidindas"
+
+#: script/events/room.js:272 script/events/room.js:351
+msgid "a mysterious wanderer arrives"
+msgstr "alvenas mistera vaganto"
+
+#: script/events/room.js:281 script/events/room.js:360
+msgid "give 500"
+msgstr "doni 500"
+
+#: script/events/room.js:293 script/events/room.js:316
+msgid "the wanderer leaves, cart loaded with wood"
+msgstr "la vaganto foriras, ligno en la ĉaro"
+
+#: script/events/room.js:299 script/events/room.js:322
+msgid "the mysterious wanderer returns, cart piled high with wood."
+msgstr "revenas la mistera vaganto. ĉaro portas lignamason."
+
+#: script/events/room.js:348
+msgid ""
+"a wanderer arrives with an empty cart. says if she leaves with furs, she'll "
+"be back with more."
+msgstr ""
+"alvenas vaganto kun malplena ĉaro. diras, ke se ŝi foriras kun feloj ŝi "
+"revenos kun pli."
+
+#: script/events/room.js:349
+msgid "builder's not sure she's to be trusted."
+msgstr "konstruisto dubas, ĉu ŝi fidindas"
+
+#: script/events/room.js:365
+msgid "turn her away"
+msgstr "forsendi ŝin"
+
+#: script/events/room.js:372 script/events/room.js:395
+msgid "the wanderer leaves, cart loaded with furs"
+msgstr "la vaganto foriras, feloj en la ĉaro"
+
+#: script/events/room.js:378 script/events/room.js:401
+msgid "the mysterious wanderer returns, cart piled high with furs."
+msgstr "revenas la mistera vaganto. ĉaro portas multajn felojn."
+
+#: script/events/room.js:420
+msgid "The Scout"
+msgstr "La Rovero"
+
+#: script/events/room.js:427
+msgid "the scout says she's been all over."
+msgstr "la rovero diras ke ŝi ĉie vojaĝis."
+
+#: script/events/room.js:428
+msgid "willing to talk about it, for a price."
+msgstr "ŝi diskutus, por prezo."
+
+#: script/events/room.js:430
+msgid "a scout stops for the night"
+msgstr "rovero tranoktas"
+
+#: script/events/room.js:434
+msgid "buy map"
+msgstr "aĉeti mapon"
+
+#: script/events/room.js:436
+msgid "the map uncovers a bit of the world"
+msgstr "la mapo malkovras iom da la mondo"
+
+#: script/events/room.js:440
+msgid "learn scouting"
+msgstr "lerni esplorvidu"
+
+#: script/events/room.js:459
+msgid "The Master"
+msgstr "La Majstro"
+
+#: script/events/room.js:466
+msgid "an old wanderer arrives."
+msgstr "maljuna vaganto alvenas."
+
+#: script/events/room.js:467
+msgid "he smiles warmly and asks for lodgings for the night."
+msgstr "li amike ridetas kaj petas tranoktan loĝejon."
+
+#: script/events/room.js:469
+msgid "an old wanderer arrives"
+msgstr "maljuna vaganto alvenas"
+
+# not a direct translation. works in context.
+#: script/events/room.js:473
+msgid "agree"
+msgstr "permesi"
+
+#: script/events/room.js:489
+msgid "in exchange, the wanderer offers his wisdom."
+msgstr "pro via helpo, la vaganto ofertas lian saĝon."
+
+#: script/events/room.js:493
+msgid "evasion"
+msgstr "evitado"
+
+#: script/events/room.js:503
+msgid "precision"
+msgstr "precizeco"
+
+#: script/events/room.js:513
+msgid "force"
+msgstr "forto"
+
+#: script/events/room.js:532
+msgid "The Sick Man"
+msgstr "La Malsanulo"
+
+#: script/events/room.js:539
+msgid "a man hobbles up, coughing."
+msgstr "viro lame venas, tusante."
+
+#: script/events/room.js:540
+msgid "he begs for medicine."
+msgstr "li almozpetas kuracilon."
+
+#: script/events/room.js:542
+msgid "a sick man hobbles up"
+msgstr "malsanulo lame venas"
+
+#: script/events/room.js:546
+msgid "give 1 medicine"
+msgstr "doni 1 kuracilon"
+
+#: script/events/room.js:548
+msgid "the man swallows the medicine eagerly"
+msgstr "la viro glutas la kuracilon avide"
+
+#: script/events/room.js:552
+msgid "tell him to leave"
+msgstr "forigu lin"
+
+#: script/events/room.js:559 script/events/room.js:575
+#: script/events/room.js:591
+msgid "the man is thankful."
+msgstr "la viro dankas vin."
+
+#: script/events/room.js:560 script/events/room.js:576
+#: script/events/room.js:592
+msgid "he leaves a reward."
+msgstr "li forlasas rekompencon."
+
+#: script/events/room.js:561
+msgid "some weird metal he picked up on his travels."
+msgstr "ia stranga metalo kiun li prenis dum lia vojaĝo."
+
+#: script/events/room.js:577
+msgid "some weird glowing boxes he picked up on his travels."
+msgstr "iaj strangaj lumaj skatoloj kiujn li prenis dum lia vojaĝo."
+
+#: script/events/room.js:593
+msgid "all he has are some scales."
+msgstr "li havas nur kelkajn skvamojn."
+
+#: script/events/room.js:607
+msgid "the man expresses his thanks and hobbles off."
+msgstr "la viro dankas vin kaj lame foriras."
+
+#: script/events/setpieces.js:6
+msgid "An Outpost"
+msgstr "Pikedo"
+
+#: script/events/setpieces.js:10 script/events/setpieces.js:12
+msgid "a safe place in the wilds."
+msgstr "sekurejo en la sovaĝejo."
+
+#: script/events/setpieces.js:34
+msgid "A Murky Swamp"
+msgstr "Malluma Marĉo"
+
+#: script/events/setpieces.js:38
+msgid "rotting reeds rise out of the swampy earth."
+msgstr "putrantaj kanoj staras el la marĉa tero."
+
+#: script/events/setpieces.js:39
+msgid "a lone frog sits in the muck, silently."
+msgstr "sola rano sidas en la sterkakvo, silente."
+
+#: script/events/setpieces.js:41
+msgid "a swamp festers in the stagnant air."
+msgstr "marĉo putras sub la senmova aero."
+
+#: script/events/setpieces.js:44 script/events/setpieces.js:549
+#: script/events/setpieces.js:606 script/events/setpieces.js:888
+#: script/events/setpieces.js:1313 script/events/setpieces.js:1331
+#: script/events/setpieces.js:3535
+msgid "enter"
+msgstr "eniri"
+
+#: script/events/setpieces.js:55
+msgid "deep in the swamp is a moss-covered cabin."
+msgstr "profunde en la marĉo estas muskkovrita kabano."
+
+#: script/events/setpieces.js:56
+msgid "an old wanderer sits inside, in a seeming trance."
+msgstr "maljuna vaganto sidas en ĝi, ŝajne trancas."
+
+#: script/events/setpieces.js:61
+msgid "talk"
+msgstr "paroli"
+
+#: script/events/setpieces.js:72
+msgid "the wanderer takes the charm and nods slowly."
+msgstr "la vaganto forprenas la talismanon kaj malrapide kapjesas."
+
+#: script/events/setpieces.js:73
+msgid "he speaks of once leading the great fleets to fresh worlds."
+msgstr ""
+"li diras ke li iam pasintece kondukis la egajn ŝiparojn al novaj mondoj."
+
+#: script/events/setpieces.js:74
+msgid "unfathomable destruction to fuel wanderer hungers."
+msgstr "nesondebla detruado por daŭrigi la malsatojn de vagantoj."
+
+#: script/events/setpieces.js:75
+msgid "his time here, now, is his penance."
+msgstr "lia tempo esti ĉi tie, estas lia puno."
+
+#: script/events/setpieces.js:91
+msgid "A Damp Cave"
+msgstr "Malseka Kaverno"
+
+#: script/events/setpieces.js:95
+msgid "the mouth of the cave is wide and dark."
+msgstr "la buŝego de la kaverno estas larĝa kaj malluma."
+
+#: script/events/setpieces.js:96
+msgid "can't see what's inside."
+msgstr "ne povas vidi la enaĵojn"
+
+#: script/events/setpieces.js:98
+msgid "the earth here is split, as if bearing an ancient wound"
+msgstr "la tero ĉi tie fendiĝas, kvazaŭ ĝi havas praan vundon"
+
+#: script/events/setpieces.js:101 script/events/setpieces.js:2944
+#: script/events/setpieces.js:3458
+msgid "go inside"
+msgstr "eniri"
+
+#: script/events/setpieces.js:120 script/events/setpieces.js:265
+msgid "a startled beast defends its home"
+msgstr "ektimita besto defendas sian hejmon"
+
+#: script/events/setpieces.js:135 script/events/setpieces.js:186
+#: script/events/setpieces.js:228 script/events/setpieces.js:247
+#: script/events/setpieces.js:280 script/events/setpieces.js:314
+#: script/events/setpieces.js:348 script/events/setpieces.js:382
+#: script/events/setpieces.js:588 script/events/setpieces.js:644
+#: script/events/setpieces.js:683 script/events/setpieces.js:717
+#: script/events/setpieces.js:757 script/events/setpieces.js:796
+#: script/events/setpieces.js:835 script/events/setpieces.js:869
+#: script/events/setpieces.js:920 script/events/setpieces.js:938
+#: script/events/setpieces.js:961 script/events/setpieces.js:1000
+#: script/events/setpieces.js:1039 script/events/setpieces.js:1266
+#: script/events/setpieces.js:1282 script/events/setpieces.js:1298
+#: script/events/setpieces.js:1408 script/events/setpieces.js:1448
+#: script/events/setpieces.js:1492 script/events/setpieces.js:1510
+#: script/events/setpieces.js:1526 script/events/setpieces.js:1563
+#: script/events/setpieces.js:1602 script/events/setpieces.js:1642
+#: script/events/setpieces.js:1682 script/events/setpieces.js:1699
+#: script/events/setpieces.js:1716 script/events/setpieces.js:1734
+#: script/events/setpieces.js:1778 script/events/setpieces.js:1804
+#: script/events/setpieces.js:1822 script/events/setpieces.js:1861
+#: script/events/setpieces.js:1902 script/events/setpieces.js:1927
+#: script/events/setpieces.js:1957 script/events/setpieces.js:1998
+#: script/events/setpieces.js:2034 script/events/setpieces.js:2069
+#: script/events/setpieces.js:2110 script/events/setpieces.js:2151
+#: script/events/setpieces.js:2187 script/events/setpieces.js:2222
+#: script/events/setpieces.js:2257 script/events/setpieces.js:2302
+#: script/events/setpieces.js:2328 script/events/setpieces.js:3204
+#: script/events/setpieces.js:3244 script/events/setpieces.js:3278
+#: script/events/setpieces.js:3347 script/events/setpieces.js:3381
+#: script/events/setpieces.js:3420
+msgid "continue"
+msgstr "antaŭen"
+
+#: script/events/setpieces.js:140 script/events/setpieces.js:157
+#: script/events/setpieces.js:191 script/events/setpieces.js:233
+#: script/events/setpieces.js:252 script/events/setpieces.js:285
+#: script/events/setpieces.js:319 script/events/setpieces.js:353
+#: script/events/setpieces.js:387 script/events/setpieces.js:429
+#: script/events/setpieces.js:481 script/events/setpieces.js:513
+msgid "leave cave"
+msgstr "foriri de la kaverno"
+
+#: script/events/setpieces.js:148
+msgid "the cave narrows a few feet in."
+msgstr "la kaverno mallarĝiĝas post kelkaj futoj."
+
+#: script/events/setpieces.js:149
+msgid "the walls are moist and moss-covered"
+msgstr "la muroj estas malseketaj kaj muskkovritaj"
+
+#: script/events/setpieces.js:153
+msgid "squeeze"
+msgstr "premi"
+
+#: script/events/setpieces.js:164
+msgid "the remains of an old camp sits just inside the cave."
+msgstr "la ruino de malnova tendaro restas en la kaverno."
+
+#: script/events/setpieces.js:165
+msgid "bedrolls, torn and blackened, lay beneath a thin layer of dust."
+msgstr "litsakoj, ŝiritaj kaj nigrigitaj, kuŝas sub maldika tavolo da polvo."
+
+#: script/events/setpieces.js:199
+msgid "the body of a wanderer lies in a small cavern."
+msgstr "la korpo de vaganto kuŝas en kaverneto."
+
+#: script/events/setpieces.js:200
+msgid "rot's been to work on it, and some of the pieces are missing."
+msgstr "putraĵo ĝin putrigis, kaj kelkaj pecoj mankas."
+
+#: script/events/setpieces.js:202
+msgid "can't tell what left it here."
+msgstr "ne povas difini kion lasis ĝin ĉi tie."
+
+#: script/events/setpieces.js:241
+msgid "the torch sputters and dies in the damp air"
+msgstr "la torĉo skuiĝas kaj la fajro mortas en la malseka aero"
+
+#: script/events/setpieces.js:242
+msgid "the darkness is absolute"
+msgstr "la mallumeco tutas"
+
+#: script/events/setpieces.js:244
+msgid "the torch goes out"
+msgstr "la torĉo senfajriĝas"
+
+#: script/events/setpieces.js:299
+msgid "a cave lizard attacks"
+msgstr "kaverna lacerto atakas"
+
+#: script/events/setpieces.js:333
+msgid "a large beast charges out of the dark"
+msgstr "granda besto ekkuras el la mallumeco"
+
+#: script/events/setpieces.js:367
+msgid "a giant lizard shambles forward"
+msgstr "grandega lacerto rampas antaŭen"
+
+#: script/events/setpieces.js:395
+msgid "the nest of a large animal lies at the back of the cave."
+msgstr "nesto de granda besto kuŝas ĉe la malantaŭo de la kaverno."
+
+#: script/events/setpieces.js:437
+msgid "a small supply cache is hidden at the back of the cave."
+msgstr "eta provizkaŝaĵo kaŝiĝas ĉe la malantaŭo de la kaverno."
+
+#: script/events/setpieces.js:489
+msgid "an old case is wedged behind a rock, covered in a thick layer of dust."
+msgstr ""
+"malnova kesto estas kojnumita malantaŭ ŝtono, kovrita per dika tavolo da "
+"polvo."
+
+#: script/events/setpieces.js:522
+msgid "A Deserted Town"
+msgstr "Forlasita Urbeto"
+
+#: script/events/setpieces.js:526
+msgid "a small suburb lays ahead, empty houses scorched and peeling."
+msgstr ""
+"malgranda urbeto restas antaŭen kun malplenaj domoj bruligitaj kaj "
+"senŝeliĝantaj."
+
+#: script/events/setpieces.js:527
+msgid ""
+"broken streetlights stand, rusting. light hasn't graced this place in a long "
+"time."
+msgstr ""
+"rompitaj stratlumiloj staras, rustiĝas. lumo ne benis la lokon por longa "
+"tempo."
+
+#: script/events/setpieces.js:529
+msgid "the town lies abandoned, its citizens long dead"
+msgstr "la urbeto restas forlasita, ĝia civito longtempe mortinta"
+
+#: script/events/setpieces.js:532 script/events/setpieces.js:1250
+msgid "explore"
+msgstr "esplori"
+
+#: script/events/setpieces.js:544
+msgid ""
+"where the windows of the schoolhouse aren't shattered, they're blackened "
+"with soot."
+msgstr ""
+"la fenestroj de la lernejo estas nigriĝitaj per fulgo. la nenigraj estas jam "
+"tute rompitaj."
+
+#: script/events/setpieces.js:545
+msgid "the double doors creak endlessly in the wind."
+msgstr "la paro da pordoj knaris senĉese pro la vento."
+
+#: script/events/setpieces.js:554 script/events/setpieces.js:593
+#: script/events/setpieces.js:611 script/events/setpieces.js:649
+#: script/events/setpieces.js:688 script/events/setpieces.js:722
+#: script/events/setpieces.js:762 script/events/setpieces.js:801
+#: script/events/setpieces.js:840 script/events/setpieces.js:874
+#: script/events/setpieces.js:892 script/events/setpieces.js:925
+#: script/events/setpieces.js:942 script/events/setpieces.js:966
+#: script/events/setpieces.js:1005 script/events/setpieces.js:1044
+#: script/events/setpieces.js:1087 script/events/setpieces.js:1120
+#: script/events/setpieces.js:1148 script/events/setpieces.js:1192
+#: script/events/setpieces.js:1214 script/events/setpieces.js:1230
+msgid "leave town"
+msgstr "foriri de la urbeto"
+
+#: script/events/setpieces.js:585
+msgid "ambushed on the street."
+msgstr "embuske atakita sur la strato."
+
+#: script/events/setpieces.js:601
+msgid "a squat building up ahead."
+msgstr "malalta konstruaĵo staras antaŭe"
+
+#: script/events/setpieces.js:602
+msgid "a green cross barely visible behind grimy windows."
+msgstr "verda kruco apenaŭ videbla estas malantaŭ malpuraj fenestroj."
+
+#: script/events/setpieces.js:618
+msgid "a small cache of supplies is tucked inside a rusting locker."
+msgstr "eta provizkaŝaĵo estas metita en rusta ŝranko."
+
+#: script/events/setpieces.js:680
+msgid "a scavenger waits just inside the door."
+msgstr "kolektisto atendas post la pordo."
+
+#: script/events/setpieces.js:714
+msgid "a beast stands alone in an overgrown park."
+msgstr "besto staras sole en surkreskata parko."
+
+#: script/events/setpieces.js:730
+msgid "an overturned caravan is spread across the pockmarked street."
+msgstr "renversita karavano diskuŝas trans la multtrua strato."
+
+#: script/events/setpieces.js:731
+msgid ""
+"it's been picked over by scavengers, but there's still some things worth "
+"taking."
+msgstr ""
+"kolektistoj jam forprenis multe da la enhavaĵoj, sed estas ankoraŭ kelkaj "
+"valoraĵoj en ĝi."
+
+#: script/events/setpieces.js:793
+msgid "a madman attacks, screeching."
+msgstr "frenezulo atakas, kriante."
+
+#: script/events/setpieces.js:832
+msgid "a thug moves out of the shadows."
+msgstr "fortulo moviĝas el la umbroj."
+
+#: script/events/setpieces.js:866
+msgid "a beast charges out of a ransacked classroom."
+msgstr "besto ekkuras el detruita lernĉambro."
+
+#: script/events/setpieces.js:882
+msgid "through the large gymnasium doors, footsteps can be heard."
+msgstr "tra la grandaj gimnastikaj pordoj, piedpaŝoj aŭdeblas."
+
+#: script/events/setpieces.js:883
+msgid "the torchlight casts a flickering glow down the hallway."
+msgstr "la torĉlumo sendas flagretaĵon tra la koridoro."
+
+#: script/events/setpieces.js:884
+msgid "the footsteps stop."
+msgstr "la piedpaŝoj ĉesas."
+
+#: script/events/setpieces.js:917
+msgid "another beast, draw by the noise, leaps out of a copse of trees."
+msgstr "plia besto, ellogite pro la bruo, saltegas el areto da arboj."
+
+#: script/events/setpieces.js:933
+msgid "something's causing a commotion a ways down the road."
+msgstr "io kaŭzas agitadon iom fore, sur la vojo."
+
+#: script/events/setpieces.js:934
+msgid "a fight, maybe."
+msgstr "eble batalo."
+
+#: script/events/setpieces.js:949
+msgid ""
+"a small basket of food is hidden under a park bench, with a note attached."
+msgstr "eta korbo da manĝaĵo estas kaŝita sub parka benko, kun noto."
+
+#: script/events/setpieces.js:950
+msgid "can't read the words."
+msgstr "ne povas legi la tekston."
+
+#: script/events/setpieces.js:997
+msgid "a panicked scavenger bursts through the door, screaming."
+msgstr "panika kolektisto sin ekĵetas tra la pordo, kriante."
+
+#: script/events/setpieces.js:1036
+msgid "a man stands over a dead wanderer. notices he's not alone."
+msgstr "viro staras super morta vaginto kaj rimarkas ke li ne solas."
+
+#: script/events/setpieces.js:1052
+msgid "scavenger had a small camp in the school."
+msgstr "la kolektisto havis etan tendaron en la lernejo."
+
+#: script/events/setpieces.js:1053
+msgid "collected scraps spread across the floor like they fell from heaven."
+msgstr ""
+"kolektitaj ĉifonoj disvastiĝis trans la planko, kiel ili falis el la bena "
+"ĉielo."
+
+#: script/events/setpieces.js:1095
+msgid "scavenger'd been looking for supplies in here, it seems."
+msgstr "la kolektisto serĉis provizaĵojn ĉi tie, ŝajne."
+
+#: script/events/setpieces.js:1096
+msgid "a shame to let what he'd found go to waste."
+msgstr "bedaŭrus lasi liajn serĉaĵojn putriĝi."
+
+#: script/events/setpieces.js:1128
+msgid ""
+"beneath the wanderer's rags, clutched in one of its many hands, a glint of "
+"steel."
+msgstr ""
+"sub la ĉifonoj de la vaginto, tenite en unu el ĝiaj multaj manoj, rebrilo de "
+"ŝtalo."
+
+#: script/events/setpieces.js:1129
+msgid "worth killing for, it seems."
+msgstr "valoras murdi pro ĝi, ŝajne."
+
+#: script/events/setpieces.js:1156
+msgid "eye for an eye seems fair."
+msgstr "prenaĵo po prenaĵo ŝajne justas."
+
+#: script/events/setpieces.js:1157
+msgid "always worked before, at least."
+msgstr "nu, ĉiam kutime justis."
+
+#: script/events/setpieces.js:1158
+msgid "picking the bones finds some useful trinkets."
+msgstr "ŝercado de la ostoj aperigas kelkajn utilaĵetojn."
+
+#: script/events/setpieces.js:1200
+msgid "some medicine abandoned in the drawers."
+msgstr "estas iom da kuraciloj forlasite en la tirkesto."
+
+#: script/events/setpieces.js:1222
+msgid "the clinic has been ransacked."
+msgstr "la kuracejo estis rompiĝita."
+
+#: script/events/setpieces.js:1223
+msgid "only dust and stains remain."
+msgstr "nur polvo kaj makuloj restas."
+
+#: script/events/setpieces.js:1239
+msgid "A Ruined City"
+msgstr "Ruina Urbo"
+
+#: script/events/setpieces.js:1243
+msgid ""
+"a battered highway sign stands guard at the entrance to this once-great city."
+msgstr ""
+"batita landstrata signo staras garde ĉe la enirejo de ĉi tiu iam-granda urbo."
+
+#: script/events/setpieces.js:1244
+msgid ""
+"the towers that haven't crumbled jut from the landscape like the ribcage of "
+"some ancient beast."
+msgstr ""
+"la turoj ankoraŭ nepereiĝintaj staras el la pejzaĵo kiel brustokorbo de ia "
+"prabesto."
+
+#: script/events/setpieces.js:1245
+msgid "might be things worth having still inside."
+msgstr "eble ankoraŭ enhavas kelkajn valoraĵojn."
+
+#: script/events/setpieces.js:1247
+msgid "the towers of a decaying city dominate the skyline"
+msgstr "la turoj de ruiniĝanta urbo mastras la horizonton"
+
+#: script/events/setpieces.js:1261
+msgid "the streets are empty."
+msgstr "la stratoj malplenas."
+
+#: script/events/setpieces.js:1262
+msgid "the air is filled with dust, driven relentlessly by the hard winds."
+msgstr "la aero plenas per polvo, peladata de la senĉesa ventego."
+
+#: script/events/setpieces.js:1270 script/events/setpieces.js:1286
+#: script/events/setpieces.js:1302 script/events/setpieces.js:1318
+#: script/events/setpieces.js:1335 script/events/setpieces.js:1373
+#: script/events/setpieces.js:1413 script/events/setpieces.js:1453
+#: script/events/setpieces.js:1497 script/events/setpieces.js:1514
+#: script/events/setpieces.js:1530 script/events/setpieces.js:1568
+#: script/events/setpieces.js:1607 script/events/setpieces.js:1647
+#: script/events/setpieces.js:1667 script/events/setpieces.js:1686
+#: script/events/setpieces.js:1703 script/events/setpieces.js:1720
+#: script/events/setpieces.js:1738 script/events/setpieces.js:1783
+#: script/events/setpieces.js:1809 script/events/setpieces.js:1826
+#: script/events/setpieces.js:1866 script/events/setpieces.js:1907
+#: script/events/setpieces.js:1932 script/events/setpieces.js:1962
+#: script/events/setpieces.js:2003 script/events/setpieces.js:2039
+#: script/events/setpieces.js:2074 script/events/setpieces.js:2115
+#: script/events/setpieces.js:2156 script/events/setpieces.js:2192
+#: script/events/setpieces.js:2227 script/events/setpieces.js:2262
+#: script/events/setpieces.js:2363 script/events/setpieces.js:2393
+#: script/events/setpieces.js:2440 script/events/setpieces.js:2476
+#: script/events/setpieces.js:2517 script/events/setpieces.js:2553
+#: script/events/setpieces.js:2588 script/events/setpieces.js:2624
+#: script/events/setpieces.js:2665 script/events/setpieces.js:2706
+#: script/events/setpieces.js:2741 script/events/setpieces.js:2790
+#: script/events/setpieces.js:2835 script/events/setpieces.js:2881
+#: script/events/setpieces.js:2925
+msgid "leave city"
+msgstr "foriri de la urbo"
+
+#: script/events/setpieces.js:1277
+msgid "orange traffic cones are set across the street, faded and cracked."
+msgstr ""
+"oranĝkoloraj trafikkonusoj metitas trans la strato, palaj kaj rompitaj."
+
+#: script/events/setpieces.js:1278
+msgid "lights flash through the alleys between buildings."
+msgstr "lumoj ekbrilas tra la stratetoj inter konstruaĵoj."
+
+#: script/events/setpieces.js:1293
+msgid "a large shanty town sprawls across the streets."
+msgstr "granda domaĉurbo disas trans la stratoj."
+
+#: script/events/setpieces.js:1294
+msgid "faces, darkened by soot and blood, stare out from crooked huts."
+msgstr "vizaĝoj malheligitaj pro fulgo kaj sango rigardas el kabanaĉoj."
+
+#: script/events/setpieces.js:1309
+msgid "the shell of an abandoned hospital looms ahead."
+msgstr "la ŝelo de forlasita malsanulejo staras antauen."
+
+#: script/events/setpieces.js:1325
+msgid "the old tower seems mostly intact."
+msgstr "la malnova turo ŝajnas plejparte nerompita."
+
+#: script/events/setpieces.js:1326
+msgid "the shell of a burned out car blocks the entrance."
+msgstr "la ŝelo de bruligita aŭto baras la enirejon."
+
+#: script/events/setpieces.js:1327
+msgid "most of the windows at ground level are busted anyway."
+msgstr "tamen la plejparto da la fenestroj teretaĝaj estas rompita."
+
+#: script/events/setpieces.js:1342
+msgid "a huge lizard scrambles up out of the darkness of an old metro station."
+msgstr "granda lacerto ekrampas el la mallumeco de malnova subpasejo."
+
+#: script/events/setpieces.js:1368
+msgid "descend"
+msgstr "subeniri"
+
+#: script/events/setpieces.js:1380
+msgid "the shot echoes in the empty street."
+msgstr "la pafo resonas tra la malplena strato."
+
+#: script/events/setpieces.js:1420
+msgid "the soldier steps out from between the buildings, rifle raised."
+msgstr "la soldato paŝas el inter la konstruaĵoj, fusilon altigante."
+
+#: script/events/setpieces.js:1460
+msgid "a frail man stands defiantly, blocking the path."
+msgstr "malforta viro staras malcede, kaj baras la vojon."
+
+#: script/events/setpieces.js:1505
+msgid "nothing but downcast eyes."
+msgstr "nur subrigardantaj okuloj."
+
+#: script/events/setpieces.js:1506
+msgid "the people here were broken a long time ago."
+msgstr "la homoj ĉi tie jam cedis antaŭtempe."
+
+#: script/events/setpieces.js:1521
+msgid "empty corridors."
+msgstr "malplenaj koridoroj."
+
+#: script/events/setpieces.js:1522
+msgid "the place has been swept clean by scavengers."
+msgstr "kolektistoj tute enserĉis ĉi tiun lokon."
+
+#: script/events/setpieces.js:1536
+msgid "an old man bursts through a door, wielding a scalpel."
+msgstr "maljuna viro ekĵetas sin tra pordo, portante sekcilon."
+
+#: script/events/setpieces.js:1575
+msgid "a thug is waiting on the other side of the wall."
+msgstr "fortulo atendas ĉe la alia flanko de la muro."
+
+#: script/events/setpieces.js:1615
+msgid "a snarling beast jumps out from behind a car."
+msgstr "bruanta besto eksaltas el la malantaŭo de aŭto."
+
+#: script/events/setpieces.js:1656
+msgid "street above the subway platform is blown away."
+msgstr "la strato sur la subpaseja platformo forbloviĝis."
+
+#: script/events/setpieces.js:1657
+msgid "lets some light down into the dusty haze."
+msgstr "lasas iom da lumo al la polvan nebuleton."
+
+#: script/events/setpieces.js:1658
+msgid "a sound comes from the tunnel, just ahead."
+msgstr "bruo sonas el la tunelo antaŭe."
+
+#: script/events/setpieces.js:1675
+msgid "looks like a camp of sorts up ahead."
+msgstr "antaŭe io aspektas kiel ia tendaro."
+
+#: script/events/setpieces.js:1677
+msgid "rusted chainlink is pulled across an alleyway."
+msgstr "rusta ĉenero estas tirata trans strateto."
+
+#: script/events/setpieces.js:1678
+msgid "fires burn in the courtyard beyond."
+msgstr "fajroj brulas ĉe la korto pretera."
+
+#: script/events/setpieces.js:1694
+msgid "more voices can be heard ahead."
+msgstr "pli da voĉoj aŭdeblas antaŭe."
+
+#: script/events/setpieces.js:1695
+msgid "they must be here for a reason."
+msgstr "ili devas havi tialon esti ĉi tie."
+
+#: script/events/setpieces.js:1711
+msgid "the sound of gunfire carries on the wind."
+msgstr "la sono de pafado disas per la vento."
+
+#: script/events/setpieces.js:1712
+msgid "the street ahead glows with firelight."
+msgstr "la strato antaŭe briletas per fajrolumo."
+
+#: script/events/setpieces.js:1729
+msgid "more squatters are crowding around now."
+msgstr "pli da loĝantoj nun amasas."
+
+#: script/events/setpieces.js:1730
+msgid "someone throws a stone."
+msgstr "iu ĵetas ŝtonon."
+
+#: script/events/setpieces.js:1746
+msgid "an improvised shop is set up on the sidewalk."
+msgstr "ekfarita vendejo estas starigata sur la piedstrato."
+
+#: script/events/setpieces.js:1747
+msgid "the owner stands by, stoic."
+msgstr "la proprulo staras rigardante, stoike."
+
+#: script/events/setpieces.js:1792
+msgid "strips of meat hang drying by the side of the street."
+msgstr "viandostrioj pendas kaj sekiĝas ĉe la flanko de la strato."
+
+#: script/events/setpieces.js:1793
+msgid "the people back away, avoiding eye contact."
+msgstr "la homoj reen paŝas, kaj evitas okulvidi."
+
+#: script/events/setpieces.js:1818
+msgid "someone has locked and barricaded the door to this operating theatre."
+msgstr "iu ŝlosis kaj baregis la pordon al ĉi tiu operaciejo."
+
+#: script/events/setpieces.js:1833
+msgid "a tribe of elderly squatters is camped out in this ward."
+msgstr "tribo da maljunaj loĝantoj tendumas en ĉi tiu ĉambro."
+
+#: script/events/setpieces.js:1874
+msgid "a pack of lizards rounds the corner."
+msgstr "aro da lacertoj ĉirkaŭvenas el la angulo."
+
+#: script/events/setpieces.js:1916
+msgid "strips of meat are hung up to dry in this ward."
+msgstr "viandostrioj pendas por sekiĝi ĉi tie."
+
+#: script/events/setpieces.js:1940
+msgid "a large bird nests at the top of the stairs."
+msgstr "granda birdo nestis super la ŝtuparo."
+
+#: script/events/setpieces.js:1971
+msgid "the debris is denser here."
+msgstr "la rubo pli koncentras ĉi tie."
+
+#: script/events/setpieces.js:1972
+msgid "maybe some useful stuff in the rubble."
+msgstr "eble iom da utilaĵoj estas en la rubo."
+
+#: script/events/setpieces.js:2011
+msgid "a swarm of rats rushes up the tunnel."
+msgstr "amaso da ratoj ekkuras el la tunelo."
+
+#: script/events/setpieces.js:2047
+msgid "a large man attacks, waving a bayonet."
+msgstr "granda viro atakas, svingante bajoneton."
+
+#: script/events/setpieces.js:2082
+msgid "a second soldier opens fire."
+msgstr "dua soldato ekpafadas."
+
+#: script/events/setpieces.js:2123
+msgid "a masked soldier rounds the corner, gun drawn"
+msgstr "maskita soldato venas el la angulo, tenante pafilon."
+
+#: script/events/setpieces.js:2164
+msgid "the crowd surges forward."
+msgstr "la amaso hule kuras antauen."
+
+#: script/events/setpieces.js:2200
+msgid "a youth lashes out with a tree branch."
+msgstr "junulo atakas per branĉo."
+
+#: script/events/setpieces.js:2235
+msgid "a squatter stands firmly in the doorway of a small hut."
+msgstr "loĝanto staras forte en la pordaperturo de eta kabano."
+
+#: script/events/setpieces.js:2270
+msgid "behind the door, a deformed figure awakes and attacks."
+msgstr "malantaŭ la pordo, misformita figuro vekiĝas kaj atakas."
+
+#: script/events/setpieces.js:2310
+msgid "as soon as the door is open a little bit, hundreds of tentacles erupt."
+msgstr ""
+"tuj kiam la pordo malfermiĝas iomete, centoj da tentakloj erupcie sinĵetas "
+"el ĝi."
+
+#: script/events/setpieces.js:2337
+msgid "bird must have liked shiney things."
+msgstr "la birdo certe ŝatis briletaĵojn."
+
+#: script/events/setpieces.js:2338
+msgid "some good stuff woven into its nest."
+msgstr "kelkaj bonaĵoj estas enteksitaj en ĝia nesto."
+
+#: script/events/setpieces.js:2372
+msgid "not much here."
+msgstr "ne multo ĉi tie."
+
+#: script/events/setpieces.js:2373
+msgid "scavengers must have gotten to this place already."
+msgstr "kolektistoj ŝajne jam serĉis ĉi tie."
+
+#: script/events/setpieces.js:2403
+msgid "the tunnel opens up at another platform."
+msgstr "la tunelo estas konektita al alia platformo."
+
+#: script/events/setpieces.js:2404
+msgid "the walls are scorched from an old battle."
+msgstr "la muroj estas bruligitaj pro praa batalo."
+
+#: script/events/setpieces.js:2405
+msgid "bodies and supplies from both sides litter the ground."
+msgstr "korpoj kaj provizaĵoj el la du partioj disas sube."
+
+#: script/events/setpieces.js:2449
+msgid "the small military outpost is well supplied."
+msgstr "la eta armea pikedo enhavas multajn provizaĵojn."
+
+#: script/events/setpieces.js:2450
+msgid ""
+"arms and munitions, relics from the war, are neatly arranged on the store-"
+"room floor."
+msgstr ""
+"armiloj kaj municioj, antikvaĵoj de la milito, estas ordeme aranĝitaj sur la "
+"planko de la provizejo."
+
+#: script/events/setpieces.js:2451
+msgid "just as deadly now as they were then."
+msgstr "same mortigeble nun, kiel tiam."
+
+#: script/events/setpieces.js:2485
+msgid "searching the bodies yields a few supplies."
+msgstr "kelkaj provizaĵoj troveblas post serĉado de la korpoj."
+
+#: script/events/setpieces.js:2486
+msgid "more soldiers will be on their way."
+msgstr "pli da soldatoj venos."
+
+#: script/events/setpieces.js:2487
+msgid "time to move on."
+msgstr "bona tempo foriri."
+
+#: script/events/setpieces.js:2526
+msgid "the small settlement has clearly been burning a while."
+msgstr "la vilaĝeto jam dum longa tempo brulas."
+
+#: script/events/setpieces.js:2527
+msgid ""
+"the bodies of the wanderers that lived here are still visible in the flames."
+msgstr ""
+"la korpoj de la vagintoj kiuj loĝis ĉi tie ankoraŭ videblas en la fajroj."
+
+#: script/events/setpieces.js:2528
+msgid "still time to rescue a few supplies."
+msgstr "ankoraŭ povas savi kelkajn provizaĵojn."
+
+#: script/events/setpieces.js:2562
+msgid ""
+"the remaining settlers flee from the violence, their belongings forgotten."
+msgstr ""
+"la restantaj enloĝintoj fuĝas la perforton, iliajn propraĵojn forlasinte."
+
+#: script/events/setpieces.js:2563
+msgid "there's not much, but some useful things can still be found."
+msgstr "ne estas multo. sed kelkaj utilaĵoj ankoraŭ troveblas."
+
+#: script/events/setpieces.js:2597
+msgid "the young settler was carrying a canvas sack."
+msgstr "la juna enloĝinto portis kanvasan sakon."
+
+#: script/events/setpieces.js:2598
+msgid "it contains travelling gear, and a few trinkets."
+msgstr "ĝi enhavas vojaĝilaron, kaj kelkajn aĵetojn."
+
+#: script/events/setpieces.js:2599 script/events/setpieces.js:2635
+msgid "there's nothing else here."
+msgstr "ne estas pli ĉi tie."
+
+#: script/events/setpieces.js:2633
+msgid "inside the hut, a child cries."
+msgstr "en la kabano, infano ploras."
+
+#: script/events/setpieces.js:2634
+msgid "a few belongings rest against the walls."
+msgstr "kelkaj propraĵoj restas kontraŭ la muroj."
+
+#: script/events/setpieces.js:2674
+msgid "the stench of rot and death fills the operating theatres."
+msgstr "la fetoro de putro kaj morto plenigas la operaciejojn."
+
+#: script/events/setpieces.js:2675
+msgid "a few items are scattered on the ground."
+msgstr "kelkaj aĵoj disas sube."
+
+#: script/events/setpieces.js:2676
+msgid "there is nothing else here."
+msgstr "ne estas pli ĉi tie."
+
+#: script/events/setpieces.js:2715
+msgid "a pristine medicine cabinet at the end of a hallway."
+msgstr "perfektŝajna kuracilujo staras ĉe la fino de koridoro."
+
+#: script/events/setpieces.js:2716
+msgid "the rest of the hospital is empty."
+msgstr "la kromaĵo de la malsanulejo estas malplena."
+
+#: script/events/setpieces.js:2750
+msgid "someone had been stockpiling loot here."
+msgstr "iu arigis provizaĵojn ĉi tie."
+
+#: script/events/setpieces.js:2799
+msgid "the tentacular horror is defeated."
+msgstr "la tentakla hororaĵo malvenkis."
+
+#: script/events/setpieces.js:2800
+msgid "inside, the remains of its victims are everywhere."
+msgstr "interne, la korpaĵeroj de ĝiaj viktimoj disas ĉie."
+
+#: script/events/setpieces.js:2845
+msgid "the warped man lies dead."
+msgstr "la misformita viro mortis."
+
+#: script/events/setpieces.js:2846
+msgid "the operating theatre has a lot of curious equipment."
+msgstr "la operaciejo enhavas multe da strangaj iloj."
+
+#: script/events/setpieces.js:2890
+msgid "the old man had a small cache of interesting items."
+msgstr "la maljuna viro havis etan kaŝaĵon da interesaj aĵoj."
+
+#: script/events/setpieces.js:2934
+msgid "An Old House"
+msgstr "Malnova Domo"
+
+#: script/events/setpieces.js:2938
+msgid "an old house remains here, once white siding yellowed and peeling."
+msgstr "malnova domo restas ĉi tie, iam blanka, nun flaveta kaj senŝeliĝanta."
+
+#: script/events/setpieces.js:2939
+msgid "the door hangs open."
+msgstr "la pordo pendas, malfermiĝinta."
+
+#: script/events/setpieces.js:2941
+msgid "the remains of an old house stand as a monument to simpler times"
+msgstr "la ruino de malnova domo staras kiel monumento de pli simpla epoko"
+
+#: script/events/setpieces.js:2955
+msgid "the house is abandoned, but not yet picked over."
+msgstr "la domo estas forlasita sed ne enserĉita."
+
+#: script/events/setpieces.js:2956
+msgid "still a few drops of water in the old well."
+msgstr "estas ankoraŭ kelkaj akveroj en la malnova puto."
+
+#: script/events/setpieces.js:2990
+msgid "the house has been ransacked."
+msgstr "la domo estis enserĉita kaj rompita."
+
+#: script/events/setpieces.js:2991
+msgid "but there is a cache of medicine under the floorboards."
+msgstr "sed estas kaŝaĵo da kuraciloj sub la planko."
+
+#: script/events/setpieces.js:3019
+msgid "a man charges down the hall, a rusty blade in his hand"
+msgstr "viro ekkuras trans la koridoro, rustan tranĉilon portante"
+
+#: script/events/setpieces.js:3051
+msgid "A Forgotten Battlefield"
+msgstr "Forgesita Batalejo"
+
+#: script/events/setpieces.js:3055
+msgid "a battle was fought here, long ago."
+msgstr "batalo okazis ĉi tie, antaŭ longa tempo."
+
+#: script/events/setpieces.js:3056
+msgid ""
+"battered technology from both sides lays dormant on the blasted landscape."
+msgstr "batita teĥnologio el la du partioj restas sur la fulmobatita pejzaĝo."
+
+#: script/events/setpieces.js:3104
+msgid "A Huge Borehole"
+msgstr "Grandega Boraĵo"
+
+#: script/events/setpieces.js:3108
+msgid "a huge hole is cut deep into the earth, evidence of the past harvest."
+msgstr ""
+"grandega truo profunde tranĉitis en la teron. atesto al la pasinta rikolto."
+
+#: script/events/setpieces.js:3109
+msgid "they took what they came for, and left."
+msgstr "ili forprenis kion ili deziris, kaj foriris."
+
+#: script/events/setpieces.js:3110
+msgid ""
+"castoff from the mammoth drills can still be found by the edges of the "
+"precipice."
+msgstr "rubo el la grandegaj boriloj troveblas ĉe la rando de la profundegaĵo."
+
+#: script/events/setpieces.js:3133
+msgid "A Crashed Ship"
+msgstr "Faleginta Ŝipo"
+
+#: script/events/setpieces.js:3142
+msgid ""
+"the familiar curves of a wanderer vessel rise up out of the dust and ash. "
+msgstr "la konetaj kurboj de ŝipo de vaganto staras el la polvo kaj cindro."
+
+#: script/events/setpieces.js:3143
+msgid "lucky that the natives can't work the mechanisms."
+msgstr "bonŝance la Terloĝantoj ne povas funkciigi la meĥanikaĵojn."
+
+#: script/events/setpieces.js:3144
+msgid "with a little effort, it might fly again."
+msgstr "per iom da klopodo, ĝi eble denove flugos."
+
+#: script/events/setpieces.js:3148
+msgid "salvage"
+msgstr "plibonigi"
+
+#: script/events/setpieces.js:3156
+msgid "The Sulphur Mine"
+msgstr "La Sulfura Minejo"
+
+#: script/events/setpieces.js:3160
+msgid "the military is already set up at the mine's entrance."
+msgstr "la armeo jam staras ĉe la mineja enirejo."
+
+#: script/events/setpieces.js:3161
+msgid "soldiers patrol the perimeter, rifles slung over their shoulders."
+msgstr "soldatoj patrolas ĉe la ĉirkaŭbordo. fusiloj restas sur iliaj ŝultroj."
+
+#: script/events/setpieces.js:3163
+msgid "a military perimeter is set up around the mine."
+msgstr "milita ĉirkaŭbordo staras ĉirkaŭ la minejo."
+
+#: script/events/setpieces.js:3166 script/events/setpieces.js:3315
+msgid "attack"
+msgstr "ataki"
+
+#: script/events/setpieces.js:3201
+msgid "a soldier, alerted, opens fire."
+msgstr "soldato, nun atenta, ekpafas."
+
+#: script/events/setpieces.js:3209 script/events/setpieces.js:3249
+#: script/events/setpieces.js:3352 script/events/setpieces.js:3386
+msgid "run"
+msgstr "forkuri"
+
+#: script/events/setpieces.js:3241
+msgid "a second soldier joins the fight."
+msgstr "dua soldato ekbatalas."
+
+#: script/events/setpieces.js:3275
+msgid "a grizzled soldier attacks, waving a bayonet."
+msgstr "grizharara soldato atakas, svingante bajoneton."
+
+#: script/events/setpieces.js:3286
+msgid "the military presence has been cleared."
+msgstr "la armea ĉeesteco estas forigita."
+
+#: script/events/setpieces.js:3287 script/events/setpieces.js:3429
+#: script/events/setpieces.js:3505
+msgid "the mine is now safe for workers."
+msgstr "nun la minejo sendanĝeras por la laboristoj."
+
+#: script/events/setpieces.js:3289
+msgid "the sulphur mine is clear of dangers"
+msgstr "la sulfura minejo sendanĝeras"
+
+#: script/events/setpieces.js:3305
+msgid "The Coal Mine"
+msgstr "La Karba Minejo"
+
+#: script/events/setpieces.js:3309
+msgid "camp fires burn by the entrance to the mine."
+msgstr "tendaraj fajroj brulas ĉe la enirejo de la minejo."
+
+#: script/events/setpieces.js:3310
+msgid "men mill about, weapons at the ready."
+msgstr "viroj tien kaj reen marŝas, armiloj pretas."
+
+#: script/events/setpieces.js:3312
+msgid "this old mine is not abandoned"
+msgstr "ĉi tiu minejo ne estas forlasita"
+
+#: script/events/setpieces.js:3344 script/events/setpieces.js:3378
+msgid "a man joins the fight"
+msgstr "viro enbataliĝas"
+
+#: script/events/setpieces.js:3417
+msgid "only the chief remains."
+msgstr "restas nur la ĉefo."
+
+#: script/events/setpieces.js:3428
+msgid "the camp is still, save for the crackling of the fires."
+msgstr "la tendaro trankviliĝas, krom la kraketado de la fajroj."
+
+#: script/events/setpieces.js:3431
+msgid "the coal mine is clear of dangers"
+msgstr "la karba minejo sendanĝeras"
+
+#: script/events/setpieces.js:3447
+msgid "The Iron Mine"
+msgstr "La Fera Minejo"
+
+#: script/events/setpieces.js:3451
+msgid "an old iron mine sits here, tools abandoned and left to rust."
+msgstr "malnova fera minejo restas ĉi tie, iloj forlasitaj kaj rustaj."
+
+#: script/events/setpieces.js:3452
+msgid ""
+"bleached bones are strewn about the entrance. many, deeply scored with "
+"jagged grooves."
+msgstr ""
+"senkoloraj ostoj multe disas ĉe la enirejo. multaj havas profundajn "
+"kanelaĉojn"
+
+#: script/events/setpieces.js:3453
+msgid "feral howls echo out of the darkness."
+msgstr "sovaĝaj hurloj resonas el la mallumeco."
+
+#: script/events/setpieces.js:3455
+msgid "the path leads to an abandoned mine"
+msgstr "la vojo kondukas al forlasita minejo"
+
+#: script/events/setpieces.js:3493
+msgid "a large creature lunges, muscles rippling in the torchlight"
+msgstr "granda besto eksaltas, muskoloj fortŝajnaj en la torĉlumo"
+
+#: script/events/setpieces.js:3504
+msgid "the beast is dead."
+msgstr "la besto mortis."
+
+#: script/events/setpieces.js:3507
+msgid "the iron mine is clear of dangers"
+msgstr "la fera minejo sendanĝeras"
+
+#: script/events/setpieces.js:3524
+msgid "A Destroyed Village"
+msgstr "Detruita Vilaĝo"
+
+#: script/events/setpieces.js:3528
+msgid "a destroyed village lies in the dust."
+msgstr "detruita vilaĝo restas en polvo."
+
+#: script/events/setpieces.js:3529
+msgid "charred bodies litter the ground."
+msgstr "nigrigitaj korpoj disas sube."
+
+#: script/events/setpieces.js:3532
+msgid "the metallic tang of wanderer afterburner hangs in the air."
+msgstr "la metala gusteto da vaganta postbrulaĵo ŝvebas en la aero."
+
+#: script/events/setpieces.js:3546
+msgid "a shack stands at the center of the village."
+msgstr "domaĉo staras ĉe la centro de la vilaĝo."
+
+#: script/events/setpieces.js:3547
+msgid "there are still supplies inside."
+msgstr "estas ankoraŭ provizaĵoj en ĝi."
+
+#: script/events/setpieces.js:3558
+msgid "all the work of a previous generation is here."
+msgstr "ĉiom da la laboro de antaŭa generacio estas ĉi tie."
+
+#: script/events/setpieces.js:3559
+msgid "ripe for the picking."
+msgstr "maturaĵo por forrikolti."

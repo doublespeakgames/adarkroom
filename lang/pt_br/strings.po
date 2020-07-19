@@ -1,0 +1,3281 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2015-12-22 13:35-0600\n"
+"PO-Revision-Date: 2016-12-08 07:19-0200\n"
+"Last-Translator: Jean Araujo\n"
+"Language-Team: \n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: script/dropbox.js:62
+msgid "Dropbox connection"
+msgstr "Dropbox"
+
+#: script/dropbox.js:65
+msgid "connect game to dropbox local storage"
+msgstr "conecte o jogo ao dropbox"
+
+#: script/dropbox.js:68
+msgid "connect"
+msgstr "conectar"
+
+#: script/dropbox.js:75 script/dropbox.js:107 script/dropbox.js:133
+#: script/dropbox.js:163 script/engine.js:285 script/engine.js:331
+msgid "cancel"
+msgstr "cancelar"
+
+#: script/dropbox.js:86 script/dropbox.js:176
+msgid "Dropbox Export / Import"
+msgstr "Exportar / Importar no Dropbox"
+
+#: script/dropbox.js:89
+msgid "export or import save data to dropbox datastorage"
+msgstr "exportar ou importar dados salvos ao dropbox"
+
+#: script/dropbox.js:90
+msgid "your are connected to dropbox with account / email "
+msgstr "você está conectado ao dropbox com a conta / email"
+
+#: script/dropbox.js:93
+msgid "save"
+msgstr "salvar"
+
+#: script/dropbox.js:97
+msgid "load"
+msgstr "carregar"
+
+#: script/dropbox.js:102
+msgid "signout"
+msgstr "sair"
+
+#: script/dropbox.js:113
+msgid "choose one slot to save to"
+msgstr "escolha um slot para salvar"
+
+#: script/dropbox.js:119
+msgid "save to slot"
+msgstr "salvar slot"
+
+#: script/dropbox.js:141
+msgid "choose one slot to load from"
+msgstr "escolha um slot para carregar"
+
+#: script/dropbox.js:148
+msgid "load from slot"
+msgstr "carregar slot"
+
+#: script/dropbox.js:179
+msgid "successfully saved to dropbox datastorage"
+msgstr "salvo com sucesso no dropbox"
+
+#: script/dropbox.js:180
+msgid "error while saving to dropbox datastorage"
+msgstr "erro ao salvar no dropbox"
+
+#: script/dropbox.js:183
+msgid "ok"
+msgstr "Está bem"
+
+#: script/engine.js:15
+msgid "boxer"
+msgstr "boxeador"
+
+#: script/engine.js:16
+msgid "punches do more damage"
+msgstr "socos causam mais danos"
+
+#: script/engine.js:18
+msgid "learned to throw punches with purpose"
+msgstr "aprendeu a dar socos com finalidade"
+
+#: script/engine.js:21
+msgid "martial artist"
+msgstr "artista marcial"
+
+#: script/engine.js:22
+msgid "punches do even more damage."
+msgstr "socos fazem ainda mais danos."
+
+#: script/engine.js:23
+msgid "learned to fight quite effectively without weapons"
+msgstr "aprendeu a lutar de forma bastante eficaz sem armas"
+
+#: script/engine.js:27
+msgid "unarmed master"
+msgstr "mestre desarmado"
+
+#: script/engine.js:28
+msgid "punch twice as fast, and with even more force"
+msgstr "soco duas vezes mais rápido, e com ainda mais força"
+
+#: script/engine.js:29
+msgid "learned to strike faster without weapons"
+msgstr "aprendeu a atacar mais rápido sem armas"
+
+#: script/engine.js:32
+msgid "barbarian"
+msgstr "bárbaro"
+
+#: script/engine.js:33
+msgid "melee weapons deal more damage"
+msgstr "armas brancas fazem mais dano"
+
+#: script/engine.js:34
+msgid "learned to swing weapons with force"
+msgstr "aprendeu a balançar armas com força"
+
+#: script/engine.js:37
+msgid "slow metabolism"
+msgstr "metabolismo lento"
+
+#: script/engine.js:38
+msgid "go twice as far without eating"
+msgstr "aguenta duas vezes mais sem comer"
+
+#: script/engine.js:39
+msgid "learned how to ignore the hunger"
+msgstr "aprendeu a ignorar a fome"
+
+#: script/engine.js:42
+msgid "desert rat"
+msgstr "rato do deserto"
+
+#: script/engine.js:43
+msgid "go twice as far without drinking"
+msgstr "aguenta duas vezes mais sem beber"
+
+#: script/engine.js:44
+msgid "learned to love the dry air"
+msgstr "aprendeu a amar o ar seco"
+
+#: script/engine.js:47
+msgid "evasive"
+msgstr "evasivo"
+
+#: script/engine.js:48
+msgid "dodge attacks more effectively"
+msgstr "esquivar de ataques de forma mais eficaz"
+
+#: script/engine.js:49
+msgid "learned to be where they're not"
+msgstr "aprendeu a estar no lugar onde eles não estão"
+
+#: script/engine.js:52
+msgid "precise"
+msgstr "preciso"
+
+#: script/engine.js:53
+msgid "land blows more often"
+msgstr "acerta socos com mais frequência"
+
+#: script/engine.js:54
+msgid "learned to predict their movement"
+msgstr "aprendeu a prever movimentos"
+
+#: script/engine.js:57
+msgid "scout"
+msgstr "patrulhar"
+
+#: script/engine.js:58
+msgid "see farther"
+msgstr "ver mais distante"
+
+#: script/engine.js:59
+msgid "learned to look ahead"
+msgstr "aprendeu a se antecipar"
+
+#: script/engine.js:62
+msgid "stealthy"
+msgstr "furtivo"
+
+#: script/engine.js:63
+msgid "better avoid conflict in the wild"
+msgstr "melhor em evitar o conflito na selva"
+
+#: script/engine.js:64
+msgid "learned how not to be seen"
+msgstr "aprendeu como não ser visto"
+
+#: script/engine.js:67
+msgid "gastronome"
+msgstr "gastrónomo"
+
+#: script/engine.js:68
+msgid "restore more health when eating"
+msgstr "restaura mais saúde ao comer"
+
+#: script/engine.js:69
+msgid "learned to make the most of food"
+msgstr "aprendeu a fazer o máximo de comida"
+
+#: script/engine.js:138 script/space.js:450
+msgid "app store."
+msgstr "app store."
+
+#: script/engine.js:144 script/engine.js:485
+msgid "lights off."
+msgstr "apagar luzes."
+
+#: script/engine.js:150 script/engine.js:521
+msgid "hyper."
+msgstr "hyper"
+
+#: script/engine.js:156 script/space.js:442
+msgid "restart."
+msgstr "reiniciar."
+
+#: script/engine.js:162
+msgid "share."
+msgstr "compartilhar."
+
+#: script/engine.js:168
+msgid "save."
+msgstr "salvar."
+
+#: script/engine.js:177
+msgid "dropbox."
+msgstr "dropbox."
+
+#: script/engine.js:184
+msgid "github."
+msgstr "github."
+
+#: script/engine.js:268
+msgid "Export / Import"
+msgstr "Exportar / Importar"
+
+#: script/engine.js:272
+msgid "export or import save data, for backing up"
+msgstr "exportar ou importar dados salvos, para fazer backup"
+
+#: script/engine.js:273
+msgid "or migrating computers"
+msgstr "ou migrando computadores"
+
+#: script/engine.js:277
+msgid "export"
+msgstr "exportar"
+
+#: script/engine.js:281 script/engine.js:326
+msgid "import"
+msgstr "importar"
+
+#: script/engine.js:291
+msgid "save this."
+msgstr "salvar isto."
+
+#: script/engine.js:297
+msgid "got it"
+msgstr "entendi"
+
+#: script/engine.js:305
+msgid "are you sure?"
+msgstr "você tem certeza?"
+
+#: script/engine.js:306
+msgid "if the code is invalid, all data will be lost."
+msgstr "se o código for inválido, todos os dados serão perdidos."
+
+#: script/engine.js:307
+msgid "this is irreversible."
+msgstr "isto é irreversível."
+
+#: script/engine.js:311 script/engine.js:380 script/engine.js:499
+msgid "yes"
+msgstr "sim"
+
+#: script/engine.js:316 script/engine.js:385 script/engine.js:504
+msgid "no"
+msgstr "não"
+
+#: script/engine.js:322
+msgid "put the save code here."
+msgstr "coloque o código aqui."
+
+#: script/engine.js:374
+msgid "Restart?"
+msgstr "Reiniciar?"
+
+#: script/engine.js:377
+msgid "restart the game?"
+msgstr "reiniciar o jogo?"
+
+#: script/engine.js:408
+msgid "Share"
+msgstr "Compartilhar"
+
+#: script/engine.js:411
+msgid "bring your friends."
+msgstr "traga seus amigos."
+
+#: script/engine.js:414
+msgid "facebook"
+msgstr "facebook"
+
+#: script/engine.js:421
+msgid "google+"
+msgstr "google+"
+
+#: script/engine.js:428
+msgid "twitter"
+msgstr "twitter"
+
+#: script/engine.js:435
+msgid "reddit"
+msgstr "reddit"
+
+#: script/engine.js:442
+msgid "close"
+msgstr "fechar"
+
+#: script/engine.js:476 script/engine.js:480
+msgid "lights on."
+msgstr "acender luzes."
+
+#: script/engine.js:520
+msgid "Go Hyper?"
+msgstr "Alternar para Hyper?"
+
+#: script/engine.js:523
+msgid "turning hyper mode speeds up the game to x2 speed. do you want to do that?"
+msgstr "alternar para o modo hyper deixa o jogo 2x mais rápido. você quer fazer isso?"
+
+#: script/engine.js:519
+msgid "classic."
+msgstr "clássico."
+
+#: script/engine.js:620
+msgid "{0} per {1}s"
+msgstr "{0} por {1}s"
+
+#: script/events.js:130
+msgid "eat meat"
+msgstr "comer carne"
+
+#: script/events.js:150
+msgid "use meds"
+msgstr "usar medicamentos"
+
+#: script/events.js:350 script/events.js:395
+msgid "miss"
+msgstr "errou"
+
+#: script/events.js:363 script/events.js:408
+msgid "stunned"
+msgstr "atordoado"
+
+#: script/events.js:482 script/events.js:653 script/events/global.js:42
+#: script/events/global.js:59 script/events/room.js:142 script/events/room.js:162
+#: script/events/room.js:182 script/events/setpieces.js:25
+#: script/events/setpieces.js:48 script/events/setpieces.js:65
+#: script/events/setpieces.js:83 script/events/setpieces.js:106
+#: script/events/setpieces.js:536 script/events/setpieces.js:1254
+#: script/events/setpieces.js:2948 script/events/setpieces.js:2982
+#: script/events/setpieces.js:3005 script/events/setpieces.js:3042
+#: script/events/setpieces.js:3095 script/events/setpieces.js:3124
+#: script/events/setpieces.js:3170 script/events/setpieces.js:3297
+#: script/events/setpieces.js:3319 script/events/setpieces.js:3439
+#: script/events/setpieces.js:3463 script/events/setpieces.js:3496
+#: script/events/setpieces.js:3515 script/events/setpieces.js:3539
+#: script/events/setpieces.js:3567
+msgid "leave"
+msgstr "sair"
+
+#: script/events.js:511
+msgid "drop:"
+msgstr "largar:"
+
+#: script/events.js:536 script/events/room.js:523
+msgid "nothing"
+msgstr "nada"
+
+#: script/events.js:567 script/events/setpieces.js:3551
+msgid "take"
+msgstr "tomar"
+
+#: script/events.js:577
+msgid "take:"
+msgstr "tomar:"
+
+#: script/events.js:599
+#, fuzzy
+msgid "nothing to take"
+msgstr "nada útil a ser pego"
+
+#: script/events.js:627
+msgid "all"
+msgstr "tudo"
+
+#: script/events.js:649
+msgid "take everything"
+msgstr "pegue tudo"
+
+#: script/events.js:653 script/outside.js:627
+msgid " and "
+msgstr " e "
+
+#: script/events.js:896
+msgid "*** EVENT ***"
+msgstr "*** EVENTO ***"
+
+#: script/localization.js:4
+msgid "saved."
+msgstr "salvo."
+
+#: script/localization.js:5
+msgid "wood"
+msgstr "madeira"
+
+#: script/localization.js:6
+msgid "builder"
+msgstr "construtor"
+
+#: script/localization.js:7
+msgid "teeth"
+msgstr "dentes"
+
+#: script/localization.js:8
+msgid "meat"
+msgstr "carne"
+
+#: script/localization.js:9
+msgid "fur"
+msgstr "pele"
+
+#: script/localization.js:10
+msgid "alien alloy"
+msgstr "liga alienígena"
+
+#: script/localization.js:11
+msgid "bullets"
+msgstr "balas"
+
+#: script/localization.js:12
+msgid "charm"
+msgstr "amuleto"
+
+#: script/localization.js:13 script/path.js:138
+msgid "leather"
+msgstr "couro"
+
+#: script/localization.js:14 script/path.js:136
+msgid "iron"
+msgstr "ferro"
+
+#: script/localization.js:15 script/path.js:134
+msgid "steel"
+msgstr "aço"
+
+#: script/localization.js:16
+msgid "coal"
+msgstr "carvão"
+
+#: script/localization.js:17
+msgid "sulphur"
+msgstr "enxofre"
+
+#: script/localization.js:18
+msgid "energy cell"
+msgstr "célula de energia"
+
+#: script/localization.js:19 script/room.js:161
+msgid "torch"
+msgstr "tocha"
+
+#: script/localization.js:20
+msgid "medicine"
+msgstr "remédio"
+
+#: script/localization.js:21 script/outside.js:22
+msgid "hunter"
+msgstr "caçador"
+
+#: script/localization.js:22 script/outside.js:30
+msgid "trapper"
+msgstr "armadilheiro"
+
+#: script/localization.js:23 script/outside.js:38
+msgid "tanner"
+msgstr "curtidor"
+
+#: script/localization.js:24
+msgid "grenade"
+msgstr "granada"
+
+#: script/localization.js:25
+msgid "bolas"
+msgstr "boleadeira"
+
+#: script/localization.js:26
+msgid "bayonet"
+msgstr "baioneta"
+
+#: script/localization.js:27 script/outside.js:46
+msgid "charcutier"
+msgstr "açougueiro"
+
+#: script/localization.js:28 script/outside.js:55
+msgid "iron miner"
+msgstr "minerador de ferro"
+
+#: script/localization.js:29
+msgid "iron mine"
+msgstr "mina de ferro"
+
+#: script/localization.js:30 script/outside.js:63
+msgid "coal miner"
+msgstr "minerador de carvão"
+
+#: script/localization.js:31
+msgid "coal mine"
+msgstr "mina de carvão"
+
+#: script/localization.js:32 script/outside.js:71
+msgid "sulphur miner"
+msgstr "minerador de enxofre"
+
+#: script/localization.js:33
+msgid "sulphur mine"
+msgstr "mina de enxofre"
+
+#: script/localization.js:34 script/outside.js:88
+msgid "armourer"
+msgstr "armeiro"
+
+#: script/localization.js:35 script/outside.js:79
+msgid "steelworker"
+msgstr "trabalhador de siderúrgico"
+
+#: script/localization.js:36
+msgid "bait"
+msgstr "isca"
+
+#: script/localization.js:37 script/localization.js:44
+msgid "cured meat"
+msgstr "carne curada"
+
+#: script/localization.js:38 script/localization.js:43
+msgid "scales"
+msgstr "escamas"
+
+#: script/localization.js:39
+msgid "compass"
+msgstr "bússola"
+
+#: script/localization.js:40
+msgid "laser rifle"
+msgstr "rifle de laser"
+
+#: script/localization.js:41 script/outside.js:15
+msgid "gatherer"
+msgstr "coletor"
+
+#: script/localization.js:42
+msgid "cloth"
+msgstr "pano"
+
+#: script/localization.js:45
+msgid "thieves"
+msgstr "bandidos"
+
+#: script/localization.js:46
+msgid "not enough fur"
+msgstr "pele insuficiente"
+
+#: script/localization.js:47
+msgid "not enough wood"
+msgstr "madeira insuficiente"
+
+#: script/localization.js:48
+msgid "not enough coal"
+msgstr "carvão insuficiente"
+
+#: script/localization.js:49
+msgid "not enough iron"
+msgstr "ferro insuficiente"
+
+#: script/localization.js:50
+msgid "not enough steel"
+msgstr "aço insuficiente"
+
+#: script/localization.js:51
+msgid "not enough sulphur"
+msgstr "enxofre insuficiente"
+
+#: script/localization.js:52
+msgid "baited trap"
+msgstr "armadilha com isca"
+
+#: script/localization.js:53
+msgid "not enough scales"
+msgstr "escamas insuficientes"
+
+#: script/localization.js:54
+msgid "not enough cloth"
+msgstr "pano insuficiente"
+
+#: script/localization.js:55
+msgid "not enough teeth"
+msgstr "dentes insuficientes"
+
+#: script/localization.js:56
+msgid "not enough leather"
+msgstr "couro insuficiente"
+
+#: script/localization.js:57
+msgid "not enough meat"
+msgstr "carne insuficiente"
+
+#: script/localization.js:58
+msgid "the compass points east"
+msgstr "a bússola aponta para o leste"
+
+#: script/localization.js:59
+msgid "the compass points west"
+msgstr "a bússola aponta para o oeste"
+
+#: script/localization.js:60
+msgid "the compass points north"
+msgstr "a bússola aponta para o norte"
+
+#: script/localization.js:61
+msgid "the compass points south"
+msgstr "a bússola aponta para o sul"
+
+#: script/localization.js:62
+msgid "the compass points northeast"
+msgstr "a bússola aponta para o nordeste"
+
+#: script/localization.js:63
+msgid "the compass points northwest"
+msgstr "a bússola aponta para o noroeste"
+
+#: script/localization.js:64
+msgid "the compass points southeast"
+msgstr "a bússola aponta para o sudeste"
+
+#: script/localization.js:65
+msgid "the compass points southwest"
+msgstr "a bússola aponta para o sudoeste"
+
+#: script/outside.js:5
+msgid "Outside"
+msgstr "Fora"
+
+#: script/outside.js:102
+msgid "scraps of fur"
+msgstr "restos de pele"
+
+#: script/outside.js:107
+msgid "bits of meat"
+msgstr "pedaços de carne"
+
+#: script/outside.js:112
+msgid "strange scales"
+msgstr "escamas estranhas"
+
+#: script/outside.js:117
+msgid "scattered teeth"
+msgstr "dentes dispersos"
+
+#: script/outside.js:122
+msgid "tattered cloth"
+msgstr "pano esfarrapado"
+
+#: script/outside.js:127
+msgid "a crudely made charm"
+msgstr "um amuleto feito toscamente"
+
+#: script/outside.js:143 script/outside.js:562
+msgid "A Silent Forest"
+msgstr "Uma Floresta Silenciosa"
+
+#: script/outside.js:169
+msgid "gather wood"
+msgstr "recolher madeira"
+
+#: script/outside.js:188
+msgid "a stranger arrives in the night"
+msgstr "um estranho chega no meio da noite"
+
+#: script/outside.js:190
+msgid "a weathered family takes up in one of the huts."
+msgstr "uma família abastada ocupa-se em uma das cabanas."
+
+#: script/outside.js:192
+msgid "a small group arrives, all dust and bones."
+msgstr "um pequeno grupo chega, todos exaustos."
+
+#: script/outside.js:194
+msgid "a convoy lurches in, equal parts worry and hope."
+msgstr "um comboio chega, partes iguais de preocupação e esperança."
+
+#: script/outside.js:196
+msgid "the town's booming. word does get around."
+msgstr "expansão da cidade. a palavra se espalha."
+
+#: script/outside.js:452
+msgid "pop "
+msgstr "população "
+
+#: script/outside.js:457
+msgid "forest"
+msgstr "floresta"
+
+#: script/outside.js:460
+msgid "village"
+msgstr "aldeia"
+
+#: script/outside.js:543
+msgid "check traps"
+msgstr "verificar armadilhas"
+
+#: script/outside.js:564
+msgid "A Lonely Hut"
+msgstr "Uma Cabana Solitária"
+
+#: script/outside.js:566
+msgid "A Tiny Village"
+msgstr "Uma Pequena Aldeia"
+
+#: script/outside.js:568
+msgid "A Modest Village"
+msgstr "Uma Modesta Aldeia"
+
+#: script/outside.js:570
+msgid "A Large Village"
+msgstr "Uma Grande Aldeia"
+
+#: script/outside.js:572
+msgid "A Raucous Village"
+msgstr "Uma Aldeia Áspera"
+
+#: script/outside.js:584
+msgid "the sky is grey and the wind blows relentlessly"
+msgstr "o céu é cinza e o vento sopra sem parar"
+
+#: script/outside.js:594
+msgid "dry brush and dead branches litter the forest floor"
+msgstr "moitas secas e galhos mortos espalhados no chão da floresta"
+
+#: script/outside.js:621
+msgid "the traps contain "
+msgstr "as armadilhas contêm "
+
+#: script/path.js:29 script/path.js:298
+msgid "A Dusty Path"
+msgstr "Um Caminho Empoeirado"
+
+#: script/path.js:37
+msgid "supplies:"
+msgstr "suprimentos:"
+
+#: script/path.js:43
+msgid "embark"
+msgstr "embarcar"
+
+#: script/path.js:60 script/room.js:1153
+msgid "the compass points "
+msgstr "a bússola aponta "
+
+#: script/path.js:102
+msgid "perks:"
+msgstr "benefícios:"
+
+#: script/path.js:132
+msgid "none"
+msgstr "nenhum"
+
+#: script/path.js:142
+msgid "armour"
+msgstr "armadura"
+
+#: script/path.js:153
+msgid "water"
+msgstr "água"
+
+#: script/path.js:229 script/world.js:290
+msgid "free {0}/{1}"
+msgstr "livre {0}/{1}"
+
+#: script/path.js:253
+msgid "weight"
+msgstr "peso"
+
+#: script/path.js:255
+msgid "available"
+msgstr "disponível"
+
+#: script/room.js:16
+msgid "trap"
+msgstr "armadilha"
+
+#: script/room.js:19
+msgid ""
+"builder says she can make traps to catch any creatures might still be alive out "
+"there"
+msgstr ""
+"o construtor diz que ela pode fazer armadilhas para pegar todas as criaturas que "
+"ainda podem estar vivas lá fora"
+
+#: script/room.js:20
+msgid "more traps to catch more creatures"
+msgstr "mais armadilhas para pegar mais criaturas"
+
+#: script/room.js:21
+msgid "more traps won't help now"
+msgstr "mais armadilhas não vão ajudar agora"
+
+#: script/room.js:31
+msgid "cart"
+msgstr "carrinho"
+
+#: script/room.js:34
+msgid "builder says she can make a cart for carrying wood"
+msgstr "o construtor diz que ela pode fazer um carrinho para transportar madeira"
+
+#: script/room.js:35
+msgid "the rickety cart will carry more wood from the forest"
+msgstr "o carrinho pequeno vai transportar mais madeira da floresta"
+
+#: script/room.js:44
+msgid "hut"
+msgstr "cabana"
+
+#: script/room.js:47
+msgid "builder says there are more wanderers. says they'll work, too."
+msgstr "o construtor diz que há mais errantes. diz que eles vão trabalhar também."
+
+#: script/room.js:48
+msgid "builder puts up a hut, out in the forest. says word will get around."
+msgstr ""
+"o construtor monta uma cabana na floresta. diz que a palavra vai se espalhar."
+
+#: script/room.js:49
+msgid "no more room for huts."
+msgstr "não há mais espaço para barracas."
+
+#: script/room.js:59
+msgid "lodge"
+msgstr "alojamento"
+
+#: script/room.js:62
+msgid "villagers could help hunt, given the means"
+msgstr "aldeões poderiam ajudar a caçar, dados os meios"
+
+#: script/room.js:63
+msgid "the hunting lodge stands in the forest, a ways out of town"
+msgstr "o pavilhão de caça está na floresta, fora da cidade"
+
+#: script/room.js:74
+msgid "trading post"
+msgstr "posto de troca"
+
+#: script/room.js:77
+msgid "a trading post would make commerce easier"
+msgstr "um posto de troca facilita o comércio"
+
+#: script/room.js:78
+msgid "now the nomads have a place to set up shop, they might stick around a while"
+msgstr ""
+"agora os nômades têm um lugar para se estabelecer, eles podem ficar por um tempo"
+
+#: script/room.js:88
+msgid "tannery"
+msgstr "curtume"
+
+#: script/room.js:91
+msgid "builder says leather could be useful. says the villagers could make it."
+msgstr ""
+"o construtor diz que couro poderia ser útil. diz que os moradores poderiam fazê-lo."
+
+#: script/room.js:92
+msgid "tannery goes up quick, on the edge of the village"
+msgstr "curtume é feito rápido, na periferia da aldeia"
+
+#: script/room.js:102
+msgid "smokehouse"
+msgstr "defumadouro"
+
+#: script/room.js:105
+msgid "should cure the meat, or it'll spoil. builder says she can fix something up."
+msgstr "deve curar a carne, ou ela vai estragar. a construtora diz que pode pensar em alguma coisa."
+
+#: script/room.js:106
+msgid "builder finishes the smokehouse. she looks hungry."
+msgstr "a construtora termina a charcutaria. ela parece com fome."
+
+#: script/room.js:116
+msgid "workshop"
+msgstr "oficina"
+
+#: script/room.js:119
+msgid "builder says she could make finer things, if she had the tools"
+msgstr ""
+"a construtora diz que ela poderia fazer coisas melhores, se ela tivesse ferramentas"
+
+#: script/room.js:120
+msgid "workshop's finally ready. builder's excited to get to it"
+msgstr "a oficina está finalmente pronta. a construtora está animada para usar"
+
+#: script/room.js:131
+msgid "steelworks"
+msgstr "siderúrgica"
+
+#: script/room.js:134
+msgid "builder says the villagers could make steel, given the tools"
+msgstr "a construtora diz que os moradores poderiam fazer aço, dadas as ferramentas"
+
+#: script/room.js:135
+msgid "a haze falls over the village as the steelworks fires up"
+msgstr "uma neblina cai sobre a aldeia assim que a siderúrgica esquenta"
+
+#: script/room.js:146
+msgid "armoury"
+msgstr "arsenal"
+
+#: script/room.js:149
+msgid "builder says it'd be useful to have a steady source of bullets"
+msgstr "a construtora diz que seria útil ter uma fonte constante de projéteis"
+
+#: script/room.js:150
+msgid "armoury's done, welcoming back the weapons of the past."
+msgstr "arsenal feito, acolhendo de volta as armas do passado."
+
+#: script/room.js:164
+msgid "a torch to keep the dark away"
+msgstr "uma tocha para manter a escuridão longe"
+
+#: script/room.js:173
+msgid "waterskin"
+msgstr "bolsa d'água"
+
+#: script/room.js:177
+msgid "this waterskin'll hold a bit of water, at least"
+msgstr "este odre vai levar um pouco de água, pelo menos"
+
+#: script/room.js:185
+msgid "cask"
+msgstr "barril"
+
+#: script/room.js:189
+msgid "the cask holds enough water for longer expeditions"
+msgstr "o barril tem água suficiente para expedições mais longas"
+
+#: script/room.js:198
+msgid "water tank"
+msgstr "tanque de água"
+
+#: script/room.js:202
+msgid "never go thirsty again"
+msgstr "nunca ter sede novamente"
+
+#: script/room.js:211
+msgid "bone spear"
+msgstr "lança de osso"
+
+#: script/room.js:214
+msgid "this spear's not elegant, but it's pretty good at stabbing"
+msgstr "esta lança não é elegante, mas é muito boa para apunhalar"
+
+#: script/room.js:223 script/world.js:285
+msgid "rucksack"
+msgstr "mochila"
+
+#: script/room.js:227
+msgid "carrying more means longer expeditions to the wilds"
+msgstr "carregando mais coisas significa expedições mais longas na a floresta"
+
+#: script/room.js:235
+msgid "wagon"
+msgstr "vagão"
+
+#: script/room.js:239
+msgid "the wagon can carry a lot of supplies"
+msgstr "o vagão pode transportar uma grande quantidade de material"
+
+#: script/room.js:248
+msgid "convoy"
+msgstr "comboio"
+
+#: script/room.js:252
+msgid "the convoy can haul mostly everything"
+msgstr "o comboio pode transportar praticamente tudo"
+
+#: script/room.js:262
+msgid "l armour"
+msgstr "l armadura"
+
+#: script/room.js:265
+msgid "leather's not strong. better than rags, though."
+msgstr "couro não é forte. melhor do que trapos, no entanto."
+
+#: script/room.js:274
+msgid "i armour"
+msgstr "i armadura"
+
+#: script/room.js:277
+msgid "iron's stronger than leather"
+msgstr "ferro é mais forte do que o couro"
+
+#: script/room.js:286
+msgid "s armour"
+msgstr "s armadura"
+
+#: script/room.js:289
+msgid "steel's stronger than iron"
+msgstr "aço é mais forte do que o ferro"
+
+#: script/room.js:298
+msgid "iron sword"
+msgstr "espada de ferro"
+
+#: script/room.js:301
+msgid "sword is sharp. good protection out in the wilds."
+msgstr "espada é afiada. boa proteção na floresta."
+
+#: script/room.js:311
+msgid "steel sword"
+msgstr "espada de aço"
+
+#: script/room.js:314
+msgid "the steel is strong, and the blade true."
+msgstr "o aço é forte, e a lâmina verdadeira."
+
+#: script/room.js:324
+msgid "rifle"
+msgstr "rifle"
+
+#: script/room.js:326
+msgid "black powder and bullets, like the old days."
+msgstr "pólvora preta e projéteis, como nos velhos tempos."
+
+#: script/room.js:458
+msgid "Room"
+msgstr "Quarto"
+
+#: script/room.js:485 script/room.js:604
+msgid "A Dark Room"
+msgstr "Um Quarto Escuro"
+
+#: script/room.js:498
+msgid "light fire"
+msgstr "acender fogo"
+
+#: script/room.js:508
+msgid "stoke fire"
+msgstr "atiçar fogo"
+
+#: script/room.js:545 script/room.js:555 script/room.js:703 script/room.js:707
+msgid "the room is {0}"
+msgstr "o quarto está {0}"
+
+#: script/room.js:546 script/room.js:554 script/room.js:672
+msgid "the fire is {0}"
+msgstr "o fogo está {0}"
+
+#: script/room.js:565
+msgid ""
+"the stranger is standing by the fire. she says she can help. says she builds things."
+msgstr "a estranha está de pé perto do fogo. ela disse que pode ajudar. ela diz que constrói coisas."
+
+#: script/room.js:580
+msgid "freezing"
+msgstr "congelando"
+
+#: script/room.js:581
+msgid "cold"
+msgstr "frio"
+
+#: script/room.js:582
+msgid "mild"
+msgstr "morno"
+
+#: script/room.js:583
+msgid "warm"
+msgstr "aquecido"
+
+#: script/room.js:584
+msgid "hot"
+msgstr "quente"
+
+#: script/room.js:596
+msgid "dead"
+msgstr "morto"
+
+#: script/room.js:597
+msgid "smoldering"
+msgstr "latente"
+
+#: script/room.js:598
+msgid "flickering"
+msgstr "tremulante"
+
+#: script/room.js:599
+msgid "burning"
+msgstr "ardente"
+
+#: script/room.js:600
+msgid "roaring"
+msgstr "rugindo"
+
+#: script/room.js:604
+msgid "A Firelit Room"
+msgstr "Um Quarto Iluminado"
+
+#: script/room.js:642
+msgid "not enough wood to get the fire going"
+msgstr "madeira insuficiente para acender o fogo"
+
+#: script/room.js:655
+msgid "the wood has run out"
+msgstr "a madeira se esgotou"
+
+#: script/room.js:675
+msgid "the light from the fire spills from the windows, out into the dark"
+msgstr "a luz do fogo derrama das janelas, para o escuro"
+
+#: script/room.js:688
+msgid "builder stokes the fire"
+msgstr "o construtor alimenta o fogo"
+
+#: script/room.js:718
+msgid "the wind howls outside"
+msgstr "o vento uiva do lado de fora"
+
+#: script/room.js:719
+msgid "the wood is running out"
+msgstr "a madeira está se esgotando"
+
+#: script/room.js:726
+msgid "a ragged stranger stumbles through the door and collapses in the corner"
+msgstr "uma estranha maltrapilha tropeça através da porta e cai no canto"
+
+#: script/room.js:734
+msgid "the stranger shivers, and mumbles quietly. her words are unintelligible."
+msgstr "a estanha se arrepia, e murmura baixinho. suas palavras são ininteligíveis."
+
+#: script/room.js:737
+msgid "the stranger in the corner stops shivering. her breathing calms."
+msgstr "a estranha no canto para de tremer. sua respiração acalma."
+
+#: script/room.js:760
+msgid "stores"
+msgstr "lojas"
+
+#: script/room.js:779
+msgid "weapons"
+msgstr "armas"
+
+#: script/room.js:914
+msgid "total"
+msgstr "total"
+
+#: script/room.js:935 script/room.js:979
+msgid "not enough "
+msgstr "não é suficiente"
+
+#: script/room.js:951
+msgid "builder just shivers"
+msgstr "o construtor apenas treme de frio"
+
+#: script/room.js:1054
+msgid "build:"
+msgstr "construir:"
+
+#: script/room.js:1061
+msgid "craft:"
+msgstr "construir:"
+
+#: script/room.js:1068
+msgid "buy:"
+msgstr "comprar:"
+
+#: script/ship.js:11
+msgid "Ship"
+msgstr "Navio"
+
+#: script/ship.js:27 script/ship.js:100
+msgid "An Old Starship"
+msgstr "Uma Nave Velha"
+
+#: script/ship.js:38
+msgid "hull:"
+msgstr "casco:"
+
+#: script/ship.js:44
+msgid "engine:"
+msgstr "motor:"
+
+#: script/ship.js:51
+msgid "reinforce hull"
+msgstr "reforçar casco"
+
+#: script/ship.js:60
+msgid "upgrade engine"
+msgstr "mecanismo de atualização"
+
+#: script/ship.js:69 script/ship.js:142
+msgid "lift off"
+msgstr "decolar"
+
+#: script/ship.js:91
+msgid ""
+"somewhere above the debris cloud, the wanderer fleet hovers. been on this rock too "
+"long."
+msgstr ""
+"em algum lugar acima da nuvem restante, a armada errante paira. esteve nesta pedra "
+"por tempo demais."
+
+#: script/ship.js:106 script/ship.js:119
+msgid "not enough alien alloy"
+msgstr "liga alienígena  insuficiente"
+
+#: script/ship.js:134
+msgid "Ready to Leave?"
+msgstr "Pronto para sair?"
+
+#: script/ship.js:138
+msgid "time to get out of this place. won't be coming back."
+msgstr "hora de sair deste lugar. não voltarei."
+
+#: script/ship.js:150
+msgid "linger"
+msgstr "demorar"
+
+#: script/space.js:42
+msgid "hull: "
+msgstr "casco:"
+
+#: script/space.js:76
+msgid "Troposphere"
+msgstr "Troposfera"
+
+#: script/space.js:78
+msgid "Stratosphere"
+msgstr "Estratosfera"
+
+#: script/space.js:80
+msgid "Mesosphere"
+msgstr "Mesosfera"
+
+#: script/space.js:82
+msgid "Thermosphere"
+msgstr "Termosfera"
+
+#: script/space.js:84
+msgid "Exosphere"
+msgstr "Exosfera"
+
+#: script/space.js:86
+msgid "Space"
+msgstr "Espaço"
+
+#: script/space.js:424
+msgid "score for this game: {0}"
+msgstr "pontuação para este jogo: {0}"
+
+#: script/space.js:431
+msgid "total score: {0}"
+msgstr "pontuação total: {0}"
+
+#: script/world.js:46
+msgid "punch"
+msgstr "soco"
+
+#: script/world.js:52
+msgid "stab"
+msgstr "apunhalar"
+
+#: script/world.js:58
+msgid "swing"
+msgstr "balanço"
+
+#: script/world.js:64
+msgid "slash"
+msgstr "cortar"
+
+#: script/world.js:70
+msgid "thrust"
+msgstr "golpear"
+
+#: script/world.js:76
+msgid "shoot"
+msgstr "atirar"
+
+#: script/world.js:83
+msgid "blast"
+msgstr "disparar"
+
+#: script/world.js:90
+msgid "lob"
+msgstr "tacar"
+
+#: script/world.js:97
+msgid "tangle"
+msgstr "entrelaçar"
+
+#: script/world.js:119
+msgid "An&nbsp;Outpost"
+msgstr "Um&nbsp;Posto Avançado"
+
+#: script/world.js:120
+msgid "Iron&nbsp;Mine"
+msgstr "Mina&nbsp;de&nbsp;Ferro"
+
+#: script/world.js:121
+msgid "Coal&nbsp;Mine"
+msgstr "Mina&nbsp;de&nbsp;Carvão"
+
+#: script/world.js:122
+msgid "Sulphur&nbsp;Mine"
+msgstr "Mina&nbsp;de&nbsp;Enxofre"
+
+#: script/world.js:123
+msgid "An&nbsp;Old&nbsp;House"
+msgstr "Uma&nbsp;Casa&nbsp;Velha"
+
+#: script/world.js:124
+msgid "A&nbsp;Damp&nbsp;Cave"
+msgstr "Uma&nbsp;Caverna&nbsp;Úmida"
+
+#: script/world.js:125
+msgid "An&nbsp;Abandoned&nbsp;Town"
+msgstr "Uma&nbsp;Cidade&nbsp;Abandonada"
+
+#: script/world.js:126
+msgid "A&nbsp;Ruined&nbsp;City"
+msgstr "Uma&nbsp;Cidade&nbsp;Arruinada"
+
+#: script/world.js:127
+msgid "A&nbsp;Crashed&nbsp;Starship"
+msgstr "Uma&nbsp;Nave&nbsp;Caída"
+
+#: script/world.js:128
+msgid "A&nbsp;Borehole"
+msgstr "Um&nbsp;Furo"
+
+#: script/world.js:129
+msgid "A&nbsp;Battlefield"
+msgstr "Um&nbsp;Campo de Batalha"
+
+#: script/world.js:130
+msgid "A&nbsp;Murky&nbsp;Swamp"
+msgstr "Um&nbsp;Pântano&nbsp;Obscuro"
+
+#: script/world.js:134
+msgid "A&nbsp;Destroyed&nbsp;Village"
+msgstr "Uma&nbsp;Aldeia&nbsp;Destruída"
+
+#: script/world.js:256
+msgid "water:{0}"
+msgstr "água:{0}"
+
+#: script/world.js:283
+msgid "pockets"
+msgstr "bolsos"
+
+#: script/world.js:307
+msgid "hp: {0}/{1}"
+msgstr "hp: {0}/{1}"
+
+#: script/world.js:314
+msgid "{0}:{1}"
+msgstr "{0}:{1}"
+
+#: script/world.js:349
+msgid "dangerous to be this far from the village without proper protection"
+msgstr "perigoso estar tão longe da aldeia sem proteção adequada"
+
+#: script/world.js:351
+msgid "safer here"
+msgstr "mais seguro aqui"
+
+#: script/world.js:451
+msgid "the meat has run out"
+msgstr "a carne se esgotou"
+
+#: script/world.js:456
+msgid "starvation sets in"
+msgstr "a fome chega"
+
+#: script/world.js:481
+msgid "there is no more water"
+msgstr "não tem mais água"
+
+#: script/world.js:485
+msgid "the thirst becomes unbearable"
+msgstr "a sede se torna insuportável"
+
+#: script/world.js:558
+msgid "the trees yield to dry grass. the yellowed brush rustles in the wind."
+msgstr "as árvores produzem grama seca. a moita amarelada agita-se com o vento."
+
+#: script/world.js:561
+msgid "the trees are gone. parched earth and blowing dust are poor replacements."
+msgstr "as árvores se foram. terra seca e poeira soprando são substituições pobres."
+
+#: script/world.js:568
+msgid ""
+"trees loom on the horizon. grasses gradually yield to a forest floor of dry "
+"branches and fallen leaves."
+msgstr ""
+"árvores surgem no horizonte. a grama gradualmente cede a um chão de galhos secos e "
+"folhas caídas."
+
+#: script/world.js:571
+msgid "the grasses thin. soon, only dust remains."
+msgstr "a grama vai desaparecendo. logo, só sobrará poeira"
+
+#: script/world.js:578
+msgid "the barrens break at a sea of dying grass, swaying in the arid breeze."
+msgstr "a esterilidade gera um mar de gramas mortas, balançando na brisa árida."
+
+#: script/world.js:581
+msgid ""
+"a wall of gnarled trees rises from the dust. their branches twist into a skeletal "
+"canopy overhead."
+msgstr ""
+"uma muralha de árvores retorcidas sobe da poeira. seus ramos dobram-se em um dossel "
+"esquelético."
+
+#: script/world.js:817
+msgid "Wanderer"
+msgstr "errante"
+
+#: script/world.js:822
+msgid "The&nbsp;Village"
+msgstr "A&nbsp;Aldeia"
+
+#: script/world.js:851
+msgid "the world fades"
+msgstr "o mundo vai sumindo"
+
+#: script/world.js:952 script/events/setpieces.js:2961
+msgid "water replenished"
+msgstr "água reabastecida"
+
+#: script/world.js:982
+msgid "A Barren World"
+msgstr "Um Mundo Estéril"
+
+#: script/events/encounters.js:7
+msgid "A Snarling Beast"
+msgstr "Uma Fera Furiosa"
+
+#: script/events/encounters.js:15
+msgid "snarling beast"
+msgstr "fera furiosa"
+
+#: script/events/encounters.js:16
+msgid "the snarling beast is dead"
+msgstr "a fera furiosa está morta"
+
+#: script/events/encounters.js:39
+msgid "a snarling beast leaps out of the underbrush"
+msgstr "uma fera furiosa salta para fora do mato"
+
+#: script/events/encounters.js:44
+msgid "A Gaunt Man"
+msgstr "Um Homem Esquelético"
+
+#: script/events/encounters.js:52
+msgid "gaunt man"
+msgstr "homem esquelético"
+
+#: script/events/encounters.js:53
+msgid "the gaunt man is dead"
+msgstr "o homem esquelético está morto"
+
+#: script/events/encounters.js:76
+msgid "a gaunt man approaches, a crazed look in his eye"
+msgstr "um homem esquelético se aproxima, com um olhar enlouquecido em seus olhos"
+
+#: script/events/encounters.js:81
+msgid "A Strange Bird"
+msgstr "Um Pássaro Estranho"
+
+#: script/events/encounters.js:89
+msgid "strange bird"
+msgstr "pássaro estranho"
+
+#: script/events/encounters.js:90
+msgid "the strange bird is dead"
+msgstr "o pássaro estranho está morto"
+
+#: script/events/encounters.js:113
+msgid "a strange looking bird speeds across the plains"
+msgstr "um pássaro de aparência estranha surge através das planícies"
+
+#: script/events/encounters.js:119
+msgid "A Shivering Man"
+msgstr "Um Homem arrepiante"
+
+#: script/events/encounters.js:127
+msgid "shivering man"
+msgstr "homem arrepiante"
+
+#: script/events/encounters.js:128
+msgid "the shivering man is dead"
+msgstr "o homem arrepiante está morto"
+
+#: script/events/encounters.js:156
+msgid "a shivering man approaches and attacks with surprising strength"
+msgstr "o homem arrepiante se aproxima e ataca com uma força surpreendente"
+
+#: script/events/encounters.js:161
+msgid "A Man-Eater"
+msgstr "Um canibal"
+
+#: script/events/encounters.js:169
+msgid "man-eater"
+msgstr "canibal"
+
+#: script/events/encounters.js:170
+msgid "the man-eater is dead"
+msgstr "O canibal está morto"
+
+#: script/events/encounters.js:193
+msgid "a large creature attacks, claws freshly bloodied"
+msgstr "uma grande criatura ataca, garras recém-sangrando"
+
+#: script/events/encounters.js:198
+msgid "A Scavenger"
+msgstr "Um escavador"
+
+#: script/events/encounters.js:206
+msgid "scavenger"
+msgstr "escavador"
+
+#: script/events/encounters.js:207
+msgid "the scavenger is dead"
+msgstr "o escavador está morto"
+
+#: script/events/encounters.js:235
+msgid "a scavenger draws close, hoping for an easy score"
+msgstr "o escavador se aproxima, esperando por um ponto fraco"
+
+#: script/events/encounters.js:240
+msgid "A Huge Lizard"
+msgstr "Um Lagarto Enorme"
+
+#: script/events/encounters.js:248
+msgid "lizard"
+msgstr "lagarto"
+
+#: script/events/encounters.js:249
+msgid "the lizard is dead"
+msgstr "o lagarto está morto"
+
+#: script/events/encounters.js:272
+msgid "the grass thrashes wildly as a huge lizard pushes through"
+msgstr "grama agita freneticamente com o atravessar de um lagarto enorme"
+
+#: script/events/encounters.js:278
+msgid "A Feral Terror"
+msgstr "Um Terror feroz"
+
+#: script/events/encounters.js:286
+msgid "feral terror"
+msgstr "Terror feroz"
+
+#: script/events/encounters.js:287
+msgid "the feral terror is dead"
+msgstr "o bagunceiro selvagem está morto"
+
+#: script/events/encounters.js:310
+msgid "a beast, wilder than imagining, erupts out of the foliage"
+msgstr "uma besta, mais selvagem do que se pode imaginar, surge da folhagem"
+
+#: script/events/encounters.js:315
+msgid "A Soldier"
+msgstr "Um soldado"
+
+#: script/events/encounters.js:323
+msgid "soldier"
+msgstr "soldado"
+
+#: script/events/encounters.js:324
+msgid "the soldier is dead"
+msgstr "o soldado está morto"
+
+#: script/events/encounters.js:353
+msgid "a soldier opens fire from across the desert"
+msgstr "um soldado abre fogo do outro lado do deserto"
+
+#: script/events/encounters.js:358
+msgid "A Sniper"
+msgstr "Um Sniper"
+
+#: script/events/encounters.js:366
+msgid "sniper"
+msgstr "sniper"
+
+#: script/events/encounters.js:367
+msgid "the sniper is dead"
+msgstr "o sniper está morto"
+
+#: script/events/encounters.js:396
+msgid "a shot rings out, from somewhere in the long grass"
+msgstr "um tiro ressoa, de algum lugar na grama longa"
+
+#: script/events/global.js:6
+msgid "The Thief"
+msgstr "O Ladrão"
+
+#: script/events/global.js:13
+msgid "the villagers haul a filthy man out of the store room."
+msgstr "os moradores levam o homem imundo para fora da sala de abastecimento"
+
+#: script/events/global.js:14
+msgid "say his folk have been skimming the supplies."
+msgstr "diz que um dos seu povo têm roubado os suprimentos."
+
+#: script/events/global.js:15
+msgid "say he should be strung up as an example."
+msgstr "diz que ele deve ser enforcado como um exemplo."
+
+#: script/events/global.js:17
+msgid "a thief is caught"
+msgstr "um ladrão é pego"
+
+#: script/events/global.js:21
+msgid "hang him"
+msgstr "enforcá-lo"
+
+#: script/events/global.js:25
+msgid "spare him"
+msgstr "poupá-lo"
+
+#: script/events/global.js:32
+msgid "the villagers hang the thief high in front of the store room."
+msgstr "os aldeões penduram o ladrão em frente da sala de abastecimento."
+
+#: script/events/global.js:33
+msgid "the point is made. in the next few days, the missing supplies are returned."
+msgstr ""
+"a mensagem é recebida. nos próximos dias, os suprimentos que faltavam são "
+"devolvidos."
+
+#: script/events/global.js:49
+msgid "the man says he's grateful. says he won't come around any more."
+msgstr "o homem diz que está grato. diz que não vai vir mais por perto."
+
+#: script/events/global.js:50
+msgid "shares what he knows about sneaking before he goes."
+msgstr "compartilha seu conhecimento de furtividade antes de ir. "
+
+#: script/events/outside.js:6
+msgid "A Ruined Trap"
+msgstr "Uma Armadilha Arruinada"
+
+#: script/events/outside.js:13
+msgid "some of the traps have been torn apart."
+msgstr "algumas das armadilhas foram dilacerados."
+
+#: script/events/outside.js:14
+msgid "large prints lead away, into the forest."
+msgstr "grandes pegadas seguem para dentro da floresta."
+
+#: script/events/outside.js:22
+msgid "some traps have been destroyed"
+msgstr "algumas armadilhas foram destruídas"
+
+#: script/events/outside.js:26
+msgid "track them"
+msgstr "monitorá-los"
+
+#: script/events/outside.js:30 script/events/room.js:71 script/events/room.js:122
+msgid "ignore them"
+msgstr "ignorá-los"
+
+#: script/events/outside.js:37
+msgid "the tracks disappear after just a few minutes."
+msgstr "as pegadas desaparecem depois de alguns minutos."
+
+#: script/events/outside.js:38
+msgid "the forest is silent."
+msgstr "a floresta está em silêncio."
+
+#: script/events/outside.js:40
+msgid "nothing was found"
+msgstr "nada foi encontrado"
+
+#: script/events/outside.js:43 script/events/outside.js:61
+#: script/events/outside.js:126 script/events/outside.js:144
+#: script/events/outside.js:197 script/events/outside.js:215
+#: script/events/outside.js:248 script/events/outside.js:282
+msgid "go home"
+msgstr "ir para casa"
+
+#: script/events/outside.js:50
+msgid "not far from the village lies a large beast, its fur matted with blood."
+msgstr ""
+"não muito longe da aldeia encontra-se uma grande fera, com pelo cheio de sangue."
+
+#: script/events/outside.js:51
+msgid "it puts up little resistance before the knife."
+msgstr "ele apresenta pouca resistência diante da faca."
+
+#: script/events/outside.js:53
+#, fuzzy
+msgid "there was a beast. it's dead now"
+msgstr "a fera furiosa está morta"
+
+#: script/events/outside.js:69
+msgid "Fire"
+msgstr "Incêndio"
+
+#: script/events/outside.js:76
+msgid "a fire rampages through one of the huts, destroying it."
+msgstr "um incêndio começa em uma das cabanas, destruindo-a."
+
+#: script/events/outside.js:77
+msgid "all residents in the hut perished in the fire."
+msgstr "todos os residentes da cabana pereceram no fogo."
+
+#: script/events/outside.js:79
+msgid "a fire has started"
+msgstr "um incêndio começou"
+
+# command
+#: script/events/outside.js:86
+#, fuzzy
+msgid "mourn"
+msgstr "luto"
+
+#: script/events/outside.js:87
+msgid "some villagers have died"
+msgstr "alguns aldeões morreram"
+
+#: script/events/outside.js:95
+msgid "Sickness"
+msgstr "Doença"
+
+#: script/events/outside.js:102
+msgid "a sickness is spreading through the village."
+msgstr "uma doença está se espalhando através da aldeia."
+
+#: script/events/outside.js:103 script/events/outside.js:161
+msgid "medicine is needed immediately."
+msgstr "é necessário remédio imediatamente."
+
+#: script/events/outside.js:105
+#, fuzzy
+msgid "some villagers are ill"
+msgstr "alguns aldeões estão doentes"
+
+#: script/events/outside.js:109
+msgid "1 medicine"
+msgstr "um remédio"
+
+#: script/events/outside.js:114
+msgid "ignore it"
+msgstr "ignorá-la"
+
+#: script/events/outside.js:121
+msgid "the sickness is cured in time."
+msgstr "a doença é curada em tempo."
+
+#: script/events/outside.js:123
+msgid "sufferers are healed"
+msgstr "Doentes são curados"
+
+#: script/events/outside.js:133
+msgid "the sickness spreads through the village."
+msgstr "a doença se espalha através da aldeia."
+
+#: script/events/outside.js:134
+msgid "the days are spent with burials."
+msgstr "os dias são gastos com os enterros."
+
+#: script/events/outside.js:135 script/events/outside.js:205
+msgid "the nights are rent with screams."
+msgstr "as noites são preenchidas com gritos."
+
+#: script/events/outside.js:137
+msgid "sufferers are left to die"
+msgstr "Doentes são deixados para morrer"
+
+#: script/events/outside.js:153
+msgid "Plague"
+msgstr "Praga"
+
+#: script/events/outside.js:160
+msgid "a terrible plague is fast spreading through the village."
+msgstr "uma terrível praga está se espalhando através da aldeia."
+
+#: script/events/outside.js:163
+msgid "a plague afflicts the village"
+msgstr "a praga se espalha pela aldeia."
+
+# command
+#: script/events/outside.js:168
+msgid "buy medicine"
+msgstr "comprar remédios"
+
+#: script/events/outside.js:174
+msgid "5 medicine"
+msgstr "5 remédios"
+
+#: script/events/outside.js:179
+msgid "do nothing"
+msgstr "não fazer nada"
+
+#: script/events/outside.js:186
+msgid "the plague is kept from spreading."
+msgstr "a praga é evitada de se espalhar."
+
+#: script/events/outside.js:187
+msgid "only a few die."
+msgstr "apenas alguns morrem."
+
+#: script/events/outside.js:188
+msgid "the rest bury them."
+msgstr "o resto foi enterrado."
+
+#: script/events/outside.js:190
+msgid "epidemic is eradicated eventually"
+msgstr "A epidemia é finalmente erradicada "
+
+#: script/events/outside.js:204
+msgid "the plague rips through the village."
+msgstr "a praga se espalha pela aldeia."
+
+#: script/events/outside.js:206
+msgid "the only hope is a quick death."
+msgstr "a única esperança é uma morte rápida."
+
+#: script/events/outside.js:208
+msgid "population is almost exterminated"
+msgstr "a população está quase exterminada"
+
+#: script/events/outside.js:224
+msgid "A Beast Attack"
+msgstr "Um Ataque de feras"
+
+#: script/events/outside.js:231
+msgid "a pack of snarling beasts pours out of the trees."
+msgstr "um bando de feras selvagens descem das árvores."
+
+#: script/events/outside.js:232
+msgid "the fight is short and bloody, but the beasts are repelled."
+msgstr "a luta é curta e sangrenta, mas os animais são expulsos."
+
+#: script/events/outside.js:233
+msgid "the villagers retreat to mourn the dead."
+msgstr "os aldeões retiram-se para chorar pelos mortos."
+
+#: script/events/outside.js:235
+msgid "wild beasts attack the villagers"
+msgstr "Feras selvagens atacam os aldeões"
+
+#: script/events/outside.js:249
+msgid "predators become prey. price is unfair"
+msgstr "Predadores se tornam presas. o preço é injusto"
+
+#: script/events/outside.js:258
+msgid "A Military Raid"
+msgstr "Um Ataque Militar"
+
+#: script/events/outside.js:265
+msgid "a gunshot rings through the trees."
+msgstr "um tiro ecoa através das árvores."
+
+#: script/events/outside.js:266
+msgid "well armed men charge out of the forest, firing into the crowd."
+msgstr ""
+"homens bem armados surgem para fora da floresta, disparando contra a multidão."
+
+#: script/events/outside.js:267
+msgid "after a skirmish they are driven away, but not without losses."
+msgstr "depois do conflito eles são expulsos, mas não sem perdas."
+
+#: script/events/outside.js:269
+#, fuzzy
+msgid "troops storm the village"
+msgstr "tropas atormentam a aldeia."
+
+#: script/events/outside.js:283
+msgid "warfare is bloodthirsty"
+msgstr "A guerra é sangrenta"
+
+#: script/events/room.js:6
+msgid "The Nomad"
+msgstr "O Nômade"
+
+#: script/events/room.js:13
+msgid "a nomad shuffles into view, laden with makeshift bags bound with rough twine."
+msgstr ""
+"um nômade aparece diante de seus olhos, carregando bolsas improvisadas amarradas "
+"com cordas ásperas."
+
+#: script/events/room.js:14
+msgid "won't say from where he came, but it's clear that he's not staying."
+msgstr "não disse de onde ele veio, mas é claro que ele não pretende ficar."
+
+#: script/events/room.js:16
+msgid "a nomad arrives, looking to trade"
+msgstr "um nômade chega, olhando para as lojas"
+
+#: script/events/room.js:20
+msgid "buy scales"
+msgstr "comprar escamas"
+
+#: script/events/room.js:25
+msgid "buy teeth"
+msgstr "comprar dentes"
+
+#: script/events/room.js:30
+msgid "buy bait"
+msgstr "comprar isca"
+
+#: script/events/room.js:33
+msgid "traps are more effective with bait."
+msgstr "armadilhas são mais eficazes com isca."
+
+#: script/events/room.js:39
+msgid "buy compass"
+msgstr "comprar bússola"
+
+#: script/events/room.js:42
+msgid "the old compass is dented and dusty, but it looks to work."
+msgstr "a velha bússola está amassada e empoeirada, mas parece funcionar."
+
+#: script/events/room.js:45 script/events/room.js:227 script/events/room.js:240
+#: script/events/room.js:253 script/events/room.js:309 script/events/room.js:332
+#: script/events/room.js:388 script/events/room.js:411 script/events/room.js:450
+#: script/events/room.js:568 script/events/room.js:584 script/events/room.js:600
+#: script/events/room.js:611
+msgid "say goodbye"
+msgstr "diga adeus"
+
+#: script/events/room.js:53 script/events/room.js:104
+msgid "Noises"
+msgstr "Barulhos"
+
+#: script/events/room.js:60
+msgid "through the walls, shuffling noises can be heard."
+msgstr "através das paredes, fortes barulhos podem ser ouvidos."
+
+#: script/events/room.js:61
+msgid "can't tell what they're up to."
+msgstr "não se tem certeza do que realmente eles se tratam."
+
+#: script/events/room.js:63
+msgid "strange noises can be heard through the walls"
+msgstr "barulhos estranhos podem ser ouvidos através das paredes"
+
+#: script/events/room.js:67 script/events/room.js:118 script/events/setpieces.js:1662
+msgid "investigate"
+msgstr "investigar"
+
+#: script/events/room.js:78
+msgid "vague shapes move, just out of sight."
+msgstr "formas estranhas se movem, fora da vista."
+
+#: script/events/room.js:79
+msgid "the sounds stop."
+msgstr "os sons param."
+
+#: script/events/room.js:83 script/events/room.js:96
+msgid "go back inside"
+msgstr "volte para dentro"
+
+#: script/events/room.js:91
+msgid "a bundle of sticks lies just beyond the threshold, wrapped in coarse furs."
+msgstr "um punhhado de gravetos estão na entrada, envolto em peles grossas."
+
+#: script/events/room.js:92
+msgid "the night is silent."
+msgstr "a noite é silenciosa."
+
+#: script/events/room.js:111
+msgid "scratching noises can be heard from the store room."
+msgstr "barulhos podem ser ouvidos da sala de abastecimento."
+
+#: script/events/room.js:112
+msgid "something's in there."
+msgstr "tem algo lá."
+
+#: script/events/room.js:114
+msgid "something's in the store room"
+msgstr "algo está na sala de abastecimento"
+
+#: script/events/room.js:129 script/events/room.js:149 script/events/room.js:169
+msgid "some wood is missing."
+msgstr "estão faltando algumas madeiras."
+
+#: script/events/room.js:130
+msgid "the ground is littered with small scales"
+msgstr "o chão está repleto de pequenas escamas"
+
+#: script/events/room.js:150
+msgid "the ground is littered with small teeth"
+msgstr "o chão está repleto de dentes pequenos"
+
+#: script/events/room.js:170
+msgid "the ground is littered with scraps of cloth"
+msgstr "o chão está repleto de pedaços de pano"
+
+#: script/events/room.js:190
+msgid "The Beggar"
+msgstr "O Mendigo"
+
+#: script/events/room.js:197
+msgid "a beggar arrives."
+msgstr "um mendigo chega."
+
+#: script/events/room.js:198
+msgid "asks for any spare furs to keep him warm at night."
+msgstr "pede por um pouco de pele para mantê-lo aquecido durante a noite."
+
+#: script/events/room.js:200
+msgid "a beggar arrives"
+msgstr "um mendigo chega"
+
+#: script/events/room.js:204
+msgid "give 50"
+msgstr "dar 50"
+
+#: script/events/room.js:209 script/events/room.js:276 script/events/room.js:355
+msgid "give 100"
+msgstr "dar 100"
+
+#: script/events/room.js:214 script/events/room.js:286 script/events/room.js:482
+msgid "turn him away"
+msgstr "mandá-lo embora"
+
+#: script/events/room.js:222 script/events/room.js:235 script/events/room.js:248
+msgid "the beggar expresses his thanks."
+msgstr "o mendigo expressa seus agradecimentos."
+
+#: script/events/room.js:223
+msgid "leaves a pile of small scales behind."
+msgstr "deixa uma pilha de pequenas escamas para trás."
+
+#: script/events/room.js:236
+msgid "leaves a pile of small teeth behind."
+msgstr "deixa uma pilha de pequenos dentes para atrás."
+
+#: script/events/room.js:249
+msgid "leaves some scraps of cloth behind."
+msgstr "deixa alguns pedaços de pano para trás."
+
+#: script/events/room.js:262 script/events/room.js:341
+msgid "The Mysterious Wanderer"
+msgstr "O viajante Misterioso"
+
+#: script/events/room.js:269
+msgid ""
+"a wanderer arrives with an empty cart. says if he leaves with wood, he'll be back "
+"with more."
+msgstr ""
+"um viajante chega com um carrinho vazio. diz que se ele sair com madeira, ele "
+"voltará com mais."
+
+#: script/events/room.js:270
+msgid "builder's not sure he's to be trusted."
+msgstr "o construtor não tem certeza se ele é de confiança."
+
+#: script/events/room.js:272 script/events/room.js:351
+msgid "a mysterious wanderer arrives"
+msgstr "um misterioso viajante chega"
+
+#: script/events/room.js:281 script/events/room.js:360
+msgid "give 500"
+msgstr "dar 500"
+
+#: script/events/room.js:293 script/events/room.js:316
+msgid "the wanderer leaves, cart loaded with wood"
+msgstr "o viajante sai com o carrinho carregado de madeira"
+
+#: script/events/room.js:299 script/events/room.js:322
+msgid "the mysterious wanderer returns, cart piled high with wood."
+msgstr "o viajante misterioso retorna, com o carrinho cheio de madeira."
+
+#: script/events/room.js:348
+msgid ""
+"a wanderer arrives with an empty cart. says if she leaves with furs, she'll be back "
+"with more."
+msgstr ""
+"uma viajante chega com um carrinho vazio. Disse que se ela sair com peles, ela "
+"voltará com mais."
+
+#: script/events/room.js:349
+msgid "builder's not sure she's to be trusted."
+msgstr "o construtor não tem certeza se ela é confiável."
+
+#: script/events/room.js:365
+msgid "turn her away"
+msgstr "mandá-la embora"
+
+#: script/events/room.js:372 script/events/room.js:395
+msgid "the wanderer leaves, cart loaded with furs"
+msgstr "A viajante deixa um carrinho carregado com peles"
+
+#: script/events/room.js:378 script/events/room.js:401
+msgid "the mysterious wanderer returns, cart piled high with furs."
+msgstr "a viajante misteriosa retorna, com o carrinho repleto de peles."
+
+#: script/events/room.js:420
+msgid "The Scout"
+msgstr "A exploradora"
+
+#: script/events/room.js:427
+msgid "the scout says she's been all over."
+msgstr "a exploradora disse que esteve em toda parte"
+
+#: script/events/room.js:428
+msgid "willing to talk about it, for a price."
+msgstr "disposta a falar sobre isso, por um preço."
+
+#: script/events/room.js:430
+msgid "a scout stops for the night"
+msgstr "uma exploradora fica para a noite"
+
+#: script/events/room.js:434
+msgid "buy map"
+msgstr "comprar mapa"
+
+#: script/events/room.js:436
+msgid "the map uncovers a bit of the world"
+msgstr "o mapa revela um pouco do mundo"
+
+#: script/events/room.js:440
+msgid "learn scouting"
+msgstr "aprender à explorar"
+
+#: script/events/room.js:459
+msgid "The Master"
+msgstr "O Mestre"
+
+#: script/events/room.js:466
+msgid "an old wanderer arrives."
+msgstr "um velho viajante chega."
+
+#: script/events/room.js:467
+msgid "he smiles warmly and asks for lodgings for the night."
+msgstr "ele sorri calorosamente e pede alojamentos para a noite."
+
+#: script/events/room.js:469
+msgid "an old wanderer arrives"
+msgstr "um velho viajante chega"
+
+#: script/events/room.js:473
+msgid "agree"
+msgstr "concordar"
+
+#: script/events/room.js:489
+msgid "in exchange, the wanderer offers his wisdom."
+msgstr "em troca, o viajante oferece sua sabedoria."
+
+#: script/events/room.js:493
+msgid "evasion"
+msgstr "evasão"
+
+#: script/events/room.js:503
+msgid "precision"
+msgstr "precisão"
+
+#: script/events/room.js:513
+msgid "force"
+msgstr "força"
+
+#: script/events/room.js:532
+msgid "The Sick Man"
+msgstr "O Homem Doente"
+
+#: script/events/room.js:539
+msgid "a man hobbles up, coughing."
+msgstr "um homem mancando entra, tossindo."
+
+#: script/events/room.js:540
+msgid "he begs for medicine."
+msgstr "ele implora por remédios."
+
+#: script/events/room.js:542
+msgid "a sick man hobbles up"
+msgstr "um homem doente"
+
+#: script/events/room.js:546
+msgid "give 1 medicine"
+msgstr "dar 1 remédio"
+
+#: script/events/room.js:548
+msgid "the man swallows the medicine eagerly"
+msgstr "o homem engole o remédio rapidamente"
+
+#: script/events/room.js:552
+msgid "tell him to leave"
+msgstr "diga-lhe para sair"
+
+#: script/events/room.js:559 script/events/room.js:575 script/events/room.js:591
+msgid "the man is thankful."
+msgstr "o homem é grato."
+
+#: script/events/room.js:560 script/events/room.js:576 script/events/room.js:592
+msgid "he leaves a reward."
+msgstr "ele deixa uma recompensa."
+
+#: script/events/room.js:561
+msgid "some weird metal he picked up on his travels."
+msgstr "algum metal estranho ele pegou em suas viagens."
+
+#: script/events/room.js:577
+msgid "some weird glowing boxes he picked up on his travels."
+msgstr "algumas estranhas caixas brilhantes que ele pegou em suas viagens."
+
+#: script/events/room.js:593
+msgid "all he has are some scales."
+msgstr "tudo o que ele tem algumas balanças."
+
+#: script/events/room.js:607
+msgid "the man expresses his thanks and hobbles off."
+msgstr "o homem expressa seus agradecimentos e desfalece."
+
+#: script/events/setpieces.js:6
+msgid "An Outpost"
+msgstr "um Posto avançado"
+
+#: script/events/setpieces.js:10 script/events/setpieces.js:12
+msgid "a safe place in the wilds."
+msgstr "um lugar seguro na selva."
+
+#: script/events/setpieces.js:34
+msgid "A Murky Swamp"
+msgstr "Um pântano escuro"
+
+#: script/events/setpieces.js:38
+msgid "rotting reeds rise out of the swampy earth."
+msgstr "Palmeiras podres sobem da terra pantanosa."
+
+#: script/events/setpieces.js:39
+msgid "a lone frog sits in the muck, silently."
+msgstr "um sapo solitário senta-se na lama, em silêncio."
+
+#: script/events/setpieces.js:41
+msgid "a swamp festers in the stagnant air."
+msgstr "um pântano apodrece no ar parado."
+
+#: script/events/setpieces.js:44 script/events/setpieces.js:549
+#: script/events/setpieces.js:606 script/events/setpieces.js:888
+#: script/events/setpieces.js:1313 script/events/setpieces.js:1331
+#: script/events/setpieces.js:3535
+msgid "enter"
+msgstr "entrar"
+
+#: script/events/setpieces.js:55
+msgid "deep in the swamp is a moss-covered cabin."
+msgstr "nas profundezas do pântano tem uma cabine coberta de musgo."
+
+#: script/events/setpieces.js:56
+msgid "an old wanderer sits inside, in a seeming trance."
+msgstr "um velho viajante senta-se no interior, em uma aparente transe."
+
+#: script/events/setpieces.js:61
+msgid "talk"
+msgstr "conversa"
+
+#: script/events/setpieces.js:72
+msgid "the wanderer takes the charm and nods slowly."
+msgstr "o viajante usa seu charme e acena com a cabeça lentamente."
+
+#: script/events/setpieces.js:73
+msgid "he speaks of once leading the great fleets to fresh worlds."
+msgstr "ele fala de quando liderava grandes frotas por novos mundos"
+
+#: script/events/setpieces.js:74
+msgid "unfathomable destruction to fuel wanderer hungers."
+msgstr "destruição imensuraveis era o cumbustivel do viajante faminto."
+
+#: script/events/setpieces.js:75
+msgid "his time here, now, is his penance."
+msgstr "seu tempo aqui, agora, é a sua penitência."
+
+#: script/events/setpieces.js:91
+msgid "A Damp Cave"
+msgstr "Uma Caverna Úmida"
+
+#: script/events/setpieces.js:95
+msgid "the mouth of the cave is wide and dark."
+msgstr "a boca da caverna é grande e escura."
+
+#: script/events/setpieces.js:96
+msgid "can't see what's inside."
+msgstr "não se pode ver o que está dentro."
+
+#: script/events/setpieces.js:98
+msgid "the earth here is split, as if bearing an ancient wound"
+msgstr "a terra está separada, como se carregasse uma ferida antiga"
+
+#: script/events/setpieces.js:101 script/events/setpieces.js:2944
+#: script/events/setpieces.js:3458
+msgid "go inside"
+msgstr "ir para dentro"
+
+#: script/events/setpieces.js:120 script/events/setpieces.js:265
+msgid "a startled beast defends its home"
+msgstr "um animal assustado defende sua casa"
+
+#: script/events/setpieces.js:135 script/events/setpieces.js:186
+#: script/events/setpieces.js:228 script/events/setpieces.js:247
+#: script/events/setpieces.js:280 script/events/setpieces.js:314
+#: script/events/setpieces.js:348 script/events/setpieces.js:382
+#: script/events/setpieces.js:588 script/events/setpieces.js:644
+#: script/events/setpieces.js:683 script/events/setpieces.js:717
+#: script/events/setpieces.js:757 script/events/setpieces.js:796
+#: script/events/setpieces.js:835 script/events/setpieces.js:869
+#: script/events/setpieces.js:920 script/events/setpieces.js:938
+#: script/events/setpieces.js:961 script/events/setpieces.js:1000
+#: script/events/setpieces.js:1039 script/events/setpieces.js:1266
+#: script/events/setpieces.js:1282 script/events/setpieces.js:1298
+#: script/events/setpieces.js:1408 script/events/setpieces.js:1448
+#: script/events/setpieces.js:1492 script/events/setpieces.js:1510
+#: script/events/setpieces.js:1526 script/events/setpieces.js:1563
+#: script/events/setpieces.js:1602 script/events/setpieces.js:1642
+#: script/events/setpieces.js:1682 script/events/setpieces.js:1699
+#: script/events/setpieces.js:1716 script/events/setpieces.js:1734
+#: script/events/setpieces.js:1778 script/events/setpieces.js:1804
+#: script/events/setpieces.js:1822 script/events/setpieces.js:1861
+#: script/events/setpieces.js:1902 script/events/setpieces.js:1927
+#: script/events/setpieces.js:1957 script/events/setpieces.js:1998
+#: script/events/setpieces.js:2034 script/events/setpieces.js:2069
+#: script/events/setpieces.js:2110 script/events/setpieces.js:2151
+#: script/events/setpieces.js:2187 script/events/setpieces.js:2222
+#: script/events/setpieces.js:2257 script/events/setpieces.js:2302
+#: script/events/setpieces.js:2328 script/events/setpieces.js:3204
+#: script/events/setpieces.js:3244 script/events/setpieces.js:3278
+#: script/events/setpieces.js:3347 script/events/setpieces.js:3381
+#: script/events/setpieces.js:3420
+msgid "continue"
+msgstr "continuar"
+
+#: script/events/setpieces.js:140 script/events/setpieces.js:157
+#: script/events/setpieces.js:191 script/events/setpieces.js:233
+#: script/events/setpieces.js:252 script/events/setpieces.js:285
+#: script/events/setpieces.js:319 script/events/setpieces.js:353
+#: script/events/setpieces.js:387 script/events/setpieces.js:429
+#: script/events/setpieces.js:481 script/events/setpieces.js:513
+msgid "leave cave"
+msgstr "deixar caverna"
+
+#: script/events/setpieces.js:148
+msgid "the cave narrows a few feet in."
+msgstr "a caverna vai se estreitando"
+
+#: script/events/setpieces.js:149
+msgid "the walls are moist and moss-covered"
+msgstr "as paredes são úmidas e cobertas de musgo"
+
+#: script/events/setpieces.js:153
+msgid "squeeze"
+msgstr "espremer-se"
+
+#: script/events/setpieces.js:164
+msgid "the remains of an old camp sits just inside the cave."
+msgstr "os restos de um antigo acampamento fica justamente dentro da caverna."
+
+#: script/events/setpieces.js:165
+msgid "bedrolls, torn and blackened, lay beneath a thin layer of dust."
+msgstr ""
+"colchonetes, rasgados e enegrecidas, estavam debaixo de uma fina camada de poeira."
+
+#: script/events/setpieces.js:199
+msgid "the body of a wanderer lies in a small cavern."
+msgstr "o corpo de um viajante encontra-se em uma pequena caverna."
+
+#: script/events/setpieces.js:200
+msgid "rot's been to work on it, and some of the pieces are missing."
+msgstr "a decomposição tem feito seu trabalho nele, e estão faltando alguns pedaços."
+
+#: script/events/setpieces.js:202
+msgid "can't tell what left it here."
+msgstr "não se pode dizer o que o deixou aqui."
+
+#: script/events/setpieces.js:241
+msgid "the torch sputters and dies in the damp air"
+msgstr "a tocha estala e morre no ar úmido"
+
+#: script/events/setpieces.js:242
+msgid "the darkness is absolute"
+msgstr "a escuridão é absoluta"
+
+#: script/events/setpieces.js:244
+msgid "the torch goes out"
+msgstr "a tocha apaga-se"
+
+#: script/events/setpieces.js:299
+msgid "a cave lizard attacks"
+msgstr "um lagarto da caverna ataca"
+
+#: script/events/setpieces.js:333
+msgid "a large beast charges out of the dark"
+msgstr "uma grande fera surge da escuridão"
+
+#: script/events/setpieces.js:367
+msgid "a giant lizard shambles forward"
+msgstr "um lagarto gigante cambaleia para frente"
+
+#: script/events/setpieces.js:395
+msgid "the nest of a large animal lies at the back of the cave."
+msgstr "o ninho de um grande animal se encontra no fundo da caverna."
+
+#: script/events/setpieces.js:437
+msgid "a small supply cache is hidden at the back of the cave."
+msgstr "um esconderijo de suprimentos está escondida no fundo da caverna."
+
+#: script/events/setpieces.js:489
+msgid "an old case is wedged behind a rock, covered in a thick layer of dust."
+msgstr ""
+"uma mala antiga está encravada atrás de uma pedra, coberta de uma espessa camada de "
+"poeira."
+
+#: script/events/setpieces.js:522
+msgid "A Deserted Town"
+msgstr "Uma Cidade Deserta"
+
+#: script/events/setpieces.js:526
+msgid "a small suburb lays ahead, empty houses scorched and peeling."
+msgstr "um pequeno subúrbio fica à frente, casas vazias chamuscadas e descamadas."
+
+#: script/events/setpieces.js:527
+msgid ""
+"broken streetlights stand, rusting. light hasn't graced this place in a long time."
+msgstr ""
+"postes quebrados continuam em pé, enferrujando. luz não ilumina este lugar a muito "
+"tempo."
+
+#: script/events/setpieces.js:529
+msgid "the town lies abandoned, its citizens long dead"
+msgstr "a cidade está abandonada, seus cidadãos morreram há muito tempo"
+
+#: script/events/setpieces.js:532 script/events/setpieces.js:1250
+msgid "explore"
+msgstr "explorar"
+
+#: script/events/setpieces.js:544
+msgid ""
+"where the windows of the schoolhouse aren't shattered, they're blackened with soot."
+msgstr ""
+"onde as janelas da escola não são quebrados, eles estão consumidas pela fuligem."
+
+#: script/events/setpieces.js:545
+msgid "the double doors creak endlessly in the wind."
+msgstr "as portas duplas rangem sem parar no vento."
+
+#: script/events/setpieces.js:554 script/events/setpieces.js:593
+#: script/events/setpieces.js:611 script/events/setpieces.js:649
+#: script/events/setpieces.js:688 script/events/setpieces.js:722
+#: script/events/setpieces.js:762 script/events/setpieces.js:801
+#: script/events/setpieces.js:840 script/events/setpieces.js:874
+#: script/events/setpieces.js:892 script/events/setpieces.js:925
+#: script/events/setpieces.js:942 script/events/setpieces.js:966
+#: script/events/setpieces.js:1005 script/events/setpieces.js:1044
+#: script/events/setpieces.js:1087 script/events/setpieces.js:1120
+#: script/events/setpieces.js:1148 script/events/setpieces.js:1192
+#: script/events/setpieces.js:1214 script/events/setpieces.js:1230
+msgid "leave town"
+msgstr "sair da cidade"
+
+#: script/events/setpieces.js:585
+msgid "ambushed on the street."
+msgstr "emboscado na rua."
+
+#: script/events/setpieces.js:601
+msgid "a squat building up ahead."
+msgstr "um edifício ocupado à frente"
+
+#: script/events/setpieces.js:602
+msgid "a green cross barely visible behind grimy windows."
+msgstr "uma cruz verde pouco visível atrás das janelas sujas."
+
+#: script/events/setpieces.js:618
+msgid "a small cache of supplies is tucked inside a rusting locker."
+msgstr ""
+"um pequeno esconderijo de suprimentos está escondido dentro de um armário "
+"enferrujado."
+
+#: script/events/setpieces.js:680
+msgid "a scavenger waits just inside the door."
+msgstr "um escavador aguarda logo atrás da porta."
+
+#: script/events/setpieces.js:714
+msgid "a beast stands alone in an overgrown park."
+msgstr "uma fera está sozinha em um parque cheio de mato."
+
+#: script/events/setpieces.js:730
+msgid "an overturned caravan is spread across the pockmarked street."
+msgstr "uma caravana virada está espalhada em toda a rua esburacada."
+
+#: script/events/setpieces.js:731
+msgid ""
+"it's been picked over by scavengers, but there's still some things worth taking."
+msgstr "escavadores passaram por aqui, mas ainda há algumas coisas que valem a pena."
+
+#: script/events/setpieces.js:793
+msgid "a madman attacks, screeching."
+msgstr "um homem louco ataca, gritando."
+
+#: script/events/setpieces.js:832
+msgid "a thug moves out of the shadows."
+msgstr "um bandido sai das sombras."
+
+#: script/events/setpieces.js:866
+msgid "a beast charges out of a ransacked classroom."
+msgstr "uma fera surge de uma sala saqueada."
+
+#: script/events/setpieces.js:882
+msgid "through the large gymnasium doors, footsteps can be heard."
+msgstr "através das grandes portas de ginásio, passos podem ser ouvidos."
+
+#: script/events/setpieces.js:883
+msgid "the torchlight casts a flickering glow down the hallway."
+msgstr " a tocha lança um brilho cintilante pelo corredor"
+
+#: script/events/setpieces.js:884
+msgid "the footsteps stop."
+msgstr "os passos param."
+
+#: script/events/setpieces.js:917
+msgid "another beast, draw by the noise, leaps out of a copse of trees."
+msgstr "outra fera, chamada pelo barulho, salta de árvoresde de um bosque."
+
+#: script/events/setpieces.js:933
+msgid "something's causing a commotion a ways down the road."
+msgstr "algo está causando um tumulto na estrada."
+
+#: script/events/setpieces.js:934
+msgid "a fight, maybe."
+msgstr "uma luta, talvez."
+
+#: script/events/setpieces.js:949
+msgid "a small basket of food is hidden under a park bench, with a note attached."
+msgstr ""
+"uma pequena cesta de alimentos está escondido sob um banco do parque, com uma nota "
+"anexada."
+
+#: script/events/setpieces.js:950
+msgid "can't read the words."
+msgstr "não consegue entender as palavras"
+
+#: script/events/setpieces.js:997
+msgid "a panicked scavenger bursts through the door, screaming."
+msgstr "um escavador em pânico irrompe pela porta, gritando."
+
+#: script/events/setpieces.js:1036
+msgid "a man stands over a dead wanderer. notices he's not alone."
+msgstr "um homem está sobre um viajante morto. Note que não está sozinho."
+
+#: script/events/setpieces.js:1052
+msgid "scavenger had a small camp in the school."
+msgstr "escavador tinha um acampamentozinho na escola."
+
+#: script/events/setpieces.js:1053
+msgid "collected scraps spread across the floor like they fell from heaven."
+msgstr "recolheu as sucatas espalhadas no chão, como se elas tivessem caído do céu."
+
+#: script/events/setpieces.js:1095
+msgid "scavenger'd been looking for supplies in here, it seems."
+msgstr "escadores estiveram procurando suprimento aqui, ao que parece."
+
+#: script/events/setpieces.js:1096
+msgid "a shame to let what he'd found go to waste."
+msgstr "uma vergonha deixar o que ele encontrou ir para o lixo."
+
+#: script/events/setpieces.js:1128
+msgid ""
+"beneath the wanderer's rags, clutched in one of its many hands, a glint of steel."
+msgstr ""
+"debaixo dos trapos de um viajante, segurava em uma de suas mãos, algo com um brilho "
+"metálico."
+
+#: script/events/setpieces.js:1129
+msgid "worth killing for, it seems."
+msgstr "vale a pena matar por isso, ao que parece."
+
+#: script/events/setpieces.js:1156
+msgid "eye for an eye seems fair."
+msgstr "olho por olho, parece justo."
+
+#: script/events/setpieces.js:1157
+msgid "always worked before, at least."
+msgstr "sempre trabalhei antes, pelo menos."
+
+#: script/events/setpieces.js:1158
+msgid "picking the bones finds some useful trinkets."
+msgstr "ao procurar entre os ossos encontra algumas bugigangas úteis."
+
+#: script/events/setpieces.js:1200
+msgid "some medicine abandoned in the drawers."
+msgstr "alguns medicamentos abandonados nas gavetas."
+
+#: script/events/setpieces.js:1222
+msgid "the clinic has been ransacked."
+msgstr "a clínica foi saqueada."
+
+#: script/events/setpieces.js:1223
+msgid "only dust and stains remain."
+msgstr "só poeira e as manchas permanecem."
+
+#: script/events/setpieces.js:1239
+msgid "A Ruined City"
+msgstr "Uma Cidade Arruinada"
+
+#: script/events/setpieces.js:1243
+msgid "a battered highway sign stands guard at the entrance to this once-great city."
+msgstr "um semáforo amassado continua de pé na entrada nesta outrora grande cidade."
+
+#: script/events/setpieces.js:1244
+msgid ""
+"the towers that haven't crumbled jut from the landscape like the ribcage of some "
+"ancient beast."
+msgstr ""
+"as torres que não tinham desmoronado sobressaem da paisagem como a caixa torácica "
+"de alguma besta antiga."
+
+#: script/events/setpieces.js:1245
+msgid "might be things worth having still inside."
+msgstr "ainda podem ter coisas que valem a pena dentro."
+
+#: script/events/setpieces.js:1247
+msgid "the towers of a decaying city dominate the skyline"
+msgstr "as torres de uma cidade decadente dominam o horizonte"
+
+#: script/events/setpieces.js:1261
+msgid "the streets are empty."
+msgstr "as ruas estão vazias."
+
+#: script/events/setpieces.js:1262
+msgid "the air is filled with dust, driven relentlessly by the hard winds."
+msgstr "o ar é preenchido com pó, inexoravelmente conduzido pelos ventos fortes."
+
+#: script/events/setpieces.js:1270 script/events/setpieces.js:1286
+#: script/events/setpieces.js:1302 script/events/setpieces.js:1318
+#: script/events/setpieces.js:1335 script/events/setpieces.js:1373
+#: script/events/setpieces.js:1413 script/events/setpieces.js:1453
+#: script/events/setpieces.js:1497 script/events/setpieces.js:1514
+#: script/events/setpieces.js:1530 script/events/setpieces.js:1568
+#: script/events/setpieces.js:1607 script/events/setpieces.js:1647
+#: script/events/setpieces.js:1667 script/events/setpieces.js:1686
+#: script/events/setpieces.js:1703 script/events/setpieces.js:1720
+#: script/events/setpieces.js:1738 script/events/setpieces.js:1783
+#: script/events/setpieces.js:1809 script/events/setpieces.js:1826
+#: script/events/setpieces.js:1866 script/events/setpieces.js:1907
+#: script/events/setpieces.js:1932 script/events/setpieces.js:1962
+#: script/events/setpieces.js:2003 script/events/setpieces.js:2039
+#: script/events/setpieces.js:2074 script/events/setpieces.js:2115
+#: script/events/setpieces.js:2156 script/events/setpieces.js:2192
+#: script/events/setpieces.js:2227 script/events/setpieces.js:2262
+#: script/events/setpieces.js:2363 script/events/setpieces.js:2393
+#: script/events/setpieces.js:2440 script/events/setpieces.js:2476
+#: script/events/setpieces.js:2517 script/events/setpieces.js:2553
+#: script/events/setpieces.js:2588 script/events/setpieces.js:2624
+#: script/events/setpieces.js:2665 script/events/setpieces.js:2706
+#: script/events/setpieces.js:2741 script/events/setpieces.js:2790
+#: script/events/setpieces.js:2835 script/events/setpieces.js:2881
+#: script/events/setpieces.js:2925
+msgid "leave city"
+msgstr "deixar cidade"
+
+#: script/events/setpieces.js:1277
+msgid "orange traffic cones are set across the street, faded and cracked."
+msgstr "cones de sinalização laranjas são deixados na rua, desbotados e rachados."
+
+#: script/events/setpieces.js:1278
+msgid "lights flash through the alleys between buildings."
+msgstr "luzes piscam pelos becos entre os prédios."
+
+#: script/events/setpieces.js:1293
+msgid "a large shanty town sprawls across the streets."
+msgstr "uma grande favela espalha-se pelas ruas."
+
+#: script/events/setpieces.js:1294
+msgid "faces, darkened by soot and blood, stare out from crooked huts."
+msgstr ""
+"rostos, escurecidos pela fuligem e sangue, olham para fora das cabanas tortas."
+
+#: script/events/setpieces.js:1309
+msgid "the shell of an abandoned hospital looms ahead."
+msgstr "a estrutura de um hospital abandonado aparece à frente."
+
+#: script/events/setpieces.js:1325
+msgid "the old tower seems mostly intact."
+msgstr "a antiga torre parece quase intacta."
+
+#: script/events/setpieces.js:1326
+msgid "the shell of a burned out car blocks the entrance."
+msgstr "a estrutura de um carro queimado bloqueia a entrada."
+
+#: script/events/setpieces.js:1327
+msgid "most of the windows at ground level are busted anyway."
+msgstr "a maioria das janelas ao nível do solo estão quebradas de qualquer maneira."
+
+#: script/events/setpieces.js:1342
+msgid "a huge lizard scrambles up out of the darkness of an old metro station."
+msgstr "um lagarto enorme pula para fora da escuridão de uma estação de metrô velha."
+
+#: script/events/setpieces.js:1368
+msgid "descend"
+msgstr "descer"
+
+#: script/events/setpieces.js:1380
+msgid "the shot echoes in the empty street."
+msgstr "o tiro ecoa na rua vazia."
+
+#: script/events/setpieces.js:1420
+msgid "the soldier steps out from between the buildings, rifle raised."
+msgstr "o soldado sai de entre os edifícios, com o rifle levantado."
+
+#: script/events/setpieces.js:1460
+msgid "a frail man stands defiantly, blocking the path."
+msgstr "um homem frágil está desafiadoramente, bloqueando o caminho."
+
+#: script/events/setpieces.js:1505
+msgid "nothing but downcast eyes."
+msgstr "nada além de olhhos tristes."
+
+#: script/events/setpieces.js:1506
+msgid "the people here were broken a long time ago."
+msgstr "as pessoas aqui foram quebradas há muito tempo."
+
+#: script/events/setpieces.js:1521
+msgid "empty corridors."
+msgstr "corredores vazios."
+
+#: script/events/setpieces.js:1522
+msgid "the place has been swept clean by scavengers."
+msgstr "o local tem sido varrido por escavadores."
+
+#: script/events/setpieces.js:1536
+msgid "an old man bursts through a door, wielding a scalpel."
+msgstr "um velho irrompe através de uma porta, empunhando um bisturi."
+
+#: script/events/setpieces.js:1575
+msgid "a thug is waiting on the other side of the wall."
+msgstr "um bandido está esperando do outro lado do muro."
+
+#: script/events/setpieces.js:1615
+msgid "a snarling beast jumps out from behind a car."
+msgstr "uma besta rosnando salta de trás de um carro."
+
+#: script/events/setpieces.js:1656
+msgid "street above the subway platform is blown away."
+msgstr "rua acima da plataforma do metrô está destruída."
+
+#: script/events/setpieces.js:1657
+msgid "lets some light down into the dusty haze."
+msgstr "permite que alguma luz entre na neblina empoeirado."
+
+#: script/events/setpieces.js:1658
+msgid "a sound comes from the tunnel, just ahead."
+msgstr "um som vem do túnel, logo à frente."
+
+#: script/events/setpieces.js:1675
+msgid "looks like a camp of sorts up ahead."
+msgstr "parece um acampamento de todos os tipos à frente."
+
+#: script/events/setpieces.js:1677
+msgid "rusted chainlink is pulled across an alleyway."
+msgstr "arame enferrujado é puxado através de um beco."
+
+#: script/events/setpieces.js:1678
+msgid "fires burn in the courtyard beyond."
+msgstr "fogos queimam no pátio da frente."
+
+#: script/events/setpieces.js:1694
+msgid "more voices can be heard ahead."
+msgstr "mais vozes podem ser ouvidas adiante."
+
+#: script/events/setpieces.js:1695
+msgid "they must be here for a reason."
+msgstr "eles devem estar aqui por uma razão."
+
+#: script/events/setpieces.js:1711
+msgid "the sound of gunfire carries on the wind."
+msgstr "o som do tiroteio ecoa no vento"
+
+#: script/events/setpieces.js:1712
+msgid "the street ahead glows with firelight."
+msgstr "a rua em frente brilha com a luz do fogo."
+
+#: script/events/setpieces.js:1729
+msgid "more squatters are crowding around now."
+msgstr "mais ocupantes estão se aglomerando ao redor agora."
+
+#: script/events/setpieces.js:1730
+msgid "someone throws a stone."
+msgstr "alguém joga uma pedra."
+
+#: script/events/setpieces.js:1746
+msgid "an improvised shop is set up on the sidewalk."
+msgstr "uma loja improvisada foi feita na calçada."
+
+#: script/events/setpieces.js:1747
+msgid "the owner stands by, stoic."
+msgstr "o proprietário se mantém, firmemente"
+
+#: script/events/setpieces.js:1792
+msgid "strips of meat hang drying by the side of the street."
+msgstr "tiras de carne pendurados secando ao lado da rua."
+
+#: script/events/setpieces.js:1793
+msgid "the people back away, avoiding eye contact."
+msgstr "as pessoas se afastam, evitando o contato visual."
+
+#: script/events/setpieces.js:1818
+msgid "someone has locked and barricaded the door to this operating theatre."
+msgstr "alguém tem trancado e bloqueado a porta para esta sala de cirurgias."
+
+#: script/events/setpieces.js:1833
+msgid "a tribe of elderly squatters is camped out in this ward."
+msgstr "uma tribo de ocupantes idosos está acampado nesta ala."
+
+#: script/events/setpieces.js:1874
+msgid "a pack of lizards rounds the corner."
+msgstr "um bando de lagartos cerca o canto."
+
+#: script/events/setpieces.js:1916
+msgid "strips of meat are hung up to dry in this ward."
+msgstr "tiras de carne estão penduradas para secar nesta ala."
+
+#: script/events/setpieces.js:1940
+msgid "a large bird nests at the top of the stairs."
+msgstr "um ninho de um pássaro grande no topo das escadas."
+
+#: script/events/setpieces.js:1971
+msgid "the debris is denser here."
+msgstr "os detritos são mais densos aqui."
+
+#: script/events/setpieces.js:1972
+msgid "maybe some useful stuff in the rubble."
+msgstr "talvez tenha algumas coisas úteis nos escombros."
+
+#: script/events/setpieces.js:2011
+msgid "a swarm of rats rushes up the tunnel."
+msgstr "uma ninhada de ratos percorrem o túnel."
+
+#: script/events/setpieces.js:2047
+msgid "a large man attacks, waving a bayonet."
+msgstr "um grande homem ataca, acenando com uma baioneta."
+
+#: script/events/setpieces.js:2082
+msgid "a second soldier opens fire."
+msgstr "um segundo soldado abre fogo."
+
+#: script/events/setpieces.js:2123
+msgid "a masked soldier rounds the corner, gun drawn"
+msgstr "um soldado mascarado cerca o canto, arma na mão"
+
+#: script/events/setpieces.js:2164
+msgid "the crowd surges forward."
+msgstr "a multidão surge adiante."
+
+#: script/events/setpieces.js:2200
+msgid "a youth lashes out with a tree branch."
+msgstr "um jovem ataca com um galho de árvore."
+
+#: script/events/setpieces.js:2235
+msgid "a squatter stands firmly in the doorway of a small hut."
+msgstr "um ocupante está firmemente na porta de uma pequena cabana."
+
+#: script/events/setpieces.js:2270
+msgid "behind the door, a deformed figure awakes and attacks."
+msgstr "atrás da porta, uma figura deformada acorda e ataca."
+
+#: script/events/setpieces.js:2310
+msgid "as soon as the door is open a little bit, hundreds of tentacles erupt."
+msgstr ""
+"assim que a porta abre-se um pouco, centenas de tentáculos entram em erupção. "
+
+#: script/events/setpieces.js:2337
+msgid "bird must have liked shiney things."
+msgstr "passáro deve gostar de coisas brilhantes."
+
+#: script/events/setpieces.js:2338
+msgid "some good stuff woven into its nest."
+msgstr "alguns bons materiais se entrelaçam em seu ninho."
+
+#: script/events/setpieces.js:2372
+msgid "not much here."
+msgstr "nada aqui."
+
+#: script/events/setpieces.js:2373
+msgid "scavengers must have gotten to this place already."
+msgstr "escavadores já devem ter chegado a este lugar ."
+
+#: script/events/setpieces.js:2403
+msgid "the tunnel opens up at another platform."
+msgstr "o túnel abre em outra plataforma."
+
+#: script/events/setpieces.js:2404
+msgid "the walls are scorched from an old battle."
+msgstr "as paredes estão chamuscados de uma antiga batalha."
+
+#: script/events/setpieces.js:2405
+msgid "bodies and supplies from both sides litter the ground."
+msgstr "corpos e suprimentos de ambos os lados espalhados no chão."
+
+#: script/events/setpieces.js:2449
+msgid "the small military outpost is well supplied."
+msgstr "o pequeno posto militar está bem fornecido."
+
+#: script/events/setpieces.js:2450
+msgid ""
+"arms and munitions, relics from the war, are neatly arranged on the store-room "
+"floor."
+msgstr ""
+"armas e munições, relíquias da guerra, estão dispostas ordenadamente no chão "
+"despensa."
+
+#: script/events/setpieces.js:2451
+msgid "just as deadly now as they were then."
+msgstr "tão mortais como agora como eles eram antigamente."
+
+#: script/events/setpieces.js:2485
+msgid "searching the bodies yields a few supplies."
+msgstr "a procura entre os corpos provém alguns suprimentos."
+
+#: script/events/setpieces.js:2486
+msgid "more soldiers will be on their way."
+msgstr "mais soldados estarão em seu caminho."
+
+#: script/events/setpieces.js:2487
+msgid "time to move on."
+msgstr "tempo de seguir em frente."
+
+#: script/events/setpieces.js:2526
+msgid "the small settlement has clearly been burning a while."
+msgstr "o pequeno povoado foi claramente queimado à pouco tempo."
+
+#: script/events/setpieces.js:2527
+msgid "the bodies of the wanderers that lived here are still visible in the flames."
+msgstr "os corpos dos viajantes que viveram aqui ainda são visíveis nas chamas."
+
+#: script/events/setpieces.js:2528
+msgid "still time to rescue a few supplies."
+msgstr "ainda da tempo de recuperar alguns suprimentos."
+
+#: script/events/setpieces.js:2562
+msgid "the remaining settlers flee from the violence, their belongings forgotten."
+msgstr "os colonos restantes fogem da violência, esquecendo seus pertences."
+
+#: script/events/setpieces.js:2563
+msgid "there's not much, but some useful things can still be found."
+msgstr "não há muito, mas algumas coisas úteis ainda podem ser encontradas."
+
+#: script/events/setpieces.js:2597
+msgid "the young settler was carrying a canvas sack."
+msgstr "o jovem colono estava carregando um saco de lona."
+
+#: script/events/setpieces.js:2598
+msgid "it contains travelling gear, and a few trinkets."
+msgstr "contém ferramentas de viagem, e algumas bugigangas."
+
+#: script/events/setpieces.js:2599 script/events/setpieces.js:2635
+msgid "there's nothing else here."
+msgstr "não há mais nada aqui."
+
+#: script/events/setpieces.js:2633
+msgid "inside the hut, a child cries."
+msgstr "dentro da cabana, uma criança chora."
+
+#: script/events/setpieces.js:2634
+msgid "a few belongings rest against the walls."
+msgstr "alguns pertences encostados na paredes."
+
+#: script/events/setpieces.js:2674
+msgid "the stench of rot and death fills the operating theatres."
+msgstr "o fedor da podridão e morte enche as salas de operação."
+
+#: script/events/setpieces.js:2675
+msgid "a few items are scattered on the ground."
+msgstr "alguns itens estão espalhados no chão."
+
+#: script/events/setpieces.js:2676
+msgid "there is nothing else here."
+msgstr "não há mais nada aqui."
+
+#: script/events/setpieces.js:2715
+msgid "a pristine medicine cabinet at the end of a hallway."
+msgstr "um antigo armário de medicamentos no final de um corredor."
+
+#: script/events/setpieces.js:2716
+msgid "the rest of the hospital is empty."
+msgstr "o resto do hospital está vazio."
+
+#: script/events/setpieces.js:2750
+msgid "someone had been stockpiling loot here."
+msgstr "alguém tinha empilhando seus ganhhos ilicitos aqui."
+
+#: script/events/setpieces.js:2799
+msgid "the tentacular horror is defeated."
+msgstr "o horror tentacular é derrotado."
+
+#: script/events/setpieces.js:2800
+msgid "inside, the remains of its victims are everywhere."
+msgstr "no interior, os restos mortais de suas vítimas estão em toda parte."
+
+#: script/events/setpieces.js:2845
+msgid "the warped man lies dead."
+msgstr "o homem deformado está morto."
+
+#: script/events/setpieces.js:2846
+msgid "the operating theatre has a lot of curious equipment."
+msgstr "a sala de operação tem um monte de equipamentos curiosos."
+
+#: script/events/setpieces.js:2890
+msgid "the old man had a small cache of interesting items."
+msgstr "o velho tinha um pequeno esconderijo de itens interessantes."
+
+#: script/events/setpieces.js:2934
+msgid "An Old House"
+msgstr "Uma Casa Velha"
+
+#: script/events/setpieces.js:2938
+msgid "an old house remains here, once white siding yellowed and peeling."
+msgstr ""
+"uma casa velha permanece aqui, uma vez que o tapume branco amarelou e descascou."
+
+#: script/events/setpieces.js:2939
+msgid "the door hangs open."
+msgstr "a porta fica aberta."
+
+#: script/events/setpieces.js:2941
+msgid "the remains of an old house stand as a monument to simpler times"
+msgstr ""
+"os restos de uma casa velha permanece como um monumento aos tempos mais simples"
+
+#: script/events/setpieces.js:2955
+msgid "the house is abandoned, but not yet picked over."
+msgstr "a casa está abandonada, mas não foi furtada ainda."
+
+#: script/events/setpieces.js:2956
+msgid "still a few drops of water in the old well."
+msgstr "ainda algumas gotas de água na fonte velha."
+
+#: script/events/setpieces.js:2990
+msgid "the house has been ransacked."
+msgstr "a casa foi saqueada."
+
+#: script/events/setpieces.js:2991
+msgid "but there is a cache of medicine under the floorboards."
+msgstr "mas há um esconderijo de remédios sob o assoalho."
+
+#: script/events/setpieces.js:3019
+msgid "a man charges down the hall, a rusty blade in his hand"
+msgstr ""
+"um homem corre corredor abaixo preparado para atacar, com lâmina enferrujada em sua "
+"mão"
+
+#: script/events/setpieces.js:3051
+msgid "A Forgotten Battlefield"
+msgstr "Um Campo de Batalha Esquecido"
+
+#: script/events/setpieces.js:3055
+msgid "a battle was fought here, long ago."
+msgstr "a batalha foi travada aqui, há muito tempo."
+
+#: script/events/setpieces.js:3056
+msgid "battered technology from both sides lays dormant on the blasted landscape."
+msgstr ""
+"tecnologia agressiva de ambos os lados permanecem inativas na paisagem destruída."
+
+#: script/events/setpieces.js:3104
+msgid "A Huge Borehole"
+msgstr "Um Enorme Buraco"
+
+#: script/events/setpieces.js:3108
+msgid "a huge hole is cut deep into the earth, evidence of the past harvest."
+msgstr "um enorme buraco é marcado na terra, evidenciando colheitas passadas."
+
+#: script/events/setpieces.js:3109
+msgid "they took what they came for, and left."
+msgstr "eles levaram o que queriam, e saíram."
+
+#: script/events/setpieces.js:3110
+msgid ""
+"castoff from the mammoth drills can still be found by the edges of the precipice."
+msgstr ""
+"restos de uma presa de mamute ainda podem ser encontrados nas bordas do precipício."
+
+#: script/events/setpieces.js:3133
+msgid "A Crashed Ship"
+msgstr "Uma Nave Caída"
+
+#: script/events/setpieces.js:3142
+msgid "the familiar curves of a wanderer vessel rise up out of the dust and ash. "
+msgstr "as curvas familiares de um navio peregrino sobe a partir do pó e cinzas."
+
+#: script/events/setpieces.js:3143
+msgid "lucky that the natives can't work the mechanisms."
+msgstr "sorte que os nativos não podem trabalhar com mecanismos."
+
+#: script/events/setpieces.js:3144
+msgid "with a little effort, it might fly again."
+msgstr "com um pouco de esforço, pode voar de novo."
+
+#: script/events/setpieces.js:3148
+msgid "salvage"
+msgstr "salvamento"
+
+#: script/events/setpieces.js:3156
+msgid "The Sulphur Mine"
+msgstr "A Mina de Enxofre"
+
+#: script/events/setpieces.js:3160
+msgid "the military is already set up at the mine's entrance."
+msgstr "o militar já está preparado na entrada da mina."
+
+#: script/events/setpieces.js:3161
+msgid "soldiers patrol the perimeter, rifles slung over their shoulders."
+msgstr "soldados patrulham o perímetro, com rifles pendurados nos ombros."
+
+#: script/events/setpieces.js:3163
+msgid "a military perimeter is set up around the mine."
+msgstr "um perímetro militar é criado ao redor da mina."
+
+#: script/events/setpieces.js:3166 script/events/setpieces.js:3315
+msgid "attack"
+msgstr "atacar"
+
+#: script/events/setpieces.js:3201
+msgid "a soldier, alerted, opens fire."
+msgstr "um soldado, alertado, abre fogo."
+
+#: script/events/setpieces.js:3209 script/events/setpieces.js:3249
+#: script/events/setpieces.js:3352 script/events/setpieces.js:3386
+msgid "run"
+msgstr "correr"
+
+#: script/events/setpieces.js:3241
+msgid "a second soldier joins the fight."
+msgstr "um segundo soldado se junta à luta."
+
+#: script/events/setpieces.js:3275
+msgid "a grizzled soldier attacks, waving a bayonet."
+msgstr "um soldado grisalho ataca, balançando uma baioneta."
+
+#: script/events/setpieces.js:3286
+msgid "the military presence has been cleared."
+msgstr "a presença militar tem acabado."
+
+#: script/events/setpieces.js:3287 script/events/setpieces.js:3429
+#: script/events/setpieces.js:3505
+msgid "the mine is now safe for workers."
+msgstr "a mina é agora segura para os trabalhadores."
+
+#: script/events/setpieces.js:3289
+msgid "the sulphur mine is clear of dangers"
+msgstr "a mina de enxofre está segura dos perigos"
+
+#: script/events/setpieces.js:3305
+msgid "The Coal Mine"
+msgstr "A Mina de Carvão"
+
+#: script/events/setpieces.js:3309
+msgid "camp fires burn by the entrance to the mine."
+msgstr "fogueiras queimam pela entrada da mina."
+
+#: script/events/setpieces.js:3310
+msgid "men mill about, weapons at the ready."
+msgstr "homens se posicionam, armas preparadas"
+
+#: script/events/setpieces.js:3312
+msgid "this old mine is not abandoned"
+msgstr "esta antiga mina não está abandonada"
+
+#: script/events/setpieces.js:3344 script/events/setpieces.js:3378
+msgid "a man joins the fight"
+msgstr "um homem entra na briga"
+
+#: script/events/setpieces.js:3417
+msgid "only the chief remains."
+msgstr "só o chefe permanece."
+
+#: script/events/setpieces.js:3428
+msgid "the camp is still, save for the crackling of the fires."
+msgstr "ainda há acampamento, guarde para o crepitar dos incêndios."
+
+#: script/events/setpieces.js:3431
+msgid "the coal mine is clear of dangers"
+msgstr "a mina de carvão está segura dos perigos"
+
+#: script/events/setpieces.js:3447
+msgid "The Iron Mine"
+msgstr "A Mina de Ferro"
+
+#: script/events/setpieces.js:3451
+msgid "an old iron mine sits here, tools abandoned and left to rust."
+msgstr ""
+"uma antiga mina de ferro fica aqui, ferramentas abandonadas e deixada à ferrugem."
+
+#: script/events/setpieces.js:3452
+msgid ""
+"bleached bones are strewn about the entrance. many, deeply scored with jagged "
+"grooves."
+msgstr ""
+"ossos branqueados estão espalhadas sobre a entrada. muitos, profundamente marcados "
+"com mordidas irregulares."
+
+#: script/events/setpieces.js:3453
+msgid "feral howls echo out of the darkness."
+msgstr "uivos ferozes ecoam para fora da escuridão."
+
+#: script/events/setpieces.js:3455
+msgid "the path leads to an abandoned mine"
+msgstr "o caminho leva a uma mina abandonada"
+
+#: script/events/setpieces.js:3493
+msgid "a large creature lunges, muscles rippling in the torchlight"
+msgstr "uma grande criatura dá o bote, os músculos ondulando à luz da tocha"
+
+#: script/events/setpieces.js:3504
+msgid "the beast is dead."
+msgstr "a fera está morta."
+
+#: script/events/setpieces.js:3507
+msgid "the iron mine is clear of dangers"
+msgstr "a mina de ferro está livre de perigos"
+
+#: script/events/setpieces.js:3524
+msgid "A Destroyed Village"
+msgstr "Uma Aldeia Destruída"
+
+#: script/events/setpieces.js:3528
+msgid "a destroyed village lies in the dust."
+msgstr "uma aldeia destruída reside no pó."
+
+#: script/events/setpieces.js:3529
+msgid "charred bodies litter the ground."
+msgstr "corpos carbonizados espalhados no chão."
+
+#: script/events/setpieces.js:3532
+msgid "the metallic tang of wanderer afterburner hangs in the air."
+msgstr "o gosto metálico de pós-combustão errante paira no ar."
+
+#: script/events/setpieces.js:3546
+msgid "a shack stands at the center of the village."
+msgstr "há um barraco está no centro da vila."
+
+#: script/events/setpieces.js:3547
+msgid "there are still supplies inside."
+msgstr "ainda há suprimentos."
+
+#: script/events/setpieces.js:3558
+msgid "all the work of a previous generation is here."
+msgstr "todo o trabalho de uma geração anterior está aqui."
+
+#: script/events/setpieces.js:3559
+msgid "ripe for the picking."
+msgstr "maduro para a colheita."
+
+#~ msgid "Export"
+#~ msgstr "Exportar"

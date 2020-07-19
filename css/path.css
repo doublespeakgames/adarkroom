@@ -6,9 +6,9 @@
 	padding: 5px 10px;
 }
 
-div#outfitting:before {
+div#outfitting:before ,div#perks:before {
+	content: attr(data-legend);
 	position: absolute;
-	content: "supplies";
 	top: -13px;
 	background-color: white;
 }
@@ -48,13 +48,6 @@ div#perks {
 	cursor: default;
 	padding: 5px 10px;
 	width: 200px;
-}
-
-div#perks:before {
-	position: absolute;
-	content: "perks";
-	top: -13px;
-	background-color: white;
 }
 
 div.perkRow {

@@ -134,21 +134,21 @@
 }
 
 .centerCont {
-  padding-top:10%;
+	padding-top:10%;
 }
 
 .endGame {
-  font-size:48px;
-  color:#FFFFFF;
-  opacity:0;
-  position:relative;
+	font-size:48px;
+	color:#FFFFFF;
+	opacity:0;
+	position:relative;
 }
 
-.endGameRestart {
+.endGameOption {
 	font-size: 32px;
 	cursor: pointer;
 }
 
-.endGameRestart:hover {
+.endGameOption:hover {
 	text-decoration: underline;
 }

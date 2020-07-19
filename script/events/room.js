@@ -39,9 +39,8 @@ Events.Room = [
 						text: _('buy compass'),
 						cost: { fur: 300, scales: 15, teeth: 5 },
 						reward: { 'compass': 1 },
-						notification: _('the old compass is dented and dusty, but it looks to work.'),
-						onChoose: Path.openPath
-					}, 
+						notification: _('the old compass is dented and dusty, but it looks to work.')
+					},
 					'goodbye': {
 						text: _('say goodbye'),
 						nextScene: 'end'
@@ -49,7 +48,8 @@ Events.Room = [
 				}
 			}
 		}
-	}, { /* Noises Outside  --  gain wood/fur */
+	},
+	{ /* Noises Outside  --  gain wood/fur */
 		title: _('Noises'),
 		isAvailable: function() {
 			return Engine.activeModule == Room && $SM.get('stores.wood');
@@ -132,9 +132,9 @@ Events.Room = [
 				onLoad: function() {
 					var numWood = $SM.get('stores.wood', true);
 					numWood = Math.floor(numWood * 0.1);
-					if(numWood == 0) numWood = 1;
+					if(numWood === 0) numWood = 1;
 					var numScales = Math.floor(numWood / 5);
-					if(numScales == 0) numScales = 1;
+					if(numScales === 0) numScales = 1;
 					$SM.addM('stores', {'wood': -numWood, 'scales': numScales});
 				},
 				buttons: {
@@ -152,9 +152,9 @@ Events.Room = [
 				onLoad: function() {
 					var numWood = $SM.get('stores.wood', true);
 					numWood = Math.floor(numWood * 0.1);
-					if(numWood == 0) numWood = 1;
+					if(numWood === 0) numWood = 1;
 					var numTeeth = Math.floor(numWood / 5);
-					if(numTeeth == 0) numTeeth = 1;
+					if(numTeeth === 0) numTeeth = 1;
 					$SM.addM('stores', {'wood': -numWood, 'teeth': numTeeth});
 				},
 				buttons: {
@@ -172,9 +172,9 @@ Events.Room = [
 				onLoad: function() {
 					var numWood = $SM.get('stores.wood', true);
 					numWood = Math.floor(numWood * 0.1);
-					if(numWood == 0) numWood = 1;
+					if(numWood === 0) numWood = 1;
 					var numCloth = Math.floor(numWood / 5);
-					if(numCloth == 0) numCloth = 1;
+					if(numCloth === 0) numCloth = 1;
 					$SM.addM('stores', {'wood': -numWood, 'cloth': numCloth});
 				},
 				buttons: {
@@ -257,7 +257,63 @@ Events.Room = [
 			}
 		}
 	},
-	
+	{/* The Shady Builder */
+		title: _('The Shady Builder'),
+		isAvailable: function() {
+			return Engine.activeModule == Room && $SM.get('game.buildings["hut"]', true) >= 5 && $SM.get('game.buildings["hut"]', true) < 20;
+		},
+		scenes: {
+			'start':{
+				text: [
+					_('a shady builder passes through'),
+					_('says he can build you a hut for less wood')
+				],
+				notification: _('a shady builder passes through'),
+				buttons: {
+					'build': {
+						text: _('300 wood'),
+						cost: { 'wood' : 300 },
+						nextScene: {0.6: 'steal', 1: 'build'}
+					},
+					'deny': {
+						text: _('say goodbye'),
+						nextScene: 'end'
+					}
+				}
+			},
+			'steal': {
+				text:[
+					_("the shady builder has made off with your wood")
+				],
+				notification: _('the shady builder has made off with your wood'),
+				buttons: {
+					'end': {
+						text: _('go home'),
+						nextScene: 'end'
+					}
+				}
+			},
+			'build': {
+				text:[
+					_("the shady builder builds a hut")
+				],
+				notification: _('the shady builder builds a hut'),
+				onLoad: function() {
+					var n = $SM.get('game.buildings["hut"]', true);
+					if(n < 20){
+						$SM.set('game.buildings["hut"]',n+1);
+					}
+				},
+				buttons: {
+					'end': {
+						text: _('go home'),
+						nextScene: 'end'
+					}
+				}
+			}
+		}
+	},
+
 	{ /* Mysterious Wanderer  --  wood gambling */
 		title: _('The Mysterious Wanderer'),
 		isAvailable: function() {
@@ -272,15 +328,15 @@ Events.Room = [
 				notification: _('a mysterious wanderer arrives'),
 				blink: true,
 				buttons: {
-					'100wood': {
+					'wood100': {
 						text: _('give 100'),
 						cost: {wood: 100},
-						nextScene: { 1: '100wood'}
+						nextScene: { 1: 'wood100'}
 					},
-					'500wood': {
+					'wood500': {
 						text: _('give 500'),
 						cost: {wood: 500},
-						nextScene: { 1: '500wood' }
+						nextScene: { 1: 'wood500' }
 					},
 					'deny': {
 						text: _('turn him away'),
@@ -288,16 +344,20 @@ Events.Room = [
 					}
 				}
 			},
-			'100wood': {
+			'wood100': {
 				text: [
 					_('the wanderer leaves, cart loaded with wood')
 				],
+				action: function(inputDelay) {
+					var delay = inputDelay || false;
+					Events.saveDelay(function() {
+						$SM.add('stores.wood', 300);
+						Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with wood.'));
+					}, 'Room[4].scenes.wood100.action', delay);
+				},
 				onLoad: function() {
 					if(Math.random() < 0.5) {
-						setTimeout(function() {
-							$SM.add('stores.wood', 300);
-							Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with wood.'));
-						}, 60 * 1000);
+						this.action(60);
 					}
 				},
 				buttons: {
@@ -307,16 +367,20 @@ Events.Room = [
 					}
 				}
 			},
-			'500wood': {
+			'wood500': {
 				text: [
 					_('the wanderer leaves, cart loaded with wood')
 				],
+				action: function(inputDelay) {
+					var delay = inputDelay || false;
+					Events.saveDelay(function() {
+						$SM.add('stores.wood', 1500);
+						Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with wood.'));
+					}, 'Room[4].scenes.wood500.action', delay);
+				},
 				onLoad: function() {
 					if(Math.random() < 0.3) {
-						setTimeout(function() {
-							$SM.add('stores.wood', 1500);
-							Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with wood.'));
-						}, 60 * 1000);
+						this.action(60);
 					}
 				},
 				buttons: {
@@ -328,7 +392,7 @@ Events.Room = [
 			}
 		}
 	},
-	
+
 	{ /* Mysterious Wanderer  --  fur gambling */
 		title: _('The Mysterious Wanderer'),
 		isAvailable: function() {
@@ -343,15 +407,15 @@ Events.Room = [
 				notification: _('a mysterious wanderer arrives'),
 				blink: true,
 				buttons: {
-					'100fur': {
+					'fur100': {
 						text: _('give 100'),
 						cost: {fur: 100},
-						nextScene: { 1: '100fur'}
+						nextScene: { 1: 'fur100'}
 					},
-					'500fur': {
+					'fur500': {
 						text: _('give 500'),
 						cost: {fur: 500},
-						nextScene: { 1: '500fur' }
+						nextScene: { 1: 'fur500' }
 					},
 					'deny': {
 						text: _('turn her away'),
@@ -359,16 +423,20 @@ Events.Room = [
 					}
 				}
 			},
-			'100fur': {
+			'fur100': {
 				text: [
 					_('the wanderer leaves, cart loaded with furs')
 				],
+				action: function(inputDelay) {
+					var delay = inputDelay || false;
+					Events.saveDelay(function() {
+						$SM.add('stores.fur', 300);
+						Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with furs.'));
+					}, 'Room[5].scenes.fur100.action', delay);
+				},
 				onLoad: function() {
 					if(Math.random() < 0.5) {
-						setTimeout(function() {
-							$SM.add('stores.fur', 300);
-							Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with furs.'));
-						}, 60 * 1000);
+						this.action(60);
 					}
 				},
 				buttons: {
@@ -378,16 +446,20 @@ Events.Room = [
 					}
 				}
 			},
-			'500fur': {
+			'fur500': {
 				text: [
 					_('the wanderer leaves, cart loaded with furs')
 				],
+				action: function(inputDelay) {
+					var delay = inputDelay || false;
+					Events.saveDelay(function() {
+						$SM.add('stores.fur', 1500);
+						Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with furs.'));
+					}, 'Room[5].scenes.fur500.action', delay);
+				},
 				onLoad: function() {
 					if(Math.random() < 0.3) {
-						setTimeout(function() {
-							$SM.add('stores.fur', 1500);
-							Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with furs.'));
-						}, 60 * 1000);
+						this.action(60);
 					}
 				},
 				buttons: {
@@ -399,7 +471,7 @@ Events.Room = [
 			}
 		}
 	},
-	
+
 	{ /* The Scout  --  Map Merchant */
 		title: _('The Scout'),
 		isAvailable: function() {
@@ -417,6 +489,9 @@ Events.Room = [
 					'buyMap': {
 						text: _('buy map'),
 						cost: { 'fur': 200, 'scales': 10 },
+						available: function() {
+							return !World.seenAll;
+						},
 						notification: _('the map uncovers a bit of the world'),
 						onChoose: World.applyMap
 					},
@@ -438,7 +513,7 @@ Events.Room = [
 			}
 		}
 	},
-	
+
 	{ /* The Wandering Master */
 		title: _('The Master'),
 		isAvailable: function() {
@@ -511,7 +586,7 @@ Events.Room = [
 			}
 		}
 	},
-		
+
 	{ /* The Sick Man */
 		title: _('The Sick Man'),
 		isAvailable: function() {

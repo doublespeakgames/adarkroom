@@ -33,7 +33,7 @@ var Notifications = {
 		if(module != null && Engine.activeModule != module) {
 			if(!noQueue) {
 				if(typeof this.notifyQueue[module] == 'undefined') {
-					this.notifyQueue[module] = new Array();
+					this.notifyQueue[module] = [];
 				}
 				this.notifyQueue[module].push(text);
 			}

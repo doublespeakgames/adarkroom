@@ -112,7 +112,7 @@ Events.Setpieces = {
 			'a1': {
 				combat: true,
 				enemy: 'beast',
-				chara: 'B',
+				chara: 'R',
 				damage: 1,
 				hit: 0.8,
 				attackDelay: 1,
@@ -198,6 +198,7 @@ Events.Setpieces = {
 				text: [
 					_('the body of a wanderer lies in a small cavern.'),
 					_("rot's been to work on it, and some of the pieces are missing."),
+                    /// TRANSLATORS : 'it' is a rotting wanderer's body
 					_("can't tell what left it here.")
 				],
 				loot: {
@@ -256,7 +257,7 @@ Events.Setpieces = {
 			'b3': {
 				combat: true,
 				enemy: 'beast',
-				chara: 'B',
+				chara: 'R',
 				damage: 1,
 				hit: 0.8,
 				attackDelay: 1,
@@ -290,7 +291,7 @@ Events.Setpieces = {
 			'b4': {
 				combat: true,
 				enemy: 'cave lizard',
-				chara: 'L',
+				chara: 'R',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 2,
@@ -324,7 +325,7 @@ Events.Setpieces = {
 			'c1': {
 				combat: true,
 				enemy: 'beast',
-				chara: 'B',
+				chara: 'R',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 2,
@@ -358,7 +359,7 @@ Events.Setpieces = {
 			'c2': {
 				combat: true,
 				enemy: 'lizard',
-				chara: 'L',
+				chara: 'T',
 				damage: 4,
 				hit: 0.8,
 				attackDelay: 2,
@@ -559,7 +560,7 @@ Events.Setpieces = {
 			'a2': {
 				combat: true,
 				enemy: 'thug',
-				chara: 'T',
+				chara: 'E',
 				damage: 4,
 				hit: 0.8,
 				attackDelay: 2,
@@ -654,7 +655,7 @@ Events.Setpieces = {
 			'b2': {
 				combat: true,
 				enemy: 'scavenger',
-				chara: 'S',
+				chara: 'E',
 				damage: 4,
 				hit: 0.8,
 				attackDelay: 2,
@@ -693,7 +694,7 @@ Events.Setpieces = {
 			'b3': {
 				combat: true,
 				enemy: 'beast',
-				chara: 'B',
+				chara: 'R',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 1,
@@ -767,7 +768,7 @@ Events.Setpieces = {
 			'b5': {
 				combat: true,
 				enemy: 'madman',
-				chara: 'M',
+				chara: 'E',
 				damage: 6,
 				hit: 0.3,
 				attackDelay: 1,
@@ -806,7 +807,7 @@ Events.Setpieces = {
 			'c1': {
 				combat: true,
 				enemy: 'thug',
-				chara: 'T',
+				chara: 'E',
 				damage: 4,
 				hit: 0.8,
 				attackDelay: 2,
@@ -845,7 +846,7 @@ Events.Setpieces = {
 			'c2': {
 				combat: true,
 				enemy: 'beast',
-				chara: 'B',
+				chara: 'R',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 1,
@@ -896,7 +897,7 @@ Events.Setpieces = {
 			'c4': {
 				combat: true,
 				enemy: 'beast',
-				chara: 'B',
+				chara: 'R',
 				damage: 4,
 				hit: 0.8,
 				attackDelay: 1,
@@ -948,14 +949,14 @@ Events.Setpieces = {
 					_('a small basket of food is hidden under a park bench, with a note attached.'),
 					_("can't read the words.")
 				],
-			loot: {
-				'cured meat': {
-					min: 1,
-					max: 5,
-					chance: 1
-				}
-			},
-			buttons: {
+				loot: {
+					'cured meat': {
+						min: 1,
+						max: 5,
+						chance: 1
+					}
+				},
+				buttons: {
 					'continue': {
 						text: _('continue'),
 						cooldown: Events._LEAVE_COOLDOWN,
@@ -971,7 +972,7 @@ Events.Setpieces = {
 			'd1': {
 				combat: true,
 				enemy: 'scavenger',
-				chara: 'S',
+				chara: 'E',
 				damage: 5,
 				hit: 0.8,
 				attackDelay: 2,
@@ -1010,7 +1011,7 @@ Events.Setpieces = {
 			'd2': {
 				combat: true,
 				enemy: 'vigilante',
-				chara: 'V',
+				chara: 'D',
 				damage: 6,
 				hit: 0.8,
 				attackDelay: 2,
@@ -1257,10 +1258,10 @@ Events.Setpieces = {
 			},
 			'a1': {
 				text:[
-				_('the streets are empty.'),
-				_('the air is filled with dust, driven relentlessly by the hard winds.')
+					_('the streets are empty.'),
+					_('the air is filled with dust, driven relentlessly by the hard winds.')
 				],
-		buttons: {
+				buttons: {
 					'continue': {
 						text: _('continue'),
 						nextScene: {0.5: 'b1', 1: 'b2'}
@@ -1273,8 +1274,8 @@ Events.Setpieces = {
 			},
 			'a2': {
 				text:[
-				_('orange traffic cones are set across the street, faded and cracked.'),
-				_('lights flash through the alleys between buildings.')
+					_('orange traffic cones are set across the street, faded and cracked.'),
+					_('lights flash through the alleys between buildings.')
 				],
 				buttons: {
 					'continue': {
@@ -1340,7 +1341,7 @@ Events.Setpieces = {
 				combat: true,
 				notification: _('a huge lizard scrambles up out of the darkness of an old metro station.'),
 				enemy: 'lizard',
-				chara: 'L',
+				chara: 'R',
 				damage: 5,
 				hit: 0.8,
 				attackDelay: 2,
@@ -1379,7 +1380,7 @@ Events.Setpieces = {
 				notification: _('the shot echoes in the empty street.'),
 				combat: true,
 				enemy: 'sniper',
-				chara: 'S',
+				chara: 'D',
 				damage: 15,
 				hit: 0.8,
 				attackDelay: 4,
@@ -1459,7 +1460,7 @@ Events.Setpieces = {
 				notification: _('a frail man stands defiantly, blocking the path.'),
 				combat: true,
 				enemy: 'frail man',
-				chara: 'M',
+				chara: 'E',
 				damage: 1,
 				hit: 0.8,
 				attackDelay: 2,
@@ -1535,7 +1536,7 @@ Events.Setpieces = {
 				notification: _('an old man bursts through a door, wielding a scalpel.'),
 				combat: true,
 				enemy: 'old man',
-				chara: 'M',
+				chara: 'E',
 				damage: 3,
 				hit: 0.5,
 				attackDelay: 2,
@@ -1574,7 +1575,7 @@ Events.Setpieces = {
 				notification: _('a thug is waiting on the other side of the wall.'),
 				combat: true,
 				enemy: 'thug',
-				chara: 'T',
+				chara: 'E',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 2,
@@ -1614,7 +1615,7 @@ Events.Setpieces = {
 				notification: _('a snarling beast jumps out from behind a car.'),
 				combat: true,
 				enemy: 'beast',
-				chara: 'B',
+				chara: 'R',
 				damage: 2,
 				hit: 0.8,
 				attackDelay: 1,
@@ -1672,6 +1673,7 @@ Events.Setpieces = {
 			'c4': {
 				text: [
 					_('looks like a camp of sorts up ahead.'),
+                    /// TRANSLATORS : chainlink is a type of metal fence.
 					_('rusted chainlink is pulled across an alleyway.'),
 					_('fires burn in the courtyard beyond.')
 				],
@@ -1723,6 +1725,7 @@ Events.Setpieces = {
 			
 			'c7': {
 				text: [
+                    /// TRANSLATORS : squatters occupy abandoned dwellings they don't own.
 					_('more squatters are crowding around now.'),
 					_('someone throws a stone.')
 				],
@@ -1831,7 +1834,7 @@ Events.Setpieces = {
 				combat: true,
 				enemy: 'squatters',
 				plural: true,
-				chara: 'SSS',
+				chara: 'EEE',
 				damage: 2,
 				hit: 0.7,
 				attackDelay: 0.5,
@@ -1872,7 +1875,7 @@ Events.Setpieces = {
 				combat: true,
 				enemy: 'lizards',
 				plural: true,
-				chara: 'LLL',
+				chara: 'RRR',
 				damage: 4,
 				hit: 0.7,
 				attackDelay: 0.7,
@@ -1937,7 +1940,7 @@ Events.Setpieces = {
 				notification: _('a large bird nests at the top of the stairs.'),
 				combat: true,
 				enemy: 'bird',
-				chara: 'B',
+				chara: 'R',
 				damage: 5,
 				hit: 0.7,
 				attackDelay: 1,
@@ -2044,8 +2047,8 @@ Events.Setpieces = {
 				notification: _('a large man attacks, waving a bayonet.'),
 				combat: true,
 				enemy: 'veteran',
-				chara: 'V',
-				damage: 3,
+				chara: 'D',
+				damage: 6,
 				hit: 0.8,
 				attackDelay: 2,
 				health: 45,
@@ -2120,7 +2123,7 @@ Events.Setpieces = {
 				notification: _('a masked soldier rounds the corner, gun drawn'),
 				combat: true,
 				enemy: 'commando',
-				chara: 'C',
+				chara: 'D',
 				ranged: true,
 				damage: 3,
 				hit: 0.9,
@@ -2162,7 +2165,7 @@ Events.Setpieces = {
 				combat: true,
 				enemy: 'squatters',
 				plural: true,
-				chara: 'SSS',
+				chara: 'EEE',
 				damage: 2,
 				hit: 0.7,
 				attackDelay: 0.5,
@@ -2197,7 +2200,7 @@ Events.Setpieces = {
 				notification: _('a youth lashes out with a tree branch.'),
 				combat: true,
 				enemy: 'youth',
-				chara: 'Y',
+				chara: 'E',
 				damage: 2,
 				hit: 0.7,
 				attackDelay: 1,
@@ -2232,7 +2235,7 @@ Events.Setpieces = {
 				notification: _('a squatter stands firmly in the doorway of a small hut.'),
 				combat: true,
 				enemy: 'squatter',
-				chara: 'S',
+				chara: 'E',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 2,
@@ -2267,7 +2270,7 @@ Events.Setpieces = {
 				notification: _('behind the door, a deformed figure awakes and attacks.'),
 				combat: true,
 				enemy: 'deformed',
-				chara: 'D',
+				chara: 'T',
 				damage: 8,
 				hit: 0.6,
 				attackDelay: 2,
@@ -2396,6 +2399,7 @@ Events.Setpieces = {
 			
 			'end3': {
 				text: [
+                    /// TRANSLATORS : a platform in the subway
 					_('the tunnel opens up at another platform.'),
 					_('the walls are scorched from an old battle.'),
 					_('bodies and supplies from both sides litter the ground.')
@@ -2837,6 +2841,7 @@ Events.Setpieces = {
 			
 			'end14': {
 				text: [
+                    /// TRANSLATORS : warped means extremely disfigured.
 					_('the warped man lies dead.'),
 					_('the operating theatre has a lot of curious equipment.')
 				],
@@ -3006,7 +3011,7 @@ Events.Setpieces = {
 			'occupied': {
 				combat: true,
 				enemy: 'squatter',
-				chara: 'S',
+				chara: 'E',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 2,
@@ -3250,7 +3255,7 @@ Events.Setpieces = {
 			'a3': {
 				combat: true,
 				enemy: 'veteran',
-				chara: 'V',
+				chara: 'D',
 				damage: 10,
 				hit: 0.8,
 				attackDelay: 2,
@@ -3319,7 +3324,7 @@ Events.Setpieces = {
 			'a1': {
 				combat: true,
 				enemy: 'man',
-				chara: 'M',
+				chara: 'E',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 2,
@@ -3353,7 +3358,7 @@ Events.Setpieces = {
 			'a2': {
 				combat: true,
 				enemy: 'man',
-				chara: 'M',
+				chara: 'E',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 2,
@@ -3387,7 +3392,7 @@ Events.Setpieces = {
 			'a3': {
 				combat: true,
 				enemy: 'chief',
-				chara: 'C',
+				chara: 'D',
 				damage: 5,
 				hit: 0.8,
 				attackDelay: 2,
@@ -3463,7 +3468,7 @@ Events.Setpieces = {
 			'enter': {
 				combat: true,
 				enemy: 'beastly matriarch',
-				chara: 'M',
+				chara: 'T',
 				damage: 4,
 				hit: 0.8,
 				attackDelay: 2,
@@ -3523,6 +3528,7 @@ Events.Setpieces = {
 					_('a destroyed village lies in the dust.'),
 					_('charred bodies litter the ground.')
 				],
+                /// TRANSLATORS : tang = strong metallic smell, wanderer afterburner = ship's engines
 				notification: _('the metallic tang of wanderer afterburner hangs in the air.'),
 				buttons: {
 					'enter': {
