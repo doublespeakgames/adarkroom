@@ -408,12 +408,10 @@ msgid "coal"
 msgstr "węgiel"
 
 #: script/localization.js:17
-#, fuzzy
 msgid "sulphur"
-msgstr "kopacz siarki"
+msgstr "siarka"
 
 #: script/localization.js:18
-#, fuzzy
 msgid "energy cell"
 msgstr "bateria"
 
@@ -455,30 +453,27 @@ msgstr "rzeźnik"
 
 #: script/localization.js:28 script/outside.js:55
 msgid "iron miner"
-msgstr "kopacz żelaza"
+msgstr "górnik żelaza"
 
 #: script/localization.js:29
-#, fuzzy
 msgid "iron mine"
-msgstr "kopacz żelaza"
+msgstr "kopalnia żelaza"
 
 #: script/localization.js:30 script/outside.js:63
 msgid "coal miner"
-msgstr "kopacz węgla"
+msgstr "górnik węgla"
 
 #: script/localization.js:31
-#, fuzzy
 msgid "coal mine"
-msgstr "kopacz węgla"
+msgstr "kopalnia węgla"
 
 #: script/localization.js:32 script/outside.js:71
 msgid "sulphur miner"
-msgstr "kopacz siarki"
+msgstr "górnik siarki"
 
 #: script/localization.js:33
-#, fuzzy
 msgid "sulphur mine"
-msgstr "kopacz siarki"
+msgstr "kopalnia siarki"
 
 #: script/localization.js:34 script/outside.js:88
 msgid "armourer"
@@ -541,9 +536,8 @@ msgid "not enough steel"
 msgstr "za mało stali"
 
 #: script/localization.js:51
-#, fuzzy
 msgid "not enough sulphur"
-msgstr "za mało futra"
+msgstr "za mało siarki"
 
 #: script/localization.js:52
 msgid "baited trap"
@@ -637,6 +631,10 @@ msgstr "Cichy las"
 msgid "gather wood"
 msgstr "zbierz drewno"
 
+#: script/outside.js:169
+msgid "traps contain"
+msgstr "pułapki zawierają"
+
 #: script/outside.js:188
 msgid "a stranger arrives in the night"
 msgstr "nieznajomy przybywa w nocy"
@@ -708,6 +706,14 @@ msgstr "suchy chrust i martwe gałęzie ozdabiają glebę lasu"
 #: script/outside.js:621
 msgid "the traps contain "
 msgstr "pułapki zawierają "
+
+#: script/outside.js:681
+msgid "dry brush and dead branches litter the forest floor +"
+msgstr "suchy chrust i ścinki gałęzi wyścielają dno lasu +"
+
+#: script/outside.js:683
+msgid " wood"
+msgstr " drewna"
 
 #: script/path.js:29 script/path.js:298
 msgid "A Dusty Path"
