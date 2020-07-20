@@ -19,75 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language: gl\n"
 
-#: script/dropbox.js:62
-msgid "Dropbox connection"
-msgstr "Conexión con Dropbox"
-
-#: script/dropbox.js:65
-msgid "connect game to dropbox local storage"
-msgstr "conecta o xogo co almacentamento local de dropbox"
-
-#: script/dropbox.js:68
-msgid "connect"
-msgstr "conectar"
-
-#: script/dropbox.js:75 script/dropbox.js:107 script/dropbox.js:133
-#: script/dropbox.js:163 script/engine.js:285 script/engine.js:331
-msgid "cancel"
-msgstr "cancelar"
-
-#: script/dropbox.js:86 script/dropbox.js:176
-msgid "Dropbox Export / Import"
-msgstr "Dropbox Exportar / Importar"
-
-#: script/dropbox.js:89
-msgid "export or import save data to dropbox datastorage"
-msgstr "exportar ou importar garda os datos ao almacenamento de dropbox"
-
-#: script/dropbox.js:90
-msgid "your are connected to dropbox with account / email "
-msgstr "estás conectado a dropbox con conta / email "
-
-#: script/dropbox.js:93
-msgid "save"
-msgstr "gardar"
-
-#: script/dropbox.js:97
-msgid "load"
-msgstr "cargar"
-
-#: script/dropbox.js:102
-msgid "signout"
-msgstr "desconectarse"
-
-#: script/dropbox.js:113
-msgid "choose one slot to save to"
-msgstr "escolle un lugar no que gardar"
-
-#: script/dropbox.js:119
-msgid "save to slot"
-msgstr "gardar a espazo"
-
-#: script/dropbox.js:141
-msgid "choose one slot to load from"
-msgstr "escolle un espazo do que cargar"
-
-#: script/dropbox.js:148
-msgid "load from slot"
-msgstr "cargar desde espazo"
-
-#: script/dropbox.js:179
-msgid "successfully saved to dropbox datastorage"
-msgstr "gardouse correctamente no almacenamento de dropbox"
-
-#: script/dropbox.js:180
-msgid "error while saving to dropbox datastorage"
-msgstr "houbo un erro ao gardar en dropbox"
-
-#: script/dropbox.js:183
-msgid "ok"
-msgstr "ok"
-
 #: script/engine.js:15
 msgid "boxer"
 msgstr "boxeador"
@@ -243,10 +174,6 @@ msgstr "compartir."
 #: script/engine.js:168
 msgid "save."
 msgstr "gardar."
-
-#: script/engine.js:177
-msgid "dropbox."
-msgstr "dropbox."
 
 #: script/engine.js:184
 msgid "github."

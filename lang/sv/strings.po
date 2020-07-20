@@ -17,75 +17,6 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ./../../script\n"
 
-#: script/dropbox.js:62
-msgid "Dropbox connection"
-msgstr "Dropbox anslutning"
-
-#: script/dropbox.js:65
-msgid "connect game to dropbox local storage"
-msgstr "anslut till lokal dropboxlagring"
-
-#: script/dropbox.js:68
-msgid "connect"
-msgstr "koppla upp"
-
-#: script/dropbox.js:75 script/dropbox.js:107 script/dropbox.js:133
-#: script/dropbox.js:163 script/engine.js:285 script/engine.js:331
-msgid "cancel"
-msgstr "avbryt"
-
-#: script/dropbox.js:86 script/dropbox.js:176
-msgid "Dropbox Export / Import"
-msgstr "Dropbox import / export"
-
-#: script/dropbox.js:89
-msgid "export or import save data to dropbox datastorage"
-msgstr "exportera eller importera data till dropbox datalager"
-
-#: script/dropbox.js:90
-msgid "your are connected to dropbox with account / email "
-msgstr "du är kopplad till dropbox med konto / epost"
-
-#: script/dropbox.js:93
-msgid "save"
-msgstr "spara"
-
-#: script/dropbox.js:97
-msgid "load"
-msgstr "öppna"
-
-#: script/dropbox.js:102
-msgid "signout"
-msgstr "logga ut"
-
-#: script/dropbox.js:113
-msgid "choose one slot to save to"
-msgstr "välj plats att spara till"
-
-#: script/dropbox.js:119
-msgid "save to slot"
-msgstr "spara till plats"
-
-#: script/dropbox.js:141
-msgid "choose one slot to load from"
-msgstr "välj plats att ladda från"
-
-#: script/dropbox.js:148
-msgid "load from slot"
-msgstr "ladda från plats"
-
-#: script/dropbox.js:179
-msgid "successfully saved to dropbox datastorage"
-msgstr "sparade till dropbox datalagring"
-
-#: script/dropbox.js:180
-msgid "error while saving to dropbox datastorage"
-msgstr "kunde inte spara till dropbox datalagring"
-
-#: script/dropbox.js:183
-msgid "ok"
-msgstr "ok"
-
 #: script/engine.js:15
 msgid "boxer"
 msgstr "boxare"
@@ -243,10 +174,6 @@ msgstr "dela."
 #: script/engine.js:168
 msgid "save."
 msgstr "spara."
-
-#: script/engine.js:177
-msgid "dropbox."
-msgstr "dropbox."
 
 #: script/engine.js:184
 msgid "github."

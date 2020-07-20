@@ -17,75 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: script/dropbox.js:62
-msgid "Dropbox connection"
-msgstr ""
-
-#: script/dropbox.js:65
-msgid "connect game to dropbox local storage"
-msgstr ""
-
-#: script/dropbox.js:68
-msgid "connect"
-msgstr ""
-
-#: script/dropbox.js:75 script/dropbox.js:107 script/dropbox.js:133
-#: script/dropbox.js:163 script/engine.js:285 script/engine.js:331
-msgid "cancel"
-msgstr ""
-
-#: script/dropbox.js:86 script/dropbox.js:176
-msgid "Dropbox Export / Import"
-msgstr ""
-
-#: script/dropbox.js:89
-msgid "export or import save data to dropbox datastorage"
-msgstr ""
-
-#: script/dropbox.js:90
-msgid "your are connected to dropbox with account / email "
-msgstr ""
-
-#: script/dropbox.js:93
-msgid "save"
-msgstr ""
-
-#: script/dropbox.js:97
-msgid "load"
-msgstr ""
-
-#: script/dropbox.js:102
-msgid "signout"
-msgstr ""
-
-#: script/dropbox.js:113
-msgid "choose one slot to save to"
-msgstr ""
-
-#: script/dropbox.js:119
-msgid "save to slot"
-msgstr ""
-
-#: script/dropbox.js:141
-msgid "choose one slot to load from"
-msgstr ""
-
-#: script/dropbox.js:148
-msgid "load from slot"
-msgstr ""
-
-#: script/dropbox.js:179
-msgid "successfully saved to dropbox datastorage"
-msgstr ""
-
-#: script/dropbox.js:180
-msgid "error while saving to dropbox datastorage"
-msgstr ""
-
-#: script/dropbox.js:183
-msgid "ok"
-msgstr ""
-
 #: script/engine.js:15
 msgid "boxer"
 msgstr ""
@@ -240,10 +171,6 @@ msgstr ""
 
 #: script/engine.js:168
 msgid "save."
-msgstr ""
-
-#: script/engine.js:177
-msgid "dropbox."
 msgstr ""
 
 #: script/engine.js:184

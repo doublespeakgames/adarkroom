@@ -19,75 +19,6 @@ msgstr ""
 "X-Generator: Poedit 1.8.12\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: script/dropbox.js:62
-msgid "Dropbox connection"
-msgstr "Dropbox 연결"
-
-#: script/dropbox.js:65
-msgid "connect game to dropbox local storage"
-msgstr "게임을 드롭박스 로컬 저장소에 연결하기"
-
-#: script/dropbox.js:68
-msgid "connect"
-msgstr "연결"
-
-#: script/dropbox.js:75 script/dropbox.js:107 script/dropbox.js:133
-#: script/dropbox.js:163 script/engine.js:285 script/engine.js:331
-msgid "cancel"
-msgstr "취소"
-
-#: script/dropbox.js:86 script/dropbox.js:176
-msgid "Dropbox Export / Import"
-msgstr "드롭박스에 내보내기/가져오기"
-
-#: script/dropbox.js:89
-msgid "export or import save data to dropbox datastorage"
-msgstr "게임 데이터를 드롭박스로 내보내거나 가져옵니다"
-
-#: script/dropbox.js:90
-msgid "your are connected to dropbox with account / email "
-msgstr "드롭박스 계정 / 이메일로 연결되었습니다"
-
-#: script/dropbox.js:93
-msgid "save"
-msgstr "저장"
-
-#: script/dropbox.js:97
-msgid "load"
-msgstr "불러오기"
-
-#: script/dropbox.js:102
-msgid "signout"
-msgstr "로그아웃"
-
-#: script/dropbox.js:113
-msgid "choose one slot to save to"
-msgstr "저장할 곳을 고르세요"
-
-#: script/dropbox.js:119
-msgid "save to slot"
-msgstr "여기에 저장하기"
-
-#: script/dropbox.js:141
-msgid "choose one slot to load from"
-msgstr "어디서 불러올까요?"
-
-#: script/dropbox.js:148
-msgid "load from slot"
-msgstr "여기서 불러오기"
-
-#: script/dropbox.js:179
-msgid "successfully saved to dropbox datastorage"
-msgstr "드롭박스에 성공적으로 저장되었습니다"
-
-#: script/dropbox.js:180
-msgid "error while saving to dropbox datastorage"
-msgstr "게임을 드롭박스에 저장하다가 오류가 발생했습니다"
-
-#: script/dropbox.js:183
-msgid "ok"
-msgstr "확인"
-
 #: script/engine.js:15
 msgid "boxer"
 msgstr "권투 선수"
@@ -243,10 +174,6 @@ msgstr "공유."
 #: script/engine.js:168
 msgid "save."
 msgstr "저장."
-
-#: script/engine.js:177
-msgid "dropbox."
-msgstr "드롭박스."
 
 #: script/engine.js:184
 msgid "github."

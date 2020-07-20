@@ -14,80 +14,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.7.6\n"
 
-#: script/dropbox.js:62
-msgid "Dropbox connection"
-msgstr "Dropboxに接続"
-
-#: script/dropbox.js:65
-msgid "connect game to dropbox local storage"
-msgstr "ゲームをDropboxのローカルストレージに接続する"
-
-#: script/dropbox.js:68
-msgid "connect"
-msgstr "接続する"
-
-#: script/dropbox.js:75 script/dropbox.js:107 script/dropbox.js:133
-#: script/dropbox.js:163 script/engine.js:285 script/engine.js:331
-msgid "cancel"
-msgstr "キャンセル"
-
-#: script/dropbox.js:86 script/dropbox.js:176
-#, fuzzy
-msgid "Dropbox Export / Import"
-msgstr "Dropboxのエクスポート/インポート"
-
-#: script/dropbox.js:89
-#, fuzzy
-msgid "export or import save data to dropbox datastorage"
-msgstr "エクスポートとインポート(バックアップ用"
-
-#: script/dropbox.js:90
-msgid "your are connected to dropbox with account / email "
-msgstr "アカウント/メールアドレスでDropboxに接続されました"
-
-#: script/dropbox.js:93
-#, fuzzy
-msgid "save"
-msgstr "セーブ"
-
-#: script/dropbox.js:97
-msgid "load"
-msgstr "ロード"
-
-#: script/dropbox.js:102
-#, fuzzy
-msgid "signout"
-msgstr "サインアウト"
-
-#: script/dropbox.js:113
-msgid "choose one slot to save to"
-msgstr "セーブするスロットを選択してください"
-
-#: script/dropbox.js:119
-#, fuzzy
-msgid "save to slot"
-msgstr "スロットに保存"
-
-#: script/dropbox.js:141
-msgid "choose one slot to load from"
-msgstr "ロードするスロットを選択してください"
-
-#: script/dropbox.js:148
-msgid "load from slot"
-msgstr "スロットからロード"
-
-#: script/dropbox.js:179
-msgid "successfully saved to dropbox datastorage"
-msgstr "Dropboxデータ領域へのセーブに成功しました"
-
-#: script/dropbox.js:180
-msgid "error while saving to dropbox datastorage"
-msgstr "Dropboxデータ領域への保存に失敗しました"
-
-#: script/dropbox.js:183
-msgid "ok"
-msgstr "ok"
-
 #: script/engine.js:15
 msgid "boxer"
 msgstr "ボクサー"
@@ -244,10 +170,6 @@ msgstr "シェア"
 #: script/engine.js:168
 msgid "save."
 msgstr "セーブ"
-
-#: script/engine.js:177
-msgid "dropbox."
-msgstr "Dropbox"
 
 #: script/engine.js:184
 msgid "github."

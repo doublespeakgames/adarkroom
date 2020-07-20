@@ -5,3 +5,5 @@
 .idea
 lang/.DS_Store
 .DS_Store
+.vscode
+.prettierignore

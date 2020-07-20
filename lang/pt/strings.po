@@ -14,75 +14,6 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: script/dropbox.js:62
-msgid "Dropbox connection"
-msgstr "Dropbox conexão"
-
-#: script/dropbox.js:65
-msgid "connect game to dropbox local storage"
-msgstr "conectar jogo dropbox armazenamento local"
-
-#: script/dropbox.js:68
-msgid "connect"
-msgstr "conectar"
-
-#: script/dropbox.js:75 script/dropbox.js:107 script/dropbox.js:133
-#: script/dropbox.js:163 script/engine.js:285 script/engine.js:331
-msgid "cancel"
-msgstr "cancelar"
-
-#: script/dropbox.js:86 script/dropbox.js:176
-msgid "Dropbox Export / Import"
-msgstr "Dropbox Exportação / Importação"
-
-#: script/dropbox.js:89
-msgid "export or import save data to dropbox datastorage"
-msgstr "exportação ou importação Armazenar dados dropbox datastorage"
-
-#: script/dropbox.js:90
-msgid "your are connected to dropbox with account / email "
-msgstr "você está conectado a dropbox com conta / email"
-
-#: script/dropbox.js:93
-msgid "save"
-msgstr "salvar"
-
-#: script/dropbox.js:97
-msgid "load"
-msgstr "carregar"
-
-#: script/dropbox.js:102
-msgid "signout"
-msgstr "sair"
-
-#: script/dropbox.js:113
-msgid "choose one slot to save to"
-msgstr "escolher um slot para salvar a"
-
-#: script/dropbox.js:119
-msgid "save to slot"
-msgstr "salvar a ranhura"
-
-#: script/dropbox.js:141
-msgid "choose one slot to load from"
-msgstr "escolher um slot para carregar a partir"
-
-#: script/dropbox.js:148
-msgid "load from slot"
-msgstr "carga do slot"
-
-#: script/dropbox.js:179
-msgid "successfully saved to dropbox datastorage"
-msgstr "salvo com sucesso dropbox datastorage"
-
-#: script/dropbox.js:180
-msgid "error while saving to dropbox datastorage"
-msgstr "erro ao salvar a dropbox datastorage"
-
-#: script/dropbox.js:183
-msgid "ok"
-msgstr "Está bem"
-
 #: script/engine.js:15
 msgid "boxer"
 msgstr "boxer"
@@ -238,10 +169,6 @@ msgstr "ação."
 #: script/engine.js:168
 msgid "save."
 msgstr "salvar."
-
-#: script/engine.js:177
-msgid "dropbox."
-msgstr "dropbox."
 
 #: script/engine.js:184
 #, fuzzy

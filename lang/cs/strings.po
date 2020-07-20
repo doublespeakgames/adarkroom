@@ -22,75 +22,6 @@ msgstr ""
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: script/dropbox.js:62
-msgid "Dropbox connection"
-msgstr "Propojení s Dropboxem"
-
-#: script/dropbox.js:65
-msgid "connect game to dropbox local storage"
-msgstr "spojit hru s místním uložištěm Dropbox"
-
-#: script/dropbox.js:68
-msgid "connect"
-msgstr "spojit"
-
-#: script/dropbox.js:75 script/dropbox.js:107 script/dropbox.js:133
-#: script/dropbox.js:163 script/engine.js:285 script/engine.js:331
-msgid "cancel"
-msgstr "zrušit"
-
-#: script/dropbox.js:86 script/dropbox.js:176
-msgid "Dropbox Export / Import"
-msgstr "Dropbox Export / Import"
-
-#: script/dropbox.js:89
-msgid "export or import save data to dropbox datastorage"
-msgstr "exportuje nebo importuje save data do uložiště dropbox"
-
-#: script/dropbox.js:90
-msgid "your are connected to dropbox with account / email "
-msgstr "jste připojeni na dropbox s účtem/emailem"
-
-#: script/dropbox.js:93
-msgid "save"
-msgstr "uložit"
-
-#: script/dropbox.js:97
-msgid "load"
-msgstr "načíst"
-
-#: script/dropbox.js:102
-msgid "signout"
-msgstr "odhlásit"
-
-#: script/dropbox.js:113
-msgid "choose one slot to save to"
-msgstr "vyberte slot pro uložení"
-
-#: script/dropbox.js:119
-msgid "save to slot"
-msgstr "uložit do slotu"
-
-#: script/dropbox.js:141
-msgid "choose one slot to load from"
-msgstr "vyberte slot pro nahrání"
-
-#: script/dropbox.js:148
-msgid "load from slot"
-msgstr "nahrát ze slotu"
-
-#: script/dropbox.js:179
-msgid "successfully saved to dropbox datastorage"
-msgstr "uspěšně uloženo do uložiště dropbox"
-
-#: script/dropbox.js:180
-msgid "error while saving to dropbox datastorage"
-msgstr "chyba během ukládání na dropbox"
-
-#: script/dropbox.js:183
-msgid "ok"
-msgstr "ok"
-
 #: script/engine.js:15
 msgid "boxer"
 msgstr "boxer"
@@ -248,10 +179,6 @@ msgstr "sdílet."
 #: script/engine.js:168
 msgid "save."
 msgstr "uložit."
-
-#: script/engine.js:177
-msgid "dropbox."
-msgstr "dropbox."
 
 #: script/engine.js:184
 msgid "github."

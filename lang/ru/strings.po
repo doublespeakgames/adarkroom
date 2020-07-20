@@ -16,81 +16,6 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SearchPath-0: ./../../script\n"
 
-#: ../../script/dropbox.js:62
-msgid "Dropbox connection"
-msgstr "Подключение к Dropbox"
-
-#: ../../script/dropbox.js:65
-msgid "connect game to dropbox local storage"
-msgstr "подключить игру к хранилущу Dropbox"
-
-#: ../../script/dropbox.js:68
-msgid "connect"
-msgstr "соединить"
-
-#: ../../script/dropbox.js:75 ../../script/dropbox.js:107
-#: ../../script/dropbox.js:133 ../../script/dropbox.js:163
-#: ../../script/engine.js:285 ../../script/engine.js:331
-msgid "cancel"
-msgstr "отмена"
-
-#: ../../script/dropbox.js:86 ../../script/dropbox.js:176
-#, fuzzy
-msgid "Dropbox Export / Import"
-msgstr "Дропбокс Экспорт / Импорт"
-
-#: ../../script/dropbox.js:89
-#, fuzzy
-msgid "export or import save data to dropbox datastorage"
-msgstr "экспортируйте или импортируйте данные сохранения для резервной копии"
-
-#: ../../script/dropbox.js:90
-#, fuzzy
-msgid "your are connected to dropbox with account / email "
-msgstr "вы подключены к dropbox под именем "
-
-#: ../../script/dropbox.js:93
-msgid "save"
-msgstr "сохранить"
-
-#: ../../script/dropbox.js:97
-msgid "load"
-msgstr "загрузить"
-
-#: ../../script/dropbox.js:102
-msgid "signout"
-msgstr "выйти"
-
-#: ../../script/dropbox.js:113
-msgid "choose one slot to save to"
-msgstr "выберите один из слотов, чтобы сохранить"
-
-#: ../../script/dropbox.js:119
-#, fuzzy
-msgid "save to slot"
-msgstr "сохранить."
-
-#: ../../script/dropbox.js:141
-msgid "choose one slot to load from"
-msgstr "выберите один из слотов, чтобы загрузить"
-
-#: ../../script/dropbox.js:148
-#, fuzzy
-msgid "load from slot"
-msgstr "загрузить."
-
-#: ../../script/dropbox.js:179
-msgid "successfully saved to dropbox datastorage"
-msgstr "успешно сохранено в хранилище dropbox"
-
-#: ../../script/dropbox.js:180
-msgid "error while saving to dropbox datastorage"
-msgstr "ошибка при сохранении в хранилище dropbox"
-
-#: ../../script/dropbox.js:183
-msgid "ok"
-msgstr "ок"
-
 #: ../../script/engine.js:15
 msgid "boxer"
 msgstr "боксер"
@@ -249,10 +174,6 @@ msgstr "поделиться."
 #: ../../script/engine.js:168
 msgid "save."
 msgstr "сохранить."
-
-#: ../../script/engine.js:177
-msgid "dropbox."
-msgstr "dropbox"
 
 #: ../../script/engine.js:184
 msgid "github."

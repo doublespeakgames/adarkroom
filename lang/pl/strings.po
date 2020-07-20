@@ -4,84 +4,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2016-12-09 10:21+0100\n"
 "PO-Revision-Date: \n"
-"Last-Translator: Sebastian <admin@itunix.eu>\n"
+"Last-Translator: Sebastian Korotkiewicz <skorotkiewicz@gmail.com>\n"
 "Language-Team: \n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.11\n"
-
-#: script/dropbox.js:62
-msgid "Dropbox connection"
-msgstr "połączenie z Dropbox"
-
-#: script/dropbox.js:65
-msgid "connect game to dropbox local storage"
-msgstr "połącz grę z lokalnym nośnikiem dropobx"
-
-#: script/dropbox.js:68
-msgid "connect"
-msgstr "połącz"
-
-#: script/dropbox.js:75 script/dropbox.js:107 script/dropbox.js:133
-#: script/dropbox.js:163 script/engine.js:285 script/engine.js:331
-msgid "cancel"
-msgstr "anuluj"
-
-#: script/dropbox.js:86 script/dropbox.js:176
-#, fuzzy
-msgid "Dropbox Export / Import"
-msgstr "Eksport / Import"
-
-#: script/dropbox.js:89
-#, fuzzy
-msgid "export or import save data to dropbox datastorage"
-msgstr "eksportuj lub importuj zapisy, aby stworzyć kopię zapasową,"
-
-#: script/dropbox.js:90
-msgid "your are connected to dropbox with account / email "
-msgstr "jesteś połączony z dropbox za pomocą konta / email"
-
-#: script/dropbox.js:93
-msgid "save"
-msgstr "zapisz"
-
-#: script/dropbox.js:97
-msgid "load"
-msgstr "wczytaj"
-
-#: script/dropbox.js:102
-msgid "signout"
-msgstr "wyloguj"
-
-#: script/dropbox.js:113
-msgid "choose one slot to save to"
-msgstr "wybierz miejsce do zapisu"
-
-#: script/dropbox.js:119
-msgid "save to slot"
-msgstr "zapisz tu"
-
-#: script/dropbox.js:141
-msgid "choose one slot to load from"
-msgstr "wybierz z którego miejsca odczytać"
-
-#: script/dropbox.js:148
-msgid "load from slot"
-msgstr "wczytaj z tego miejsca"
-
-#: script/dropbox.js:179
-msgid "successfully saved to dropbox datastorage"
-msgstr "zapis do dropbox zakończony sukcesem"
-
-#: script/dropbox.js:180
-msgid "error while saving to dropbox datastorage"
-msgstr "zapis do dropbox zakończony niepowodzeniem"
-
-#: script/dropbox.js:183
-msgid "ok"
-msgstr ""
 
 #: script/engine.js:15
 msgid "boxer"
@@ -219,6 +148,10 @@ msgstr "nauczyłeś się przyrządzać większość potraw"
 msgid "app store."
 msgstr "sklep z aplikacjami."
 
+#: ../../script/engine.js:138
+msgid "get the app."
+msgstr "pobierz app."
+
 #: script/engine.js:144 script/engine.js:485
 msgid "lights off."
 msgstr "zgaś światła."
@@ -238,10 +171,6 @@ msgstr "podziel się."
 #: script/engine.js:168
 msgid "save."
 msgstr "zapisz."
-
-#: script/engine.js:177
-msgid "dropbox."
-msgstr ""
 
 #: script/engine.js:184
 msgid "github."
@@ -812,9 +741,17 @@ msgstr "zbroja"
 msgid "water"
 msgstr "woda"
 
-#: script/path.js:229 script/world.js:290
-msgid "free {0}/{1}"
-msgstr "wolne {0}/{1}"
+#: script/path.js:164 script/path.js:172
+msgid "restores"
+msgstr "odnawia"
+
+#: script/path.js:165
+msgid "use with rifle"
+msgstr "zastosowanie z karabinem"
+
+#: script/path.js:169
+msgid "use with laser rifle"
+msgstr "zastosowanie z karabinem laserowym"
 
 #: script/path.js:253
 msgid "weight"
@@ -823,6 +760,14 @@ msgstr "waga"
 #: script/path.js:255
 msgid "available"
 msgstr "dostępne"
+
+#: ../../script/path.js:263
+msgid "damage"
+msgstr "obrażenie"
+
+#: script/path.js:229 script/world.js:290
+msgid "free {0}/{1}"
+msgstr "wolne {0}/{1}"
 
 #: script/room.js:16
 msgid "trap"
@@ -1195,7 +1140,7 @@ msgstr ""
 
 #: script/room.js:760
 msgid "stores"
-msgstr "sklepy"
+msgstr "magazyn"
 
 #: script/room.js:779
 msgid "weapons"

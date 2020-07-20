@@ -74,7 +74,6 @@
 			state: null,
 			debug: false,
 			log: false,
-			dropbox: false,
 			doubleTime: false
 		},
 
@@ -168,16 +167,6 @@
 				.text(_('save.'))
 				.click(Engine.exportImport)
 				.appendTo(menu);
-
-			if(this.options.dropbox && Engine.Dropbox) {
-				this.dropbox = Engine.Dropbox.init();
-
-				$('<span>')
-					.addClass('menuBtn')
-					.text(_('dropbox.'))
-					.click(Engine.Dropbox.startDropbox)
-					.appendTo(menu);
-			}
 
 			$('<span>')
 				.addClass('menuBtn')
@@ -446,13 +435,6 @@
 								nextScene: 'end',
 								onChoose: function() {
 									window.open('https://www.facebook.com/sharer/sharer.php?u=' + Engine.SITE_URL, 'sharer', 'width=626,height=436,location=no,menubar=no,resizable=no,scrollbars=no,status=no,toolbar=no');
-								}
-							},
-							'google': {
-								text:_('google+'),
-								nextScene: 'end',
-								onChoose: function() {
-									window.open('https://plus.google.com/share?url=' + Engine.SITE_URL, 'sharer', 'width=480,height=436,location=no,menubar=no,resizable=no,scrollbars=no,status=no,toolbar=no');
 								}
 							},
 							'twitter': {

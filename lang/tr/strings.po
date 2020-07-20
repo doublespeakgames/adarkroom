@@ -15,78 +15,6 @@ msgstr ""
 "Plural-Forms: s;\n"
 "X-Poedit-SearchPath-0: ./../../script\n"
 
-#: ../../script/dropbox.js:62
-msgid "Dropbox connection"
-msgstr "Dropbox bağlantısı"
-
-#: ../../script/dropbox.js:65
-msgid "connect game to dropbox local storage"
-msgstr "oyunu dropbox yerel deposuna bağla"
-
-#: ../../script/dropbox.js:68
-msgid "connect"
-msgstr "bağla"
-
-#: ../../script/dropbox.js:75 ../../script/dropbox.js:107
-#: ../../script/dropbox.js:133 ../../script/dropbox.js:163
-#: ../../script/engine.js:285 ../../script/engine.js:331
-msgid "cancel"
-msgstr "iptal"
-
-#: ../../script/dropbox.js:86 ../../script/dropbox.js:176
-msgid "Dropbox Export / Import"
-msgstr "Dropbox’dan Export/Import"
-
-#: ../../script/dropbox.js:89
-msgid "export or import save data to dropbox datastorage"
-msgstr "oyun kaydını dropbox’a kaydet ya da ger al"
-
-#: ../../script/dropbox.js:90
-msgid "your are connected to dropbox with account / email "
-msgstr "dropbox’a şu hesap / email ile bağlandın "
-
-#: ../../script/dropbox.js:93
-msgid "save"
-msgstr "kaydet"
-
-#: ../../script/dropbox.js:97
-msgid "load"
-msgstr "yükle"
-
-#: ../../script/dropbox.js:102
-msgid "signout"
-msgstr "çıkış yap"
-
-#: ../../script/dropbox.js:113
-msgid "choose one slot to save to"
-msgstr "kaydetmek için bir slot seç"
-
-#: ../../script/dropbox.js:119
-msgid "save to slot"
-msgstr "slota kaydet"
-
-#: ../../script/dropbox.js:141
-#, fuzzy
-msgid "choose one slot to load from"
-msgstr "kaydetmek için bir slot seç"
-
-#: ../../script/dropbox.js:148
-#, fuzzy
-msgid "load from slot"
-msgstr "slota kaydet"
-
-#: ../../script/dropbox.js:179
-msgid "successfully saved to dropbox datastorage"
-msgstr "başarılı bir şekilde dropbox deposuna kaydedildi"
-
-#: ../../script/dropbox.js:180
-msgid "error while saving to dropbox datastorage"
-msgstr "dropbox deposuna kaydedilirken sorun oluştu"
-
-#: ../../script/dropbox.js:183
-msgid "ok"
-msgstr "tamam"
-
 #: ../../script/engine.js:15
 msgid "boxer"
 msgstr "boksör"
@@ -244,10 +172,6 @@ msgstr "paylaş"
 #: ../../script/engine.js:168
 msgid "save."
 msgstr "kaydet"
-
-#: ../../script/engine.js:177
-msgid "dropbox."
-msgstr "dropbox"
 
 #: ../../script/engine.js:184
 msgid "github."

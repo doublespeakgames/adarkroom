@@ -17,76 +17,6 @@ msgstr ""
 "X-POOTLE-MTIME: 1421483365.000000\n"
 "X-Poedit-SearchPath-0: ./../../script\n"
 
-#: ../../script/dropbox.js:62
-msgid "Dropbox connection"
-msgstr "dropbox連接"
-
-#: ../../script/dropbox.js:65
-msgid "connect game to dropbox local storage"
-msgstr "連接到dropbox雲存儲"
-
-#: ../../script/dropbox.js:68
-msgid "connect"
-msgstr "連接"
-
-#: ../../script/dropbox.js:75 ../../script/dropbox.js:107
-#: ../../script/dropbox.js:133 ../../script/dropbox.js:163
-#: ../../script/engine.js:285 ../../script/engine.js:331
-msgid "cancel"
-msgstr "取消"
-
-#: ../../script/dropbox.js:86 ../../script/dropbox.js:176
-msgid "Dropbox Export / Import"
-msgstr "dropbox導出/導入"
-
-#: ../../script/dropbox.js:89
-msgid "export or import save data to dropbox datastorage"
-msgstr "導出或導入存檔文件到dropbox"
-
-#: ../../script/dropbox.js:90
-msgid "your are connected to dropbox with account / email "
-msgstr "您已用此賬戶/電子郵件連接到dropbox: "
-
-#: ../../script/dropbox.js:93
-msgid "save"
-msgstr "保存"
-
-#: ../../script/dropbox.js:97
-msgid "load"
-msgstr "加載"
-
-#: ../../script/dropbox.js:102
-msgid "signout"
-msgstr "登出"
-
-#: ../../script/dropbox.js:113
-msgid "choose one slot to save to"
-msgstr "選擇保存位置"
-
-#: ../../script/dropbox.js:119
-msgid "save to slot"
-msgstr "保存到位置"
-
-#: ../../script/dropbox.js:141
-msgid "choose one slot to load from"
-msgstr "選擇加載位置"
-
-#: ../../script/dropbox.js:148
-msgid "load from slot"
-msgstr "加載"
-
-#: ../../script/dropbox.js:179
-msgid "successfully saved to dropbox datastorage"
-msgstr "成功保存到dropbox"
-
-#: ../../script/dropbox.js:180
-msgid "error while saving to dropbox datastorage"
-msgstr "保存到dropbox出錯"
-
-#: ../../script/dropbox.js:183
-msgid "ok"
-msgstr "確認"
-
 #: ../../script/engine.js:15
 msgid "boxer"
 msgstr "拳擊手"
@@ -244,10 +174,6 @@ msgstr "分享."
 #: ../../script/engine.js:168
 msgid "save."
 msgstr "保存."
-
-#: ../../script/engine.js:177
-msgid "dropbox."
-msgstr "dropbox."
 
 #: ../../script/engine.js:184
 msgid "github."

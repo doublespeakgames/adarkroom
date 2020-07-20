@@ -16,75 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.7.6\n"
 
-#: script/dropbox.js:62
-msgid "Dropbox connection"
-msgstr "Droxbox tilkobling"
-
-#: script/dropbox.js:65
-msgid "connect game to dropbox local storage"
-msgstr "koble til lokalt dropboxlager"
-
-#: script/dropbox.js:68
-msgid "connect"
-msgstr "koble til"
-
-#: script/dropbox.js:75 script/dropbox.js:107 script/dropbox.js:133
-#: script/dropbox.js:163 script/engine.js:285 script/engine.js:331
-msgid "cancel"
-msgstr "avbryt"
-
-#: script/dropbox.js:86 script/dropbox.js:176
-msgid "Dropbox Export / Import"
-msgstr "Dropbox Eksport / Import"
-
-#: script/dropbox.js:89
-msgid "export or import save data to dropbox datastorage"
-msgstr "eksporter eller importer lagrede data til dropboxlager"
-
-#: script/dropbox.js:90
-msgid "your are connected to dropbox with account / email "
-msgstr "du er koblet til dropboxlager med bruker / epost"
-
-#: script/dropbox.js:93
-msgid "save"
-msgstr "lagre"
-
-#: script/dropbox.js:97
-msgid "load"
-msgstr "last inn"
-
-#: script/dropbox.js:102
-msgid "signout"
-msgstr "logg ut"
-
-#: script/dropbox.js:113
-msgid "choose one slot to save to"
-msgstr "velg en plass å lagre til"
-
-#: script/dropbox.js:119
-msgid "save to slot"
-msgstr "lagre til plass"
-
-#: script/dropbox.js:141
-msgid "choose one slot to load from"
-msgstr "velg en plass å laste inn fra"
-
-#: script/dropbox.js:148
-msgid "load from slot"
-msgstr "last inn fra plass"
-
-#: script/dropbox.js:179
-msgid "successfully saved to dropbox datastorage"
-msgstr "lagret til dropboxlager"
-
-#: script/dropbox.js:180
-msgid "error while saving to dropbox datastorage"
-msgstr "feil med lagring til dropboxlagring"
-
-#: script/dropbox.js:183
-msgid "ok"
-msgstr "ok"
-
 #: script/engine.js:15
 msgid "boxer"
 msgstr "bokser"
@@ -240,10 +171,6 @@ msgstr "del"
 #: script/engine.js:168
 msgid "save."
 msgstr "lagre"
-
-#: script/engine.js:177
-msgid "dropbox."
-msgstr "dropbox"
 
 #: script/engine.js:184
 msgid "github."

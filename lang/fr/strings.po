@@ -16,76 +16,6 @@ msgstr ""
 "Plural-Forms: s;\n"
 "X-Poedit-SearchPath-0: ./../../script\n"
 
-#: ../../script/dropbox.js:62
-msgid "Dropbox connection"
-msgstr "Connexion à dropbox"
-
-#: ../../script/dropbox.js:65
-msgid "connect game to dropbox local storage"
-msgstr "connecter le jeu à un dossier local dropbox"
-
-#: ../../script/dropbox.js:68
-msgid "connect"
-msgstr "connecter"
-
-#: ../../script/dropbox.js:75 ../../script/dropbox.js:107
-#: ../../script/dropbox.js:133 ../../script/dropbox.js:163
-#: ../../script/engine.js:285 ../../script/engine.js:331
-msgid "cancel"
-msgstr "annuler"
-
-#: ../../script/dropbox.js:86 ../../script/dropbox.js:176
-msgid "Dropbox Export / Import"
-msgstr "Exporter/Importer (dropbox)"
-
-#: ../../script/dropbox.js:89
-msgid "export or import save data to dropbox datastorage"
-msgstr "exporter ou importer vos données de sauvegarde vers dropbox"
-
-#: ../../script/dropbox.js:90
-msgid "your are connected to dropbox with account / email "
-msgstr "vous êtes connectés à dropbox avec un compte / email "
-
-#: ../../script/dropbox.js:93
-msgid "save"
-msgstr "sauvegarder"
-
-#: ../../script/dropbox.js:97
-msgid "load"
-msgstr "charger"
-
-#: ../../script/dropbox.js:102
-msgid "signout"
-msgstr "déconnexion"
-
-#: ../../script/dropbox.js:113
-msgid "choose one slot to save to"
-msgstr "choisir un slot de sauvegarde"
-
-#: ../../script/dropbox.js:119
-msgid "save to slot"
-msgstr "sauvegarder"
-
-#: ../../script/dropbox.js:141
-msgid "choose one slot to load from"
-msgstr "choisir le slot depuis lequel charger"
-
-#: ../../script/dropbox.js:148
-msgid "load from slot"
-msgstr "charger depuis le slot"
-
-#: ../../script/dropbox.js:179
-msgid "successfully saved to dropbox datastorage"
-msgstr "sauvegarde dropbox effectuée avec succès"
-
-#: ../../script/dropbox.js:180
-msgid "error while saving to dropbox datastorage"
-msgstr "erreur lors de la sauvegarde dropbox"
-
-#: ../../script/dropbox.js:183
-msgid "ok"
-msgstr "ok"
-
 #: ../../script/engine.js:15
 msgid "boxer"
 msgstr "boxeur"
@@ -243,10 +173,6 @@ msgstr "partager."
 #: ../../script/engine.js:168
 msgid "save."
 msgstr "sauvegarder."
-
-#: ../../script/engine.js:177
-msgid "dropbox."
-msgstr "dropbox."
 
 #: ../../script/engine.js:184
 msgid "github."
