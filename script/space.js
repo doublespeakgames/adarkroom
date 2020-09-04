@@ -562,6 +562,6 @@ var Space = {
 		// lower audio as ship gets further into space
 		var progress = Space.altitude / 60;
 		var newVolume = 1.0 - progress;
-		AudioEngine.setBackgroundMusicVolume(newVolume, .3);
+		AudioEngine.setBackgroundMusicVolume(newVolume, 0.3);
 	}
 };

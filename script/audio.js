@@ -32,7 +32,7 @@ var AudioEngine = {
         // Fill the buffer
         var bufferData = buffer.getChannelData(0);
         for (var i = 0; i < buffer.length / 2; i++) {
-            bufferData[i] = Math.sin(i * .05) / 4; // max .25 gain value
+            bufferData[i] = Math.sin(i * 0.05) / 4; // max .25 gain value
         }
         return buffer;
     },
