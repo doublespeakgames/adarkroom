@@ -422,6 +422,10 @@ msgstr "wszystko"
 msgid "take everything"
 msgstr "weż wszystko"
 
+#: script/events.js:743
+msgid "take all you can"
+msgstr "weż wszystko co możesz"
+
 #: script/events.js:653 script/outside.js:627
 msgid " and "
 msgstr " i "
