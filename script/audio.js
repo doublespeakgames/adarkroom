@@ -9,8 +9,18 @@ var AudioEngine = {
     _currentBackgroundMusic: null,
     _currentEventAudio: null,
     _currentSoundEffectAudio: null,
+    _initialized: false,
     init: function () {
         AudioEngine._initAudioContext();
+        // start loading music and events early
+        for (var key in AudioLibrary) {
+          if (
+            key.toString().indexOf('MUSIC_') > -1 ||
+            key.toString().indexOf('EVENT_') > -1) {
+              AudioEngine.loadAudioFile(AudioLibrary[key]);
+            }
+        }
+        AudioEngine._initialized = true;
     },
     _initAudioContext: function () {
         AudioEngine._audioContext = new (window.AudioContext || window.webkitAudioContext);
@@ -152,21 +162,33 @@ var AudioEngine = {
         }
     },
     playBackgroundMusic: function (src) {
+        if (!AudioEngine._initialized) {
+          return;
+        }
         AudioEngine.loadAudioFile(src)
             .then(function (buffer) {
                 AudioEngine._playBackgroundMusic(buffer);
             });
     },
     playEventMusic: function (src) {
+        if (!AudioEngine._initialized) {
+          return;
+        }
         AudioEngine.loadAudioFile(src)
             .then(function (buffer) {
                 AudioEngine._playEventMusic(buffer);
             });
     },
     stopEventMusic: function () {
+        if (!AudioEngine._initialized) {
+          return;
+        }
         AudioEngine._stopEventMusic();
     },
     playSound: function (src) {
+        if (!AudioEngine._initialized) {
+          return;
+        }
         AudioEngine.loadAudioFile(src)
             .then(function (buffer) {
                 AudioEngine._playSound(buffer);
