@@ -142,6 +142,13 @@
 				});
 			}
 
+      // Disable this for now
+			// $('<span>')
+			// 	.addClass('volume menuBtn')
+			// 	.text(_('sound on.'))
+			// 	.click(() => Engine.toggleVolume())
+			// 	.appendTo(menu);
+
 			$('<span>')
 				.addClass('volume menuBtn')
 				.text(_('sound off.'))
@@ -215,7 +222,7 @@
 			$.Dispatch('stateUpdate').subscribe(Engine.handleStateUpdates);
 
 			$SM.init();
-			AudioEngine.init();
+			// AudioEngine.init(); Disable this for now
 			Notifications.init();
 			Events.init();
 			Room.init();
@@ -239,23 +246,24 @@
 				Engine.triggerHyperMode();
 			}
 
-			if(!AudioEngine.isAudioContextRunning()){
-				document.addEventListener('click', Engine.resumeAudioContext);
-			}
+      // Disable this for now
+      // Engine.toggleVolume(Boolean($SM.get('config.soundOn')));
+      // if(!AudioEngine.isAudioContextRunning()){
+      //   document.addEventListener('click', Engine.resumeAudioContext, true);
+      // }
 			
 			Engine.saveLanguage();
 			Engine.travelTo(Room);
+
+      // Disable this for now
+      // setTimeout(notifyAboutSound, 3000);
 
 		},
 		resumeAudioContext: function () {
 			AudioEngine.tryResumingAudioContext();
 			
 			// turn on music!
-			if (AudioEngine._audioContext.state !== 'suspended') {
-				$('.volume').text(_('sound off.'));
-				$SM.set('config.soundOn', true);
-				AudioEngine.setMasterVolume(1.0);
-			}
+      AudioEngine.setMasterVolume($SM.get('config.soundOn') ? 1.0 : 0.0, 0);
 
 			document.removeEventListener('click', Engine.resumeAudioContext);
 		},
@@ -813,8 +821,11 @@
 			}
 		},
 
-		toggleVolume: function() {
-			if ($SM.get('config.soundOn')) {
+		toggleVolume: function(enabled /* optional */) {
+      if (enabled == null) {
+        enabled = !$SM.get('config.soundOn');
+      }
+			if (!enabled) {
 				$('.volume').text(_('sound on.'));
 				$SM.set('config.soundOn', false);
 				AudioEngine.setMasterVolume(0.0);
@@ -854,6 +865,38 @@
 	function eventPassthrough(e) {
 		return true;
 	}
+
+  function notifyAboutSound() {
+    if ($SM.get('playStats.audioAlertShown')) {
+      return;
+    }
+
+    // Tell new users that there's sound now!
+    $SM.set('playStats.audioAlertShown', true);
+    Events.startEvent({
+      title: _('Sound Available!'),
+      scenes: {
+        start: {
+          text: [
+            _('ears flooded with new sensations.'),
+            _('perhaps silence is safer?')
+          ],
+          buttons: {
+            'yes': {
+              text: _('enable audio'),
+              nextScene: 'end',
+              onChoose: () => Engine.toggleVolume(true)
+            },
+            'no': {
+              text: _('disable audio'),
+              nextScene: 'end',
+              onChoose: () => Engine.toggleVolume(false)
+            }
+          }
+        }
+      }
+    });
+  }
 
 })();
 
