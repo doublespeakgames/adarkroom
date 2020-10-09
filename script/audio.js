@@ -136,7 +136,9 @@ var AudioEngine = {
         var fadeTime = AudioEngine._audioContext.currentTime + AudioEngine.FADE_TIME * 2;
 
         // fade out event music and stop
-        if (AudioEngine._currentEventAudio) {
+        if (AudioEngine._currentEventAudio && 
+            AudioEngine._currentEventAudio.source && 
+            AudioEngine._currentEventAudio.source.buffer) {
             var currentEventGainValue = AudioEngine._currentEventAudio.envelope.gain.value;
             AudioEngine._currentEventAudio.envelope.gain.cancelScheduledValues(AudioEngine._audioContext.currentTime);
             AudioEngine._currentEventAudio.envelope.gain.setValueAtTime(currentEventGainValue, AudioEngine._audioContext.currentTime);
@@ -212,10 +214,26 @@ var AudioEngine = {
                     return AudioEngine._getMissingAudioBuffer();
                 }
 
-                return AudioEngine._audioContext.decodeAudioData(buffer, function (decodedData) {
+                var decodeAudioDataPromise = AudioEngine._audioContext.decodeAudioData(buffer, function (decodedData) {
                     AudioEngine.AUDIO_BUFFER_CACHE[src] = decodedData;
                     return AudioEngine.AUDIO_BUFFER_CACHE[src];
                 });
+
+                // Safari WebAudio does not return a promise based API for
+                // decodeAudioData, so we need to fake it if we want to play
+                // audio immediately on first fetch
+                if (decodeAudioDataPromise) {
+                    return decodeAudioDataPromise;
+                } else {
+                    return new Promise(function (resolve, reject) {
+                        var fakePromiseId = setInterval(function() {
+                            if (AudioEngine.AUDIO_BUFFER_CACHE[src]) {
+                                resolve(AudioEngine.AUDIO_BUFFER_CACHE[src]);
+                                clearInterval(fakePromiseId);
+                            }
+                        }, 20);
+                    });
+                }
             });
         }
     },

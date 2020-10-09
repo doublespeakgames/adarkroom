@@ -142,17 +142,10 @@
 				});
 			}
 
-      // Disable this for now
-			// $('<span>')
-			// 	.addClass('volume menuBtn')
-			// 	.text(_('sound on.'))
-			// 	.click(() => Engine.toggleVolume())
-			// 	.appendTo(menu);
-
 			$('<span>')
 				.addClass('volume menuBtn')
-				.text(_('sound off.'))
-				.click(Engine.toggleVolume)
+				.text(_('sound on.'))
+				.click(() => Engine.toggleVolume())
 				.appendTo(menu);
 
 			$('<span>')
@@ -222,7 +215,7 @@
 			$.Dispatch('stateUpdate').subscribe(Engine.handleStateUpdates);
 
 			$SM.init();
-			// AudioEngine.init(); Disable this for now
+			AudioEngine.init();
 			Notifications.init();
 			Events.init();
 			Room.init();
@@ -246,24 +239,22 @@
 				Engine.triggerHyperMode();
 			}
 
-      // Disable this for now
-      // Engine.toggleVolume(Boolean($SM.get('config.soundOn')));
-      // if(!AudioEngine.isAudioContextRunning()){
-      //   document.addEventListener('click', Engine.resumeAudioContext, true);
-      // }
+			Engine.toggleVolume(Boolean($SM.get('config.soundOn')));
+			if(!AudioEngine.isAudioContextRunning()){
+				document.addEventListener('click', Engine.resumeAudioContext, true);
+			}
 			
 			Engine.saveLanguage();
 			Engine.travelTo(Room);
 
-      // Disable this for now
-      // setTimeout(notifyAboutSound, 3000);
+      		setTimeout(notifyAboutSound, 3000);
 
 		},
 		resumeAudioContext: function () {
 			AudioEngine.tryResumingAudioContext();
 			
 			// turn on music!
-      AudioEngine.setMasterVolume($SM.get('config.soundOn') ? 1.0 : 0.0, 0);
+      		AudioEngine.setMasterVolume($SM.get('config.soundOn') ? 1.0 : 0.0, 0);
 
 			document.removeEventListener('click', Engine.resumeAudioContext);
 		},
