@@ -12,15 +12,21 @@ var AudioEngine = {
     _initialized: false,
     init: function () {
         AudioEngine._initAudioContext();
+        // AudioEngine._preloadAudio(); // removed to save bandwidth
+        AudioEngine._initialized = true;
+    },
+    _preloadAudio: function () {
         // start loading music and events early
+        // ** could be used later if we specify a better set of
+        // audio files to preload -- i.e. we probably don't need to load
+        // the later villages or events audio, and esp. not the ending
         for (var key in AudioLibrary) {
-          if (
+            if (
             key.toString().indexOf('MUSIC_') > -1 ||
             key.toString().indexOf('EVENT_') > -1) {
-              AudioEngine.loadAudioFile(AudioLibrary[key]);
+                AudioEngine.loadAudioFile(AudioLibrary[key]);
             }
         }
-        AudioEngine._initialized = true;
     },
     _initAudioContext: function () {
         AudioEngine._audioContext = new (window.AudioContext || window.webkitAudioContext);
@@ -136,7 +142,9 @@ var AudioEngine = {
         var fadeTime = AudioEngine._audioContext.currentTime + AudioEngine.FADE_TIME * 2;
 
         // fade out event music and stop
-        if (AudioEngine._currentEventAudio) {
+        if (AudioEngine._currentEventAudio && 
+            AudioEngine._currentEventAudio.source && 
+            AudioEngine._currentEventAudio.source.buffer) {
             var currentEventGainValue = AudioEngine._currentEventAudio.envelope.gain.value;
             AudioEngine._currentEventAudio.envelope.gain.cancelScheduledValues(AudioEngine._audioContext.currentTime);
             AudioEngine._currentEventAudio.envelope.gain.setValueAtTime(currentEventGainValue, AudioEngine._audioContext.currentTime);
@@ -212,10 +220,26 @@ var AudioEngine = {
                     return AudioEngine._getMissingAudioBuffer();
                 }
 
-                return AudioEngine._audioContext.decodeAudioData(buffer, function (decodedData) {
+                var decodeAudioDataPromise = AudioEngine._audioContext.decodeAudioData(buffer, function (decodedData) {
                     AudioEngine.AUDIO_BUFFER_CACHE[src] = decodedData;
                     return AudioEngine.AUDIO_BUFFER_CACHE[src];
                 });
+
+                // Safari WebAudio does not return a promise based API for
+                // decodeAudioData, so we need to fake it if we want to play
+                // audio immediately on first fetch
+                if (decodeAudioDataPromise) {
+                    return decodeAudioDataPromise;
+                } else {
+                    return new Promise(function (resolve, reject) {
+                        var fakePromiseId = setInterval(function() {
+                            if (AudioEngine.AUDIO_BUFFER_CACHE[src]) {
+                                resolve(AudioEngine.AUDIO_BUFFER_CACHE[src]);
+                                clearInterval(fakePromiseId);
+                            }
+                        }, 20);
+                    });
+                }
             });
         }
     },
