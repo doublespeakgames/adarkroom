@@ -75,6 +75,10 @@ div#header {
   height: 40px;
 }
 
+.logo-icon > path {
+  stroke: black;
+}
+
 .menu {
 	position: fixed;
 	right: 10px;

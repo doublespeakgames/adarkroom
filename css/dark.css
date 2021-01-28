@@ -180,3 +180,7 @@ body.noMask #buttons > .button {
 #theEnd {
 	color: #272823;
 }
+
+.logo-icon > path {
+  stroke: white;
+}
