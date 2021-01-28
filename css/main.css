@@ -64,6 +64,17 @@ div#header {
 	height: 20px;
 }
 
+.logo {
+  position: fixed;
+  left: 10px;
+  bottom: 0;
+  z-index: 10;
+}
+
+.logo-icon {
+  height: 40px;
+}
+
 .menu {
 	position: fixed;
 	right: 10px;

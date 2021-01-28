@@ -247,7 +247,7 @@
 			Engine.saveLanguage();
 			Engine.travelTo(Room);
 
-      		setTimeout(notifyAboutSound, 3000);
+      setTimeout(notifyAboutSound, 3000);
 
 		},
 		resumeAudioContext: function () {

@@ -21,7 +21,8 @@ var Events = {
 		Events.EventPool = [].concat(
 			Events.Global,
 			Events.Room,
-			Events.Outside
+			Events.Outside,
+      Events.Marketing
 		);
 
 		Events.eventStack = [];
@@ -994,6 +995,14 @@ var Events = {
 		if(info.notification) {
 			Notifications.notify(null, info.notification);
 		}
+
+    info.onClick && info.onClick();
+
+    // Link
+    if (info.link) {
+      Events.endEvent();
+      window.open(info.link);
+    }
 
 		// Next Scene
 		if(info.nextScene) {
