@@ -19,7 +19,8 @@ var World = {
 		BOREHOLE: 'B',
 		BATTLEFIELD: 'F',
 		SWAMP: 'M',
-		CACHE: 'U'
+		CACHE: 'U',
+    EXECUTIONER: 'X'
 	},
 	TILE_PROBS: {},
 	LANDMARKS: {},
@@ -29,7 +30,7 @@ var World = {
 	MOVES_PER_FOOD: 2,
 	MOVES_PER_WATER: 1,
 	DEATH_COOLDOWN: 120,
-	FIGHT_CHANCE: 0.20,
+	FIGHT_CHANCE: 0, //0.20, TODO UNCOMMENT THIS
 	BASE_HEALTH: 10,
 	BASE_HIT_CHANCE: 0.8,
 	MEAT_HEAL: 8,
@@ -127,6 +128,7 @@ var World = {
 		World.LANDMARKS[World.TILE.BOREHOLE] = { num: 10, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'borehole', label:  _('A&nbsp;Borehole')};
 		World.LANDMARKS[World.TILE.BATTLEFIELD] = { num: 5, minRadius: 18, maxRadius: World.RADIUS * 1.5, scene: 'battlefield', label:  _('A&nbsp;Battlefield')};
 		World.LANDMARKS[World.TILE.SWAMP] = { num: 1, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'swamp', label:  _('A&nbsp;Murky&nbsp;Swamp')};
+    World.LANDMARKS[World.TILE.EXECUTIONER] = { num: 1, minRadius: 28, maxRadius: 28, scene: 'executioner', 'label': _('A Ravaged Battleship')};
 
 		// Only add the cache if there is prestige data
 		if($SM.get('previous.stores')) {
@@ -135,11 +137,22 @@ var World = {
 
 		if(typeof $SM.get('features.location.world') == 'undefined') {
 			$SM.set('features.location.world', true);
+      $SM.set('features.executioner', true);
 			$SM.setM('game.world', {
 				map: World.generateMap(),
 				mask: World.newMask()
 			});
 		}
+    else if (!$SM.get('features.executioner')) {
+      // Place the Executioner in previously generated maps that don't have it
+      const map = $SM.get('game.world.map');
+      const landmark = World.LANDMARKS[World.TILE.EXECUTIONER]
+			for(let l = 0; l < landmark.num; l++) {
+				World.placeLandmark(landmark.minRadius, landmark.maxRadius, World.TILE.EXECUTIONER, map);
+			}
+      $SM.set('game.world.map', map);
+      $SM.set('features.executioner', true);
+    }
 
 		// Create the World panel
 		this.panel = $('<div>').attr('id', "worldPanel").addClass('location').appendTo('#outerSlider');

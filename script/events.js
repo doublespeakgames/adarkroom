@@ -550,7 +550,6 @@ var Events = {
 						clearTimeout(Events._enemyAttackTimer);
 						Events.endEvent();
 						World.die();
-						AudioEngine.playSound(AudioLibrary.LOSE_FIGHT);
 					}
 			});
 		}
