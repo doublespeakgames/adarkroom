@@ -46,9 +46,9 @@ div#wrapper {
 }
 
 div#saveNotify {
-	position: absolute;
-	top: 20px;
-	right: 0px;
+	position: fixed;
+	top: 10px;
+	right: 20px;
 	background: white;
 	opacity: 0;
 }
@@ -147,7 +147,7 @@ span.customSelectOptions {
 }
 
 div.headerButton {
-	font-size: 18px;
+	font-size: 17px;
 	cursor: pointer;
 	float: left;
 	border-left: 1px solid black;

@@ -566,6 +566,7 @@ var Events = {
 			if(Events.fought) {
 				return;
 			}
+      World.setHp(World.getMaxHealth());
 			Events.endFight();
 			// AudioEngine.playSound(AudioLibrary.WIN_FIGHT);
 			$('#enemy').animate({opacity: 0}, 300, 'linear', function() {

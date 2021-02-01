@@ -3585,7 +3585,7 @@ Events.Setpieces = {
 		audio: AudioLibrary.LANDMARK_DESTROYED_VILLAGE
 	},
 
-  "executioner": { /* Exploring a ravaged battleship */
+  "executioner-intro": { /* Exploring a ravaged battleship */
     title: _('A Ravaged Battleship'),
     audio: AudioLibrary.LANDMARK_CRASHED_SHIP,
     scenes: {
@@ -3627,7 +3627,7 @@ Events.Setpieces = {
       '2-1': {
         'text': [
           _('thick, sticky webbing covers the walls of the corridor.'), 
-          _('deeper into the ship, the darkness seems to almost writhe.'), 
+          _('deeper into the ship, the darkness seems almost to writhe.'), 
           _('a small knapsack hangs from a cluster of webs, a few feet from the floor.')
         ],
         loot: {
@@ -3663,7 +3663,7 @@ Events.Setpieces = {
 				combat: true,
 				enemy: 'chitinous horror',
 				chara: 'H',
-				damage: 2,
+				damage: 1,
 				hit: 0.8,
 				attackDelay: 0.25,
 				health: 70,
@@ -3697,7 +3697,7 @@ Events.Setpieces = {
 				combat: true,
 				enemy: 'chitinous queen',
 				chara: 'Q',
-				damage: 3,
+				damage: 1,
 				hit: 0.8,
 				attackDelay: 0.25,
 				health: 80,
@@ -3731,10 +3731,10 @@ Events.Setpieces = {
 				combat: true,
 				enemy: 'operative',
 				chara: 'O',
-				damage: 8,
+				damage: 6,
 				hit: 0.8,
 				attackDelay: 2,
-				health: 60,
+				health: 50,
 				loot: {
 					'bayonet': {
 						min: 1,
@@ -3853,8 +3853,8 @@ Events.Setpieces = {
         loot: {
 					'laser rifle': {
 						min: 1,
-						max: 1,
-						chance: 0.5
+						max: 3,
+						chance: 1
 					},
 					'energy cells': {
 						min: 1,
@@ -3911,7 +3911,7 @@ Events.Setpieces = {
 				enemy: 'ancient beast',
 				enemyName: _('ancient beast'),
 				chara: 'A',
-				damage: 8,
+				damage: 6,
 				hit: 0.8,
 				attackDelay: 1,
 				health: 60,
@@ -3965,11 +3965,11 @@ Events.Setpieces = {
       '6': {
 				combat: true,
         notification: _('as the lights come online, so too do the defense systems.'),
-				enemy: ' automated turret',
-				enemyName: _(' automated turret'),
+				enemy: 'automated turret',
+				enemyName: _('automated turret'),
 				ranged: true,
 				chara: 'T',
-				damage: 10,
+				damage: 8,
 				hit: 0.8,
 				attackDelay: 2,
 				health: 60,
@@ -4004,15 +4004,36 @@ Events.Setpieces = {
           _('a large hatch grinds open, and the wind rushes in.'),
           _('a strange device sits on the floor. looks important.')
         ],
+        onLoad: () => {
+          World.drawRoad();
+          World.state.executioner = true;
+        },
         buttons: {
           'leave': {
             text: _('take device and leave'),
             nextScene: 'end'
           }
         }
-      },
-
+      }
     }
+  },
 
-  }
+  "executioner-antechamber": { /* Deeper into a ravaged battleship */
+      title: _('A Ravaged Battleship'),
+      audio: AudioLibrary.LANDMARK_CRASHED_SHIP,
+      scenes: {
+        'start': {
+          'text': [
+            _('a large hatch opens into a wide corridor.'),
+            _('the corridor leads to a bank of elevators, which appear to be functional.')
+          ],
+          buttons: {
+            'leave': {
+              text: _('leave'),
+              nextScene: 'end'
+            }
+          }
+        }
+      }
+    }
 };

@@ -826,14 +826,13 @@ var Room = {
 		}
 		for (var k in $SM.get('stores')) {
 
-			var type = null;
-			if (Room.Craftables[k]) {
-				type = Room.Craftables[k].type;
-			} else if (Room.TradeGoods[k]) {
-				type = Room.TradeGoods[k].type;
-			} else if (Room.MiscItems[k]) {
-				type = Room.MiscItems[k].type;
-			}
+			const good =  
+        Room.Craftables[k] ||
+        Room.TradeGoods[k] ||
+        Room.TradeGoods[k] ||
+        Room.MiscItems[k] ||
+        Fabricator.Craftables[k];
+      const type = good ? good.type : null;
 
 			var location;
 			switch (type) {

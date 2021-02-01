@@ -75,7 +75,7 @@
 			debug: false,
 			log: false,
 			dropbox: false,
-			doubleTime: true
+			doubleTime: false
 		},
 
 		init: function(options) {
@@ -230,6 +230,9 @@
 			if($SM.get('features.location.spaceShip')) {
 				Ship.init();
 			}
+      if ($SM.get('features.location.fabricator')) {
+        Fabricator.init();
+      }
 
 			if($SM.get('config.lightsOff', true)){
 				Engine.turnLightsOff();

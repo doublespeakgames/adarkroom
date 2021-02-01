@@ -10,7 +10,8 @@ var Path = {
 		'bullets': 0.1,
 		'energy cell': 0.2,
 		'laser rifle': 5,
-		'bolas': 0.5
+    'plasma rifle': 5,
+		'bolas': 0.5,
 	},
 		
 	name: 'Path',
@@ -67,7 +68,9 @@ var Path = {
 	},
 	
 	getCapacity: function() {
-		if($SM.get('stores.convoy', true) > 0) {
+		if($SM.get('stores["cargo drone"]', true) > 0) {
+			return Path.DEFAULT_BAG_SPACE + 100;
+		} else if($SM.get('stores.convoy', true) > 0) {
 			return Path.DEFAULT_BAG_SPACE + 60;
 		} else if($SM.get('stores.wagon', true) > 0) {
 			return Path.DEFAULT_BAG_SPACE + 30;
@@ -129,7 +132,9 @@ var Path = {
 		
 		// Add the armour row
 		var armour = _("none");
-		if($SM.get('stores["s armour"]', true) > 0)
+    if($SM.get('stores["kinetic armour"]', true) > 0)
+			armour = _("kinetic");
+		else if($SM.get('stores["s armour"]', true) > 0)
 			armour = _("steel");
 		else if($SM.get('stores["i armour"]', true) > 0)
 			armour = _("iron");
@@ -169,7 +174,7 @@ var Path = {
 			'bayonet': {type: 'weapon' },
 			'charm': {type: 'tool'},
 			'medicine': {type: 'tool', desc: _('restores') + ' ' + World.MEDS_HEAL + ' ' + _('hp') }
-		}, Room.Craftables);
+		}, Room.Craftables, Fabricator.Craftables);
 		
 		for(var k in carryable) {
 			var lk = _(k);
