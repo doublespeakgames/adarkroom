@@ -101,7 +101,7 @@ var Path = {
 			var needsAppend = false;
 			if(perks.length === 0) {
 				needsAppend = true;
-				perks = $('<div>').attr({'id': 'perks', 'data-legend': _('perks:')});
+				perks = $('<div>').attr({'id': 'perks', 'data-legend': _('perks')});
 			}
 			for(var k in $SM.get('character.perks')) {
 				var id = 'perk_' + k.replace(' ', '-');
@@ -334,35 +334,5 @@ var Path = {
 		} else if(e.category == 'income' && Engine.activeModule == Path){
 			Path.updateOutfitting();
 		}
-	},
-
-	scrollSidebar: function(direction, reset){
-
-		if( typeof reset != "undefined" ){
-			$('#perks').css('top', '0px');
-			$('#storesContainer').css('top', '206px');
-			Path._STORES_OFFSET = 0;
-			return;
-		}
-		
-		var momentum = 10;
-
-		if( direction == 'up' )
-			momentum = momentum * -1;
-
-		if( direction == 'down' && inView( direction, $('#perks') ) ){
-
-			return false;
-
-		}else if( direction == 'up' && inView( direction, $('#storesContainer') ) ){
-
-			return false;
-
-		}
-
-		scrollByX( $('#perks'), momentum );
-		scrollByX( $('#storesContainer'), momentum );
-		Path._STORES_OFFSET += momentum;
-
 	}
 };

@@ -16,13 +16,19 @@ var Header = {
 		return $('div#header div.headerButton').length > 1;
 	},
 	
-	addLocation: function(text, id, module) {
-		return $('<div>').attr('id', "location_" + id)
+	addLocation: function(text, id, module, before) {
+    const toAdd = $('<div>').attr('id', "location_" + id)
 			.addClass('headerButton')
 			.text(text).click(function() {
 				if(Header.canTravel()) {
 					Engine.travelTo(module);
 				}
-			}).appendTo($('div#header'));
+			});
+      
+    if (before && $(`#location_${before}`).length > 0) {
+      return toAdd.insertBefore(`#location_${before}`);
+    }
+    
+    return toAdd.appendTo($('div#header'));
 	}
 };
