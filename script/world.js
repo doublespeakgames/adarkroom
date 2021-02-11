@@ -569,13 +569,11 @@ var World = {
       World.goHome();
     } else if(curTile === World.TILE.EXECUTIONER) {
       const scene = World.state.executioner ? 'executioner-antechamber' : 'executioner-intro';
-      const sceneData = Events.Setpieces[scene];
+      const sceneData = Events.Executioner[scene];
       Events.startEvent(sceneData);
-      AudioEngine.playEventMusic(sceneData.audio);
     } else if(typeof World.LANDMARKS[curTile] != 'undefined') {
       if(curTile != World.TILE.OUTPOST || !World.outpostUsed()) {
         Events.startEvent(Events.Setpieces[World.LANDMARKS[curTile].scene]);
-        AudioEngine.playEventMusic(Events.Setpieces[World.LANDMARKS[curTile].scene].audio);
       }
     } else {
       if(World.useSupplies()) {

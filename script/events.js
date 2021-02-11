@@ -1002,7 +1002,15 @@ var Events = {
     if (info.link) {
       Events.endEvent();
       window.open(info.link);
+			return;
     }
+
+		// Next Event
+		if (info.nextEvent) {
+			const eventData = Events.Setpieces[info.nextEvent] || Events.Executioner[info.nextEvent];
+			Events.switchEvent(eventData);
+			return;
+		}
 
 		// Next Scene
 		if(info.nextScene) {
@@ -1104,27 +1112,39 @@ var Events = {
 		return Events.activeEvent().eventPanel;
 	},
 
+	switchEvent: event => {
+		if (!event) {
+			return;
+		}
+		Events.eventPanel().remove();
+		Events.activeEvent().eventPanel = null;
+		Events.eventStack.shift();
+		Events.startEvent(event);
+	},
+
 	startEvent: function(event, options) {
-		if(event) {
-			Engine.event('game event', 'event');
-			Engine.keyLock = true;
-			Engine.tabNavigation = false;
-			Button.saveCooldown = false;
-			Events.eventStack.unshift(event);
-			event.eventPanel = $('<div>').attr('id', 'event').addClass('eventPanel').css('opacity', '0');
-			if(options != null && options.width != null) {
-				Events.eventPanel().css('width', options.width);
-			}
-			$('<div>').addClass('eventTitle').text(Events.activeEvent().title).appendTo(Events.eventPanel());
-			$('<div>').attr('id', 'description').appendTo(Events.eventPanel());
-			$('<div>').attr('id', 'buttons').appendTo(Events.eventPanel());
-			Events.loadScene('start');
-			$('div#wrapper').append(Events.eventPanel());
-			Events.eventPanel().animate({opacity: 1}, Events._PANEL_FADE, 'linear');
-			var currentSceneInformation = Events.activeEvent().scenes[Events.activeScene];
-			if (currentSceneInformation.blink) {
-				Events.blinkTitle();
-			}
+		if(!event) {
+			return;
+		}
+		event.audio && AudioEngine.playEventMusic(event.audio);
+		Engine.event('game event', 'event');
+		Engine.keyLock = true;
+		Engine.tabNavigation = false;
+		Button.saveCooldown = false;
+		Events.eventStack.unshift(event);
+		event.eventPanel = $('<div>').attr('id', 'event').addClass('eventPanel').css('opacity', '0');
+		if(options != null && options.width != null) {
+			Events.eventPanel().css('width', options.width);
+		}
+		$('<div>').addClass('eventTitle').text(Events.activeEvent().title).appendTo(Events.eventPanel());
+		$('<div>').attr('id', 'description').appendTo(Events.eventPanel());
+		$('<div>').attr('id', 'buttons').appendTo(Events.eventPanel());
+		Events.loadScene('start');
+		$('div#wrapper').append(Events.eventPanel());
+		Events.eventPanel().animate({opacity: 1}, Events._PANEL_FADE, 'linear');
+		var currentSceneInformation = Events.activeEvent().scenes[Events.activeScene];
+		if (currentSceneInformation.blink) {
+			Events.blinkTitle();
 		}
 	},
 
