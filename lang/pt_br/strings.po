@@ -181,7 +181,7 @@ msgstr "aprendeu a prever seus movimentos"
 
 #: script/engine.js:57
 msgid "scout"
-msgstr "patrulhar"
+msgstr "olheiro"
 
 #: script/engine.js:58
 msgid "see farther"
