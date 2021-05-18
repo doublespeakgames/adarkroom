@@ -19,7 +19,8 @@ var Room = {
 			maxMsg: _("more traps won't help now"),
 			type: 'building',
 			cost: function () {
-				var n = $SM.get('game.buildings["trap"]', true);
+				var n = $SM.get('
+					buildings["trap"]', true);
 				return {
 					'wood': 10 + (n * 10)
 				};
@@ -511,7 +512,7 @@ var Room = {
 			$SM.set('game.builder.level', -1);
 		}
 
-		// If this is the first time playing, the fire is dead and it's freezing. 
+		// If this is the first time playing, the fire is dead and it's frigid. 
 		// Otherwise grab past save state temp and fire level.
 		$SM.set('game.temperature', $SM.get('game.temperature.value') === undefined ? this.TempEnum.Freezing : $SM.get('game.temperature'));
 		$SM.set('game.fire', $SM.get('game.fire.value') === undefined ? this.FireEnum.Dead : $SM.get('game.fire'));
@@ -564,6 +565,7 @@ var Room = {
 		/*
 		 * Builder states:
 		 * 0 - Approaching
+		 * 0.5 - Dead
 		 * 1 - Collapsed
 		 * 2 - Shivering
 		 * 3 - Sleeping
@@ -577,8 +579,8 @@ var Room = {
 		}
 		Engine.setTimeout($SM.collectIncome, 1000);
 
-		Notifications.notify(Room, _("the room is {0}", Room.TempEnum.fromInt($SM.get('game.temperature.value')).text));
-		Notifications.notify(Room, _("the fire is {0}", Room.FireEnum.fromInt($SM.get('game.fire.value')).text));
+		Notifications.notify(Room, _("The room is {0}", Room.TempEnum.fromInt($SM.get('game.temperature.value')).text));
+		Notifications.notify(Room, _("The fire is {0}", Room.FireEnum.fromInt($SM.get('game.fire.value')).text));
 	},
 
 	options: {}, // Nothing for now
@@ -586,8 +588,8 @@ var Room = {
 	onArrival: function (transition_diff) {
 		Room.setTitle();
 		if (Room.changed) {
-			Notifications.notify(Room, _("the fire is {0}", Room.FireEnum.fromInt($SM.get('game.fire.value')).text));
-			Notifications.notify(Room, _("the room is {0}", Room.TempEnum.fromInt($SM.get('game.temperature.value')).text));
+			Notifications.notify(Room, _("The fire is {0}", Room.FireEnum.fromInt($SM.get('game.fire.value')).text));
+			Notifications.notify(Room, _("The room is {0}", Room.TempEnum.fromInt($SM.get('game.temperature.value')).text));
 			Room.changed = false;
 		}
 		if ($SM.get('game.builder.level') == 3) {
@@ -597,7 +599,7 @@ var Room = {
 				stores: { 'wood': 2 }
 			});
 			Room.updateIncomeView();
-			Notifications.notify(Room, _("the stranger is standing by the fire. she says she can help. says she builds things."));
+			Notifications.notify(Room, _("The stranger is standing by the fire. She says she can help. Says she builds things."));
 		}
 
 		Engine.moveStoresView(null, transition_diff);
@@ -614,11 +616,14 @@ var Room = {
 			}
 			return null;
 		},
-		Freezing: { value: 0, text: _('freezing') },
-		Cold: { value: 1, text: _('cold') },
-		Mild: { value: 2, text: _('mild') },
-		Warm: { value: 3, text: _('warm') },
-		Hot: { value: 4, text: _('hot') }
+		Frigid: { value: 0, text: _('frigid') },
+		Freezing: { value: 1, text: _('freezing') },
+		Cold: { value: 2, text: _('cold') },
+		Mild: { value: 3, text: _('mild') },
+		Warm: { value: 4, text: _('warm') },
+		Hot: { value: 5, text: _('hot') },
+		Sweating: { value: 6, text: _('sweating') },
+		Overheating: { value: 7, text: _('overheating') }
 	},
 
 	FireEnum: {
@@ -631,10 +636,11 @@ var Room = {
 			return null;
 		},
 		Dead: { value: 0, text: _('dead') },
-		Smoldering: { value: 1, text: _('smoldering') },
-		Flickering: { value: 2, text: _('flickering') },
-		Burning: { value: 3, text: _('burning') },
-		Roaring: { value: 4, text: _('roaring') }
+		Dying: { valu: 1, text: _('dying') },
+		Smoldering: { value: 2, text: _('smoldering') },
+		Flickering: { value: 3, text: _('flickering') },
+		Burning: { value: 4, text: _('burning') },
+		Roaring: { value: 5, text: _('roaring') }
 	},
 
 	setTitle: function () {
