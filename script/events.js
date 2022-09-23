@@ -422,7 +422,7 @@ var Events = {
 			var attackFn = weapon.type == 'ranged' ? Events.animateRanged : Events.animateMelee;
 			
 			// play variation audio for weapon type
-			var r = Math.floor(Math.random() * 2) + 1;
+			var r = Math.floor(Math.random() * 3) + 1;
 			switch (weapon.type) {
 				case 'unarmed':
 					AudioEngine.playSound(AudioLibrary['WEAPON_UNARMED_' + r]);
