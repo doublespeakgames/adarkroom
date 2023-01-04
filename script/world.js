@@ -436,7 +436,7 @@ var World = {
 				World.danger = false;
 				return true;
 			}
-			if(World.getDistance < 18 && $SM.get('stores["i armour"]', true) > 0) {
+			if(World.getDistance() < 18 && $SM.get('stores["i armour"]', true) > 0) {
 				World.danger = false;
 				return true;
 			}
