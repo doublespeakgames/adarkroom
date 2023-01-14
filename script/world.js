@@ -2,24 +2,24 @@ var World = {
 	RADIUS: 30,
 	VILLAGE_POS: [30, 30],
 	TILE: {
-		VILLAGE: 'A',
+		VILLAGE: '🜁',
 		IRON_MINE: 'I',
 		COAL_MINE: 'C',
 		SULPHUR_MINE: 'S',
-		FOREST: ';',
-		FIELD: ',',
-		BARRENS: '.',
-		ROAD: '#',
-		HOUSE: 'H',
-		CAVE: 'V',
-		TOWN: 'O',
-		CITY: 'Y',
-		OUTPOST: 'P',
-		SHIP: 'W',
-		BOREHOLE: 'B',
-		BATTLEFIELD: 'F',
-		SWAMP: 'M',
-		CACHE: 'U'
+		FOREST: '⇮', //⍋♙;
+		FIELD: '‼', //,⛆⨌‼⁗
+		BARRENS: '∸', //.
+		ROAD: '#', //🞡 ⌗#⩩
+		HOUSE: '⌂', //h
+		CAVE: '⛛', //
+		TOWN: 'ᗝ', //
+		CITY: '∏', //⌘y
+		OUTPOST: '🝯', //P
+		SHIP: '⌲', //W⏅
+		BOREHOLE: '⏚', //◉🝧⊗֎
+		BATTLEFIELD: '⊗', //F
+		SWAMP: '⍾', //M
+		CACHE: '▦' //U
 	},
 	TILE_PROBS: {},
 	LANDMARKS: {},
