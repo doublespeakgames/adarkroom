@@ -478,7 +478,8 @@ var Events = {
 		} else {
 			if(dmg == 'stun') {
 				msg = _('stunned');
-				enemy.data('stunned', Events.STUN_DURATION);
+				enemy.data('stunned', true);
+				setTimeout(function: {enemy.data('stunned', false)}, Events.STUN_DURATION)
 			}
 		}
 
