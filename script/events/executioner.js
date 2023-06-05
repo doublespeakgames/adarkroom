@@ -444,18 +444,30 @@ Events.Executioner = {
         buttons: {
           'engineering': {
             text: _('engineering'),
+            available: function() {
+              return !World.engineering;
+            },
             nextEvent: 'executioner-engineering'
           },
           'medical': {
             text: _('medical'),
+            available: function() {
+              return !World.medical;
+            },
             nextEvent: 'executioner-medical'
           },
           'martial': {
             text: _('martial'),
+            available: function() {
+              return !World.martial;
+            },
             nextEvent: 'executioner-martial'
           },
           'command': {
             text: _('command deck'),
+            available: function() {
+              return World.engineering && World.medical && World.martial;
+            },
             nextEvent: 'executioner-command'
           },
           'leave': {
@@ -473,8 +485,530 @@ Events.Executioner = {
     scenes: {
       'start': {
         'text': [
-          _('TODO')
+          _('elevator doors open to a blasted corridor. debris covers the floor, piled into makeshift defenses.'),
+          _('emergency lighting flickers.')
         ],
+        buttons: {
+          'continue': {
+            text: _('continue'),
+            nextScene: { 0.3: '1-1', 0.7: '1-2', 1: '1-3' }
+          },
+          'leave': {
+            text: _('leave'),
+            nextScene: 'end'
+          }
+        }
+      },
+
+      '1-1': {
+        text: [
+          _('an automated assembly line performs its empty routines, long since deprived of materials.'),
+          _('its final works lie forgotten, covered by a thin layer of dust.')
+        ],
+        loot: {
+          'energy cells': {
+            min: 1,
+            max: 5,
+            chance: 0.8
+          },
+          'laser rifle': {
+            min: 1,
+            max: 1,
+            chance: 0.2
+          }
+        },
+        buttons: {
+          'continue': {
+            text: _('continue'),
+            nextScene: { 0.5: '2-1a', 1: '2-1b' }
+          },
+          'leave': {
+            text: _('leave'),
+            nextScene: 'end'
+          }
+        }
+      },
+      '2-1a': {
+        combat: true,
+        notification: _('assembly arms spin wildly out of control.'),
+        enemy: 'unruly welder',
+        enemyName: _('unruly welder'),
+        ranged: false,
+        chara: 'W',
+        damage: 8,
+				hit: 0.8,
+				attackDelay: 2,
+				health: 50,
+        loot: {
+          'energy cells': {
+            min: 1,
+            max: 5,
+            chance: 0.8
+          },
+          'alien alloy': {
+            min: 1,
+            max: 1,
+            chance: 0.2
+          }
+        },
+        buttons: {
+          'continue': {
+            text: _('continue'),
+            cooldown: Events._LEAVE_COOLDOWN,
+            nextScene: { 1: '3-1' }
+          },
+          'leave': {
+            text: _('leave'),
+            cooldown: Events._LEAVE_COOLDOWN,
+            nextScene: 'end'
+          }
+        }
+      },
+      '2-1b': {
+        text: [
+          _('assembly arms spark and jitter.'),
+          _('a cacophony of decrepit machinery fills the room.')
+        ],
+        buttons: {
+          'continue': {
+            text: _('continue'),
+            nextScene: { 1: '3-1' }
+          },
+          'leave': {
+            text: _('leave'),
+            nextScene: 'end'
+          }
+        }
+      },
+      '3-1': {
+        combat: true,
+        notification: _('tripped a motion sensor.'),
+        enemy: 'mechanical guard',
+        enemyName: _('mechanical guard'),
+        ranged: true,
+        chara: 'G',
+        damage: 8,
+				hit: 0.8,
+				attackDelay: 2,
+				health: 60,
+        loot: {
+          'energy cells': {
+            min: 1,
+            max: 5,
+            chance: 0.8
+          },
+          'laser rifle': {
+            min: 1,
+            max: 1,
+            chance: 0.8
+          },
+          'alien alloy': {
+            min: 1,
+            max: 1,
+            chance: 0.2
+          }
+        },
+        buttons: {
+          'continue': {
+            text: _('continue'),
+            cooldown: Events._LEAVE_COOLDOWN,
+            nextScene: { 1: '4' }
+          },
+          'leave': {
+            text: _('leave'),
+            cooldown: Events._LEAVE_COOLDOWN,
+            nextScene: 'end'
+          }
+        }
+      },
+
+      '1-2': {
+        combat: true,
+        notification: _('one of the defense turrets still works.'),
+        enemy: 'defense turret',
+        enemyName: _('defense turret'),
+        ranged: true,
+        chara: 'T',
+        damage: 15,
+				hit: 0.8,
+				attackDelay: 4,
+				health: 40,
+        loot: {
+          'energy cells': {
+            min: 1,
+            max: 5,
+            chance: 0.8
+          },
+          'alien alloy': {
+            min: 1,
+            max: 1,
+            chance: 0.8
+          },
+          'laser rifle': {
+            min: 1,
+            max: 1,
+            chance: 0.2
+          }
+        },
+        buttons: {
+          'continue': {
+            text: _('continue'),
+            cooldown: Events._LEAVE_COOLDOWN,
+            nextScene: { 1: '2-2' }
+          },
+          'leave': {
+            text: _('leave'),
+            cooldown: Events._LEAVE_COOLDOWN,
+            nextScene: 'end'
+          }
+        }
+      },
+      '2-2': {
+        text: [
+          _('must have been the engine room, once. the massive machines now stand inert, twisted and scorched by explosions.'),
+          _('the destruction is uniform and precise.'),
+          _('bits of them can be scavenged.')
+        ],
+        loot: {
+          'alien alloy': {
+            min: 2,
+            max: 5,
+            chance: 1
+          }
+        },
+        buttons: {
+          'continue': {
+            text: _('continue'),
+            nextScene: { 0.5: '3-2a', 1: '3-2b' }
+          },
+          'leave': {
+            text: _('leave'),
+            nextScene: 'end'
+          }
+        }
+      },
+      '3-2a': {
+        combat: true,
+        notification: _('tripped a motion sensor.'),
+        enemy: 'mechanical guard',
+        enemyName: _('mechanical guard'),
+        ranged: true,
+        chara: 'G',
+        damage: 8,
+				hit: 0.8,
+				attackDelay: 2,
+				health: 60,
+        loot: {
+          'energy cells': {
+            min: 1,
+            max: 5,
+            chance: 0.8
+          },
+          'laser rifle': {
+            min: 1,
+            max: 1,
+            chance: 0.8
+          },
+          'alien alloy': {
+            min: 1,
+            max: 1,
+            chance: 0.2
+          }
+        },
+        buttons: {
+          'continue': {
+            text: _('continue'),
+            cooldown: Events._LEAVE_COOLDOWN,
+            nextScene: { 1: '4' }
+          },
+          'leave': {
+            text: _('leave'),
+            cooldown: Events._LEAVE_COOLDOWN,
+            nextScene: 'end'
+          }
+        }
+      },
+      '3-2b': {
+        text: [
+          _('none of the ship\'s engines escaped the destruction.'),
+          _('it\'s no mystery why she no longer flies.')
+        ],
+        buttons: {
+          'continue': {
+            text: _('continue'),
+            nextScene: { 1: '4' }
+          },
+          'leave': {
+            text: _('leave'),
+            nextScene: 'end'
+          }
+        }
+      },
+
+      '1-3': {
+        text: [
+          _('sparks cascade from a reactivated power junction, and catch.'),
+          _('the flames fill the corridor.')
+        ],
+        buttons: {
+          'water': {
+            text: _('extinguish'),
+            cost: { 'water': 5 }, 
+            nextScene: { 0.5: '2-3a', 1: '2-3b' }
+          },
+          'run': {
+            text: _('rush through'),
+            cost: { 'hp': 10 },
+            nextScene: { 0.5: '2-3a', 1: '2-3b' }
+          }
+        }
+      },
+      '2-3a': {
+        combat: true,
+        notification: _('tripped a motion sensor.'),
+        enemy: 'mechanical guard',
+        enemyName: _('mechanical guard'),
+        ranged: true,
+        chara: 'G',
+        damage: 8,
+				hit: 0.8,
+				attackDelay: 2,
+				health: 60,
+        loot: {
+          'energy cells': {
+            min: 1,
+            max: 5,
+            chance: 0.8
+          },
+          'laser rifle': {
+            min: 1,
+            max: 1,
+            chance: 0.8
+          },
+          'alien alloy': {
+            min: 1,
+            max: 1,
+            chance: 0.2
+          }
+        },
+        buttons: {
+          'continue': {
+            text: _('continue'),
+            cooldown: Events._LEAVE_COOLDOWN,
+            nextScene: { 1: '3-3' }
+          },
+          'leave': {
+            text: _('leave'),
+            cooldown: Events._LEAVE_COOLDOWN,
+            nextScene: 'end'
+          }
+        }
+      },
+      '2-3b': {
+        text: [
+          _('rows of inert security robots hang suspended from the ceiling.'),
+          _('wires run overhead, corroded and useless.')
+        ],
+        buttons: {
+          'continue': {
+            text: _('continue'),
+            nextScene: { 1: '3-3' }
+          },
+          'leave': {
+            text: _('leave'),
+            nextScene: 'end'
+          }
+        }
+      },
+      '3-3': {
+        text: [
+          _('more signs of past combat down the hall. guard post is ransacked.'),
+          _('still, some things can be found.')
+        ],
+        loot: {
+          'energy cells': {
+            min: 1,
+            max: 5,
+            chance: 0.8
+          },
+          'laser rifle': {
+            min: 1,
+            max: 1,
+            chance: 0.7
+          },
+          'grenade': {
+            min: 1,
+            max: 3,
+            chance: 0.6
+          },
+          'plasma rifle': {
+            min: 1,
+            max: 1,
+            chance: 0.2
+          }
+        },
+        buttons: {
+          'continue': {
+            text: _('continue'),
+            nextScene: { 1: '4' }
+          },
+          'leave': {
+            text: _('leave'),
+            nextScene: 'end'
+          }
+        }
+      },
+
+      '4': {
+        text: [
+          _('marks on the door read \'research and development.\' everything seems mostly untouched, but dead.'),
+          _('one machine thrums with power, and might still work.')
+        ],
+        buttons: {
+          'use': {
+            text: _('use machine'),
+            cost: { 'alien alloy': 1 },
+            onChoose: function() {
+              World.setHp(World.getMaxHealth());
+            },
+            nextScene: { 0.5: '5-1', 1: '5-2' }
+          },
+          'continue': {
+            text: _('continue'),
+            nextScene: { 0.5: '5-1', 1: '5-2' }
+          },
+          'leave': {
+            text: _('leave'),
+            nextScene: 'end'
+          }
+        }
+      },
+      '5-1': {
+        combat: true,
+        notification: _('one of the defense turrets still works.'),
+        enemy: 'defense turret',
+        enemyName: _('defense turret'),
+        ranged: true,
+        chara: 'T',
+        damage: 15,
+				hit: 0.8,
+				attackDelay: 4,
+				health: 40,
+        loot: {
+          'energy cells': {
+            min: 1,
+            max: 5,
+            chance: 0.8
+          },
+          'alien alloy': {
+            min: 1,
+            max: 1,
+            chance: 0.8
+          },
+          'plasma rifle': {
+            min: 1,
+            max: 1,
+            chance: 0.2
+          }
+        },
+        buttons: {
+          'continue': {
+            text: _('continue'),
+            cooldown: Events._LEAVE_COOLDOWN,
+            nextScene: { 1: '6' }
+          },
+          'leave': {
+            text: _('leave'),
+            cooldown: Events._LEAVE_COOLDOWN,
+            nextScene: 'end'
+          }
+        }
+      },
+      '5-2': {
+        text: [
+          _('the machines here look unfinished, abandoned by their creator. wires and other scrap are scattered about the work benches.')
+        ],
+        buttons: {
+          'continue': {
+            text: _('continue'),
+            nextScene: { 1: '6' }
+          },
+          'leave': {
+            text: _('leave'),
+            nextScene: 'end'
+          }
+        }
+      },
+      '6': {
+        text: [
+          _('experimental plans cover one wall, held by an unseen force.'),
+          _('this one looks useful.')
+        ],
+        loot: {
+          'hypo blueprints': {
+            min: 1,
+            max: 1,
+            chance: 1
+          }
+        },
+        buttons: {
+          'continue': {
+            text: _('continue'),
+            nextScene: { 1: '7' }
+          },
+          'leave': {
+            text: _('leave'),
+            nextScene: 'end'
+          }
+        }
+      },
+      '7': {
+        combat: true,
+        notification: _('an unfinished automaton whirs to life.'),
+        enemy: 'unstable prototype',
+        enemyName: _('unstable prototype'),
+        ranged: false,
+        chara: 'P',
+        damage: 5,
+				hit: 0.8,
+				attackDelay: 2,
+				health: 100,
+
+        // TODO: Special power: SHIELD
+
+        loot: {
+          'alien alloy': {
+            min: 1,
+            max: 3,
+            chance: 1
+          },
+          'kinetic armour blueprints': {
+            min: 1,
+            max: 1,
+            chance: 1
+          }
+        },
+        buttons: {
+          'continue': {
+            text: _('continue'),
+            cooldown: Events._LEAVE_COOLDOWN,
+            nextScene: { 1: '8' }
+          },
+          'leave': {
+            text: _('leave'),
+            cooldown: Events._LEAVE_COOLDOWN,
+            nextScene: 'end'
+          }
+        }
+      },
+      '8': {
+        text: [
+          _('at the back of the workshop, elevator doors twitch and buzz.'),
+          _('looks like a way out of here.')
+        ],
+        onLoad: () => {
+          World.state.engineering = true;
+        },
         buttons: {
           'leave': {
             text: _('leave'),

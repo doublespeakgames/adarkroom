@@ -566,7 +566,6 @@ var Events = {
 			if(Events.fought) {
 				return;
 			}
-      World.setHp(World.getMaxHealth());
 			Events.endFight();
 			// AudioEngine.playSound(AudioLibrary.WIN_FIGHT);
 			$('#enemy').animate({opacity: 0}, 300, 'linear', function() {
@@ -932,6 +931,17 @@ var Events = {
 		return (btnsList.length == 1) ? btnsList[0] : false;
 	},
 
+	getQuantity: function(store) {
+		if (store === 'water') {
+			return World.water;
+		}
+		if (store === 'hp') {
+			return World.health;
+		}
+		var num = Engine.activeModule == World ? Path.outfit[store] : $SM.get('stores["'+store+'"]', true);
+		if(typeof num != 'number') num = 0;
+	},
+
 	updateButtons: function() {
 		var btns = Events.activeEvent().scenes[Events.activeScene].buttons;
 		for(var bId in btns) {
@@ -942,8 +952,7 @@ var Events = {
 			} else if(b.cost) {
 				var disabled = false;
 				for(var store in b.cost) {
-					var num = Engine.activeModule == World ? Path.outfit[store] : $SM.get('stores["'+store+'"]', true);
-					if(typeof num != 'number') num = 0;
+					var num = Engine.getQuantity(store);
 					if(num < b.cost[store]) {
 						// Too expensive
 						disabled = true;
@@ -961,13 +970,20 @@ var Events = {
 		var costMod = {};
 		if(info.cost) {
 			for(var store in info.cost) {
-				var num = Engine.activeModule == World ? Path.outfit[store] : $SM.get('stores["'+store+'"]', true);
-				if(typeof num != 'number') num = 0;
+				var num = Engine.getQuantity(store);
 				if(num < info.cost[store]) {
 					// Too expensive
 					return;
 				}
-				costMod[store] = -info.cost[store];
+				if (store === 'water') {
+					World.setWater(World.water - info.cost[store]);
+				}
+				else if (store === 'hp') {
+					World.setHp(World.hp - info.cost[store]);
+				}
+				else {
+					costMod[store] = -info.cost[store];
+				}
 			}
 			if(Engine.activeModule == World) {
 				for(var k in costMod) {
