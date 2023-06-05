@@ -35,6 +35,7 @@ var World = {
   BASE_HIT_CHANCE: 0.8,
   MEAT_HEAL: 8,
   MEDS_HEAL: 20,
+  HYPO_HEAL: 30,
   FIGHT_DELAY: 3, // At least three moves between fights
   NORTH: [ 0, -1],
   SOUTH: [ 0,  1],
@@ -549,6 +550,8 @@ var World = {
     return World.MEDS_HEAL;
   },
 
+  hypoHeal: () => World.HYPO_HEAL,
+
   checkFight: function() {
     World.fightMove = typeof World.fightMove == 'number' ? World.fightMove : 0;
     World.fightMove++;
@@ -968,23 +971,46 @@ var World = {
       Notifications.notify(null, _('builder knows the strange device when she sees it. takes it for herself real quick. doesn’t ask where it came from.'));
       Engine.event('progress', 'fabricator');
     }
+    World.redeemBlueprints();
     World.state = null;
 
     if(Path.outfit['cured meat'] > 0) {
       Button.setDisabled($('#embarkButton'), false);
     }
 
+    World.returnOutfit();
+
+    $('#outerSlider').animate({left: '0px'}, 300);
+    Engine.activeModule = Path;
+    Path.onArrival();
+    Engine.restoreNavigation = true;
+  },
+
+  redeemBlueprints: () => {
+    let redeemed = false;
+    const redeem = (blueprint, item) => {
+      if (Path.outfit[blueprint]) {
+        $SM.set(`character.blueprints['${item}']`, true);
+        Path.outfit[blueprint] = 0;
+        redeemed = true;
+      }
+    };
+
+    redeem('hypo blueprint', 'hypo');
+    redeem('kinetic armour blueprint', 'kinetic armour');
+
+    if (redeemed) {
+      Notifications.notify(null, 'blueprints feed into the fabricator data port. possibilities grow.');
+    }
+  },
+
+  returnOutfit: () => {
     for(var k in Path.outfit) {
       $SM.add('stores["'+k+'"]', Path.outfit[k]);
       if(World.leaveItAtHome(k)) {
         Path.outfit[k] = 0;
       }
     }
-
-    $('#outerSlider').animate({left: '0px'}, 300);
-    Engine.activeModule = Path;
-    Path.onArrival();
-    Engine.restoreNavigation = true;
   },
 
   leaveItAtHome: function(thing) {

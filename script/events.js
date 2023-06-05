@@ -8,6 +8,8 @@ var Events = {
 	_FIGHT_SPEED: 100,
 	_EAT_COOLDOWN: 5,
 	_MEDS_COOLDOWN: 7,
+	_HYPO_COOLDOWN: 7,
+	_SHIELD_COOLDOWN: 10,
 	_LEAVE_COOLDOWN: 1,
 	STUN_DURATION: 4000,
 	BLINK_INTERVAL: false,
@@ -133,11 +135,28 @@ var Events = {
 		if((Path.outfit['medicine'] || 0) !== 0) {
 			Events.createUseMedsButton().appendTo(healBtns);
 		}
+		if((Path.outfit['hypo'] || 0) !== 0) {
+			Events.createUseHypoButton().appendTo(healBtns);
+		}
+		if($SM.get('stores["kinetic armour"]', true) > 0) {
+			Events.createShieldButton().appendTo(healBtns);
+		}
 		$('<div>').addClass('clear').appendTo(healBtns);
 		Events.setHeal(healBtns);
 		
-		// Set up the enemy attack timer
+		// Set up the enemy attack timers
 		Events._enemyAttackTimer = Engine.setInterval(Events.enemyAttack, scene.attackDelay * 1000);
+		Events._specialTimers = (scene.specials ?? []).map(s => Engine.setInterval(
+			() => {
+				const enemy = $('#enemy');
+				const text = s.action(enemy);
+				if (text) {
+					Events.drawFloatText(text, $('.hp', enemy))
+				}
+				Events.updateFighterDiv(enemy);
+			}, 
+			s.delay * 1000
+		));
 	},
 
 	setPause: function(btn, state){
@@ -261,6 +280,41 @@ var Events = {
 		return btn;
 	},
 
+	createUseHypoButton: function(cooldown) {
+		if (cooldown == null) {
+			cooldown = Events._HYPO_COOLDOWN;
+		}
+
+		var btn = new Button.Button({
+			id: 'hypo',
+			text: _('use hypo'),
+			cooldown: cooldown,
+			click: Events.useHypo,
+			cost: { 'hypo': 1 }
+		});
+
+		if((Path.outfit['hypo'] ?? 0) > 0) {
+			Button.setDisabled(btn, true);
+		}
+
+		return btn;
+	},
+
+	createShieldButton: function(cooldown) {
+		if (cooldown == null) {
+			cooldown = Events._SHIELD_COOLDOWN;
+		}
+
+		var btn = new Button.Button({
+			id: 'shld',
+			text: _('shield'),
+			cooldown: cooldown,
+			click: Events.useShield
+		});
+
+		return btn;
+	},
+
 	createAttackButton: function(weaponName) {
 		var weapon = World.Weapons[weaponName];
 		var cd = weapon.cooldown;
@@ -270,7 +324,7 @@ var Events = {
 			}
 		}
 		var btn = new Button.Button({
-			id: 'attack_' + weaponName.replace(' ', '-'),
+			id: 'attack_' + weaponName.replace(/ /g, '-'),
 			text: weapon.verb,
 			cooldown: cd,
 			click: Events.useWeapon,
@@ -348,9 +402,20 @@ var Events = {
 		AudioEngine.playSound(AudioLibrary.USE_MEDS);
 	},
 
+	useHypo: btn => {
+		Events.doHeal('hypo', World.hypoHeal(), btn);
+		AudioEngine.playSound(AudioLibrary.USE_MEDS);
+	},
+
+	useShield: btn => {
+		const player = $('#wanderer');
+		player.data('status', 'shield');
+		Events.updateFighterDiv(player);
+	},
+
 	useWeapon: function(btn) {
 		if(Events.activeEvent()) {
-			var weaponName = btn.attr('id').substring(7).replace('-', ' ');
+			var weaponName = btn.attr('id').substring(7).replace(/-/g, ' ');
 			var weapon = World.Weapons[weaponName];
 			if(weapon.type == 'unarmed') {
 				if(!$SM.get('character.punches')) $SM.set('character.punches', 0);
@@ -446,19 +511,27 @@ var Events = {
 
 	damage: function(fighter, enemy, dmg, type) {
 		var enemyHp = enemy.data('hp');
+		const maxHp = enemy.data('maxHp');
 		var msg = "";
+		const shielded = enemy.data('status') === 'shield';
 		if(typeof dmg == 'number') {
 			if(dmg < 0) {
 				msg = _('miss');
 				dmg = 0;
 			} else {
-				msg = '-' + dmg;
-				enemyHp = ((enemyHp - dmg) < 0) ? 0 : (enemyHp - dmg);
+				msg = (shielded ? '+' : '-') + dmg;
+				enemyHp = Math.min(maxHp, Math.max(0, enemyHp + (shielded ? dmg : -dmg)));
 				enemy.data('hp', enemyHp);
 				if(fighter.attr('id') == 'enemy') {
 					World.setHp(enemyHp);
 					Events.setHeal();
 				}
+				
+				if (shielded) {
+					// shields break in one hit
+					enemy.data('status', 'none');
+				}
+				
 				Events.updateFighterDiv(enemy);
 
 				// play variation audio for weapon type
@@ -547,7 +620,7 @@ var Events = {
 			attackFn($('#enemy'), dmg, function() {
 					if($('#wanderer').data('hp') <= 0) {
 						// Failure!
-						clearTimeout(Events._enemyAttackTimer);
+						Events.clearTimeouts();
 						Events.endEvent();
 						World.die();
 					}
@@ -555,9 +628,14 @@ var Events = {
 		}
     },
 
+	clearTimeouts: () => {
+		clearTimeout(Events._enemyAttackTimer);
+		Events._specialTimers.forEach(clearTimeout);
+	},
+
 	endFight: function() {
 		Events.fought = true;
-		clearTimeout(Events._enemyAttackTimer);
+		Events.clearTimeouts();
 		Events.removePause($('#pause'), 'end');
 	},
 
@@ -604,6 +682,9 @@ var Events = {
 						if((Path.outfit['medicine'] || 0) !== 0) {
 							Events.createUseMedsButton(0).appendTo(healBtns);
 						}
+						if (Path.outfit['hypo'] ?? 0 > 0) {
+							Events.createUseHypoButton(0).appendTo(healBtns);
+						}
 						$('<div>').addClass('clear').appendTo(healBtns);
 						Events.setHeal(healBtns);
 					}
@@ -622,7 +703,7 @@ var Events = {
 	},
 
 	drawDrop:function(btn) {
-		var name = btn.attr('id').substring(5).replace('-', ' ');
+		var name = btn.attr('id').substring(5).replace(/-/g, ' ');
 		var needsAppend = false;
 		var weight = Path.getWeight(name);
 		var freeSpace = Path.getFreeSpace();
@@ -646,7 +727,7 @@ var Events = {
 						numToDrop = Path.outfit[k];
 					}
 					if(numToDrop > 0) {
-						var dropRow = $('<div>').attr('id', 'drop_' + k.replace(' ', '-'))
+						var dropRow = $('<div>').attr('id', 'drop_' + k.replace(/ /g, '-'))
 							.text(_(k) + ' x' + numToDrop)
 							.data('thing', k)
 							.data('num', numToDrop)
@@ -678,7 +759,7 @@ var Events = {
 	},
 
 	drawLootRow: function(name, num){
-		var id = name.replace(' ', '-');
+		var id = name.replace(/ /g, '-');
 		var lootRow = $('<div>').attr('id','loot_' + id).data('item', name).addClass('lootRow');
 		var take = new Button.Button({
 			id: 'take_' + id,
@@ -789,7 +870,7 @@ var Events = {
 		var btn = $(this);
 		var target = btn.closest('.button');
 		var thing = btn.data('thing');
-		var id = 'take_' + thing.replace(' ', '-');
+		var id = 'take_' + thing.replace(/ /g, '-');
 		var num = btn.data('num');
 		var lootButtons = $('#lootButtons');
 		Engine.log('dropping ' + num + ' ' + thing);
@@ -809,7 +890,7 @@ var Events = {
 	},
 
 	getLoot: function(btn, stateSkipButtonSet) {
-		var name = btn.attr('id').substring(5).replace('-', ' ');
+		var name = btn.attr('id').substring(5).replace(/-/g, ' ');
 		if(btn.data('numLeft') > 0) {
 			var skipButtonSet = stateSkipButtonSet || false;
 			var weight = Path.getWeight(name);
@@ -866,13 +947,29 @@ var Events = {
 	},
 
 	createFighterDiv: function(chara, hp, maxhp) {
-		var fighter = $('<div>').addClass('fighter').text(_(chara)).data('hp', hp).data('maxHp', maxhp).data('refname',chara);
+		var fighter = $('<div>')
+			.addClass('fighter')
+			.data('hp', hp)
+			.data('maxHp', maxhp)
+			.data('refname',chara);
+		$('<div>').addClass('label').text(_(chara)).appendTo(fighter);
 		$('<div>').addClass('hp').text(hp+'/'+maxhp).appendTo(fighter);
 		return fighter;
 	},
 
 	updateFighterDiv: function(fighter) {
 		$('.hp', fighter).text(fighter.data('hp') + '/' + fighter.data('maxHp'));
+		$('.label', fighter).text(Events.getFighterText(fighter));
+	},
+
+	getFighterText: (fighter) => {
+		const base = fighter.data('refname');
+		switch (fighter.data('status') ?? 'none') {
+			case 'shield':
+				return `(${_(base)})`;
+			case 'none':
+				return _(base);
+		}
 	},
 
 	startStory: function(scene) {
@@ -952,7 +1049,7 @@ var Events = {
 			} else if(b.cost) {
 				var disabled = false;
 				for(var store in b.cost) {
-					var num = Engine.getQuantity(store);
+					var num = Events.getQuantity(store);
 					if(num < b.cost[store]) {
 						// Too expensive
 						disabled = true;
@@ -970,7 +1067,7 @@ var Events = {
 		var costMod = {};
 		if(info.cost) {
 			for(var store in info.cost) {
-				var num = Engine.getQuantity(store);
+				var num = Events.getQuantity(store);
 				if(num < info.cost[store]) {
 					// Too expensive
 					return;

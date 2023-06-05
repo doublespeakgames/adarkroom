@@ -52,6 +52,14 @@ div#stores {
 	border: 1px solid #EEE;
 }
 
+div#blueprints:before {
+	background: #272823;
+}
+
+div#blueprints {
+	border: 1px solid #EEE;
+}
+
 div#weapons:before {
 	background: #272823;
 }

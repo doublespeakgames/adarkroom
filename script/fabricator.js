@@ -149,10 +149,11 @@ const Fabricator = {
       const max = $SM.num(key, value) + 1 > value.maximum;
       if (!value.button) {
         if (Fabricator.canFabricate(key)) {
+          const name = _(value.name) + ((value.quantity ?? 1) > 1 ? ` (x${value.quantity})` : '');
           value.button = new Button.Button({
             id: 'fabricate_' + key,
             cost: value.cost(),
-            text: _(key),
+            text: name,
             click: Fabricator.fabricate,
             width: '150px',
             ttPos: section.children().length > 10 ? 'top right' : 'bottom right'
@@ -196,7 +197,7 @@ const Fabricator = {
     }
 
     for (const k in $SM.get('character.blueprints')) {
-      const id = 'blueprint_' + k.replace(' ', '-');
+      const id = 'blueprint_' + k.replace(/ /g, '-');
       let r = $('#' + id);
       if($SM.get(`character.blueprints["${k}"]`) && r.length === 0) {
         r = $('<div>').attr('id', id).addClass('blueprintRow').appendTo(blueprints);
@@ -238,7 +239,7 @@ const Fabricator = {
       }
     }
     $SM.setM('stores', storeMod);
-    $SM.add(`stores['${thing}']`, 1);
+    $SM.add(`stores['${thing}']`, craftable.quantity ?? 1);
 
     Notifications.notify(Fabricator, craftable.buildMsg);
     AudioEngine.playSound(AudioLibrary.CRAFT);

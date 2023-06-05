@@ -871,8 +871,23 @@ Events.Executioner = {
             onChoose: function() {
               World.setHp(World.getMaxHealth());
             },
+            nextScene: { 1: '4-heal' }
+          },
+          'continue': {
+            text: _('continue'),
             nextScene: { 0.5: '5-1', 1: '5-2' }
           },
+          'leave': {
+            text: _('leave'),
+            nextScene: 'end'
+          }
+        }
+      },
+      '4-heal': {
+        text: [
+          _('step inside, and the machine whirs. muscle and bone reknit. good as new.')
+        ],
+        buttons: {
           'continue': {
             text: _('continue'),
             nextScene: { 0.5: '5-1', 1: '5-2' }
@@ -945,7 +960,7 @@ Events.Executioner = {
           _('this one looks useful.')
         ],
         loot: {
-          'hypo blueprints': {
+          'hypo blueprint': {
             min: 1,
             max: 1,
             chance: 1
@@ -954,6 +969,21 @@ Events.Executioner = {
         buttons: {
           'continue': {
             text: _('continue'),
+            nextScene: { 1: '7-intro' }
+          },
+          'leave': {
+            text: _('leave'),
+            nextScene: 'end'
+          }
+        }
+      },
+      '7-intro': {
+        text: [
+          _('clattering metal and old servos. something is coming...')
+        ],
+        buttons: {
+          'fight': {
+            text: _('fight'),
             nextScene: { 1: '7' }
           },
           'leave': {
@@ -969,20 +999,24 @@ Events.Executioner = {
         enemyName: _('unstable prototype'),
         ranged: false,
         chara: 'P',
-        damage: 5,
+        damage: 3,
 				hit: 0.8,
 				attackDelay: 2,
-				health: 100,
-
-        // TODO: Special power: SHIELD
-
+				health: 200,
+        specials:[{
+          delay: 3,
+          action: (fighter) => {
+            fighter.data('status', 'shield');
+            return 'shield';
+          }
+        }],
         loot: {
           'alien alloy': {
             min: 1,
             max: 3,
             chance: 1
           },
-          'kinetic armour blueprints': {
+          'kinetic armour blueprint': {
             min: 1,
             max: 1,
             chance: 1
