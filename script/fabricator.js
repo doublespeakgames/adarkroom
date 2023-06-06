@@ -41,8 +41,8 @@ const Fabricator = {
         'alien alloy': 2
       })
     },
-    'disrupter': {
-      name: _('disrupter'),
+    'disruptor': {
+      name: _('disruptor'),
       type: 'weapon',
       blueprintRequired: true,
       buildMsg: _("somtimes it is best not to fight."),

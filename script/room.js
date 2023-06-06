@@ -853,7 +853,7 @@ var Room = {
 					break;
 			}
 
-			var id = "row_" + k.replace(' ', '-');
+			var id = "row_" + k.replace(/ /g, '-');
 			var row = $('div#' + id, location);
 			var num = $SM.get('stores["' + k + '"]');
 

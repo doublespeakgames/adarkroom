@@ -12,6 +12,7 @@ var Events = {
 	_SHIELD_COOLDOWN: 10,
 	_LEAVE_COOLDOWN: 1,
 	STUN_DURATION: 4000,
+	ENERGISE_MULTIPLIER: 4,
 	BLINK_INTERVAL: false,
 	init: function(options) {
 		this.options = $.extend(
@@ -514,11 +515,15 @@ var Events = {
 		const maxHp = enemy.data('maxHp');
 		var msg = "";
 		const shielded = enemy.data('status') === 'shield';
+		const energised = fighter.data('status') === 'energised';
 		if(typeof dmg == 'number') {
 			if(dmg < 0) {
 				msg = _('miss');
 				dmg = 0;
 			} else {
+				if (energised) {
+					dmg *= this.ENERGISE_MULTIPLIER;
+				}
 				msg = (shielded ? '+' : '-') + dmg;
 				enemyHp = Math.min(maxHp, Math.max(0, enemyHp + (shielded ? dmg : -dmg)));
 				enemy.data('hp', enemyHp);
@@ -553,6 +558,11 @@ var Events = {
 				msg = _('stunned');
 				enemy.data('stunned', Events.STUN_DURATION);
 			}
+		}
+
+		if (energised) {
+			// energised only applies to one hit
+			fighter.data('status', 'none');
 		}
 
 		Events.drawFloatText(msg, $('.hp', enemy));
@@ -959,17 +969,9 @@ var Events = {
 
 	updateFighterDiv: function(fighter) {
 		$('.hp', fighter).text(fighter.data('hp') + '/' + fighter.data('maxHp'));
-		$('.label', fighter).text(Events.getFighterText(fighter));
-	},
-
-	getFighterText: (fighter) => {
-		const base = fighter.data('refname');
-		switch (fighter.data('status') ?? 'none') {
-			case 'shield':
-				return `(${_(base)})`;
-			case 'none':
-				return _(base);
-		}
+		const status = fighter.data('status');
+		const hasStatus = status && status !== 'none';
+		fighter.attr('class', `fighter${hasStatus ? ` ${status}` : ''}`);
 	},
 
 	startStory: function(scene) {
@@ -1036,7 +1038,7 @@ var Events = {
 			return World.health;
 		}
 		var num = Engine.activeModule == World ? Path.outfit[store] : $SM.get('stores["'+store+'"]', true);
-		if(typeof num != 'number') num = 0;
+		return isNaN(num) || num < 0 ? 0 : num;
 	},
 
 	updateButtons: function() {

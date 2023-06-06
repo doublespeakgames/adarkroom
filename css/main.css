@@ -561,6 +561,23 @@ body.noMask #description {
 	margin-left: -50%;
 }
 
+.fighter.shield > .label::before {
+	content: '(';
+	position: absolute;
+	left: -8px;
+}
+
+.fighter.shield > .label::after {
+	content: ')';
+	position: absolute;
+	right: -8px;
+}
+
+.fighter.energised > .label {
+	font-size: 2em;
+	font-style: bold;
+}
+
 #description .bullet {
 	padding: 0px 20px 0px 20px;
 	bottom: 25px;

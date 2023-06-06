@@ -114,7 +114,7 @@ var World = {
       damage: 10,
       cooldown: 2
     },
-    'disrupter': {
+    'disruptor': {
       verb: _('stun'),
       type: 'ranged',
       damage: 'stun',
@@ -998,6 +998,8 @@ var World = {
 
     redeem('hypo blueprint', 'hypo');
     redeem('kinetic armour blueprint', 'kinetic armour');
+    redeem('disruptor blueprint', 'disruptor');
+    redeem('plasma rifle blueprint', 'plasma rifle');
 
     if (redeemed) {
       Notifications.notify(null, 'blueprints feed into the fabricator data port. possibilities grow.');
