@@ -17,6 +17,8 @@ var Events = {
 	EXPLOSION_DURATION: 3000,
 	ENRAGE_DURATION: 4000,
 	MEDITATE_DURATION: 5000,
+	BOOST_DURATION: 3000,
+	BOOST_DAMAGE: 10,
 	DOT_TICK: 1000,
 	BLINK_INTERVAL: false,
 	init: function(options) {
@@ -188,6 +190,11 @@ var Events = {
 			setTimeout(() => {
 				fighter.data('status', 'none');
 			}, Events.MEDITATE_DURATION);
+		}
+		if (status === 'boost') {
+			setTimeout(() => {
+				fighter.data('status', 'none');
+			}, Events.BOOST_DURATION);
 		}
 	},
 
@@ -362,6 +369,7 @@ var Events = {
 			text: weapon.verb,
 			cooldown: cd,
 			click: Events.useWeapon,
+			boosted: () => $('#wanderer').data('status') === 'boost',
 			cost: weapon.cost
 		});
 		if(typeof weapon.damage == 'number' && weapon.damage > 0) {
@@ -449,7 +457,10 @@ var Events = {
 	},
 
 	useStim: btn => {
-		console.log('TODO: USE STIM');
+		const player = $('#wanderer');
+		player.data('status', 'boost');
+		Events.dotDamage(player, Events.BOOST_DAMAGE);
+		Events.updateFighterDiv(player);
 	},
 
 	useWeapon: function(btn) {
@@ -1120,13 +1131,19 @@ var Events = {
 		var btnsList = [];
 		for(var id in scene.buttons) {
 			var info = scene.buttons[id];
-				var b = new Button.Button({
-					id: id,
-					text: info.text,
-					cost: info.cost,
-					click: Events.buttonClick,
-					cooldown: info.cooldown
-				}).appendTo(btns);
+			const cost = {
+				...info.cost
+			};
+			if (Path.outfit['glowstone']) {
+				delete cost.torch;
+			}
+			var b = new Button.Button({
+				id,
+				text: info.text,
+				cost,
+				click: Events.buttonClick,
+				cooldown: info.cooldown
+			}).appendTo(btns);
 			if(typeof info.available == 'function' && !info.available()) {
 				Button.setDisabled(b, true);
 			}

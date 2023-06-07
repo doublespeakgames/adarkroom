@@ -599,6 +599,10 @@ body.noMask #description {
 	font-style: italic;
 }
 
+.fighter.boost > .label {
+	font-style: italic;
+}
+
 #description .bullet {
 	padding: 0px 20px 0px 20px;
 	bottom: 25px;

@@ -1960,20 +1960,10 @@ Events.Executioner = {
 				health: 60,
         explosion: 30,
         loot: {
-          'energy cells': {
-            min: 1,
-            max: 5,
-            chance: 0.8
-          },
-          'alien alloy': {
+          'glowstone blueprint': {
             min: 1,
             max: 1,
-            chance: 0.8
-          },
-          'hypo': {
-            min: 1,
-            max: 2,
-            chance: 0.2
+            chance: 1
           }
         },
         buttons: {
