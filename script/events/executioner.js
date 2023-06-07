@@ -12,7 +12,7 @@ Enemies.Executioner = {
     attackDelay: 2,
     health: 60,
     loot: {
-      'energy cells': {
+      'energy cell': {
         min: 1,
         max: 5,
         chance: 0.8
@@ -357,7 +357,7 @@ Events.Executioner = {
             max: 3,
             chance: 1
           },
-          'energy cells': {
+          'energy cell': {
             min: 1,
             max: 5,
             chance: 0.8
@@ -385,7 +385,7 @@ Events.Executioner = {
           _('shuffling noises can be heard from within.')
         ],
         loot: {
-          'energy cells': {
+          'energy cell': {
             min: 1,
             max: 5,
             chance: 0.5
@@ -475,7 +475,7 @@ Events.Executioner = {
         attackDelay: 2,
         health: 60,
         loot: {
-          'energy cells': {
+          'energy cell': {
             min: 1,
             max: 5,
             chance: 0.8
@@ -593,7 +593,7 @@ Events.Executioner = {
           _('its final works lie forgotten, covered by a thin layer of dust.')
         ],
         loot: {
-          'energy cells': {
+          'energy cell': {
             min: 1,
             max: 5,
             chance: 0.8
@@ -627,7 +627,7 @@ Events.Executioner = {
 				attackDelay: 2,
 				health: 50,
         loot: {
-          'energy cells': {
+          'energy cell': {
             min: 1,
             max: 5,
             chance: 0.8
@@ -695,7 +695,7 @@ Events.Executioner = {
 				attackDelay: 4,
 				health: 40,
         loot: {
-          'energy cells': {
+          'energy cell': {
             min: 1,
             max: 5,
             chance: 0.8
@@ -835,7 +835,7 @@ Events.Executioner = {
           _('still, some things can be found.')
         ],
         loot: {
-          'energy cells': {
+          'energy cell': {
             min: 1,
             max: 5,
             chance: 0.8
@@ -919,7 +919,7 @@ Events.Executioner = {
 				attackDelay: 4,
 				health: 40,
         loot: {
-          'energy cells': {
+          'energy cell': {
             min: 1,
             max: 5,
             chance: 0.8
@@ -1155,7 +1155,7 @@ Events.Executioner = {
 				attackDelay: 4,
 				health: 40,
         loot: {
-          'energy cells': {
+          'energy cell': {
             min: 1,
             max: 5,
             chance: 0.8
@@ -1213,7 +1213,7 @@ Events.Executioner = {
 				attackDelay: 4,
 				health: 40,
         loot: {
-          'energy cells': {
+          'energy cell': {
             min: 1,
             max: 5,
             chance: 0.8
@@ -1278,7 +1278,7 @@ Events.Executioner = {
           _('a few useful items can be scavenged.')
         ],
         loot: {
-          'energy cells': {
+          'energy cell': {
             min: 1,
             max: 5,
             chance: 1
@@ -1683,7 +1683,7 @@ Events.Executioner = {
 				attackDelay: 4,
 				health: 40,
         loot: {
-          'energy cells': {
+          'energy cell': {
             min: 1,
             max: 5,
             chance: 0.8
