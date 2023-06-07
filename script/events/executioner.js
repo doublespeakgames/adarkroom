@@ -165,9 +165,9 @@ Events.Executioner = {
         enemy: 'chitinous horror',
         chara: 'H',
         damage: 1,
-        hit: 0.8,
+        hit: 0.6,
         attackDelay: 0.25,
-        health: 70,
+        health: 60,
         loot: {
           'meat': {
             min: 5,
@@ -199,9 +199,9 @@ Events.Executioner = {
         enemy: 'chitinous queen',
         chara: 'Q',
         damage: 1,
-        hit: 0.8,
+        hit: 0.6,
         attackDelay: 0.25,
-        health: 80,
+        health: 70,
         loot: {
           'meat': {
             min: 8,
@@ -1007,9 +1007,9 @@ Events.Executioner = {
         damage: 3,
 				hit: 0.8,
 				attackDelay: 2,
-				health: 200,
+				health: 150,
         specials:[{
-          delay: 3,
+          delay: 5,
           action: (fighter) => {
             Events.setStatus(fighter, 'shield');
             return 'shield';

@@ -991,7 +991,7 @@ var World = {
     const redeem = (blueprint, item) => {
       if (Path.outfit[blueprint]) {
         $SM.set(`character.blueprints['${item}']`, true);
-        Path.outfit[blueprint] = 0;
+        delete Path.outfit[blueprint];
         redeemed = true;
       }
     };

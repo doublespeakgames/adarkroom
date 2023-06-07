@@ -744,7 +744,7 @@ var Events = {
 
 			var attackFn = scene.ranged ? Events.animateRanged : Events.animateMelee;
 
-			attackFn($('#enemy'), dmg, Events.playerDeath);
+			attackFn($('#enemy'), dmg, Events.checkPlayerDeath);
 		}
 	},
 
