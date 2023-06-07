@@ -10,9 +10,14 @@ var Events = {
 	_MEDS_COOLDOWN: 7,
 	_HYPO_COOLDOWN: 7,
 	_SHIELD_COOLDOWN: 10,
+	_STIM_COOLDOWN: 10,
 	_LEAVE_COOLDOWN: 1,
 	STUN_DURATION: 4000,
 	ENERGISE_MULTIPLIER: 4,
+	EXPLOSION_DURATION: 3000,
+	ENRAGE_DURATION: 4000,
+	MEDITATE_DURATION: 5000,
+	DOT_TICK: 1000,
 	BLINK_INTERVAL: false,
 	init: function(options) {
 		this.options = $.extend(
@@ -139,6 +144,9 @@ var Events = {
 		if((Path.outfit['hypo'] || 0) !== 0) {
 			Events.createUseHypoButton().appendTo(healBtns);
 		}
+		if ((Path.outfit['stim'] ?? 0) > 0) {
+			Events.createStimButton().appendTo(healBtns);
+		}
 		if($SM.get('stores["kinetic armour"]', true) > 0) {
 			Events.createShieldButton().appendTo(healBtns);
 		}
@@ -146,7 +154,7 @@ var Events = {
 		Events.setHeal(healBtns);
 		
 		// Set up the enemy attack timers
-		Events._enemyAttackTimer = Engine.setInterval(Events.enemyAttack, scene.attackDelay * 1000);
+		Events.startEnemyAttacks();
 		Events._specialTimers = (scene.specials ?? []).map(s => Engine.setInterval(
 			() => {
 				const enemy = $('#enemy');
@@ -158,6 +166,29 @@ var Events = {
 			}, 
 			s.delay * 1000
 		));
+	},
+
+	startEnemyAttacks: (delay) => {
+		clearInterval(Events._enemyAttackTimer);
+		const scene = Events.activeEvent().scenes[Events.activeScene];
+		Events._enemyAttackTimer = Engine.setInterval(Events.enemyAttack, (delay ?? scene.attackDelay) * 1000);
+	},
+
+	setStatus: (fighter, status) => {
+		fighter.data('status', status);
+		if (status === 'enraged' && fighter.attr('id') === 'enemy') {
+			Events.startEnemyAttacks(0.5);
+			setTimeout(() => {
+				fighter.data('status', 'none');
+				Events.startEnemyAttacks();
+			}, Events.ENRAGE_DURATION);
+		}
+		if (status === 'meditation') {
+			Events._meditateDmg = 0;
+			setTimeout(() => {
+				fighter.data('status', 'none');
+			}, Events.MEDITATE_DURATION);
+		}
 	},
 
 	setPause: function(btn, state){
@@ -301,20 +332,22 @@ var Events = {
 		return btn;
 	},
 
-	createShieldButton: function(cooldown) {
-		if (cooldown == null) {
-			cooldown = Events._SHIELD_COOLDOWN;
-		}
-
+	createShieldButton: function() {
 		var btn = new Button.Button({
 			id: 'shld',
 			text: _('shield'),
-			cooldown: cooldown,
+			cooldown: Events._SHIELD_COOLDOWN,
 			click: Events.useShield
 		});
-
 		return btn;
 	},
+
+	createStimButton: () => new Button.Button({
+		id: 'use-stim',
+		text: _('boost'),
+		cooldown: Events._STIM_COOLDOWN,
+		click: Events.useStim
+	}),
 
 	createAttackButton: function(weaponName) {
 		var weapon = World.Weapons[weaponName];
@@ -345,7 +378,7 @@ var Events = {
 		return btn;
 	},
 
-	drawFloatText: function(text, parent) {
+	drawFloatText: function(text, parent, cb) {
 		$('<div>').text(text).addClass('damageText').appendTo(parent).animate({
 			'bottom': '50px',
 			'opacity': '0'
@@ -354,6 +387,7 @@ var Events = {
 		'linear',
 		function() {
 			$(this).remove();
+			cb && cb();
 		});
 	},
 
@@ -412,6 +446,10 @@ var Events = {
 		const player = $('#wanderer');
 		player.data('status', 'shield');
 		Events.updateFighterDiv(player);
+	},
+
+	useStim: btn => {
+		console.log('TODO: USE STIM');
 	},
 
 	useWeapon: function(btn) {
@@ -502,20 +540,68 @@ var Events = {
 			}
 
 			attackFn($('#wanderer'), dmg, function() {
-				if($('#enemy').data('hp') <= 0 && !Events.won) {
+				const enemy = $('#enemy');
+				const enemyHp = enemy.data('hp');
+				const scene = Events.activeEvent().scenes[Events.activeScene];
+				const atHealth = scene.atHealth ?? {};
+				const explosion = scene.explosion;
+
+				for (const [k, action] of Object.entries(atHealth)) {
+					const hpThreshold = Number(k);
+					if (enemyHp <= hpThreshold && enemyHp + dmg > hpThreshold) {
+						action(enemy);
+					}
+				}
+
+				if(enemyHp <= 0 && !Events.won) {
 					// Success!
-					Events.winFight();
+					if (explosion) {
+						Events.explode(enemy, explosion);
+					}
+					else {
+						Events.winFight();
+					}
 				}
 			});
 		}
 	},
 
-	damage: function(fighter, enemy, dmg, type) {
+	explode: (enemy, player, dmg) => {
+		Events.clearTimeouts();
+		enemy.addClass('exploding');
+		setTimeout(() => {
+			enemy.removeClass('exploding');
+			$('.label', enemy).text('*');
+			Events.damage(enemy, player, dmg, 'ranged', () => {
+				if (!Events.checkPlayerDeath()) {
+					Events.winFight();
+				}
+			});
+		}, Events.EXPLOSION_DURATION);
+	},
+
+	dotDamage: (target, dmg) => {
+		const hp = Math.max(0, target.data('hp') - dmg);
+		target.data('hp', hp);
+		if(target.attr('id') == 'wanderer') {
+			World.setHp(hp);
+			Events.setHeal();
+			Events.checkPlayerDeath();
+		}
+		else if(hp <= 0 && !Events.won) {
+			Events.winFight();
+		}
+		Events.drawFloatText(`-${dmg}`, $('.hp', target));
+	},
+
+	damage: function(fighter, enemy, dmg, type, cb) {
 		var enemyHp = enemy.data('hp');
 		const maxHp = enemy.data('maxHp');
 		var msg = "";
 		const shielded = enemy.data('status') === 'shield';
 		const energised = fighter.data('status') === 'energised';
+		const venomous = fighter.data('status') === 'venomous';
+		const meditating = enemy.data('status') === 'meditation';
 		if(typeof dmg == 'number') {
 			if(dmg < 0) {
 				msg = _('miss');
@@ -524,12 +610,25 @@ var Events = {
 				if (energised) {
 					dmg *= this.ENERGISE_MULTIPLIER;
 				}
-				msg = (shielded ? '+' : '-') + dmg;
-				enemyHp = Math.min(maxHp, Math.max(0, enemyHp + (shielded ? dmg : -dmg)));
-				enemy.data('hp', enemyHp);
-				if(fighter.attr('id') == 'enemy') {
-					World.setHp(enemyHp);
-					Events.setHeal();
+
+				if (meditating) {
+					Events._meditateDmg = (Events._meditateDmg ?? 0) + dmg;
+					msg = dmg;
+				}
+				else {
+					msg = (shielded ? '+' : '-') + dmg;
+					enemyHp = Math.min(maxHp, Math.max(0, enemyHp + (shielded ? dmg : -dmg)));
+					enemy.data('hp', enemyHp);
+					if(fighter.attr('id') == 'enemy') {
+						World.setHp(enemyHp);
+						Events.setHeal();
+					}
+				}
+
+				if (venomous && !shielded) {
+					Events._dotTimer = setInterval(() => {
+						Events.dotDamage(enemy, Math.floor(dmg / 2));
+					}, Events.DOT_TICK);
 				}
 				
 				if (shielded) {
@@ -560,12 +659,12 @@ var Events = {
 			}
 		}
 
-		if (energised) {
-			// energised only applies to one hit
+		if (energised || venomous) {
+			// attack buffs only applies to one hit
 			fighter.data('status', 'none');
 		}
 
-		Events.drawFloatText(msg, $('.hp', enemy));
+		Events.drawFloatText(msg, $('.hp', enemy), cb);
 	},
 
 	animateMelee: function(fighter, dmg, callback) {
@@ -616,31 +715,42 @@ var Events = {
 		// Events.togglePause($('#pause'),'auto');
 
 		var scene = Events.activeEvent().scenes[Events.activeScene];
+		const enemy = $('#enemy');
+		const stunned = enemy.data('stunned');
+		const meditating = enemy.data('status') === 'meditation';
 
-		if(!$('#enemy').data('stunned')) {
+		if(!stunned && !meditating) {
 			var toHit = scene.hit;
 			toHit *= $SM.hasPerk('evasive') ? 0.8 : 1;
 			var dmg = -1;
-			if(Math.random() <= toHit) {
+			if ((Events._meditateDmg ?? 0) > 0) {
+				dmg = Events._meditateDmg;
+				Events._meditateDmg = 0;
+			}
+			else if(Math.random() <= toHit) {
 				dmg = scene.damage;
 			}
 
 			var attackFn = scene.ranged ? Events.animateRanged : Events.animateMelee;
 
-			attackFn($('#enemy'), dmg, function() {
-					if($('#wanderer').data('hp') <= 0) {
-						// Failure!
-						Events.clearTimeouts();
-						Events.endEvent();
-						World.die();
-					}
-			});
+			attackFn($('#enemy'), dmg, Events.playerDeath);
 		}
-    },
+	},
+
+	checkPlayerDeath: () => {
+		if($('#wanderer').data('hp') <= 0) {
+			Events.clearTimeouts();
+			Events.endEvent();
+			World.die();
+			return true;
+		}
+		return false;
+	},
 
 	clearTimeouts: () => {
 		clearTimeout(Events._enemyAttackTimer);
 		Events._specialTimers.forEach(clearTimeout);
+		clearTimeout(Events._dotTimer);
 	},
 
 	endFight: function() {

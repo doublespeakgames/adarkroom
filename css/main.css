@@ -578,6 +578,27 @@ body.noMask #description {
 	font-style: bold;
 }
 
+@keyframes exploding {
+	0% { transform: translate(0, 0); }
+	25% { transform: translate(-10px, 0); }
+	75% { transform: translate(10px, 0); }
+	100% { transform: translate(0, 0); }
+}
+
+.fighter.exploding > .label {
+	animation: exploding 200ms linear infinite;
+}
+
+.fighter.venomous > .label {
+	font-size: 1.5em;
+	font-style: bold;
+}
+
+.fighter.enraged > .label {
+	font-size: 1.5em;
+	font-style: italic;
+}
+
 #description .bullet {
 	padding: 0px 20px 0px 20px;
 	bottom: 25px;

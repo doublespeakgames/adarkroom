@@ -1138,7 +1138,7 @@ var Room = {
 				if (Room.craftUnlocked(k)) {
 					var loc = Room.needsWorkshop(craftable.type) ? craftSection : buildSection;
 					craftable.button = new Button.Button({
-						id: 'build_' + k,
+						id: 'build_' + k.replace(/ /g, '-'),
 						cost: craftable.cost(),
 						text: _(k),
 						click: Room.build,

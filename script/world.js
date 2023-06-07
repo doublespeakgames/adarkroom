@@ -1000,6 +1000,7 @@ var World = {
     redeem('kinetic armour blueprint', 'kinetic armour');
     redeem('disruptor blueprint', 'disruptor');
     redeem('plasma rifle blueprint', 'plasma rifle');
+    redeem('stim blueprint', 'stim');
 
     if (redeemed) {
       Notifications.notify(null, 'blueprints feed into the fabricator data port. possibilities grow.');
