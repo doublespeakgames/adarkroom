@@ -181,8 +181,13 @@ body.noMask #buttons > .button {
 	color: black;
 }
 
-.endGame {
+.endGame, .outro {
 	color:#272823;
+}
+
+#wait-btn {
+	border-color: black;
+	color: black;
 }
 
 #theEnd {

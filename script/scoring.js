@@ -19,6 +19,7 @@ var Score = {
 		}
 		
 		fullScore = fullScore + $SM.get('stores["alien alloy"]', true) * 10;
+		fullScore = fullScore + $SM.get('stores["fleet beacon"]', true) * 500;
 		fullScore = fullScore + Ship.getMaxHull() * 50;
 		return Math.floor(fullScore);
 	},

@@ -1134,7 +1134,7 @@ var Events = {
 			const cost = {
 				...info.cost
 			};
-			if (Path.outfit['glowstone']) {
+			if (Path.outfit && Path.outfit['glowstone']) {
 				delete cost.torch;
 			}
 			var b = new Button.Button({
