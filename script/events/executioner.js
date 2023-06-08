@@ -7,7 +7,7 @@ Enemies.Executioner = {
     enemyName: _('mechanical guard'),
     ranged: true,
     chara: 'G',
-    damage: 8,
+    damage: 10,
     hit: 0.8,
     attackDelay: 2,
     health: 60,
@@ -60,7 +60,7 @@ Enemies.Executioner = {
     enemyName: _('broken medic'),
     ranged: false,
     chara: 'M',
-    damage: 10,
+    damage: 15,
     hit: 0.8,
     attackDelay: 3,
     health: 80,
@@ -82,6 +82,35 @@ Enemies.Executioner = {
         chance: 0.2
       }
     }
+  },
+  'turret': {
+    combat: true,
+    notification: _('one of the defence turrets still works.'),
+    enemy: 'defence turret',
+    enemyName: _('defence turret'),
+    ranged: true,
+    chara: 'T',
+    damage: 25,
+    hit: 0.8,
+    attackDelay: 4,
+    health: 50,
+    loot: {
+      'energy cell': {
+        min: 1,
+        max: 5,
+        chance: 0.8
+      },
+      'alien alloy': {
+        min: 1,
+        max: 1,
+        chance: 0.8
+      },
+      'laser rifle': {
+        min: 1,
+        max: 1,
+        chance: 0.2
+      }
+    },
   }
 };
 
@@ -165,7 +194,7 @@ Events.Executioner = {
         enemy: 'chitinous horror',
         chara: 'H',
         damage: 1,
-        hit: 0.6,
+        hit: 0.7,
         attackDelay: 0.25,
         health: 60,
         loot: {
@@ -199,7 +228,7 @@ Events.Executioner = {
         enemy: 'chitinous queen',
         chara: 'Q',
         damage: 1,
-        hit: 0.6,
+        hit: 0.7,
         attackDelay: 0.25,
         health: 70,
         loot: {
@@ -232,10 +261,10 @@ Events.Executioner = {
         combat: true,
         enemy: 'operative',
         chara: 'O',
-        damage: 6,
+        damage: 8,
         hit: 0.8,
         attackDelay: 2,
-        health: 50,
+        health: 60,
         loot: {
           'bayonet': {
             min: 1,
@@ -470,9 +499,9 @@ Events.Executioner = {
         enemyName: _('automated turret'),
         ranged: true,
         chara: 'T',
-        damage: 8,
+        damage: 10,
         hit: 0.8,
-        attackDelay: 2,
+        attackDelay: 2.5,
         health: 60,
         loot: {
           'energy cell': {
@@ -622,7 +651,7 @@ Events.Executioner = {
         enemyName: _('unruly welder'),
         ranged: false,
         chara: 'W',
-        damage: 8,
+        damage: 13,
 				hit: 0.8,
 				attackDelay: 2,
 				health: 50,
@@ -684,33 +713,7 @@ Events.Executioner = {
       },
 
       '1-2': {
-        combat: true,
-        notification: _('one of the defence turrets still works.'),
-        enemy: 'defence turret',
-        enemyName: _('defence turret'),
-        ranged: true,
-        chara: 'T',
-        damage: 15,
-				hit: 0.8,
-				attackDelay: 4,
-				health: 40,
-        loot: {
-          'energy cell': {
-            min: 1,
-            max: 5,
-            chance: 0.8
-          },
-          'alien alloy': {
-            min: 1,
-            max: 1,
-            chance: 0.8
-          },
-          'laser rifle': {
-            min: 1,
-            max: 1,
-            chance: 0.2
-          }
-        },
+        ...Enemies.Executioner.turret,
         buttons: {
           'continue': {
             text: _('continue'),
@@ -908,33 +911,7 @@ Events.Executioner = {
         }
       },
       '5-1': {
-        combat: true,
-        notification: _('one of the defence turrets still works.'),
-        enemy: 'defence turret',
-        enemyName: _('defence turret'),
-        ranged: true,
-        chara: 'T',
-        damage: 15,
-				hit: 0.8,
-				attackDelay: 4,
-				health: 40,
-        loot: {
-          'energy cell': {
-            min: 1,
-            max: 5,
-            chance: 0.8
-          },
-          'alien alloy': {
-            min: 1,
-            max: 1,
-            chance: 0.8
-          },
-          'plasma rifle': {
-            min: 1,
-            max: 1,
-            chance: 0.2
-          }
-        },
+        ...Enemies.Executioner.turret,
         buttons: {
           'continue': {
             text: _('continue'),
@@ -1004,7 +981,7 @@ Events.Executioner = {
         enemyName: _('unstable prototype'),
         ranged: false,
         chara: 'P',
-        damage: 3,
+        damage: 7,
 				hit: 0.8,
 				attackDelay: 2,
 				health: 150,
@@ -1144,33 +1121,7 @@ Events.Executioner = {
         }
       },
       '3-1': {
-        combat: true,
-        notification: _('defence systems are still active.'),
-        enemy: 'defence turret',
-        enemyName: _('defence turret'),
-        ranged: true,
-        chara: 'T',
-        damage: 15,
-				hit: 0.8,
-				attackDelay: 4,
-				health: 40,
-        loot: {
-          'energy cell': {
-            min: 1,
-            max: 5,
-            chance: 0.8
-          },
-          'alien alloy': {
-            min: 1,
-            max: 1,
-            chance: 0.8
-          },
-          'plasma rifle': {
-            min: 1,
-            max: 1,
-            chance: 0.2
-          }
-        },
+        ...Enemies.Executioner.turret,
         buttons: {
           'continue': {
             text: _('continue'),
@@ -1202,33 +1153,7 @@ Events.Executioner = {
       },
 
       '2-2': {
-        combat: true,
-        notification: _('defence systems are still active.'),
-        enemy: 'defence turret',
-        enemyName: _('defence turret'),
-        ranged: true,
-        chara: 'T',
-        damage: 15,
-				hit: 0.8,
-				attackDelay: 4,
-				health: 40,
-        loot: {
-          'energy cell': {
-            min: 1,
-            max: 5,
-            chance: 0.8
-          },
-          'alien alloy': {
-            min: 1,
-            max: 1,
-            chance: 0.8
-          },
-          'plasma rifle': {
-            min: 1,
-            max: 1,
-            chance: 0.2
-          }
-        },
+        ...Enemies.Executioner.turret,
         buttons: {
           'continue': {
             text: _('continue'),
@@ -1672,33 +1597,7 @@ Events.Executioner = {
       },
 
       '1': {
-        combat: true,
-        notification: _('defences are all still active.'),
-        enemy: 'defence turret',
-        enemyName: _('defence turret'),
-        ranged: true,
-        chara: 'T',
-        damage: 15,
-				hit: 0.8,
-				attackDelay: 4,
-				health: 40,
-        loot: {
-          'energy cell': {
-            min: 1,
-            max: 5,
-            chance: 0.8
-          },
-          'alien alloy': {
-            min: 1,
-            max: 1,
-            chance: 0.8
-          },
-          'plasma rifle': {
-            min: 1,
-            max: 1,
-            chance: 0.2
-          }
-        },
+        ...Enemies.Executioner.turret,
         buttons: {
           'continue': {
             text: _('continue'),
@@ -1954,10 +1853,10 @@ Events.Executioner = {
         enemyName: _('unstable automaton'),
         ranged: false,
         chara: 'A',
-        damage: 8,
-				hit: 0.8,
+        damage: 10,
+				hit: 0.7,
 				attackDelay: 2,
-				health: 60,
+				health: 100,
         explosion: 30,
         loot: {
           'glowstone blueprint': {
@@ -2384,7 +2283,7 @@ Events.Executioner = {
         enemyName: _('immortal wanderer'),
         ranged: false,
         chara: '@',
-        damage: 10,
+        damage: 15,
         hit: 0.8,
         attackDelay: 2,
         health: 500,

@@ -161,10 +161,10 @@ var Events = {
 			() => {
 				const enemy = $('#enemy');
 				const text = s.action(enemy);
+				Events.updateFighterDiv(enemy);
 				if (text) {
 					Events.drawFloatText(text, $('.hp', enemy))
 				}
-				Events.updateFighterDiv(enemy);
 			}, 
 			s.delay * 1000
 		));
