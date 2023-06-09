@@ -20,7 +20,8 @@ var Button = {
 			})
 			.data("handler",  typeof options.click == 'function' ? options.click : function() { Engine.log("click"); })
 			.data("remaining", 0)
-			.data("cooldown", typeof options.cooldown == 'number' ? options.cooldown : 0);
+			.data("cooldown", typeof options.cooldown == 'number' ? options.cooldown : 0)
+			.data('boosted', options.boosted ?? (() => false));
 
 		el.append($("<div>").addClass('cooldown'));
 
@@ -68,6 +69,9 @@ var Button = {
 
 	cooldown: function(btn, option) {
 		var cd = btn.data("cooldown");
+		if (btn.data('boosted')()) {
+			cd /= 2;
+		}
 		var id = 'cooldown.'+ btn.attr('id');
 		if(cd > 0) {
 			if(typeof option == 'number') {

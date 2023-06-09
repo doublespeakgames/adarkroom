@@ -437,69 +437,133 @@ var Space = {
 								Engine.GAME_OVER = true;
 								Score.save();
 								Prestige.save();
-						
-								$('<center>')
-									.addClass('centerCont')
-									.appendTo('body');
-								$('<span>')
-									.addClass('endGame')
-									.text(_('score for this game: {0}', Score.calculateScore()))
-									.appendTo('.centerCont')
-									.animate({opacity:1},1500);
-								$('<br />')
-									.appendTo('.centerCont');
-								$('<span>')
-									.addClass('endGame')
-									.text(_('total score: {0}', Prestige.get().score))
-									.appendTo('.centerCont')
-									.animate({opacity:1},1500);
-								$('<br />')
-									.appendTo('.centerCont');
-								$('<br />')
-									.appendTo('.centerCont');
 								$('#starsContainer').remove();
 								$('#content, #notifications').remove();
-								$('<span>')
-									.addClass('endGame endGameOption')
-									.text(_('restart.'))
-									.click(Engine.confirmDelete)
-									.appendTo('.centerCont')
-									.animate({opacity:1},1500);
-								$('<br />')
-									.appendTo('.centerCont');
-								$('<br />')
-										.appendTo('.centerCont');
-								$('<span>')
-										.addClass('endGame')
-										.text(_('expanded story. alternate ending. behind the scenes commentary. get the app.'))
-										.appendTo('.centerCont')
-										.animate({opacity:1}, 1500);
-								$('<br />')
-										.appendTo('.centerCont');
-								$('<br />')
-										.appendTo('.centerCont');
-								$('<span>')
-									.addClass('endGame endGameOption')
-									.text(_('iOS.'))
-									.click(function() { window.open('https://itunes.apple.com/app/apple-store/id736683061?pt=2073437&ct=gameover&mt=8'); })
-									.appendTo('.centerCont')
-									.animate({opacity:1},1500);
-								$('<br />')
-										.appendTo('.centerCont');
-								$('<span>')
-										.addClass('endGame endGameOption')
-										.text(_('android.'))
-										.click(function() { window.open('https://play.google.com/store/apps/details?id=com.yourcompany.adarkroom'); })
-										.appendTo('.centerCont')
-										.animate({opacity:1},1500);
-								Engine.options = {};
-								Engine.deleteSave(true);
+								Space.showExpansionEnding().then(() => {
+									Space.showEndingOptions();
+									Engine.options = {};
+									Engine.deleteSave(true);
+								});
 							}
 						});
 					}, 2000);
 				});
 			}, 2000);
 		});
+	},
+
+	showExpansionEnding: () => {
+		return new Promise((resolve) => {
+			if (!$SM.get('stores["fleet beacon"]')) {
+				resolve();
+				return;
+			}
+
+			const c = $('<div>')
+				.addClass('outroContainer')
+				.appendTo('body');
+
+			setTimeout(() => {
+				$('<div>')
+					.addClass('outro')
+					.html('the beacon pulses gently as the ship glides through space.<br>coordinates are locked. nothing to do but wait.')
+					.appendTo(c)
+					.animate({ opacity: 1}, 500);
+			}, 2000);
+
+			setTimeout(() => {
+				$('<div>')
+					.addClass('outro')
+					.html('the beacon glows a solid blue, and then goes dim. the ship slows.<br>gradually, the vast wanderer homefleet comes into view.<br>massive worldships drift unnaturally through clouds of debris, scarred and dead.')
+					.appendTo(c)
+					.animate({ opacity: 1}, 500);
+			}, 7000);
+
+			setTimeout(() => {
+				$('<div>')
+					.addClass('outro')
+					.text('the air is running out.')
+					.appendTo(c)
+					.animate({ opacity: 1}, 500);
+			}, 14000);
+
+			setTimeout(() => {
+				$('<div>')
+					.addClass('outro')
+					.text('the capsule is cold.')
+					.appendTo(c)
+					.animate({ opacity: 1}, 500);
+			}, 17000);
+
+			setTimeout(() => {
+				Button.Button({
+					id: 'wait-btn',
+					text: _('wait'),
+					click: (btn) => {
+						btn.addClass('disabled');
+						c.animate({ opacity: 0 }, 5000, 'linear', () => {
+							c.remove();
+							setTimeout(resolve, 3000);
+						})
+					}
+				}).animate({ opacity: 1 }, 500).appendTo(c);
+			}, 19500)
+		});
+	},
+
+	showEndingOptions: () => {
+		$('<center>')
+			.addClass('centerCont')
+			.appendTo('body');
+		$('<span>')
+			.addClass('endGame')
+			.text(_('score for this game: {0}', Score.calculateScore()))
+			.appendTo('.centerCont')
+			.animate({opacity:1},1500);
+		$('<br />')
+			.appendTo('.centerCont');
+		$('<span>')
+			.addClass('endGame')
+			.text(_('total score: {0}', Prestige.get().score))
+			.appendTo('.centerCont')
+			.animate({opacity:1},1500);
+		$('<br />')
+			.appendTo('.centerCont');
+		$('<br />')
+			.appendTo('.centerCont');
+		$('<span>')
+			.addClass('endGame endGameOption')
+			.text(_('restart.'))
+			.click(Engine.confirmDelete)
+			.appendTo('.centerCont')
+			.animate({opacity:1},1500);
+		$('<br />')
+			.appendTo('.centerCont');
+		$('<br />')
+				.appendTo('.centerCont');
+		$('<span>')
+				.addClass('endGame')
+				.text(_('expanded story. alternate ending. behind the scenes commentary. get the app.'))
+				.appendTo('.centerCont')
+				.animate({opacity:1}, 1500);
+		$('<br />')
+				.appendTo('.centerCont');
+		$('<br />')
+				.appendTo('.centerCont');
+		$('<span>')
+			.addClass('endGame endGameOption')
+			.text(_('iOS.'))
+			.click(function() { window.open('https://itunes.apple.com/app/apple-store/id736683061?pt=2073437&ct=gameover&mt=8'); })
+			.appendTo('.centerCont')
+			.animate({opacity:1},1500);
+		$('<br />')
+				.appendTo('.centerCont');
+		$('<span>')
+				.addClass('endGame endGameOption')
+				.text(_('android.'))
+				.click(function() { window.open('https://play.google.com/store/apps/details?id=com.yourcompany.adarkroom'); })
+				.appendTo('.centerCont')
+				.animate({opacity:1},1500);
 	},
 	
 	keyDown: function(event) {

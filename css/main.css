@@ -46,9 +46,9 @@ div#wrapper {
 }
 
 div#saveNotify {
-	position: absolute;
-	top: 20px;
-	right: 0px;
+	position: fixed;
+	top: 10px;
+	right: 20px;
 	background: white;
 	opacity: 0;
 }
@@ -147,7 +147,7 @@ span.customSelectOptions {
 }
 
 div.headerButton {
-	font-size: 18px;
+	font-size: 17px;
 	cursor: pointer;
 	float: left;
 	border-left: 1px solid black;
@@ -559,6 +559,53 @@ body.noMask #description {
 	position: absolute;
 	top: -15px;
 	margin-left: -50%;
+}
+
+.fighter.shield > .label::before {
+	content: '(';
+	position: absolute;
+	left: -8px;
+}
+
+.fighter.shield > .label::after {
+	content: ')';
+	position: absolute;
+	right: -8px;
+}
+
+.fighter.energised > .label {
+	font-size: 2em;
+	font-style: bold;
+}
+
+.fighter.meditation > .label {
+	font-size: 1.5em;
+	opacity: 0.3;
+}
+
+@keyframes exploding {
+	0% { transform: translate(0, 0); }
+	25% { transform: translate(-10px, 0); }
+	75% { transform: translate(10px, 0); }
+	100% { transform: translate(0, 0); }
+}
+
+.fighter.exploding > .label {
+	animation: exploding 200ms linear infinite;
+}
+
+.fighter.venomous > .label {
+	font-size: 1.5em;
+	font-style: bold;
+}
+
+.fighter.enraged > .label {
+	font-size: 1.5em;
+	font-style: italic;
+}
+
+.fighter.boost > .label {
+	font-style: italic;
 }
 
 #description .bullet {
