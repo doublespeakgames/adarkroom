@@ -1019,7 +1019,7 @@ var World = {
 
   leaveItAtHome: function(thing) {
      return thing != 'cured meat' && thing != 'bullets' && thing != 'energy cell'  && 
-      thing != 'charm' && thing != 'medicine' && thing != 'stim' && 
+      thing != 'charm' && thing != 'medicine' && thing != 'stim' && thing != 'hypo' &&
       typeof World.Weapons[thing] == 'undefined' && typeof Room.Craftables[thing] == 'undefined';
   },
 

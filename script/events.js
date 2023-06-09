@@ -388,10 +388,10 @@ var Events = {
 
 	drawFloatText: function(text, parent, cb) {
 		$('<div>').text(text).addClass('damageText').appendTo(parent).animate({
-			'bottom': '50px',
+			'bottom': '70px',
 			'opacity': '0'
 		},
-		300,
+		700,
 		'linear',
 		function() {
 			$(this).remove();
