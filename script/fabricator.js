@@ -128,7 +128,7 @@ const Fabricator = {
     }
     AudioEngine.playBackgroundMusic(AudioLibrary.MUSIC_SHIP);
 
-    Engine.moveStoresView($('#blueprints'), transition_diff);
+    Engine.moveStoresView(null, transition_diff);
   },
 
   setTitle: () => {
@@ -207,10 +207,6 @@ const Fabricator = {
     
     if(needsAppend && blueprints.children().length > 0) {
       blueprints.prependTo(Fabricator.panel);
-    }
-    
-    if(!ignoreStores && Engine.activeModule === Fabricator) {
-      $('#storesContainer').css({top: blueprints.height() + 26 + Fabricator._STORES_OFFSET + 'px'});
     }
   },
 

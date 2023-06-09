@@ -406,7 +406,8 @@ var Events = {
 		healBtns = healBtns.children('.button');
 		var canHeal = (World.health < World.getMaxHealth());
 		healBtns.each(function(i){
-			Button.setDisabled($(this), !canHeal);
+			const btn = $(this);
+			Button.setDisabled(btn, !canHeal && btn.attr('id') !== 'shld');
 		});
 		return canHeal;
 	},
@@ -567,7 +568,7 @@ var Events = {
 				if(enemyHp <= 0 && !Events.won) {
 					// Success!
 					if (explosion) {
-						Events.explode(enemy, explosion);
+						Events.explode(enemy, $('#wanderer'), explosion);
 					}
 					else {
 						Events.winFight();
@@ -602,6 +603,7 @@ var Events = {
 		else if(hp <= 0 && !Events.won) {
 			Events.winFight();
 		}
+		Events.updateFighterDiv(target);
 		Events.drawFloatText(`-${dmg}`, $('.hp', target));
 	},
 
@@ -666,13 +668,15 @@ var Events = {
 		} else {
 			if(dmg == 'stun') {
 				msg = _('stunned');
-				enemy.data('stunned', Events.STUN_DURATION);
+				enemy.data('stunned', true);
+				setTimeout(() => enemy.data('stunned', false), Events.STUN_DURATION);
 			}
 		}
 
 		if (energised || venomous) {
 			// attack buffs only applies to one hit
 			fighter.data('status', 'none');
+			Events.updateFighterDiv(fighter);
 		}
 
 		Events.drawFloatText(msg, $('.hp', enemy), cb);
@@ -1176,10 +1180,16 @@ var Events = {
 			if(typeof b.available == 'function' && !b.available()) {
 				Button.setDisabled(btnEl, true);
 			} else if(b.cost) {
+				const cost = {
+					...b.cost
+				};
+				if (Path.outfit && Path.outfit['glowstone']) {
+					delete cost.torch;
+				}
 				var disabled = false;
-				for(var store in b.cost) {
+				for(var store in cost) {
 					var num = Events.getQuantity(store);
-					if(num < b.cost[store]) {
+					if(num < cost[store]) {
 						// Too expensive
 						disabled = true;
 						break;
@@ -1195,20 +1205,26 @@ var Events = {
 		// Cost
 		var costMod = {};
 		if(info.cost) {
-			for(var store in info.cost) {
+			const cost = {
+				...info.cost
+			};
+			if (Path.outfit && Path.outfit['glowstone']) {
+				delete cost.torch;
+			}
+			for(var store in cost) {
 				var num = Events.getQuantity(store);
-				if(num < info.cost[store]) {
+				if(num < cost[store]) {
 					// Too expensive
 					return;
 				}
 				if (store === 'water') {
-					World.setWater(World.water - info.cost[store]);
+					World.setWater(World.water - cost[store]);
 				}
 				else if (store === 'hp') {
-					World.setHp(World.hp - info.cost[store]);
+					World.setHp(World.hp - cost[store]);
 				}
 				else {
-					costMod[store] = -info.cost[store];
+					costMod[store] = -cost[store];
 				}
 			}
 			if(Engine.activeModule == World) {

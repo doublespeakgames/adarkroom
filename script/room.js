@@ -826,6 +826,11 @@ var Room = {
 		}
 		for (var k in $SM.get('stores')) {
 
+			if (k.indexOf('blueprint') > 0) {
+				// don't show blueprints
+				continue;
+			}
+
 			const good =  
         Room.Craftables[k] ||
         Room.TradeGoods[k] ||

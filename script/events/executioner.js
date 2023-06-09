@@ -561,28 +561,28 @@ Events.Executioner = {
           'engineering': {
             text: _('engineering'),
             available: function() {
-              return !World.engineering;
+              return !World.state.engineering;
             },
             nextEvent: 'executioner-engineering'
           },
           'medical': {
             text: _('medical'),
             available: function() {
-              return !World.medical;
+              return !World.state.medical;
             },
             nextEvent: 'executioner-medical'
           },
           'martial': {
             text: _('martial'),
             available: function() {
-              return !World.martial;
+              return !World.state.martial;
             },
             nextEvent: 'executioner-martial'
           },
           'command': {
             text: _('command deck'),
             available: function() {
-              return World.engineering && World.medical && World.martial;
+              return World.state.engineering && World.state.medical && World.state.martial;
             },
             nextEvent: 'executioner-command'
           },
@@ -981,7 +981,7 @@ Events.Executioner = {
         enemyName: _('unstable prototype'),
         ranged: false,
         chara: 'P',
-        damage: 7,
+        damage: 5,
 				hit: 0.8,
 				attackDelay: 2,
 				health: 150,
@@ -1537,7 +1537,7 @@ Events.Executioner = {
           delay: 13,
           action: (fighter) => {
             Events.setStatus(fighter, 'energised');
-            return 'energise';
+            return 'energised';
           }
         }],
         loot: {
@@ -1546,7 +1546,7 @@ Events.Executioner = {
             max: 3,
             chance: 1
           },
-          'dispruptor blueprint': {
+          'disruptor blueprint': {
             min: 1,
             max: 1,
             chance: 1
@@ -1565,6 +1565,9 @@ Events.Executioner = {
           _('the ruins of the sparring machine clatter to the ground.'),
           _('picked this deck clean.')
         ],
+        onLoad: () => {
+          World.state.martial = true;
+        },
         buttons: {
           'leave': {
             text: _('leave'),
@@ -2135,6 +2138,9 @@ Events.Executioner = {
           _('the creature\'s tortured breathing ceases.'),
           _('nothing more here.')
         ],
+        onLoad: () => {
+          World.state.medical = true;
+        },
         buttons: {
           'leave': {
             text: _('leave'),
@@ -2283,7 +2289,7 @@ Events.Executioner = {
         enemyName: _('immortal wanderer'),
         ranged: false,
         chara: '@',
-        damage: 15,
+        damage: 12,
         hit: 0.8,
         attackDelay: 2,
         health: 500,
@@ -2291,7 +2297,7 @@ Events.Executioner = {
           Events._lastSpecial = 'none';
         },
         specials: [{
-          delay: 5,
+          delay: 7,
           action: (fighter) => {
             const last = Events._lastSpecial ?? 'none';
             const possible = [ 'shield', 'enraged', 'meditation' ].filter(p => p !== last);
@@ -2322,6 +2328,9 @@ Events.Executioner = {
           _('then it is gone.'),
           _('time to get out of here.')
         ],
+        onLoad: () => {
+          World.clearDungeon();
+        },
         buttons: {
           'leave': {
             text: _('leave'),

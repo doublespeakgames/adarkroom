@@ -578,6 +578,11 @@ body.noMask #description {
 	font-style: bold;
 }
 
+.fighter.meditation > .label {
+	font-size: 1.5em;
+	opacity: 0.3;
+}
+
 @keyframes exploding {
 	0% { transform: translate(0, 0); }
 	25% { transform: translate(-10px, 0); }
