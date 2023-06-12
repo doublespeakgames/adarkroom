@@ -639,6 +639,7 @@ var Events = {
 				}
 
 				if (venomous && !shielded) {
+					clearInterval(Events._dotTimer);
 					Events._dotTimer = setInterval(() => {
 						Events.dotDamage(enemy, Math.floor(dmg / 2));
 					}, Events.DOT_TICK);
@@ -763,9 +764,9 @@ var Events = {
 	},
 
 	clearTimeouts: () => {
-		clearTimeout(Events._enemyAttackTimer);
-		Events._specialTimers.forEach(clearTimeout);
-		clearTimeout(Events._dotTimer);
+		clearInterval(Events._enemyAttackTimer);
+		Events._specialTimers.forEach(clearInterval);
+		clearInterval(Events._dotTimer);
 	},
 
 	endFight: function() {

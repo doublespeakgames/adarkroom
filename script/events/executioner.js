@@ -1745,7 +1745,7 @@ Events.Executioner = {
         buttons: {
           'continue': {
             text: _('continue'),
-            nextScene: { 1: '7-1' }
+            nextScene: { 1: '8' }
           },
           'leave': {
             text: _('leave'),
