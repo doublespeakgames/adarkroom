@@ -1326,7 +1326,6 @@ var Events = {
 			} else {
 				var r = Math.floor(Math.random()*(possibleEvents.length));
 				Events.startEvent(possibleEvents[r]);
-				AudioEngine.playEventMusic(possibleEvents[r].audio);
 			}
 		}
 
@@ -1375,6 +1374,7 @@ var Events = {
 		if (!event) {
 			return;
 		}
+		AudioEngine.stopEventMusic();
 		Events.eventPanel().remove();
 		Events.activeEvent().eventPanel = null;
 		Events.eventStack.shift();
