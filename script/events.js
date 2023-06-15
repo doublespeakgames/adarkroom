@@ -83,6 +83,7 @@ var Events = {
 	startCombat: function(scene) {
 		Engine.event('game event', 'combat');
 		Events.fought = false;
+		Events.won = false;
 		var desc = $('#description', Events.eventPanel());
 
 		$('<div>').text(scene.notification).appendTo(desc);
@@ -567,6 +568,7 @@ var Events = {
 
 				if(enemyHp <= 0 && !Events.won) {
 					// Success!
+					Events.won = true;
 					if (explosion) {
 						Events.explode(enemy, $('#wanderer'), explosion);
 					}
@@ -601,6 +603,7 @@ var Events = {
 			Events.checkPlayerDeath();
 		}
 		else if(hp <= 0 && !Events.won) {
+			Events.won = true;
 			Events.winFight();
 		}
 		Events.updateFighterDiv(target);

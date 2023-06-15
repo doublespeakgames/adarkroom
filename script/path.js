@@ -173,6 +173,7 @@ var Path = {
 			'energy cell': {type: 'tool', desc: _('emits a soft red glow') },
 			'bayonet': {type: 'weapon' },
 			'charm': {type: 'tool'},
+			'alien alloy': { type: 'tool' },
 			'medicine': {type: 'tool', desc: _('restores') + ' ' + World.MEDS_HEAL + ' ' + _('hp') }
 		}, Room.Craftables, Fabricator.Craftables);
 		
