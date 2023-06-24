@@ -57,3 +57,12 @@ div.perkRow {
 div.perkRow .row_key {
 	float: none;
 }
+
+#pathScroller {
+	padding-top: 10px;
+	position: relative;
+	top: -10px;
+	max-height: 660px;
+	width: 475px;
+	overflow-y: auto;
+}

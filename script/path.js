@@ -32,9 +32,11 @@ var Path = {
 		this.panel = $('<div>').attr('id', "pathPanel")
 			.addClass('location')
 			.appendTo('div#locationSlider');
+
+		this.scroller = $('<div>').attr('id', 'pathScroller').appendTo(this.panel);
 		
 		// Add the outfitting area
-		var outfitting = $('<div>').attr({'id': 'outfitting', 'data-legend': _('supplies:')}).appendTo(this.panel);
+		var outfitting = $('<div>').attr({'id': 'outfitting', 'data-legend': _('supplies:')}).appendTo(this.scroller);
 		$('<div>').attr('id', 'bagspace').appendTo(outfitting);
 		
 		// Add the embark button
@@ -44,7 +46,7 @@ var Path = {
 			click: Path.embark,
 			width: '80px',
 			cooldown: World.DEATH_COOLDOWN
-		}).appendTo(this.panel);
+		}).appendTo(this.scroller);
 		
 		Path.outfit = $SM.get('outfit');
 		
