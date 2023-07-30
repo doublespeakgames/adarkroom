@@ -1927,7 +1927,7 @@ msgstr "野兽袭击村民"
 
 #: script/events/outside.js:249
 msgid "predators become prey. price is unfair"
-msgstr "猎手变成猎物。价格不公"
+msgstr "猎手变成猎物。天道不公"
 
 #: script/events/outside.js:258
 msgid "A Military Raid"
