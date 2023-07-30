@@ -3106,7 +3106,7 @@ msgstr "旧房子"
 
 #: script/events/setpieces.js:2938
 msgid "an old house remains here, once white siding yellowed and peeling."
-msgstr "一座老房子仍在这里，曾经的白色壁板发黄脱皮"
+msgstr "一座老房子在这里，曾经的洁白的墙壁如今发黄脱落"
 
 #: script/events/setpieces.js:2939
 msgid "the door hangs open."
