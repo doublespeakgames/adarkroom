@@ -164,7 +164,7 @@ msgstr "避实就虚"
 
 #: script/engine.js:48
 msgid "dodge attacks more effectively"
-msgstr "更有效的闪避攻击"
+msgstr "更灵活地闪避攻击"
 
 #: script/engine.js:49
 msgid "learned to be where they're not"
@@ -2886,7 +2886,7 @@ msgstr "街道上有个临时商店"
 
 #: script/events/setpieces.js:1747
 msgid "the owner stands by, stoic."
-msgstr "主人站在旁边，无动于衷"
+msgstr "主人无动于衷地站在旁边"
 
 #: script/events/setpieces.js:1792
 msgid "strips of meat hang drying by the side of the street."
@@ -2894,7 +2894,7 @@ msgstr "街道旁挂着几条正在风干的肉"
 
 #: script/events/setpieces.js:1793
 msgid "the people back away, avoiding eye contact."
-msgstr "人们不断退后着，避免眼神接触"
+msgstr "人们向后退去，避免眼神接触"
 
 #: script/events/setpieces.js:1818
 msgid "someone has locked and barricaded the door to this operating theatre."
@@ -2902,7 +2902,7 @@ msgstr "有人把手术室的门锁上并堵上了"
 
 #: script/events/setpieces.js:1833
 msgid "a tribe of elderly squatters is camped out in this ward."
-msgstr "一帮上了年纪的流浪者在这间病房里宿营"
+msgstr "一帮年老的流浪者在这间病房里宿营"
 
 #: script/events/setpieces.js:1874
 msgid "a pack of lizards rounds the corner."
@@ -3134,7 +3134,7 @@ msgstr "木地板下面藏着一些补给品"
 
 #: script/events/setpieces.js:3019
 msgid "a man charges down the hall, a rusty blade in his hand"
-msgstr "一个男人冲进大厅，手里拿着一块生锈的刀片"
+msgstr "一个男人冲进大厅，手里拿着一把生锈的刀"
 
 #: script/events/setpieces.js:3051
 msgid "A Forgotten Battlefield"
@@ -3322,7 +3322,7 @@ msgstr "流浪者引擎散发出的金属气味充斥在空气中"
 
 #: script/events/setpieces.js:3546
 msgid "a shack stands at the center of the village."
-msgstr "一栋小棚子矗立在村子中央"
+msgstr "村子中央有一间简陋的棚屋"
 
 #: script/events/setpieces.js:3547
 msgid "there are still supplies inside."
