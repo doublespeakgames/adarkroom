@@ -2874,7 +2874,7 @@ msgstr "前面的街道闪着火光"
 
 #: script/events/setpieces.js:1729
 msgid "more squatters are crowding around now."
-msgstr "那些擅自占住别人房子的人簇拥在一起"
+msgstr "许多侵占者簇拥在周围。"
 
 #: script/events/setpieces.js:1730
 msgid "someone throws a stone."
@@ -2902,7 +2902,7 @@ msgstr "有人把手术室的门锁上并堵上了"
 
 #: script/events/setpieces.js:1833
 msgid "a tribe of elderly squatters is camped out in this ward."
-msgstr "一帮年老的流浪者在这间病房里宿营"
+msgstr "一群年迈侵占者驻扎着这个区域"
 
 #: script/events/setpieces.js:1874
 msgid "a pack of lizards rounds the corner."
@@ -2950,7 +2950,7 @@ msgstr "一个小伙子挥打着一根树枝"
 
 #: script/events/setpieces.js:2235
 msgid "a squatter stands firmly in the doorway of a small hut."
-msgstr "一个人坚定地站在一座小屋门前"
+msgstr "一个侵占者守卫在小屋门前"
 
 #: script/events/setpieces.js:2270
 msgid "behind the door, a deformed figure awakes and attacks."
@@ -3106,7 +3106,7 @@ msgstr "旧房子"
 
 #: script/events/setpieces.js:2938
 msgid "an old house remains here, once white siding yellowed and peeling."
-msgstr "一座老房子在这里，曾经的洁白的墙壁如今发黄脱落"
+msgstr "古老的房舍依旧屹立，房屋的白墙已经变得泛黄和斑驳。"
 
 #: script/events/setpieces.js:2939
 msgid "the door hangs open."
