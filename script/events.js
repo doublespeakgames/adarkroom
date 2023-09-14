@@ -1453,7 +1453,7 @@ var Events = {
 			if(typeof(state[i]) == 'object'){
 				Events.recallDelay(stateName +'["'+ i +'"]', target[i]);
 			} else {
-				if(typeof target[i] == 'function'){
+				if(target && typeof target[i] == 'function'){
 					target[i]();
 				} else {
 					$SM.remove(stateName);
