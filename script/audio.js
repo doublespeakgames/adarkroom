@@ -204,7 +204,11 @@ var AudioEngine = {
     },
     loadAudioFile: function (src) {
         if (src.indexOf('http') === -1) {
-            src = window.location + src;
+            var path = window.location.protocol + '//' + window.location.hostname + (window.location.port ?(':' + window.location.port) : '') + window.location.pathname;
+            if(path.endsWith('index.html')){
+                path = path.slice(0, - 10); 
+            }
+            src = path + src;
         }
         if (AudioEngine.AUDIO_BUFFER_CACHE[src]) {
             return new Promise(function (resolve, reject) {
