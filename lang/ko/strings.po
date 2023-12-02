@@ -334,7 +334,7 @@ msgstr "트위터"
 
 #: script/engine.js:435
 msgid "reddit"
-msgstr "reddit"
+msgstr "레딧"
 
 #: script/engine.js:442
 msgid "close"
