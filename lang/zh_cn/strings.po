@@ -48,7 +48,7 @@ msgstr "您已用此账户/电子邮件连接到dropbox: "
 
 #: script/dropbox.js:93
 msgid "save"
-msgstr "保存"
+msgstr "存档"
 
 #: script/dropbox.js:97
 msgid "load"
@@ -164,7 +164,7 @@ msgstr "避实就虚"
 
 #: script/engine.js:48
 msgid "dodge attacks more effectively"
-msgstr "更有效的闪避攻击"
+msgstr "更灵活地闪避攻击"
 
 #: script/engine.js:49
 msgid "learned to be where they're not"
@@ -1927,7 +1927,7 @@ msgstr "野兽袭击村民"
 
 #: script/events/outside.js:249
 msgid "predators become prey. price is unfair"
-msgstr "猎手变成猎物。价格不公"
+msgstr "猎手变成猎物。天道不公"
 
 #: script/events/outside.js:258
 msgid "A Military Raid"
@@ -2874,7 +2874,7 @@ msgstr "前面的街道闪着火光"
 
 #: script/events/setpieces.js:1729
 msgid "more squatters are crowding around now."
-msgstr "那些擅自占住别人房子的人簇拥在一起"
+msgstr "许多侵占者簇拥在周围。"
 
 #: script/events/setpieces.js:1730
 msgid "someone throws a stone."
@@ -2886,7 +2886,7 @@ msgstr "街道上有个临时商店"
 
 #: script/events/setpieces.js:1747
 msgid "the owner stands by, stoic."
-msgstr "主人站在旁边，无动于衷"
+msgstr "主人无动于衷地站在旁边"
 
 #: script/events/setpieces.js:1792
 msgid "strips of meat hang drying by the side of the street."
@@ -2894,7 +2894,7 @@ msgstr "街道旁挂着几条正在风干的肉"
 
 #: script/events/setpieces.js:1793
 msgid "the people back away, avoiding eye contact."
-msgstr "人们不断退后着，避免眼神接触"
+msgstr "人们向后退去，避免眼神接触"
 
 #: script/events/setpieces.js:1818
 msgid "someone has locked and barricaded the door to this operating theatre."
@@ -2902,7 +2902,7 @@ msgstr "有人把手术室的门锁上并堵上了"
 
 #: script/events/setpieces.js:1833
 msgid "a tribe of elderly squatters is camped out in this ward."
-msgstr "一帮上了年纪的流浪者在这间病房里宿营"
+msgstr "一群年迈侵占者驻扎着这个区域"
 
 #: script/events/setpieces.js:1874
 msgid "a pack of lizards rounds the corner."
@@ -2950,7 +2950,7 @@ msgstr "一个小伙子挥打着一根树枝"
 
 #: script/events/setpieces.js:2235
 msgid "a squatter stands firmly in the doorway of a small hut."
-msgstr "一个人坚定地站在一座小屋门前"
+msgstr "一个侵占者守卫在小屋门前"
 
 #: script/events/setpieces.js:2270
 msgid "behind the door, a deformed figure awakes and attacks."
@@ -3106,7 +3106,7 @@ msgstr "旧房子"
 
 #: script/events/setpieces.js:2938
 msgid "an old house remains here, once white siding yellowed and peeling."
-msgstr "一座老房子仍在这里，曾经的白色壁板发黄脱皮"
+msgstr "古老的房舍依旧屹立，房屋的白墙已经变得泛黄和斑驳。"
 
 #: script/events/setpieces.js:2939
 msgid "the door hangs open."
@@ -3134,7 +3134,7 @@ msgstr "木地板下面藏着一些补给品"
 
 #: script/events/setpieces.js:3019
 msgid "a man charges down the hall, a rusty blade in his hand"
-msgstr "一个男人冲进大厅，手里拿着一块生锈的刀片"
+msgstr "一个男人冲进大厅，手里拿着一把生锈的刀"
 
 #: script/events/setpieces.js:3051
 msgid "A Forgotten Battlefield"
@@ -3276,7 +3276,7 @@ msgstr "铁矿"
 
 #: script/events/setpieces.js:3451
 msgid "an old iron mine sits here, tools abandoned and left to rust."
-msgstr "一座老旧的铁矿，四周都是废弃的工具，听任生锈"
+msgstr "一座老旧的铁矿，四周都是废弃的工具，风雨侵蚀"
 
 #: script/events/setpieces.js:3452
 msgid ""
@@ -3322,7 +3322,7 @@ msgstr "流浪者引擎散发出的金属气味充斥在空气中"
 
 #: script/events/setpieces.js:3546
 msgid "a shack stands at the center of the village."
-msgstr "一栋小棚子矗立在村子中央"
+msgstr "村子中央有一间简陋的棚屋"
 
 #: script/events/setpieces.js:3547
 msgid "there are still supplies inside."
