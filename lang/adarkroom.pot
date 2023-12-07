@@ -2666,7 +2666,7 @@ msgid "the footsteps stop."
 msgstr ""
 
 #: script/events/setpieces.js:920
-msgid "another beast, draw by the noise, leaps out of a copse of trees."
+msgid "another beast, drawn by the noise, leaps out of a copse of trees."
 msgstr ""
 
 #: script/events/setpieces.js:936
