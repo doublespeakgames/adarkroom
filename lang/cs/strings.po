@@ -2701,7 +2701,7 @@ msgid "the footsteps stop."
 msgstr "kroky ustaly."
 
 #: script/events/setpieces.js:920
-msgid "another beast, draw by the noise, leaps out of a copse of trees."
+msgid "another beast, drawn by the noise, leaps out of a copse of trees."
 msgstr "další příšera, kterou přilákal hluk, vyskakuje z mlází stromů."
 
 #: script/events/setpieces.js:936
