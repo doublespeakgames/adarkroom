@@ -45,7 +45,7 @@ const Fabricator = {
       name: _('disruptor'),
       type: 'weapon',
       blueprintRequired: true,
-      buildMsg: _("somtimes it is best not to fight."),
+      buildMsg: _("sometimes it is best not to fight."),
       cost: () => ({
         'alien alloy': 1
       })
