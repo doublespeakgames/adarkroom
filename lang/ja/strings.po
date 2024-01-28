@@ -1328,7 +1328,8 @@ msgstr "発進！"
 msgid ""
 "somewhere above the debris cloud, the wanderer fleet hovers. been on this "
 "rock too long."
-msgstr "瓦礫の雲の上のどこかに、放浪者艦隊は浮かんでいる。この岩の上に長らくあった。"
+msgstr ""
+"瓦礫の雲の上のどこかに、放浪者艦隊は浮かんでいる。この岩の上に長らくあった。"
 
 #: script/ship.js:106 script/ship.js:120
 msgid "not enough alien alloy"
@@ -1871,15 +1872,15 @@ msgstr ""
 
 #: script/events/outside.js:77
 msgid "a fire rampages through one of the huts, destroying it."
-msgstr ""
+msgstr "火の手が小屋の一つを焼き尽くした。"
 
 #: script/events/outside.js:78
 msgid "all residents in the hut perished in the fire."
-msgstr ""
+msgstr "小屋の住民全員が火事で亡くなった。"
 
 #: script/events/outside.js:80
 msgid "a fire has started"
-msgstr ""
+msgstr "火事が起こった"
 
 #: script/events/outside.js:87
 #, fuzzy
@@ -2208,15 +2209,15 @@ msgstr "後にいくらかのボロ布を残していった。"
 
 #: script/events/room.js:265
 msgid "The Shady Builder"
-msgstr ""
+msgstr "怪しげな建築家"
 
 #: script/events/room.js:272 script/events/room.js:275
 msgid "a shady builder passes through"
-msgstr ""
+msgstr "怪しげな建築家が通りかかった"
 
 #: script/events/room.js:273
 msgid "says he can build you a hut for less wood"
-msgstr ""
+msgstr "より少ない木材で小屋を作ってくれると言う"
 
 #: script/events/room.js:278
 #, fuzzy
@@ -2226,11 +2227,11 @@ msgstr "木材"
 
 #: script/events/room.js:290 script/events/room.js:292
 msgid "the shady builder has made off with your wood"
-msgstr ""
+msgstr "怪しげな建築家が木材を持ち去った"
 
 #: script/events/room.js:302 script/events/room.js:304
 msgid "the shady builder builds a hut"
-msgstr ""
+msgstr "怪しげな建築家が小屋を作った"
 
 #: script/events/room.js:323 script/events/room.js:403
 msgid "The Mysterious Wanderer"
