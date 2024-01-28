@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-11-29 06:39+0100\n"
 "PO-Revision-Date: 2024-01-28 04:11-0800\n"
-"Last-Translator: satofumi <satofumi@hyakuren-soft.sakura.ne.jp>\n"
+"Last-Translator: ChenQiang-AISS <chenqiang.gitcomm@outlook.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -229,7 +229,7 @@ msgstr "音がやんだ。"
 
 #: script/engine.js:153
 msgid "get the app."
-msgstr ""
+msgstr "アプリを入手"
 
 #: script/engine.js:159 script/engine.js:547
 msgid "lights off."
@@ -237,7 +237,7 @@ msgstr "消灯"
 
 #: script/engine.js:165 script/engine.js:583
 msgid "hyper."
-msgstr ""
+msgstr "倍速"
 
 #: script/engine.js:171 script/space.js:464
 msgid "restart."
@@ -369,12 +369,12 @@ msgstr "点灯"
 
 #: script/engine.js:555
 msgid "Go Hyper?"
-msgstr ""
+msgstr "倍速?"
 
 #: script/engine.js:558
 msgid ""
 "turning hyper mode speeds up the game to x2 speed. do you want to do that?"
-msgstr ""
+msgstr "ゲーム速度を2倍にします。よろしいですか？"
 
 #: script/engine.js:581
 msgid "classic."
@@ -476,11 +476,11 @@ msgstr ""
 
 #: script/events.js:776
 msgid "take everything"
-msgstr ""
+msgstr "全て取る"
 
 #: script/events.js:776
 msgid "take all you can"
-msgstr ""
+msgstr "取れるだけ取る"
 
 #: script/events.js:782 script/outside.js:643
 msgid " and "
@@ -891,11 +891,11 @@ msgstr "船"
 #, fuzzy
 #| msgid "laser rifle"
 msgid "use with rifle"
-msgstr "レーザー銃"
+msgstr "ライフルの弾"
 
 #: script/path.js:168
 msgid "emits a soft red glow"
-msgstr ""
+msgstr "柔らかな赤い光を放つ"
 
 #: script/path.js:235 script/world.js:292
 msgid "free {0}/{1}"
@@ -903,7 +903,7 @@ msgstr "荷重：{0}/{1}"
 
 #: script/path.js:262
 msgid "damage"
-msgstr ""
+msgstr "ダメージ"
 
 #: script/path.js:268
 msgid "weight"
@@ -1328,8 +1328,7 @@ msgstr "発進！"
 msgid ""
 "somewhere above the debris cloud, the wanderer fleet hovers. been on this "
 "rock too long."
-msgstr ""
-"瓦礫の雲の上のどこかに、放浪者艦隊は浮かんでいる。この岩の上に長らくあった。"
+msgstr "瓦礫の雲の上のどこかに、放浪者艦隊は浮かんでいる。この岩の上に長らくあった。"
 
 #: script/ship.js:106 script/ship.js:120
 msgid "not enough alien alloy"
@@ -1843,7 +1842,7 @@ msgstr "森は静かだ"
 
 #: script/events/outside.js:40
 msgid "nothing was found"
-msgstr ""
+msgstr "何も見つからなかった"
 
 #: script/events/outside.js:43 script/events/outside.js:61
 #: script/events/outside.js:128 script/events/outside.js:146
@@ -1889,7 +1888,7 @@ msgstr "鎧"
 
 #: script/events/outside.js:88
 msgid "some villagers have died"
-msgstr ""
+msgstr "一部の村人が亡くなった"
 
 #: script/events/outside.js:97
 msgid "Sickness"
@@ -1905,7 +1904,7 @@ msgstr "すぐに医薬品が必要だ。"
 
 #: script/events/outside.js:107
 msgid "some villagers are ill"
-msgstr ""
+msgstr "一部の村人が病気になった"
 
 #: script/events/outside.js:111
 msgid "1 medicine"
@@ -1917,7 +1916,7 @@ msgstr "病気はそのうち治った"
 
 #: script/events/outside.js:125
 msgid "sufferers are healed"
-msgstr ""
+msgstr "苦しんでいた人々が治った"
 
 #: script/events/outside.js:135
 msgid "the sickness spreads through the village."
@@ -1975,7 +1974,7 @@ msgstr "残された者は彼らを埋葬した"
 
 #: script/events/outside.js:193
 msgid "epidemic is eradicated eventually"
-msgstr ""
+msgstr "疫病はやがて根絶された"
 
 #: script/events/outside.js:207
 msgid "the plague rips through the village."
@@ -2007,11 +2006,11 @@ msgstr "村人たちは死者を弔うために引き返した。"
 
 #: script/events/outside.js:239
 msgid "wild beasts attack the villagers"
-msgstr ""
+msgstr "野獣が村人を襲った"
 
 #: script/events/outside.js:253
 msgid "predators become prey. price is unfair"
-msgstr ""
+msgstr "捕食者が獲物になった。酷い代価だ"
 
 #: script/events/outside.js:263
 msgid "A Military Raid"
