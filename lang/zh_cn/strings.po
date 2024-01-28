@@ -1707,7 +1707,7 @@ msgstr "狙击手"
 
 #: script/events/encounters.js:367
 msgid "the sniper is dead"
-msgstr "狙击手被灭"
+msgstr "狙击手被消灭了"
 
 #: script/events/encounters.js:396
 msgid "a shot rings out, from somewhere in the long grass"
@@ -2721,7 +2721,7 @@ msgstr "浪费掉他找到的东西太可耻了"
 msgid ""
 "beneath the wanderer's rags, clutched in one of its many hands, a glint of "
 "steel."
-msgstr "拾荒者手里紧紧地抓着什么东西。金属的反光"
+msgstr "在流浪者的破布下，它的众多手中的一只紧握着一抹钢光"
 
 #: script/events/setpieces.js:1132
 msgid "worth killing for, it seems."
