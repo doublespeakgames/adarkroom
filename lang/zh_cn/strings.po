@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-11-29 06:39+0100\n"
 "PO-Revision-Date: 2024-01-28 04:10-0800\n"
-"Last-Translator: dblark <2723569669@qq.com>\n"
+"Last-Translator: ChenQiang-AISS <chenqiang.gitcomm@outlook.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -391,7 +391,7 @@ msgstr "声响停止了"
 #, fuzzy
 #| msgid "available"
 msgid "Sound Available!"
-msgstr "可用"
+msgstr "可启用音效"
 
 #: script/engine.js:872
 msgid "ears flooded with new sensations."
@@ -411,7 +411,7 @@ msgstr ""
 
 #: script/events.js:200
 msgid "pause."
-msgstr "确认"
+msgstr "暂停"
 
 #: script/events.js:231
 msgid "eat meat"
@@ -423,11 +423,11 @@ msgstr "服药"
 
 #: script/events.js:452
 msgid "miss"
-msgstr "失手"
+msgstr "未命中"
 
 #: script/events.js:480
 msgid "stunned"
-msgstr "惊吓"
+msgstr "昏迷"
 
 #: script/events.js:599 script/events/global.js:42 script/events/global.js:59
 #: script/events/room.js:144 script/events/room.js:164
@@ -868,15 +868,15 @@ msgstr "恢复"
 
 #: script/path.js:163 script/path.js:171
 msgid "hp"
-msgstr "生命"
+msgstr ""
 
 #: script/path.js:164
 msgid "use with rifle"
-msgstr "步枪"
+msgstr "步枪弹药"
 
 #: script/path.js:168
 msgid "emits a soft red glow"
-msgstr ""
+msgstr "散发着柔和的红光"
 
 #: script/path.js:235 script/world.js:292
 msgid "free {0}/{1}"
@@ -1341,7 +1341,7 @@ msgstr "平流层"
 
 #: script/space.js:82
 msgid "Mesosphere"
-msgstr "中气层"
+msgstr "中间层"
 
 #: script/space.js:84
 msgid "Thermosphere"
@@ -1985,7 +1985,7 @@ msgstr "野兽袭击村民"
 
 #: script/events/outside.js:253
 msgid "predators become prey. price is unfair"
-msgstr "猎手变成猎物。价格不公"
+msgstr "猎手变成猎物。代价不菲"
 
 #: script/events/outside.js:263
 msgid "A Military Raid"
@@ -3273,7 +3273,7 @@ msgstr "一个士兵拉响了警报，然后开火了"
 #: script/events/setpieces.js:3218 script/events/setpieces.js:3258
 #: script/events/setpieces.js:3362 script/events/setpieces.js:3396
 msgid "run"
-msgstr "跑"
+msgstr "逃跑"
 
 #: script/events/setpieces.js:3250
 msgid "a second soldier joins the fight."
