@@ -4,6 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-11-29 06:39+0100\n"
 "PO-Revision-Date: 2024-01-28 04:11-0800\n"
+# "Translator before Last-Translator: satofumi <satofumi@hyakuren-soft.sakura.ne.jp>\n"
 "Last-Translator: ChenQiang-AISS <chenqiang.gitcomm@outlook.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -122,7 +123,7 @@ msgstr "パンチが倍の速さになり、さらに強くなる"
 
 #: script/engine.js:29
 msgid "learned to strike faster without weapons"
-msgstr "武器を使わず速く打つことを学びました"
+msgstr "武器を使わず速く打つことを学んた"
 
 #: script/engine.js:32
 msgid "barbarian"
@@ -225,7 +226,7 @@ msgstr "食べ物を最大限に活用することを学んだ"
 #, fuzzy
 #| msgid "the sounds stop."
 msgid "sound on."
-msgstr "音がやんだ。"
+msgstr ""
 
 #: script/engine.js:153
 msgid "get the app."
@@ -388,7 +389,7 @@ msgstr "{1}秒につき{0}"
 #, fuzzy
 #| msgid "the sounds stop."
 msgid "sound off."
-msgstr "音がやんだ。"
+msgstr ""
 
 #: script/engine.js:868
 #, fuzzy
@@ -1278,7 +1279,7 @@ msgstr ""
 
 #: script/room.js:983 script/room.js:1030
 msgid "not enough "
-msgstr "十分でない"
+msgstr "不足"
 
 #: script/room.js:1002
 msgid "builder just shivers"
@@ -1458,11 +1459,11 @@ msgstr "湿った洞窟"
 
 #: script/world.js:124
 msgid "An&nbsp;Abandoned&nbsp;Town"
-msgstr "捨てられた町"
+msgstr "廃墟の町"
 
 #: script/world.js:125
 msgid "A&nbsp;Ruined&nbsp;City"
-msgstr "廃墟の都市"
+msgstr "廃墟都市"
 
 #: script/world.js:126
 msgid "A&nbsp;Crashed&nbsp;Starship"
@@ -1868,7 +1869,7 @@ msgstr "唸る獣は死んだ"
 
 #: script/events/outside.js:70
 msgid "Fire"
-msgstr ""
+msgstr "火事"
 
 #: script/events/outside.js:77
 msgid "a fire rampages through one of the huts, destroying it."
@@ -1987,7 +1988,7 @@ msgstr "速やかに死ねることだけが望みである"
 
 #: script/events/outside.js:211
 msgid "population is almost exterminated"
-msgstr ""
+msgstr "住民はほぼ全滅"
 
 #: script/events/outside.js:228
 msgid "A Beast Attack"
@@ -2011,7 +2012,7 @@ msgstr "野獣が村人を襲った"
 
 #: script/events/outside.js:253
 msgid "predators become prey. price is unfair"
-msgstr "捕食者が獲物になった。酷い代価だ"
+msgstr "捕食者が獲物になった。割に合わない代価だ"
 
 #: script/events/outside.js:263
 msgid "A Military Raid"
@@ -2036,7 +2037,7 @@ msgstr "疫病は村を飲み込んだ"
 
 #: script/events/outside.js:288
 msgid "warfare is bloodthirsty"
-msgstr ""
+msgstr "戦は血に飢えるものだ"
 
 #: script/events/room.js:6
 msgid "The Nomad"
