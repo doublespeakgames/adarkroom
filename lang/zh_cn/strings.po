@@ -391,7 +391,7 @@ msgstr "声响停止了"
 #, fuzzy
 #| msgid "available"
 msgid "Sound Available!"
-msgstr "可启用音效"
+msgstr "可启用音频"
 
 #: script/engine.js:872
 msgid "ears flooded with new sensations."
@@ -403,11 +403,11 @@ msgstr ""
 
 #: script/engine.js:877
 msgid "enable audio"
-msgstr ""
+msgstr "开启音频"
 
 #: script/engine.js:882
 msgid "disable audio"
-msgstr ""
+msgstr "禁用音频"
 
 #: script/events.js:200
 msgid "pause."
