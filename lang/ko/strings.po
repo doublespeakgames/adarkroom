@@ -2315,7 +2315,7 @@ msgstr "축축한 동굴"
 
 #: script/events/setpieces.js:95
 msgid "the mouth of the cave is wide and dark."
-msgstr "동굴의 입구는 넓고 어두웠다."
+msgstr "동굴은 넓고 어두운 아가리를 벌리고 있다."
 
 #: script/events/setpieces.js:96
 msgid "can't see what's inside."
