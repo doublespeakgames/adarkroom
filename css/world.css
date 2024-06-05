@@ -33,7 +33,7 @@
 	height: 62px;
 	margin-bottom: 5px;
 	margin-top: 13px;
-	overflow: hidden;
+	overflow-y: auto;
 }
 
 #bagspace-world > div {
