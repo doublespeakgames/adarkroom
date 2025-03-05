@@ -2,9 +2,13 @@ A Dark Room
 ===========
 > "awake. head throbbing. vision blurry. come light the fire."
 
-a minimalist text adventure game for your browser
+A minimalist text adventure game for your browser!
 
 [Click to play](http://adarkroom.doublespeakgames.com)
+
+A Dark Room is a minimalist text-based role-playing game that starts with a mysterious and desolate atmosphere. The game begins with a simple prompt to light a fire, gradually unveiling a deeper survival and resource management experience. As the player progresses, they gather resources, build a village, and uncover a hidden narrative with unexpected twists.
+
+The game blends elements of idle gameplay, exploration, and storytelling, creating an eerie, immersive experience. Despite its simplicity in visuals—primarily consisting of text and ASCII-style interfaces—it manages to evoke a strong sense of mystery and discovery. The narrative unfolds gradually, revealing a dystopian world with a hidden sci-fi twist.
 
 <table>
 <tr><th colspan=4>Available Languages</tr>
