@@ -1,17 +1,24 @@
-A Dark Room
-===========
-> "awake. head throbbing. vision blurry. come light the fire."
+# A Dark Room  
+===========  
+> *"awake. head throbbing. vision blurry. come light the fire."*  
 
-A minimalist text adventure game for your browser!
+A minimalist, text-based adventure that draws you into a mysterious and desolate world.  
 
-[Click to play](http://adarkroom.doublespeakgames.com)
+## 🔥 Play Now  
+[**Click here to play in your browser**](http://adarkroom.doublespeakgames.com)  
 
-A Dark Room is a minimalist text-based role-playing game that starts with a mysterious and desolate atmosphere. The game begins with a simple prompt to light a fire, gradually unveiling a deeper survival and resource management experience. As the player progresses, they gather resources, build a village, and uncover a hidden narrative with unexpected twists.
+## About the Game  
+*A Dark Room* begins with a single action—lighting a fire. From there, the game slowly unfolds into a deeper survival and resource management experience. As you gather supplies, build a village, and explore the unknown, a hidden narrative emerges, full of unexpected twists.  
 
-The game blends elements of idle gameplay, exploration, and storytelling, creating an eerie, immersive experience. Despite its simplicity in visuals—primarily consisting of text and ASCII-style interfaces—it manages to evoke a strong sense of mystery and discovery. The narrative unfolds gradually, revealing a dystopian world with a hidden sci-fi twist.
+With its minimalist design, the game seamlessly blends idle gameplay, exploration, and storytelling. Despite its simplicity—using only text and ASCII-like visuals—*A Dark Room* creates a deeply immersive atmosphere filled with mystery, tension, and discovery. Beneath it all lies a dystopian world with a subtle sci-fi twist.  
+
+---  
+
+## 🌍 Available Languages  
+Play *A Dark Room* in multiple languages:  
 
 <table>
-<tr><th colspan=4>Available Languages</tr>
+<tr><th colspan=4>Supported Languages</th></tr>
 <tr>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=zh_cn">Chinese (Simplified)</a></td>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=zh_tw">Chinese (Traditional)</a></td>
@@ -42,10 +49,14 @@ The game blends elements of idle gameplay, exploration, and storytelling, creati
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=lt_LT">Lithuanian</a></td>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=gl">Galician</a></td>
 </tr>
-</table>
+</table>  
 
-or play the latest on [GitHub](http://doublespeakgames.github.io/adarkroom)
+---  
 
-<a href="https://itunes.apple.com/us/app/a-dark-room/id736683061"><img src="http://i.imgur.com/DMdnDYq.png" height="50"></a>
-<a href="https://play.google.com/store/apps/details?id=com.yourcompany.adarkroom"><img src="http://i.imgur.com/bLWWj4r.png" height="50"></a>
-<a href="https://store.steampowered.com/app/2460660/A_Dark_Room/"><img src="https://i.imgur.com/yz6cnU0.png" height="50"></a>
+## 🎮 Play on Other Platforms  
+Experience *A Dark Room* on different devices:  
+
+[![Play on GitHub](https://i.imgur.com/yz6cnU0.png)](http://doublespeakgames.github.io/adarkroom)  
+[![Download on iOS](http://i.imgur.com/DMdnDYq.png)](https://itunes.apple.com/us/app/a-dark-room/id736683061)  
+[![Download on Android](http://i.imgur.com/bLWWj4r.png)](https://play.google.com/store/apps/details?id=com.yourcompany.adarkroom)  
+[![Get it on Steam](https://i.imgur.com/yz6cnU0.png)](https://store.steampowered.com/app/2460660/A_Dark_Room/)  
