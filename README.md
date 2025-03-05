@@ -56,7 +56,6 @@ Play *A Dark Room* in multiple languages:
 ## 🎮 Play on Other Platforms  
 Experience *A Dark Room* on different devices:  
 
-[![Play on GitHub](https://i.imgur.com/yz6cnU0.png)](http://doublespeakgames.github.io/adarkroom)  
 [![Download on iOS](http://i.imgur.com/DMdnDYq.png)](https://itunes.apple.com/us/app/a-dark-room/id736683061)  
 [![Download on Android](http://i.imgur.com/bLWWj4r.png)](https://play.google.com/store/apps/details?id=com.yourcompany.adarkroom)  
 [![Get it on Steam](https://i.imgur.com/yz6cnU0.png)](https://store.steampowered.com/app/2460660/A_Dark_Room/)  
