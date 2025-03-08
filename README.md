@@ -1,22 +1,16 @@
-# A Dark Room  
-===========  
-> *"awake. head throbbing. vision blurry. come light the fire."*  
+# A Dark Room
+===========
+> *"awake. head throbbing. vision blurry. come light the fire."*
 
-A minimalist, text-based adventure that draws you into a mysterious and desolate world.  
+A minimalist text-based adventure.
 
-## 🔥 Play Now  
-[**Click here to play in your browser**](http://adarkroom.doublespeakgames.com)  
+## Play
+[Play in your browser](http://adarkroom.doublespeakgames.com)
 
-## About the Game  
-*A Dark Room* begins with a single action—lighting a fire. From there, the game slowly unfolds into a deeper survival and resource management experience. As you gather supplies, build a village, and explore the unknown, a hidden narrative emerges, full of unexpected twists.  
+## About
+A single action—lighting a fire—unfolds into a survival and resource management experience. Gather supplies, build a village, explore the unknown. A simple interface hides a deeper narrative with a dystopian sci-fi twist.
 
-With its minimalist design, the game seamlessly blends idle gameplay, exploration, and storytelling. Despite its simplicity—using only text and ASCII-like visuals—*A Dark Room* creates a deeply immersive atmosphere filled with mystery, tension, and discovery. Beneath it all lies a dystopian world with a subtle sci-fi twist.  
-
----  
-
-## 🌍 Available Languages  
-Play *A Dark Room* in multiple languages:  
-
+## Languages
 <table>
 <tr><th colspan=4>Supported Languages</th></tr>
 <tr>
@@ -49,15 +43,7 @@ Play *A Dark Room* in multiple languages:
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=lt_LT">Lithuanian</a></td>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=gl">Galician</a></td>
 </tr>
-</table>  
+</table>
 
----  
-
-## 🎮 Play on Other Platforms  
-Experience *A Dark Room* on different devices:  
-
-[![Play on GitHub](https://i.imgur.com/yz6cnU0.png)](http://doublespeakgames.github.io/adarkroom)  
-[![Download on iOS](http://i.imgur.com/DMdnDYq.png)](https://itunes.apple.com/us/app/a-dark-room/id736683061)  
-[![Download on Android](http://i.imgur.com/bLWWj4r.png)](https://play.google.com/store/apps/details?id=com.yourcompany.adarkroom)  
-[![Get it on Steam](https://i.imgur.com/yz6cnU0.png)](https://store.steampowered.com/app/2460660/A_Dark_Room/)  
-
+## Other Platforms
+[GitHub](http://doublespeakgames.github.io/adarkroom) | [iOS](https://itunes.apple.com/us/app/a-dark-room/id736683061) | [Android](https://play.google.com/store/apps/details?id=com.yourcompany.adarkroom) | [Steam](https://store.steampowered.com/app/2460660/A_Dark_Room/)
