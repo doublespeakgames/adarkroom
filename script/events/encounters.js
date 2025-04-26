@@ -147,7 +147,7 @@ Events.Encounters = [
 						chance: 0.8
 					}
 				},
-				notification: _('a two-headed creature appears, smaller head trembling')
+				notification: _('a two-headed creature appears, the smaller head trembling')
 			}
 		}
 	},
