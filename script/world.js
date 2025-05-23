@@ -102,7 +102,7 @@ var World = {
       cost: { 'bolas': 1 }
     },
     'plasma rifle': {
-      verb: _('disintigrate'),
+      verb: _('disintegrate'),
       type: 'ranged',
       damage: 12,
       cooldown: 1,
