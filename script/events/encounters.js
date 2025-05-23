@@ -114,6 +114,43 @@ Events.Encounters = [
 			}
 		}
 	},
+	{ /* Two-Headed Creature */
+	title: _('A Two-Headed Creature'),
+		isAvailable: function() {
+			return World.getDistance() <= 10 && World.getTerrain() == World.TILE.FIELD;
+		},
+		scenes: {
+			'start': {
+				combat: true,
+				enemy: 'two-headed creature',
+				enemyName: _('two-headed creature'),
+				deathMessage: _('the two creatures are dead'),
+				chara: 'K',
+				damage: 2,
+				hit: 0.5,
+				attackDelay: 3,
+				health: 10,
+				loot: {
+					'fur': {
+						min: 2,
+						max: 4,
+						chance: 1
+					},
+					'teeth': {
+						min: 2,
+						max: 3,
+						chance: 0.8
+					},
+					'meat': {
+						min: 2,
+						max: 3,
+						chance: 0.8
+					}
+				},
+				notification: _('a two-headed creature appears, the smaller head trembling')
+			}
+		}
+	},
 	/* Tier 2*/
 	{ /* Shivering Man */
 	title: _('A Shivering Man'),
