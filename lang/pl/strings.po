@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2016-12-09 10:21+0100\n"
 "PO-Revision-Date: \n"
-"Last-Translator: Sebastian <admin@itunix.eu>\n"
+"Last-Translator: Sebastian Korotkiewicz <skorotkiewicz@gmail.com>\n"
 "Language-Team: \n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -219,6 +219,10 @@ msgstr "nauczyłeś się przyrządzać większość potraw"
 msgid "app store."
 msgstr "sklep z aplikacjami."
 
+#: ../../script/engine.js:138
+msgid "get the app."
+msgstr "pobierz app."
+
 #: script/engine.js:144 script/engine.js:485
 msgid "lights off."
 msgstr "zgaś światła."
@@ -418,6 +422,10 @@ msgstr "wszystko"
 msgid "take everything"
 msgstr "weż wszystko"
 
+#: script/events.js:743
+msgid "take all you can"
+msgstr "weż wszystko co możesz"
+
 #: script/events.js:653 script/outside.js:627
 msgid " and "
 msgstr " i "
@@ -479,12 +487,10 @@ msgid "coal"
 msgstr "węgiel"
 
 #: script/localization.js:17
-#, fuzzy
 msgid "sulphur"
-msgstr "kopacz siarki"
+msgstr "siarka"
 
 #: script/localization.js:18
-#, fuzzy
 msgid "energy cell"
 msgstr "bateria"
 
@@ -526,30 +532,27 @@ msgstr "rzeźnik"
 
 #: script/localization.js:28 script/outside.js:55
 msgid "iron miner"
-msgstr "kopacz żelaza"
+msgstr "górnik żelaza"
 
 #: script/localization.js:29
-#, fuzzy
 msgid "iron mine"
-msgstr "kopacz żelaza"
+msgstr "kopalnia żelaza"
 
 #: script/localization.js:30 script/outside.js:63
 msgid "coal miner"
-msgstr "kopacz węgla"
+msgstr "górnik węgla"
 
 #: script/localization.js:31
-#, fuzzy
 msgid "coal mine"
-msgstr "kopacz węgla"
+msgstr "kopalnia węgla"
 
 #: script/localization.js:32 script/outside.js:71
 msgid "sulphur miner"
-msgstr "kopacz siarki"
+msgstr "górnik siarki"
 
 #: script/localization.js:33
-#, fuzzy
 msgid "sulphur mine"
-msgstr "kopacz siarki"
+msgstr "kopalnia siarki"
 
 #: script/localization.js:34 script/outside.js:88
 msgid "armourer"
@@ -612,9 +615,8 @@ msgid "not enough steel"
 msgstr "za mało stali"
 
 #: script/localization.js:51
-#, fuzzy
 msgid "not enough sulphur"
-msgstr "za mało futra"
+msgstr "za mało siarki"
 
 #: script/localization.js:52
 msgid "baited trap"
@@ -1195,7 +1197,7 @@ msgstr ""
 
 #: script/room.js:760
 msgid "stores"
-msgstr "sklepy"
+msgstr "magazyn"
 
 #: script/room.js:779
 msgid "weapons"
