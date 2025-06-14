@@ -1981,7 +1981,7 @@ msgstr "внутри хижины находится плачущий ребён
 
 #: ../../script/events/setpieces.js:2634
 msgid "a few belongings rest against the walls."
-msgstr "в стену упирается несколько вещей."
+msgstr "к стене прислонены несколько вещей."
 
 #: ../../script/events/setpieces.js:2674
 msgid "the stench of rot and death fills the operating theatres."
