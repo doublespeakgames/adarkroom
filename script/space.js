@@ -466,7 +466,7 @@ var Space = {
 			setTimeout(() => {
 				$('<div>')
 					.addClass('outro')
-					.html('the beacon pulses gently as the ship glides through space.<br>coordinates are locked. nothing to do but wait.')
+					.html(_('the beacon pulses gently as the ship glides through space.<br>coordinates are locked. nothing to do but wait.'))
 					.appendTo(c)
 					.animate({ opacity: 1}, 500);
 			}, 2000);
@@ -474,7 +474,7 @@ var Space = {
 			setTimeout(() => {
 				$('<div>')
 					.addClass('outro')
-					.html('the beacon glows a solid blue, and then goes dim. the ship slows.<br>gradually, the vast wanderer homefleet comes into view.<br>massive worldships drift unnaturally through clouds of debris, scarred and dead.')
+					.html(_('the beacon glows a solid blue, and then goes dim. the ship slows.<br>gradually, the vast wanderer homefleet comes into view.<br>massive worldships drift unnaturally through clouds of debris, scarred and dead.'))
 					.appendTo(c)
 					.animate({ opacity: 1}, 500);
 			}, 7000);
@@ -482,7 +482,7 @@ var Space = {
 			setTimeout(() => {
 				$('<div>')
 					.addClass('outro')
-					.text('the air is running out.')
+					.text(_('the air is running out.'))
 					.appendTo(c)
 					.animate({ opacity: 1}, 500);
 			}, 14000);
@@ -490,7 +490,7 @@ var Space = {
 			setTimeout(() => {
 				$('<div>')
 					.addClass('outro')
-					.text('the capsule is cold.')
+					.text(_('the capsule is cold.'))
 					.appendTo(c)
 					.animate({ opacity: 1}, 500);
 			}, 17000);

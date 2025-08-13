@@ -130,7 +130,7 @@
         var optionsList = $('<ul>')
           .appendTo(selectOptions);
         $('<li>')
-          .text("language.")
+          .text(_("language."))
           .appendTo(optionsList);
 
         $.each(langs, function(name,display){
