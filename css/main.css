@@ -663,3 +663,12 @@ body.noMask #description {
 #dropMenu > div:hover {
 	text-decoration: underline;
 }
+div.row_situation {
+	float: right;
+}
+div.decrease {
+	color: red;
+}
+div.increase{
+	color: green;
+}

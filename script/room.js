@@ -879,6 +879,7 @@ var Room = {
 			if (row.length === 0) {
 				row = $('<div>').attr('id', id).addClass('storeRow');
 				$('<div>').addClass('row_key').text(lk).appendTo(row);
+				$('<div>').addClass('row_situation').text('').appendTo(row);
 				$('<div>').addClass('row_val').text(Math.floor(num)).appendTo(row);
 				$('<div>').addClass('clear').appendTo(row);
 				var curPrev = null;
@@ -944,6 +945,7 @@ var Room = {
 			var ttPos = index > 10 ? 'top right' : 'bottom right';
 			var tt = $('<div>').addClass('tooltip ' + ttPos);
 			var storeName = el.attr('id').substring(4).replace('-', ' ');
+			var total_income = 0;
 			for (var incomeSource in $SM.get('income')) {
 				var income = $SM.get('income["' + incomeSource + '"]');
 				for (var store in income.stores) {
@@ -953,12 +955,27 @@ var Room = {
 							.addClass('row_val')
 							.text(Engine.getIncomeMsg(income.stores[store], income.delay))
 							.appendTo(tt);
+						total_income += income.stores[store];
 						if (!totalIncome[store] || totalIncome[store].income === undefined) {
 							totalIncome[store] = { income: 0 };
 						}
 						totalIncome[store].income += Number(income.stores[store]);
 						totalIncome[store].delay = income.delay;
 					}
+				}
+			}
+			var situation_view = $('div.row_situation', el);
+			situation_view.removeClass("increase decrease");
+			if (total_income === 0) {
+				situation_view.text("");
+			} else {
+				var isIncreasing = total_income > 0;
+				var sign = isIncreasing ? '+' : '';
+				situation_view.text("(" + sign + total_income + ")");
+				if (isIncreasing) {
+					situation_view.addClass("increase");
+				} else {
+					situation_view.addClass("decrease");
 				}
 			}
 			if (tt.children().length > 0) {
