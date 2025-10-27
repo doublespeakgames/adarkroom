@@ -1,13 +1,18 @@
-A Dark Room
+# A Dark Room
 ===========
-> "awake. head throbbing. vision blurry. come light the fire."
+> *"awake. head throbbing. vision blurry. come light the fire."*
 
-a minimalist text adventure game for your browser
+A minimalist text-based adventure.
 
-[Click to play](http://adarkroom.doublespeakgames.com)
+## Play
+[Play in your browser](http://adarkroom.doublespeakgames.com)
 
+## About
+A single action—lighting a fire—unfolds into a survival and resource management experience. Gather supplies, build a village, explore the unknown. A simple interface hides a deeper narrative with a dystopian sci-fi twist.
+
+## Languages
 <table>
-<tr><th colspan=4>Available Languages</tr>
+<tr><th colspan=4>Supported Languages</th></tr>
 <tr>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=zh_cn">Chinese (Simplified)</a></td>
 	<td><a href="http://adarkroom.doublespeakgames.com/?lang=zh_tw">Chinese (Traditional)</a></td>
@@ -40,8 +45,5 @@ a minimalist text adventure game for your browser
 </tr>
 </table>
 
-or play the latest on [GitHub](http://doublespeakgames.github.io/adarkroom)
-
-<a href="https://itunes.apple.com/us/app/a-dark-room/id736683061"><img src="http://i.imgur.com/DMdnDYq.png" height="50"></a>
-<a href="https://play.google.com/store/apps/details?id=com.yourcompany.adarkroom"><img src="http://i.imgur.com/bLWWj4r.png" height="50"></a>
-<a href="https://store.steampowered.com/app/2460660/A_Dark_Room/"><img src="https://i.imgur.com/yz6cnU0.png" height="50"></a>
+## Other Platforms
+[GitHub](http://doublespeakgames.github.io/adarkroom) | [iOS](https://itunes.apple.com/us/app/a-dark-room/id736683061) | [Android](https://play.google.com/store/apps/details?id=com.yourcompany.adarkroom) | [Steam](https://store.steampowered.com/app/2460660/A_Dark_Room/)
