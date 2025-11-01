@@ -688,35 +688,35 @@ msgid "not enough meat"
 msgstr ""
 
 #: script/localization.js:58
-msgid "the compass points east"
+msgid "the compass points east 👉"
 msgstr ""
 
 #: script/localization.js:59
-msgid "the compass points west"
+msgid "the compass points west 👈"
 msgstr ""
 
 #: script/localization.js:60
-msgid "the compass points north"
+msgid "the compass points north 👆"
 msgstr ""
 
 #: script/localization.js:61
-msgid "the compass points south"
+msgid "the compass points south 👇"
 msgstr ""
 
 #: script/localization.js:62
-msgid "the compass points northeast"
+msgid "the compass points northeast ↗️"
 msgstr ""
 
 #: script/localization.js:63
-msgid "the compass points northwest"
+msgid "the compass points northwest ↖️"
 msgstr ""
 
 #: script/localization.js:64
-msgid "the compass points southeast"
+msgid "the compass points southeast ↘️"
 msgstr ""
 
 #: script/localization.js:65
-msgid "the compass points southwest"
+msgid "the compass points southwest ↙️"
 msgstr ""
 
 #: script/outside.js:5
@@ -1160,43 +1160,43 @@ msgid ""
 msgstr ""
 
 #: script/room.js:617
-msgid "freezing"
+msgid "freezing 🥶"
 msgstr ""
 
 #: script/room.js:618
-msgid "cold"
+msgid "cold 🧊"
 msgstr ""
 
 #: script/room.js:619
-msgid "mild"
+msgid "mild 🙂"
 msgstr ""
 
 #: script/room.js:620
-msgid "warm"
+msgid "warm 😊"
 msgstr ""
 
 #: script/room.js:621
-msgid "hot"
+msgid "hot 🥵"
 msgstr ""
 
 #: script/room.js:633
-msgid "dead"
+msgid "dead 💀"
 msgstr ""
 
 #: script/room.js:634
-msgid "smoldering"
+msgid "smoldering 🌫️"
 msgstr ""
 
 #: script/room.js:635
-msgid "flickering"
+msgid "flickering ✨"
 msgstr ""
 
 #: script/room.js:636
-msgid "burning"
+msgid "burning 🔥"
 msgstr ""
 
 #: script/room.js:637
-msgid "roaring"
+msgid "roaring 🔥🔥🔥"
 msgstr ""
 
 #: script/room.js:641
@@ -1208,11 +1208,11 @@ msgid "not enough wood to get the fire going"
 msgstr ""
 
 #: script/room.js:693
-msgid "the wood has run out"
+msgid "the wood has run out 🪵"
 msgstr ""
 
 #: script/room.js:714
-msgid "the light from the fire spills from the windows, out into the dark"
+msgid "the light from the fire spills from the windows, out into the dark ✨"
 msgstr ""
 
 #: script/room.js:732

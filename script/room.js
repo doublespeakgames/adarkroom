@@ -11,7 +11,7 @@ var Room = {
 	buttons: {},
 	Craftables: {
 		'trap': {
-			name: _('trap'),
+			name: _('trap 🪤'),
 			button: null,
 			maximum: 10,
 			availableMsg: _('builder says she can make traps to catch any creatures might still be alive out there'),
@@ -27,7 +27,7 @@ var Room = {
 			audio: AudioLibrary.BUILD_TRAP
 		},
 		'cart': {
-			name: _('cart'),
+			name: _('cart 🛒'),
 			button: null,
 			maximum: 1,
 			availableMsg: _('builder says she can make a cart for carrying wood'),
@@ -41,7 +41,7 @@ var Room = {
 			audio: AudioLibrary.BUILD_CART
 		},
 		'hut': {
-			name: _('hut'),
+			name: _('hut 🛖'),
 			button: null,
 			maximum: 20,
 			availableMsg: _("builder says there are more wanderers. says they'll work, too."),
@@ -57,7 +57,7 @@ var Room = {
 			audio: AudioLibrary.BUILD_HUT
 		},
 		'lodge': {
-			name: _('lodge'),
+			name: _('lodge 🏠'),
 			button: null,
 			maximum: 1,
 			availableMsg: _('villagers could help hunt, given the means'),
@@ -73,7 +73,7 @@ var Room = {
 			audio: AudioLibrary.BUILD_LODGE
 		},
 		'trading post': {
-			name: _('trading post'),
+			name: _('trading post 🏪'),
 			button: null,
 			maximum: 1,
 			availableMsg: _("a trading post would make commerce easier"),
@@ -88,7 +88,7 @@ var Room = {
 			audio: AudioLibrary.BUILD_TRADING_POST
 		},
 		'tannery': {
-			name: _('tannery'),
+			name: _('tannery 🏭'),
 			button: null,
 			maximum: 1,
 			availableMsg: _("builder says leather could be useful. says the villagers could make it."),
@@ -103,7 +103,7 @@ var Room = {
 			audio: AudioLibrary.BUILD_TANNERY
 		},
 		'smokehouse': {
-			name: _('smokehouse'),
+			name: _('smokehouse 💨'),
 			button: null,
 			maximum: 1,
 			availableMsg: _("should cure the meat, or it'll spoil. builder says she can fix something up."),
@@ -118,7 +118,7 @@ var Room = {
 			audio: AudioLibrary.BUILD_SMOKEHOUSE
 		},
 		'workshop': {
-			name: _('workshop'),
+			name: _('workshop 🛠️'),
 			button: null,
 			maximum: 1,
 			availableMsg: _("builder says she could make finer things, if she had the tools"),
@@ -134,7 +134,7 @@ var Room = {
 			audio: AudioLibrary.BUILD_WORKSHOP
 		},
 		'steelworks': {
-			name: _('steelworks'),
+			name: _('steelworks 🏭'),
 			button: null,
 			maximum: 1,
 			availableMsg: _("builder says the villagers could make steel, given the tools"),
@@ -150,7 +150,7 @@ var Room = {
 			audio: AudioLibrary.BUILD_STEELWORKS
 		},
 		'armoury': {
-			name: _('armoury'),
+			name: _('armoury 🛡️'),
 			button: null,
 			maximum: 1,
 			availableMsg: _("builder says it'd be useful to have a steady source of bullets"),
@@ -166,7 +166,7 @@ var Room = {
 			audio: AudioLibrary.BUILD_ARMOURY
 		},
 		'torch': {
-			name: _('torch'),
+			name: _('torch 🔥'),
 			button: null,
 			type: 'tool',
 			buildMsg: _('a torch to keep the dark away'),
@@ -179,7 +179,7 @@ var Room = {
 			audio: AudioLibrary.CRAFT_TORCH
 		},
 		'waterskin': {
-			name: _('waterskin'),
+			name: _('waterskin 💧'),
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
@@ -192,7 +192,7 @@ var Room = {
 			audio: AudioLibrary.CRAFT_WATERSKIN
 		},
 		'cask': {
-			name: _('cask'),
+			name: _('cask 🛢️'),
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
@@ -206,7 +206,7 @@ var Room = {
 			audio: AudioLibrary.CRAFT_CASK
 		},
 		'water tank': {
-			name: _('water tank'),
+			name: _('water tank 🌊'),
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
@@ -220,7 +220,7 @@ var Room = {
 			audio: AudioLibrary.CRAFT_WATER_TANK
 		},
 		'bone spear': {
-			name: _('bone spear'),
+			name: _('bone spear 🦴'),
 			button: null,
 			type: 'weapon',
 			buildMsg: _("this spear's not elegant, but it's pretty good at stabbing"),
@@ -233,7 +233,7 @@ var Room = {
 			audio: AudioLibrary.CRAFT_BONE_SPEAR
 		},
 		'rucksack': {
-			name: _('rucksack'),
+			name: _('rucksack 🎒'),
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
@@ -246,7 +246,7 @@ var Room = {
 			audio: AudioLibrary.CRAFT_RUCKSACK
 		},
 		'wagon': {
-			name: _('wagon'),
+			name: _('wagon 🚚'),
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
@@ -260,7 +260,7 @@ var Room = {
 			audio: AudioLibrary.CRAFT_WAGON
 		},
 		'convoy': {
-			name: _('convoy'),
+			name: _('convoy 🚛'),
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
@@ -275,7 +275,7 @@ var Room = {
 			audio: AudioLibrary.CRAFT_CONVOY
 		},
 		'l armour': {
-			name: _('l armour'),
+			name: _('l armour 👕'),
 			type: 'upgrade',
 			maximum: 1,
 			buildMsg: _("leather's not strong. better than rags, though."),
@@ -288,7 +288,7 @@ var Room = {
 			audio: AudioLibrary.CRAFT_LEATHER_ARMOUR
 		},
 		'i armour': {
-			name: _('i armour'),
+			name: _('i armour 👚'),
 			type: 'upgrade',
 			maximum: 1,
 			buildMsg: _("iron's stronger than leather"),
@@ -301,7 +301,7 @@ var Room = {
 			audio: AudioLibrary.CRAFT_IRON_ARMOUR
 		},
 		's armour': {
-			name: _('s armour'),
+			name: _('s armour 🧥'),
 			type: 'upgrade',
 			maximum: 1,
 			buildMsg: _("steel's stronger than iron"),
@@ -314,7 +314,7 @@ var Room = {
 			audio: AudioLibrary.CRAFT_STEEL_ARMOUR
 		},
 		'iron sword': {
-			name: _('iron sword'),
+			name: _('iron sword 🗡️'),
 			button: null,
 			type: 'weapon',
 			buildMsg: _("sword is sharp. good protection out in the wilds."),
@@ -328,7 +328,7 @@ var Room = {
 			audio: AudioLibrary.CRAFT_IRON_SWORD
 		},
 		'steel sword': {
-			name: _('steel sword'),
+			name: _('steel sword ⚔️'),
 			button: null,
 			type: 'weapon',
 			buildMsg: _("the steel is strong, and the blade true."),
@@ -342,7 +342,7 @@ var Room = {
 			audio: AudioLibrary.CRAFT_STEEL_SWORD
 		},
 		'rifle': {
-			name: _('rifle'),
+			name: _('rifle 🔫'),
 			type: 'weapon',
 			buildMsg: _("black powder and bullets, like the old days."),
 			cost: function () {

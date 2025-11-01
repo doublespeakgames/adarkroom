@@ -2,25 +2,25 @@ var World = {
   RADIUS: 30,
   VILLAGE_POS: [30, 30],
   TILE: {
-    VILLAGE: 'A',
-    IRON_MINE: 'I',
-    COAL_MINE: 'C',
-    SULPHUR_MINE: 'S',
-    FOREST: ';',
-    FIELD: ',',
-    BARRENS: '.',
-    ROAD: '#',
-    HOUSE: 'H',
-    CAVE: 'V',
-    TOWN: 'O',
-    CITY: 'Y',
-    OUTPOST: 'P',
-    SHIP: 'W',
-    BOREHOLE: 'B',
-    BATTLEFIELD: 'F',
-    SWAMP: 'M',
-    CACHE: 'U',
-    EXECUTIONER: 'X'
+  VILLAGE: '🛖',
+    IRON_MINE: '⛏️',
+    COAL_MINE: '⛏️',
+    SULPHUR_MINE: '⛏️',
+    FOREST: '🌲',
+    FIELD: '🌾',
+    BARRENS: '🏜️',
+    ROAD: '🛤️',
+    HOUSE: '🏠',
+    CAVE: '🦇',
+    TOWN: '🏘️',
+    CITY: '🏙️',
+    OUTPOST: '🏕️',
+    SHIP: '🛸',
+    BOREHOLE: '🕳️',
+    BATTLEFIELD: '⚔️',
+    SWAMP: '🐊',
+    CACHE: '📦',
+    EXECUTIONER: '💀'
   },
   TILE_PROBS: {},
   LANDMARKS: {},
@@ -44,78 +44,78 @@ var World = {
 
   Weapons: {
     'fists': {
-      verb: _('punch'),
+      verb: _('punch 👊'),
       type: 'unarmed',
       damage: 1,
       cooldown: 2
     },
     'bone spear': {
-      verb: _('stab'),
+      verb: _('stab 🦴'),
       type: 'melee',
       damage: 2,
       cooldown: 2
     },
     'iron sword': {
-      verb: _('swing'),
+      verb: _('swing 🗡️'),
       type: 'melee',
       damage: 4,
       cooldown: 2
     },
     'steel sword': {
-      verb: _('slash'),
+      verb: _('slash ⚔️'),
       type: 'melee',
       damage: 6,
       cooldown: 2
     },
     'bayonet': {
-      verb: _('thrust'),
+      verb: _('thrust 🔪'),
       type: 'melee',
       damage: 8,
       cooldown: 2
     },
     'rifle': {
-      verb: _('shoot'),
+      verb: _('shoot 🔫'),
       type: 'ranged',
       damage: 5,
       cooldown: 1,
       cost: { 'bullets': 1 }
     },
     'laser rifle': {
-      verb: _('blast'),
+      verb: _('blast 💥'),
       type: 'ranged',
       damage: 8,
       cooldown: 1,
       cost: { 'energy cell': 1 }
     },
     'grenade': {
-      verb: _('lob'),
+      verb: _('lob 💣'),
       type: 'ranged',
       damage: 15,
       cooldown: 5,
       cost: { 'grenade': 1 }
     },
     'bolas': {
-      verb: _('tangle'),
+      verb: _('tangle ➰'),
       type: 'ranged',
       damage: 'stun',
       cooldown: 15,
       cost: { 'bolas': 1 }
     },
     'plasma rifle': {
-      verb: _('disintegrate'),
+      verb: _('disintegrate ✨'),
       type: 'ranged',
       damage: 12,
       cooldown: 1,
       cost: { 'energy cell': 1 }
     },
     'energy blade': {
-      verb: _('slice'),
+      verb: _('slice ⚡️'),
       type: 'melee',
       damage: 10,
       cooldown: 2
     },
     'disruptor': {
-      verb: _('stun'),
+      verb: _('stun 😵'),
       type: 'ranged',
       damage: 'stun',
       cooldown: 15
@@ -888,7 +888,7 @@ var World = {
           ttClass += " bottom";
         }
         if(World.curPos[0] == i && World.curPos[1] == j) {
-          mapString += '<span class="landmark">@<div class="tooltip ' + ttClass + '">'+_('Wanderer')+'</div></span>';
+          mapString += '<span class="landmark">🤺<div class="tooltip ' + ttClass + '">'+_('Wanderer')+'</div></span>';
         } else if(World.state.mask[i][j]) {
           var c = World.state.map[i][j];
           switch(c) {
