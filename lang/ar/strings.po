@@ -1,0 +1,3426 @@
+# Arabic translations for PROJECT.
+# Copyright (C) 2014 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: tanashkoo@gmail.com\n"
+"POT-Creation-Date: 2025-11-10 06:39+0100\n"
+"PO-Revision-Date: 2025-11-10 06:39+0100\n"
+"Last-Translator: tanashkoo@gmail.com\n"
+"Language: ar\n"
+"Language-Team: Arabic\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: script/dropbox.js:62
+msgid "Dropbox connection"
+msgstr "اتصال Dropbox"
+
+#: script/dropbox.js:65
+msgid "connect game to dropbox local storage"
+msgstr "ربط اللعبة بتخزين Dropbox المحلي"
+
+#: script/dropbox.js:68
+msgid "connect"
+msgstr "اتصال"
+
+#: script/dropbox.js:75 script/dropbox.js:107 script/dropbox.js:133
+#: script/dropbox.js:163 script/engine.js:316 script/engine.js:362
+msgid "cancel"
+msgstr "إلغاء"
+
+#: script/dropbox.js:86 script/dropbox.js:176
+msgid "Dropbox Export / Import"
+msgstr "تصدير / استيراد Dropbox"
+
+#: script/dropbox.js:89
+msgid "export or import save data to dropbox datastorage"
+msgstr "تصدير أو استيراد بيانات الحفظ إلى تخزين بيانات Dropbox"
+
+#: script/dropbox.js:90
+msgid "your are connected to dropbox with account / email "
+msgstr "أنت متصل بـ Dropbox بحساب / بريد إلكتروني "
+
+#: script/dropbox.js:93
+msgid "save"
+msgstr "حفظ"
+
+#: script/dropbox.js:97
+msgid "load"
+msgstr "تحميل"
+
+#: script/dropbox.js:102
+msgid "signout"
+msgstr "تسجيل الخروج"
+
+#: script/dropbox.js:113
+msgid "choose one slot to save to"
+msgstr "اختر فتحة واحدة للحفظ فيها"
+
+#: script/dropbox.js:119
+msgid "save to slot"
+msgstr "حفظ في الفتحة"
+
+#: script/dropbox.js:141
+msgid "choose one slot to load from"
+msgstr "اختر فتحة واحدة للتحميل منها"
+
+#: script/dropbox.js:148
+msgid "load from slot"
+msgstr "تحميل من الفتحة"
+
+#: script/dropbox.js:179
+msgid "successfully saved to dropbox datastorage"
+msgstr "تم الحفظ بنجاح في تخزين بيانات Dropbox"
+
+#: script/dropbox.js:180
+msgid "error while saving to dropbox datastorage"
+msgstr "خطأ أثناء الحفظ في تخزين بيانات Dropbox"
+
+#: script/dropbox.js:183
+msgid "ok"
+msgstr "حسناً"
+
+#: script/engine.js:15
+msgid "boxer"
+msgstr "ملاكم"
+
+#: script/engine.js:16
+msgid "punches do more damage"
+msgstr "اللكمات تسبب ضرراً أكبر"
+
+# more force
+#: script/engine.js:18
+msgid "learned to throw punches with purpose"
+msgstr "تعلمت رمي اللكمات بغرض"
+
+#: script/engine.js:21
+msgid "martial artist"
+msgstr "فنان قتالي"
+
+#: script/engine.js:22
+msgid "punches do even more damage."
+msgstr "اللكمات تسبب ضرراً أكبر بكثير."
+
+#: script/engine.js:23
+msgid "learned to fight quite effectively without weapons"
+msgstr "تعلمت القتال بفعالية كبيرة بدون أسلحة"
+
+# unarmed master = master of unarmed combat.
+#: script/engine.js:27
+msgid "unarmed master"
+msgstr "سيد القتال غير المسلح"
+
+#: script/engine.js:28
+msgid "punch twice as fast, and with even more force"
+msgstr "اللكم بضعف السرعة وبقوة أكبر"
+
+#: script/engine.js:29
+msgid "learned to strike faster without weapons"
+msgstr "تعلمت الضرب بشكل أسرع بدون أسلحة"
+
+#: script/engine.js:32
+msgid "barbarian"
+msgstr "بربري"
+
+#: script/engine.js:33
+msgid "melee weapons deal more damage"
+msgstr "الأسلحة القريبة تسبب ضرراً أكبر"
+
+#: script/engine.js:34
+msgid "learned to swing weapons with force"
+msgstr "تعلمت التأرجح بالأسلحة بقوة"
+
+#: script/engine.js:37
+msgid "slow metabolism"
+msgstr "أيض بطيء"
+
+#: script/engine.js:38
+msgid "go twice as far without eating"
+msgstr "السير ضعف المسافة بدون أكل"
+
+#: script/engine.js:39
+msgid "learned how to ignore the hunger"
+msgstr "تعلمت كيفية تجاهل الجوع"
+
+#: script/engine.js:42
+msgid "desert rat"
+msgstr "جرذ الصحراء"
+
+#: script/engine.js:43
+msgid "go twice as far without drinking"
+msgstr "السير ضعف المسافة بدون شرب"
+
+#: script/engine.js:44
+msgid "learned to love the dry air"
+msgstr "تعلمت حب الهواء الجاف"
+
+#: script/engine.js:47
+msgid "evasive"
+msgstr "مراوغ"
+
+#: script/engine.js:48
+msgid "dodge attacks more effectively"
+msgstr "تجنب الهجمات بفعالية أكبر"
+
+#: script/engine.js:49
+msgid "learned to be where they're not"
+msgstr "تعلمت أن أكون حيث لا يكونون"
+
+#: script/engine.js:52
+msgid "precise"
+msgstr "دقيق"
+
+#: script/engine.js:53
+msgid "land blows more often"
+msgstr "ضرب الضربات بشكل أكثر تكراراً"
+
+#: script/engine.js:54
+msgid "learned to predict their movement"
+msgstr "تعلمت التنبؤ بحركاتهم"
+
+#: script/engine.js:57
+msgid "scout"
+msgstr "كشاف"
+
+#: script/engine.js:58
+msgid "see farther"
+msgstr "رؤية أبعد"
+
+#: script/engine.js:59
+msgid "learned to look ahead"
+msgstr "تعلمت النظر للأمام"
+
+#: script/engine.js:62
+msgid "stealthy"
+msgstr "متخفي"
+
+#: script/engine.js:63
+msgid "better avoid conflict in the wild"
+msgstr "تجنب أفضل للصراع في البرية"
+
+#: script/engine.js:64
+msgid "learned how not to be seen"
+msgstr "تعلمت كيفية عدم الرؤية"
+
+#: script/engine.js:67
+msgid "gastronome"
+msgstr "ذواق"
+
+#: script/engine.js:68
+msgid "restore more health when eating"
+msgstr "استعادة صحة أكبر عند الأكل"
+
+#: script/engine.js:69
+msgid "learned to make the most of food"
+msgstr "تعلمت الاستفادة القصوى من الطعام"
+
+#: script/engine.js:147 script/engine.js:820
+msgid "sound on."
+msgstr "تشغيل الصوت."
+
+#: script/engine.js:153
+msgid "get the app."
+msgstr "احصل على التطبيق."
+
+#: script/engine.js:159 script/engine.js:547
+msgid "lights off."
+msgstr "إطفاء الأنوار."
+
+#: script/engine.js:165 script/engine.js:583
+msgid "hyper."
+msgstr "هايبر."
+
+#: script/engine.js:171 script/space.js:464
+msgid "restart."
+msgstr "إعادة التشغيل."
+
+#: script/engine.js:177
+msgid "share."
+msgstr "مشاركة."
+
+#: script/engine.js:183
+msgid "save."
+msgstr "حفظ."
+
+#: script/engine.js:192
+msgid "dropbox."
+msgstr "Dropbox."
+
+#: script/engine.js:199
+msgid "github."
+msgstr "github."
+
+#: script/engine.js:299
+msgid "Export / Import"
+msgstr "تصدير / استيراد"
+
+#: script/engine.js:303
+msgid "export or import save data, for backing up"
+msgstr "تصدير أو استيراد بيانات الحفظ، للنسخ الاحتياطي"
+
+#: script/engine.js:304
+msgid "or migrating computers"
+msgstr "أو نقل البيانات بين أجهزة الكمبيوتر"
+
+#: script/engine.js:308
+msgid "export"
+msgstr "تصدير"
+
+#: script/engine.js:312 script/engine.js:357
+msgid "import"
+msgstr "استيراد"
+
+#: script/engine.js:322
+msgid "save this."
+msgstr "احفظ هذا."
+
+#: script/engine.js:328
+msgid "got it"
+msgstr "فهمت"
+
+#: script/engine.js:336
+msgid "are you sure?"
+msgstr "هل أنت متأكد؟"
+
+#: script/engine.js:337
+msgid "if the code is invalid, all data will be lost."
+msgstr "إذا كان الرمز غير صالح، فسيتم فقدان جميع البيانات."
+
+#: script/engine.js:338
+msgid "this is irreversible."
+msgstr "هذا لا يمكن التراجع عنه."
+
+#: script/engine.js:342 script/engine.js:411 script/engine.js:561
+msgid "yes"
+msgstr "نعم"
+
+#: script/engine.js:347 script/engine.js:416 script/engine.js:566
+msgid "no"
+msgstr "لا"
+
+#: script/engine.js:353
+msgid "put the save code here."
+msgstr "ضع رمز الحفظ هنا."
+
+#: script/engine.js:405
+msgid "Restart?"
+msgstr "إعادة التشغيل؟"
+
+#: script/engine.js:408
+msgid "restart the game?"
+msgstr "إعادة تشغيل اللعبة؟"
+
+#: script/engine.js:439
+msgid "Get the App"
+msgstr "احصل على التطبيق"
+
+#: script/engine.js:442
+msgid "bring the room with you."
+msgstr "اجلب الغرفة معك."
+
+#: script/engine.js:445
+msgid "ios"
+msgstr "iOS"
+
+#: script/engine.js:452
+msgid "android"
+msgstr "android"
+
+#: script/engine.js:459 script/engine.js:504
+msgid "close"
+msgstr "إغلاق"
+
+#: script/engine.js:470
+msgid "Share"
+msgstr "مشاركة"
+
+#: script/engine.js:473
+msgid "bring your friends."
+msgstr "اجلب أصدقاءك."
+
+#: script/engine.js:476
+msgid "facebook"
+msgstr "facebook"
+
+#: script/engine.js:483
+msgid "google+"
+msgstr "google+"
+
+#: script/engine.js:490
+msgid "twitter"
+msgstr "twitter"
+
+#: script/engine.js:497
+msgid "reddit"
+msgstr "reddit"
+
+#: script/engine.js:538 script/engine.js:542
+msgid "lights on."
+msgstr "تشغيل الأنوار."
+
+#: script/engine.js:555
+msgid "Go Hyper?"
+msgstr "تفعيل وضع الهايبر؟"
+
+#: script/engine.js:558
+msgid "turning hyper mode speeds up the game to x2 speed. do you want to do that?"
+msgstr "تفعيل وضع الهايبر يسرع اللعبة إلى ضعف السرعة. هل تريد القيام بذلك؟"
+
+#: script/engine.js:581
+msgid "classic."
+msgstr "كلاسيكي."
+
+#: script/engine.js:679
+msgid "{0} per {1}s"
+msgstr "{0} لكل {1}ث"
+
+#: script/engine.js:824
+msgid "sound off."
+msgstr "إيقاف الصوت."
+
+#: script/engine.js:868
+msgid "Sound Available!"
+msgstr "الصوت متاح!"
+
+#: script/engine.js:872
+msgid "ears flooded with new sensations."
+msgstr "الأذنان تغمرهما أحاسيس جديدة."
+
+#: script/engine.js:873
+msgid "perhaps silence is safer?"
+msgstr "ربما الصمت أكثر أماناً؟"
+
+#: script/engine.js:877
+msgid "enable audio"
+msgstr "تفعيل الصوت"
+
+#: script/engine.js:882
+msgid "disable audio"
+msgstr "تعطيل الصوت"
+
+#: script/events.js:200
+msgid "pause."
+msgstr "إيقاف مؤقت."
+
+#: script/events.js:231
+msgid "eat meat"
+msgstr "أكل اللحم"
+
+#: script/events.js:251
+msgid "use meds"
+msgstr "استخدام الدواء"
+
+#: script/events.js:452
+msgid "miss"
+msgstr "أخطأ"
+
+#: script/events.js:480
+msgid "stunned"
+msgstr "مذهول"
+
+#: script/events.js:599 script/events/global.js:42 script/events/global.js:59
+#: script/events/room.js:144 script/events/room.js:164
+#: script/events/room.js:184 script/events/setpieces.js:25
+#: script/events/setpieces.js:49 script/events/setpieces.js:66
+#: script/events/setpieces.js:84 script/events/setpieces.js:108
+#: script/events/setpieces.js:539 script/events/setpieces.js:1258
+#: script/events/setpieces.js:2953 script/events/setpieces.js:2987
+#: script/events/setpieces.js:3010 script/events/setpieces.js:3047
+#: script/events/setpieces.js:3101 script/events/setpieces.js:3131
+#: script/events/setpieces.js:3179 script/events/setpieces.js:3306
+#: script/events/setpieces.js:3329 script/events/setpieces.js:3449
+#: script/events/setpieces.js:3474 script/events/setpieces.js:3507
+#: script/events/setpieces.js:3526 script/events/setpieces.js:3551
+#: script/events/setpieces.js:3579
+msgid "leave"
+msgstr "مغادرة"
+
+#: script/events.js:638
+msgid "drop:"
+msgstr "إسقاط:"
+
+#: script/events.js:663 script/events/room.js:590
+msgid "nothing"
+msgstr "لا شيء"
+
+#: script/events.js:694 script/events/setpieces.js:3563
+msgid "take"
+msgstr "أخذ"
+
+#: script/events.js:704
+msgid "take:"
+msgstr "أخذ:"
+
+#: script/events.js:728
+msgid "nothing to take"
+msgstr "لا شيء لأخذه"
+
+#: script/events.js:758
+msgid "all"
+msgstr "الكل"
+
+#: script/events.js:776
+msgid "take everything"
+msgstr "أخذ كل شيء"
+
+#: script/events.js:776
+msgid "take all you can"
+msgstr "أخذ كل ما تستطيع"
+
+#: script/events.js:782 script/outside.js:643
+msgid " and "
+msgstr " و "
+
+#: script/events.js:1035
+msgid "*** EVENT ***"
+msgstr "*** حدث ***"
+
+#: script/localization.js:4
+msgid "saved."
+msgstr "تم الحفظ."
+
+#: script/localization.js:5
+msgid "wood"
+msgstr "خشب"
+
+#: script/localization.js:6
+msgid "builder"
+msgstr "باني"
+
+#: script/localization.js:7
+msgid "teeth"
+msgstr "أسنان"
+
+#: script/localization.js:8
+msgid "meat"
+msgstr "لحم"
+
+#: script/localization.js:9
+msgid "fur"
+msgstr "فراء"
+
+#: script/localization.js:10
+msgid "alien alloy"
+msgstr "سبيكة فضائية"
+
+#: script/localization.js:11
+msgid "bullets"
+msgstr "رصاص"
+
+#: script/localization.js:12
+msgid "charm"
+msgstr "تعويذة"
+
+#: script/localization.js:13 script/path.js:137
+msgid "leather"
+msgstr "جلد"
+
+#: script/localization.js:14 script/path.js:135
+msgid "iron"
+msgstr "حديد"
+
+#: script/localization.js:15 script/path.js:133
+msgid "steel"
+msgstr "فولاذ"
+
+#: script/localization.js:16
+msgid "coal"
+msgstr "فحم"
+
+#: script/localization.js:17
+msgid "sulphur"
+msgstr "كبريت"
+
+#: script/localization.js:18
+msgid "energy cell"
+msgstr "خلية طاقة"
+
+#: script/localization.js:19 script/room.js:169
+msgid "torch"
+msgstr "مشعل"
+
+#: script/localization.js:20
+msgid "medicine"
+msgstr "دواء"
+
+#: script/localization.js:21 script/outside.js:22
+msgid "hunter"
+msgstr "صياد"
+
+#: script/localization.js:22 script/outside.js:30
+msgid "trapper"
+msgstr "صائد"
+
+#: script/localization.js:23 script/outside.js:38
+msgid "tanner"
+msgstr "دباغ"
+
+#: script/localization.js:24
+msgid "grenade"
+msgstr "قنبلة"
+
+#: script/localization.js:25
+msgid "bolas"
+msgstr "بولاس"
+
+#: script/localization.js:26
+msgid "bayonet"
+msgstr "حربة"
+
+#: script/localization.js:27 script/outside.js:46
+msgid "charcutier"
+msgstr "جزار"
+
+#: script/localization.js:28 script/outside.js:55
+msgid "iron miner"
+msgstr "عامل منجم حديد"
+
+#: script/localization.js:29
+msgid "iron mine"
+msgstr "منجم حديد"
+
+#: script/localization.js:30 script/outside.js:63
+msgid "coal miner"
+msgstr "عامل منجم فحم"
+
+#: script/localization.js:31
+msgid "coal mine"
+msgstr "منجم فحم"
+
+#: script/localization.js:32 script/outside.js:71
+msgid "sulphur miner"
+msgstr "عامل منجم كبريت"
+
+#: script/localization.js:33
+msgid "sulphur mine"
+msgstr "منجم كبريت"
+
+#: script/localization.js:34 script/outside.js:88
+msgid "armourer"
+msgstr "صانع أسلحة"
+
+#: script/localization.js:35 script/outside.js:79
+msgid "steelworker"
+msgstr "عامل فولاذ"
+
+#: script/localization.js:36
+msgid "bait"
+msgstr "طعم"
+
+#: script/localization.js:37 script/localization.js:44
+msgid "cured meat"
+msgstr "لحم مجفف"
+
+#: script/localization.js:38 script/localization.js:43
+msgid "scales"
+msgstr "حراشف"
+
+#: script/localization.js:39
+msgid "compass"
+msgstr "بوصلة"
+
+#: script/localization.js:40
+msgid "laser rifle"
+msgstr "بندقية ليزر"
+
+#: script/localization.js:41 script/outside.js:15
+msgid "gatherer"
+msgstr "جامع"
+
+#: script/localization.js:42
+msgid "cloth"
+msgstr "قماش"
+
+#: script/localization.js:45
+msgid "thieves"
+msgstr "لصوص"
+
+#: script/localization.js:46
+msgid "not enough fur"
+msgstr "لا يوجد فراء كافٍ"
+
+#: script/localization.js:47
+msgid "not enough wood"
+msgstr "لا يوجد خشب كافٍ"
+
+#: script/localization.js:48
+msgid "not enough coal"
+msgstr "لا يوجد فحم كافٍ"
+
+#: script/localization.js:49
+msgid "not enough iron"
+msgstr "لا يوجد حديد كافٍ"
+
+#: script/localization.js:50
+msgid "not enough steel"
+msgstr "لا يوجد فولاذ كافٍ"
+
+#: script/localization.js:51
+msgid "not enough sulphur"
+msgstr "لا يوجد كبريت كافٍ"
+
+#: script/localization.js:52
+msgid "baited trap"
+msgstr "فخ بطعم"
+
+#: script/localization.js:53
+msgid "not enough scales"
+msgstr "لا توجد حراشف كافية"
+
+#: script/localization.js:54
+msgid "not enough cloth"
+msgstr "لا يوجد قماش كافٍ"
+
+#: script/localization.js:55
+msgid "not enough teeth"
+msgstr "لا توجد أسنان كافية"
+
+#: script/localization.js:56
+msgid "not enough leather"
+msgstr "لا يوجد جلد كافٍ"
+
+#: script/localization.js:57
+msgid "not enough meat"
+msgstr "لا يوجد لحم كافٍ"
+
+#: script/localization.js:58
+msgid "the compass points east"
+msgstr "البوصلة تشير إلى الشرق"
+
+#: script/localization.js:59
+msgid "the compass points west"
+msgstr "البوصلة تشير إلى الغرب"
+
+#: script/localization.js:60
+msgid "the compass points north"
+msgstr "البوصلة تشير إلى الشمال"
+
+#: script/localization.js:61
+msgid "the compass points south"
+msgstr "البوصلة تشير إلى الجنوب"
+
+#: script/localization.js:62
+msgid "the compass points northeast"
+msgstr "البوصلة تشير إلى الشمال الشرقي"
+
+#: script/localization.js:63
+msgid "the compass points northwest"
+msgstr "البوصلة تشير إلى الشمال الغربي"
+
+#: script/localization.js:64
+msgid "the compass points southeast"
+msgstr "البوصلة تشير إلى الجنوب الشرقي"
+
+#: script/localization.js:65
+msgid "the compass points southwest"
+msgstr "البوصلة تشير إلى الجنوب الغربي"
+
+#: script/outside.js:5
+msgid "Outside"
+msgstr "الخارج"
+
+#: script/outside.js:101
+msgid "scraps of fur"
+msgstr "بقايا فراء"
+
+#: script/outside.js:106
+msgid "bits of meat"
+msgstr "قطع لحم"
+
+#: script/outside.js:111
+msgid "strange scales"
+msgstr "حراشف غريبة"
+
+#: script/outside.js:116
+msgid "scattered teeth"
+msgstr "أسنان متناثرة"
+
+#: script/outside.js:121
+msgid "tattered cloth"
+msgstr "قماش ممزق"
+
+#: script/outside.js:126
+msgid "a crudely made charm"
+msgstr "تعويذة مصنوعة بشكل بدائي"
+
+#: script/outside.js:142 script/outside.js:561
+msgid "A Silent Forest"
+msgstr "غابة صامتة"
+
+#: script/outside.js:168
+msgid "gather wood"
+msgstr "جمع الخشب"
+
+#: script/outside.js:187
+msgid "a stranger arrives in the night"
+msgstr "يصل غريب في الليل"
+
+#: script/outside.js:189
+msgid "a weathered family takes up in one of the huts."
+msgstr "تستقر عائلة منهكة في إحدى الأكواخ."
+
+#: script/outside.js:191
+msgid "a small group arrives, all dust and bones."
+msgstr "تصل مجموعة صغيرة، كلها غبار وعظام."
+
+#: script/outside.js:193
+msgid "a convoy lurches in, equal parts worry and hope."
+msgstr "يتدافع قافلة، أجزاء متساوية من القلق والأمل."
+
+#: script/outside.js:195
+msgid "the town's booming. word does get around."
+msgstr "المدينة في ازدهار. الكلمة تنتشر."
+
+# short for population.
+#: script/outside.js:451
+msgid "pop "
+msgstr "سكان "
+
+#: script/outside.js:456
+msgid "forest"
+msgstr "غابة"
+
+#: script/outside.js:459
+msgid "village"
+msgstr "قرية"
+
+#: script/outside.js:542
+msgid "check traps"
+msgstr "فحص الفخاخ"
+
+#: script/outside.js:563
+msgid "A Lonely Hut"
+msgstr "كوخ وحيد"
+
+#: script/outside.js:565
+msgid "A Tiny Village"
+msgstr "قرية صغيرة"
+
+#: script/outside.js:567
+msgid "A Modest Village"
+msgstr "قرية متواضعة"
+
+#: script/outside.js:569
+msgid "A Large Village"
+msgstr "قرية كبيرة"
+
+#: script/outside.js:571
+msgid "A Raucous Village"
+msgstr "قرية صاخبة"
+
+#: script/outside.js:583
+msgid "the sky is grey and the wind blows relentlessly"
+msgstr "السماء رمادية والرياح تهب بلا هوادة"
+
+#: script/outside.js:609
+msgid "dry brush and dead branches litter the forest floor"
+msgstr "الأغصان الجافة والفروع الميتة تتناثر على أرض الغابة"
+
+#: script/outside.js:637
+msgid "the traps contain "
+msgstr "الفخاخ تحتوي على "
+
+#: script/path.js:28 script/path.js:313
+msgid "A Dusty Path"
+msgstr "طريق مغبر"
+
+#: script/path.js:36
+msgid "supplies:"
+msgstr "المؤن:"
+
+#: script/path.js:42
+msgid "embark"
+msgstr "انطلاق"
+
+#: script/path.js:59 script/room.js:1218
+msgid "the compass points "
+msgstr "البوصلة تشير إلى "
+
+#: script/path.js:101
+msgid "perks:"
+msgstr "المزايا:"
+
+#: script/path.js:131
+msgid "none"
+msgstr "لا شيء"
+
+#: script/path.js:141
+msgid "armour"
+msgstr "درع"
+
+#: script/path.js:152
+msgid "water"
+msgstr "ماء"
+
+#: script/path.js:163 script/path.js:171
+msgid "restores"
+msgstr "يستعيد"
+
+#: script/path.js:163 script/path.js:171
+msgid "hp"
+msgstr "نقاط حياة"
+
+#: script/path.js:164
+msgid "use with rifle"
+msgstr "استخدام مع البندقية"
+
+#: script/path.js:168
+msgid "emits a soft red glow"
+msgstr "يبعث توهجاً أحمر ناعماً"
+
+#: script/path.js:235 script/world.js:292
+msgid "free {0}/{1}"
+msgstr "متاح {0}/{1}"
+
+#: script/path.js:262
+msgid "damage"
+msgstr "ضرر"
+
+#: script/path.js:268
+msgid "weight"
+msgstr "وزن"
+
+#: script/path.js:270
+msgid "available"
+msgstr "متاح"
+
+#: script/room.js:14
+msgid "trap"
+msgstr "فخ"
+
+#: script/room.js:17
+msgid ""
+"builder says she can make traps to catch any creatures might still be "
+"alive out there"
+msgstr ""
+"تقول البانية إنها تستطيع صنع فخاخ لاصطياد أي مخلوقات قد لا تزال حية هناك"
+
+#: script/room.js:18
+msgid "more traps to catch more creatures"
+msgstr "المزيد من الفخاخ لاصطياد المزيد من المخلوقات"
+
+#: script/room.js:19
+msgid "more traps won't help now"
+msgstr "المزيد من الفخاخ لن تساعد الآن"
+
+#: script/room.js:30
+msgid "cart"
+msgstr "عربة"
+
+#: script/room.js:33
+msgid "builder says she can make a cart for carrying wood"
+msgstr "تقول البانية إنها تستطيع صنع عربة لنقل الخشب"
+
+#: script/room.js:34
+msgid "the rickety cart will carry more wood from the forest"
+msgstr "العربة المهتزة ستحمل المزيد من الخشب من الغابة"
+
+#: script/room.js:44
+msgid "hut"
+msgstr "كوخ"
+
+#: script/room.js:47
+msgid "builder says there are more wanderers. says they'll work, too."
+msgstr "تقول البانية إن هناك المزيد من المتجولين. تقول إنهم سيعملون أيضاً."
+
+#: script/room.js:48
+msgid "builder puts up a hut, out in the forest. says word will get around."
+msgstr "تبني البانية كوخاً في الغابة. تقول إن الكلمة ستنتشر."
+
+#: script/room.js:49
+msgid "no more room for huts."
+msgstr "لا يوجد مكان للمزيد من الأكواخ."
+
+#: script/room.js:60
+msgid "lodge"
+msgstr "نزل صيد"
+
+#: script/room.js:63
+msgid "villagers could help hunt, given the means"
+msgstr "يمكن لأهل القرية المساعدة في الصيد، إذا توفرت الوسائل"
+
+#: script/room.js:64
+msgid "the hunting lodge stands in the forest, a ways out of town"
+msgstr "نزل الصيد يقف في الغابة، بعيداً عن البلدة"
+
+#: script/room.js:76
+msgid "trading post"
+msgstr "محطة تجارية"
+
+#: script/room.js:79
+msgid "a trading post would make commerce easier"
+msgstr "محطة تجارية ستجعل التجارة أسهل"
+
+#: script/room.js:80
+msgid ""
+"now the nomads have a place to set up shop, they might stick around a "
+"while"
+msgstr "الآن بعد أن أصبح لدى البدو مكان لإقامة متجر، قد يبقون لفترة"
+
+#: script/room.js:91
+msgid "tannery"
+msgstr "دباغة"
+
+#: script/room.js:94
+msgid "builder says leather could be useful. says the villagers could make it."
+msgstr ""
+"تقول البانية إن الجلد قد يكون مفيداً. تقول إن أهل القرية يستطيعون صنعه."
+
+#: script/room.js:95
+msgid "tannery goes up quick, on the edge of the village"
+msgstr "الدباغة تُبنى بسرعة، على حافة القرية"
+
+#: script/room.js:106
+msgid "smokehouse"
+msgstr "مدخنة"
+
+#: script/room.js:109
+msgid ""
+"should cure the meat, or it'll spoil. builder says she can fix something "
+"up."
+msgstr ""
+"يجب معالجة اللحم، وإلا سيفسد. تقول البانية إنها تستطيع إصلاح شيء ما."
+
+#: script/room.js:110
+msgid "builder finishes the smokehouse. she looks hungry."
+msgstr "تنهي البانية بناء المدخنة. تبدو جائعة."
+
+#: script/room.js:121
+msgid "workshop"
+msgstr "ورشة"
+
+#: script/room.js:124
+msgid "builder says she could make finer things, if she had the tools"
+msgstr ""
+"تقول البانية إنها تستطيع صنع أشياء أفضل، إذا توفرت لديها الأدوات"
+
+#: script/room.js:125
+msgid "workshop's finally ready. builder's excited to get to it"
+msgstr "الورشة جاهزة أخيراً. البانية متحمسة للبدء"
+
+#: script/room.js:137
+msgid "steelworks"
+msgstr "مصنع فولاذ"
+
+#: script/room.js:140
+msgid "builder says the villagers could make steel, given the tools"
+msgstr ""
+"تقول البانية إن أهل القرية يستطيعون صنع الفولاذ، إذا توفرت الأدوات"
+
+#: script/room.js:141
+msgid "a haze falls over the village as the steelworks fires up"
+msgstr "ضباب يغطي القرية بينما يشتعل مصنع الفولاذ"
+
+#: script/room.js:153
+msgid "armoury"
+msgstr "ترسانة"
+
+#: script/room.js:156
+msgid "builder says it'd be useful to have a steady source of bullets"
+msgstr "تقول البانية إنه سيكون مفيداً أن يكون لدينا مصدر ثابت للرصاص"
+
+#: script/room.js:157
+msgid "armoury's done, welcoming back the weapons of the past."
+msgstr "الترسانة جاهزة، ترحب بعودة أسلحة الماضي."
+
+#: script/room.js:172
+msgid "a torch to keep the dark away"
+msgstr "مشعل لإبعاد الظلام"
+
+#: script/room.js:182
+msgid "waterskin"
+msgstr "قربة ماء"
+
+#: script/room.js:186
+msgid "this waterskin'll hold a bit of water, at least"
+msgstr "هذه القربة ستحمل قليلاً من الماء، على الأقل"
+
+#: script/room.js:195
+msgid "cask"
+msgstr "برميل"
+
+#: script/room.js:199
+msgid "the cask holds enough water for longer expeditions"
+msgstr "البرميل يحمل ماء كافياً للرحلات الطويلة"
+
+#: script/room.js:209
+msgid "water tank"
+msgstr "خزان ماء"
+
+#: script/room.js:213
+msgid "never go thirsty again"
+msgstr "لن تعطش مرة أخرى"
+
+#: script/room.js:223
+msgid "bone spear"
+msgstr "رمح عظمي"
+
+#: script/room.js:226
+msgid "this spear's not elegant, but it's pretty good at stabbing"
+msgstr "هذا الرمح ليس أنيقاً، لكنه جيد جداً في الطعن"
+
+#: script/room.js:236 script/world.js:287
+msgid "rucksack"
+msgstr "حقيبة ظهر"
+
+#: script/room.js:240
+msgid "carrying more means longer expeditions to the wilds"
+msgstr "حمل المزيد يعني رحلات أطول إلى البرية"
+
+#: script/room.js:249
+msgid "wagon"
+msgstr "عربة"
+
+#: script/room.js:253
+msgid "the wagon can carry a lot of supplies"
+msgstr "العربة تستطيع حمل الكثير من المؤن"
+
+#: script/room.js:263
+msgid "convoy"
+msgstr "قافلة"
+
+#: script/room.js:267
+msgid "the convoy can haul mostly everything"
+msgstr "القافلة تستطيع نقل كل شيء تقريباً"
+
+#: script/room.js:278
+msgid "l armour"
+msgstr "درع ج"
+
+#: script/room.js:281
+msgid "leather's not strong. better than rags, though."
+msgstr "الجلد ليس قوياً. لكنه أفضل من الخرق."
+
+#: script/room.js:291
+msgid "i armour"
+msgstr "درع ح"
+
+#: script/room.js:294
+msgid "iron's stronger than leather"
+msgstr "الحديد أقوى من الجلد"
+
+#: script/room.js:304
+msgid "s armour"
+msgstr "درع ف"
+
+#: script/room.js:307
+msgid "steel's stronger than iron"
+msgstr "الفولاذ أقوى من الحديد"
+
+#: script/room.js:317
+msgid "iron sword"
+msgstr "سيف حديد"
+
+#: script/room.js:320
+msgid "sword is sharp. good protection out in the wilds."
+msgstr "السيف حاد. حماية جيدة في البرية."
+
+#: script/room.js:331
+msgid "steel sword"
+msgstr "سيف فولاذ"
+
+#: script/room.js:334
+msgid "the steel is strong, and the blade true."
+msgstr "الفولاذ قوي، والنصل حاد."
+
+#: script/room.js:345
+msgid "rifle"
+msgstr "بندقية"
+
+#: script/room.js:347
+msgid "black powder and bullets, like the old days."
+msgstr "بارود أسود ورصاص، كما في الأيام الخوالي."
+
+#: script/room.js:493
+msgid "Room"
+msgstr "غرفة"
+
+#: script/room.js:520 script/room.js:641
+msgid "A Dark Room"
+msgstr "غرفة مظلمة"
+
+#: script/room.js:533
+msgid "light fire"
+msgstr "إشعال النار"
+
+#: script/room.js:543
+msgid "stoke fire"
+msgstr "إضافة الحطب للنار"
+
+#: script/room.js:580 script/room.js:590 script/room.js:747 script/room.js:751
+msgid "the room is {0}"
+msgstr "الغرفة {0}"
+
+# wont work well with 'is'
+#: script/room.js:581 script/room.js:589 script/room.js:711
+msgid "the fire is {0}"
+msgstr "النار {0}"
+
+#: script/room.js:600
+msgid ""
+"the stranger is standing by the fire. she says she can help. says she "
+"builds things."
+msgstr "الغريبة تقف بجانب النار. تقول إنها تستطيع المساعدة. تقول إنها تبني الأشياء."
+
+#: script/room.js:617
+msgid "freezing"
+msgstr "متجمد"
+
+#: script/room.js:618
+msgid "cold"
+msgstr "بارد"
+
+#: script/room.js:619
+msgid "mild"
+msgstr "معتدل"
+
+#: script/room.js:620
+msgid "warm"
+msgstr "دافئ"
+
+#: script/room.js:621
+msgid "hot"
+msgstr "حار"
+
+#: script/room.js:633
+msgid "dead"
+msgstr "ميت"
+
+#: script/room.js:634
+msgid "smoldering"
+msgstr "متدخن"
+
+#: script/room.js:635
+msgid "flickering"
+msgstr "وميض"
+
+#: script/room.js:636
+msgid "burning"
+msgstr "محترق"
+
+#: script/room.js:637
+msgid "roaring"
+msgstr "مزمجر"
+
+#: script/room.js:641
+msgid "A Firelit Room"
+msgstr "غرفة مضاءة بالنار"
+
+#: script/room.js:679
+msgid "not enough wood to get the fire going"
+msgstr "لا يوجد خشب كافٍ لإشعال النار"
+
+#: script/room.js:693
+msgid "the wood has run out"
+msgstr "نفد الخشب"
+
+#: script/room.js:714
+msgid "the light from the fire spills from the windows, out into the dark"
+msgstr "ضوء النار يتدفق من النوافذ، إلى الخارج في الظلام"
+
+#: script/room.js:732
+msgid "builder stokes the fire"
+msgstr "البانية تضيف الحطب للنار"
+
+#: script/room.js:762
+msgid "the wind howls outside"
+msgstr "الرياح تعوي في الخارج"
+
+#: script/room.js:763
+msgid "the wood is running out"
+msgstr "الخشب ينفد"
+
+#: script/room.js:770
+msgid "a ragged stranger stumbles through the door and collapses in the corner"
+msgstr "غريبة ممزقة تتمايل عبر الباب وتنهار في الزاوية"
+
+#: script/room.js:778
+msgid "the stranger shivers, and mumbles quietly. her words are unintelligible."
+msgstr "الغريبة ترتعد، وتتمتم بهدوء. كلماتها غير مفهومة."
+
+#: script/room.js:781
+msgid "the stranger in the corner stops shivering. her breathing calms."
+msgstr "الغريبة في الزاوية تتوقف عن الارتعاش. تنفسها يهدأ."
+
+#: script/room.js:804
+msgid "stores"
+msgstr "مخازن"
+
+#: script/room.js:823
+msgid "weapons"
+msgstr "أسلحة"
+
+#: script/room.js:962
+msgid "total"
+msgstr "المجموع"
+
+#: script/room.js:983 script/room.js:1030
+msgid "not enough "
+msgstr "لا يوجد كافٍ من "
+
+#: script/room.js:1002
+msgid "builder just shivers"
+msgstr "البانية ترتعد فقط"
+
+#: script/room.js:1117
+msgid "build:"
+msgstr "بناء:"
+
+#: script/room.js:1124
+msgid "craft:"
+msgstr "صنع:"
+
+#: script/room.js:1131
+msgid "buy:"
+msgstr "شراء:"
+
+#: script/ship.js:10
+msgid "Ship"
+msgstr "سفينة"
+
+#: script/ship.js:26 script/ship.js:100
+msgid "An Old Starship"
+msgstr "سفينة فضائية قديمة"
+
+#: script/ship.js:37
+msgid "hull:"
+msgstr "الهيكل:"
+
+#: script/ship.js:43
+msgid "engine:"
+msgstr "المحرك:"
+
+#: script/ship.js:50
+msgid "reinforce hull"
+msgstr "تعزيز الهيكل"
+
+#: script/ship.js:59
+msgid "upgrade engine"
+msgstr "ترقية المحرك"
+
+#: script/ship.js:68 script/ship.js:144
+msgid "lift off"
+msgstr "إقلاع"
+
+# investigate usage
+#: script/ship.js:90
+msgid ""
+"somewhere above the debris cloud, the wanderer fleet hovers. been on this"
+" rock too long."
+msgstr ""
+"في مكان ما فوق سحابة الحطام، أسطول المتجولين يحوم. لقد كنت على هذه الصخرة طويلاً جداً."
+
+#: script/ship.js:106 script/ship.js:120
+msgid "not enough alien alloy"
+msgstr "لا يوجد سبيكة فضائية كافية"
+
+#: script/ship.js:136
+msgid "Ready to Leave?"
+msgstr "جاهز للمغادرة؟"
+
+#: script/ship.js:140
+msgid "time to get out of this place. won't be coming back."
+msgstr "حان الوقت للخروج من هذا المكان. لن أعود."
+
+# Investigate usage
+#: script/ship.js:152
+msgid "linger"
+msgstr "البقاء"
+
+#: script/space.js:41
+msgid "hull: "
+msgstr "الهيكل: "
+
+#: script/space.js:78
+msgid "Troposphere"
+msgstr "التروبوسفير"
+
+#: script/space.js:80
+msgid "Stratosphere"
+msgstr "الستراتوسفير"
+
+#: script/space.js:82
+msgid "Mesosphere"
+msgstr "الميزوسفير"
+
+#: script/space.js:84
+msgid "Thermosphere"
+msgstr "الثيرموسفير"
+
+#: script/space.js:86
+msgid "Exosphere"
+msgstr "الإكسوسفير"
+
+#: script/space.js:88
+msgid "Space"
+msgstr "الفضاء"
+
+#: script/space.js:446
+msgid "score for this game: {0}"
+msgstr "النقاط لهذه اللعبة: {0}"
+
+#: script/space.js:453
+msgid "total score: {0}"
+msgstr "النقاط الإجمالية: {0}"
+
+#: script/space.js:474
+msgid ""
+"expanded story. alternate ending. behind the scenes commentary. get the "
+"app."
+msgstr ""
+"قصة موسعة. نهاية بديلة. تعليقات من وراء الكواليس. احصل على التطبيق."
+
+#: script/space.js:483
+msgid "iOS."
+msgstr "iOS."
+
+#: script/space.js:491
+msgid "android."
+msgstr "android."
+
+#: script/world.js:45
+msgid "punch"
+msgstr "لكمة"
+
+#: script/world.js:51
+msgid "stab"
+msgstr "طعنة"
+
+#: script/world.js:57
+msgid "swing"
+msgstr "أرجحة"
+
+#: script/world.js:63
+msgid "slash"
+msgstr "ضربة"
+
+#: script/world.js:69
+msgid "thrust"
+msgstr "دفعة"
+
+#: script/world.js:75
+msgid "shoot"
+msgstr "إطلاق"
+
+#: script/world.js:82
+msgid "blast"
+msgstr "انفجار"
+
+#: script/world.js:89
+msgid "lob"
+msgstr "رمي"
+
+#: script/world.js:96
+msgid "tangle"
+msgstr "تشابك"
+
+#: script/world.js:118
+msgid "An&nbsp;Outpost"
+msgstr "مخفر&nbsp;بعيد"
+
+#: script/world.js:119
+msgid "Iron&nbsp;Mine"
+msgstr "منجم&nbsp;حديد"
+
+#: script/world.js:120
+msgid "Coal&nbsp;Mine"
+msgstr "منجم&nbsp;فحم"
+
+#: script/world.js:121
+msgid "Sulphur&nbsp;Mine"
+msgstr "منجم&nbsp;كبريت"
+
+#: script/world.js:122
+msgid "An&nbsp;Old&nbsp;House"
+msgstr "منزل&nbsp;قديم"
+
+#: script/world.js:123
+msgid "A&nbsp;Damp&nbsp;Cave"
+msgstr "كهف&nbsp;رطب"
+
+#: script/world.js:124
+msgid "An&nbsp;Abandoned&nbsp;Town"
+msgstr "بلدة&nbsp;مهجورة"
+
+#: script/world.js:125
+msgid "A&nbsp;Ruined&nbsp;City"
+msgstr "مدينة&nbsp;مدمرة"
+
+#: script/world.js:126
+msgid "A&nbsp;Crashed&nbsp;Starship"
+msgstr "سفينة&nbsp;فضائية&nbsp;محطمة"
+
+#: script/world.js:127
+msgid "A&nbsp;Borehole"
+msgstr "بئر&nbsp;حفر"
+
+#: script/world.js:128
+msgid "A&nbsp;Battlefield"
+msgstr "ساحة&nbsp;معركة"
+
+#: script/world.js:129
+msgid "A&nbsp;Murky&nbsp;Swamp"
+msgstr "مستنقع&nbsp;كدر"
+
+#: script/world.js:133
+msgid "A&nbsp;Destroyed&nbsp;Village"
+msgstr "قرية&nbsp;مدمرة"
+
+#: script/world.js:258
+msgid "water:{0}"
+msgstr "ماء:{0}"
+
+#: script/world.js:285
+msgid "pockets"
+msgstr "جيوب"
+
+#: script/world.js:309
+msgid "hp: {0}/{1}"
+msgstr "نقاط حياة: {0}/{1}"
+
+#: script/world.js:316
+msgid "{0}:{1}"
+msgstr "{0}:{1}"
+
+#: script/world.js:356
+msgid "dangerous to be this far from the village without proper protection"
+msgstr "من الخطر أن تكون بعيداً جداً عن القرية بدون حماية مناسبة"
+
+#: script/world.js:358
+msgid "safer here"
+msgstr "أكثر أماناً هنا"
+
+#: script/world.js:458
+msgid "the meat has run out"
+msgstr "نفد اللحم"
+
+#: script/world.js:463
+msgid "starvation sets in"
+msgstr "يبدأ الجوع"
+
+#: script/world.js:488
+msgid "there is no more water"
+msgstr "لا يوجد ماء أكثر"
+
+#: script/world.js:492
+msgid "the thirst becomes unbearable"
+msgstr "العطش يصبح لا يطاق"
+
+#: script/world.js:570
+msgid "the trees yield to dry grass. the yellowed brush rustles in the wind."
+msgstr "الأشجار تترك مكانها للعشب الجاف. الشجيرات الصفراء تحف في الريح."
+
+#: script/world.js:573
+msgid "the trees are gone. parched earth and blowing dust are poor replacements."
+msgstr "الأشجار اختفت. الأرض الجافة والغبار المتطاير بدائل سيئة."
+
+#: script/world.js:580
+msgid ""
+"trees loom on the horizon. grasses gradually yield to a forest floor of "
+"dry branches and fallen leaves."
+msgstr ""
+"الأشجار تلوح في الأفق. الأعشاب تتخلى تدريجياً عن أرضية الغابة من الأغصان الجافة والأوراق المتساقطة."
+
+#: script/world.js:583
+msgid "the grasses thin. soon, only dust remains."
+msgstr "الأعشاب تتناقص. قريباً، لن يبقى سوى الغبار."
+
+#: script/world.js:590
+msgid "the barrens break at a sea of dying grass, swaying in the arid breeze."
+msgstr "الأراضي القاحلة تنكسر عند بحر من العشب المحتضر، يتمايل في النسيم الجاف."
+
+#: script/world.js:593
+msgid ""
+"a wall of gnarled trees rises from the dust. their branches twist into a "
+"skeletal canopy overhead."
+msgstr ""
+"جدار من الأشجار المعوجة يرتفع من الغبار. فروعها تتشابك في مظلة هيكلية فوق الرأس."
+
+#: script/world.js:853
+msgid "Wanderer"
+msgstr "متجول"
+
+#: script/world.js:858
+msgid "The&nbsp;Village"
+msgstr "القرية"
+
+#: script/world.js:887
+msgid "the world fades"
+msgstr "العالم يتلاشى"
+
+#: script/events/setpieces.js:2966 script/world.js:992
+msgid "water replenished"
+msgstr "تم تجديد الماء"
+
+#: script/world.js:1023
+msgid "A Barren World"
+msgstr "عالم قاحل"
+
+#: script/events/encounters.js:7
+msgid "A Snarling Beast"
+msgstr "وحش هادر"
+
+#: script/events/encounters.js:15
+msgid "snarling beast"
+msgstr "وحش هادر"
+
+#: script/events/encounters.js:16
+msgid "the snarling beast is dead"
+msgstr "الوحش الهادر ميت"
+
+#: script/events/encounters.js:39
+msgid "a snarling beast leaps out of the underbrush"
+msgstr "وحش هادر يقفز من الأدغال"
+
+#: script/events/encounters.js:44
+msgid "A Gaunt Man"
+msgstr "رجل نحيل"
+
+#: script/events/encounters.js:52
+msgid "gaunt man"
+msgstr "رجل نحيل"
+
+#: script/events/encounters.js:53
+msgid "the gaunt man is dead"
+msgstr "الرجل النحيل ميت"
+
+#: script/events/encounters.js:76
+msgid "a gaunt man approaches, a crazed look in his eye"
+msgstr "رجل نحيل يقترب، نظرة مجنونة في عينيه"
+
+#: script/events/encounters.js:81
+msgid "A Strange Bird"
+msgstr "طائر غريب"
+
+#: script/events/encounters.js:89
+msgid "strange bird"
+msgstr "طائر غريب"
+
+#: script/events/encounters.js:90
+msgid "the strange bird is dead"
+msgstr "الطائر الغريب ميت"
+
+#: script/events/encounters.js:113
+msgid "a strange looking bird speeds across the plains"
+msgstr "طائر ذو مظهر غريب يسرع عبر السهول"
+
+#: script/events/encounters.js:119
+msgid "A Shivering Man"
+msgstr "رجل يرتعد"
+
+#: script/events/encounters.js:127
+msgid "shivering man"
+msgstr "رجل يرتعد"
+
+#: script/events/encounters.js:128
+msgid "the shivering man is dead"
+msgstr "الرجل المرتعد ميت"
+
+#: script/events/encounters.js:156
+msgid "a shivering man approaches and attacks with surprising strength"
+msgstr "رجل يرتعد يقترب ويهاجم بقوة مفاجئة"
+
+#: script/events/encounters.js:161
+msgid "A Man-Eater"
+msgstr "آكل لحوم البشر"
+
+#: script/events/encounters.js:169
+msgid "man-eater"
+msgstr "آكل لحوم البشر"
+
+#: script/events/encounters.js:170
+msgid "the man-eater is dead"
+msgstr "آكل لحوم البشر ميت"
+
+#: script/events/encounters.js:193
+msgid "a large creature attacks, claws freshly bloodied"
+msgstr "مخلوق كبير يهاجم، مخالبه ملطخة بالدماء حديثاً"
+
+#: script/events/encounters.js:198
+msgid "A Scavenger"
+msgstr "نابش"
+
+#: script/events/encounters.js:206
+msgid "scavenger"
+msgstr "نابش"
+
+#: script/events/encounters.js:207
+msgid "the scavenger is dead"
+msgstr "النابش ميت"
+
+#: script/events/encounters.js:235
+msgid "a scavenger draws close, hoping for an easy score"
+msgstr "نابش يقترب، آملاً في فريسة سهلة"
+
+#: script/events/encounters.js:240
+msgid "A Huge Lizard"
+msgstr "سحلية ضخمة"
+
+#: script/events/encounters.js:248
+msgid "lizard"
+msgstr "سحلية"
+
+#: script/events/encounters.js:249
+msgid "the lizard is dead"
+msgstr "السحلية ميتة"
+
+#: script/events/encounters.js:272
+msgid "the grass thrashes wildly as a huge lizard pushes through"
+msgstr "العشب يتلوى بعنف بينما سحلية ضخمة تدفع عبره"
+
+#: script/events/encounters.js:278
+msgid "A Feral Terror"
+msgstr "رعب متوحش"
+
+#: script/events/encounters.js:286
+msgid "feral terror"
+msgstr "رعب متوحش"
+
+#: script/events/encounters.js:287
+msgid "the feral terror is dead"
+msgstr "الرعب المتوحش ميت"
+
+#: script/events/encounters.js:310
+msgid "a beast, wilder than imagining, erupts out of the foliage"
+msgstr "وحش، أشرس من التخيل، ينفجر من أوراق الشجر"
+
+#: script/events/encounters.js:315
+msgid "A Soldier"
+msgstr "جندي"
+
+#: script/events/encounters.js:323
+msgid "soldier"
+msgstr "جندي"
+
+#: script/events/encounters.js:324
+msgid "the soldier is dead"
+msgstr "الجندي ميت"
+
+#: script/events/encounters.js:353
+msgid "a soldier opens fire from across the desert"
+msgstr "جندي يفتح النار من عبر الصحراء"
+
+#: script/events/encounters.js:358
+msgid "A Sniper"
+msgstr "قناص"
+
+#: script/events/encounters.js:366
+msgid "sniper"
+msgstr "قناص"
+
+#: script/events/encounters.js:367
+msgid "the sniper is dead"
+msgstr "القناص ميت"
+
+#: script/events/encounters.js:396
+msgid "a shot rings out, from somewhere in the long grass"
+msgstr "طلقة تدوي، من مكان ما في العشب الطويل"
+
+#: script/events/global.js:6
+msgid "The Thief"
+msgstr "اللص"
+
+#: script/events/global.js:13
+msgid "the villagers haul a filthy man out of the store room."
+msgstr "أهل القرية يجرون رجلاً قذراً من المخزن."
+
+#: script/events/global.js:14
+msgid "say his folk have been skimming the supplies."
+msgstr "يقولون إنه وأقاربه كانوا يسرقون المؤن."
+
+#: script/events/global.js:15
+msgid "say he should be strung up as an example."
+msgstr "يقولون إنه يجب تعليقه كمثال."
+
+#: script/events/global.js:17
+msgid "a thief is caught"
+msgstr "تم القبض على لص"
+
+#: script/events/global.js:21
+msgid "hang him"
+msgstr "شنقه"
+
+#: script/events/global.js:25
+msgid "spare him"
+msgstr "عفا عنه"
+
+#: script/events/global.js:32
+msgid "the villagers hang the thief high in front of the store room."
+msgstr "أهل القرية يشنقون اللص عالياً أمام المخزن."
+
+#: script/events/global.js:33
+msgid ""
+"the point is made. in the next few days, the missing supplies are "
+"returned."
+msgstr "تم توضيح النقطة. في الأيام القليلة القادمة، يتم إرجاع المؤن المفقودة."
+
+#: script/events/global.js:49
+msgid "the man says he's grateful. says he won't come around any more."
+msgstr "الرجل يقول إنه ممتن. يقول إنه لن يعود بعد الآن."
+
+#: script/events/global.js:50
+msgid "shares what he knows about sneaking before he goes."
+msgstr "يشارك ما يعرفه عن التسلل قبل أن يذهب."
+
+#: script/events/marketing.js:9
+msgid "Penrose"
+msgstr "Penrose"
+
+#: script/events/marketing.js:14
+msgid ""
+"a strange thrumming, pounding and crashing. visions of people and places,"
+" of a huge machine and twisting curves."
+msgstr ""
+"طنين غريب، وضربات وتحطم. رؤى لأشخاص وأماكن، لآلة ضخمة ومنحنيات ملتوية."
+
+#: script/events/marketing.js:15
+msgid "inviting. it would be so easy to give in, completely."
+msgstr "جذاب. سيكون من السهل جداً الاستسلام، تماماً."
+
+#: script/events/marketing.js:17
+msgid "a strange thrumming, pounding and crashing. and then gone."
+msgstr "طنين غريب، وضربات وتحطم. ثم اختفى."
+
+#: script/events/marketing.js:21
+msgid "give in"
+msgstr "الاستسلام"
+
+#: script/events/marketing.js:28 script/events/outside.js:116
+msgid "ignore it"
+msgstr "تجاهله"
+
+#: script/events/outside.js:6
+msgid "A Ruined Trap"
+msgstr "فخ مدمر"
+
+#: script/events/outside.js:13
+msgid "some of the traps have been torn apart."
+msgstr "بعض الفخاخ تم تمزيقها."
+
+#: script/events/outside.js:14
+msgid "large prints lead away, into the forest."
+msgstr "آثار كبيرة تقود بعيداً، إلى الغابة."
+
+#: script/events/outside.js:22
+msgid "some traps have been destroyed"
+msgstr "بعض الفخاخ تم تدميرها"
+
+#: script/events/outside.js:26
+msgid "track them"
+msgstr "تتبعهم"
+
+#: script/events/outside.js:30 script/events/room.js:72
+#: script/events/room.js:124
+msgid "ignore them"
+msgstr "تجاهلهم"
+
+#: script/events/outside.js:37
+msgid "the tracks disappear after just a few minutes."
+msgstr "الآثار تختفي بعد بضع دقائق فقط."
+
+#: script/events/outside.js:38
+msgid "the forest is silent."
+msgstr "الغابة صامتة."
+
+#: script/events/outside.js:40
+msgid "nothing was found"
+msgstr "لم يتم العثور على شيء"
+
+#: script/events/outside.js:43 script/events/outside.js:61
+#: script/events/outside.js:128 script/events/outside.js:146
+#: script/events/outside.js:200 script/events/outside.js:218
+#: script/events/outside.js:252 script/events/outside.js:287
+#: script/events/room.js:295 script/events/room.js:313
+msgid "go home"
+msgstr "العودة للبيت"
+
+#: script/events/outside.js:50
+msgid "not far from the village lies a large beast, its fur matted with blood."
+msgstr "ليس بعيداً عن القرية يرقد وحش كبير، فراؤه ملطخ بالدماء."
+
+#: script/events/outside.js:51
+msgid "it puts up little resistance before the knife."
+msgstr "يقاوم قليلاً أمام السكين."
+
+#: script/events/outside.js:53
+msgid "there was a beast. it's dead now"
+msgstr "كان هناك وحش. إنه ميت الآن"
+
+#: script/events/outside.js:70
+msgid "Fire"
+msgstr "نار"
+
+#: script/events/outside.js:77
+msgid "a fire rampages through one of the huts, destroying it."
+msgstr "نار تجتاح أحد الأكواخ، تدمره."
+
+#: script/events/outside.js:78
+msgid "all residents in the hut perished in the fire."
+msgstr "جميع سكان الكوخ هلكوا في النار."
+
+#: script/events/outside.js:80
+msgid "a fire has started"
+msgstr "اندلع حريق"
+
+#: script/events/outside.js:87
+msgid "mourn"
+msgstr "حداد"
+
+#: script/events/outside.js:88
+msgid "some villagers have died"
+msgstr "بعض أهل القرية ماتوا"
+
+#: script/events/outside.js:97
+msgid "Sickness"
+msgstr "مرض"
+
+#: script/events/outside.js:104
+msgid "a sickness is spreading through the village."
+msgstr "مرض ينتشر في القرية."
+
+#: script/events/outside.js:105 script/events/outside.js:164
+msgid "medicine is needed immediately."
+msgstr "الدواء مطلوب فوراً."
+
+#: script/events/outside.js:107
+msgid "some villagers are ill"
+msgstr "بعض أهل القرية مرضى"
+
+#: script/events/outside.js:111
+msgid "1 medicine"
+msgstr "1 دواء"
+
+#: script/events/outside.js:123
+msgid "the sickness is cured in time."
+msgstr "تم شفاء المرض في الوقت المناسب."
+
+#: script/events/outside.js:125
+msgid "sufferers are healed"
+msgstr "المصابون تم شفاؤهم"
+
+#: script/events/outside.js:135
+msgid "the sickness spreads through the village."
+msgstr "المرض ينتشر في القرية."
+
+#: script/events/outside.js:136
+msgid "the days are spent with burials."
+msgstr "الأيام تقضي في الدفن."
+
+#: script/events/outside.js:137 script/events/outside.js:208
+msgid "the nights are rent with screams."
+msgstr "الليالي مليئة بالصراخ."
+
+#: script/events/outside.js:139
+msgid "sufferers are left to die"
+msgstr "المصابون يُتركون للموت"
+
+#: script/events/outside.js:156
+msgid "Plague"
+msgstr "طاعون"
+
+#: script/events/outside.js:163
+msgid "a terrible plague is fast spreading through the village."
+msgstr "طاعون رهيب ينتشر بسرعة في القرية."
+
+#: script/events/outside.js:166
+msgid "a plague afflicts the village"
+msgstr "القرية مصابة بالطاعون"
+
+#: script/events/outside.js:171
+msgid "buy medicine"
+msgstr "شراء دواء"
+
+#: script/events/outside.js:177
+msgid "5 medicine"
+msgstr "5 دواء"
+
+#: script/events/outside.js:182
+msgid "do nothing"
+msgstr "لا تفعل شيئاً"
+
+#: script/events/outside.js:189
+msgid "the plague is kept from spreading."
+msgstr "تم منع انتشار الطاعون."
+
+#: script/events/outside.js:190
+msgid "only a few die."
+msgstr "مات القليل فقط."
+
+#: script/events/outside.js:191
+msgid "the rest bury them."
+msgstr "الباقون يدفنونهم."
+
+#: script/events/outside.js:193
+msgid "epidemic is eradicated eventually"
+msgstr "الوباء تم القضاء عليه في النهاية"
+
+#: script/events/outside.js:207
+msgid "the plague rips through the village."
+msgstr "الطاعون يمزق القرية."
+
+#: script/events/outside.js:209
+msgid "the only hope is a quick death."
+msgstr "الأمل الوحيد هو الموت السريع."
+
+#: script/events/outside.js:211
+msgid "population is almost exterminated"
+msgstr "السكان تقريباً أُبيدوا"
+
+#: script/events/outside.js:228
+msgid "A Beast Attack"
+msgstr "هجوم وحش"
+
+#: script/events/outside.js:235
+msgid "a pack of snarling beasts pours out of the trees."
+msgstr "قطيع من الوحوش الهادرة يتدفق من الأشجار."
+
+#: script/events/outside.js:236
+msgid "the fight is short and bloody, but the beasts are repelled."
+msgstr "القتال قصير ودموي، لكن الوحوش تم صدها."
+
+#: script/events/outside.js:237
+msgid "the villagers retreat to mourn the dead."
+msgstr "أهل القرية يتراجعون للحداد على الموتى."
+
+#: script/events/outside.js:239
+msgid "wild beasts attack the villagers"
+msgstr "وحوش برية تهاجم أهل القرية"
+
+#: script/events/outside.js:253
+msgid "predators become prey. price is unfair"
+msgstr "المفترسون يصبحون فريسة. الثمن غير عادل"
+
+#: script/events/outside.js:263
+msgid "A Military Raid"
+msgstr "غارة عسكرية"
+
+#: script/events/outside.js:270
+msgid "a gunshot rings through the trees."
+msgstr "طلقة تدوي عبر الأشجار."
+
+#: script/events/outside.js:271
+msgid "well armed men charge out of the forest, firing into the crowd."
+msgstr "رجال مسلحون جيداً يندفعون من الغابة، يطلقون النار على الحشد."
+
+#: script/events/outside.js:272
+msgid "after a skirmish they are driven away, but not without losses."
+msgstr "بعد مناوشة تم طردهم، لكن ليس بدون خسائر."
+
+#: script/events/outside.js:274
+msgid "troops storm the village"
+msgstr "القوات تهاجم القرية"
+
+#: script/events/outside.js:288
+msgid "warfare is bloodthirsty"
+msgstr "الحرب عطشى للدماء"
+
+#: script/events/room.js:6
+msgid "The Nomad"
+msgstr "البدوي"
+
+#: script/events/room.js:13
+msgid ""
+"a nomad shuffles into view, laden with makeshift bags bound with rough "
+"twine."
+msgstr "بدوي يظهر، محملاً بأكياس مؤقتة مربوطة بخيط خشن."
+
+#: script/events/room.js:14
+msgid "won't say from where he came, but it's clear that he's not staying."
+msgstr "لن يقول من أين أتى، لكن من الواضح أنه لن يبقى."
+
+#: script/events/room.js:16
+msgid "a nomad arrives, looking to trade"
+msgstr "يصل بدوي، يبحث عن التجارة"
+
+#: script/events/room.js:20
+msgid "buy scales"
+msgstr "شراء حراشف"
+
+#: script/events/room.js:25
+msgid "buy teeth"
+msgstr "شراء أسنان"
+
+#: script/events/room.js:30
+msgid "buy bait"
+msgstr "شراء طعم"
+
+#: script/events/room.js:33
+msgid "traps are more effective with bait."
+msgstr "الفخاخ أكثر فعالية مع الطعم."
+
+#: script/events/room.js:39
+msgid "buy compass"
+msgstr "شراء بوصلة"
+
+#: script/events/room.js:42
+msgid "the old compass is dented and dusty, but it looks to work."
+msgstr "البوصلة القديمة معطوبة ومغبرة، لكن يبدو أنها تعمل."
+
+#: script/events/room.js:45 script/events/room.js:230 script/events/room.js:243
+#: script/events/room.js:256 script/events/room.js:283
+#: script/events/room.js:370 script/events/room.js:393
+#: script/events/room.js:450 script/events/room.js:473
+#: script/events/room.js:516 script/events/room.js:636
+#: script/events/room.js:652 script/events/room.js:668
+#: script/events/room.js:679
+msgid "say goodbye"
+msgstr "وداع"
+
+#: script/events/room.js:54 script/events/room.js:106
+msgid "Noises"
+msgstr "أصوات"
+
+#: script/events/room.js:61
+msgid "through the walls, shuffling noises can be heard."
+msgstr "من خلال الجدران، يمكن سماع أصوات احتكاك."
+
+#: script/events/room.js:62
+msgid "can't tell what they're up to."
+msgstr "لا يمكن معرفة ما يفعلونه."
+
+#: script/events/room.js:64
+msgid "strange noises can be heard through the walls"
+msgstr "أصوات غريبة يمكن سماعها من خلال الجدران"
+
+#: script/events/room.js:68 script/events/room.js:120
+#: script/events/setpieces.js:1666
+msgid "investigate"
+msgstr "التحقيق"
+
+#: script/events/room.js:79
+msgid "vague shapes move, just out of sight."
+msgstr "أشكال غامضة تتحرك، خارج نطاق الرؤية."
+
+#: script/events/room.js:80
+msgid "the sounds stop."
+msgstr "الأصوات تتوقف."
+
+#: script/events/room.js:84 script/events/room.js:97
+msgid "go back inside"
+msgstr "العودة للداخل"
+
+#: script/events/room.js:92
+msgid "a bundle of sticks lies just beyond the threshold, wrapped in coarse furs."
+msgstr "حزمة من العصي تقع خلف العتبة، ملفوفة بفراء خشن."
+
+#: script/events/room.js:93
+msgid "the night is silent."
+msgstr "الليل صامت."
+
+#: script/events/room.js:113
+msgid "scratching noises can be heard from the store room."
+msgstr "أصوات خدش يمكن سماعها من المخزن."
+
+#: script/events/room.js:114
+msgid "something's in there."
+msgstr "هناك شيء ما."
+
+#: script/events/room.js:116
+msgid "something's in the store room"
+msgstr "هناك شيء في المخزن"
+
+#: script/events/room.js:131 script/events/room.js:151
+#: script/events/room.js:171
+msgid "some wood is missing."
+msgstr "بعض الخشب مفقود."
+
+#: script/events/room.js:132
+msgid "the ground is littered with small scales"
+msgstr "الأرض مغطاة بحراشف صغيرة"
+
+#: script/events/room.js:152
+msgid "the ground is littered with small teeth"
+msgstr "الأرض مغطاة بأسنان صغيرة"
+
+#: script/events/room.js:172
+msgid "the ground is littered with scraps of cloth"
+msgstr "الأرض مغطاة بقطع قماش"
+
+#: script/events/room.js:193
+msgid "The Beggar"
+msgstr "المتسول"
+
+#: script/events/room.js:200
+msgid "a beggar arrives."
+msgstr "يصل متسول."
+
+#: script/events/room.js:201
+msgid "asks for any spare furs to keep him warm at night."
+msgstr "يسأل عن أي فراء إضافي لإبقائه دافئاً في الليل."
+
+#: script/events/room.js:203
+msgid "a beggar arrives"
+msgstr "يصل متسول"
+
+#: script/events/room.js:207
+msgid "give 50"
+msgstr "إعطاء 50"
+
+#: script/events/room.js:212 script/events/room.js:337
+#: script/events/room.js:417
+msgid "give 100"
+msgstr "إعطاء 100"
+
+#: script/events/room.js:217 script/events/room.js:347
+#: script/events/room.js:549
+msgid "turn him away"
+msgstr "طرده"
+
+#: script/events/room.js:225 script/events/room.js:238
+#: script/events/room.js:251
+msgid "the beggar expresses his thanks."
+msgstr "المتسول يعبر عن شكره."
+
+#: script/events/room.js:226
+msgid "leaves a pile of small scales behind."
+msgstr "يترك كومة من الحراشف الصغيرة خلفه."
+
+#: script/events/room.js:239
+msgid "leaves a pile of small teeth behind."
+msgstr "يترك كومة من الأسنان الصغيرة خلفه."
+
+#: script/events/room.js:252
+msgid "leaves some scraps of cloth behind."
+msgstr "يترك بعض قطع القماش خلفه."
+
+#: script/events/room.js:265
+msgid "The Shady Builder"
+msgstr "الباني المشبوه"
+
+#: script/events/room.js:272 script/events/room.js:275
+msgid "a shady builder passes through"
+msgstr "باني مشبوه يمر"
+
+#: script/events/room.js:273
+msgid "says he can build you a hut for less wood"
+msgstr "يقول إنه يستطيع بناء كوخ لك بكمية أقل من الخشب"
+
+#: script/events/room.js:278
+msgid "300 wood"
+msgstr "300 خشب"
+
+#: script/events/room.js:290 script/events/room.js:292
+msgid "the shady builder has made off with your wood"
+msgstr "الباني المشبوه هرب مع خشبك"
+
+#: script/events/room.js:302 script/events/room.js:304
+msgid "the shady builder builds a hut"
+msgstr "الباني المشبوه يبني كوخاً"
+
+#: script/events/room.js:323 script/events/room.js:403
+msgid "The Mysterious Wanderer"
+msgstr "المتجول الغامض"
+
+#: script/events/room.js:330
+msgid ""
+"a wanderer arrives with an empty cart. says if he leaves with wood, he'll"
+" be back with more."
+msgstr ""
+"متجول يصل بعربة فارغة. يقول إنه إذا ذهب بالخشب، سيعود بالمزيد."
+
+#: script/events/room.js:331
+msgid "builder's not sure he's to be trusted."
+msgstr "البانية غير متأكدة من أنه جدير بالثقة."
+
+#: script/events/room.js:333 script/events/room.js:413
+msgid "a mysterious wanderer arrives"
+msgstr "متجول غامض يصل"
+
+#: script/events/room.js:342 script/events/room.js:422
+msgid "give 500"
+msgstr "إعطاء 500"
+
+#: script/events/room.js:354 script/events/room.js:377
+msgid "the wanderer leaves, cart loaded with wood"
+msgstr "المتجول يغادر، العربة محملة بالخشب"
+
+#: script/events/room.js:360 script/events/room.js:383
+msgid "the mysterious wanderer returns, cart piled high with wood."
+msgstr "المتجول الغامض يعود، العربة مكدسة بالخشب."
+
+#: script/events/room.js:410
+msgid ""
+"a wanderer arrives with an empty cart. says if she leaves with furs, "
+"she'll be back with more."
+msgstr ""
+"متجولة تصل بعربة فارغة. تقول إنها إذا ذهبت بالفراء، ستعود بالمزيد."
+
+#: script/events/room.js:411
+msgid "builder's not sure she's to be trusted."
+msgstr "البانية غير متأكدة من أنها جديرة بالثقة."
+
+#: script/events/room.js:427
+msgid "turn her away"
+msgstr "طردها"
+
+#: script/events/room.js:434 script/events/room.js:457
+msgid "the wanderer leaves, cart loaded with furs"
+msgstr "المتجولة تغادر، العربة محملة بالفراء"
+
+#: script/events/room.js:440 script/events/room.js:463
+msgid "the mysterious wanderer returns, cart piled high with furs."
+msgstr "المتجولة الغامضة تعود، العربة مكدسة بالفراء."
+
+#: script/events/room.js:483
+msgid "The Scout"
+msgstr "الكشافة"
+
+#: script/events/room.js:490
+msgid "the scout says she's been all over."
+msgstr "الكشافة تقول إنها زارت كل مكان."
+
+#: script/events/room.js:491
+msgid "willing to talk about it, for a price."
+msgstr "مستعدة للحديث عن ذلك، مقابل ثمن."
+
+#: script/events/room.js:493
+msgid "a scout stops for the night"
+msgstr "كشافة تتوقف ليلاً"
+
+#: script/events/room.js:497
+msgid "buy map"
+msgstr "شراء خريطة"
+
+#: script/events/room.js:502
+msgid "the map uncovers a bit of the world"
+msgstr "الخريطة تكشف جزءاً من العالم"
+
+#: script/events/room.js:506
+msgid "learn scouting"
+msgstr "تعلم الكشافة"
+
+#: script/events/room.js:526
+msgid "The Master"
+msgstr "المعلم"
+
+#: script/events/room.js:533
+msgid "an old wanderer arrives."
+msgstr "متجول عجوز يصل."
+
+#: script/events/room.js:534
+msgid "he smiles warmly and asks for lodgings for the night."
+msgstr "يبتسم بحرارة ويطلب مأوى ليلاً."
+
+#: script/events/room.js:536
+msgid "an old wanderer arrives"
+msgstr "متجول عجوز يصل"
+
+#: script/events/room.js:540
+msgid "agree"
+msgstr "موافقة"
+
+#: script/events/room.js:556
+msgid "in exchange, the wanderer offers his wisdom."
+msgstr "في المقابل، المتجول يعرض حكمته."
+
+#: script/events/room.js:560
+msgid "evasion"
+msgstr "تجنب"
+
+#: script/events/room.js:570
+msgid "precision"
+msgstr "دقة"
+
+#: script/events/room.js:580
+msgid "force"
+msgstr "قوة"
+
+#: script/events/room.js:600
+msgid "The Sick Man"
+msgstr "الرجل المريض"
+
+#: script/events/room.js:607
+msgid "a man hobbles up, coughing."
+msgstr "رجل يعرج، يسعل."
+
+#: script/events/room.js:608
+msgid "he begs for medicine."
+msgstr "يتوسل للدواء."
+
+#: script/events/room.js:610
+msgid "a sick man hobbles up"
+msgstr "رجل مريض يعرج"
+
+#: script/events/room.js:614
+msgid "give 1 medicine"
+msgstr "إعطاء 1 دواء"
+
+#: script/events/room.js:616
+msgid "the man swallows the medicine eagerly"
+msgstr "الرجل يبتلع الدواء بشغف"
+
+#: script/events/room.js:620
+msgid "tell him to leave"
+msgstr "أخبره بالمغادرة"
+
+#: script/events/room.js:627 script/events/room.js:643
+#: script/events/room.js:659
+msgid "the man is thankful."
+msgstr "الرجل ممتن."
+
+#: script/events/room.js:628 script/events/room.js:644
+#: script/events/room.js:660
+msgid "he leaves a reward."
+msgstr "يترك مكافأة."
+
+#: script/events/room.js:629
+msgid "some weird metal he picked up on his travels."
+msgstr "بعض المعدن الغريب الذي التقطه في رحلاته."
+
+#: script/events/room.js:645
+msgid "some weird glowing boxes he picked up on his travels."
+msgstr "بعض الصناديق المتوهجة الغريبة التي التقطها في رحلاته."
+
+#: script/events/room.js:661
+msgid "all he has are some scales."
+msgstr "كل ما لديه بعض الحراشف."
+
+#: script/events/room.js:675
+msgid "the man expresses his thanks and hobbles off."
+msgstr "الرجل يعبر عن شكره ويعرج بعيداً."
+
+#: script/events/setpieces.js:6
+msgid "An Outpost"
+msgstr "مخفر بعيد"
+
+#: script/events/setpieces.js:10 script/events/setpieces.js:12
+msgid "a safe place in the wilds."
+msgstr "مكان آمن في البرية."
+
+#: script/events/setpieces.js:35
+msgid "A Murky Swamp"
+msgstr "مستنقع كدر"
+
+#: script/events/setpieces.js:39
+msgid "rotting reeds rise out of the swampy earth."
+msgstr "قصب متعفن يرتفع من الأرض المستنقعية."
+
+#: script/events/setpieces.js:40
+msgid "a lone frog sits in the muck, silently."
+msgstr "ضفدع وحيد يجلس في الوحل، بصمت."
+
+#: script/events/setpieces.js:42
+msgid "a swamp festers in the stagnant air."
+msgstr "مستنقع يتعفن في الهواء الراكد."
+
+#: script/events/setpieces.js:45 script/events/setpieces.js:552
+#: script/events/setpieces.js:609 script/events/setpieces.js:891
+#: script/events/setpieces.js:1317 script/events/setpieces.js:1335
+#: script/events/setpieces.js:3547
+msgid "enter"
+msgstr "دخول"
+
+#: script/events/setpieces.js:56
+msgid "deep in the swamp is a moss-covered cabin."
+msgstr "في عمق المستنقع يوجد كوخ مغطى بالطحالب."
+
+#: script/events/setpieces.js:57
+msgid "an old wanderer sits inside, in a seeming trance."
+msgstr "متجول عجوز يجلس في الداخل، في حالة تشبه الغيبوبة."
+
+#: script/events/setpieces.js:62
+msgid "talk"
+msgstr "حديث"
+
+#: script/events/setpieces.js:73
+msgid "the wanderer takes the charm and nods slowly."
+msgstr "المتجول يأخذ التعويذة ويومئ ببطء."
+
+#: script/events/setpieces.js:74
+msgid "he speaks of once leading the great fleets to fresh worlds."
+msgstr "يتحدث عن قيادته ذات مرة للأساطيل العظيمة إلى عوالم جديدة."
+
+#: script/events/setpieces.js:75
+msgid "unfathomable destruction to fuel wanderer hungers."
+msgstr "دمار لا يمكن فهمه لإشباع جوع المتجولين."
+
+#: script/events/setpieces.js:76
+msgid "his time here, now, is his penance."
+msgstr "وقته هنا، الآن، هو تكفيره."
+
+#: script/events/setpieces.js:93
+msgid "A Damp Cave"
+msgstr "كهف رطب"
+
+#: script/events/setpieces.js:97
+msgid "the mouth of the cave is wide and dark."
+msgstr "مدخل الكهف واسع ومظلم."
+
+#: script/events/setpieces.js:98
+msgid "can't see what's inside."
+msgstr "لا يمكن رؤية ما في الداخل."
+
+#: script/events/setpieces.js:100
+msgid "the earth here is split, as if bearing an ancient wound"
+msgstr "الأرض هنا مشقوقة، كما لو كانت تحمل جرحاً قديماً"
+
+#: script/events/setpieces.js:103 script/events/setpieces.js:2949
+#: script/events/setpieces.js:3469
+msgid "go inside"
+msgstr "الذهاب للداخل"
+
+#: script/events/setpieces.js:122 script/events/setpieces.js:267
+msgid "a startled beast defends its home"
+msgstr "وحش مذعور يدافع عن بيته"
+
+#: script/events/setpieces.js:137 script/events/setpieces.js:188
+#: script/events/setpieces.js:230 script/events/setpieces.js:249
+#: script/events/setpieces.js:282 script/events/setpieces.js:316
+#: script/events/setpieces.js:350 script/events/setpieces.js:384
+#: script/events/setpieces.js:591 script/events/setpieces.js:647
+#: script/events/setpieces.js:686 script/events/setpieces.js:720
+#: script/events/setpieces.js:760 script/events/setpieces.js:799
+#: script/events/setpieces.js:838 script/events/setpieces.js:872
+#: script/events/setpieces.js:923 script/events/setpieces.js:941
+#: script/events/setpieces.js:964 script/events/setpieces.js:1003
+#: script/events/setpieces.js:1042 script/events/setpieces.js:1270
+#: script/events/setpieces.js:1286 script/events/setpieces.js:1302
+#: script/events/setpieces.js:1412 script/events/setpieces.js:1452
+#: script/events/setpieces.js:1496 script/events/setpieces.js:1514
+#: script/events/setpieces.js:1530 script/events/setpieces.js:1567
+#: script/events/setpieces.js:1606 script/events/setpieces.js:1646
+#: script/events/setpieces.js:1686 script/events/setpieces.js:1703
+#: script/events/setpieces.js:1720 script/events/setpieces.js:1738
+#: script/events/setpieces.js:1782 script/events/setpieces.js:1808
+#: script/events/setpieces.js:1826 script/events/setpieces.js:1865
+#: script/events/setpieces.js:1906 script/events/setpieces.js:1931
+#: script/events/setpieces.js:1961 script/events/setpieces.js:2002
+#: script/events/setpieces.js:2038 script/events/setpieces.js:2073
+#: script/events/setpieces.js:2114 script/events/setpieces.js:2155
+#: script/events/setpieces.js:2191 script/events/setpieces.js:2226
+#: script/events/setpieces.js:2261 script/events/setpieces.js:2306
+#: script/events/setpieces.js:2332 script/events/setpieces.js:3213
+#: script/events/setpieces.js:3253 script/events/setpieces.js:3287
+#: script/events/setpieces.js:3357 script/events/setpieces.js:3391
+#: script/events/setpieces.js:3430
+msgid "continue"
+msgstr "متابعة"
+
+#: script/events/setpieces.js:142 script/events/setpieces.js:159
+#: script/events/setpieces.js:193 script/events/setpieces.js:235
+#: script/events/setpieces.js:254 script/events/setpieces.js:287
+#: script/events/setpieces.js:321 script/events/setpieces.js:355
+#: script/events/setpieces.js:389 script/events/setpieces.js:431
+#: script/events/setpieces.js:483 script/events/setpieces.js:515
+msgid "leave cave"
+msgstr "مغادرة الكهف"
+
+#: script/events/setpieces.js:150
+msgid "the cave narrows a few feet in."
+msgstr "الكهف يضيق بعد بضعة أقدام."
+
+#: script/events/setpieces.js:151
+msgid "the walls are moist and moss-covered"
+msgstr "الجدران رطبة ومغطاة بالطحالب"
+
+#: script/events/setpieces.js:155
+msgid "squeeze"
+msgstr "الضغط"
+
+#: script/events/setpieces.js:166
+msgid "the remains of an old camp sits just inside the cave."
+msgstr "بقايا معسكر قديم تقع داخل الكهف."
+
+#: script/events/setpieces.js:167
+msgid "bedrolls, torn and blackened, lay beneath a thin layer of dust."
+msgstr "أفرشة، ممزقة ومحترقة، تقع تحت طبقة رقيقة من الغبار."
+
+#: script/events/setpieces.js:201
+msgid "the body of a wanderer lies in a small cavern."
+msgstr "جثة متجول تقع في كهف صغير."
+
+#: script/events/setpieces.js:202
+msgid "rot's been to work on it, and some of the pieces are missing."
+msgstr "التعفن عمل عليه، وبعض القطع مفقودة."
+
+# 'it' is a wanderer corpse
+#: script/events/setpieces.js:204
+msgid "can't tell what left it here."
+msgstr "لا يمكن معرفة ما تركه هنا."
+
+#: script/events/setpieces.js:243
+msgid "the torch sputters and dies in the damp air"
+msgstr "المشعل يتوهج ويموت في الهواء الرطب"
+
+#: script/events/setpieces.js:244
+msgid "the darkness is absolute"
+msgstr "الظلام مطلق"
+
+#: script/events/setpieces.js:246
+msgid "the torch goes out"
+msgstr "المشعل ينطفئ"
+
+#: script/events/setpieces.js:301
+msgid "a cave lizard attacks"
+msgstr "سحلية كهف تهاجم"
+
+#: script/events/setpieces.js:335
+msgid "a large beast charges out of the dark"
+msgstr "وحش كبير يندفع من الظلام"
+
+#: script/events/setpieces.js:369
+msgid "a giant lizard shambles forward"
+msgstr "سحلية عملاقة تتقدم متعثرة"
+
+#: script/events/setpieces.js:397
+msgid "the nest of a large animal lies at the back of the cave."
+msgstr "عش حيوان كبير يقع في مؤخرة الكهف."
+
+#: script/events/setpieces.js:439
+msgid "a small supply cache is hidden at the back of the cave."
+msgstr "مخبأ إمدادات صغير مخفي في مؤخرة الكهف."
+
+#: script/events/setpieces.js:491
+msgid "an old case is wedged behind a rock, covered in a thick layer of dust."
+msgstr "صندوق قديم عالق خلف صخرة، مغطى بطبقة سميكة من الغبار."
+
+#: script/events/setpieces.js:525
+msgid "A Deserted Town"
+msgstr "بلدة مهجورة"
+
+#: script/events/setpieces.js:529
+msgid "a small suburb lays ahead, empty houses scorched and peeling."
+msgstr "ضاحية صغيرة تمتد أمامك، منازل فارغة محترقة ومتقشرة."
+
+#: script/events/setpieces.js:530
+msgid ""
+"broken streetlights stand, rusting. light hasn't graced this place in a "
+"long time."
+msgstr ""
+"أعمدة إنارة مكسورة تقف، تصدأ. الضوء لم يزين هذا المكان منذ وقت طويل."
+
+#: script/events/setpieces.js:532
+msgid "the town lies abandoned, its citizens long dead"
+msgstr "البلدة مهجورة، مواطنوها ماتوا منذ زمن طويل"
+
+#: script/events/setpieces.js:535 script/events/setpieces.js:1254
+msgid "explore"
+msgstr "استكشاف"
+
+#: script/events/setpieces.js:547
+msgid ""
+"where the windows of the schoolhouse aren't shattered, they're blackened "
+"with soot."
+msgstr "حيث نوافذ المدرسة غير محطمة، فهي مسودة بالسخام."
+
+#: script/events/setpieces.js:548
+msgid "the double doors creak endlessly in the wind."
+msgstr "البابان المزدوجان يصران بلا نهاية في الريح."
+
+#: script/events/setpieces.js:557 script/events/setpieces.js:596
+#: script/events/setpieces.js:614 script/events/setpieces.js:652
+#: script/events/setpieces.js:691 script/events/setpieces.js:725
+#: script/events/setpieces.js:765 script/events/setpieces.js:804
+#: script/events/setpieces.js:843 script/events/setpieces.js:877
+#: script/events/setpieces.js:895 script/events/setpieces.js:928
+#: script/events/setpieces.js:945 script/events/setpieces.js:969
+#: script/events/setpieces.js:1008 script/events/setpieces.js:1047
+#: script/events/setpieces.js:1090 script/events/setpieces.js:1123
+#: script/events/setpieces.js:1151 script/events/setpieces.js:1195
+#: script/events/setpieces.js:1217 script/events/setpieces.js:1233
+msgid "leave town"
+msgstr "مغادرة البلدة"
+
+#: script/events/setpieces.js:588
+msgid "ambushed on the street."
+msgstr "كمين في الشارع."
+
+#: script/events/setpieces.js:604
+msgid "a squat building up ahead."
+msgstr "مبنى قصير أمامك."
+
+# what kind of green cross?
+#: script/events/setpieces.js:605
+msgid "a green cross barely visible behind grimy windows."
+msgstr "صليب أخضر بالكاد مرئي خلف النوافذ القذرة."
+
+#: script/events/setpieces.js:621
+msgid "a small cache of supplies is tucked inside a rusting locker."
+msgstr "مخبأ صغير من الإمدادات مخفي داخل خزانة صدئة."
+
+#: script/events/setpieces.js:683
+msgid "a scavenger waits just inside the door."
+msgstr "نابش ينتظر داخل الباب."
+
+#: script/events/setpieces.js:717
+msgid "a beast stands alone in an overgrown park."
+msgstr "وحش يقف وحيداً في حديقة متضخمة."
+
+#: script/events/setpieces.js:733
+msgid "an overturned caravan is spread across the pockmarked street."
+msgstr "قافلة مقلوبة منتشرة عبر الشارع المليء بالحفر."
+
+#: script/events/setpieces.js:734
+msgid ""
+"it's been picked over by scavengers, but there's still some things worth "
+"taking."
+msgstr "تم نهبها من قبل النابشين، لكن لا يزال هناك أشياء تستحق الأخذ."
+
+#: script/events/setpieces.js:796
+msgid "a madman attacks, screeching."
+msgstr "رجل مجنون يهاجم، يصرخ."
+
+#: script/events/setpieces.js:835
+msgid "a thug moves out of the shadows."
+msgstr "رجل إجرامي يتحرك من الظلال."
+
+#: script/events/setpieces.js:869
+msgid "a beast charges out of a ransacked classroom."
+msgstr "وحش يندفع من فصل مدرسي منهوب."
+
+#: script/events/setpieces.js:885
+msgid "through the large gymnasium doors, footsteps can be heard."
+msgstr "من خلال أبواب الصالة الرياضية الكبيرة، يمكن سماع خطوات."
+
+#: script/events/setpieces.js:886
+msgid "the torchlight casts a flickering glow down the hallway."
+msgstr "ضوء المشعل يلقي توهجاً متذبذباً في الممر."
+
+#: script/events/setpieces.js:887
+msgid "the footsteps stop."
+msgstr "الخطوات تتوقف."
+
+#: script/events/setpieces.js:920
+msgid "another beast, draw by the noise, leaps out of a copse of trees."
+msgstr "وحش آخر، جذبه الضجيج، يقفز من مجموعة أشجار."
+
+#: script/events/setpieces.js:936
+msgid "something's causing a commotion a ways down the road."
+msgstr "شيء ما يسبب اضطراباً في نهاية الطريق."
+
+#: script/events/setpieces.js:937
+msgid "a fight, maybe."
+msgstr "معركة، ربما."
+
+#: script/events/setpieces.js:952
+msgid "a small basket of food is hidden under a park bench, with a note attached."
+msgstr ""
+"سلة صغيرة من الطعام مخفية تحت مقعد في الحديقة، مع ملاحظة مرفقة."
+
+#: script/events/setpieces.js:953
+msgid "can't read the words."
+msgstr "لا يمكن قراءة الكلمات."
+
+#: script/events/setpieces.js:1000
+msgid "a panicked scavenger bursts through the door, screaming."
+msgstr "نابش مذعور ينفجر عبر الباب، يصرخ."
+
+#: script/events/setpieces.js:1039
+msgid "a man stands over a dead wanderer. notices he's not alone."
+msgstr "رجل يقف فوق متجول ميت. يلاحظ أنه ليس وحيداً."
+
+#: script/events/setpieces.js:1055
+msgid "scavenger had a small camp in the school."
+msgstr "نابش كان لديه معسكر صغير في المدرسة."
+
+#: script/events/setpieces.js:1056
+msgid "collected scraps spread across the floor like they fell from heaven."
+msgstr "قطع مجمعة منتشرة عبر الأرض كما لو أنها سقطت من السماء."
+
+#: script/events/setpieces.js:1098
+msgid "scavenger'd been looking for supplies in here, it seems."
+msgstr "يبدو أن النابش كان يبحث عن إمدادات هنا."
+
+#: script/events/setpieces.js:1099
+msgid "a shame to let what he'd found go to waste."
+msgstr "من العار ترك ما وجده يضيع."
+
+#: script/events/setpieces.js:1131
+msgid ""
+"beneath the wanderer's rags, clutched in one of its many hands, a glint "
+"of steel."
+msgstr "تحت أسمال المتجول، ممسوكة في إحدى يديه الكثيرة، وميض من الفولاذ."
+
+#: script/events/setpieces.js:1132
+msgid "worth killing for, it seems."
+msgstr "يستحق القتل من أجله، يبدو."
+
+#: script/events/setpieces.js:1159
+msgid "eye for an eye seems fair."
+msgstr "العين بالعين يبدو عادلاً."
+
+#: script/events/setpieces.js:1160
+msgid "always worked before, at least."
+msgstr "عمل دائماً من قبل، على الأقل."
+
+#: script/events/setpieces.js:1161
+msgid "picking the bones finds some useful trinkets."
+msgstr "جمع العظام يجد بعض الحلي المفيدة."
+
+#: script/events/setpieces.js:1203
+msgid "some medicine abandoned in the drawers."
+msgstr "بعض الدواء مهجور في الأدراج."
+
+#: script/events/setpieces.js:1225
+msgid "the clinic has been ransacked."
+msgstr "العيادة تم نهبها."
+
+#: script/events/setpieces.js:1226
+msgid "only dust and stains remain."
+msgstr "لم يبق سوى الغبار والبقع."
+
+#: script/events/setpieces.js:1243
+msgid "A Ruined City"
+msgstr "مدينة مدمرة"
+
+#: script/events/setpieces.js:1247
+msgid ""
+"a battered highway sign stands guard at the entrance to this once-great "
+"city."
+msgstr "لافتة طريق مهشمة تقف حارسة عند مدخل هذه المدينة العظيمة ذات مرة."
+
+#: script/events/setpieces.js:1248
+msgid ""
+"the towers that haven't crumbled jut from the landscape like the ribcage "
+"of some ancient beast."
+msgstr ""
+"الأبراج التي لم تنهار تبرز من المشهد مثل قفص صدري لبعض الوحوش القديمة."
+
+#: script/events/setpieces.js:1249
+msgid "might be things worth having still inside."
+msgstr "قد تكون هناك أشياء تستحق الأخذ لا تزال في الداخل."
+
+#: script/events/setpieces.js:1251
+msgid "the towers of a decaying city dominate the skyline"
+msgstr "أبراج مدينة متدهورة تهيمن على الأفق"
+
+#: script/events/setpieces.js:1265
+msgid "the streets are empty."
+msgstr "الشوارع فارغة."
+
+#: script/events/setpieces.js:1266
+msgid "the air is filled with dust, driven relentlessly by the hard winds."
+msgstr "الهواء مليء بالغبار، تدفعه الرياح القوية بلا رحمة."
+
+#: script/events/setpieces.js:1274 script/events/setpieces.js:1290
+#: script/events/setpieces.js:1306 script/events/setpieces.js:1322
+#: script/events/setpieces.js:1339 script/events/setpieces.js:1377
+#: script/events/setpieces.js:1417 script/events/setpieces.js:1457
+#: script/events/setpieces.js:1501 script/events/setpieces.js:1518
+#: script/events/setpieces.js:1534 script/events/setpieces.js:1572
+#: script/events/setpieces.js:1611 script/events/setpieces.js:1651
+#: script/events/setpieces.js:1671 script/events/setpieces.js:1690
+#: script/events/setpieces.js:1707 script/events/setpieces.js:1724
+#: script/events/setpieces.js:1742 script/events/setpieces.js:1787
+#: script/events/setpieces.js:1813 script/events/setpieces.js:1830
+#: script/events/setpieces.js:1870 script/events/setpieces.js:1911
+#: script/events/setpieces.js:1936 script/events/setpieces.js:1966
+#: script/events/setpieces.js:2007 script/events/setpieces.js:2043
+#: script/events/setpieces.js:2078 script/events/setpieces.js:2119
+#: script/events/setpieces.js:2160 script/events/setpieces.js:2196
+#: script/events/setpieces.js:2231 script/events/setpieces.js:2266
+#: script/events/setpieces.js:2367 script/events/setpieces.js:2397
+#: script/events/setpieces.js:2444 script/events/setpieces.js:2480
+#: script/events/setpieces.js:2521 script/events/setpieces.js:2557
+#: script/events/setpieces.js:2592 script/events/setpieces.js:2628
+#: script/events/setpieces.js:2669 script/events/setpieces.js:2710
+#: script/events/setpieces.js:2745 script/events/setpieces.js:2794
+#: script/events/setpieces.js:2839 script/events/setpieces.js:2885
+#: script/events/setpieces.js:2929
+msgid "leave city"
+msgstr "مغادرة المدينة"
+
+#: script/events/setpieces.js:1281
+msgid "orange traffic cones are set across the street, faded and cracked."
+msgstr "مخاريط مرورية برتقالية موضوعة عبر الشارع، باهتة ومتشققة."
+
+#: script/events/setpieces.js:1282
+msgid "lights flash through the alleys between buildings."
+msgstr "أضواء تومض عبر الأزقة بين المباني."
+
+#: script/events/setpieces.js:1297
+msgid "a large shanty town sprawls across the streets."
+msgstr "مدينة صفيح كبيرة تمتد عبر الشوارع."
+
+#: script/events/setpieces.js:1298
+msgid "faces, darkened by soot and blood, stare out from crooked huts."
+msgstr "وجوه، مسودة بالسخام والدم، تحدق من أكواخ ملتوية."
+
+#: script/events/setpieces.js:1313
+msgid "the shell of an abandoned hospital looms ahead."
+msgstr "هيكل مستشفى مهجور يلوح أمامك."
+
+#: script/events/setpieces.js:1329
+msgid "the old tower seems mostly intact."
+msgstr "البرج القديم يبدو سليماً إلى حد كبير."
+
+#: script/events/setpieces.js:1330
+msgid "the shell of a burned out car blocks the entrance."
+msgstr "هيكل سيارة محترقة يحجب المدخل."
+
+#: script/events/setpieces.js:1331
+msgid "most of the windows at ground level are busted anyway."
+msgstr "معظم النوافذ في الطابق الأرضي محطمة على أي حال."
+
+#: script/events/setpieces.js:1346
+msgid "a huge lizard scrambles up out of the darkness of an old metro station."
+msgstr "سحلية ضخمة تتسلق من ظلام محطة مترو قديمة."
+
+#: script/events/setpieces.js:1372
+msgid "descend"
+msgstr "النزول"
+
+#: script/events/setpieces.js:1384
+msgid "the shot echoes in the empty street."
+msgstr "الطلقة تتردد في الشارع الفارغ."
+
+#: script/events/setpieces.js:1424
+msgid "the soldier steps out from between the buildings, rifle raised."
+msgstr "الجندي يخطو من بين المباني، البندقية مرفوعة."
+
+#: script/events/setpieces.js:1464
+msgid "a frail man stands defiantly, blocking the path."
+msgstr "رجل ضعيف يقف بتحدٍ، يحجب الطريق."
+
+#: script/events/setpieces.js:1509
+msgid "nothing but downcast eyes."
+msgstr "لا شيء سوى عيون منكسرة."
+
+#: script/events/setpieces.js:1510
+msgid "the people here were broken a long time ago."
+msgstr "الناس هنا انكسرت منذ زمن طويل."
+
+#: script/events/setpieces.js:1525
+msgid "empty corridors."
+msgstr "ممرات فارغة."
+
+#: script/events/setpieces.js:1526
+msgid "the place has been swept clean by scavengers."
+msgstr "المكان تم تنظيفه بالكامل من قبل النابشين."
+
+#: script/events/setpieces.js:1540
+msgid "an old man bursts through a door, wielding a scalpel."
+msgstr "رجل عجوز ينفجر عبر الباب، يحمل مشرطاً."
+
+#: script/events/setpieces.js:1579
+msgid "a thug is waiting on the other side of the wall."
+msgstr "رجل إجرامي ينتظر على الجانب الآخر من الجدار."
+
+#: script/events/setpieces.js:1619
+msgid "a snarling beast jumps out from behind a car."
+msgstr "وحش هادر يقفز من خلف سيارة."
+
+#: script/events/setpieces.js:1660
+msgid "street above the subway platform is blown away."
+msgstr "الشارع فوق منصة المترو منفجر."
+
+#: script/events/setpieces.js:1661
+msgid "lets some light down into the dusty haze."
+msgstr "يسمح لبعض الضوء بالنزول إلى الضباب الغباري."
+
+#: script/events/setpieces.js:1662
+msgid "a sound comes from the tunnel, just ahead."
+msgstr "صوت يأتي من النفق، أمامك مباشرة."
+
+#: script/events/setpieces.js:1679
+msgid "looks like a camp of sorts up ahead."
+msgstr "يبدو وكأنه معسكر من نوع ما أمامك."
+
+# a chainlink fence
+#: script/events/setpieces.js:1681
+msgid "rusted chainlink is pulled across an alleyway."
+msgstr "سلسلة صدئة ممتدة عبر زقاق."
+
+#: script/events/setpieces.js:1682
+msgid "fires burn in the courtyard beyond."
+msgstr "نيران تحترق في الفناء البعيد."
+
+#: script/events/setpieces.js:1698
+msgid "more voices can be heard ahead."
+msgstr "المزيد من الأصوات يمكن سماعها أمامك."
+
+#: script/events/setpieces.js:1699
+msgid "they must be here for a reason."
+msgstr "يجب أن يكونوا هنا لسبب ما."
+
+#: script/events/setpieces.js:1715
+msgid "the sound of gunfire carries on the wind."
+msgstr "صوت إطلاق النار يحمله الريح."
+
+#: script/events/setpieces.js:1716
+msgid "the street ahead glows with firelight."
+msgstr "الشارع أمامك يتوهج بضوء النار."
+
+# define squatter
+#: script/events/setpieces.js:1733
+msgid "more squatters are crowding around now."
+msgstr "المزيد من المستوطنين يتجمعون الآن."
+
+#: script/events/setpieces.js:1734
+msgid "someone throws a stone."
+msgstr "شخص ما يرمي حجراً."
+
+#: script/events/setpieces.js:1750
+msgid "an improvised shop is set up on the sidewalk."
+msgstr "متجر مؤقت منظم على الرصيف."
+
+#: script/events/setpieces.js:1751
+msgid "the owner stands by, stoic."
+msgstr "المالك يقف بجانبه، متحمل."
+
+#: script/events/setpieces.js:1796
+msgid "strips of meat hang drying by the side of the street."
+msgstr "شرائح من اللحم معلقة لتجف بجانب الشارع."
+
+#: script/events/setpieces.js:1797
+msgid "the people back away, avoiding eye contact."
+msgstr "الناس يتراجعون، يتجنبون التواصل البصري."
+
+#: script/events/setpieces.js:1822
+msgid "someone has locked and barricaded the door to this operating theatre."
+msgstr "شخص ما أغلق وحصن باب غرفة العمليات هذه."
+
+# ward as part of the hospital?
+#: script/events/setpieces.js:1837
+msgid "a tribe of elderly squatters is camped out in this ward."
+msgstr "قبيلة من المستوطنين المسنين معسكرة في هذا الجناح."
+
+#: script/events/setpieces.js:1878
+msgid "a pack of lizards rounds the corner."
+msgstr "قطيع من السحالي يدور حول الزاوية."
+
+# part of the hospital?
+#: script/events/setpieces.js:1920
+msgid "strips of meat are hung up to dry in this ward."
+msgstr "شرائح من اللحم معلقة لتجف في هذا الجناح."
+
+#: script/events/setpieces.js:1944
+msgid "a large bird nests at the top of the stairs."
+msgstr "طائر كبير يعشش في أعلى السلالم."
+
+#: script/events/setpieces.js:1975
+msgid "the debris is denser here."
+msgstr "الحطام أكثر كثافة هنا."
+
+#: script/events/setpieces.js:1976
+msgid "maybe some useful stuff in the rubble."
+msgstr "ربما بعض الأشياء المفيدة في الأنقاض."
+
+#: script/events/setpieces.js:2015
+msgid "a swarm of rats rushes up the tunnel."
+msgstr "سرب من الجرذان يندفع عبر النفق."
+
+#: script/events/setpieces.js:2051
+msgid "a large man attacks, waving a bayonet."
+msgstr "رجل كبير يهاجم، يلوح بسلاح حربة."
+
+#: script/events/setpieces.js:2086
+msgid "a second soldier opens fire."
+msgstr "جندي ثانٍ يفتح النار."
+
+#: script/events/setpieces.js:2127
+msgid "a masked soldier rounds the corner, gun drawn"
+msgstr "جندي مقنع يدور حول الزاوية، مسدسه مسلط"
+
+#: script/events/setpieces.js:2168
+msgid "the crowd surges forward."
+msgstr "الحشد يندفع للأمام."
+
+#: script/events/setpieces.js:2204
+msgid "a youth lashes out with a tree branch."
+msgstr "شاب يهاجم بغصن شجرة."
+
+#: script/events/setpieces.js:2239
+msgid "a squatter stands firmly in the doorway of a small hut."
+msgstr "مستوطن يقف بثبات في مدخل كوخ صغير."
+
+#: script/events/setpieces.js:2274
+msgid "behind the door, a deformed figure awakes and attacks."
+msgstr "خلف الباب، شخص مشوه يستيقظ ويهاجم."
+
+#: script/events/setpieces.js:2314
+msgid "as soon as the door is open a little bit, hundreds of tentacles erupt."
+msgstr "بمجرد فتح الباب قليلاً، مئات من المجسات تنفجر."
+
+#: script/events/setpieces.js:2341
+msgid "bird must have liked shiney things."
+msgstr "يجب أن الطائر كان يحب الأشياء اللامعة."
+
+#: script/events/setpieces.js:2342
+msgid "some good stuff woven into its nest."
+msgstr "بعض الأشياء الجيدة منسوجة في عشه."
+
+#: script/events/setpieces.js:2376
+msgid "not much here."
+msgstr "ليس الكثير هنا."
+
+#: script/events/setpieces.js:2377
+msgid "scavengers must have gotten to this place already."
+msgstr "يجب أن النابشين وصلوا إلى هذا المكان بالفعل."
+
+# part of the subway?
+#: script/events/setpieces.js:2407
+msgid "the tunnel opens up at another platform."
+msgstr "النفق ينفتح على منصة أخرى."
+
+#: script/events/setpieces.js:2408
+msgid "the walls are scorched from an old battle."
+msgstr "الجدران محترقة من معركة قديمة."
+
+#: script/events/setpieces.js:2409
+msgid "bodies and supplies from both sides litter the ground."
+msgstr "جثث وإمدادات من كلا الجانبين متناثرة على الأرض."
+
+#: script/events/setpieces.js:2453
+msgid "the small military outpost is well supplied."
+msgstr "المخفر العسكري الصغير مزود جيداً."
+
+#: script/events/setpieces.js:2454
+msgid ""
+"arms and munitions, relics from the war, are neatly arranged on the "
+"store-room floor."
+msgstr ""
+"zbraně a munice, coby relikvie války, jsou úhledně rozloženy po podlaze "
+"zbrojnice."
+
+#: script/events/setpieces.js:2455
+msgid "just as deadly now as they were then."
+msgstr "قاتلة الآن كما كانت حينها."
+
+#: script/events/setpieces.js:2489
+msgid "searching the bodies yields a few supplies."
+msgstr "تفتيش الجثث يعطي بعض الإمدادات."
+
+#: script/events/setpieces.js:2490
+msgid "more soldiers will be on their way."
+msgstr "المزيد من الجنود في الطريق."
+
+#: script/events/setpieces.js:2491
+msgid "time to move on."
+msgstr "حان الوقت للمضي قدماً."
+
+#: script/events/setpieces.js:2530
+msgid "the small settlement has clearly been burning a while."
+msgstr "المستوطنة الصغيرة تحترق بوضوح منذ فترة."
+
+#: script/events/setpieces.js:2531
+msgid ""
+"the bodies of the wanderers that lived here are still visible in the "
+"flames."
+msgstr "جثث المتجولين الذين عاشوا هنا لا تزال مرئية في النيران."
+
+#: script/events/setpieces.js:2532
+msgid "still time to rescue a few supplies."
+msgstr "لا يزال هناك وقت لإنقاذ بعض الإمدادات."
+
+#: script/events/setpieces.js:2566
+msgid "the remaining settlers flee from the violence, their belongings forgotten."
+msgstr "المستوطنون المتبقون يفرون من العنف، ممتلكاتهم منسية."
+
+#: script/events/setpieces.js:2567
+msgid "there's not much, but some useful things can still be found."
+msgstr "ليس هناك الكثير، لكن لا يزال يمكن العثور على بعض الأشياء المفيدة."
+
+#: script/events/setpieces.js:2601
+msgid "the young settler was carrying a canvas sack."
+msgstr "المستوطن الشاب كان يحمل كيس قماش."
+
+#: script/events/setpieces.js:2602
+msgid "it contains travelling gear, and a few trinkets."
+msgstr "يحتوي على معدات السفر، وبعض الحلي."
+
+#: script/events/setpieces.js:2603 script/events/setpieces.js:2639
+msgid "there's nothing else here."
+msgstr "لا يوجد شيء آخر هنا."
+
+#: script/events/setpieces.js:2637
+msgid "inside the hut, a child cries."
+msgstr "داخل الكوخ، طفل يبكي."
+
+#: script/events/setpieces.js:2638
+msgid "a few belongings rest against the walls."
+msgstr "بعض الممتلكات تستند على الجدران."
+
+#: script/events/setpieces.js:2678
+msgid "the stench of rot and death fills the operating theatres."
+msgstr "رائحة التعفن والموت تملأ غرف العمليات."
+
+#: script/events/setpieces.js:2679
+msgid "a few items are scattered on the ground."
+msgstr "بعض العناصر متناثرة على الأرض."
+
+#: script/events/setpieces.js:2680
+msgid "there is nothing else here."
+msgstr "لا يوجد شيء آخر هنا."
+
+#: script/events/setpieces.js:2719
+msgid "a pristine medicine cabinet at the end of a hallway."
+msgstr "خزانة دواء نظيفة في نهاية الممر."
+
+#: script/events/setpieces.js:2720
+msgid "the rest of the hospital is empty."
+msgstr "بقية المستشفى فارغة."
+
+#: script/events/setpieces.js:2754
+msgid "someone had been stockpiling loot here."
+msgstr "شخص ما كان يخزن الغنائم هنا."
+
+#: script/events/setpieces.js:2803
+msgid "the tentacular horror is defeated."
+msgstr "الرعب ذو المجسات هُزم."
+
+#: script/events/setpieces.js:2804
+msgid "inside, the remains of its victims are everywhere."
+msgstr "في الداخل، بقايا ضحاياه في كل مكان."
+
+# extremly disfigured
+#: script/events/setpieces.js:2849
+msgid "the warped man lies dead."
+msgstr "الرجل المشوه ميت."
+
+#: script/events/setpieces.js:2850
+msgid "the operating theatre has a lot of curious equipment."
+msgstr "غرفة العمليات لديها الكثير من المعدات الغريبة."
+
+#: script/events/setpieces.js:2894
+msgid "the old man had a small cache of interesting items."
+msgstr "الرجل العجوز كان لديه مخبأ صغير من العناصر المثيرة للاهتمام."
+
+#: script/events/setpieces.js:2939
+msgid "An Old House"
+msgstr "منزل قديم"
+
+#: script/events/setpieces.js:2943
+msgid "an old house remains here, once white siding yellowed and peeling."
+msgstr "منزل قديم يبقى هنا، واجهته البيضاء ذات مرة صفراء ومتقشرة."
+
+#: script/events/setpieces.js:2944
+msgid "the door hangs open."
+msgstr "الباب معلق مفتوحاً."
+
+#: script/events/setpieces.js:2946
+msgid "the remains of an old house stand as a monument to simpler times"
+msgstr "بقايا منزل قديم تقف كنصب تذكاري لأوقات أبسط"
+
+#: script/events/setpieces.js:2960
+msgid "the house is abandoned, but not yet picked over."
+msgstr "المنزل مهجور، لكن لم يتم نهبه بعد."
+
+#: script/events/setpieces.js:2961
+msgid "still a few drops of water in the old well."
+msgstr "لا يزال هناك بضع قطرات من الماء في البئر القديم."
+
+#: script/events/setpieces.js:2995
+msgid "the house has been ransacked."
+msgstr "المنزل تم نهبه."
+
+#: script/events/setpieces.js:2996
+msgid "but there is a cache of medicine under the floorboards."
+msgstr "لكن هناك مخبأ من الدواء تحت الألواح."
+
+#: script/events/setpieces.js:3024
+msgid "a man charges down the hall, a rusty blade in his hand"
+msgstr "رجل يندفع عبر القاعة، نصل صدئ في يده"
+
+#: script/events/setpieces.js:3057
+msgid "A Forgotten Battlefield"
+msgstr "ساحة معركة منسية"
+
+#: script/events/setpieces.js:3061
+msgid "a battle was fought here, long ago."
+msgstr "معركة دارت هنا، منذ زمن طويل."
+
+#: script/events/setpieces.js:3062
+msgid "battered technology from both sides lays dormant on the blasted landscape."
+msgstr ""
+"pomlácené vybavení obou stran se nehybně povaluje po rozbombardované "
+"krajině."
+
+#: script/events/setpieces.js:3111
+msgid "A Huge Borehole"
+msgstr "بئر حفر ضخم"
+
+#: script/events/setpieces.js:3115
+msgid "a huge hole is cut deep into the earth, evidence of the past harvest."
+msgstr "حفرة ضخمة مقطوعة بعمق في الأرض، دليل على الحصاد الماضي."
+
+#: script/events/setpieces.js:3116
+msgid "they took what they came for, and left."
+msgstr "أخذوا ما جاءوا من أجله، وغادروا."
+
+#: script/events/setpieces.js:3117
+msgid ""
+"castoff from the mammoth drills can still be found by the edges of the "
+"precipice."
+msgstr "بقايا من الحفارات الضخمة لا تزال يمكن العثور عليها عند حواف الجرف."
+
+#: script/events/setpieces.js:3141
+msgid "A Crashed Ship"
+msgstr "سفينة محطمة"
+
+#: script/events/setpieces.js:3150
+msgid "the familiar curves of a wanderer vessel rise up out of the dust and ash. "
+msgstr "المنحنيات المألوفة لسفينة متجول ترتفع من الغبار والرماد. "
+
+#: script/events/setpieces.js:3151
+msgid "lucky that the natives can't work the mechanisms."
+msgstr "محظوظ أن السكان الأصليين لا يستطيعون تشغيل الآليات."
+
+#: script/events/setpieces.js:3152
+msgid "with a little effort, it might fly again."
+msgstr "بقليل من الجهد، قد تطير مرة أخرى."
+
+#: script/events/setpieces.js:3156
+msgid "salvage"
+msgstr "إنقاذ"
+
+#: script/events/setpieces.js:3165
+msgid "The Sulphur Mine"
+msgstr "منجم الكبريت"
+
+#: script/events/setpieces.js:3169
+msgid "the military is already set up at the mine's entrance."
+msgstr "الجيش منظم بالفعل عند مدخل المنجم."
+
+#: script/events/setpieces.js:3170
+msgid "soldiers patrol the perimeter, rifles slung over their shoulders."
+msgstr "جنود يطوفون المحيط، بنادق معلقة على أكتافهم."
+
+#: script/events/setpieces.js:3172
+msgid "a military perimeter is set up around the mine."
+msgstr "محيط عسكري منظم حول المنجم."
+
+#: script/events/setpieces.js:3175 script/events/setpieces.js:3325
+msgid "attack"
+msgstr "هجوم"
+
+#: script/events/setpieces.js:3210
+msgid "a soldier, alerted, opens fire."
+msgstr "جندي، متنبه، يفتح النار."
+
+#: script/events/setpieces.js:3218 script/events/setpieces.js:3258
+#: script/events/setpieces.js:3362 script/events/setpieces.js:3396
+msgid "run"
+msgstr "هرب"
+
+#: script/events/setpieces.js:3250
+msgid "a second soldier joins the fight."
+msgstr "جندي ثانٍ ينضم للقتال."
+
+#: script/events/setpieces.js:3284
+msgid "a grizzled soldier attacks, waving a bayonet."
+msgstr "جندي أشيب يهاجم، يلوح بسلاح حربة."
+
+#: script/events/setpieces.js:3295
+msgid "the military presence has been cleared."
+msgstr "الوجود العسكري تم تطهيره."
+
+#: script/events/setpieces.js:3296 script/events/setpieces.js:3439
+#: script/events/setpieces.js:3516
+msgid "the mine is now safe for workers."
+msgstr "المنجم آمن الآن للعمال."
+
+#: script/events/setpieces.js:3298
+msgid "the sulphur mine is clear of dangers"
+msgstr "منجم الكبريت خالٍ من الأخطار"
+
+#: script/events/setpieces.js:3315
+msgid "The Coal Mine"
+msgstr "منجم الفحم"
+
+#: script/events/setpieces.js:3319
+msgid "camp fires burn by the entrance to the mine."
+msgstr "نيران المعسكر تحترق عند مدخل المنجم."
+
+#: script/events/setpieces.js:3320
+msgid "men mill about, weapons at the ready."
+msgstr "رجال يتجولون، أسلحتهم جاهزة."
+
+#: script/events/setpieces.js:3322
+msgid "this old mine is not abandoned"
+msgstr "هذا المنجم القديم ليس مهجوراً"
+
+#: script/events/setpieces.js:3354 script/events/setpieces.js:3388
+msgid "a man joins the fight"
+msgstr "رجل ينضم للقتال"
+
+#: script/events/setpieces.js:3427
+msgid "only the chief remains."
+msgstr "الزعيم فقط يبقى."
+
+#: script/events/setpieces.js:3438
+msgid "the camp is still, save for the crackling of the fires."
+msgstr "المعسكر هادئ، باستثناء طقطقة النيران."
+
+#: script/events/setpieces.js:3441
+msgid "the coal mine is clear of dangers"
+msgstr "منجم الفحم خالٍ من الأخطار"
+
+#: script/events/setpieces.js:3458
+msgid "The Iron Mine"
+msgstr "منجم الحديد"
+
+#: script/events/setpieces.js:3462
+msgid "an old iron mine sits here, tools abandoned and left to rust."
+msgstr ""
+"před tebou se rozkládá starý železorudný důl obklopený rezavějícími "
+"nástroji."
+
+#: script/events/setpieces.js:3463
+msgid ""
+"bleached bones are strewn about the entrance. many, deeply scored with "
+"jagged grooves."
+msgstr "عظام مبيضة متناثرة حول المدخل. الكثير منها، محفورة بعمق بأخاديد خشنة."
+
+#: script/events/setpieces.js:3464
+msgid "feral howls echo out of the darkness."
+msgstr "عويل متوحش يتردد من الظلام."
+
+#: script/events/setpieces.js:3466
+msgid "the path leads to an abandoned mine"
+msgstr "الطريق يؤدي إلى منجم مهجور"
+
+#: script/events/setpieces.js:3504
+msgid "a large creature lunges, muscles rippling in the torchlight"
+msgstr "مخلوق كبير يندفع، عضلاته تتمايل في ضوء المشعل"
+
+#: script/events/setpieces.js:3515
+msgid "the beast is dead."
+msgstr "الوحش ميت."
+
+#: script/events/setpieces.js:3518
+msgid "the iron mine is clear of dangers"
+msgstr "منجم الحديد خالٍ من الأخطار"
+
+#: script/events/setpieces.js:3536
+msgid "A Destroyed Village"
+msgstr "قرية مدمرة"
+
+#: script/events/setpieces.js:3540
+msgid "a destroyed village lies in the dust."
+msgstr "قرية مدمرة تقع في الغبار."
+
+#: script/events/setpieces.js:3541
+msgid "charred bodies litter the ground."
+msgstr "جثث محترقة متناثرة على الأرض."
+
+# afterburner: an engine
+#: script/events/setpieces.js:3544
+msgid "the metallic tang of wanderer afterburner hangs in the air."
+msgstr "الطعم المعدني لعادم محرك المتجول معلق في الهواء."
+
+#: script/events/setpieces.js:3558
+msgid "a shack stands at the center of the village."
+msgstr "كوخ يقف في وسط القرية."
+
+#: script/events/setpieces.js:3559
+msgid "there are still supplies inside."
+msgstr "لا تزال هناك إمدادات في الداخل."
+
+#: script/events/setpieces.js:3570
+msgid "all the work of a previous generation is here."
+msgstr "كل عمل الجيل السابق هنا."
+
+#: script/events/setpieces.js:3571
+msgid "ripe for the picking."
+msgstr "ناضج للقطف."
+
+#~ msgid "use with laser rifle"
+#~ msgstr "použít s laserovou puškou"
+

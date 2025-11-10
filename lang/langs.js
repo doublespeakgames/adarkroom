@@ -1,4 +1,5 @@
 var langs = {
+	"ar": "العربية",
 	'cs':'czech',
 	'de':'deutsch',
 	'el':'ελληνικά',
@@ -24,5 +25,5 @@ var langs = {
 	'uk':'українська',
 	'vi':'tiếng việt',
 	'zh_cn':'简体中文',
-	'zh_tw':'繁體中文'
+	'zh_tw':'繁體中文',
 };
