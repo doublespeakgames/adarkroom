@@ -8,6 +8,10 @@ div#village {
 	width: 200px;
 }
 
+.village_map {
+    font-family: "Courier New", Courier, monospace;
+}
+
 div#population {
 	position: absolute;
 	top: -13px;
