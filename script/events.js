@@ -141,15 +141,8 @@ var Events = {
 
 		var healBtns = $('<div>').appendTo(btns).attr('id','healButtons');
 		Events.createEatMeatButton().appendTo(healBtns);
-		if((Path.outfit['medicine'] || 0) !== 0) {
-			Events.createUseMedsButton().appendTo(healBtns);
-		}
-		if((Path.outfit['hypo'] || 0) !== 0) {
-			Events.createUseHypoButton().appendTo(healBtns);
-		}
-		if ((Path.outfit['stim'] ?? 0) > 0) {
-			Events.createStimButton().appendTo(healBtns);
-		}
+		Events.createHealButtons(healBtns);
+
 		if($SM.get('stores["kinetic armour"]', true) > 0) {
 			Events.createShieldButton().appendTo(healBtns);
 		}
@@ -298,6 +291,18 @@ var Events = {
 		}
 
 		return btn;
+	},
+
+	createHealButtons: function(healBtns) {
+		if ((Path.outfit['medicine'] || 0) !== 0) {
+			Events.createUseMedsButton().appendTo(healBtns);
+		}
+		if ((Path.outfit['hypo'] || 0) !== 0) {
+			Events.createUseHypoButton().appendTo(healBtns);
+		}
+		if ((Path.outfit['stim'] ?? 0) > 0) {
+			Events.createStimButton().appendTo(healBtns);
+		}
 	},
 
 	createUseMedsButton: function(cooldown) {
@@ -1160,7 +1165,13 @@ var Events = {
 			}
 			btnsList.push(b);
 		}
+		
+		var healBtns = $('<div>').appendTo(btns).attr('id','healButtons');
 
+		if (Events.activeEvent().hasCombat) {
+			Events.createEatMeatButton().appendTo(healBtns);
+			Events.createHealButtons(healBtns);
+		}
 		Events.updateButtons();
 		return (btnsList.length == 1) ? btnsList[0] : false;
 	},
@@ -1393,6 +1404,12 @@ var Events = {
 		Engine.keyLock = true;
 		Engine.tabNavigation = false;
 		Button.saveCooldown = false;
+		for (var scene in event.scenes) {
+			if (event.scenes[scene].combat === true) {
+				event.hasCombat = true;
+				break;
+			}
+		}
 		Events.eventStack.unshift(event);
 		event.eventPanel = $('<div>').attr('id', 'event').addClass('eventPanel').css('opacity', '0');
 		if(options != null && options.width != null) {
@@ -1485,3 +1502,5 @@ var Events = {
 		}, delay * 1000);
 	}
 };
+
+
