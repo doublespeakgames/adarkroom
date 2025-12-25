@@ -1,0 +1,10 @@
+.git
+.github
+Dockerfile
+.dockerignore
+README.md
+*.md
+.gitignore
+node_modules
+.DS_Store
+Thumbs.db
