@@ -4461,5 +4461,26 @@ msgstr "这里留存着前代人的所有劳动果实"
 msgid "ripe for the picking."
 msgstr "是时候采摘它们了"
 
+msgid "glowstone"
+msgstr "辉光石"
+
+msgid "hypo blueprint"
+msgstr "治疗针蓝图"
+
+msgid "kinetic armour blueprint"
+msgstr "动能装甲蓝图"
+
+msgid "disruptor blueprint"
+msgstr "干扰器蓝图"
+
+msgid "plasma rifle blueprint"
+msgstr "等离子步枪蓝图"
+
+msgid "stim blueprint"
+msgstr "兴奋剂蓝图"
+
+msgid "glowstone blueprint"
+msgstr "辉光石蓝图"
+
 #~ msgid "use with laser rifle"
 #~ msgstr "激光步枪"
