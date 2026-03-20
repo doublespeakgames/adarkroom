@@ -1,21 +1,21 @@
 # Translations template for PROJECT.
-# Copyright (C) 2021 ORGANIZATION
+# Copyright (C) 2026 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-11-29 06:39+0100\n"
+"POT-Creation-Date: 2026-03-21 02:46+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: script/dropbox.js:62
 msgid "Dropbox connection"
@@ -30,7 +30,7 @@ msgid "connect"
 msgstr ""
 
 #: script/dropbox.js:75 script/dropbox.js:107 script/dropbox.js:133
-#: script/dropbox.js:163 script/engine.js:316 script/engine.js:362
+#: script/dropbox.js:163 script/engine.js:319 script/engine.js:365
 msgid "cancel"
 msgstr ""
 
@@ -218,7 +218,7 @@ msgstr ""
 msgid "learned to make the most of food"
 msgstr ""
 
-#: script/engine.js:147 script/engine.js:820
+#: script/engine.js:147 script/engine.js:824
 msgid "sound on."
 msgstr ""
 
@@ -226,15 +226,15 @@ msgstr ""
 msgid "get the app."
 msgstr ""
 
-#: script/engine.js:159 script/engine.js:547
+#: script/engine.js:159 script/engine.js:550
 msgid "lights off."
 msgstr ""
 
-#: script/engine.js:165 script/engine.js:583
+#: script/engine.js:165 script/engine.js:586
 msgid "hyper."
 msgstr ""
 
-#: script/engine.js:171 script/space.js:464
+#: script/engine.js:171 script/space.js:536
 msgid "restart."
 msgstr ""
 
@@ -254,175 +254,236 @@ msgstr ""
 msgid "github."
 msgstr ""
 
-#: script/engine.js:299
+#: script/engine.js:302
 msgid "Export / Import"
 msgstr ""
 
-#: script/engine.js:303
+#: script/engine.js:306
 msgid "export or import save data, for backing up"
 msgstr ""
 
-#: script/engine.js:304
+#: script/engine.js:307
 msgid "or migrating computers"
 msgstr ""
 
-#: script/engine.js:308
+#: script/engine.js:311
 msgid "export"
 msgstr ""
 
-#: script/engine.js:312 script/engine.js:357
+#: script/engine.js:315 script/engine.js:360
 msgid "import"
 msgstr ""
 
-#: script/engine.js:322
+#: script/engine.js:325
 msgid "save this."
 msgstr ""
 
-#: script/engine.js:328
+#: script/engine.js:331
 msgid "got it"
 msgstr ""
 
-#: script/engine.js:336
+#: script/engine.js:339
 msgid "are you sure?"
 msgstr ""
 
-#: script/engine.js:337
+#: script/engine.js:340
 msgid "if the code is invalid, all data will be lost."
 msgstr ""
 
-#: script/engine.js:338
+#: script/engine.js:341
 msgid "this is irreversible."
 msgstr ""
 
-#: script/engine.js:342 script/engine.js:411 script/engine.js:561
+#: script/engine.js:345 script/engine.js:414 script/engine.js:564
 msgid "yes"
 msgstr ""
 
-#: script/engine.js:347 script/engine.js:416 script/engine.js:566
+#: script/engine.js:350 script/engine.js:419 script/engine.js:569
 msgid "no"
 msgstr ""
 
-#: script/engine.js:353
+#: script/engine.js:356
 msgid "put the save code here."
 msgstr ""
 
-#: script/engine.js:405
+#: script/engine.js:408
 msgid "Restart?"
 msgstr ""
 
-#: script/engine.js:408
+#: script/engine.js:411
 msgid "restart the game?"
 msgstr ""
 
-#: script/engine.js:439
+#: script/engine.js:442
 msgid "Get the App"
 msgstr ""
 
-#: script/engine.js:442
+#: script/engine.js:445
 msgid "bring the room with you."
 msgstr ""
 
-#: script/engine.js:445
+#: script/engine.js:448
 msgid "ios"
 msgstr ""
 
-#: script/engine.js:452
+#: script/engine.js:455
 msgid "android"
 msgstr ""
 
-#: script/engine.js:459 script/engine.js:504
+#: script/engine.js:462 script/engine.js:507
 msgid "close"
 msgstr ""
 
-#: script/engine.js:470
+#: script/engine.js:473
 msgid "Share"
 msgstr ""
 
-#: script/engine.js:473
+#: script/engine.js:476
 msgid "bring your friends."
 msgstr ""
 
-#: script/engine.js:476
+#: script/engine.js:479
 msgid "facebook"
 msgstr ""
 
-#: script/engine.js:483
+#: script/engine.js:486
 msgid "google+"
 msgstr ""
 
-#: script/engine.js:490
+#: script/engine.js:493
 msgid "twitter"
 msgstr ""
 
-#: script/engine.js:497
+#: script/engine.js:500
 msgid "reddit"
 msgstr ""
 
-#: script/engine.js:538 script/engine.js:542
+#: script/engine.js:541 script/engine.js:545
 msgid "lights on."
 msgstr ""
 
-#: script/engine.js:555
+#: script/engine.js:558
 msgid "Go Hyper?"
 msgstr ""
 
-#: script/engine.js:558
+#: script/engine.js:561
 msgid "turning hyper mode speeds up the game to x2 speed. do you want to do that?"
 msgstr ""
 
-#: script/engine.js:581
+#: script/engine.js:584
 msgid "classic."
 msgstr ""
 
-#: script/engine.js:679
+#: script/engine.js:683
+#, python-brace-format
 msgid "{0} per {1}s"
 msgstr ""
 
-#: script/engine.js:824
+#: script/engine.js:828
 msgid "sound off."
 msgstr ""
 
-#: script/engine.js:868
+#: script/engine.js:872
 msgid "Sound Available!"
 msgstr ""
 
-#: script/engine.js:872
+#: script/engine.js:876
 msgid "ears flooded with new sensations."
 msgstr ""
 
-#: script/engine.js:873
+#: script/engine.js:877
 msgid "perhaps silence is safer?"
 msgstr ""
 
-#: script/engine.js:877
+#: script/engine.js:881
 msgid "enable audio"
 msgstr ""
 
-#: script/engine.js:882
+#: script/engine.js:886
 msgid "disable audio"
 msgstr ""
 
-#: script/events.js:200
+#: script/events.js:259
 msgid "pause."
 msgstr ""
 
-#: script/events.js:231
+#: script/events.js:290
 msgid "eat meat"
 msgstr ""
 
-#: script/events.js:251
+#: script/events.js:310
 msgid "use meds"
 msgstr ""
 
-#: script/events.js:452
+#: script/events.js:330
+msgid "use hypo"
+msgstr ""
+
+#: script/events.js:346
+msgid "shield"
+msgstr ""
+
+#: script/events.js:355
+msgid "boost"
+msgstr ""
+
+#: script/events.js:623
 msgid "miss"
 msgstr ""
 
-#: script/events.js:480
+#: script/events.js:674
 msgid "stunned"
 msgstr ""
 
-#: script/events.js:599 script/events/global.js:42 script/events/global.js:59
+#: script/events.js:815 script/events/executioner.js:136
+#: script/events/executioner.js:152 script/events/executioner.js:186
+#: script/events/executioner.js:219 script/events/executioner.js:253
+#: script/events/executioner.js:292 script/events/executioner.js:333
+#: script/events/executioner.js:371 script/events/executioner.js:406
+#: script/events/executioner.js:434 script/events/executioner.js:473
+#: script/events/executioner.js:490 script/events/executioner.js:525
+#: script/events/executioner.js:590 script/events/executioner.js:613
+#: script/events/executioner.js:642 script/events/executioner.js:677
+#: script/events/executioner.js:694 script/events/executioner.js:708
+#: script/events/executioner.js:724 script/events/executioner.js:749
+#: script/events/executioner.js:763 script/events/executioner.js:780
+#: script/events/executioner.js:813 script/events/executioner.js:830
+#: script/events/executioner.js:868 script/events/executioner.js:893
+#: script/events/executioner.js:908 script/events/executioner.js:922
+#: script/events/executioner.js:938 script/events/executioner.js:961
+#: script/events/executioner.js:1014 script/events/executioner.js:1030
+#: script/events/executioner.js:1053 script/events/executioner.js:1074
+#: script/events/executioner.js:1118 script/events/executioner.js:1132
+#: script/events/executioner.js:1149 script/events/executioner.js:1164
+#: script/events/executioner.js:1179 script/events/executioner.js:1195
+#: script/events/executioner.js:1223 script/events/executioner.js:1247
+#: script/events/executioner.js:1261 script/events/executioner.js:1278
+#: script/events/executioner.js:1292 script/events/executioner.js:1310
+#: script/events/executioner.js:1333 script/events/executioner.js:1359
+#: script/events/executioner.js:1374 script/events/executioner.js:1391
+#: script/events/executioner.js:1406 script/events/executioner.js:1424
+#: script/events/executioner.js:1440 script/events/executioner.js:1468
+#: script/events/executioner.js:1482 script/events/executioner.js:1508
+#: script/events/executioner.js:1573 script/events/executioner.js:1596
+#: script/events/executioner.js:1611 script/events/executioner.js:1628
+#: script/events/executioner.js:1642 script/events/executioner.js:1659
+#: script/events/executioner.js:1675 script/events/executioner.js:1690
+#: script/events/executioner.js:1706 script/events/executioner.js:1723
+#: script/events/executioner.js:1751 script/events/executioner.js:1772
+#: script/events/executioner.js:1799 script/events/executioner.js:1814
+#: script/events/executioner.js:1831 script/events/executioner.js:1845
+#: script/events/executioner.js:1878 script/events/executioner.js:1895
+#: script/events/executioner.js:1909 script/events/executioner.js:1926
+#: script/events/executioner.js:1940 script/events/executioner.js:1965
+#: script/events/executioner.js:1979 script/events/executioner.js:1996
+#: script/events/executioner.js:2010 script/events/executioner.js:2028
+#: script/events/executioner.js:2042 script/events/executioner.js:2066
+#: script/events/executioner.js:2080 script/events/executioner.js:2098
+#: script/events/executioner.js:2146 script/events/executioner.js:2169
+#: script/events/executioner.js:2184 script/events/executioner.js:2201
+#: script/events/executioner.js:2229 script/events/executioner.js:2251
+#: script/events/executioner.js:2267 script/events/executioner.js:2336
+#: script/events/global.js:42 script/events/global.js:59
 #: script/events/room.js:144 script/events/room.js:164
 #: script/events/room.js:184 script/events/setpieces.js:25
 #: script/events/setpieces.js:49 script/events/setpieces.js:66
@@ -439,44 +500,143 @@ msgstr ""
 msgid "leave"
 msgstr ""
 
-#: script/events.js:638
+#: script/events.js:857
 msgid "drop:"
 msgstr ""
 
-#: script/events.js:663 script/events/room.js:590
+#: script/events.js:882 script/events/room.js:590
 msgid "nothing"
 msgstr ""
 
-#: script/events.js:694 script/events/setpieces.js:3563
+#: script/events.js:913 script/events/setpieces.js:3563
 msgid "take"
 msgstr ""
 
-#: script/events.js:704
+#: script/events.js:923
 msgid "take:"
 msgstr ""
 
-#: script/events.js:728
+#: script/events.js:947
 msgid "nothing to take"
 msgstr ""
 
-#: script/events.js:758
+#: script/events.js:977
 msgid "all"
 msgstr ""
 
-#: script/events.js:776
+#: script/events.js:995
 msgid "take everything"
 msgstr ""
 
-#: script/events.js:776
+#: script/events.js:995
 msgid "take all you can"
 msgstr ""
 
-#: script/events.js:782 script/outside.js:643
+#: script/events.js:1001 script/outside.js:643
 msgid " and "
 msgstr ""
 
-#: script/events.js:1035
+#: script/events.js:1305
 msgid "*** EVENT ***"
+msgstr ""
+
+#: script/fabricator.js:6
+msgid "Fabricator"
+msgstr ""
+
+#: script/fabricator.js:9
+msgid "energy blade"
+msgstr ""
+
+#: script/fabricator.js:11
+msgid "the blade hums, charged particles sparking and fizzing."
+msgstr ""
+
+#: script/fabricator.js:17
+msgid "fluid recycler"
+msgstr ""
+
+#: script/fabricator.js:20
+msgid "water out, water in. waste not, want not."
+msgstr ""
+
+#: script/fabricator.js:26
+msgid "cargo drone"
+msgstr ""
+
+#: script/fabricator.js:29
+msgid "the workhorse of the wanderer fleet."
+msgstr ""
+
+#: script/fabricator.js:35
+msgid "kinetic armour"
+msgstr ""
+
+#: script/fabricator.js:39
+msgid "wanderer soldiers succeed by subverting the enemy's rage."
+msgstr ""
+
+#: script/fabricator.js:45
+msgid "disruptor"
+msgstr ""
+
+#: script/fabricator.js:48
+msgid "somtimes it is best not to fight."
+msgstr ""
+
+#: script/fabricator.js:54
+msgid "hypo"
+msgstr ""
+
+#: script/fabricator.js:57
+msgid "a handful of hypos. life in a vial."
+msgstr ""
+
+#: script/fabricator.js:64
+msgid "stim"
+msgstr ""
+
+#: script/fabricator.js:67
+msgid "sometimes it is best to fight without restraint."
+msgstr ""
+
+#: script/fabricator.js:73
+msgid "plasma rifle"
+msgstr ""
+
+#: script/fabricator.js:76
+msgid "the peak of wanderer weapons technology, sleek and deadly."
+msgstr ""
+
+#: script/fabricator.js:82
+msgid "glow stone"
+msgstr ""
+
+#: script/fabricator.js:85
+msgid "a smooth, perfect sphere. its light is inextinguishable."
+msgstr ""
+
+#: script/fabricator.js:99 script/fabricator.js:136
+msgid "A Whirring Fabricator"
+msgstr ""
+
+#: script/fabricator.js:126
+msgid ""
+"the familiar hum of wanderer machinery coming to life. finally, real "
+"tools."
+msgstr ""
+
+#: script/fabricator.js:144
+msgid "fabricate:"
+msgstr ""
+
+#: script/fabricator.js:196
+msgid "blueprints"
+msgstr ""
+
+#: script/fabricator.js:231
+#, python-brace-format
+msgid "not enough ${key}"
 msgstr ""
 
 #: script/localization.js:4
@@ -515,15 +675,15 @@ msgstr ""
 msgid "charm"
 msgstr ""
 
-#: script/localization.js:13 script/path.js:137
+#: script/localization.js:13 script/path.js:144
 msgid "leather"
 msgstr ""
 
-#: script/localization.js:14 script/path.js:135
+#: script/localization.js:14 script/path.js:142
 msgid "iron"
 msgstr ""
 
-#: script/localization.js:15 script/path.js:133
+#: script/localization.js:15 script/path.js:140
 msgid "steel"
 msgstr ""
 
@@ -823,67 +983,72 @@ msgstr ""
 msgid "the traps contain "
 msgstr ""
 
-#: script/path.js:28 script/path.js:313
+#: script/path.js:29 script/path.js:321
 msgid "A Dusty Path"
 msgstr ""
 
-#: script/path.js:36
+#: script/path.js:39
 msgid "supplies:"
 msgstr ""
 
-#: script/path.js:42
+#: script/path.js:45
 msgid "embark"
 msgstr ""
 
-#: script/path.js:59 script/room.js:1218
+#: script/path.js:62 script/room.js:1222
 msgid "the compass points "
 msgstr ""
 
-#: script/path.js:101
-msgid "perks:"
+#: script/path.js:106
+msgid "perks"
 msgstr ""
 
-#: script/path.js:131
+#: script/path.js:136
 msgid "none"
 msgstr ""
 
-#: script/path.js:141
+#: script/path.js:138
+msgid "kinetic"
+msgstr ""
+
+#: script/path.js:148
 msgid "armour"
 msgstr ""
 
-#: script/path.js:152
+#: script/path.js:159
 msgid "water"
 msgstr ""
 
-#: script/path.js:163 script/path.js:171
+#: script/path.js:170 script/path.js:179
 msgid "restores"
 msgstr ""
 
-#: script/path.js:163 script/path.js:171
+#: script/path.js:170 script/path.js:179
 msgid "hp"
 msgstr ""
 
-#: script/path.js:164
+#: script/path.js:171
 msgid "use with rifle"
 msgstr ""
 
-#: script/path.js:168
+#: script/path.js:175
 msgid "emits a soft red glow"
 msgstr ""
 
-#: script/path.js:235 script/world.js:292
+#: script/path.js:243 script/world.js:325
+#, python-brace-format
 msgid "free {0}/{1}"
 msgstr ""
 
-#: script/path.js:262
+#: script/path.js:270
 msgid "damage"
 msgstr ""
 
-#: script/path.js:268
+#: script/path.js:276
 msgid "weight"
 msgstr ""
 
-#: script/path.js:270
+#: script/path.js:278
 msgid "available"
 msgstr ""
 
@@ -1057,7 +1222,7 @@ msgstr ""
 msgid "this spear's not elegant, but it's pretty good at stabbing"
 msgstr ""
 
-#: script/room.js:236 script/world.js:287
+#: script/room.js:236 script/world.js:320
 msgid "rucksack"
 msgstr ""
 
@@ -1146,10 +1311,12 @@ msgid "stoke fire"
 msgstr ""
 
 #: script/room.js:580 script/room.js:590 script/room.js:747 script/room.js:751
+#, python-brace-format
 msgid "the room is {0}"
 msgstr ""
 
 #: script/room.js:581 script/room.js:589 script/room.js:711
+#, python-brace-format
 msgid "the fire is {0}"
 msgstr ""
 
@@ -1247,27 +1414,27 @@ msgstr ""
 msgid "weapons"
 msgstr ""
 
-#: script/room.js:962
+#: script/room.js:966
 msgid "total"
 msgstr ""
 
-#: script/room.js:983 script/room.js:1030
+#: script/room.js:987 script/room.js:1034
 msgid "not enough "
 msgstr ""
 
-#: script/room.js:1002
+#: script/room.js:1006
 msgid "builder just shivers"
 msgstr ""
 
-#: script/room.js:1117
+#: script/room.js:1121
 msgid "build:"
 msgstr ""
 
-#: script/room.js:1124
+#: script/room.js:1128
 msgid "craft:"
 msgstr ""
 
-#: script/room.js:1131
+#: script/room.js:1135
 msgid "buy:"
 msgstr ""
 
@@ -1349,201 +1516,232 @@ msgstr ""
 msgid "Space"
 msgstr ""
 
-#: script/space.js:446
+#: script/space.js:501
+msgid "wait"
+msgstr ""
+
+#: script/space.js:520
+#, python-brace-format
 msgid "score for this game: {0}"
 msgstr ""
 
-#: script/space.js:453
+#: script/space.js:527
+#, python-brace-format
 msgid "total score: {0}"
 msgstr ""
 
-#: script/space.js:474
+#: script/space.js:546
 msgid ""
 "expanded story. alternate ending. behind the scenes commentary. get the "
 "app."
 msgstr ""
 
-#: script/space.js:483
+#: script/space.js:555
 msgid "iOS."
 msgstr ""
 
-#: script/space.js:491
+#: script/space.js:563
 msgid "android."
 msgstr ""
 
-#: script/world.js:45
+#: script/world.js:47
 msgid "punch"
 msgstr ""
 
-#: script/world.js:51
+#: script/world.js:53
 msgid "stab"
 msgstr ""
 
-#: script/world.js:57
+#: script/world.js:59
 msgid "swing"
 msgstr ""
 
-#: script/world.js:63
+#: script/world.js:65
 msgid "slash"
 msgstr ""
 
-#: script/world.js:69
+#: script/world.js:71
 msgid "thrust"
 msgstr ""
 
-#: script/world.js:75
+#: script/world.js:77
 msgid "shoot"
 msgstr ""
 
-#: script/world.js:82
+#: script/world.js:84
 msgid "blast"
 msgstr ""
 
-#: script/world.js:89
+#: script/world.js:91
 msgid "lob"
 msgstr ""
 
-#: script/world.js:96
+#: script/world.js:98
 msgid "tangle"
 msgstr ""
 
+#: script/world.js:105
+msgid "disintegrate"
+msgstr ""
+
+#: script/world.js:112
+msgid "slice"
+msgstr ""
+
 #: script/world.js:118
+msgid "stun"
+msgstr ""
+
+#: script/world.js:139
 msgid "An&nbsp;Outpost"
 msgstr ""
 
-#: script/world.js:119
+#: script/world.js:140
 msgid "Iron&nbsp;Mine"
 msgstr ""
 
-#: script/world.js:120
+#: script/world.js:141
 msgid "Coal&nbsp;Mine"
 msgstr ""
 
-#: script/world.js:121
+#: script/world.js:142
 msgid "Sulphur&nbsp;Mine"
 msgstr ""
 
-#: script/world.js:122
+#: script/world.js:143
 msgid "An&nbsp;Old&nbsp;House"
 msgstr ""
 
-#: script/world.js:123
+#: script/world.js:144
 msgid "A&nbsp;Damp&nbsp;Cave"
 msgstr ""
 
-#: script/world.js:124
+#: script/world.js:145
 msgid "An&nbsp;Abandoned&nbsp;Town"
 msgstr ""
 
-#: script/world.js:125
+#: script/world.js:146
 msgid "A&nbsp;Ruined&nbsp;City"
 msgstr ""
 
-#: script/world.js:126
+#: script/world.js:147
 msgid "A&nbsp;Crashed&nbsp;Starship"
 msgstr ""
 
-#: script/world.js:127
+#: script/world.js:148
 msgid "A&nbsp;Borehole"
 msgstr ""
 
-#: script/world.js:128
+#: script/world.js:149
 msgid "A&nbsp;Battlefield"
 msgstr ""
 
-#: script/world.js:129
+#: script/world.js:150
 msgid "A&nbsp;Murky&nbsp;Swamp"
 msgstr ""
 
-#: script/world.js:133
+#: script/world.js:151
+msgid "A&nbsp;Ravaged&nbsp;Battleship"
+msgstr ""
+
+#: script/world.js:155
 msgid "A&nbsp;Destroyed&nbsp;Village"
 msgstr ""
 
-#: script/world.js:258
+#: script/world.js:291
+#, python-brace-format
 msgid "water:{0}"
 msgstr ""
 
-#: script/world.js:285
+#: script/world.js:318
 msgid "pockets"
 msgstr ""
 
-#: script/world.js:309
+#: script/world.js:342
+#, python-brace-format
 msgid "hp: {0}/{1}"
 msgstr ""
 
-#: script/world.js:316
+#: script/world.js:349
+#, python-brace-format
 msgid "{0}:{1}"
 msgstr ""
 
-#: script/world.js:356
+#: script/world.js:389
 msgid "dangerous to be this far from the village without proper protection"
 msgstr ""
 
-#: script/world.js:358
+#: script/world.js:391
 msgid "safer here"
 msgstr ""
 
-#: script/world.js:458
+#: script/world.js:491
 msgid "the meat has run out"
 msgstr ""
 
-#: script/world.js:463
+#: script/world.js:496
 msgid "starvation sets in"
 msgstr ""
 
-#: script/world.js:488
+#: script/world.js:521
 msgid "there is no more water"
 msgstr ""
 
-#: script/world.js:492
+#: script/world.js:525
 msgid "the thirst becomes unbearable"
 msgstr ""
 
-#: script/world.js:570
+#: script/world.js:608
 msgid "the trees yield to dry grass. the yellowed brush rustles in the wind."
 msgstr ""
 
-#: script/world.js:573
+#: script/world.js:611
 msgid "the trees are gone. parched earth and blowing dust are poor replacements."
 msgstr ""
 
-#: script/world.js:580
+#: script/world.js:618
 msgid ""
 "trees loom on the horizon. grasses gradually yield to a forest floor of "
 "dry branches and fallen leaves."
 msgstr ""
 
-#: script/world.js:583
+#: script/world.js:621
 msgid "the grasses thin. soon, only dust remains."
 msgstr ""
 
-#: script/world.js:590
+#: script/world.js:628
 msgid "the barrens break at a sea of dying grass, swaying in the arid breeze."
 msgstr ""
 
-#: script/world.js:593
+#: script/world.js:631
 msgid ""
 "a wall of gnarled trees rises from the dust. their branches twist into a "
 "skeletal canopy overhead."
 msgstr ""
 
-#: script/world.js:853
+#: script/world.js:891
 msgid "Wanderer"
 msgstr ""
 
-#: script/world.js:858
+#: script/world.js:896
 msgid "The&nbsp;Village"
 msgstr ""
 
-#: script/world.js:887
+#: script/world.js:925
 msgid "the world fades"
 msgstr ""
 
-#: script/events/setpieces.js:2966 script/world.js:992
+#: script/world.js:971
+msgid ""
+"builder knows the strange device when she sees it. takes it for herself "
+"real quick. doesn’t ask where it came from."
+msgstr ""
+
+#: script/events/setpieces.js:2966 script/world.js:1068
 msgid "water replenished"
 msgstr ""
 
-#: script/world.js:1023
+#: script/world.js:1099
 msgid "A Barren World"
 msgstr ""
 
@@ -1595,116 +1793,1022 @@ msgstr ""
 msgid "a strange looking bird speeds across the plains"
 msgstr ""
 
-#: script/events/encounters.js:119
-msgid "A Shivering Man"
+#: script/events/encounters.js:118
+msgid "A Two-Headed Creature"
+msgstr ""
+
+#: script/events/encounters.js:126
+msgid "two-headed creature"
 msgstr ""
 
 #: script/events/encounters.js:127
-msgid "shivering man"
+msgid "the two creatures are dead"
 msgstr ""
 
-#: script/events/encounters.js:128
-msgid "the shivering man is dead"
+#: script/events/encounters.js:150
+msgid "a two-headed creature appears, the smaller head trembling"
 msgstr ""
 
 #: script/events/encounters.js:156
-msgid "a shivering man approaches and attacks with surprising strength"
+msgid "A Shivering Man"
 msgstr ""
 
-#: script/events/encounters.js:161
-msgid "A Man-Eater"
+#: script/events/encounters.js:164
+msgid "shivering man"
 msgstr ""
 
-#: script/events/encounters.js:169
-msgid "man-eater"
-msgstr ""
-
-#: script/events/encounters.js:170
-msgid "the man-eater is dead"
+#: script/events/encounters.js:165
+msgid "the shivering man is dead"
 msgstr ""
 
 #: script/events/encounters.js:193
-msgid "a large creature attacks, claws freshly bloodied"
+msgid "a shivering man approaches and attacks with surprising strength"
 msgstr ""
 
 #: script/events/encounters.js:198
-msgid "A Scavenger"
+msgid "A Man-Eater"
 msgstr ""
 
 #: script/events/encounters.js:206
-msgid "scavenger"
+msgid "man-eater"
 msgstr ""
 
 #: script/events/encounters.js:207
-msgid "the scavenger is dead"
+msgid "the man-eater is dead"
+msgstr ""
+
+#: script/events/encounters.js:230
+msgid "a large creature attacks, claws freshly bloodied"
 msgstr ""
 
 #: script/events/encounters.js:235
-msgid "a scavenger draws close, hoping for an easy score"
+msgid "A Scavenger"
 msgstr ""
 
-#: script/events/encounters.js:240
-msgid "A Huge Lizard"
+#: script/events/encounters.js:243
+msgid "scavenger"
 msgstr ""
 
-#: script/events/encounters.js:248
-msgid "lizard"
-msgstr ""
-
-#: script/events/encounters.js:249
-msgid "the lizard is dead"
+#: script/events/encounters.js:244
+msgid "the scavenger is dead"
 msgstr ""
 
 #: script/events/encounters.js:272
-msgid "the grass thrashes wildly as a huge lizard pushes through"
+msgid "a scavenger draws close, hoping for an easy score"
 msgstr ""
 
-#: script/events/encounters.js:278
-msgid "A Feral Terror"
+#: script/events/encounters.js:277
+msgid "A Huge Lizard"
+msgstr ""
+
+#: script/events/encounters.js:285
+msgid "lizard"
 msgstr ""
 
 #: script/events/encounters.js:286
-msgid "feral terror"
+msgid "the lizard is dead"
 msgstr ""
 
-#: script/events/encounters.js:287
-msgid "the feral terror is dead"
-msgstr ""
-
-#: script/events/encounters.js:310
-msgid "a beast, wilder than imagining, erupts out of the foliage"
+#: script/events/encounters.js:309
+msgid "the grass thrashes wildly as a huge lizard pushes through"
 msgstr ""
 
 #: script/events/encounters.js:315
-msgid "A Soldier"
+msgid "A Feral Terror"
 msgstr ""
 
 #: script/events/encounters.js:323
-msgid "soldier"
+msgid "feral terror"
 msgstr ""
 
 #: script/events/encounters.js:324
+msgid "the feral terror is dead"
+msgstr ""
+
+#: script/events/encounters.js:347
+msgid "a beast, wilder than imagining, erupts out of the foliage"
+msgstr ""
+
+#: script/events/encounters.js:352
+msgid "A Soldier"
+msgstr ""
+
+#: script/events/encounters.js:360
+msgid "soldier"
+msgstr ""
+
+#: script/events/encounters.js:361
 msgid "the soldier is dead"
 msgstr ""
 
-#: script/events/encounters.js:353
+#: script/events/encounters.js:390
 msgid "a soldier opens fire from across the desert"
 msgstr ""
 
-#: script/events/encounters.js:358
+#: script/events/encounters.js:395
 msgid "A Sniper"
 msgstr ""
 
-#: script/events/encounters.js:366
+#: script/events/encounters.js:403
 msgid "sniper"
 msgstr ""
 
-#: script/events/encounters.js:367
+#: script/events/encounters.js:404
 msgid "the sniper is dead"
 msgstr ""
 
-#: script/events/encounters.js:396
+#: script/events/encounters.js:433
 msgid "a shot rings out, from somewhere in the long grass"
+msgstr ""
+
+#: script/events/executioner.js:5
+msgid "tripped a motion sensor."
+msgstr ""
+
+#: script/events/executioner.js:7
+msgid "mechanical guard"
+msgstr ""
+
+#: script/events/executioner.js:34
+msgid "a mobile defence platform trundles around the corner."
+msgstr ""
+
+#: script/events/executioner.js:36
+msgid "mechanical quadruped"
+msgstr ""
+
+#: script/events/executioner.js:58
+msgid "a medical drone wheels out of control."
+msgstr ""
+
+#: script/events/executioner.js:60
+msgid "broken medic"
+msgstr ""
+
+#: script/events/executioner.js:88
+msgid "one of the defence turrets still works."
+msgstr ""
+
+#: script/events/executioner.js:90
+msgid "defence turret"
+msgstr ""
+
+#: script/events/executioner.js:119 script/events/executioner.js:552
+msgid "A Ravaged Battleship"
+msgstr ""
+
+#: script/events/executioner.js:123
+msgid "the remains of a huge ship are embedded in the earth."
+msgstr ""
+
+#: script/events/executioner.js:125
+msgid "the remains of a massive battleship lie here, like a silent sealed city."
+msgstr ""
+
+#: script/events/executioner.js:126
+msgid "it lists to the side in a deep crevasse, cut when it fell from the sky."
+msgstr ""
+
+#: script/events/executioner.js:127
+msgid ""
+"the hatches are all sealed, but the hull is blown out just above the "
+"dirt, providing an entrance."
+msgstr ""
+
+#: script/events/executioner.js:131 script/events/setpieces.js:45
+#: script/events/setpieces.js:552 script/events/setpieces.js:609
+#: script/events/setpieces.js:891 script/events/setpieces.js:1317
+#: script/events/setpieces.js:1335 script/events/setpieces.js:3547
+msgid "enter"
+msgstr ""
+
+#: script/events/executioner.js:143
+msgid ""
+"the interior of the ship is cold and dark. what little light there is "
+"only accentuates its harsh angles."
+msgstr ""
+
+#: script/events/executioner.js:144
+msgid "the walls hum faintly."
+msgstr ""
+
+#: script/events/executioner.js:148 script/events/executioner.js:182
+#: script/events/executioner.js:214 script/events/executioner.js:248
+#: script/events/executioner.js:287 script/events/executioner.js:329
+#: script/events/executioner.js:366 script/events/executioner.js:402
+#: script/events/executioner.js:430 script/events/executioner.js:468
+#: script/events/executioner.js:520 script/events/executioner.js:609
+#: script/events/executioner.js:638 script/events/executioner.js:672
+#: script/events/executioner.js:690 script/events/executioner.js:703
+#: script/events/executioner.js:719 script/events/executioner.js:745
+#: script/events/executioner.js:758 script/events/executioner.js:776
+#: script/events/executioner.js:808 script/events/executioner.js:826
+#: script/events/executioner.js:864 script/events/executioner.js:889
+#: script/events/executioner.js:904 script/events/executioner.js:917
+#: script/events/executioner.js:934 script/events/executioner.js:957
+#: script/events/executioner.js:1009 script/events/executioner.js:1049
+#: script/events/executioner.js:1114 script/events/executioner.js:1127
+#: script/events/executioner.js:1145 script/events/executioner.js:1159
+#: script/events/executioner.js:1174 script/events/executioner.js:1191
+#: script/events/executioner.js:1219 script/events/executioner.js:1243
+#: script/events/executioner.js:1256 script/events/executioner.js:1274
+#: script/events/executioner.js:1287 script/events/executioner.js:1306
+#: script/events/executioner.js:1329 script/events/executioner.js:1355
+#: script/events/executioner.js:1369 script/events/executioner.js:1387
+#: script/events/executioner.js:1401 script/events/executioner.js:1420
+#: script/events/executioner.js:1436 script/events/executioner.js:1464
+#: script/events/executioner.js:1477 script/events/executioner.js:1504
+#: script/events/executioner.js:1557 script/events/executioner.js:1592
+#: script/events/executioner.js:1606 script/events/executioner.js:1624
+#: script/events/executioner.js:1637 script/events/executioner.js:1655
+#: script/events/executioner.js:1671 script/events/executioner.js:1685
+#: script/events/executioner.js:1701 script/events/executioner.js:1719
+#: script/events/executioner.js:1747 script/events/executioner.js:1768
+#: script/events/executioner.js:1795 script/events/executioner.js:1809
+#: script/events/executioner.js:1827 script/events/executioner.js:1840
+#: script/events/executioner.js:1873 script/events/executioner.js:1891
+#: script/events/executioner.js:1904 script/events/executioner.js:1922
+#: script/events/executioner.js:1935 script/events/executioner.js:1961
+#: script/events/executioner.js:1974 script/events/executioner.js:1992
+#: script/events/executioner.js:2005 script/events/executioner.js:2024
+#: script/events/executioner.js:2037 script/events/executioner.js:2062
+#: script/events/executioner.js:2075 script/events/executioner.js:2094
+#: script/events/executioner.js:2130 script/events/executioner.js:2165
+#: script/events/executioner.js:2179 script/events/executioner.js:2197
+#: script/events/executioner.js:2225 script/events/executioner.js:2247
+#: script/events/executioner.js:2319 script/events/setpieces.js:137
+#: script/events/setpieces.js:188 script/events/setpieces.js:230
+#: script/events/setpieces.js:249 script/events/setpieces.js:282
+#: script/events/setpieces.js:316 script/events/setpieces.js:350
+#: script/events/setpieces.js:384 script/events/setpieces.js:591
+#: script/events/setpieces.js:647 script/events/setpieces.js:686
+#: script/events/setpieces.js:720 script/events/setpieces.js:760
+#: script/events/setpieces.js:799 script/events/setpieces.js:838
+#: script/events/setpieces.js:872 script/events/setpieces.js:923
+#: script/events/setpieces.js:941 script/events/setpieces.js:964
+#: script/events/setpieces.js:1003 script/events/setpieces.js:1042
+#: script/events/setpieces.js:1270 script/events/setpieces.js:1286
+#: script/events/setpieces.js:1302 script/events/setpieces.js:1412
+#: script/events/setpieces.js:1452 script/events/setpieces.js:1496
+#: script/events/setpieces.js:1514 script/events/setpieces.js:1530
+#: script/events/setpieces.js:1567 script/events/setpieces.js:1606
+#: script/events/setpieces.js:1646 script/events/setpieces.js:1686
+#: script/events/setpieces.js:1703 script/events/setpieces.js:1720
+#: script/events/setpieces.js:1738 script/events/setpieces.js:1782
+#: script/events/setpieces.js:1808 script/events/setpieces.js:1826
+#: script/events/setpieces.js:1865 script/events/setpieces.js:1906
+#: script/events/setpieces.js:1931 script/events/setpieces.js:1961
+#: script/events/setpieces.js:2002 script/events/setpieces.js:2038
+#: script/events/setpieces.js:2073 script/events/setpieces.js:2114
+#: script/events/setpieces.js:2155 script/events/setpieces.js:2191
+#: script/events/setpieces.js:2226 script/events/setpieces.js:2261
+#: script/events/setpieces.js:2306 script/events/setpieces.js:2332
+#: script/events/setpieces.js:3213 script/events/setpieces.js:3253
+#: script/events/setpieces.js:3287 script/events/setpieces.js:3357
+#: script/events/setpieces.js:3391 script/events/setpieces.js:3430
+msgid "continue"
+msgstr ""
+
+#: script/events/executioner.js:159
+msgid "thick, sticky webbing covers the walls of the corridor."
+msgstr ""
+
+#: script/events/executioner.js:160
+msgid "deeper into the ship, the darkness seems almost to writhe."
+msgstr ""
+
+#: script/events/executioner.js:161
+msgid "a small knapsack hangs from a cluster of webs, a few feet from the floor."
+msgstr ""
+
+#: script/events/executioner.js:192
+msgid "a huge arthropod lunges from the shadows, its mandibles thrashing."
+msgstr ""
+
+#: script/events/executioner.js:226
+msgid "the webs part, and a grotesque insect lurches forward."
+msgstr ""
+
+#: script/events/executioner.js:260
+msgid "an operative waits in ambush around the corner."
+msgstr ""
+
+#: script/events/executioner.js:300
+msgid "the military has set up a small camp just inside the ship."
+msgstr ""
+
+#: script/events/executioner.js:301
+msgid "crude attempts have been made to cut into the walls."
+msgstr ""
+
+#: script/events/executioner.js:302
+msgid "scraps of copper wire litter the floor."
+msgstr ""
+
+#: script/events/executioner.js:303
+msgid "two bedrolls are wedged into a corner."
+msgstr ""
+
+#: script/events/executioner.js:339
+msgid "a dusty researcher clumsily hides in the shadows."
+msgstr ""
+
+#: script/events/executioner.js:379
+msgid "debris is stacked in the corridor, forming a low barricade."
+msgstr ""
+
+#: script/events/executioner.js:380
+msgid "the walls are scorched and melted."
+msgstr ""
+
+#: script/events/executioner.js:381
+msgid "behind the barricade, a few weapons lay abandoned."
+msgstr ""
+
+#: script/events/executioner.js:413
+msgid ""
+"the partially devoured remains of several wanderers are piled before a "
+"dark corridor."
+msgstr ""
+
+#: script/events/executioner.js:414
+msgid "shuffling noises can be heard from within."
+msgstr ""
+
+#: script/events/executioner.js:442
+msgid "ancient beast"
+msgstr ""
+
+#: script/events/executioner.js:465
+msgid "an ancient beast has made these ruins its home."
+msgstr ""
+
+#: script/events/executioner.js:481
+msgid "a maintenance panel is embedded in the wall next to a large sealed door."
+msgstr ""
+
+#: script/events/executioner.js:482
+msgid "perhaps the ship’s systems are still operational."
+msgstr ""
+
+#: script/events/executioner.js:486
+msgid "power cycle"
+msgstr ""
+
+#: script/events/executioner.js:497
+msgid "as the lights come online, so too do the defence systems."
+msgstr ""
+
+#: script/events/executioner.js:499
+msgid "automated turret"
+msgstr ""
+
+#: script/events/executioner.js:533
+msgid ""
+"beyond the bulkhead is a small antechamber, seemingly untouched by "
+"scavengers."
+msgstr ""
+
+#: script/events/executioner.js:534
+msgid "a large hatch grinds open, and the wind rushes in."
+msgstr ""
+
+#: script/events/executioner.js:535
+msgid "a strange device sits on the floor. looks important."
+msgstr ""
+
+#: script/events/executioner.js:543
+msgid "take device and leave"
+msgstr ""
+
+#: script/events/executioner.js:557
+msgid "a large hatch opens into a wide corridor."
+msgstr ""
+
+#: script/events/executioner.js:558
+msgid "the corridor leads to a bank of elevators, which appear to be functional."
+msgstr ""
+
+#: script/events/executioner.js:562
+msgid "engineering"
+msgstr ""
+
+#: script/events/executioner.js:569
+msgid "medical"
+msgstr ""
+
+#: script/events/executioner.js:576
+msgid "martial"
+msgstr ""
+
+#: script/events/executioner.js:583
+msgid "command deck"
+msgstr ""
+
+#: script/events/executioner.js:599
+msgid "Engineering Wing"
+msgstr ""
+
+#: script/events/executioner.js:604
+msgid ""
+"elevator doors open to a blasted corridor. debris covers the floor, piled"
+" into makeshift defences."
+msgstr ""
+
+#: script/events/executioner.js:605
+msgid "emergency lighting flickers."
+msgstr ""
+
+#: script/events/executioner.js:621
+msgid ""
+"an automated assembly line performs its empty routines, long since "
+"deprived of materials."
+msgstr ""
+
+#: script/events/executioner.js:622
+msgid "its final works lie forgotten, covered by a thin layer of dust."
+msgstr ""
+
+#: script/events/executioner.js:649
+msgid "assembly arms spin wildly out of control."
+msgstr ""
+
+#: script/events/executioner.js:651
+msgid "unruly welder"
+msgstr ""
+
+#: script/events/executioner.js:685
+msgid "assembly arms spark and jitter."
+msgstr ""
+
+#: script/events/executioner.js:686
+msgid "a cacophony of decrepit machinery fills the room."
+msgstr ""
+
+#: script/events/executioner.js:732
+msgid ""
+"must have been the engine room, once. the massive machines now stand "
+"inert, twisted and scorched by explosions."
+msgstr ""
+
+#: script/events/executioner.js:733
+msgid "the destruction is uniform and precise."
+msgstr ""
+
+#: script/events/executioner.js:734
+msgid "bits of them can be scavenged."
+msgstr ""
+
+#: script/events/executioner.js:771
+msgid "none of the ship's engines escaped the destruction."
+msgstr ""
+
+#: script/events/executioner.js:772
+msgid "it's no mystery why she no longer flies."
+msgstr ""
+
+#: script/events/executioner.js:788
+msgid "sparks cascade from a reactivated power junction, and catch."
+msgstr ""
+
+#: script/events/executioner.js:789
+msgid "the flames fill the corridor."
+msgstr ""
+
+#: script/events/executioner.js:793
+msgid "extinguish"
+msgstr ""
+
+#: script/events/executioner.js:798
+msgid "rush through"
+msgstr ""
+
+#: script/events/executioner.js:821
+msgid "rows of inert security robots hang suspended from the ceiling."
+msgstr ""
+
+#: script/events/executioner.js:822
+msgid "wires run overhead, corroded and useless."
+msgstr ""
+
+#: script/events/executioner.js:837
+msgid "more signs of past combat down the hall. guard post is ransacked."
+msgstr ""
+
+#: script/events/executioner.js:838
+msgid "still, some things can be found."
+msgstr ""
+
+#: script/events/executioner.js:876
+msgid ""
+"marks on the door read 'research and development.' everything seems "
+"mostly untouched, but dead."
+msgstr ""
+
+#: script/events/executioner.js:877
+msgid "one machine thrums with power, and might still work."
+msgstr ""
+
+#: script/events/executioner.js:881 script/events/executioner.js:1496
+msgid "use machine"
+msgstr ""
+
+#: script/events/executioner.js:900
+msgid "step inside, and the machine whirs. muscle and bone reknit. good as new."
+msgstr ""
+
+#: script/events/executioner.js:930
+msgid ""
+"the machines here look unfinished, abandoned by their creator. wires and "
+"other scrap are scattered about the work benches."
+msgstr ""
+
+#: script/events/executioner.js:945
+msgid "experimental plans cover one wall, held by an unseen force."
+msgstr ""
+
+#: script/events/executioner.js:946
+msgid "this one looks useful."
+msgstr ""
+
+#: script/events/executioner.js:968
+msgid "clattering metal and old servos. something is coming..."
+msgstr ""
+
+#: script/events/executioner.js:972
+msgid "fight"
+msgstr ""
+
+#: script/events/executioner.js:979
+msgid "an unfinished automaton whirs to life."
+msgstr ""
+
+#: script/events/executioner.js:981
+msgid "unstable prototype"
+msgstr ""
+
+#: script/events/executioner.js:1022
+msgid "at the back of the workshop, elevator doors twitch and buzz."
+msgstr ""
+
+#: script/events/executioner.js:1023
+msgid "looks like a way out of here."
+msgstr ""
+
+#: script/events/executioner.js:1039
+msgid "Martial Wing"
+msgstr ""
+
+#: script/events/executioner.js:1044
+msgid ""
+"metal grinds, and the elevator doors open halfway. beyond is a brightly "
+"lit battlefield. remains litter the corridor, undisturbed by scavengers."
+msgstr ""
+
+#: script/events/executioner.js:1045
+msgid "looks like they tried to barricade the elevators."
+msgstr ""
+
+#: script/events/executioner.js:1060
+msgid "further along, the corridor branches."
+msgstr ""
+
+#: script/events/executioner.js:1061
+msgid "the door to the left is sealed and refuses to open."
+msgstr ""
+
+#: script/events/executioner.js:1065
+msgid "blow it down"
+msgstr ""
+
+#: script/events/executioner.js:1070
+msgid "continue right"
+msgstr ""
+
+#: script/events/executioner.js:1082
+msgid "the blast throws the door inwards."
+msgstr ""
+
+#: script/events/executioner.js:1083
+msgid ""
+"through the bulkhead is a large room, walls lined with weapon racks. "
+"fighting seems to have passed it by."
+msgstr ""
+
+#: script/events/executioner.js:1140
+msgid "another door at the end of the hall, sealed from this side."
+msgstr ""
+
+#: script/events/executioner.js:1141
+msgid "should be able to open it."
+msgstr ""
+
+#: script/events/executioner.js:1187
+msgid "the corridor is eerily silent."
+msgstr ""
+
+#: script/events/executioner.js:1202
+msgid "crew cabins flank the hall, devoid of life."
+msgstr ""
+
+#: script/events/executioner.js:1203
+msgid "a few useful items can be scavenged."
+msgstr ""
+
+#: script/events/executioner.js:1231
+msgid "ruined defence turrets flank the corridor."
+msgstr ""
+
+#: script/events/executioner.js:1232
+msgid "could put the scrap to good use."
+msgstr ""
+
+#: script/events/executioner.js:1269
+msgid "small sensors in the walls still look to be operational."
+msgstr ""
+
+#: script/events/executioner.js:1270
+msgid "easily avoided."
+msgstr ""
+
+#: script/events/executioner.js:1301
+msgid "large barricades bisect the corridor, scorched by weapons fire."
+msgstr ""
+
+#: script/events/executioner.js:1302
+msgid "bodies litter the ground on either side."
+msgstr ""
+
+#: script/events/executioner.js:1317
+msgid "documents are scattered down the hall, most charred and curled."
+msgstr ""
+
+#: script/events/executioner.js:1318
+msgid "this one looks interesting."
+msgstr ""
+
+#: script/events/executioner.js:1341
+msgid "the next door leads to a ransacked planning room."
+msgstr ""
+
+#: script/events/executioner.js:1342
+msgid "maps of the surface can still be found amongst the debris."
+msgstr ""
+
+#: script/events/executioner.js:1346
+msgid "scavenge maps"
+msgstr ""
+
+#: script/events/executioner.js:1366
+msgid "drew some attention with all that noise."
+msgstr ""
+
+#: script/events/executioner.js:1382
+msgid "slipped past an automated sentry."
+msgstr ""
+
+#: script/events/executioner.js:1383
+msgid "if only they'd been destroyed along with everything else."
+msgstr ""
+
+#: script/events/executioner.js:1398
+msgid "ran straight into another one."
+msgstr ""
+
+#: script/events/executioner.js:1415
+msgid ""
+"the corridor passes through a security checkpoint. the defences are blown"
+" apart, ragged edges scorched by laser fire."
+msgstr ""
+
+#: script/events/executioner.js:1416
+msgid "past the checkpoint, banks of containment cells can be seen."
+msgstr ""
+
+#: script/events/executioner.js:1431
+msgid "the cells are all empty."
+msgstr ""
+
+#: script/events/executioner.js:1432
+msgid ""
+"power cables running across the ceiling are split in several places, "
+"sparking occasionally."
+msgstr ""
+
+#: script/events/executioner.js:1447
+msgid "the guards died at their posts, shot through with superheated plasma."
+msgstr ""
+
+#: script/events/executioner.js:1448
+msgid "their weapons lie on the floor beside them."
+msgstr ""
+
+#: script/events/executioner.js:1491
+msgid ""
+"the corridor opens onto a vast training complex, obstacles and features "
+"blackened by real combat."
+msgstr ""
+
+#: script/events/executioner.js:1492
+msgid "a regenerative machine hums uncannily by one of the courses."
+msgstr ""
+
+#: script/events/executioner.js:1515
+msgid "motion from the centre of the yard."
+msgstr ""
+
+#: script/events/executioner.js:1516
+msgid ""
+"a sparring automaton, still fully function and crusted with timeworn "
+"blood, lunges forward."
+msgstr ""
+
+#: script/events/executioner.js:1520
+msgid "engage"
+msgstr ""
+
+#: script/events/executioner.js:1527
+msgid "the machine attacks, blades whirling."
+msgstr ""
+
+#: script/events/executioner.js:1529
+msgid "murderous robot"
+msgstr ""
+
+#: script/events/executioner.js:1565
+msgid "the ruins of the sparring machine clatter to the ground."
+msgstr ""
+
+#: script/events/executioner.js:1566
+msgid "picked this deck clean."
+msgstr ""
+
+#: script/events/executioner.js:1582
+msgid "Medical Wing"
+msgstr ""
+
+#: script/events/executioner.js:1587
+msgid "elevator doors open to an empty corridor."
+msgstr ""
+
+#: script/events/executioner.js:1588
+msgid ""
+"a few dusty corpses can be seen further down, but this deck appears to "
+"have been spared most of the combat."
+msgstr ""
+
+#: script/events/executioner.js:1619
+msgid "past the checkpoint, the corridor is undamaged save for sporadic graffiti."
+msgstr ""
+
+#: script/events/executioner.js:1620
+msgid "there was no fighting here."
+msgstr ""
+
+#: script/events/executioner.js:1650
+msgid ""
+"automated guardians still stalk the halls, unaware that their masters "
+"have long gone."
+msgstr ""
+
+#: script/events/executioner.js:1651
+msgid "clumsy machines, and easily avoided."
+msgstr ""
+
+#: script/events/executioner.js:1666
+msgid "medical gurneys are fixed to grooves running down the corridor walls."
+msgstr ""
+
+#: script/events/executioner.js:1667
+msgid "the automated patient transport system now sits motionless."
+msgstr ""
+
+#: script/events/executioner.js:1698
+msgid "it had friends."
+msgstr ""
+
+#: script/events/executioner.js:1714
+msgid "more medical robots stand frozen, attached by a network of wires."
+msgstr ""
+
+#: script/events/executioner.js:1715
+msgid "they take no notice of the intrusion."
+msgstr ""
+
+#: script/events/executioner.js:1730
+msgid ""
+"weapons are strewn about the medical dispatch bay. must have been used as"
+" a muster point."
+msgstr ""
+
+#: script/events/executioner.js:1731
+msgid "more strange graffiti adorns the walls."
+msgstr ""
+
+#: script/events/executioner.js:1759
+msgid ""
+"this ward has been converted to a makeshift strategy room, maps scrawled "
+"hastily on any flat surface."
+msgstr ""
+
+#: script/events/executioner.js:1760
+msgid "a secure locker is set into one wall."
+msgstr ""
+
+#: script/events/executioner.js:1764
+msgid "force locker"
+msgstr ""
+
+#: script/events/executioner.js:1779
+msgid "hinges rusted through. no challenge."
+msgstr ""
+
+#: script/events/executioner.js:1806
+msgid "the noise draws attention."
+msgstr ""
+
+#: script/events/executioner.js:1822
+msgid "better to move without drawing attention."
+msgstr ""
+
+#: script/events/executioner.js:1823
+msgid "noises can be heard from the corridor outside."
+msgstr ""
+
+#: script/events/executioner.js:1854
+msgid "something's wrong with this robot."
+msgstr ""
+
+#: script/events/executioner.js:1856
+msgid "unstable automaton"
+msgstr ""
+
+#: script/events/executioner.js:1886
+msgid "another checkpoint ahead, fitted with heavy doors."
+msgstr ""
+
+#: script/events/executioner.js:1887
+msgid "security is even tighter here."
+msgstr ""
+
+#: script/events/executioner.js:1917
+msgid "slipped through unnoticed."
+msgstr ""
+
+#: script/events/executioner.js:1918
+msgid ""
+"air whistles as the doors open. this section must have lower pressure "
+"than the rest of the ship."
+msgstr ""
+
+#: script/events/executioner.js:1949
+msgid ""
+"the air is cooler here. low cabinets ring the room, doors dusted with "
+"frost."
+msgstr ""
+
+#: script/events/executioner.js:1950
+msgid "samples of something biological inside."
+msgstr ""
+
+#: script/events/executioner.js:1987
+msgid "security drones still patrol the hallways."
+msgstr ""
+
+#: script/events/executioner.js:1988
+msgid "predictable paths."
+msgstr ""
+
+#: script/events/executioner.js:2019
+msgid ""
+"surgical tools are scattered on the floor, near what appears the be the "
+"remains of a fire."
+msgstr ""
+
+#: script/events/executioner.js:2020
+msgid "strange."
+msgstr ""
+
+#: script/events/executioner.js:2050
+msgid ""
+"the air in this room has a metallic tinge. floor is covered in dark "
+"powder."
+msgstr ""
+
+#: script/events/executioner.js:2051
+msgid "some completed explosives in the corner."
+msgstr ""
+
+#: script/events/executioner.js:2089
+msgid "containment cells arranged at the back of the room, all open."
+msgstr ""
+
+#: script/events/executioner.js:2090
+msgid "something moving up ahead."
+msgstr ""
+
+#: script/events/executioner.js:2105
+msgid "a mutated beast leaps from its cell."
+msgstr ""
+
+#: script/events/executioner.js:2107
+msgid "malformed experiment"
+msgstr ""
+
+#: script/events/executioner.js:2138
+msgid "the creature's tortured breathing ceases."
+msgstr ""
+
+#: script/events/executioner.js:2139
+msgid "nothing more here."
+msgstr ""
+
+#: script/events/executioner.js:2155
+msgid "Command Deck"
+msgstr ""
+
+#: script/events/executioner.js:2160
+msgid ""
+"the path to the command bridge is wide, walls adorned with decorative "
+"shields."
+msgstr ""
+
+#: script/events/executioner.js:2161
+msgid "fighting hadn't reached here, it seems."
+msgstr ""
+
+#: script/events/executioner.js:2192
+msgid "detour through the officer's lounge."
+msgstr ""
+
+#: script/events/executioner.js:2193
+msgid "might be something useful here."
+msgstr ""
+
+#: script/events/executioner.js:2208
+msgid "small weapons cache in a cabinet."
+msgstr ""
+
+#: script/events/executioner.js:2209
+msgid "lucky."
+msgstr ""
+
+#: script/events/executioner.js:2236
+msgid "found some medical supplies in a discarded bag."
+msgstr ""
+
+#: script/events/executioner.js:2258
+msgid ""
+"the command deck is empty, save for a squat figure sitting motionless in "
+"the centre of the room."
+msgstr ""
+
+#: script/events/executioner.js:2259
+msgid "in a flash, the figure is standing."
+msgstr ""
+
+#: script/events/executioner.js:2263
+msgid "approach"
+msgstr ""
+
+#: script/events/executioner.js:2274
+msgid ""
+"wanderer form, but not quite flesh. not quite metal either. a crystal set"
+" into its chest pulses with light."
+msgstr ""
+
+#: script/events/executioner.js:2275
+msgid "it says it saw the rebellion coming. said it made arrangements."
+msgstr ""
+
+#: script/events/executioner.js:2276
+msgid "says it can't die."
+msgstr ""
+
+#: script/events/executioner.js:2280
+msgid "observe"
+msgstr ""
+
+#: script/events/executioner.js:2287
+msgid "the immortal wanderer attacks."
+msgstr ""
+
+#: script/events/executioner.js:2289
+msgid "immortal wanderer"
+msgstr ""
+
+#: script/events/executioner.js:2327
+msgid ""
+"the crystal pulses brightly, then goes dark. the assailant shimmers as "
+"its shape becomes less defined."
+msgstr ""
+
+#: script/events/executioner.js:2328
+msgid "then it is gone."
+msgstr ""
+
+#: script/events/executioner.js:2329
+msgid "time to get out of here."
 msgstr ""
 
 #: script/events/global.js:6
@@ -2391,13 +3495,6 @@ msgstr ""
 msgid "a swamp festers in the stagnant air."
 msgstr ""
 
-#: script/events/setpieces.js:45 script/events/setpieces.js:552
-#: script/events/setpieces.js:609 script/events/setpieces.js:891
-#: script/events/setpieces.js:1317 script/events/setpieces.js:1335
-#: script/events/setpieces.js:3547
-msgid "enter"
-msgstr ""
-
 #: script/events/setpieces.js:56
 msgid "deep in the swamp is a moss-covered cabin."
 msgstr ""
@@ -2449,39 +3546,6 @@ msgstr ""
 
 #: script/events/setpieces.js:122 script/events/setpieces.js:267
 msgid "a startled beast defends its home"
-msgstr ""
-
-#: script/events/setpieces.js:137 script/events/setpieces.js:188
-#: script/events/setpieces.js:230 script/events/setpieces.js:249
-#: script/events/setpieces.js:282 script/events/setpieces.js:316
-#: script/events/setpieces.js:350 script/events/setpieces.js:384
-#: script/events/setpieces.js:591 script/events/setpieces.js:647
-#: script/events/setpieces.js:686 script/events/setpieces.js:720
-#: script/events/setpieces.js:760 script/events/setpieces.js:799
-#: script/events/setpieces.js:838 script/events/setpieces.js:872
-#: script/events/setpieces.js:923 script/events/setpieces.js:941
-#: script/events/setpieces.js:964 script/events/setpieces.js:1003
-#: script/events/setpieces.js:1042 script/events/setpieces.js:1270
-#: script/events/setpieces.js:1286 script/events/setpieces.js:1302
-#: script/events/setpieces.js:1412 script/events/setpieces.js:1452
-#: script/events/setpieces.js:1496 script/events/setpieces.js:1514
-#: script/events/setpieces.js:1530 script/events/setpieces.js:1567
-#: script/events/setpieces.js:1606 script/events/setpieces.js:1646
-#: script/events/setpieces.js:1686 script/events/setpieces.js:1703
-#: script/events/setpieces.js:1720 script/events/setpieces.js:1738
-#: script/events/setpieces.js:1782 script/events/setpieces.js:1808
-#: script/events/setpieces.js:1826 script/events/setpieces.js:1865
-#: script/events/setpieces.js:1906 script/events/setpieces.js:1931
-#: script/events/setpieces.js:1961 script/events/setpieces.js:2002
-#: script/events/setpieces.js:2038 script/events/setpieces.js:2073
-#: script/events/setpieces.js:2114 script/events/setpieces.js:2155
-#: script/events/setpieces.js:2191 script/events/setpieces.js:2226
-#: script/events/setpieces.js:2261 script/events/setpieces.js:2306
-#: script/events/setpieces.js:2332 script/events/setpieces.js:3213
-#: script/events/setpieces.js:3253 script/events/setpieces.js:3287
-#: script/events/setpieces.js:3357 script/events/setpieces.js:3391
-#: script/events/setpieces.js:3430
-msgid "continue"
 msgstr ""
 
 #: script/events/setpieces.js:142 script/events/setpieces.js:159
