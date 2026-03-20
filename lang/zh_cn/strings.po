@@ -4489,5 +4489,28 @@ msgstr "蓝图输入制造器的数据端口。新的可能性出现了。"
 msgid "fleet beacon"
 msgstr "舰队信标"
 
+msgid "the beacon pulses gently as the ship glides through space."
+msgstr "信标轻轻闪烁，飞船在太空中滑行。"
+
+msgid "coordinates are locked. nothing to do but wait."
+msgstr "坐标已锁定。只能等待。"
+
+msgid "the beacon glows a solid blue, and then goes dim. the ship slows."
+msgstr "信标发出稳定的蓝光，然后暗了下去。飞船减速了。"
+
+msgid "gradually, the vast wanderer homefleet comes into view."
+msgstr "渐渐地，庞大的流浪者母舰队映入眼帘。"
+
+msgid ""
+"massive worldships drift unnaturally through clouds of debris, scarred and "
+"dead."
+msgstr "巨大的世界舰在碎片云中诡异地漂浮着，伤痕累累，毫无生息。"
+
+msgid "the air is running out."
+msgstr "空气快要耗尽了。"
+
+msgid "the capsule is cold."
+msgstr "太空舱里很冷。"
+
 #~ msgid "use with laser rifle"
 #~ msgstr "激光步枪"
