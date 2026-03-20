@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-03-21 02:46+0800\n"
+"POT-Creation-Date: 2026-03-21 05:08+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1516,6 +1516,36 @@ msgstr ""
 msgid "Space"
 msgstr ""
 
+#: script/space.js:469
+msgid "the beacon pulses gently as the ship glides through space."
+msgstr ""
+
+#: script/space.js:469
+msgid "coordinates are locked. nothing to do but wait."
+msgstr ""
+
+#: script/space.js:477
+msgid "the beacon glows a solid blue, and then goes dim. the ship slows."
+msgstr ""
+
+#: script/space.js:477
+msgid "gradually, the vast wanderer homefleet comes into view."
+msgstr ""
+
+#: script/space.js:477
+msgid ""
+"massive worldships drift unnaturally through clouds of debris, scarred "
+"and dead."
+msgstr ""
+
+#: script/space.js:485
+msgid "the air is running out."
+msgstr ""
+
+#: script/space.js:493
+msgid "the capsule is cold."
+msgstr ""
+
 #: script/space.js:501
 msgid "wait"
 msgstr ""
@@ -1735,6 +1765,10 @@ msgstr ""
 msgid ""
 "builder knows the strange device when she sees it. takes it for herself "
 "real quick. doesn’t ask where it came from."
+msgstr ""
+
+#: script/world.js:1007
+msgid "blueprints feed into the fabricator data port. possibilities grow."
 msgstr ""
 
 #: script/events/setpieces.js:2966 script/world.js:1068
