@@ -4482,5 +4482,9 @@ msgstr "兴奋剂蓝图"
 msgid "glowstone blueprint"
 msgstr "辉光石蓝图"
 
+#. script/world.js:1007 - not wrapped in _() in source
+msgid "blueprints feed into the fabricator data port. possibilities grow."
+msgstr "蓝图输入制造器的数据端口。新的可能性出现了。"
+
 #~ msgid "use with laser rifle"
 #~ msgstr "激光步枪"
