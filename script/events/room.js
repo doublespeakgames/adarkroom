@@ -683,5 +683,81 @@ Events.Room = [
 			}
 		},
 		audio: AudioLibrary.EVENT_SICK_MAN
+	},
+
+	{ /* The Rat  --  lose meat */
+		title: _('The Rat'),
+		isAvailable: function() {
+			return Engine.activeModule == Room && $SM.get('stores.meat', true) > 0;
+		},
+		scenes: {
+			'start': {
+				text: [
+					_('a rustling comes from behind the stacked crates.'),
+					_('a rat, bold with hunger, is gnawing its way into the meat stores.')
+				],
+				notification: _('a rat has gotten into the meat'),
+				blink: true,
+				buttons: {
+					'investigate': {
+						text: _('chase it off'),
+						nextScene: { 0.3: 'nest', 1: 'scraps' }
+					},
+					'ignore': {
+						text: _('let it be'),
+						nextScene: 'ignore'
+					}
+				}
+			},
+			'scraps': {
+				text: [
+					_('the rat bolts, dropping what it was dragging.'),
+					_('only a few scraps of meat are lost.')
+				],
+				onLoad: function() {
+					var lost = Math.floor($SM.get('stores.meat', true) * 0.02);
+					$SM.addM('stores', { 'meat': -lost });
+				},
+				buttons: {
+					'leave': {
+						text: _('leave'),
+						nextScene: 'end'
+					}
+				}
+			},
+			'nest': {
+				text: [
+					_('it flees down a crack in the wall - straight back to its nest.'),
+					_('tucked in with the sticks and fur is a small stash it had been hoarding.')
+				],
+				onLoad: function() {
+					var lost = Math.floor($SM.get('stores.meat', true) * 0.01);
+					$SM.addM('stores', { 'meat': -lost });
+				},
+				buttons: {
+					'leave': {
+						text: _('leave'),
+						reward: { 'scales': 2, 'teeth': 3 },
+						nextScene: 'end'
+					}
+				}
+			},
+			'ignore': {
+				text: [
+					_('by the time you get up to check, the rat is long gone.'),
+					_("it's eaten its fill, and then some.")
+				],
+				onLoad: function() {
+					var lost = Math.floor($SM.get('stores.meat', true) * 0.05);
+					$SM.addM('stores', { 'meat': -lost });
+				},
+				buttons: {
+					'leave': {
+						text: _('leave'),
+						nextScene: 'end'
+					}
+				}
+			}
+		}
 	}
 ];
