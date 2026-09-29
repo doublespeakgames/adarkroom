@@ -142,43 +142,43 @@
         });
       }
 
-      $('<span>')
+      $('<button>')
         .addClass('volume menuBtn')
         .text(_('sound on.'))
         .click(() => Engine.toggleVolume())
         .appendTo(menu);
 
-      $('<span>')
+      $('<button>')
         .addClass('appStore menuBtn')
         .text(_('get the app.'))
         .click(Engine.getApp)
         .appendTo(menu);
 
-      $('<span>')
+      $('<button>')
         .addClass('lightsOff menuBtn')
         .text(_('lights off.'))
         .click(Engine.turnLightsOff)
         .appendTo(menu);
 
-      $('<span>')
+      $('<button>')
         .addClass('hyper menuBtn')
         .text(_('hyper.'))
         .click(Engine.confirmHyperMode)
         .appendTo(menu);
 
-      $('<span>')
+      $('<button>')
         .addClass('menuBtn')
         .text(_('restart.'))
         .click(Engine.confirmDelete)
         .appendTo(menu);
 
-      $('<span>')
+      $('<button>')
         .addClass('menuBtn')
         .text(_('share.'))
         .click(Engine.share)
         .appendTo(menu);
 
-      $('<span>')
+      $('<button>')
         .addClass('menuBtn')
         .text(_('save.'))
         .click(Engine.exportImport)
@@ -187,14 +187,14 @@
       if(this.options.dropbox && Engine.Dropbox) {
         this.dropbox = Engine.Dropbox.init();
 
-        $('<span>')
+        $('<button>')
           .addClass('menuBtn')
           .text(_('dropbox.'))
           .click(Engine.Dropbox.startDropbox)
           .appendTo(menu);
       }
 
-      $('<span>')
+      $('<button>')
         .addClass('menuBtn')
         .text(_('github.'))
         .click(function() { window.open('https://github.com/doublespeakgames/adarkroom'); })
@@ -429,7 +429,7 @@
       if(typeof Storage != 'undefined' && localStorage) {
         var prestige = Prestige.get();
         window.State = {};
-        localStorage.clear();
+        localStorage.removeItem('gameState')
         Prestige.set(prestige);
       }
       if(!noReload) {
@@ -480,13 +480,6 @@
                 nextScene: 'end',
                 onChoose: function() {
                   window.open('https://www.facebook.com/sharer/sharer.php?u=' + Engine.SITE_URL, 'sharer', 'width=626,height=436,location=no,menubar=no,resizable=no,scrollbars=no,status=no,toolbar=no');
-                }
-              },
-              'google': {
-                text:_('google+'),
-                nextScene: 'end',
-                onChoose: function() {
-                  window.open('https://plus.google.com/share?url=' + Engine.SITE_URL, 'sharer', 'width=480,height=436,location=no,menubar=no,resizable=no,scrollbars=no,status=no,toolbar=no');
                 }
               },
               'twitter': {
@@ -614,7 +607,8 @@
       slider.animate({left: -(panelIndex * 700) + 'px'}, 300 * diff);
 
       if($SM.get('stores.wood') !== undefined) {
-        // FIXME Why does this work if there's an animation queue...?
+        // Animates 'right' here; moveStoresView() animates 'top' on the same element
+        // concurrently, since it uses {queue: false} to skip the default fx queue.
         stores.animate({right: -(panelIndex * 700) + 'px'}, 300 * diff);
       }
 

@@ -512,7 +512,7 @@ var Space = {
 	},
 
 	showEndingOptions: () => {
-		$('<center>')
+		$('<div>')
 			.addClass('centerCont')
 			.appendTo('body');
 		$('<span>')

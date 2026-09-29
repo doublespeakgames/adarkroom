@@ -11,6 +11,7 @@ div#outfitting:before, div#perks:before {
 	position: absolute;
 	top: -13px;
 	background-color: white;
+	font-weight: bold;
 }
 
 div.outfitRow {
@@ -46,7 +47,7 @@ div#perks {
 	right: 0px;
 	border: 1px solid black;
 	cursor: default;
-	padding: 5px 10px;
+	padding: 10px 10px;
 	width: 200px;
 }
 

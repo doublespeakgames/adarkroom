@@ -1,5 +1,5 @@
 /* Fonts */
-body, .tooltip, select.menuBtn {
+body, .tooltip, button.menuBtn, select.menuBtn{
 	font-family: "Times New Roman", Times, serif;
 	font-size: 16px;
 	font-weight: normal;
@@ -85,21 +85,26 @@ div#header {
 	bottom: 10px;
 	color: #666;
 	z-index: 10;
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 20px;
 }
 
-.menu span {
+.menu button {
 	cursor: pointer;
-	float: right;
-	margin-left: 20px;
+	color: #666;
+	border: none; 
 }
 
 .customSelect {
 	height: 20px;
+	position: relative
 }
 
 span.customSelectOptions {
 	margin: 0;
 	width: 120px;
+	display: block;
 }
 
 .customSelectOptions > ul {
@@ -138,7 +143,7 @@ span.customSelectOptions {
 	text-decoration: none;
 }
 
-.menu span:hover {
+.menu button:hover {
 	text-decoration: underline;
 }
 
@@ -662,4 +667,8 @@ body.noMask #description {
 
 #dropMenu > div:hover {
 	text-decoration: underline;
+}
+
+.warning {
+	text-align: center;
 }

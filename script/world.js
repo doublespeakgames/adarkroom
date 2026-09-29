@@ -372,6 +372,7 @@ var World = {
   },
 
   move: function(direction) {
+    if(World.state === null) return;
     var oldTile = World.state.map[World.curPos[0]][World.curPos[1]];
     World.curPos[0] += direction[0];
     World.curPos[1] += direction[1];
@@ -433,6 +434,7 @@ var World = {
   },
 
   click: function(event) {
+    if (Engine.activeModule !== World) return;
     var map = $('#map'),
       // measure clicks relative to the centre of the current location
       centreX = map.offset().left + map.width() * World.curPos[0] / (World.RADIUS * 2),

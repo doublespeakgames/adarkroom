@@ -553,6 +553,7 @@ var Events = {
 			}
 
 			attackFn($('#wanderer'), dmg, function() {
+				if(!Events.activeEvent()) return;
 				const enemy = $('#enemy');
 				const enemyHp = enemy.data('hp');
 				const scene = Events.activeEvent().scenes[Events.activeScene];
