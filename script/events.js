@@ -21,6 +21,11 @@ var Events = {
 	BOOST_DAMAGE: 10,
 	DOT_TICK: 1000,
 	BLINK_INTERVAL: false,
+	_HEAL_ITEMS: {
+		'eat': 'cured meat',
+		'meds': 'medicine',
+		'hypo': 'hypo'
+	},
 	init: function(options) {
 		this.options = $.extend(
 			this.options,
@@ -333,7 +338,7 @@ var Events = {
 			cost: { 'hypo': 1 }
 		});
 
-		if((Path.outfit['hypo'] ?? 0) > 0) {
+		if((Path.outfit['hypo'] ?? 0) === 0) {
 			Button.setDisabled(btn, true);
 		}
 
@@ -408,7 +413,11 @@ var Events = {
 		var canHeal = (World.health < World.getMaxHealth());
 		healBtns.each(function(i){
 			const btn = $(this);
-			Button.setDisabled(btn, !canHeal && btn.attr('id') !== 'shld');
+			var item = Events._HEAL_ITEMS[btn.attr('id')];
+			// shield and stim aren't heals, so they stay usable at full health
+			if(item) {
+				Button.setDisabled(btn, !canHeal || (Path.outfit[item] || 0) <= 0);
+			}
 		});
 		return canHeal;
 	},
@@ -821,7 +830,7 @@ var Events = {
 						if((Path.outfit['medicine'] || 0) !== 0) {
 							Events.createUseMedsButton(0).appendTo(healBtns);
 						}
-						if (Path.outfit['hypo'] ?? 0 > 0) {
+						if ((Path.outfit['hypo'] ?? 0) > 0) {
 							Events.createUseHypoButton(0).appendTo(healBtns);
 						}
 						$('<div>').addClass('clear').appendTo(healBtns);
@@ -922,11 +931,17 @@ var Events = {
 		var desc = $('#description', Events.eventPanel());
 		var lootButtons = $('<div>').attr({'id': 'lootButtons', 'data-legend': _('take:')});
 		for(var k in lootList) {
-			var loot = lootList[k];
-			if(Math.random() < loot.chance) {
-				var num = Math.floor(Math.random() * (loot.max - loot.min)) + loot.min;
-				var lootRow = Events.drawLootRow(k, num);
-				lootRow.appendTo(lootButtons);
+			// an item may list several independent rolls, which add together
+			var num = 0;
+			var rolls = [].concat(lootList[k]);
+			for(var i = 0; i < rolls.length; i++) {
+				var loot = rolls[i];
+				if(Math.random() < loot.chance) {
+					num += Math.floor(Math.random() * (loot.max - loot.min + 1)) + loot.min;
+				}
+			}
+			if(num > 0) {
+				Events.drawLootRow(k, num).appendTo(lootButtons);
 			}
 		}
 		lootButtons.appendTo(desc);
@@ -956,15 +971,16 @@ var Events = {
 		}
 		var canTakeSomething = false;
 		var free = Path.getFreeSpace();
+		var needed = 0;
 		var takeETbutton = lootButtons.find('#loot_takeEverything');
 		lootButtons.children('.lootRow').each(function(i){
 			var name = $(this).data('item');
 			var take = $(this).children('.lootTake').first();
 			var takeAll = $(this).children('.lootTakeAll').first();
 			var numLeft = take.data('numLeft');
-			var num = Math.min(Math.floor(Path.getFreeSpace() / Path.getWeight(name)), numLeft);
+			var num = Math.min(Path.getMaxFit(name, free), numLeft);
 			takeAll.data('numLeft', num);
-			free -= numLeft * Path.getWeight(name);
+			needed += numLeft * Path.getWeight(name);
 			if(num > 0){
 				takeAll.removeClass('disabled');
 				canTakeSomething = true;
@@ -978,7 +994,7 @@ var Events = {
 			}
 		});
 		Button.setDisabled(takeETbutton, !canTakeSomething);
-		takeETbutton.data('canTakeEverything', (free >= 0) ? true : false);
+		takeETbutton.data('canTakeEverything', Path.roundWeight(needed) <= free);
 		return takeETbutton;
 	},
 

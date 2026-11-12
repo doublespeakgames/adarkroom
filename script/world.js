@@ -322,7 +322,7 @@ var World = {
     $('#backpackTitle').text(t);
 
     // Update bagspace
-    $('#backpackSpace').text(_('free {0}/{1}', Math.floor(Path.getCapacity() - total) , Path.getCapacity()));
+    $('#backpackSpace').text(_('free {0}/{1}', Math.floor(Path.roundWeight(Path.getCapacity() - total)) , Path.getCapacity()));
   },
 
   setWater: function(w) {

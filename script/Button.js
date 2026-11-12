@@ -82,7 +82,8 @@ var Button = {
 			switch(option){
 				// a switch will allow for several uses of cooldown function
 				case 'state':
-					if(!$SM.get(id)){
+					if(typeof $SM.get(id) != 'number' || $SM.get(id) <= 0){
+						$SM.remove(id);
 						return;
 					}
 					start = Math.min($SM.get(id), cd);
@@ -97,19 +98,28 @@ var Button = {
 				$SM.set(id,start);
 				// residual value is measured in seconds
 				// saves program performance
-				btn.data('countdown', Engine.setInterval(function(){
-					$SM.set(id, $SM.get(id, true) - 0.5, true);
-				},500));
+				var countdown = Engine.setInterval(function(){
+					var remaining = $SM.get(id, true) - 0.5;
+					// removing the button wipes its data, so clearCooldown can no longer stop this interval
+					if(remaining <= 0 || btn.data('countdown') !== countdown) {
+						clearInterval(countdown);
+						$SM.remove(id);
+					} else {
+						$SM.set(id, remaining, true);
+					}
+				},500);
+				btn.data('countdown', countdown);
 			}
 			var time = start;
 			if (Engine.options.doubleTime){
 				time /= 2;
 			}
+			// must be set before animating: a non-positive duration completes synchronously
+			btn.addClass('disabled');
+			btn.data('onCooldown', true);
 			$('div.cooldown', btn).width(left * 100 +"%").animate({width: '0%'}, time * 1000, 'linear', function() {
 				Button.clearCooldown(btn, true);
 			});
-			btn.addClass('disabled');
-			btn.data('onCooldown', true);
 		}
 	},
 

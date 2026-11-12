@@ -41,16 +41,18 @@ Enemies.Executioner = {
     attackDelay: 1,
     health: 70,
     loot: {
-      'alien alloy': {
-        min: 1,
-        max: 1,
-        chance: 1
-      },
-      'alien alloy': {
-        min: 2,
-        max: 4,
-        chance: 0.2
-      }
+      'alien alloy': [
+        {
+          min: 1,
+          max: 1,
+          chance: 1
+        },
+        {
+          min: 2,
+          max: 4,
+          chance: 0.2
+        }
+      ]
     }
   },
   'medic': {
