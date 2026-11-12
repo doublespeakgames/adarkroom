@@ -94,7 +94,19 @@ var Path = {
 				num += n * Path.getWeight(k);
 			}
 		}
-		return Path.getCapacity() - num;
+		return Path.roundWeight(Path.getCapacity() - num);
+	},
+
+	// Fractional weights (0.1, 0.2...) pick up float error when summed, e.g. 0.1 * 3 = 0.30000000000000004
+	roundWeight: function(w) {
+		return Math.round(w * 100) / 100;
+	},
+
+	getMaxFit: function(thing, free) {
+		if(free == null) {
+			free = Path.getFreeSpace();
+		}
+		return Math.floor(Path.roundWeight(free / Path.getWeight(thing)));
 	},
 	
 	updatePerks: function(ignoreStores) {
@@ -287,7 +299,7 @@ var Path = {
 		var cur = Path.outfit[supply];
 		cur = typeof cur == 'number' ? cur : 0;
 		if(Path.getFreeSpace() >= Path.getWeight(supply) && cur < $SM.get('stores["'+supply+'"]', true)) {
-			var maxExtraByWeight = Math.floor(Path.getFreeSpace() / Path.getWeight(supply));
+			var maxExtraByWeight = Path.getMaxFit(supply);
 			var maxExtraByStore  = $SM.get('stores["'+supply+'"]', true) - cur;
 			Path.outfit[supply] = cur + Math.min(btn.data, maxExtraByWeight, maxExtraByStore);
 			$SM.set('outfit['+supply+']', Path.outfit[supply]);
